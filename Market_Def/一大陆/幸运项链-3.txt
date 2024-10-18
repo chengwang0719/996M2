@@ -1,0 +1,219 @@
+[@main]
+#if
+#act
+
+
+goto @穿戴项链检测
+goto @幸运升级页面
+
+
+[@幸运升级页面]
+#IF
+#say
+
+
+<Img|a=4|x=450.0|y=273.0|width=900|height=562|show=4|img=npc/xyxl/bj1.png|move=1|reset=1|esc=1|bg=1|loadDelay=0>
+<Button|x=824.0|y=21.0|nimg=public/close-2.png|mimg=public/close-2.png|link=@exit>
+<Button|x=88.0|y=154.0|width=145|height=44|mimg=npc/xyxl/2.png|nimg=npc/xyxl/2.png|link=@切换1>
+<Button|x=88.0|y=104.0|width=145|height=44|mimg=npc/xyxl/1.png|nimg=npc/xyxl/1.png|link=@切换2>
+<Button|x=467.0|y=434.0|nimg=npc/xyxl/btns.png|mimg=npc/xyxl/btns.png|link=@确定升级>
+<Text|x=487.0|y=219.0|color=250|outline=2|size=14|text=当前身上项链>
+<Text|x=484.0|y=307.0|color=116|outline=2|size=16|text=10w元宝　　成功几率 70%>
+<Text|x=484.0|y=335.0|color=116|outline=2|size=16|text=20w元宝　　成功几率 30%>
+<Text|x=484.0|y=364.0|color=116|outline=2|size=16|text=30w元宝　　成功几率 10%>
+<EquipShow|x=495.0|y=133.0|width=60|height=60|showtips=1|index=3|reload=1>
+
+
+
+
+[@幸运转移页面]
+#IF
+#say
+
+
+<Img|a=4|x=450.0|y=273.0|width=900|height=562|show=4|img=npc/xyxl/bj2.png|move=1|reset=1|esc=1|bg=1|loadDelay=0>
+<Button|x=824.0|y=21.0|nimg=public/close-2.png|mimg=public/close-2.png|link=@exit>
+<Button|x=88.0|y=154.0|width=145|height=44|mimg=npc/xyxl/2.png|nimg=npc/xyxl/2.png|link=@切换1>
+<Button|x=88.0|y=104.0|width=145|height=44|mimg=npc/xyxl/1.png|nimg=npc/xyxl/1.png|link=@切换2>
+<Button|x=618.0|y=438.0|nimg=npc/xyxl/btnz.png|mimg=npc/xyxl/btnz.png|link=@确定转移>
+<EquipShow|x=370.0|y=132.0|width=60|height=60|showtips=1|index=3|reload=1>
+<BAGITEMS|x=630.0|y=131.0|select=<$STR(S0)>|selecttype=1|condition=19|showstar=1|count=6|row=3|link=@选择项链>
+<ITEMBOX|x=370.0|y=378.0|width=70|height=70|boxindex=1|stdmode=30>
+<Text|x=630.0|y=357.0|color=116|outline=2|size=16|text=转移费用：100点卷>
+
+
+
+
+
+
+[@选择项链]
+#IF
+#ACT
+LINKITEMBYMAKEINDEX <$STR(S0)>
+BAGITEMMAKEINDEX <$STR(S0)> 1
+SetUpgradeItem 1
+
+
+
+
+[@切换1]
+#if
+#act
+goto @幸运转移页面
+
+[@切换2]
+#if
+#act
+goto @幸运升级页面
+
+[@确定升级]
+#IF
+#ACT
+GETITEMADDVALUE 3 5 N$身上项链幸运 0
+MOV N$成功几率 70
+MOV N$所需元宝 100000
+
+#IF
+EQUAL N$身上项链幸运 1
+#ACT
+MOV N$成功几率 30
+MOV N$所需元宝 200000
+
+#IF
+EQUAL N$身上项链幸运 2
+#ACT
+MOV N$成功几率 10
+MOV N$所需元宝 300000
+
+#IF
+EQUAL N$身上项链幸运 3
+#ACT
+MOV N$成功几率 0
+MOV N$所需元宝 0
+
+
+
+#IF
+LARGE N$身上项链幸运 2
+#ACT
+SENDMSG 9 <$NECKLACE>已经幸运+3！
+BREAK
+
+#IF
+CHECKBINDMONEY 绑定元宝 < <$STR(N$所需元宝)>
+#ACT
+SENDMSG 9 元宝数量不足
+BREAK
+
+
+#IF
+CHECKBINDMONEY 绑定元宝 ? <$STR(N$所需元宝)>
+RANDOMEX <$STR(N$成功几率)> 100
+#ACT
+ChangeBindMoney 绑定元宝 <$STR(N$所需元宝)>
+CHANGEITEMADDVALUE 3 5 + 1
+SENDMSG 9 <$NECKLACE>升级成功！
+;sendmsg 6 <$STR(N$身上项链幸运)>
+
+
+GOTO @升级暴击随机
+goto @幸运升级页面
+#ELSEACT
+ChangeBindMoney 绑定元宝  <$STR(N$所需元宝)>
+SENDMSG 9 <$NECKLACE>升级失败！
+
+
+
+
+
+[@升级暴击随机]
+#IF
+EQUAL N$身上项链幸运 2
+#ACT
+MOVR N$暴击 1 4
+SETADDNEWABIL 3 = 3#21#<$STR(N$暴击)>
+
+SENDMSGNEW 254 0 {『喜讯』：/FCOLOR=249}恭喜【{<$USERNAME>/FCOLOR=251}】的【{<$NECKLACE>/FCOLOR=251}】幸运+3获得【{<$STR(N$暴击)>点暴击/FCOLOR=249}】！ 1 10
+GOTO @MAIN
+
+
+
+[@ItemIntoBox1]
+#or
+CheckContainsText <$BOXITEM[1].NAME> 链
+CheckContainsText <$BOXITEM[1].NAME> 翔
+CheckContainsText <$BOXITEM[1].NAME> 者
+#ACT
+#elseact
+RETURNBOXITEM 1
+
+[@确定转移]
+#IF
+#ACT
+GETITEMADDVALUE 3 5 N$身上项链幸运 0
+MOV N$成功几率 100
+MOV N$所需元宝 100000
+
+#IF
+EQUAL N$身上项链幸运 1
+#ACT
+MOV N$成功几率 100
+MOV N$所需元宝 200000
+
+#IF
+EQUAL N$身上项链幸运 2
+#ACT
+MOV N$成功几率 100
+MOV N$所需元宝 300000
+
+#IF
+EQUAL N$身上项链幸运 3
+#ACT
+MOV N$成功几率 0
+MOV N$所需元宝 0
+
+#if
+#act
+GETITEMATTIDVALUE 2 21 3 N$转移暴击
+
+
+#IF
+SMALL N$身上项链幸运 2
+#ACT
+SENDMSG 9 低于幸运+2不可进行转移！
+BREAK
+
+#IF
+NOT CHECKBOXITEMCOUNT 1 1
+#ACT
+SENDMSG 9 请从背包里放入要转移的项链
+BREAK
+
+#IF
+CheckBindMoney 绑定点卷 < 100
+#ACT
+SENDMSG 9 点卷不足
+BREAK
+
+#IF
+CheckBindMoney 绑定点卷 ? 100
+#ACT
+
+ChangeBindMoney 绑定点卷 100
+
+CHANGEITEMADDVALUE -1 5 = 3
+CHANGEITEMADDVALUE 3 5 = 0
+SETADDNEWABIL 3 = 3#21#0
+SETADDNEWABIL -1 = 3#21#<$STR(N$转移暴击)>
+
+SENDMSG 9 属性转移成功！
+
+goto @幸运转移页面
+
+
+
+
+
+
+
+

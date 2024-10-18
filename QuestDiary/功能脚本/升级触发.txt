@@ -1,0 +1,64 @@
+[@升级触发]   
+{   
+  
+#IF   
+not ISDUMMY   
+checkjob warrior   
+CheckLevelEx = 15   
+#ACT   
+  
+ADDSKILL 基本剑术 3   
+ADDSKILL 攻杀剑术 3   
+ADDSKILL 刺杀剑术 3   
+ADDSKILL 半月弯刀 3   
+ADDSKILL 野蛮冲撞 3   
+ADDSKILL 烈火剑法 3   
+   
+   
+#IF   
+not ISDUMMY   
+checkjob wizard   
+CheckLevelEx = 15   
+#ACT   
+ 
+ADDSKILL 火球术 3   
+ADDSKILL 雷电术 3   
+ADDSKILL 抗拒火环 3   
+ADDSKILL 疾光电影 3   
+ADDSKILL 爆裂火焰 3   
+ADDSKILL 地狱雷光 3   
+ADDSKILL 火墙 3   
+ADDSKILL 魔法盾 3   
+ADDSKILL 冰咆哮 3   
+   
+   
+#IF   
+not ISDUMMY   
+checkjob taoist   
+CheckLevelEx = 15   
+#ACT   
+ 
+ADDSKILL 治愈术 3   
+ADDSKILL 施毒术 3   
+ADDSKILL 精神力战法 3   
+ADDSKILL 灵魂火符 3   
+ADDSKILL 幽灵盾 3   
+ADDSKILL 神圣战甲术 3   
+ADDSKILL 困魔咒 3   
+ADDSKILL 隐身术 3   
+ADDSKILL 集体隐身术 3   
+ADDSKILL 心灵启示 3   
+ADDSKILL 召唤神兽 3   
+ADDSKILL 群体治疗术 3   
+   
+ 
+   
+
+
+}   
+   
+  
+  
+ 
+ 
+

@@ -1,0 +1,361 @@
+[@在线奖励主页面]
+{
+
+
+#if
+equal J301 0
+#act
+mov S$在线领取图片1 btn
+#elseact
+mov S$在线领取图片1 ylq
+
+#if
+equal J302 0
+#act
+mov S$在线领取图片2 btn
+#elseact
+mov S$在线领取图片2 ylq
+
+#if
+equal J303 0
+#act
+mov S$在线领取图片3 btn
+#elseact
+mov S$在线领取图片3 ylq
+
+#if
+equal J304 0
+#act
+mov S$在线领取图片4 btn
+#elseact
+mov S$在线领取图片4 ylq
+
+#if
+equal J305 0
+#act
+mov S$在线领取图片5 btn
+#elseact
+mov S$在线领取图片5 ylq
+
+#if
+equal J306 0
+#act
+mov S$在线领取图片6 btn
+#elseact
+mov S$在线领取图片6 ylq
+
+#if
+equal J307 0
+#act
+mov S$在线领取图片7 btn
+#elseact
+mov S$在线领取图片7 ylq
+
+#if
+equal J308 0
+#act
+mov S$在线领取图片8 btn
+#elseact
+mov S$在线领取图片8 ylq
+
+#if
+#act
+#CALL [\主界面基础按钮\福利大厅红点检测.txt] @福利大厅按钮
+
+#if
+#say
+<Button|x=-2526.0|y=-1172.0|width=115120|height=112880|mimg=npc/zd.png|color=224|nimg=npc/zd.png|pimg=npc/zd.png|size=18|link=@exit>
+<Img|children={1a,2a,3a}|x=38.0|y=-9.0|width=890|height=510|move=0|esc=1|show=4|bg=1|reset=1|loadDelay=0|img=topbtn/fldt/bj.png>
+<ListView|id=1a|children={a,b,c,d,e,f,g}|x=75.0|y=66.0|width=183|height=400|bounce=0|direction=1|margin=1>
+<Button|id=a|x=0|y=0|width=183|height=55|nimg=topbtn/fldt/4.png|mimg=topbtn/fldt/4.png|link=@七日签到>
+<Button|id=b|x=0|y=0|width=183|height=55|nimg=topbtn/fldt/6.png|mimg=topbtn/fldt/6.png|link=@击杀奖励>
+<Button|id=c|x=0|y=0|width=183|height=55|nimg=topbtn/fldt/7.png|mimg=topbtn/fldt/7.png|link=@在线奖励>
+<Button|id=d|x=0|y=0|width=183|height=55|nimg=topbtn/fldt/1.png|mimg=topbtn/fldt/1.png|link=@等级福利>
+<Button|id=e|x=0|y=0|width=183|height=55|nimg=topbtn/fldt/2.png|mimg=topbtn/fldt/2.png|link=@个人首爆>
+<Button|id=f|x=0|y=0|width=183|height=55|nimg=topbtn/fldt/5.png|mimg=topbtn/fldt/5.png|link=@全服首爆>
+<Button|id=g|x=0|y=0|width=183|height=55|nimg=topbtn/fldt/3.png|mimg=topbtn/fldt/3.png|link=@联系客服>
+<$str(S$七日签到红点)>
+<$str(S$杀怪奖励)>
+<$str(S$在线奖励)>
+<$str(S$等级奖励)>
+<ListView|id=2a|children={7a,7b,7c,7d,7e,7f,7g,7h,7i}|x=256.0|y=156.0|width=558|height=295|direction=1|margin=0|bounce=0|cantouch=1>
+
+<Img|id=7a|children={d1,d2,d3,d4,d5,6}|x=266.0|y=99.0|width=580|move=0|loadDelay=0|show=4|esc=1|reset=1|img=topbtn/fldt/kuang-3.png>
+<Img|id=d1|x=69|y=5.0|move=0|loadDelay=0|show=4|esc=1|reset=1|img=topbtn/fldt/box.png>
+<ItemShow|id=d2|x=70.0|y=5.0|width=70|height=70|itemid=5|itemcount=200|showtips=1|bgtype=0>
+
+
+<Text|id=d5|x=297.0|y=23.0|size=16|color=250|text=5>
+<Button|id=6|x=432.0|y=16.0|mimg=topbtn/fldt/<$str(S$在线领取图片1)>.png|nimg=topbtn/fldt/<$str(S$在线领取图片1)>.png|link=@在线领取1>
+
+<Img|id=7b|children={e1,e2,e3,e4,e5,e6}|x=266.0|y=178.0|width=580|move=0|loadDelay=0|show=4|esc=1|reset=1|img=topbtn/fldt/kuang-3.png>
+<Img|id=e1|x=69.0|y=5.0|move=0|loadDelay=0|show=4|esc=1|reset=1|img=topbtn/fldt/box.png>
+<ItemShow|id=e2|x=70.0|y=5.0|width=70|height=70|itemid=5|itemcount=500|showtips=1|bgtype=0>
+
+
+<Text|id=e5|x=297|y=23|size=16|color=250|text=10>
+<Button|id=e6|x=432.0|y=12.0|mimg=topbtn/fldt/<$str(S$在线领取图片2)>.png|nimg=topbtn/fldt/<$str(S$在线领取图片2)>.png|link=@在线领取2>
+
+<Img|id=7c|children={k1,k2,k3,k4,k5,k6}|x=266.0|y=257.0|width=580|move=0|loadDelay=0|show=4|esc=1|reset=1|img=topbtn/fldt/kuang-3.png>
+<Img|id=k1|x=69.0|y=5.0|move=0|loadDelay=0|show=4|esc=1|reset=1|img=topbtn/fldt/box.png>
+<ItemShow|id=k2|x=70|y=5|width=70|height=70|itemid=5|itemcount=1000|showtips=1|bgtype=0>
+
+
+<Text|id=k5|x=297|y=23|size=16|color=250|text=20>
+<Button|id=k6|x=432.0|y=13.0|mimg=topbtn/fldt/<$str(S$在线领取图片3)>.png|nimg=topbtn/fldt/<$str(S$在线领取图片3)>.png|link=@在线领取3>
+
+<Img|id=7d|children={f1,f2,f3,f4,f5,f6}|x=266.0|y=336.0|width=580|move=0|loadDelay=0|show=4|esc=1|reset=1|img=topbtn/fldt/kuang-3.png>
+<Img|id=f1|x=69.0|y=5.0|move=0|loadDelay=0|show=4|esc=1|reset=1|img=topbtn/fldt/box.png>
+<ItemShow|id=f2|x=70|y=5.0|width=70|height=70|itemid=5|itemcount=1500|showtips=1|bgtype=0>
+
+
+<Text|id=f5|x=297|y=23|size=16|color=250|text=30>
+<Button|id=f6|x=432.0|y=14.0|mimg=topbtn/fldt/<$str(S$在线领取图片4)>.png|nimg=topbtn/fldt/<$str(S$在线领取图片4)>.png|link=@在线领取4>
+
+<Img|id=7e|children={g1,g2,g3,g4,g5,g6}|x=266.0|y=415.0|width=580|move=0|loadDelay=0|show=4|esc=1|reset=1|img=topbtn/fldt/kuang-3.png>
+<Img|id=g1|x=69.0|y=5.0|move=0|loadDelay=0|show=4|esc=1|reset=1|img=topbtn/fldt/box.png>
+<ItemShow|id=g2|x=70.0|y=5.0|width=70|height=70|itemid=5|itemcount=2000|showtips=1|bgtype=0>
+
+
+<Text|id=g5|x=297|y=23|size=16|color=250|text=60>
+<Button|id=g6|x=432.0|y=14.0|mimg=topbtn/fldt/<$str(S$在线领取图片5)>.png|nimg=topbtn/fldt/<$str(S$在线领取图片5)>.png|link=@在线领取5>
+
+<Img|id=7f|children={h1,h2,h3,h4,h5,h6}|x=266.0|y=494.0|width=580|move=0|loadDelay=0|show=4|esc=1|reset=1|img=topbtn/fldt/kuang-3.png>
+<Img|id=h1|x=69.0|y=5.0|move=0|loadDelay=0|show=4|esc=1|reset=1|img=topbtn/fldt/box.png>
+<ItemShow|id=h2|x=70.0|y=5.0|width=70|height=70|itemid=5|itemcount=2500|showtips=1|bgtype=0>
+
+
+<Text|id=h5|x=292|y=23|size=16|color=250|text=120>
+<Button|id=h6|x=432.0|y=12.0|mimg=topbtn/fldt/<$str(S$在线领取图片6)>.png|nimg=topbtn/fldt/<$str(S$在线领取图片6)>.png|link=@在线领取6>
+
+<Img|id=7g|children={i1,i2,i3,i4,i5,i6}|x=266.0|y=573.0|width=580|move=0|loadDelay=0|show=4|esc=1|reset=1|img=topbtn/fldt/kuang-3.png>
+<Img|id=i1|x=69.0|y=5.0|move=0|loadDelay=0|show=4|esc=1|reset=1|img=topbtn/fldt/box.png>
+<ItemShow|id=i2|x=70.0|y=5.0|width=70|height=70|itemid=5|itemcount=3000|showtips=1|bgtype=0>
+
+
+<Text|id=i5|x=292|y=23|size=16|color=250|text=180>
+<Button|id=i6|x=432.0|y=12.0|mimg=topbtn/fldt/<$str(S$在线领取图片7)>.png|nimg=topbtn/fldt/<$str(S$在线领取图片7)>.png|link=@在线领取7>
+
+
+<Img|id=7h|children={j1,j2,j3,j4,j5,j6}|x=266.0|y=652.0|width=580|move=0|loadDelay=0|show=4|esc=1|reset=1|img=topbtn/fldt/kuang-3.png>
+<Img|id=j1|x=69.0|y=5.0|move=0|loadDelay=0|show=4|esc=1|reset=1|img=topbtn/fldt/box.png>
+<ItemShow|id=j2|x=70.0|y=5.0|width=70|height=70|itemid=5|itemcount=15000|showtips=1|bgtype=0>
+
+
+<Text|id=j5|x=292|y=23|size=16|color=250|text=360>
+<Button|id=j6|x=432.0|y=12.0|mimg=topbtn/fldt/<$str(S$在线领取图片8)>.png|nimg=topbtn/fldt/<$str(S$在线领取图片8)>.png|link=@在线领取8>
+
+
+
+<Img|id=3a|children={3at}|x=255.0|y=66.0|width=580|move=0|loadDelay=0|show=4|esc=1|reset=1|img=topbtn/fldt/bj-4.png>
+<Layout|id=3at|children={3aa}|x=467.0|y=63.0|width=80|height=20>
+<Text|id=3aa|a=4|percentx=25|percenty=50|size=16|color=251|text=<$str(J201)>>
+<Layout|x=826.0|y=-17.0|width=80|height=80|link=@exit>
+<Button|x=852.0|y=29.0|nimg=public/close-2.png|mimg=public/close-2.png|link=@exit>
+<Img|x=382.0|y=-6.0|width=200|height=67|show=4|reset=1|img=topbtn/fldt/title.png|move=0|loadDelay=0|esc=1>
+
+
+
+
+
+
+
+
+
+[@在线领取1]
+
+
+
+
+#if
+small J201 5
+#act
+SENDMSG 9 在线时长未到5分钟哦
+BREAK
+
+#IF
+EQUAL J301 1 
+#ACT
+SENDMSG 9 你已经领取过了
+break
+
+#or
+LARGE J201 4
+equal U7 13
+#ACT
+MONEY 绑定点卡 + 200
+mov J301 1
+goto @在线奖励主页面
+set [38] 1
+#CALL [\任务系统\任务系统QF.txt] @任务系统QF
+SENDMSG 9 恭喜您成功领取在线奖励！
+
+
+#or
+LARGE J201 5
+equal J201 5
+#ACT
+MONEY 绑定点卡 + 200
+mov J301 1
+goto @在线奖励主页面
+SENDMSG 9 恭喜您成功领取在线奖励！
+;close
+[@在线领取2]
+#if
+small J201 10
+#act
+SENDMSG 9 在线时长未到10分钟哦
+BREAK
+
+#IF
+EQUAL J302 1 
+#ACT
+SENDMSG 9 你已经领取过了
+break
+
+#or
+LARGE J201 10
+equal J201 10
+#ACT
+MONEY 绑定点卡 + 500
+mov J302 1
+goto @在线奖励主页面
+SENDMSG 9 恭喜您成功领取在线奖励！
+
+
+[@在线领取3]
+#if
+small J201 20
+#act
+SENDMSG 9 在线时长未到20分钟哦
+BREAK
+
+#IF
+EQUAL J303 1 
+#ACT
+SENDMSG 9 你已经领取过了
+break
+
+#or
+LARGE J201 20
+equal J201 20
+#ACT
+MONEY 绑定点卡 + 1000
+mov J303 1
+goto @在线奖励主页面
+SENDMSG 9 恭喜您成功领取在线奖励！
+
+[@在线领取4]
+#if
+small J201 30
+#act
+SENDMSG 9 在线时长未到30分钟哦
+BREAK
+
+#IF
+EQUAL J304 1 
+#ACT
+SENDMSG 9 你已经领取过了
+break
+
+#or
+LARGE J201 30
+equal J201 30
+#ACT
+MONEY 绑定点卡 + 1500
+mov J304 1
+goto @在线奖励主页面
+SENDMSG 9 恭喜您成功领取在线奖励！
+
+
+[@在线领取5]
+#if
+small J201 60
+#act
+SENDMSG 9 在线时长未到60分钟哦
+BREAK
+
+#IF
+EQUAL J305 1 
+#ACT
+SENDMSG 9 你已经领取过了
+break
+
+#or
+LARGE J201 60
+equal J201 60
+#ACT
+MONEY 绑定点卡 + 2000
+mov J305 1
+goto @在线奖励主页面
+SENDMSG 9 恭喜您成功领取在线奖励！
+
+
+[@在线领取6]
+#if
+small J201 120
+#act
+SENDMSG 9 在线时长未到120分钟哦
+BREAK
+
+#IF
+EQUAL J306 1 
+#ACT
+SENDMSG 9 你已经领取过了
+break
+
+#or
+LARGE J201 120
+equal J201 120
+#ACT
+MONEY 绑定点卡 + 2500
+mov J306 1
+goto @在线奖励主页面
+SENDMSG 9 恭喜您成功领取在线奖励！
+
+
+[@在线领取7]
+#if
+small J201 180
+#act
+SENDMSG 9 在线时长未到180分钟哦
+BREAK
+
+#IF
+EQUAL J307 1 
+#ACT
+SENDMSG 9 你已经领取过了
+break
+
+#or
+LARGE J201 180
+equal J201 180
+#ACT
+MONEY 绑定点卡 + 3000
+mov J307 1
+goto @在线奖励主页面
+SENDMSG 9 恭喜您成功领取在线奖励！
+
+
+[@在线领取8]
+#if
+small J201 360
+#act
+SENDMSG 9 在线时长未到360分钟哦
+BREAK
+
+#IF
+EQUAL J308 1 
+#ACT
+SENDMSG 9 你已经领取过了
+break
+
+#or
+LARGE J201 360
+equal J201 360
+#ACT
+MONEY 绑定点卡 + 15000
+mov J308 1
+goto @在线奖励主页面
+SENDMSG 9 恭喜您成功领取在线奖励！
+}

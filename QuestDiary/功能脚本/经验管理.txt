@@ -1,0 +1,138 @@
+[@经验管理页面]
+{
+#if
+#act
+mov U150 0
+
+MOV N$经验管理1 0
+MOV N$经验管理2 0
+MOV N$经验管理3 0
+MOV N$经验管理4 0
+MOV N$经验管理5 0
+MOV N$经验管理6 0
+MOV N$经验管理7 0
+MOV N$经验管理8 0
+MOV N$七宗罪经验管理1 0
+MOV N$七宗罪经验管理2 0
+
+
+#if
+equal N$经验管理1 0
+equal <$USEITEMNAME[103]> 经验源泉
+#act
+mov N$经验管理1 500
+inc U150 500
+
+#if
+equal N$经验管理2 0
+equal <$USEITEMNAME[96]> 天
+#act
+
+mov N$经验管理2 50
+inc U150 50
+
+#if
+equal N$经验管理3 0
+equal <$USEITEMNAME[97]> 地
+#act
+mov N$经验管理3 50
+inc U150 50
+
+#if
+equal N$经验管理4 0
+equal <$USEITEMNAME[98]> 离
+#act
+mov N$经验管理4 50
+inc U150 50
+
+
+;=========================================================================================================下面是帅哥新加的
+
+#if
+equal N$经验管理5 0
+equal <$USEITEMNAME[96]> ぇ酉ぇ
+#act
+mov N$经验管理5 100
+inc U150 100
+
+#if
+equal N$经验管理6 0
+equal <$USEITEMNAME[97]> ぇ戌ぇ
+#act
+mov N$经验管理6 100
+inc U150 100
+
+#if
+equal N$经验管理7 0
+equal <$USEITEMNAME[98]> ぇ亥ぇ
+#act
+mov N$经验管理7 100
+inc U150 100
+
+#if
+equal N$经验管理8 0
+equal <$USEITEMNAME[103]> 意外惊喜
+#act
+mov N$经验管理8 1000
+inc U150 1000
+
+
+
+#if
+equal N$七宗罪经验管理1 0
+CHECKTITLE 贪婪
+#act
+mov N$七宗罪经验管理1 100
+inc U150 100
+
+#if
+equal N$七宗罪经验管理2 0
+CHECKTITLE 贪·婪
+#act
+mov N$七宗罪经验管理2 600
+inc U150 600
+
+
+
+
+#if
+check [46] 1
+#act
+dec U150 50
+
+#if
+check [47] 1
+#act
+dec U150 50
+
+#if
+check [48] 1
+#act
+dec U150 50
+
+
+
+#if
+check [181] 1
+#act
+dec U150 100
+
+#if
+check [182] 1
+#act
+dec U150 100
+
+#if
+check [183] 1
+#act
+dec U150 100
+
+
+
+
+
+#if
+#act
+inc U150 N$捡取触发最终经验属性
+
+}

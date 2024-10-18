@@ -1,0 +1,52 @@
+[@道士宝宝]
+{
+
+#if
+#act
+DELSKILL 召唤神兽
+KILLCALLMOB 神兽 2
+KILLCALLMOB 神兽勇士 2
+KILLCALLMOB 神兽将军 2
+
+
+
+#if
+CHECKSLAVECOUNT > 1
+#act
+MOVESLAVE 0 <$map> <$x> <$y>
+break
+
+
+
+
+
+
+
+#if
+CHECKJOB TAOIST
+CHECKLEVELEX > 48
+#act
+RECALLMOB 圣兽将军 7 99999 0 0
+ChangeSlaveAttackHumPowerRate 圣兽将军 85
+break
+
+
+#if
+CHECKJOB TAOIST
+CHECKLEVELEX > 43
+#act
+RECALLMOB 圣兽勇士 7 99999 0 0
+ChangeSlaveAttackHumPowerRate 圣兽勇士 85
+break
+
+
+#if
+CHECKJOB TAOIST
+CHECKLEVELEX > 30
+#act
+RECALLMOB 圣兽 7 99999 0 0
+ChangeSlaveAttackHumPowerRate 圣兽 85
+break
+
+
+}

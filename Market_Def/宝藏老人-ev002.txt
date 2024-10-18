@@ -1,0 +1,64 @@
+[@main]
+#if
+#ACT
+NEWREADCSV ..\QuestDiary\功能表格\cfg_duobaoqibing.csv
+
+
+#if
+CheckMonMap ev002 1
+#act
+sendmsg 9 请先把地图的怪物击杀完，再来找我！
+break
+
+
+#if
+CheckMapHumanCount ev002 > 1
+#act
+sendmsg 9 请先把地图的敌人击杀完，再来找我！
+break
+
+
+
+#IF
+#say
+<Button|x=-2526.0|y=-1172.0|width=115120|height=112880|nimg=npc/zd.png|size=18|mimg=npc/zd.png|pimg=npc/zd.png|color=224|link=@exit>
+<Img|a=4|x=393.0|y=225.0|width=798|height=450|img=npc/bzlr/bj.png|bg=1|reset=1|show=4|esc=1|move=1|loadDelay=0>
+<Button|x=672.0|y=81.0|mimg=public/close-t.png|nimg=public/close-t.png|link=@exit>
+<Button|x=299.0|y=272.0|width=125|height=40|nimg=npc/bzlr/1.png|link=@打开宝箱>
+<Button|x=520.0|y=272.0|width=125|height=40|nimg=npc/bzlr/2.png|mimg=npc/bzlr/2.png|link=@回城咯>
+
+
+
+[@打开宝箱]
+#if
+not equal G17 1
+#act
+sendmsg 9 打开宝箱时间是22点09分之后,请在那之后找我
+break
+
+
+#if
+checkitem 宝箱 1
+#act
+take 宝箱 1
+MONEY 点卷 + 1000
+sendmsg 9 开启宝箱成功！获得1000点卷
+SetIcon 5 -1
+mov G17 0
+close
+#elseact
+sendmsg 9 少侠,你身上没有宝箱
+
+[@回城咯]
+#if
+checkitem 宝箱 1
+#act
+sendmsg 9 少侠,你背包里还有宝箱,要不要打开后再回去
+break
+
+#if
+#act
+SetIcon 5 -1
+MAPMOVE 3 333 333 1
+
+

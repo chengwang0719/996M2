@@ -1,0 +1,50 @@
+[@传送员]   
+{   
+
+
+<Button|x=-2526.0|y=-1172.0|width=115120|height=112880|nimg=npc/zd.png|mimg=npc/zd.png|color=224|size=18|pimg=npc/zd.png|link=@exit> 
+<Img|show=4|bg=1|loadDelay=1|move=0|esc=1|img=npc/dtbj.png|reset=1|hideMain=1>
+<Layout|x=548.0|y=-1.0|width=80|height=80|link=@exit>
+<Button|x=573.0|y=14.0|color=255|size=18|pimg=npc/exit-2.png|nimg=npc/exit-1.png|link=@exit>
+<Button|x=110.0|y=105.0|color=255|mimg=npc/mztc-3.png|size=18|pimg=npc/mztc-2.png|nimg=npc/mztc-1.png|link=@去盟重>
+<Button|x=350.0|y=105.0|color=255|mimg=npc/bqs-3.png|size=18|pimg=npc/bqs-2.png|nimg=npc/bqs-1.png|link=@去比奇>
+<Button|x=110.0|y=190.0|color=255|mimg=npc/bqcz-3.png|size=18|pimg=npc/bqcz-2.png|nimg=npc/bqcz-1.png|link=@去村庄>
+<Button|x=350.0|y=190.0|color=255|mimg=npc/yxc-3.png|size=18|pimg=npc/yxc-2.png|nimg=npc/yxc-1.png|link=@去银杏>
+   
+#if
+EQUAL <$USERNAME> 小小 
+#act
+#CALL [\限时奖励\个人首爆初始化.txt] @个人首爆初始
+
+
+[@去盟重]   
+#act   
+mapmove 3 326 335 8   
+break   
+   
+[@去比奇]   
+#act   
+mapmove 0 327 272   
+break   
+   
+[@去银杏]   
+#act   
+mapmove 0 290 616 3   
+break   
+   
+[@去村庄]   
+#act   
+mapmove 0 632 612 3   
+break   
+   
+[@去集市]   
+#act   
+mapmove 3 269 388 1   
+break   
+}   
+   
+  
+  
+ 
+ 
+

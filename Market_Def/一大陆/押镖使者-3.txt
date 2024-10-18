@@ -1,0 +1,224 @@
+[@main]
+
+
+
+
+;初始化押镖U变量
+#if
+equal J90 0
+#act
+mov U236 0
+
+
+
+#if
+not CheckHumInRange 3 352 329 3
+#act
+sendmsg 9 你离我太远了！请到我跟前来
+break
+
+#IF
+EQUAL U236 2
+#ACT
+sendmsg 9 没有押镖次数了,请明日再来吧！
+break
+
+
+;#if
+;small <$HFDAYS> 0
+;#act
+;sendmsg 9 【提示】未到开放时间
+;break
+
+#or
+CheckSlaveName 普通镖车
+CheckSlaveName 中级镖车
+CheckSlaveName 高级镖车
+CheckSlaveName 豪华镖车
+#act
+break
+
+#if
+equal G16 1
+#act
+mov A409 双倍押镖时间
+#elseact
+mov A409 正常押镖时间
+
+#if
+equal T210 
+#act
+mov T210 普通镖车
+
+#if
+equal T212 
+#act
+mov T212 <Img|x=73.0|y=50.0|width=192|height=300|rotate=0|move=0|show=4|reset=1|loadDelay=0|img=topbtn/xsyb/xz.png>
+
+
+#If
+equal U236 2
+#act
+mov N$押镖剩余次数 0
+
+#If
+equal U236 1
+#act
+mov N$押镖剩余次数 1
+
+#If
+equal U236 0
+#act
+mov N$押镖剩余次数 2
+
+#if
+#act
+goto @押镖页面
+[@押镖页面]
+#if
+#say
+<Button|x=-2526.0|y=-1172.0|width=115120|height=112880|color=224|nimg=npc/zd.png|size=18|mimg=npc/zd.png|pimg=npc/zd.png|link=@exit>
+<Img|x=1.0|y=-20.0|width=890|height=556|rotate=0|scale=1.2|loadDelay=0|move=0|bg=1|show=4|esc=1|reset=1|img=topbtn/xsyb/bg.png>
+<Button|x=834.0|y=8.0|nimg=public/close-2.png|mimg=public/close-2.png|link=@exit>
+<Img|x=72.0|y=50.0|width=190|height=300|rotate=0|move=0|show=4|reset=1|loadDelay=0|img=topbtn/xsyb/pt.png>
+<Img|x=263.0|y=49.0|width=190|height=300|rotate=0|move=0|show=4|reset=1|loadDelay=0|img=topbtn/xsyb/zj.png>
+<Img|x=453.0|y=49.0|width=190|height=300|rotate=0|move=0|show=4|reset=1|loadDelay=0|img=topbtn/xsyb/gj.png>
+<Img|x=644.0|y=49.0|width=190|height=300|rotate=0|move=0|show=4|reset=1|loadDelay=0|img=topbtn/xsyb/hh.png>
+
+<$STR(T212)>
+
+<Img|children={1d}|x=111.0|y=290.0|width=50|height=50|reset=1|loadDelay=0|img=npc/jnqh/kuang.png|move=0|esc=1|show=4>
+<ItemShow|id=1d|x=-8.0|y=-9.0|width=50|height=50|itemid=20225|itemcount=1|scale=0.8|showtips=1|bgtype=0>
+<Img|children={1a}|x=172.0|y=290.0|width=50|height=50|reset=1|loadDelay=0|img=npc/jnqh/kuang.png|move=0|esc=1|show=4>
+<ItemShow|id=1a|x=-7.0|y=-9.0|width=50|height=50|itemid=20179|itemcount=2|scale=0.8|showtips=1|bgtype=0>
+
+
+<Img|children={2a}|x=302.0|y=286.0|width=50|height=50|reset=1|loadDelay=0|img=npc/jnqh/kuang.png|move=0|esc=1|show=4>
+<ItemShow|id=2a|x=-8.0|y=-9.0|width=50|height=50|itemid=20226|itemcount=1|scale=0.8|showtips=1|bgtype=0>
+<Img|children={2d}|x=364.0|y=286.0|width=50|height=50|reset=1|loadDelay=0|img=npc/jnqh/kuang.png|move=0|esc=1|show=4>
+<ItemShow|id=2d|x=-7.0|y=-9.0|width=50|height=50|itemid=20179|itemcount=4|scale=0.8|showtips=1|bgtype=0>
+
+<Img|children={3a}|x=492.0|y=286.0|width=50|height=50|reset=1|loadDelay=0|img=npc/jnqh/kuang.png|move=0|esc=1|show=4>
+<ItemShow|id=3a|x=-8.0|y=-9.0|width=50|height=50|itemid=20227|itemcount=1|scale=0.8|showtips=1|bgtype=0>
+<Img|children={3d}|x=555.0|y=286.0|width=50|height=50|reset=1|loadDelay=0|img=npc/jnqh/kuang.png|move=0|esc=1|show=4>
+<ItemShow|id=3d|x=-7.0|y=-9.0|width=50|height=50|itemid=20179|itemcount=6|scale=0.8|showtips=1|bgtype=0>
+
+<Img|children={4a}|x=685.0|y=286.0|width=50|height=50|reset=1|loadDelay=0|img=npc/jnqh/kuang.png|move=0|esc=1|show=4>
+<ItemShow|id=4a|x=-8.0|y=-9.0|width=50|height=50|itemid=20228|itemcount=1|scale=0.8|showtips=1|bgtype=0>
+<Img|children={4d}|x=746.0|y=286.0|width=50|height=50|reset=1|loadDelay=0|img=npc/jnqh/kuang.png|move=0|esc=1|show=4>
+<ItemShow|id=4d|x=-7.0|y=-9.0|width=50|height=50|itemid=20179|itemcount=9|scale=0.8|showtips=1|bgtype=0>
+
+<Text|x=187.0|y=428.0|outline=1|size=14|color=246|text=点卡×5000>
+<Button|x=243.0|y=448.0|width=94|height=30|nimg=topbtn/xsyb/yjhh.png|mimg=topbtn/xsyb/yjhh.png|link=@一键豪华>
+<Button|x=340.0|y=448.0|width=94|height=30|nimg=topbtn/xsyb/sxbc.png|mimg=topbtn/xsyb/sxbc.png|link=@刷新镖车>
+<Button|x=720.0|y=448.0|width=94|height=30|nimg=topbtn/xsyb/ksyb.png|mimg=topbtn/xsyb/ksyb.png|link=@开始押镖>
+<Text|x=568.0|y=403.0|size=14|color=246|outline=1|text=<$STR(A409)>>
+<RText|x=568.0|y=430.0|size=14|outline=1|color=246|text=<$str(N$押镖剩余次数)>/2>
+
+
+<Text|x=188.0|y=402.0|size=14|outline=1|color=250|text=<$STR(T210)>>
+
+[@一键豪华]
+#if
+CHECKBINDMONEY 绑定点卷 > 100
+#act
+ChangeBindMoney 绑定点卷 100
+mov T210 豪华镖车 
+MOV T212 <Img|x=644.0|y=48.0|width=192|height=300|rotate=0|img=topbtn/xsyb/xz.png|reset=1|loadDelay=0|show=4|move=0>
+goto @押镖页面
+#elseact
+sendmsg 9 点券不足100,无法刷新镖车！
+Break
+
+
+
+[@刷新镖车]
+#if
+CheckBindMoney 绑定点卡 < 5000
+#act
+sendmsg 9 点卡不足5000,无法刷新镖车！
+Break
+
+#if
+#act
+mov T210 普通镖车 
+MOV T212 <Img|x=73.0|y=50.0|width=192|height=300|rotate=0|move=0|show=4|reset=1|loadDelay=0|img=topbtn/xsyb/xz.png>
+goto @押镖页面
+
+
+#if
+RANDOMEX 50 100
+#act
+mov T210 中级镖车 
+MOV T212 <Img|x=263.0|y=48.0|width=192|height=300|rotate=0|img=topbtn/xsyb/xz.png|reset=1|loadDelay=0|show=4|move=0>
+goto @押镖页面
+
+#if
+RANDOMEX 30 100
+#act
+mov T210 高级镖车 
+MOV T212 <Img|x=453.0|y=48.0|width=192|height=300|rotate=0|img=topbtn/xsyb/xz.png|reset=1|loadDelay=0|show=4|move=0>
+goto @押镖页面
+
+#if
+RANDOMEX 10 100
+#act
+mov T210 豪华镖车 
+MOV T212 <Img|x=644.0|y=48.0|width=192|height=300|rotate=0|img=topbtn/xsyb/xz.png|reset=1|loadDelay=0|show=4|move=0>
+goto @押镖页面
+
+
+#if
+#act
+CHANGEBINDMONEY 绑定点卡 5000
+
+[@开始押镖]
+
+
+#or
+CheckSlaveName 普通镖车
+CheckSlaveName 中级镖车
+CheckSlaveName 高级镖车
+CheckSlaveName 豪华镖车
+#act
+sendmsg 9 你当前已经有镖车了,请先完成押镖任务再来！
+break
+
+#if
+equal U236 0
+#act
+inc U236 1
+inc J90 1
+RECALLMOB <$STR(T210)> 0 200 0
+DartTime 300 1
+Dartmap 404 348 5
+goto @押镖页面
+SENDMSGNEW 255 0  【<$USERNAME>】在盟重城开始运送<$STR(T210)> 1 1
+;mov T210
+mov T212
+close
+break
+
+
+#if
+equal U236 1
+#act
+inc U236 1
+inc J90 1
+RECALLMOB <$STR(T210)> 0 200 0
+DartTime 300 1
+Dartmap 404 348 5
+goto @押镖页面
+SENDMSGNEW 255 0  【<$USERNAME>】在盟重城开始运送<$STR(T210)> 1 1
+;mov T210
+mov T212
+close
+break
+
+
+#if
+equal U236 2
+#act
+sendmsg 9 当日已无押镖剩余次数,请明日再来吧！
+break
+

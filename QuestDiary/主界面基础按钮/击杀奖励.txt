@@ -1,0 +1,388 @@
+[@击杀奖励主页面]
+{
+
+
+#if
+check [62] 0
+#act
+set [62] 1
+#CALL [\任务系统\任务系统QF.txt] @任务系统QF
+
+    
+#if
+equal J36 0
+#act
+mov S$领取图片1 btn
+#elseact
+mov S$领取图片1 ylq
+
+#if
+equal J37 0
+#act
+mov S$领取图片2 btn
+#elseact
+mov S$领取图片2 ylq
+
+#if
+equal J38 0
+#act
+mov S$领取图片3 btn
+#elseact
+mov S$领取图片3 ylq
+
+#if
+equal J39 0
+#act
+mov S$领取图片4 btn
+#elseact
+mov S$领取图片4 ylq
+
+#if
+equal J40 0
+#act
+mov S$领取图片5 btn
+#elseact
+mov S$领取图片5 ylq
+
+#if
+equal J41 0
+#act
+mov S$领取图片6 btn
+#elseact
+mov S$领取图片6 ylq
+
+#if
+equal J42 0
+#act
+mov S$领取图片7 btn
+#elseact
+mov S$领取图片7 ylq
+
+#if
+equal J43 0
+#act
+mov S$领取图片8 btn
+#elseact
+mov S$领取图片8 ylq
+
+#if
+equal J44 0
+#act
+mov S$领取图片9 btn
+#elseact
+mov S$领取图片9 ylq
+
+#if
+#act
+
+#CALL [\主界面基础按钮\福利大厅红点检测.txt] @福利大厅按钮
+
+
+#if
+#say
+<Button|x=-2526.0|y=-1172.0|width=115120|height=112880|mimg=npc/zd.png|color=224|nimg=npc/zd.png|pimg=npc/zd.png|size=18|link=@exit>
+<Img|children={1a,2a,3a}|x=38.0|y=-9.0|width=890|height=510|move=0|esc=1|show=4|bg=1|reset=1|loadDelay=0|img=topbtn/fldt/bj.png>
+<ListView|id=1a|children={a,b,c,d,e,f,g}|x=75.0|y=66.0|width=183|height=400|bounce=0|direction=1|margin=1>
+<Button|id=a|x=0|y=0|width=183|height=55|nimg=topbtn/fldt/4.png|mimg=topbtn/fldt/4.png|link=@七日签到>
+<Button|id=b|x=0|y=0|width=183|height=55|nimg=topbtn/fldt/6.png|mimg=topbtn/fldt/6.png|link=@击杀奖励>
+<Button|id=c|x=0|y=0|width=183|height=55|nimg=topbtn/fldt/7.png|mimg=topbtn/fldt/7.png|link=@在线奖励>
+<Button|id=d|x=0|y=0|width=183|height=55|nimg=topbtn/fldt/1.png|mimg=topbtn/fldt/1.png|link=@等级福利>
+<Button|id=e|x=0|y=0|width=183|height=55|nimg=topbtn/fldt/2.png|mimg=topbtn/fldt/2.png|link=@个人首爆>
+<Button|id=f|x=0|y=0|width=183|height=55|nimg=topbtn/fldt/5.png|mimg=topbtn/fldt/5.png|link=@全服首爆>
+<Button|id=g|x=0|y=0|width=183|height=55|nimg=topbtn/fldt/3.png|mimg=topbtn/fldt/3.png|link=@联系客服>
+<$str(S$七日签到红点)>
+<$str(S$杀怪奖励)>
+<$str(S$在线奖励)>
+<$str(S$等级奖励)>
+<ListView|id=2a|children={7a,7b,7c,7d,7e,7f,7g,7h,7i}|x=256.0|y=156.0|width=558|height=295|direction=1|margin=0|bounce=0|cantouch=1>
+
+<Img|id=7a|children={d1,d2,d3,d4,d5,6}|x=266.0|y=99.0|width=580|move=0|loadDelay=0|show=4|esc=1|reset=1|img=topbtn/fldt/kuang-1.png>
+<Img|id=d1|x=69|y=5.0|move=0|loadDelay=0|show=4|esc=1|reset=1|img=topbtn/fldt/box.png>
+<ItemShow|id=d2|x=70.0|y=3.0|width=70|height=70|itemid=4|itemcount=30000|showtips=1|bgtype=0>
+
+
+<Text|id=d5|x=303.0|y=24.0|size=16|color=250|text=10>
+<Button|id=6|x=432.0|y=16.0|mimg=topbtn/fldt/<$str(S$领取图片1)>.png|nimg=topbtn/fldt/<$str(S$领取图片1)>.png|link=@击杀领取1>
+
+<Img|id=7b|children={e1,e2,e3,e4,e5,e6}|x=266.0|y=178.0|width=580|move=0|loadDelay=0|show=4|esc=1|reset=1|img=topbtn/fldt/kuang-1.png>
+<Img|id=e1|x=69.0|y=5.0|move=0|loadDelay=0|show=4|esc=1|reset=1|img=topbtn/fldt/box.png>
+<ItemShow|id=e2|x=70.0|y=3.0|width=70|height=70|itemid=4|itemcount=40000|showtips=1|bgtype=0>
+
+
+<Text|id=e5|x=303|y=24|size=16|color=250|text=20>
+<Button|id=e6|x=432.0|y=12.0|mimg=topbtn/fldt/<$str(S$领取图片2)>.png|nimg=topbtn/fldt/<$str(S$领取图片2)>.png|link=@击杀领取2>
+
+<Img|id=7c|children={k1,k2,k3,k4,k5,k6}|x=266.0|y=257.0|width=580|move=0|loadDelay=0|show=4|esc=1|reset=1|img=topbtn/fldt/kuang-1.png>
+<Img|id=k1|x=69.0|y=5.0|move=0|loadDelay=0|show=4|esc=1|reset=1|img=topbtn/fldt/box.png>
+<ItemShow|id=k2|x=70|y=3|width=70|height=70|itemid=4|itemcount=50000|showtips=1|bgtype=0>
+
+
+<Text|id=k5|x=303|y=24|size=16|color=250|text=30>
+<Button|id=k6|x=432.0|y=13.0|mimg=topbtn/fldt/<$str(S$领取图片3)>.png|nimg=topbtn/fldt/<$str(S$领取图片3)>.png|link=@击杀领取3>
+
+<Img|id=7d|children={f1,f2,f3,f4,f5,f6}|x=266.0|y=336.0|width=580|move=0|loadDelay=0|show=4|esc=1|reset=1|img=topbtn/fldt/kuang-1.png>
+<Img|id=f1|x=69.0|y=5.0|move=0|loadDelay=0|show=4|esc=1|reset=1|img=topbtn/fldt/box.png>
+<ItemShow|id=f2|x=70|y=3.0|width=70|height=70|itemid=4|itemcount=60000|showtips=1|bgtype=0>
+
+
+<Text|id=f5|x=303|y=24|size=16|color=250|text=40>
+<Button|id=f6|x=432.0|y=14.0|mimg=topbtn/fldt/<$str(S$领取图片4)>.png|nimg=topbtn/fldt/<$str(S$领取图片4)>.png|link=@击杀领取4>
+
+<Img|id=7e|children={g1,g2,g3,g4,g5,g6}|x=266.0|y=415.0|width=580|move=0|loadDelay=0|show=4|esc=1|reset=1|img=topbtn/fldt/kuang-1.png>
+<Img|id=g1|x=69.0|y=5.0|move=0|loadDelay=0|show=4|esc=1|reset=1|img=topbtn/fldt/box.png>
+<ItemShow|id=g2|x=70.0|y=3.0|width=70|height=70|itemid=4|itemcount=70000|showtips=1|bgtype=0>
+
+
+<Text|id=g5|x=303|y=24|size=16|color=250|text=50>
+<Button|id=g6|x=432.0|y=14.0|mimg=topbtn/fldt/<$str(S$领取图片5)>.png|nimg=topbtn/fldt/<$str(S$领取图片5)>.png|link=@击杀领取5>
+
+<Img|id=7f|children={h1,h2,h3,h4,h5,h6}|x=266.0|y=494.0|width=580|move=0|loadDelay=0|show=4|esc=1|reset=1|img=topbtn/fldt/kuang-1.png>
+<Img|id=h1|x=69.0|y=5.0|move=0|loadDelay=0|show=4|esc=1|reset=1|img=topbtn/fldt/box.png>
+<ItemShow|id=h2|x=70.0|y=3.0|width=70|height=70|itemid=4|itemcount=80000|showtips=1|bgtype=0>
+
+
+<Text|id=h5|x=298|y=24|size=16|color=250|text=100>
+<Button|id=h6|x=432.0|y=12.0|mimg=topbtn/fldt/<$str(S$领取图片6)>.png|nimg=topbtn/fldt/<$str(S$领取图片6)>.png|link=@击杀领取6>
+
+<Img|id=7g|children={i1,i2,i3,i4,i5,i6}|x=266.0|y=573.0|width=580|move=0|loadDelay=0|show=4|esc=1|reset=1|img=topbtn/fldt/kuang-1.png>
+<Img|id=i1|x=69.0|y=5.0|move=0|loadDelay=0|show=4|esc=1|reset=1|img=topbtn/fldt/box.png>
+<ItemShow|id=i2|x=70.0|y=3|width=70|height=70|itemid=4|itemcount=90000|showtips=1|bgtype=0>
+
+
+<Text|id=i5|x=298|y=24|size=16|color=250|text=200>
+<Button|id=i6|x=432.0|y=12.0|mimg=topbtn/fldt/<$str(S$领取图片7)>.png|nimg=topbtn/fldt/<$str(S$领取图片7)>.png|link=@击杀领取7>
+
+
+<Img|id=7h|children={j1,j2,j3,j4,j5,j6}|x=266.0|y=652.0|width=580|move=0|loadDelay=0|show=4|esc=1|reset=1|img=topbtn/fldt/kuang-1.png>
+<Img|id=j1|x=69.0|y=5.0|move=0|loadDelay=0|show=4|esc=1|reset=1|img=topbtn/fldt/box.png>
+<ItemShow|id=j2|x=70.0|y=3|width=70|height=70|itemid=4|itemcount=100000|showtips=1|bgtype=0>
+
+
+<Text|id=j5|x=298|y=24|size=16|color=250|text=500>
+<Button|id=j6|x=432.0|y=12.0|mimg=topbtn/fldt/<$str(S$领取图片8)>.png|nimg=topbtn/fldt/<$str(S$领取图片8)>.png|link=@击杀领取8>
+
+<Img|id=7i|children={l1,l2,l3,l4,l5,l6}|x=266.0|y=731.0|width=580|move=0|loadDelay=0|show=4|esc=1|reset=1|img=topbtn/fldt/kuang-1.png>
+<Img|id=l1|x=69.0|y=5.0|move=0|loadDelay=0|show=4|esc=1|reset=1|img=topbtn/fldt/box.png>
+<ItemShow|id=l2|x=70.0|y=3|width=70|height=70|itemid=4|itemcount=250000|showtips=1|bgtype=0>
+
+
+<Text|id=l5|x=293|y=24|size=16|color=250|text=1000>
+<Button|id=l6|x=432.0|y=12.0|mimg=topbtn/fldt/<$str(S$领取图片9)>.png|nimg=topbtn/fldt/<$str(S$领取图片9)>.png|link=@击杀领取9>
+
+<Img|id=3a|children={3at}|x=255.0|y=66.0|width=580|move=0|loadDelay=0|show=4|esc=1|reset=1|img=topbtn/fldt/bj-1.png>
+
+<Layout|id=3at|children={3aa}|x=467.0|y=61.0|width=80|height=20>
+<Text|id=3aa|a=4|percentx=25|percenty=50|size=16|color=251|text=<$str(J200)>>
+<Layout|x=826.0|y=-17.0|width=80|height=80|link=@exit>
+<Button|x=852.0|y=29.0|nimg=public/close-2.png|mimg=public/close-2.png|link=@exit>
+<Img|x=382.0|y=-6.0|width=200|height=67|show=4|reset=1|img=topbtn/fldt/title.png|move=0|loadDelay=0|esc=1>
+
+
+[@击杀红点判断]
+
+
+
+[@击杀领取1]
+#if
+small J200 10
+#act
+SENDMSG 9 未满足击杀怪物条件
+BREAK
+
+#IF
+EQUAL J36 1 
+#ACT
+SENDMSG 9 你已经领取过了
+break
+
+#IF
+equal U7 11
+LARGE J200 9
+#ACT
+MONEY 绑定元宝 + 30000
+mov J36 1
+goto @击杀奖励主页面
+SENDMSG 9 恭喜您成功领取10只怪物击杀奖励！
+BREAK
+
+#IF
+LARGE J200 9
+#ACT
+MONEY 绑定元宝 + 30000
+mov J36 1
+goto @击杀奖励主页面
+SENDMSG 9 恭喜您成功领取10只怪物击杀奖励！
+BREAK
+;close
+
+[@击杀领取2]
+#if
+small J200 20
+#act
+SENDMSG 9 未满足击杀怪物条件
+BREAK
+
+#IF
+EQUAL J37 1 
+#ACT
+SENDMSG 9 你已经领取过了
+break
+
+#IF
+LARGE J200 19
+#ACT
+MONEY 绑定元宝 + 40000
+mov J37 1
+goto @击杀奖励主页面
+SENDMSG 9 恭喜您成功领取20只怪物击杀奖励！
+
+
+[@击杀领取3]
+#if
+small J200 30
+#act
+SENDMSG 9 未满足击杀怪物条件
+BREAK
+
+#IF
+EQUAL J38 1 
+#ACT
+SENDMSG 9 你已经领取过了
+break
+
+#IF
+LARGE J200 29
+#ACT
+MONEY 绑定元宝 + 50000
+MOV J38 1
+goto @击杀奖励主页面
+SENDMSG 9 恭喜您成功领取30只怪物击杀奖励！
+
+[@击杀领取4]
+#if
+small J200 40
+#act
+SENDMSG 9 未满足击杀怪物条件
+BREAK
+
+#IF
+EQUAL J39 1 
+#ACT
+SENDMSG 9 你已经领取过了
+break
+
+#IF
+LARGE J200 39
+#ACT
+MONEY 绑定元宝 + 60000
+MOV J39 1
+goto @击杀奖励主页面
+SENDMSG 9 恭喜您成功领取40只怪物击杀奖励！
+
+
+[@击杀领取5]
+#if
+small J200 50
+#act
+SENDMSG 9 未满足击杀怪物条件
+BREAK
+
+#IF
+EQUAL J40 1 
+#ACT
+SENDMSG 9 你已经领取过了
+break
+
+#IF
+LARGE J200 49
+#ACT
+MONEY 绑定元宝 + 70000
+MOV J40 1
+goto @击杀奖励主页面
+SENDMSG 9 恭喜您成功领取50只怪物击杀奖励！
+
+[@击杀领取6]
+#if
+small J200 100
+#act
+SENDMSG 9 未满足击杀怪物条件
+BREAK
+
+#IF
+EQUAL J41 1 
+#ACT
+SENDMSG 9 你已经领取过了
+break
+
+#IF
+LARGE J200 99
+#ACT
+MONEY 绑定元宝 + 80000
+MOV J41 1
+goto @击杀奖励主页面
+SENDMSG 9 恭喜您成功领取100只怪物击杀奖励！
+
+[@击杀领取7]
+#if
+small J200 200
+#act
+SENDMSG 9 未满足击杀怪物条件
+BREAK
+
+#IF
+EQUAL J42 1 
+#ACT
+SENDMSG 9 你已经领取过了
+break
+
+#IF
+LARGE J200 199
+#ACT
+MONEY 绑定元宝 + 90000
+MOV J42 1
+goto @击杀奖励主页面
+SENDMSG 9 恭喜您成功领取200只怪物击杀奖励！
+
+[@击杀领取8]
+#if
+small J200 500
+#act
+SENDMSG 9 未满足击杀怪物条件
+BREAK
+
+#IF
+EQUAL J43 1 
+#ACT
+SENDMSG 9 你已经领取过了
+break
+
+#IF
+LARGE J200 499
+#ACT
+MONEY 绑定元宝 + 100000
+MOV J43 1
+goto @击杀奖励主页面
+SENDMSG 9 恭喜您成功领取500只怪物击杀奖励！
+
+
+[@击杀领取9]
+#if
+small J200 1000
+#act
+SENDMSG 9 未满足击杀怪物条件
+BREAK
+
+#IF
+EQUAL J44 1 
+#ACT
+SENDMSG 9 你已经领取过了
+break
+
+#IF
+LARGE J200 999
+#ACT
+MONEY 绑定元宝 + 250000
+MOV J44 1
+goto @击杀奖励主页面
+SENDMSG 9 恭喜您成功领取1000只怪物击杀奖励！
+}

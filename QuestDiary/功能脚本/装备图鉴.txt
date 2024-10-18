@@ -1,0 +1,1185 @@
+[@装备图鉴]
+{
+#IF
+#ACT
+GOTO @加载装备图鉴
+GOTO @加载图鉴激活
+GOTO @装备图鉴展示
+
+[@装备图鉴展示]    
+#IF
+#say
+<Button|x=-2526.0|y=-1172.0|width=115120|height=112880|size=18|mimg=npc/zd.png|pimg=npc/zd.png|nimg=npc/zd.png|color=224|link=@exit>
+<Img|children={1,2,3,4,6}|a=4|x=426.0|y=272.5|width=950|height=593|show=4|img=npc/zbtj/bj.png|bg=1|reset=1|loadDelay=0|move=0|esc=1>
+<Button|id=1|x=887.0|y=31.0|mimg=public/close-2.png|nimg=public/close-2.png|link=@exit>
+<Frames|id=2|a=4|percentx=30.2|percenty=44.9|width=432|height=380|speed=8|prefix=npc/zbtj/tx/sfx_|suffix=.png|loop=-1|count=15>
+
+<Button|id=3|x=683.0|y=482.0|mimg=npc/zbtj/2.png|nimg=npc/zbtj/2.png|link=@一键激活>
+<Text|id=4|x=142|y=430|color=116|size=16|outline=1|text=激活说明:每激活一件装备,当件装备会消失>
+<Img|a=4|x=115.0|y=476.0|width=158|height=18|show=4|reset=1|move=0|esc=1|img=npc/zbtj/3.png|loadDelay=0>
+<Img|a=4|x=430.5|y=433.0|width=815|height=2|show=4|reset=1|move=0|esc=1|img=npc/zbtj/heitiao.png|loadDelay=0>
+<Text|id=5|x=201|y=466|color=161|size=16|outline=1|text=1.单件激活增加每秒回蓝回红+1>
+<Text|id=6|x=85|y=518|color=161|size=16|outline=1|text=2.集齐激活所有增加、对怪增伤10%  韧性5%、生命加成3%、暴击抵抗5%>
+<ListView|children={a,b,c,d,e,f,g,h,i,j}|x=432.0|y=58.0|width=395|height=368|margin=0|bounce=0|direction=1|cantouch=1>
+
+<Layout|id=a|children={101,102,103,104,105,106}|x=0|y=0|width=388|height=100>
+
+<ItemShow|id=101|x=40|y=39|children={2c1}|a=4|itemid=10172|itemcount=0|bgtype=1|showtips=1|grey=<$STR(s$是否激活_1)>>
+<Text|id=2c1|x=2.0|y=67.0|color=<$STR(S$激活颜色_1)>|size=16|outline=1|text=耀金战甲|link=@开始图鉴_1>
+
+<ItemShow|id=102|x=118|y=39|children={2c2}|a=4|itemid=10173|itemcount=0|bgtype=1|showtips=1|grey=<$STR(s$是否激活_2)>>
+<Text|id=2c2|x=2.0|y=67.0|color=<$STR(S$激活颜色_2)>|size=16|outline=1|text=耀金战袍|link=@开始图鉴_2>
+
+<ItemShow|id=103|x=196|y=39|children={2c3}|a=4|itemid=10174|itemcount=0|bgtype=1|showtips=1|grey=<$STR(s$是否激活_3)>>
+<Text|id=2c3|x=2.0|y=67.0|color=<$STR(S$激活颜色_3)>|size=16|outline=1|text=耀金破龍斩|link=@开始图鉴_3>
+
+<ItemShow|id=104|x=274|y=39|children={2c4}|a=4|itemid=10221|itemcount=0|bgtype=1|showtips=1|grey=<$STR(s$是否激活_4)>>
+<Text|id=2c4|x=2.0|y=67.0|color=<$STR(S$激活颜色_4)>|size=16|outline=1|text=耀金腰带|link=@开始图鉴_4>
+
+<ItemShow|id=105|x=352|y=39|children={2c5}|a=4|itemid=10222|itemcount=0|bgtype=1|showtips=1|grey=<$STR(s$是否激活_5)>>
+<Text|id=2c5|x=2.0|y=67.0|color=<$STR(S$激活颜色_5)>|size=16|outline=1|text=耀金靴子|link=@开始图鉴_5>
+
+
+
+<Layout|id=b|children={201,202,203,204,205,206}|x=0|y=0|width=388|height=100>
+
+<ItemShow|id=201|x=40|y=39|children={2b1}|a=4|itemid=10223|itemcount=0|bgtype=1|showtips=1|grey=<$STR(s$是否激活_6)>>
+<Text|id=2b1|x=2.0|y=67.0|color=<$STR(S$激活颜色_6)>|size=16|outline=1|text=耀金头盔|link=@开始图鉴_6>
+
+<ItemShow|id=202|x=118|y=39|children={2b2}|a=4|itemid=10224|itemcount=0|bgtype=1|showtips=1|grey=<$STR(s$是否激活_7)>>
+<Text|id=2b2|x=2.0|y=67.0|color=<$STR(S$激活颜色_7)>|size=16|outline=1|text=耀金项链|link=@开始图鉴_7>
+
+<ItemShow|id=203|x=196|y=39|children={2b3}|a=4|itemid=10225|itemcount=0|bgtype=1|showtips=1|grey=<$STR(s$是否激活_8)>>
+<Text|id=2b3|x=2.0|y=67.0|color=<$STR(S$激活颜色_8)>|size=16|outline=1|text=耀金手镯|link=@开始图鉴_8>
+
+<ItemShow|id=204|x=274|y=39|children={2b4}|a=4|itemid=10226|itemcount=0|bgtype=1|showtips=1|grey=<$STR(s$是否激活_9)>>
+<Text|id=2b4|x=2.0|y=67.0|color=<$STR(S$激活颜色_9)>|size=16|outline=1|text=耀金麻戒|link=@开始图鉴_9>
+
+<ItemShow|id=205|x=352|y=39|children={2b5}|a=4|itemid=10175|itemcount=0|bgtype=1|showtips=1|grey=<$STR(s$是否激活_10)>>
+<Text|id=2b5|x=2.0|y=67.0|color=<$STR(S$激活颜色_10)>|size=16|outline=1|text=耀光法甲|link=@开始图鉴_10>
+
+
+
+
+<Layout|id=c|children={301,302,303,304,305,306}|x=0|y=0|width=388|height=100>
+
+<ItemShow|id=301|x=40|y=39|children={2d1}|a=4|itemid=10176|itemcount=0|bgtype=1|showtips=1|grey=<$STR(s$是否激活_11)>>
+<Text|id=2d1|x=2.0|y=67.0|color=<$STR(S$激活颜色_11)>|size=16|outline=1|text=耀光法袍|link=@开始图鉴_11>
+
+<ItemShow|id=302|x=118|y=39|children={2d2}|a=4|itemid=10177|itemcount=0|bgtype=1|showtips=1|grey=<$STR(s$是否激活_12)>>
+<Text|id=2d2|x=2.0|y=67.0|color=<$STR(S$激活颜色_12)>|size=16|outline=1|text=耀光寒冰刃|link=@开始图鉴_12>
+
+<ItemShow|id=303|x=196|y=39|children={2d3}|a=4|itemid=10227|itemcount=0|bgtype=1|showtips=1|grey=<$STR(s$是否激活_13)>>
+<Text|id=2d3|x=2.0|y=67.0|color=<$STR(S$激活颜色_13)>|size=16|outline=1|text=耀光腰带|link=@开始图鉴_13>
+
+<ItemShow|id=304|x=274|y=39|children={2d4}|a=4|itemid=10228|itemcount=0|bgtype=1|showtips=1|grey=<$STR(s$是否激活_14)>>
+<Text|id=2d4|x=2.0|y=67.0|color=<$STR(S$激活颜色_14)>|size=16|outline=1|text=耀光靴子|link=@开始图鉴_14>
+
+<ItemShow|id=305|x=352|y=39|children={2d5}|a=4|itemid=10229|itemcount=0|bgtype=1|showtips=1|grey=<$STR(s$是否激活_15)>>
+<Text|id=2d5|x=2.0|y=67.0|color=<$STR(S$激活颜色_15)>|size=16|outline=1|text=耀光头盔|link=@开始图鉴_15>
+
+
+
+
+<Layout|id=d|children={401,402,403,404,405,406}|x=0|y=0|width=388|height=100>
+
+<ItemShow|id=401|x=40|y=39|children={2e1}|a=4|itemid=10230|itemcount=0|bgtype=1|showtips=1|grey=<$STR(s$是否激活_16)>>
+<Text|id=2e1|x=2.0|y=67.0|color=<$STR(S$激活颜色_16)>|size=16|outline=1|text=耀光项链|link=@开始图鉴_16>
+
+<ItemShow|id=402|x=118|y=39|children={2e2}|a=4|itemid=10231|itemcount=0|bgtype=1|showtips=1|grey=<$STR(s$是否激活_17)>>
+<Text|id=2e2|x=2.0|y=67.0|color=<$STR(S$激活颜色_17)>|size=16|outline=1|text=耀光手镯|link=@开始图鉴_17>
+
+<ItemShow|id=403|x=196|y=39|children={2e3}|a=4|itemid=10587|itemcount=0|bgtype=1|showtips=1|grey=<$STR(s$是否激活_18)>>
+<Text|id=2e3|x=2.0|y=67.0|color=<$STR(S$激活颜色_18)>|size=16|outline=1|text=耀光护戒|link=@开始图鉴_18>
+
+<ItemShow|id=404|x=274|y=39|children={2e4}|a=4|itemid=10178|itemcount=0|bgtype=1|showtips=1|grey=<$STR(s$是否激活_19)>>
+<Text|id=2e4|x=2.0|y=67.0|color=<$STR(S$激活颜色_19)>|size=16|outline=1|text=耀玉道甲|link=@开始图鉴_19>
+
+<ItemShow|id=405|x=352|y=39|children={2e5}|a=4|itemid=10179|itemcount=0|bgtype=1|showtips=1|grey=<$STR(s$是否激活_20)>>
+<Text|id=2e5|x=2.0|y=67.0|color=<$STR(S$激活颜色_20)>|size=16|outline=1|text=耀玉道袍|link=@开始图鉴_20>
+
+
+
+
+
+<Layout|id=e|children={501,502,503,504,505,506}|x=0|y=0|width=388|height=100>
+
+<ItemShow|id=501|x=40|y=39|children={2f1}|a=4|itemid=10180|itemcount=0|bgtype=1|showtips=1|grey=<$STR(s$是否激活_21)>>
+<Text|id=2f1|x=2.0|y=67.0|color=<$STR(S$激活颜色_21)>|size=16|outline=1|text=耀玉青龙刀|link=@开始图鉴_21>
+
+<ItemShow|id=502|x=118|y=39|children={2f2}|a=4|itemid=10233|itemcount=0|bgtype=1|showtips=1|grey=<$STR(s$是否激活_22)>>
+<Text|id=2f2|x=2.0|y=67.0|color=<$STR(S$激活颜色_22)>|size=16|outline=1|text=耀玉腰带|link=@开始图鉴_22>
+
+<ItemShow|id=503|x=196|y=39|children={2f3}|a=4|itemid=10234|itemcount=0|bgtype=1|showtips=1|grey=<$STR(s$是否激活_23)>>
+<Text|id=2f3|x=2.0|y=67.0|color=<$STR(S$激活颜色_23)>|size=16|outline=1|text=耀玉靴子|link=@开始图鉴_23>
+
+<ItemShow|id=504|x=274|y=39|children={2f4}|a=4|itemid=10235|itemcount=0|bgtype=1|showtips=1|grey=<$STR(s$是否激活_24)>>
+<Text|id=2f4|x=2.0|y=67.0|color=<$STR(S$激活颜色_24)>|size=16|outline=1|text=耀玉头盔|link=@开始图鉴_24>
+
+<ItemShow|id=505|x=352|y=39|children={2f5}|a=4|itemid=10236|itemcount=0|bgtype=1|showtips=1|grey=<$STR(s$是否激活_25)>>
+<Text|id=2f5|x=2.0|y=67.0|color=<$STR(S$激活颜色_25)>|size=16|outline=1|text=耀玉项链|link=@开始图鉴_25>
+
+
+<Layout|id=f|children={601,602,603,604,605,606}|x=0|y=0|width=388|height=100>
+
+<ItemShow|id=601|x=40|y=39|children={2g1}|a=4|itemid=10237|itemcount=0|bgtype=1|showtips=1|grey=<$STR(s$是否激活_26)>>
+<Text|id=2g1|x=2.0|y=67.0|color=<$STR(S$激活颜色_26)>|size=16|outline=1|text=耀玉手镯|link=@开始图鉴_26>
+
+<ItemShow|id=602|x=118|y=39|children={2g2}|a=4|itemid=10590|itemcount=0|bgtype=1|showtips=1|grey=<$STR(s$是否激活_27)>>
+<Text|id=2g2|x=2.0|y=67.0|color=<$STR(S$激活颜色_27)>|size=16|outline=1|text=耀玉复戒|link=@开始图鉴_27>
+
+
+
+
+
+[@开始图鉴_1]
+#IF
+EQUAL U20 1
+#act
+SENDMSG 9 [提示]：你已经开启过：耀金战甲
+break
+
+#if
+checkitem 耀金战甲 1
+#act
+MOV U20 1
+TAKE 耀金战甲 1
+inc U55 1
+inc U56 1
+GOTO @加载装备图鉴
+GOTO @加载图鉴激活
+GOTO @装备图鉴展示
+goto @单件激活属性
+goto @全部激活属性
+BREAK
+#ELSEACT
+SENDMSG 9 [提示]：请检查您的背包是否有：耀金战甲
+
+
+[@开始图鉴_2]
+#IF
+EQUAL U21 1
+#act
+SENDMSG 9 [提示]：你已经开启过：耀金战袍
+break
+
+#if
+checkitem 耀金战袍 1
+#act
+MOV U21 1
+TAKE 耀金战袍 1
+GOTO @加载装备图鉴
+GOTO @加载图鉴激活
+GOTO @装备图鉴展示
+inc U55 1
+inc U56 1
+goto @单件激活属性
+goto @全部激活属性
+BREAK
+#ELSEACT
+SENDMSG 9 [提示]：请检查您的背包是否有：耀金战袍
+
+
+
+[@开始图鉴_3]
+#IF
+EQUAL U22 1
+#act
+SENDMSG 9 [提示]：你已经开启过：耀金破龍斩
+break
+
+#if
+checkitem 耀金破龍斩 1
+#act
+MOV U22 1
+TAKE 耀金破龍斩 1
+GOTO @加载装备图鉴
+GOTO @加载图鉴激活
+GOTO @装备图鉴展示
+inc U55 1
+inc U56 1
+goto @单件激活属性
+goto @全部激活属性
+BREAK
+#ELSEACT
+SENDMSG 9 [提示]：请检查您的背包是否有：耀金破龍斩
+[@开始图鉴_4]
+#IF
+EQUAL U23 1
+#act
+SENDMSG 9 [提示]：你已经开启过：耀金腰带
+break
+
+#if
+checkitem 耀金腰带 1
+#act
+MOV U23 1
+TAKE 耀金腰带 1
+GOTO @加载装备图鉴
+GOTO @加载图鉴激活
+GOTO @装备图鉴展示
+inc U55 1
+inc U56 1
+goto @单件激活属性
+goto @全部激活属性
+BREAK
+#ELSEACT
+SENDMSG 9 [提示]：请检查您的背包是否有：耀金腰带
+
+[@开始图鉴_5]
+#IF
+EQUAL U24 1
+#act
+SENDMSG 9 [提示]：你已经开启过：耀金靴子
+break
+
+#if
+checkitem 耀金靴子 1
+#act
+MOV U24 1
+TAKE 耀金靴子 1
+GOTO @加载装备图鉴
+GOTO @加载图鉴激活
+GOTO @装备图鉴展示
+inc U55 1
+inc U56 1
+goto @单件激活属性
+goto @全部激活属性
+BREAK
+#ELSEACT
+SENDMSG 9 [提示]：请检查您的背包是否有：耀金靴子
+
+
+[@开始图鉴_6]
+#IF
+EQUAL U25 1
+#act
+SENDMSG 9 [提示]：你已经开启过：耀金头盔
+break
+
+#if
+checkitem 耀金头盔 1
+#act
+MOV U25 1
+TAKE 耀金头盔 1
+GOTO @加载装备图鉴
+GOTO @加载图鉴激活
+GOTO @装备图鉴展示
+inc U55 1
+inc U56 1
+goto @单件激活属性
+goto @全部激活属性
+BREAK
+#ELSEACT
+SENDMSG 9 [提示]：请检查您的背包是否有：耀金头盔
+
+[@开始图鉴_7]
+#IF
+EQUAL U26 1
+#act
+SENDMSG 9 [提示]：你已经开启过：耀金项链
+break
+
+#if
+checkitem 耀金项链 1
+#act
+MOV U26 1
+TAKE 耀金项链 1
+GOTO @加载装备图鉴
+GOTO @加载图鉴激活
+GOTO @装备图鉴展示
+inc U55 1
+inc U56 1
+goto @单件激活属性
+goto @全部激活属性
+BREAK
+#ELSEACT
+SENDMSG 9 [提示]：请检查您的背包是否有：耀金项链
+
+[@开始图鉴_8]
+#IF
+EQUAL U27 1
+#act
+SENDMSG 9 [提示]：你已经开启过：耀金手镯
+break
+
+#if
+checkitem 耀金手镯 1
+#act
+MOV U27 1
+TAKE 耀金手镯 1
+GOTO @加载装备图鉴
+GOTO @加载图鉴激活
+GOTO @装备图鉴展示
+inc U55 1
+inc U56 1
+goto @单件激活属性
+goto @全部激活属性
+BREAK
+#ELSEACT
+SENDMSG 9 [提示]：请检查您的背包是否有：耀金手镯
+
+[@开始图鉴_9]
+#IF
+EQUAL U28 1
+#act
+SENDMSG 9 [提示]：你已经开启过：耀金麻戒
+break
+
+#if
+checkitem 耀金麻戒 1
+#act
+MOV U28 1
+TAKE 耀金麻戒 1
+GOTO @加载装备图鉴
+GOTO @加载图鉴激活
+GOTO @装备图鉴展示
+inc U55 1
+inc U56 1
+goto @单件激活属性
+goto @全部激活属性
+BREAK
+#ELSEACT
+SENDMSG 9 [提示]：请检查您的背包是否有：耀金麻戒
+
+
+[@开始图鉴_10]
+#IF
+EQUAL U29 1
+#act
+SENDMSG 9 [提示]：你已经开启过：耀光法甲
+break
+
+#if
+checkitem 耀光法甲 1
+#act
+MOV U29 1
+TAKE 耀光法甲 1
+GOTO @加载装备图鉴
+GOTO @加载图鉴激活
+GOTO @装备图鉴展示
+inc U55 1
+inc U56 1
+goto @单件激活属性
+goto @全部激活属性
+BREAK
+#ELSEACT
+SENDMSG 9 [提示]：请检查您的背包是否有：耀光法甲
+
+
+[@开始图鉴_11]
+#IF
+EQUAL U30 1
+#act
+SENDMSG 9 [提示]：你已经开启过：耀光法袍
+break
+
+#if
+checkitem 耀光法袍 1
+#act
+MOV U30 1
+TAKE 耀光法袍 1
+GOTO @加载装备图鉴
+GOTO @加载图鉴激活
+GOTO @装备图鉴展示
+inc U55 1
+inc U56 1
+goto @单件激活属性
+goto @全部激活属性
+BREAK
+#ELSEACT
+SENDMSG 9 [提示]：请检查您的背包是否有：耀光法袍
+
+
+[@开始图鉴_12]
+#IF
+EQUAL U31 1
+#act
+SENDMSG 9 [提示]：你已经开启过：耀光寒冰刃
+break
+
+#if
+checkitem 耀光寒冰刃 1
+#act
+MOV U31 1
+TAKE 耀光寒冰刃 1
+GOTO @加载装备图鉴
+GOTO @加载图鉴激活
+GOTO @装备图鉴展示
+inc U55 1
+inc U56 1
+goto @单件激活属性
+goto @全部激活属性
+BREAK
+#ELSEACT
+SENDMSG 9 [提示]：请检查您的背包是否有：耀光寒冰刃
+
+[@开始图鉴_13]
+#IF
+EQUAL U32 1
+#act
+SENDMSG 9 [提示]：你已经开启过：耀光腰带
+break
+
+#if
+checkitem 耀光腰带 1
+#act
+MOV U32 1
+TAKE 耀光腰带 1
+GOTO @加载装备图鉴
+GOTO @加载图鉴激活
+GOTO @装备图鉴展示
+inc U55 1
+inc U56 1
+goto @单件激活属性
+goto @全部激活属性
+BREAK
+#ELSEACT
+SENDMSG 9 [提示]：请检查您的背包是否有：耀光腰带
+
+[@开始图鉴_14]
+#IF
+EQUAL U33 1
+#act
+SENDMSG 9 [提示]：你已经开启过：耀光靴子
+break
+
+#if
+checkitem 耀光靴子 1
+#act
+MOV U33 1
+TAKE 耀光靴子 1
+GOTO @加载装备图鉴
+GOTO @加载图鉴激活
+GOTO @装备图鉴展示
+inc U55 1
+inc U56 1
+goto @单件激活属性
+goto @全部激活属性
+BREAK
+#ELSEACT
+SENDMSG 9 [提示]：请检查您的背包是否有：耀光靴子
+
+
+[@开始图鉴_15]
+#IF
+EQUAL U34 1
+#act
+SENDMSG 9 [提示]：你已经开启过：耀光头盔
+break
+
+#if
+checkitem 耀光头盔 1
+#act
+MOV U34 1
+TAKE 耀光头盔 1
+GOTO @加载装备图鉴
+GOTO @加载图鉴激活
+GOTO @装备图鉴展示
+inc U55 1
+inc U56 1
+goto @单件激活属性
+goto @全部激活属性
+BREAK
+#ELSEACT
+SENDMSG 9 [提示]：请检查您的背包是否有：耀光头盔
+
+
+[@开始图鉴_16]
+#IF
+EQUAL U35 1
+#act
+SENDMSG 9 [提示]：你已经开启过：耀光项链
+break
+
+#if
+checkitem 耀光项链 1
+#act
+MOV U35 1
+TAKE 耀光项链 1
+GOTO @加载装备图鉴
+GOTO @加载图鉴激活
+GOTO @装备图鉴展示
+inc U55 1
+inc U56 1
+goto @单件激活属性
+goto @全部激活属性
+BREAK
+#ELSEACT
+SENDMSG 9 [提示]：请检查您的背包是否有：耀光项链
+
+[@开始图鉴_17]
+
+#IF
+EQUAL U36 1
+#act
+SENDMSG 9 [提示]：你已经开启过：耀光手镯
+break
+
+#if
+checkitem 耀光手镯 1
+#act
+MOV U36 1
+TAKE 耀光手镯 1
+GOTO @加载装备图鉴
+GOTO @加载图鉴激活
+GOTO @装备图鉴展示
+inc U55 1
+inc U56 1
+goto @单件激活属性
+goto @全部激活属性
+BREAK
+#ELSEACT
+SENDMSG 9 [提示]：请检查您的背包是否有：耀光手镯
+
+
+[@开始图鉴_18]
+#IF
+EQUAL U37 1
+#act
+SENDMSG 9 [提示]：你已经开启过：耀光护戒
+break
+
+#if
+checkitem 耀光护戒 1
+#act
+MOV U37 1
+TAKE 耀光护戒 1
+GOTO @加载装备图鉴
+GOTO @加载图鉴激活
+GOTO @装备图鉴展示
+inc U55 1
+inc U56 1
+goto @单件激活属性
+goto @全部激活属性
+BREAK
+#ELSEACT
+SENDMSG 9 [提示]：请检查您的背包是否有：耀光护戒
+
+
+[@开始图鉴_19]
+#IF
+EQUAL U38 1
+#act
+SENDMSG 9 [提示]：你已经开启过：耀玉道甲
+break
+
+#if
+checkitem 耀玉道甲 1
+#act
+MOV U38 1
+TAKE 耀玉道甲 1
+GOTO @加载装备图鉴
+GOTO @加载图鉴激活
+GOTO @装备图鉴展示
+inc U55 1
+inc U56 1
+goto @单件激活属性
+goto @全部激活属性
+BREAK
+#ELSEACT
+SENDMSG 9 [提示]：请检查您的背包是否有：耀玉道甲
+
+
+[@开始图鉴_20]
+#IF
+EQUAL U39 1
+#act
+SENDMSG 9 [提示]：你已经开启过：耀玉道袍
+break
+
+#if
+checkitem 耀玉道袍 1
+#act
+MOV U39 1
+TAKE 耀玉道袍 1
+GOTO @加载装备图鉴
+GOTO @加载图鉴激活
+GOTO @装备图鉴展示
+inc U55 1
+inc U56 1
+goto @单件激活属性
+goto @全部激活属性
+BREAK
+#ELSEACT
+SENDMSG 9 [提示]：请检查您的背包是否有：耀玉道袍
+
+
+[@开始图鉴_21]
+#IF
+EQUAL U40 1
+#act
+SENDMSG 9 [提示]：你已经开启过：耀玉青龙刀
+break
+
+#if
+checkitem 耀玉青龙刀 1
+#act
+MOV U40 1
+TAKE 耀玉青龙刀 1
+GOTO @加载装备图鉴
+GOTO @加载图鉴激活
+GOTO @装备图鉴展示
+inc U55 1
+inc U56 1
+goto @单件激活属性
+goto @全部激活属性
+BREAK
+#ELSEACT
+SENDMSG 9 [提示]：请检查您的背包是否有：耀玉青龙刀
+
+
+[@开始图鉴_22]
+#IF
+EQUAL U41 1
+#act
+SENDMSG 9 [提示]：你已经开启过：耀玉腰带
+break
+
+#if
+checkitem 耀玉腰带 1
+#act
+MOV U41 1
+TAKE 耀玉腰带 1
+GOTO @加载装备图鉴
+GOTO @加载图鉴激活
+GOTO @装备图鉴展示
+inc U55 1
+inc U56 1
+goto @单件激活属性
+goto @全部激活属性
+BREAK
+#ELSEACT
+SENDMSG 9 [提示]：请检查您的背包是否有：耀玉腰带
+
+[@开始图鉴_23]
+#IF
+EQUAL U42 1
+#act
+SENDMSG 9 [提示]：你已经开启过：耀玉靴子
+break
+
+#if
+checkitem 耀玉靴子 1
+#act
+MOV U42 1
+TAKE 耀玉靴子 1
+GOTO @加载装备图鉴
+GOTO @加载图鉴激活
+GOTO @装备图鉴展示
+inc U55 1
+inc U56 1
+goto @单件激活属性
+goto @全部激活属性
+BREAK
+#ELSEACT
+SENDMSG 9 [提示]：请检查您的背包是否有：耀玉靴子
+
+[@开始图鉴_24]
+#IF
+EQUAL U43 1
+#act
+SENDMSG 9 [提示]：你已经开启过：耀玉头盔
+break
+
+#if
+checkitem 耀玉头盔 1
+#act
+MOV U43 1
+TAKE 耀玉头盔 1
+GOTO @加载装备图鉴
+GOTO @加载图鉴激活
+GOTO @装备图鉴展示
+inc U55 1
+inc U56 1
+goto @单件激活属性
+goto @全部激活属性
+BREAK
+#ELSEACT
+SENDMSG 9 [提示]：请检查您的背包是否有：耀玉头盔
+
+[@开始图鉴_25]
+
+
+#IF
+EQUAL U44 1
+#act
+SENDMSG 9 [提示]：你已经开启过：耀玉项链
+break
+
+#if
+checkitem 耀玉项链 1
+#act
+MOV U44 1
+TAKE 耀玉项链 1
+GOTO @加载装备图鉴
+GOTO @加载图鉴激活
+GOTO @装备图鉴展示
+inc U55 1
+inc U56 1
+goto @单件激活属性
+goto @全部激活属性
+BREAK
+#ELSEACT
+SENDMSG 9 [提示]：请检查您的背包是否有：耀玉项链
+
+[@开始图鉴_26]
+
+
+#IF
+EQUAL U45 1
+#act
+SENDMSG 9 [提示]：你已经开启过：耀玉手镯
+break
+
+#if
+checkitem 耀玉手镯 1
+#act
+MOV U45 1
+TAKE 耀玉手镯 1
+GOTO @加载装备图鉴
+GOTO @加载图鉴激活
+GOTO @装备图鉴展示
+inc U55 1
+inc U56 1
+goto @单件激活属性
+goto @全部激活属性
+BREAK
+#ELSEACT
+SENDMSG 9 [提示]：请检查您的背包是否有：耀玉手镯
+
+[@开始图鉴_27]
+
+
+#IF
+EQUAL U46 1
+#act
+SENDMSG 9 [提示]：你已经开启过：耀玉复戒
+break
+
+#if
+checkitem 耀玉复戒 1
+#act
+MOV U46 1
+TAKE 耀玉复戒 1
+GOTO @加载装备图鉴
+GOTO @加载图鉴激活
+GOTO @装备图鉴展示
+inc U55 1
+inc U56 1
+goto @单件激活属性
+goto @全部激活属性
+BREAK
+#ELSEACT
+SENDMSG 9 [提示]：请检查您的背包是否有：耀玉复戒
+
+
+[@加载图鉴激活]
+#IF
+EQUAL U20 1 
+#ACT
+mov s$是否激活_1 0
+mov s$激活颜色_1 250
+
+#IF
+EQUAL U21 1 
+#ACT
+mov s$是否激活_2 0
+mov s$激活颜色_2 250
+
+#IF
+EQUAL U22 1 
+#ACT
+mov s$是否激活_3 0
+mov s$激活颜色_3 250
+
+#IF
+EQUAL U23 1 
+#ACT
+mov s$是否激活_4 0
+mov s$激活颜色_4 250
+
+#IF
+EQUAL U24 1 
+#ACT
+mov s$是否激活_5 0
+mov s$激活颜色_5 250
+
+#IF
+EQUAL U25 1 
+#ACT
+mov s$是否激活_6 0
+mov s$激活颜色_6 250
+
+#IF
+EQUAL U26 1 
+#ACT
+mov s$是否激活_7 0
+mov s$激活颜色_7 250
+
+#IF
+EQUAL U27 1 
+#ACT
+mov s$是否激活_8 0
+mov s$激活颜色_8 250
+
+#IF
+EQUAL U28 1 
+#ACT
+mov s$是否激活_9 0
+mov s$激活颜色_9 250
+
+#IF
+EQUAL U29 1 
+#ACT
+mov s$是否激活_10 0
+mov s$激活颜色_10 250
+
+#IF
+EQUAL U30 1 
+#ACT
+mov s$是否激活_11 0
+mov s$激活颜色_11 250
+
+#IF
+EQUAL U31 1 
+#ACT
+mov s$是否激活_12 0
+mov s$激活颜色_12 250
+
+#IF
+EQUAL U32 1 
+#ACT
+mov s$是否激活_13 0
+mov s$激活颜色_13 250
+
+#IF
+EQUAL U33 1 
+#ACT
+mov s$是否激活_14 0
+mov s$激活颜色_14 250
+
+#IF
+EQUAL U34 1 
+#ACT
+mov s$是否激活_15 0
+mov s$激活颜色_15 250
+
+#IF
+EQUAL U35 1 
+#ACT
+mov s$是否激活_16 0
+mov s$激活颜色_16 250
+
+#IF
+EQUAL U36 1 
+#ACT
+mov s$是否激活_17 0
+mov s$激活颜色_17 250
+
+#IF
+EQUAL U37 1 
+#ACT
+mov s$是否激活_18 0
+mov s$激活颜色_18 250
+
+#IF
+EQUAL U38 1 
+#ACT
+mov s$是否激活_19 0
+mov s$激活颜色_19 250
+
+#IF
+EQUAL U39 1 
+#ACT
+mov s$是否激活_20 0
+mov s$激活颜色_20 250
+
+#IF
+EQUAL U40 1 
+#ACT
+mov s$是否激活_21 0
+mov s$激活颜色_21 250
+
+#IF
+EQUAL U41 1 
+#ACT
+mov s$是否激活_22 0
+mov s$激活颜色_22 250
+
+#IF
+EQUAL U42 1 
+#ACT
+mov s$是否激活_23 0
+mov s$激活颜色_23 250
+
+#IF
+EQUAL U43 1 
+#ACT
+mov s$是否激活_24 0
+mov s$激活颜色_24 250
+
+#IF
+EQUAL U44 1 
+#ACT
+mov S$是否激活_25 0
+mov s$激活颜色_25 250
+
+#IF
+EQUAL U45 1 
+#ACT
+mov s$是否激活_26 0
+mov s$激活颜色_26 250
+
+#IF
+EQUAL U46 1 
+#ACT
+mov s$是否激活_27 0
+mov s$激活颜色_27 250
+
+
+
+[@加载装备图鉴]
+#IF
+#ACT
+mov s$是否激活_1 1
+mov s$是否激活_2 1
+mov s$是否激活_3 1
+mov s$是否激活_4 1
+mov s$是否激活_5 1
+mov s$是否激活_6 1
+mov s$是否激活_7 1
+mov s$是否激活_8 1
+mov s$是否激活_9 1
+mov s$是否激活_10 1
+mov s$是否激活_11 1
+mov s$是否激活_12 1
+mov s$是否激活_13 1
+mov s$是否激活_14 1
+mov s$是否激活_15 1
+mov s$是否激活_16 1
+mov s$是否激活_17 1
+mov s$是否激活_18 1
+mov s$是否激活_19 1
+mov s$是否激活_20 1
+mov s$是否激活_21 1
+mov s$是否激活_22 1
+mov s$是否激活_23 1
+mov s$是否激活_24 1
+mov s$是否激活_25 1
+mov s$是否激活_26 1
+mov s$是否激活_27 1
+
+
+mov s$激活颜色_1 10
+mov s$激活颜色_2 10
+mov s$激活颜色_3 10
+mov s$激活颜色_4 10
+mov s$激活颜色_5 10
+mov s$激活颜色_6 10
+mov s$激活颜色_7 10
+mov s$激活颜色_8 10
+mov s$激活颜色_9 10
+mov s$激活颜色_10 10
+mov s$激活颜色_11 10
+mov s$激活颜色_12 10
+mov s$激活颜色_13 10
+mov s$激活颜色_14 10
+mov s$激活颜色_15 10
+mov s$激活颜色_16 10
+mov s$激活颜色_17 10
+mov s$激活颜色_18 10
+mov s$激活颜色_19 10
+mov s$激活颜色_20 10
+mov s$激活颜色_21 10
+mov s$激活颜色_22 10
+mov s$激活颜色_23 10
+mov s$激活颜色_24 10
+mov s$激活颜色_25 10
+mov s$激活颜色_26 10
+mov s$激活颜色_27 10
+
+[@一键激活]
+
+#if
+EQUAL U20 0
+#act
+goto @开始图鉴_1
+
+#if
+EQUAL U21 0
+#act
+goto @开始图鉴_2
+
+#if
+EQUAL U22 0
+#act
+goto @开始图鉴_3
+
+#if
+EQUAL U23 0
+#act
+goto @开始图鉴_4
+
+#if
+EQUAL U24 0
+#act
+goto @开始图鉴_5
+
+#if
+EQUAL U25 0
+#act
+goto @开始图鉴_6
+
+#if
+EQUAL U26 0
+#act
+goto @开始图鉴_7
+
+#if
+EQUAL U27 0
+#act
+goto @开始图鉴_8
+
+#if
+EQUAL U28 0
+#act
+goto @开始图鉴_9
+
+#if
+EQUAL U29 0
+#act
+goto @开始图鉴_10
+
+#if
+EQUAL U30 0
+#act
+goto @开始图鉴_11
+
+#if
+EQUAL U31 0
+#act
+goto @开始图鉴_12
+
+#if
+EQUAL U32 0
+#act
+goto @开始图鉴_13
+
+#if
+EQUAL U33 0
+#act
+goto @开始图鉴_14
+
+#if
+EQUAL U34 0
+#act
+goto @开始图鉴_15
+
+#if
+EQUAL U35 0
+#act
+goto @开始图鉴_16
+
+#if
+EQUAL U36 0
+#act
+goto @开始图鉴_17
+
+#if
+EQUAL U37 0
+#act
+goto @开始图鉴_18
+
+#if
+EQUAL U38 0
+#act
+goto @开始图鉴_19
+
+#if
+EQUAL U39 0
+#act
+goto @开始图鉴_20
+
+#if
+EQUAL U40 0
+#act
+goto @开始图鉴_21
+
+#if
+EQUAL U41 0
+#act
+goto @开始图鉴_22
+
+#if
+EQUAL U42 0
+#act
+goto @开始图鉴_23
+
+#if
+EQUAL U43 0
+#act
+goto @开始图鉴_24
+
+#if
+EQUAL U44 0
+#act
+goto @开始图鉴_25
+
+#if
+EQUAL U45 0
+#act
+goto @开始图鉴_26
+
+#if
+EQUAL U46 0
+#act
+goto @开始图鉴_27
+
+[@单件激活属性]
+#if
+#act
+CHANGECUSTOMITEMABIL  14 0 1 71 0
+CHANGECUSTOMITEMABIL  14 0 3 0 0
+CHANGECUSTOMITEMABIL  14 0 4 0 0
+CHANGECUSTOMITEMVALUE 14 0 = <$STR(U55)> 0
+
+CHANGECUSTOMITEMABIL  15 0 1 91 0
+CHANGECUSTOMITEMABIL  15 0 3 0 0
+CHANGECUSTOMITEMABIL  15 0 4 0 0
+CHANGECUSTOMITEMVALUE 15 0 = <$STR(U56)> 0
+
+[@全部激活属性]
+#if
+equal U20 1
+equal U21 1
+equal U22 1
+equal U23 1
+equal U24 1
+equal U25 1
+equal U26 1
+equal U27 1
+equal U28 1
+equal U29 1
+equal U30 1
+equal U31 1
+equal U32 1
+equal U33 1
+equal U34 1
+equal U35 1
+equal U36 1
+equal U37 1
+equal U38 1
+equal U39 1
+equal U40 1
+equal U41 1
+equal U42 1
+EQUAL U43 1
+EQUAL U44 1
+EQUAL U45 1
+EQUAL U46 1
+NOT CHECKTITLE 装备图鉴达人
+#ACT
+CONFERTITLE 装备图鉴达人
+
+}

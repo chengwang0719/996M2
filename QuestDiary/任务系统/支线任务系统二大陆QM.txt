@@ -1,0 +1,68 @@
+[@二大陆支线任务系统QM]
+{
+;U7=主线任务编号
+;U8=刷新任务状态显示数字
+;U19=支线任务编号
+;U49=二大陆支线任务
+;-----------------------------------开始任务在这
+;主线任务登陆
+;-----------------------------------
+
+;========================================支线
+#IF
+large U7 7
+EQUAL U49 200
+check [80] 0
+#ACT
+newpicktask <$STR(U49)>
+newchangetask <$STR(U49)>
+BREAK
+
+
+#IF
+large U7 7
+EQUAL U49 200
+check [80] 1
+#ACT
+newcompletetask <$STR(U49)>
+BREAK
+
+#IF
+large U7 7
+EQUAL U49 201
+check [81] 0
+#ACT
+newpicktask <$STR(U49)>
+newchangetask <$STR(U49)>
+BREAK
+
+#IF
+large U7 7
+EQUAL U49 201
+check [81] 1
+#ACT
+newcompletetask <$STR(U49)>
+BREAK
+
+#IF
+large U7 7
+EQUAL U49 202
+check [82] 0
+#ACT
+newpicktask <$STR(U49)>
+newchangetask <$STR(U49)>
+BREAK
+
+
+#IF
+large U7 7
+EQUAL U49 202
+check [82] 1
+#ACT
+newcompletetask <$STR(U49)>
+BREAK
+
+
+
+
+}

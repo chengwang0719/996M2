@@ -1,0 +1,58 @@
+[@复活戒指]
+{
+
+#OR
+CHECKITEMW 土域戒指
+CHECKITEMW 玄天戒指
+CHECKITEMW 蓝魔戒指
+CHECKITEMW 龍麟圣戒[复活]
+CHECKITEMW 寂灭狂戒[复活]
+CHECKITEMW 凤凰の飞
+CHECKITEMW 诛仙复戒
+CHECKITEMW 盘龍魂复
+CHECKITEMW 复活戒指
+CHECKITEMW 诛仙复戒[强者]
+CHECKITEMW 盘龍魂复[强者]
+#ELSEACT
+MOV S$顶部复活图标
+DELBUTTON 101 189
+DELBUTTON 108 189
+BREAK
+
+
+#IF
+Equal <$CLIENTFLAG> 1
+LARGE U4 0
+#ACT
+MOV S$顶部复活图标 <Text|x=-300.0|y=-182.0|color=254|outline=1|size=16|outlinecolor=0|text=复活戒指:>
+INC S$顶部复活图标 <COUNTDOWN|id=0|x=-225.0|y=-182.0|time=<$STR(U4)>|count=1|size=18|color=251|outline=1|outlinecolor=0||link=@复活戒指>
+addbutton 108 189 <$STR(S$顶部复活图标)>
+
+#IF
+Equal <$CLIENTFLAG> 2
+LARGE U4 0
+#ACT
+MOV S$顶部复活图标 <Text|x=850.0|y=5.0|color=254|outline=1|size=16|outlinecolor=0|text=复活戒指:>
+INC S$顶部复活图标 <COUNTDOWN|id=0|x=925.0|y=5.0|time=<$STR(U4)>|count=1|size=18|color=251|outline=1|outlinecolor=0||link=@复活戒指>
+addbutton 101 189 <$STR(S$顶部复活图标)>
+
+
+#IF
+Equal <$CLIENTFLAG> 1
+EQUAL U4 0
+#ACT
+MOV S$顶部复活图标 <Text|x=-300.0|y=-182.0|color=254|outline=1|size=16|outlinecolor=0|text=复活戒指:>
+INC S$顶部复活图标 <Text|x=-225.0|y=-182.0|color=251|outline=1|size=16|outlinecolor=0|text=准备就绪>
+addbutton 108 189 <$STR(S$顶部复活图标)>
+
+
+#IF
+Equal <$CLIENTFLAG> 2
+EQUAL U4 0
+#ACT
+MOV S$顶部复活图标 <Text|x=850.0|y=5.0|color=254|outline=1|size=16|outlinecolor=0|text=复活戒指:>
+INC S$顶部复活图标 <Text|x=925.0|y=5.0|color=251|outline=1|size=16|outlinecolor=0|text=准备就绪>
+addbutton 101 189 <$STR(S$顶部复活图标)>
+
+
+}

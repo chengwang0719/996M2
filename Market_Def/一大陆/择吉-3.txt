@@ -1,0 +1,188 @@
+[@main]
+
+#say
+<Img|x=452.0|y=118.0|loadDelay=1|move=0|img=public/bg_npc_03.png|show=0|bg=1|esc=1|reset=1>
+<Layout|x=545|y=0|width=80|height=80|link=@exit>
+<Button|x=1024.0|y=50.0|pimg=public/1900000511.png|nimg=public/1900000510.png|link=@exit>
+<Img|x=72.0|y=50.0|width=190|height=300|rotate=0|reset=1|loadDelay=0|move=0|show=4|img=topbtn/xsyb/pt.png>
+<Img|x=263.0|y=49.0|width=190|height=300|rotate=0|reset=1|loadDelay=0|move=0|show=4|img=topbtn/xsyb/zj.png>
+<Img|x=455.0|y=50.0|width=190|height=300|rotate=0|reset=1|loadDelay=0|move=0|show=4|img=topbtn/xsyb/gj.png>
+<Img|x=644.0|y=49.0|width=190|height=300|rotate=0|reset=1|loadDelay=0|move=0|show=4|img=topbtn/xsyb/hh.png>
+<Img|x=644.0|y=49.0|width=190|height=300|rotate=0|reset=1|loadDelay=0|move=0|show=4|img=topbtn/xsyb/hh.png>
+<Img|x=835.0|y=50.0|width=190|height=300|rotate=0|reset=1|loadDelay=0|move=0|show=4|img=topbtn/xsyb/hh.png>
+<Text|x=601.0|y=354.0|size=20|color=250|text=第66次择吉必定天降鸿运：当前(<$str(G69)>次)>
+<Button|x=454.0|y=431.0|size=18|pimg=public/00000362.png|mimg=public/00000363.png|nimg=public/00000361.png|link=@择吉检测>
+<Text|x=83.0|y=352.0|size=20|color=255|text=需要点券:1000>
+
+
+[@择吉检测]  
+#if  
+checktitle 天降鸿运  
+#act  
+sendmsg 9 你的赐福已经达到最高鸿运 
+close 
+break  
+
+
+#IF  
+CHECKMONEY 点卷 ? 1000  
+#act
+goto @开始择吉
+break  
+#ELSEACT  
+sendmsg 9 你的点券不足1000  
+break  
+
+
+[@开始择吉] 
+;第66次择吉必定天降鸿运
+#if
+equal <$str(G69)>  66
+#act
+goto @天降鸿运
+break
+#elseact
+// 一帆风顺称号赐予  
+#if  
+not checktitle 一帆风顺  
+not checktitle 好事成双  
+not checktitle 三生有幸  
+not checktitle 六六大顺  
+not checktitle 五福临门  
+not checktitle 天降鸿运  
+#act  
+money 点卷 - 1000  
+inc G69 1  
+confertitle 一帆风顺  
+sendmsg 6 一帆风顺 称号授予成功  
+goto @main  
+break  
+
+// 好事成双称号赐予  
+#if  
+checktitle 一帆风顺  
+#act  
+money 点卷 - 1000  
+inc G69 1   
+confertitle 好事成双  
+deprivetitle 一帆风顺  
+sendmsg 6 好事成双 称号授予成功  
+goto @main  
+break  
+
+// 三生有幸称号赐予50%成功  
+#if  
+RANDOMEX 50 100  
+checktitle 好事成双  
+#act  
+money 点卷 - 1000  
+inc G69 1   
+confertitle 三生有幸  
+deprivetitle 好事成双  
+sendmsg 6 三生有幸 称号授予成功  
+goto @main  
+break  
+
+#elseact  
+#if  
+not checktitle 三生有幸  
+checktitle 好事成双  
+#act  
+money 点卷 - 1000  
+inc G69 1   
+confertitle 一帆风顺  
+deprivetitle 好事成双  
+sendmsg 6 择吉失败，当前赐福《一帆风顺》  
+goto @main  
+break  
+
+// 六六大顺称号赐予40%成功  
+#if  
+randomex 40 60  
+checktitle 三生有幸  
+#act  
+money 点卷 - 1000  
+inc G69 1   
+confertitle 六六大顺  
+deprivetitle 三生有幸  
+sendmsg 6 六六大顺 称号授予成功  
+goto @main  
+break   
+
+#elseact  
+#if  
+not checktitle 六六大顺  
+checktitle 三生有幸  
+#act  
+money 点卷 - 1000  
+inc G69 1   
+confertitle 好事成双  
+deprivetitle 三生有幸  
+sendmsg 6 择吉失败，当前赐福《好事成双》  
+goto @main  
+break   
+
+// 五福临门称号赐予30%成功  
+#if  
+randomex 30 70  
+checktitle 六六大顺  
+#act  
+money 点卷 - 1000  
+inc G69 1   
+confertitle 五福临门  
+deprivetitle 六六大顺  
+sendmsg 6 五福临门 称号授予成功   
+goto @main  
+break  
+
+#elseact  
+#if  
+not checktitle 五福临门  
+checktitle 六六大顺  
+#act  
+money 点卷 - 1000  
+inc G69 1   
+confertitle 三生有幸  
+deprivetitle 六六大顺  
+sendmsg 6 《五福临门》择吉失败，回到赐福《三生有幸》  
+goto @main  
+break   
+
+// 天降鸿运称号赐予10%成功  
+#if  
+randomex 10 90  
+checktitle 五福临门  
+#act  
+money 点卷 - 1000  
+inc G69 1   
+confertitle 天降鸿运  
+deprivetitle 五福临门  
+sendmsg 6 天降鸿运 称号授予成功  
+goto @main  
+break  
+
+#elseact  
+#if  
+not checktitle 天降鸿运  
+checktitle 五福临门  
+#act  
+money 点卷 - 1000  
+inc G69 1   
+confertitle 六六大顺  
+deprivetitle 五福临门  
+sendmsg 6 《天降鸿运》择吉失败，回到赐福《六六大顺》  
+goto @main  
+break
+
+[@天降鸿运]
+#if
+#act
+confertitle 天降鸿运
+deprivetitle 一帆风顺
+deprivetitle 好事成双
+deprivetitle 三生有幸
+deprivetitle 六六大顺
+deprivetitle 五福临门
+sendmsg 6 天降鸿运 称号授予成功
+
+

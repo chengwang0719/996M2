@@ -1,0 +1,159 @@
+[@main]
+#if
+#act
+set [350] 0
+set [351] 0
+
+mov S$合成材料
+
+mov S$加号 <Button|x=490.0|y=278.0|width=50|height=50|nimg=custom/qhc/j.png|link=@添加器>
+
+goto @主页
+
+
+
+[@主页]
+<Img|x=-22.0|y=-7.0|move=0|bg=1|esc=1|reset=1|img=custom/qhc/11.png|loadDelay=0|show=4>
+<Button|x=899.0|y=73.0|width=45|height=42|nimg=custom/qhc/guanbi.png|link=@exit>
+<Button|x=442.0|y=453.0|width=145|height=55|nimg=custom/qhc/333.png|link=@开始合成>
+# <Text|x=646|y=103|size=20|color=|255|outline=2|outlinecolor=0|text=熔炼消耗>
+<Effect|x=431|y=212|effectid=70143|effecttype=0|scale=|act=0|speed=1>
+
+
+# <ItemShow|x=626.0|y=112.0|itemid=2|scale=0.5|showtips=1>
+# <RText|x=674.0|y=133.0|color=255|size=15|outlinecolor=0|outline=2|text=X 1000>
+# <ItemShow|x=626.0|y=142.0|itemid=1|scale=0.5|showtips=1>
+# <RText|x=674.0|y=164.0|color=255|size=15|outlinecolor=0|outline=2|text=X 100W>
+
+<ItemShow|x=455.0|y=377.0|itemid=2|scale=0.5|showtips=1>
+<RText|x=505.0|y=400.0|color=255|size=15|outlinecolor=0|outline=2|text=X 1000>
+<ItemShow|x=455.0|y=403.0|itemid=1|scale=0.5|showtips=1>
+<RText|x=505.0|y=425.0|color=255|size=15|outlinecolor=0|outline=2|text=X 100W>
+
+
+
+
+
+<$str(S$合成材料)>
+<$str(S$加号)>
+
+#if
+check [350] 1
+#say
+<Img|x=760|y=114|width=161|height=350|img=custom/qhc/222.png>
+
+<ListView|children={1,2,3,4,5,6}|x=767|y=123|width=141|height=325|direction=1|reload=0|cantouch=1|bounce=1>
+
+<Layout|id=1|children={1a,1b}|x=809|y=138|width=152|height=72>
+<ITEMBOX|id=1a|children={1aa}|x=-1.0|y=2.0|width=70|height=70|boxindex=0|stdmode=*|img=public/1900000651_3.png>
+<ItemShow|id=1aa|x=0.0|y=1.0|width=70|height=70|itemid=10662|itemcount=1|showtips=1|bgtype=0|link=@选中器#合成材料1=炽焰标#合成材料2=炽焰标#合成材料3=炽焰标#合成器=炽焰标·[炼狱]>
+<ITEMBOX|id=1b|children={1bb}|x=68.0|y=2.0|width=70|height=70|boxindex=0|stdmode=*|img=public/1900000651_3.png>
+<ItemShow|id=1bb|x=2.0|y=1.0|width=70|height=70|itemid=10663|itemcount=1|scale=1.2|showtips=1|bgtype=0|link=@选中器#合成材料1=捆仙绳#合成材料2=捆仙绳#合成材料3=捆仙绳#合成器=捆仙绳·[炼狱]>
+
+<Layout|id=2|children={2a,2b}|x=809|y=138|width=152|height=72>
+<ITEMBOX|id=2a|children={2aa}|x=-1.0|y=2.0|width=70|height=70|boxindex=0|stdmode=*|img=public/1900000651_3.png>
+<ItemShow|id=2aa|x=0.0|y=1.0|width=70|height=70|itemid=10664|itemcount=1|showtips=1|bgtype=0|link=@选中器#合成材料1=秀发簪#合成材料2=秀发簪#合成材料3=秀发簪#合成器=秀发簪·[炼狱]>
+<ITEMBOX|id=2b|children={2bb}|x=68.0|y=2.0|width=70|height=70|boxindex=0|stdmode=*|img=public/1900000651_3.png>
+<ItemShow|id=2bb|x=2.0|y=1.0|width=70|height=70|itemid=10665|itemcount=1|scale=1.2|showtips=1|bgtype=0|link=@选中器#合成材料1=毒物袋#合成材料2=毒物袋#合成材料3=毒物袋#合成器=毒物袋·[炼狱]>
+
+<Layout|id=3|children={3a,3b}|x=809|y=138|width=152|height=72>
+<ITEMBOX|id=3a|children={3aa}|x=-1.0|y=2.0|width=70|height=70|boxindex=0|stdmode=*|img=public/1900000651_3.png>
+<ItemShow|id=3aa|x=0.0|y=1.0|width=70|height=70|itemid=10666|itemcount=1|showtips=1|bgtype=0|link=@选中器#合成材料1=圣物令#合成材料2=圣物令#合成材料3=圣物令#合成器=圣物令·[炼狱]>
+<ITEMBOX|id=3b|children={3bb}|x=68.0|y=2.0|width=70|height=70|boxindex=0|stdmode=*|img=public/1900000651_3.png>
+<ItemShow|id=3bb|x=2.0|y=1.0|width=70|height=70|itemid=10667|itemcount=1|scale=1.2|showtips=1|bgtype=0|link=@选中器#合成材料1=仙人书#合成材料2=仙人书#合成材料3=仙人书#合成器=仙人书·[炼狱]>
+
+<Layout|id=4|children={4a,4b}|x=809|y=138|width=152|height=72>
+<ITEMBOX|id=4a|children={4aa}|x=-1.0|y=2.0|width=70|height=70|boxindex=0|stdmode=*|img=public/1900000651_3.png>
+<ItemShow|id=4aa|x=0.0|y=1.0|width=70|height=70|itemid=10668|itemcount=1|showtips=1|bgtype=0|link=@选中器#合成材料1=玉净瓶#合成材料2=玉净瓶#合成材料3=玉净瓶#合成器=玉净瓶·[炼狱]>
+<ITEMBOX|id=4b|children={4bb}|x=68.0|y=2.0|width=70|height=70|boxindex=0|stdmode=*|img=public/1900000651_3.png>
+<ItemShow|id=4bb|x=2.0|y=1.0|width=70|height=70|itemid=10669|itemcount=1|scale=1.2|showtips=1|bgtype=0|link=@选中器#合成材料1=金刚钵#合成材料2=金刚钵#合成材料3=金刚钵#合成器=金刚钵·[炼狱]>
+
+<Layout|id=5|children={5a,5b}|x=809|y=138|width=152|height=72>
+<ITEMBOX|id=5a|children={5aa}|x=-1.0|y=2.0|width=70|height=70|boxindex=0|stdmode=*|img=public/1900000651_3.png>
+<ItemShow|id=5aa|x=0.0|y=1.0|width=70|height=70|itemid=10670|itemcount=1|showtips=1|bgtype=0|link=@选中器#合成材料1=牛魔角#合成材料2=牛魔角#合成材料3=牛魔角#合成器=牛魔角·[炼狱]>
+<ITEMBOX|id=5b|children={5bb}|x=68.0|y=2.0|width=70|height=70|boxindex=0|stdmode=*|img=public/1900000651_3.png>
+<ItemShow|id=5bb|x=2.0|y=1.0|width=70|height=70|itemid=10671|itemcount=1|scale=1.2|showtips=1|bgtype=0|link=@选中器#合成材料1=圣火炬#合成材料2=圣火炬#合成材料3=圣火炬#合成器=圣火炬·[炼狱]>
+
+<Layout|id=6|children={6a,6b}|x=809|y=138|width=152|height=72>
+<ITEMBOX|id=6a|children={6aa}|x=-1.0|y=2.0|width=70|height=70|boxindex=0|stdmode=*|img=public/1900000651_3.png>
+<ItemShow|id=6aa|x=0.0|y=1.0|width=70|height=70|itemid=10672|itemcount=1|showtips=1|bgtype=0|link=@选中器#合成材料1=金铜鼎#合成材料2=金铜鼎#合成材料3=金铜鼎#合成器=金铜鼎·[炼狱]>
+<ITEMBOX|id=6b|children={6bb}|x=68.0|y=2.0|width=70|height=70|boxindex=0|stdmode=*|img=public/1900000651_3.png>
+<ItemShow|id=6bb|x=2.0|y=1.0|width=70|height=70|itemid=10673|itemcount=1|scale=1.2|showtips=1|bgtype=0|link=@选中器#合成材料1=骷髅头#合成材料2=骷髅头#合成材料3=骷髅头#合成器=骷髅头·[炼狱]>
+
+
+
+
+[@添加器]
+#if
+#act
+set [350] 1
+goto @主页
+
+
+[@选中器]
+#if
+#act
+set [351] 1
+GetDBItemFieldValue  <$STR(S$合成器)> idx S$合成器ID
+GetDBItemFieldValue  <$STR(S$合成材料1)> idx S$合成材料1ID
+GetDBItemFieldValue  <$STR(S$合成材料2)> idx S$合成材料2ID
+GetDBItemFieldValue  <$STR(S$合成材料3)> idx S$合成材料3ID
+
+mov S$合成材料  <ItemShow|x=484.0|y=132.0|width=70|height=70|itemid=<$STR(S$合成材料1ID)>|itemcount=1|showtips=1|bgtype=0>
+inc S$合成材料 <ItemShow|x=365.0|y=343.0|width=70|height=70|itemid=<$STR(S$合成材料2ID)>|itemcount=1|showtips=1|bgtype=0>
+inc S$合成材料  <ItemShow|x=602.0|y=344.0|width=70|height=70|itemid=<$STR(S$合成材料3ID)>|itemcount=1|showtips=1|bgtype=0>
+mov S$加号 <ItemShow|x=480.0|y=268.0|scale=1.5|itemid=<$STR(S$合成器ID)>|itemcount=1|showtips=1|bgtype=0|>
+
+
+
+
+goto @主页
+
+
+
+[@开始合成]
+#if
+check [350] 0
+#act
+sendmsg 9 请点击加号添加器！！！
+break
+
+#if
+check [351] 0
+#act
+sendmsg 9 请选择需要合成的器！！！
+break
+
+
+#if
+equal S$合成材料1 S$合成材料2
+equal S$合成材料2 S$合成材料3
+#act
+goto @相同装备合成
+
+
+
+
+
+[@相同装备合成]
+#if
+checkitems <$STR(S$合成材料1)>#3
+checkmoney 点卷 ? 1000
+CHECKBINDMONEY 绑定元宝 ? 1000000
+#act
+takes <$STR(S$合成材料1)>#3
+Money 点卷 - 1000
+CHANGEBINDMONEY 绑定元宝 1000000
+give <$STR(S$合成器)> 1
+Screffects 15 70145 265 645 1 1 0
+sendmsg 9 熔炼成功！！！
+set [350] 0
+set [351] 0
+mov S$加号 <Button|x=490.0|y=278.0|width=50|height=50|nimg=custom/qhc/j.png|link=@添加器>
+mov S$合成材料
+mov S$合成消耗
+goto @主页
+#elseact
+sendmsg 9 您的材料不足无法合成！！！
+Break
+

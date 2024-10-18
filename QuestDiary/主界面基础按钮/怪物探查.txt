@@ -1,0 +1,468 @@
+[@怪物探查主界面]
+{
+#if
+NOT CHECKTITLE 至尊年卡
+#act
+sendmsg 9 【提示】请激活至尊年卡才可以使用该功能
+break
+
+#if
+#act
+MOV N$页数 1
+goto @探查1
+
+[@探查1]
+#IF
+CheckMapSameMonCount sjms1 水镜兽王 > 0
+#act
+MOV A310 <存活/AUTOCOLOR=250>
+goto @探查2
+#elseact
+MOV A310 <死亡/AUTOCOLOR=249>
+goto @探查2
+
+[@探查2]
+#IF
+CheckMapSameMonCount sjms2 水镜兽王 > 0
+#act
+MOV A311 <存活/AUTOCOLOR=250>
+goto @探查3
+#elseact
+MOV A311 <死亡/AUTOCOLOR=249>
+goto @探查3
+
+[@探查3]
+#IF
+CheckMapSameMonCount cyms1 赤月巨人 > 0
+#act
+MOV A312 <存活/AUTOCOLOR=250>
+goto @探查4
+#elseact
+MOV A312 <死亡/AUTOCOLOR=249>
+goto @探查4
+
+[@探查4]
+#IF
+CheckMapSameMonCount cyms2 赤月巨人 > 0
+#act
+MOV A313 <存活/AUTOCOLOR=250>
+goto @探查5
+#elseact
+MOV A313 <死亡/AUTOCOLOR=249>
+goto @探查5
+
+[@探查5]
+#IF
+CheckMapSameMonCount fk1 佛窟鬼妖 > 0
+#act
+MOV A314 <存活/AUTOCOLOR=250>
+goto @探查6
+#elseact
+MOV A314 <死亡/AUTOCOLOR=249>
+goto @探查6
+
+[@探查6]
+#IF
+CheckMapSameMonCount fk2 佛窟鬼妖 > 0
+#act
+MOV A315 <存活/AUTOCOLOR=250>
+goto @探查7
+#elseact
+MOV A315 <死亡/AUTOCOLOR=249>
+goto @探查7
+
+[@探查7]
+#IF
+CheckMapSameMonCount fk3 佛窟鬼妖 > 0
+#act
+MOV A316 <存活/AUTOCOLOR=250>
+goto @探查8
+#elseact
+MOV A316 <死亡/AUTOCOLOR=249>
+goto @探查8
+
+[@探查8]
+#IF
+CheckMapSameMonCount yh1 胖屠狼人 > 0
+#act
+MOV A317 <存活/AUTOCOLOR=250>
+goto @探查9
+#elseact
+MOV A317 <死亡/AUTOCOLOR=249>
+goto @探查9
+
+[@探查9]
+#IF
+CheckMapSameMonCount yh3 胖屠狼人 > 0
+#act
+MOV A318 <存活/AUTOCOLOR=250>
+goto @探查10
+#elseact
+MOV A318 <死亡/AUTOCOLOR=249>
+goto @探查10
+
+
+[@探查10]
+#IF
+CheckMapSameMonCount yyd1 阴阳树王 > 0
+#act
+MOV A319 <存活/AUTOCOLOR=250>
+goto @探查11
+#elseact
+MOV A319 <死亡/AUTOCOLOR=249>
+goto @探查11
+
+[@探查11]
+#IF
+CheckMapSameMonCount yyd2 阴阳树王 > 0
+#act
+MOV A320 <存活/AUTOCOLOR=250>
+goto @探查12
+#elseact
+MOV A320 <死亡/AUTOCOLOR=249>
+goto @探查12
+
+[@探查12]
+#IF
+CheckMapSameMonCount yyd3 阴阳树王 > 0
+#act
+MOV A321 <存活/AUTOCOLOR=250>
+goto @探查13
+#elseact
+MOV A321 <死亡/AUTOCOLOR=249>
+goto @探查13
+
+[@探查13]
+#IF
+CheckMapSameMonCount flhd1 枫林元帅 > 0
+#act
+MOV A322 <存活/AUTOCOLOR=250>
+goto @探查14
+#elseact
+MOV A322 <死亡/AUTOCOLOR=249>
+goto @探查14
+
+[@探查14]
+#IF
+CheckMapSameMonCount flhd2 枫林元帅 > 0
+#act
+MOV A323 <存活/AUTOCOLOR=250>
+goto @探查15
+#elseact
+MOV A323 <死亡/AUTOCOLOR=249>
+goto @探查15
+
+[@探查15]
+#IF
+CheckMapSameMonCount flhd3 枫林元帅 > 0
+#act
+MOV A324 <存活/AUTOCOLOR=250>
+goto @探查16
+#elseact
+MOV A324 <死亡/AUTOCOLOR=249>
+goto @探查16
+
+[@探查16]
+#IF
+CheckMapSameMonCount xsm1 火炎尊王 > 0
+#act
+MOV A325 <存活/AUTOCOLOR=250>
+goto @探查17
+#elseact
+MOV A325 <死亡/AUTOCOLOR=249>
+goto @探查17
+
+[@探查17]
+#IF
+CheckMapSameMonCount xsm2 火炎尊王 > 0
+#act
+MOV A326 <存活/AUTOCOLOR=250>
+goto @探查18
+#elseact
+MOV A326 <死亡/AUTOCOLOR=249>
+goto @探查18
+
+[@探查18]
+#IF
+CheckMapSameMonCount xsm3 火炎尊王 > 0
+#act
+MOV A327 <存活/AUTOCOLOR=250>
+goto @探查19
+#elseact
+MOV A327 <死亡/AUTOCOLOR=249>
+goto @探查19
+
+[@探查19]
+#IF
+CheckMapSameMonCount xsm4 火炎尊王 > 0
+#act
+MOV A328 <存活/AUTOCOLOR=250>
+goto @探查20
+#elseact
+MOV A328 <死亡/AUTOCOLOR=249>
+goto @探查20
+
+[@探查20]
+#IF
+CheckMapSameMonCount salm1 邪恶魔王 > 0
+#act
+MOV A329 <存活/AUTOCOLOR=250>
+goto @探查21
+#elseact
+MOV A329 <死亡/AUTOCOLOR=249>
+goto @探查21
+
+[@探查21]
+#IF
+CheckMapSameMonCount salm2 邪恶魔王 > 0
+#act
+MOV A330 <存活/AUTOCOLOR=250>
+goto @探查22
+#elseact
+MOV A330 <死亡/AUTOCOLOR=249>
+goto @探查22
+
+[@探查22]
+#IF
+CheckMapSameMonCount yh2 胖屠狼人 > 0
+#act
+MOV A332 <存活/AUTOCOLOR=250>
+goto @探查23
+#elseact
+MOV A332 <死亡/AUTOCOLOR=249>
+goto @探查23
+
+[@探查23]
+#IF
+CheckMapSameMonCount salm3 邪恶魔王 > 0
+#act
+MOV A331 <存活/AUTOCOLOR=250>
+MOV N$页数 1
+goto @第一页
+#elseact
+MOV A331 <死亡/AUTOCOLOR=249>
+MOV N$页数 1
+goto @第一页
+
+
+
+[@第一页]
+#IF
+equal N$页数 1
+#SAY
+<Button|x=-2526.0|y=-1172.0|width=115120|height=112880|nimg=npc/zd.png|color=224|mimg=npc/zd.png|pimg=npc/zd.png|size=18|link=@exit>
+<Img|x=-42.0|y=-43.0|width=600|height=470|bg=1|move=0|show=4|reset=1|esc=1|img=public/boss.png|loadDelay=0>
+<Layout|x=725.0|y=0.0|width=80|height=80|link=@exit>
+<Button|x=508.0|y=-18.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|x=15.0|y=80.0|color=251|size=16|text=枫叶密室>
+<Text|x=121.0|y=80.0|color=251|size=16|text=枫叶谷>
+<Text|x=208.0|y=80.0|color=246|size=16|text=水镜兽王>
+<RText|x=318.0|y=80.0|size=16|text=<$STR(A310)>>
+<Text|x=419.0|y=80.0|color=246|size=16|text=1小时>
+
+<Text|x=15.0|y=108.0|color=251|size=16|text=枫叶密室>
+<Text|x=121.0|y=108.0|color=251|size=16|text=枫叶谷>
+<Text|x=208.0|y=108.0|color=246|size=16|text=水镜兽王>
+<RText|x=318.0|y=108.0|size=16|text=<$STR(A311)>>
+<Text|x=419.0|y=108.0|color=246|size=16|text=1小时>
+
+<Text|x=15.0|y=136.0|color=251|size=16|text=桃花密室>
+<Text|x=121.0|y=136.0|color=251|size=16|text=桃花岛>
+<Text|x=208.0|y=136.0|color=246|size=16|text=赤月巨人>
+<RText|x=318.0|y=136.0|size=16|text=<$STR(A312)>>
+<Text|x=419.0|y=136.0|color=246|size=16|text=1小时>
+
+<Text|x=15.0|y=164.0|color=251|size=16|text=桃花密室>
+<Text|x=121.0|y=164.0|color=251|size=16|text=桃花岛>
+<Text|x=208.0|y=164.0|color=246|size=16|text=赤月巨人>
+<RText|x=318.0|y=164.0|size=16|text=<$STR(A313)>>
+<Text|x=419.0|y=164.0|color=246|size=16|text=1小时>
+
+<Text|x=15.0|y=192.0|color=251|size=16|text=风阵密室>
+<Text|x=121.0|y=192.0|color=251|size=16|text=风之阵>
+<Text|x=208.0|y=192.0|color=246|size=16|text=佛窟鬼妖>
+<RText|x=318.0|y=192.0|size=16|text=<$STR(A314)>>
+<Text|x=419.0|y=192.0|color=246|size=16|text=40分钟>
+
+<Text|x=15.0|y=220.0|color=251|size=16|text=风阵密室>
+<Text|x=121.0|y=220.0|color=251|size=16|text=风之阵>
+<Text|x=208.0|y=220.0|color=246|size=16|text=佛窟鬼妖>
+<RText|x=318.0|y=220.0|size=16|text=<$STR(A315)>>
+<Text|x=419.0|y=220.0|color=246|size=16|text=40分钟>
+
+<Text|x=15.0|y=248.0|color=251|size=16|text=风阵密室>
+<Text|x=121.0|y=248.0|color=251|size=16|text=风之阵>
+<Text|x=208.0|y=248.0|color=246|size=16|text=佛窟鬼妖>
+<RText|x=318.0|y=248.0|size=16|text=<$STR(A316)>>
+<Text|x=419.0|y=248.0|color=246|size=16|text=40分钟>
+
+<Text|x=15.0|y=276.0|color=251|size=16|text=银河密室>
+<Text|x=121.0|y=276.0|color=251|size=16|text=银河矿场>
+<Text|x=208.0|y=276.0|color=246|size=16|text=胖屠狼人>
+<RText|x=318.0|y=276.0|size=16|text=<$STR(A317)>>
+<Text|x=419.0|y=276.0|color=246|size=16|text=40分钟>
+
+<Text|x=15.0|y=304.0|color=251|size=16|text=银河密室>
+<Text|x=121.0|y=304.0|color=251|size=16|text=银河矿场>
+<Text|x=208.0|y=304.0|color=246|size=16|text=胖屠狼人>
+<RText|x=318.0|y=304.0|size=16|text=<$STR(A318)>>
+<Text|x=419.0|y=304.0|color=246|size=16|text=40分钟>
+
+<Text|x=15.0|y=332.0|color=251|size=16|text=银河密室>
+<Text|x=121.0|y=332.0|color=251|size=16|text=银河矿场>
+<Text|x=208.0|y=332.0|color=246|size=16|text=胖屠狼人>
+<RText|x=318.0|y=332.0|size=16|text=<$STR(A332)>>
+<Text|x=419.0|y=332.0|color=246|size=16|text=40分钟>
+
+<Button|x=204.0|y=360.0|width=33|height=23|nimg=public/btn_fanye_01.png|pimg=public/btn_fanye_01.png|link=@上一页>
+<Text|x=253.0|y=362.0|color=246|size=16|text=1/3>
+<Button|x=294.0|y=360.0|width=33|height=23|nimg=public/btn_fanye_02.png|pimg=public/btn_fanye_02.png|link=@下一页>
+
+[@第二页]    
+#IF
+equal N$页数 2
+#SAY
+<Button|x=-2526.0|y=-1172.0|width=115120|height=112880|nimg=npc/zd.png|color=224|mimg=npc/zd.png|pimg=npc/zd.png|size=18|link=@exit>
+<Img|x=-42.0|y=-43.0|width=600|height=440|bg=1|move=0|show=4|reset=1|esc=1|img=public/boss.png|loadDelay=0>
+<Layout|x=725.0|y=0.0|width=80|height=80|link=@exit>
+<Button|x=508.0|y=-18.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|x=15.0|y=80.0|color=251|size=16|text=烈焰密室>
+<Text|x=121.0|y=80.0|color=251|size=16|text=烈焰窟>
+<Text|x=208.0|y=80.0|color=246|size=16|text=阴阳树王>
+<RText|x=318.0|y=80.0|size=16|text=<$STR(A319)>>
+<Text|x=419.0|y=80.0|color=246|size=16|text=40分钟>
+
+<Text|x=15.0|y=108.0|color=251|size=16|text=烈焰密室>
+<Text|x=121.0|y=108.0|color=251|size=16|text=烈焰窟>
+<Text|x=208.0|y=108.0|color=246|size=16|text=阴阳树王>
+<RText|x=318.0|y=108.0|size=16|text=<$STR(A320)>>
+<Text|x=419.0|y=108.0|color=246|size=16|text=40分钟>
+
+<Text|x=15.0|y=136.0|color=251|size=16|text=烈焰密室>
+<Text|x=121.0|y=136.0|color=251|size=16|text=烈焰窟>
+<Text|x=208.0|y=136.0|color=246|size=16|text=阴阳树王>
+<RText|x=318.0|y=136.0|size=16|text=<$STR(A321)>>
+<Text|x=419.0|y=136.0|color=246|size=16|text=40分钟>
+
+<Text|x=15.0|y=164.0|color=251|size=16|text=修罗密室>
+<Text|x=121.0|y=164.0|color=251|size=16|text=修罗域>
+<Text|x=208.0|y=164.0|color=246|size=16|text=枫林元帅>
+<RText|x=318.0|y=164.0|size=16|text=<$STR(A322)>>
+<Text|x=419.0|y=164.0|color=246|size=16|text=40分钟>
+
+<Text|x=15.0|y=192.0|color=251|size=16|text=修罗密室>
+<Text|x=121.0|y=192.0|color=251|size=16|text=修罗域>
+<Text|x=208.0|y=192.0|color=246|size=16|text=枫林元帅>
+<RText|x=318.0|y=192.0|size=16|text=<$STR(A323)>>
+<Text|x=419.0|y=192.0|color=246|size=16|text=40分钟>
+
+<Text|x=15.0|y=220.0|color=251|size=16|text=修罗密室>
+<Text|x=121.0|y=220.0|color=251|size=16|text=修罗域>
+<Text|x=208.0|y=220.0|color=246|size=16|text=枫林元帅>
+<RText|x=318.0|y=220.0|size=16|text=<$STR(A324)>>
+<Text|x=419.0|y=220.0|color=246|size=16|text=40分钟>
+
+<Text|x=15.0|y=248.0|color=251|size=16|text=血色密室>
+<Text|x=121.0|y=248.0|color=251|size=16|text=血色禁地>
+<Text|x=208.0|y=248.0|color=246|size=16|text=火炎尊王>
+<RText|x=318.0|y=248.0|size=16|text=<$STR(A325)>>
+<Text|x=419.0|y=248.0|color=246|size=16|text=40分钟>
+
+<Text|x=15.0|y=276.0|color=251|size=16|text=血色密室>
+<Text|x=121.0|y=276.0|color=251|size=16|text=血色禁地>
+<Text|x=208.0|y=276.0|color=246|size=16|text=火炎尊王>
+<RText|x=318.0|y=276.0|size=16|text=<$STR(A326)>>
+<Text|x=419.0|y=276.0|color=246|size=16|text=40分钟>
+
+<Text|x=15.0|y=304.0|color=251|size=16|text=血色密室>
+<Text|x=121.0|y=304.0|color=251|size=16|text=血色禁地>
+<Text|x=208.0|y=304.0|color=246|size=16|text=火炎尊王>
+<RText|x=318.0|y=304.0|size=16|text=<$STR(A327)>>
+<Text|x=419.0|y=304.0|color=246|size=16|text=40分钟>
+
+<Button|x=204.0|y=340.0|width=33|height=23|nimg=public/btn_fanye_01.png|pimg=public/btn_fanye_01.png|link=@上一页>
+<Text|x=253.0|y=342.0|color=246|size=16|text=2/3>
+<Button|x=294.0|y=340.0|width=33|height=23|nimg=public/btn_fanye_02.png|pimg=public/btn_fanye_02.png|link=@下一页>
+
+[@第三页]    
+#IF
+equal N$页数 3
+#SAY
+<Button|x=-2526.0|y=-1172.0|width=115120|height=112880|nimg=npc/zd.png|color=224|mimg=npc/zd.png|pimg=npc/zd.png|size=18|link=@exit>
+<Img|x=-42.0|y=-43.0|width=600|height=440|bg=1|move=0|show=4|reset=1|esc=1|img=public/boss.png|loadDelay=0>
+<Layout|x=725.0|y=0.0|width=80|height=80|link=@exit>
+<Button|x=508.0|y=-18.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|x=15.0|y=80.0|color=251|size=16|text=血色密室>
+<Text|x=121.0|y=80.0|color=251|size=16|text=血色禁地>
+<Text|x=208.0|y=80.0|color=246|size=16|text=火炎尊王>
+<RText|x=318.0|y=80.0|size=16|text=<$STR(A328)>>
+<Text|x=419.0|y=80.0|color=246|size=16|text=40分钟>
+
+<Text|x=15.0|y=108.0|color=251|size=16|text=浮光密室>
+<Text|x=121.0|y=108.0|color=251|size=16|text=湘逢大陆>
+<Text|x=208.0|y=108.0|color=246|size=16|text=邪恶魔王>
+<RText|x=318.0|y=108.0|color=250|size=16|text=<$STR(A329)>>
+<Text|x=419.0|y=108.0|color=246|size=16|text=40分钟>
+
+<Text|x=15.0|y=136.0|color=251|size=16|text=浮光密室>
+<Text|x=121.0|y=136.0|color=251|size=16|text=湘逢大陆>
+<Text|x=208.0|y=136.0|color=246|size=16|text=邪恶魔王>
+<RText|x=318.0|y=136.0|color=250|size=16|text=<$STR(A330)>>
+<Text|x=419.0|y=136.0|color=246|size=16|text=40分钟>
+
+<Text|x=15.0|y=164.0|color=251|size=16|text=浮光密室>
+<Text|x=121.0|y=164.0|color=251|size=16|text=湘逢大陆>
+<Text|x=208.0|y=164.0|color=246|size=16|text=邪恶魔王>
+<RText|x=318.0|y=164.0|size=16|text=<$STR(A331)>>
+<Text|x=419.0|y=164.0|color=246|size=16|text=40分钟>
+
+
+<Button|x=204.0|y=340.0|width=33|height=23|nimg=public/btn_fanye_01.png|pimg=public/btn_fanye_01.png|link=@上一页>
+<Text|x=253.0|y=342.0|color=246|size=16|text=3/3>
+<Button|x=294.0|y=340.0|width=33|height=23|nimg=public/btn_fanye_02.png|pimg=public/btn_fanye_02.png|link=@下一页>
+
+
+[@上一页]
+#if
+equal N$页数 1
+#act
+sendmsg 9 已经是第一页了
+break
+
+#if
+equal N$页数 2
+#act
+mov N$页数 1
+goto @第一页
+break
+
+#if
+equal N$页数 3
+#act
+mov N$页数 2
+goto @第二页
+break
+
+[@下一页]
+#if
+equal N$页数 1
+#act
+mov N$页数 2
+goto @第二页
+break
+
+#if
+equal N$页数 2
+#act
+mov N$页数 3
+goto @第三页
+break
+
+#if
+equal N$页数 3
+#act
+sendmsg 9 已经到最后一页了
+break
+
+
+}

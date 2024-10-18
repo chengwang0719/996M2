@@ -1,0 +1,192 @@
+[@高级每日界面]
+{
+#if
+#act
+#say
+<Img|x=300.8|y=127.2|width=546|height=429|bg=1|move=0|img=public/bg_npc_01.png|esc=1|loadDelay=1|show=0|reset=1>
+<Layout|x=96.0|y=-307.0|width=80|height=80|link=@exit>
+<Button|x=819.0|y=125.0|pimg=public/1900000511.png|nimg=public/1900000510.png|link=@exit>
+<Text|x=341.0|y=158.0|size=18|color=222|text=战区限时五天活动:当天累充达到即可领取[凌晨准时刷新活动]>
+<Text|x=337.0|y=201.0|size=18|color=253|text=今日充值\达到 100>
+<ItemShow|x=412.0|y=183.0|width=70|height=70|itemid=15|itemcount=500|bgtype=1|showtips=1>
+<ItemShow|x=480.0|y=182.4|width=70|height=70|itemid=20124|itemcount=2|bgtype=1|showtips=1>
+<ItemShow|x=547.0|y=183.0|width=70|height=70|itemid=20174|itemcount=1|bgtype=1|showtips=1>
+<ItemShow|x=615.4|y=182.8|width=70|height=70|itemid=20042|itemcount=1|bgtype=1|showtips=1>
+<Img|x=312.0|y=246.0|width=530|esc=0|img=public/1900000667.png>
+<Text|x=338.0|y=258.0|size=18|color=253|text=今日充值\达到 300>
+<ItemShow|x=412.0|y=244.0|width=70|height=70|itemid=15|itemcount=1500|bgtype=1|showtips=1>
+<ItemShow|x=480.8|y=245.4|width=70|height=70|itemid=20124|itemcount=4|bgtype=1|showtips=1>
+<ItemShow|x=547.0|y=246.0|width=70|height=70|itemid=20174|itemcount=5|bgtype=1|showtips=1>
+<ItemShow|x=616.0|y=244.0|width=70|height=70|itemid=20042|itemcount=3|bgtype=1|showtips=1>
+<Img|x=311.0|y=306.0|width=530|esc=0|img=public/1900000667.png>
+<Text|x=336.0|y=319.0|size=18|color=253|text=今日充值\达到 500>
+<ItemShow|x=411.0|y=305.0|width=70|height=70|itemid=15|itemcount=2500|bgtype=1|showtips=1>
+<ItemShow|x=475.0|y=306.0|width=70|height=70|itemid=20124|itemcount=6|bgtype=1|showtips=1>
+<ItemShow|x=538.6|y=306.0|width=70|height=70|itemid=20174|itemcount=10|bgtype=1|showtips=1>
+<ItemShow|x=599.0|y=307.0|width=70|height=70|itemid=20042|itemcount=5|bgtype=1|showtips=1>
+<Img|x=317.0|y=367.0|width=530|esc=0|img=public/1900000667.png>
+<Text|x=335.0|y=380.0|size=18|color=253|text=今日充值\达到1000>
+<ItemShow|x=411.0|y=366.0|width=70|height=70|itemid=15|itemcount=5000|bgtype=1|showtips=1>
+<ItemShow|x=475.0|y=368.0|width=70|height=70|itemid=20124|itemcount=10|bgtype=1|showtips=1>
+<ItemShow|x=539.0|y=367.0|width=70|height=70|itemid=20174|itemcount=20|bgtype=1|showtips=1>
+<ItemShow|x=664.0|y=368.0|width=70|height=70|itemid=20125|itemcount=3|bgtype=1|showtips=1>
+<Img|x=309.0|y=431.0|width=530|esc=0|img=public/1900000667.png>
+<ItemShow|x=600.0|y=370.0|width=70|height=70|itemid=20042|itemcount=10|bgtype=1|showtips=1>
+<Text|x=573.0|y=504.0|size=19|color=221|text=您今日充值数额为:<$STR(J100)>>
+<Button|x=732.0|y=196.4|nimg=npc/flzx/2/lq-1.png|pimg=npc/flzx/2/lq-2.png|mimg=npc/flzx/2/lq-3.png|color=255|size=18|link=@高级领1>
+<Button|x=731.8|y=258.0|nimg=npc/flzx/2/lq-1.png|pimg=npc/flzx/2/lq-2.png|mimg=npc/flzx/2/lq-3.png|color=255|size=18|link=@高级领2>
+<Button|x=732.0|y=323.0|nimg=npc/flzx/2/lq-1.png|pimg=npc/flzx/2/lq-2.png|mimg=npc/flzx/2/lq-3.png|color=255|size=18|link=@高级领3>
+<Button|x=733.0|y=378.0|nimg=npc/flzx/2/lq-1.png|pimg=npc/flzx/2/lq-2.png|mimg=npc/flzx/2/lq-3.png|color=255|size=18|link=@高级领4>
+<Text|x=320.0|y=504.0|size=18|color=251|text=活动状态:>
+<Text|x=401.0|y=504.0|size=18|color=249|text=活动进行中>
+<Text|x=333.0|y=440.0|size=18|color=253|text=今日充值\达到2000>
+<Img|x=306.4|y=496.0|width=530|esc=0|img=public/1900000667.png>
+<ItemShow|x=412.0|y=429.0|width=70|height=70|itemid=15|itemcount=10000|bgtype=1|showtips=1>
+<ItemShow|x=476.0|y=431.0|width=70|height=70|itemid=20124|itemcount=30|bgtype=1|showtips=1>
+<ItemShow|x=538.0|y=431.4|width=70|height=70|itemid=20174|itemcount=30|bgtype=1|showtips=1>
+<ItemShow|x=601.0|y=430.0|width=70|height=70|itemid=20042|itemcount=20|bgtype=1|showtips=1>
+<ItemShow|x=663.0|y=306.4|width=70|height=70|itemid=20125|itemcount=1|bgtype=1|showtips=1>
+<ItemShow|x=664.0|y=431.0|width=70|height=70|itemid=20125|itemcount=6|bgtype=1|showtips=1>
+<Button|x=734.0|y=443.0|nimg=npc/flzx/2/lq-1.png|pimg=npc/flzx/2/lq-2.png|mimg=npc/flzx/2/lq-3.png|color=255|size=18|link=@高级领5>
+
+
+
+
+[@高级领5]
+#if
+small J100 2000
+#act
+MESSAGEBOX 您今日充值未达标无法领取
+break 
+
+#IF
+large J100 1999
+equal J124 0
+#act
+MONEY 福源 + 10000
+GiveStateItem 神魂水晶 30 1 1 0 0 1 1 1 1
+GiveStateItem 超级神魂水晶 6 1 1 0 0 1 1 1 1
+GiveStateItem 湘逢魔石 30 1 1 0 0 1 1 1 1
+GiveStateItem 金盒 20 1 1 0 0 1 1 1 1
+SENDMSG 9 恭喜您领取成功
+mov J124 1
+#ELSEACT   
+MESSAGEBOX 您今日已经领取过了
+break 
+
+
+
+
+
+[@高级领4]
+#if
+small J100 1000
+#act
+MESSAGEBOX 您今日充值未达标无法领取
+break 
+
+#IF
+large J100 999
+equal J123 0
+#act
+MONEY 福源 + 5000
+GiveStateItem 神魂水晶 10 1 1 0 0 1 1 1 1
+GiveStateItem 超级神魂水晶 3 1 1 0 0 1 1 1 1
+GiveStateItem 湘逢魔石 20 1 1 0 0 1 1 1 1
+GiveStateItem 金盒 10 1 1 0 0 1 1 1 1
+SENDMSG 9 恭喜您领取成功
+mov J123 1
+#ELSEACT   
+MESSAGEBOX 您今日已经领取过了
+break 
+
+
+
+
+
+
+
+
+[@高级领3]
+#if
+small J100 500
+#act
+MESSAGEBOX 您今日充值未达标无法领取
+break 
+
+#IF
+large J100 499
+equal J122 0
+#act
+MONEY 福源 + 2500
+GiveStateItem 神魂水晶 6 1 1 0 0 1 1 1 1
+GiveStateItem 超级神魂水晶 1 1 1 0 0 1 1 1 1
+GiveStateItem 湘逢魔石 10 1 1 0 0 1 1 1 1
+GiveStateItem 金盒 5 1 1 0 0 1 1 1 1
+SENDMSG 9 恭喜您领取成功
+mov J122 1
+#ELSEACT   
+MESSAGEBOX 您今日已经领取过了
+break 
+
+
+
+
+[@高级领2]
+#if
+small J100 300
+#act
+MESSAGEBOX 您今日充值未达标无法领取
+break 
+
+#IF
+large J100 299
+equal J121 0
+#act
+MONEY 福源 + 1500
+GiveStateItem 神魂水晶 4 1 1 0 0 1 1 1 1
+GiveStateItem 湘逢魔石 5 1 1 0 0 1 1 1 1
+GiveStateItem 金盒 3 1 1 0 0 1 1 1 1
+SENDMSG 9 恭喜您领取成功
+mov J121 1
+#ELSEACT   
+MESSAGEBOX 您今日已经领取过了
+break 
+
+
+
+
+
+
+[@高级领1]
+#if
+small J100 100
+#act
+MESSAGEBOX 您今日充值未达标无法领取
+break 
+
+#IF
+large J100 99
+equal J120 0
+#act
+MONEY 福源 + 500
+GiveStateItem 神魂水晶 2 1 1 0 0 1 1 1 1
+GiveStateItem 湘逢魔石 1 1 1 0 0 1 1 1 1
+GiveStateItem 金盒 1 1 1 0 0 1 1 1 1
+SENDMSG 9 恭喜您领取成功
+mov J120 1
+#ELSEACT   
+MESSAGEBOX 您今日已经领取过了
+break 
+
+
+
+
+
+
+
+
+
+
+
+}

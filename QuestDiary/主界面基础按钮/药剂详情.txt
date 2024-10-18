@@ -1,0 +1,432 @@
+[@药剂详情页面]
+{
+
+#if
+#act
+
+goto @属性对应逻辑
+goto @Yj详情页面
+
+[@Yj详情页面]
+#if
+#SAY
+<Button|x=-2526.0|y=-1172.0|width=115120|height=112880|color=224|pimg=npc/zd.png|size=18|mimg=npc/zd.png|nimg=npc/zd.png|link=@exit>
+<Img|x=-53.0|y=-9.0|width=871|height=560|img=topbtn/yj/bj.png|move=0|esc=1|bg=1|reset=1|show=4|loadDelay=1>
+<Button|x=758.0|y=35.0|mimg=public/close-2.png|nimg=public/close-2.png|link=@exit>
+<Effect|x=91.0|y=154.0|scale=1|speed=1|effecttype=0|effectid=45000|act=0>
+<Effect|x=240.0|y=155.0|scale=1|speed=1|effecttype=0|effectid=45001|act=0>
+<Effect|x=393.0|y=160.0|scale=1|speed=1|effecttype=0|effectid=45002|act=0>
+<Effect|x=538.0|y=154.0|scale=1|speed=1|effecttype=0|effectid=45003|act=0>
+<Effect|x=681.0|y=156.0|scale=1|speed=1|effecttype=0|effectid=45004|act=0>
+
+<Text|x=63.0|y=229.0|color=255|size=16|outline=1|text=紫阳花>
+<Text|x=216.0|y=229.0|color=255|size=16|outline=1|text=红军果>
+<Text|x=364.0|y=229.0|color=255|size=16|outline=1|text=紫菱花>
+<Text|x=512.0|y=229.0|color=255|size=16|outline=1|text=白莲灵>
+<Text|x=653.0|y=229.0|color=255|size=16|outline=1|text=九阴灵芝>
+
+
+<Layout|x=28.0|y=263.0|width=121|height=50|children={1}>
+<Layout|x=177.0|y=263.0|width=121|height=50|children={2}>
+<Layout|x=327.0|y=263.0|width=121|height=50|children={3}>
+<Layout|x=477.0|y=263.0|width=121|height=50|children={4}>
+<Layout|x=625.0|y=263.0|width=121|height=50|children={5}>
+
+
+<Text|a=8|id=1|percentx=50|y=22.0|color=<$STR(S$紫阳花颜色)>|size=16|outline=1|text=<$STR(S$紫阳花状态)>>
+<Text|a=8|id=2|percentx=50|y=22.0|color=<$STR(S$红军果颜色)>|size=16|outline=1|text=<$STR(S$红军果状态)>>
+<Text|a=8|id=3|percentx=50|y=22.0|color=<$STR(S$紫菱花颜色)>|size=16|outline=1|text=<$STR(S$紫菱花状态)>>
+<Text|a=8|id=4|percentx=50|y=22.0|color=<$STR(S$白莲灵颜色)>|size=16|outline=1|text=<$STR(S$白莲灵状态)>>
+<Text|a=8|id=5|percentx=50|y=22.0|color=<$STR(S$九阴灵芝颜色)>|size=16|outline=1|text=<$STR(S$九阴灵芝状态)>>
+
+<Img|x=30.0|y=333.0|width=118|height=33|loadDelay=1|img=topbtn/yj/00016.png|reset=1|move=0|esc=1|show=4>
+<Img|x=178.0|y=333.0|width=118|height=33|loadDelay=1|img=topbtn/yj/00016.png|reset=1|move=0|esc=1|show=4>
+<Img|x=626.0|y=333.0|width=118|height=33|loadDelay=1|img=topbtn/yj/00016.png|reset=1|move=0|esc=1|show=4>
+<Img|x=478.0|y=333.0|width=118|height=33|loadDelay=1|img=topbtn/yj/00016.png|reset=1|move=0|esc=1|show=4>
+<Img|x=328.0|y=333.0|width=118|height=33|loadDelay=1|img=topbtn/yj/00016.png|reset=1|move=0|esc=1|show=4>
+
+
+<Layout|x=28.0|y=336.0|width=121|height=180|children={a,a1}>
+<Layout|x=177.0|y=336.0|width=121|height=180|children={b,b1}>
+<Layout|x=327.0|y=336.0|width=121|height=180|children={c,c1}>
+<Layout|x=477.0|y=336.0|width=121|height=180|children={d,d1}>
+<Layout|x=625.0|y=336.0|width=121|height=180|children={e,e1}>
+
+<Text|a=8|id=a|percentx=50|y=70|color=251|size=16|outline=1|text=<$STR(S$紫阳花属性)>>
+<Text|a=8|id=b|percentx=50|y=70.0|color=251|size=16|outline=1|text=<$STR(S$红军果属性)>>
+<Text|a=8|id=c|percentx=50|y=70.0|color=251|size=16|outline=1|text=<$STR(S$紫菱花属性)>>
+<Text|a=8|id=d|percentx=50|y=70.0|color=251|size=16|outline=1|text=<$STR(S$白莲灵属性)>>
+<Text|a=8|id=e|percentx=50|y=70.0|color=251|size=16|outline=1|text=<$STR(S$九阴灵芝属性)>>
+
+<Text|a=8|id=a1|percentx=50|y=90|color=251|size=16|outline=1|text=<$STR(S$紫阳花属性值)>>
+<Text|a=8|id=b1|percentx=50|y=90.0|color=251|size=16|outline=1|text=<$STR(S$红军果属性值)>>
+<Text|a=8|id=c1|percentx=50|y=90.0|color=251|size=16|outline=1|text=<$STR(S$紫菱花属性值)>>
+<Text|a=8|id=d1|percentx=50|y=90.0|color=251|size=16|outline=1|text=<$STR(S$白莲灵属性值)>>
+<Text|a=8|id=e1|percentx=50|y=90.0|color=251|size=16|outline=1|text=<$STR(S$九阴灵芝属性值)>>
+
+
+[@属性对应逻辑]
+#if
+EQUAL U66 0
+EQUAL U67 0
+#act
+MOV S$紫阳花状态 未激活
+mov S$紫阳花颜色 255
+#elseact
+MOV S$紫阳花状态 剩余:<$STR(U67)>秒
+mov S$紫阳花颜色 250
+
+#if
+EQUAL U69 0
+EQUAL U72 0
+#act
+MOV S$红军果状态 未激活
+mov S$红军果颜色 255
+#elseact
+MOV S$红军果状态 剩余:<$STR(U72)>秒
+mov S$红军果颜色 250
+
+#if
+EQUAL U70 0
+EQUAL U74 0
+#act
+MOV S$紫菱花状态 未激活
+mov S$紫菱花颜色 255
+#elseact
+MOV S$紫菱花状态 剩余:<$STR(U74)>秒
+mov S$紫菱花颜色 250
+
+#if
+EQUAL U75 0
+EQUAL U77 0
+#act
+MOV S$白莲灵状态 未激活
+mov S$白莲灵颜色 255
+#elseact
+MOV S$白莲灵状态 剩余:<$STR(U77)>秒
+mov S$白莲灵颜色 250
+
+#if
+EQUAL U78 0
+EQUAL U80 0
+#act
+MOV S$九阴灵芝状态 未激活
+mov S$九阴灵芝颜色 255
+#elseact
+MOV S$九阴灵芝状态 剩余:<$STR(U80)>秒
+mov S$九阴灵芝颜色 250
+
+#if
+equal U66 0
+#act
+mov S$紫阳花属性 无
+mov S$紫阳花属性值 
+
+
+#if
+equal U66 1
+#act
+mov S$紫阳花属性 攻击上限 
+
+#if
+equal U66 2
+#act
+mov S$紫阳花属性 魔法上限 
+
+#if
+equal U66 3
+#act
+mov S$紫阳花属性 道术上限
+
+#if
+equal U101 0
+large U66 0
+#act
+mov S$紫阳花属性值 +5
+
+#if
+equal U101 1
+#act
+mov S$紫阳花属性值 +10
+
+
+#if
+equal U101 2
+#act
+mov S$紫阳花属性值 +15
+
+
+#if
+equal U101 3
+#act
+mov S$紫阳花属性值 +20
+
+#if
+equal U101 4
+#act
+mov S$紫阳花属性值 +25
+;-----------------------------------------------------------------------
+#if
+equal U69 0
+#act
+mov S$红军果属性 无
+mov S$红军果属性值 
+
+#if
+equal U69 1
+#act
+mov S$红军果属性 生命值上限 
+
+#if
+equal U69 2
+#act
+mov S$红军果属性 魔防上限 
+
+#if
+equal U69 3
+#act
+mov S$红军果属性 物防上限
+
+#if
+equal U69 1
+equal U102 0
+#act
+mov S$红军果属性值 +100
+
+#if
+equal U69 1
+equal U102 1
+#act
+mov S$红军果属性值 +150
+
+
+#if
+equal U69 1
+equal U102 2
+#act
+mov S$红军果属性值 +200
+
+
+#if
+equal U69 1
+equal U102 3
+#act
+mov S$红军果属性值 +250
+
+#if
+equal U69 1
+equal U102 4
+#act
+mov S$红军果属性值 +300
+
+#if
+equal U69 2
+equal U102 0
+#act
+mov S$红军果属性值 +5
+
+#if
+equal U69 2
+equal U102 1
+#act
+mov S$红军果属性值 +10
+
+
+#if
+equal U69 2
+equal U102 2
+#act
+mov S$红军果属性值 +15
+
+
+#if
+equal U69 2
+equal U102 3
+#act
+mov S$红军果属性值 +20
+
+#if
+equal U69 2
+equal U102 4
+#act
+mov S$红军果属性值 +25
+
+#if
+equal U69 3
+equal U102 0
+#act
+mov S$红军果属性值 +5
+
+#if
+equal U69 3
+equal U102 1
+#act
+mov S$红军果属性值 +10
+
+
+#if
+equal U69 3
+equal U102 2
+#act
+mov S$红军果属性值 +15
+
+
+#if
+equal U69 3
+equal U102 3
+#act
+mov S$红军果属性值 +20
+
+#if
+equal U69 3
+equal U102 4
+#act
+mov S$红军果属性值 +25
+;---------------------------------------------------------------------
+#if
+equal U70 0
+#act
+mov S$紫菱花属性 无
+mov S$紫菱花属性值 
+
+#if
+equal U70 1
+#act
+mov S$紫菱花属性 防暴几率 
+
+#if
+equal U70 2
+#act
+mov S$紫菱花属性 人物爆率 
+
+#if
+equal U70 3
+#act
+mov S$紫菱花属性 怪物爆率
+
+#if
+equal U103 0
+large U70 0
+#act
+mov S$紫菱花属性值 +1%
+
+#if
+equal U103 1
+#act
+mov S$紫菱花属性值 +2%
+
+
+#if
+equal U103 2
+#act
+mov S$紫菱花属性值 +3%
+
+
+#if
+equal U103 3
+#act
+mov S$紫菱花属性值 +4%
+
+#if
+equal U103 4
+#act
+mov S$紫菱花属性值 +5%
+;---------------------------------------------------------------------
+#if
+equal U75 0
+#act
+mov S$白莲灵属性 无
+mov S$白莲灵属性值 
+
+#if
+equal U75 1
+#act
+mov S$白莲灵属性 韧性 
+
+#if
+equal U75 2
+#act
+mov S$白莲灵属性 伤害减免 
+
+#if
+equal U75 3
+#act
+mov S$白莲灵属性 暴击抵抗
+
+#if
+equal U107 0
+large U75 0
+#act
+mov S$白莲灵属性值 +1%
+
+#if
+equal U107 1
+#act
+mov S$白莲灵属性值 +2%
+
+
+#if
+equal U107 2
+#act
+mov S$白莲灵属性值 +3%
+
+
+#if
+equal U107 3
+#act
+mov S$白莲灵属性值 +4%
+
+#if
+equal U107 4
+#act
+mov S$白莲灵属性值 +5%
+;---------------------------------------------------------------------
+#if
+equal U78 0
+#act
+mov S$九阴灵芝属性 无
+mov S$九阴灵芝属性值 
+
+#if
+equal U78 1
+#act
+mov S$九阴灵芝属性 暴击率 
+
+#if
+equal U78 2
+#act
+mov S$九阴灵芝属性 暴击伤害 
+
+#if
+equal U78 3
+#act
+mov S$九阴灵芝属性 攻击增伤
+
+#if
+equal U110 0
+large U78 0
+#act
+mov S$九阴灵芝属性值 +1%
+
+#if
+equal U110 1
+#act
+mov S$九阴灵芝属性值 +2%
+
+
+#if
+equal U110 2
+#act
+mov S$九阴灵芝属性值 +3%
+
+
+#if
+equal U110 3
+#act
+mov S$九阴灵芝属性值 +4%
+
+#if
+equal U110 4
+#act
+mov S$九阴灵芝属性值 +5%
+}

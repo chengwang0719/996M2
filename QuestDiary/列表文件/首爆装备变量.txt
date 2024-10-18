@@ -1,0 +1,895 @@
+[GLOBAL]   
+首爆奖金：绿寂战袍=2   
+首爆奖金：绿寂战甲=2   
+首爆奖金：绿玉裁决=2   
+首爆奖金：浮游头盔=1   
+首爆奖金：浮游项链=1   
+首爆奖金：浮游手镯=1   
+首爆奖金：浮游戒指=1   
+首爆奖金：浮游靴子=1   
+首爆奖金：浮游腰带=1   
+首爆奖金：红鹰法袍=2   
+首爆奖金：红鹰法甲=2   
+首爆奖金：蓝灵法杖=2   
+首爆奖金：梦幻头盔=1   
+首爆奖金：梦幻项链=1   
+首爆奖金：梦幻手镯=1   
+首爆奖金：梦幻戒指=1   
+首爆奖金：梦幻靴子=1   
+首爆奖金：梦幻腰带=1   
+首爆奖金：黄沙道袍=2   
+首爆奖金：黄沙道甲=2   
+首爆奖金：绿玉无极棍=2   
+首爆奖金：蓝灵头盔=1   
+首爆奖金：蓝灵项链=1   
+首爆奖金：蓝灵手镯=1   
+首爆奖金：蓝灵戒指=1   
+首爆奖金：蓝灵靴子=1   
+首爆奖金：蓝灵腰带=1   
+首爆奖金：白虎战袍=4   
+首爆奖金：白虎战甲=4   
+首爆奖金：绿玉屠龙=4   
+首爆奖金：藤域头盔=2   
+首爆奖金：藤域项链=2   
+首爆奖金：藤域手镯=2   
+首爆奖金：藤域戒指=2   
+首爆奖金：藤域靴子=2   
+首爆奖金：藤域腰带=2   
+首爆奖金：朱雀法袍=4   
+首爆奖金：朱雀法甲=4   
+首爆奖金：法神之仗=4   
+首爆奖金：沐域头盔=2   
+首爆奖金：沐域项链=2   
+首爆奖金：沐域手镯=2   
+首爆奖金：沐域戒指=2   
+首爆奖金：沐域靴子=2   
+首爆奖金：沐域腰带=2   
+首爆奖金：青龙道袍=4   
+首爆奖金：青龙道甲=4   
+首爆奖金：天尊之扇=4   
+首爆奖金：道域头盔=2   
+首爆奖金：道域项链=2   
+首爆奖金：道域手镯=2   
+首爆奖金：道域戒指=2   
+首爆奖金：道域靴子=2   
+首爆奖金：道域腰带=2   
+首爆奖金：帝王战袍=6   
+首爆奖金：帝王战甲=6   
+首爆奖金：帝王战刃=6   
+首爆奖金：铜域头盔=3   
+首爆奖金：铜域项链=3   
+首爆奖金：铜域手镯=3   
+首爆奖金：铜域戒指=3   
+首爆奖金：铜域靴子=3   
+首爆奖金：铜域腰带=3   
+首爆奖金：幽灵法袍=6   
+首爆奖金：幽灵法甲=6   
+首爆奖金：幽灵法杖=6   
+首爆奖金：水域头盔=3   
+首爆奖金：水域项链=3   
+首爆奖金：水域手镯=3   
+首爆奖金：水域戒指=3   
+首爆奖金：水域靴子=3   
+首爆奖金：水域腰带=3   
+首爆奖金：玄冥道袍=6   
+首爆奖金：玄冥道甲=6   
+首爆奖金：玄冥道刃=6   
+首爆奖金：土域头盔=3   
+首爆奖金：土域项链=3   
+首爆奖金：土域手镯=3   
+首爆奖金：土域戒指=3   
+首爆奖金：土域靴子=3   
+首爆奖金：土域腰带=3   
+首爆奖金：白虎战袍[圣]=8   
+首爆奖金：白虎战甲[圣]=8   
+首爆奖金：天罡战刃=8   
+首爆奖金：黄金头盔=4   
+首爆奖金：黄金项链=4   
+首爆奖金：黄金手镯=4   
+首爆奖金：黄金戒指=4   
+首爆奖金：黄金靴子=4   
+首爆奖金：黄金腰带=4   
+首爆奖金：朱雀法袍[圣]=8   
+首爆奖金：朱雀法甲[圣]=8   
+首爆奖金：贪狼法杖=8   
+首爆奖金：精灵头盔=4   
+首爆奖金：精灵项链=4   
+首爆奖金：精灵手镯=4   
+首爆奖金：精灵戒指=4   
+首爆奖金：精灵靴子=4   
+首爆奖金：精灵腰带=4   
+首爆奖金：青龙道袍[圣]=8   
+首爆奖金：青龙道甲[圣]=8   
+首爆奖金：青罡佛尘=8   
+首爆奖金：玄天头盔=4   
+首爆奖金：玄天项链=4   
+首爆奖金：玄天手镯=4   
+首爆奖金：玄天戒指=4   
+首爆奖金：玄天靴子=4   
+首爆奖金：玄天腰带=4   
+首爆奖金：恶魔战袍=10   
+首爆奖金：恶魔战甲=10   
+首爆奖金：鬼斩=10   
+首爆奖金：恶魔头盔=5   
+首爆奖金：恶魔项链=5   
+首爆奖金：恶魔手镯=5   
+首爆奖金：恶魔戒指=5   
+首爆奖金：恶魔靴子=5   
+首爆奖金：恶魔腰带=5   
+首爆奖金：红魔法袍=10   
+首爆奖金：红魔法甲=10   
+首爆奖金：寒冰=10   
+首爆奖金：红魔头盔=5   
+首爆奖金：红魔项链=5   
+首爆奖金：红魔手镯=5   
+首爆奖金：红魔戒指=5   
+首爆奖金：红魔靴子=5   
+首爆奖金：红魔腰带=5   
+首爆奖金：蓝魔道袍=10   
+首爆奖金：蓝魔道甲=10   
+首爆奖金：七彩=10   
+首爆奖金：蓝魔头盔=5   
+首爆奖金：蓝魔项链=5   
+首爆奖金：蓝魔手镯=5   
+首爆奖金：蓝魔戒指=5   
+首爆奖金：蓝魔靴子=5   
+首爆奖金：蓝魔腰带=5   
+首爆奖金：龍麟圣袍=12   
+首爆奖金：龍麟圣甲=12   
+首爆奖金：龍麟破天=12   
+首爆奖金：龍麟圣盔=6   
+首爆奖金：龍麟圣链=6   
+首爆奖金：龍麟圣镯=6   
+首爆奖金：龍麟圣戒[麻痹]=6   
+首爆奖金：龍麟圣戒[复活]=6   
+首爆奖金：龍麟圣戒[护身]=6   
+首爆奖金：龍麟圣靴=6   
+首爆奖金：龍麟圣带=6   
+   
+首爆获奖：绿寂战袍=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：绿寂战甲=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：绿玉裁决=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：浮游头盔=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：浮游项链=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：浮游手镯=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：浮游戒指=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：浮游靴子=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：浮游腰带=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：红鹰法袍=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：红鹰法甲=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：蓝灵法杖=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：梦幻头盔=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：梦幻项链=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：梦幻手镯=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：梦幻戒指=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：梦幻靴子=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：梦幻腰带=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：黄沙道袍=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：黄沙道甲=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：绿玉无极棍=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：蓝灵头盔=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：蓝灵项链=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：蓝灵手镯=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：蓝灵戒指=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：蓝灵靴子=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：蓝灵腰带=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：白虎战袍=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：白虎战甲=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：绿玉屠龙=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：藤域头盔=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：藤域项链=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：藤域手镯=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：藤域戒指=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：藤域靴子=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：藤域腰带=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：朱雀法袍=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：朱雀法甲=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：法神之仗=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：沐域头盔=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：沐域项链=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：沐域手镯=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：沐域戒指=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：沐域靴子=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：沐域腰带=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：青龙道袍=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：青龙道甲=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：天尊之扇=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：道域头盔=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：道域项链=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：道域手镯=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：道域戒指=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：道域靴子=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：道域腰带=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：帝王战袍=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：帝王战甲=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：帝王战刃=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：铜域头盔=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：铜域项链=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：铜域手镯=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：铜域戒指=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：铜域靴子=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：铜域腰带=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：幽灵法袍=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：幽灵法甲=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：幽灵法杖=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：水域头盔=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：水域项链=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：水域手镯=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：水域戒指=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：水域靴子=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：水域腰带=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：玄冥道袍=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：玄冥道甲=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：玄冥道刃=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：土域头盔=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：土域项链=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：土域手镯=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：土域戒指=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：土域靴子=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：土域腰带=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：白虎战袍[圣]=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：白虎战甲[圣]=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：天罡战刃=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：黄金头盔=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：黄金项链=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：黄金手镯=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：黄金戒指=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：黄金靴子=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：黄金腰带=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：朱雀法袍[圣]=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：朱雀法甲[圣]=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：贪狼法杖=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：精灵头盔=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：精灵项链=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：精灵手镯=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：精灵戒指=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：精灵靴子=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：精灵腰带=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：青龙道袍[圣]=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：青龙道甲[圣]=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：青罡佛尘=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：玄天头盔=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：玄天项链=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：玄天手镯=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：玄天戒指=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：玄天靴子=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：玄天腰带=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：恶魔战袍=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：恶魔战甲=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：鬼斩=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：恶魔头盔=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：恶魔项链=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：恶魔手镯=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：恶魔戒指=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：恶魔靴子=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：恶魔腰带=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：红魔法袍=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：红魔法甲=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：寒冰=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：红魔头盔=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：红魔项链=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：红魔手镯=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：红魔戒指=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：红魔靴子=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：红魔腰带=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：蓝魔道袍=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：蓝魔道甲=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：七彩=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：蓝魔头盔=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：蓝魔项链=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：蓝魔手镯=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：蓝魔戒指=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：蓝魔靴子=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：蓝魔腰带=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：龍麟圣袍=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：龍麟圣甲=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：龍麟破天=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：龍麟圣盔=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：龍麟圣链=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：龍麟圣镯=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：龍麟圣戒[麻痹]=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：龍麟圣戒[复活]=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：龍麟圣戒[护身]=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：龍麟圣靴=<暂未产生获奖者/SCOLOR=250>   
+首爆获奖：龍麟圣带=<暂未产生获奖者/SCOLOR=250>   
+   
+[@全局首爆变量声明]   
+{   
+#act   
+VAR Integer GLOBAL 首爆奖金：绿寂战袍   
+VAR Integer GLOBAL 首爆奖金：绿寂战甲   
+VAR Integer GLOBAL 首爆奖金：绿玉裁决   
+VAR Integer GLOBAL 首爆奖金：浮游头盔   
+VAR Integer GLOBAL 首爆奖金：浮游项链   
+VAR Integer GLOBAL 首爆奖金：浮游手镯   
+VAR Integer GLOBAL 首爆奖金：浮游戒指   
+VAR Integer GLOBAL 首爆奖金：浮游靴子   
+VAR Integer GLOBAL 首爆奖金：浮游腰带   
+VAR Integer GLOBAL 首爆奖金：红鹰法袍   
+VAR Integer GLOBAL 首爆奖金：红鹰法甲   
+VAR Integer GLOBAL 首爆奖金：蓝灵法杖   
+VAR Integer GLOBAL 首爆奖金：梦幻头盔   
+VAR Integer GLOBAL 首爆奖金：梦幻项链   
+VAR Integer GLOBAL 首爆奖金：梦幻手镯   
+VAR Integer GLOBAL 首爆奖金：梦幻戒指   
+VAR Integer GLOBAL 首爆奖金：梦幻靴子   
+VAR Integer GLOBAL 首爆奖金：梦幻腰带   
+VAR Integer GLOBAL 首爆奖金：黄沙道袍   
+VAR Integer GLOBAL 首爆奖金：黄沙道甲   
+VAR Integer GLOBAL 首爆奖金：绿玉无极棍   
+VAR Integer GLOBAL 首爆奖金：蓝灵头盔   
+VAR Integer GLOBAL 首爆奖金：蓝灵项链   
+VAR Integer GLOBAL 首爆奖金：蓝灵手镯   
+VAR Integer GLOBAL 首爆奖金：蓝灵戒指   
+VAR Integer GLOBAL 首爆奖金：蓝灵靴子   
+VAR Integer GLOBAL 首爆奖金：蓝灵腰带   
+VAR Integer GLOBAL 首爆奖金：白虎战袍   
+VAR Integer GLOBAL 首爆奖金：白虎战甲   
+VAR Integer GLOBAL 首爆奖金：绿玉屠龙   
+VAR Integer GLOBAL 首爆奖金：藤域头盔   
+VAR Integer GLOBAL 首爆奖金：藤域项链   
+VAR Integer GLOBAL 首爆奖金：藤域手镯   
+VAR Integer GLOBAL 首爆奖金：藤域戒指   
+VAR Integer GLOBAL 首爆奖金：藤域靴子   
+VAR Integer GLOBAL 首爆奖金：藤域腰带   
+VAR Integer GLOBAL 首爆奖金：朱雀法袍   
+VAR Integer GLOBAL 首爆奖金：朱雀法甲   
+VAR Integer GLOBAL 首爆奖金：法神之仗   
+VAR Integer GLOBAL 首爆奖金：沐域头盔   
+VAR Integer GLOBAL 首爆奖金：沐域项链   
+VAR Integer GLOBAL 首爆奖金：沐域手镯   
+VAR Integer GLOBAL 首爆奖金：沐域戒指   
+VAR Integer GLOBAL 首爆奖金：沐域靴子   
+VAR Integer GLOBAL 首爆奖金：沐域腰带   
+VAR Integer GLOBAL 首爆奖金：青龙道袍   
+VAR Integer GLOBAL 首爆奖金：青龙道甲   
+VAR Integer GLOBAL 首爆奖金：天尊之扇   
+VAR Integer GLOBAL 首爆奖金：道域头盔   
+VAR Integer GLOBAL 首爆奖金：道域项链   
+VAR Integer GLOBAL 首爆奖金：道域手镯   
+VAR Integer GLOBAL 首爆奖金：道域戒指   
+VAR Integer GLOBAL 首爆奖金：道域靴子   
+VAR Integer GLOBAL 首爆奖金：道域腰带   
+VAR Integer GLOBAL 首爆奖金：帝王战袍   
+VAR Integer GLOBAL 首爆奖金：帝王战甲   
+VAR Integer GLOBAL 首爆奖金：帝王战刃   
+VAR Integer GLOBAL 首爆奖金：铜域头盔   
+VAR Integer GLOBAL 首爆奖金：铜域项链   
+VAR Integer GLOBAL 首爆奖金：铜域手镯   
+VAR Integer GLOBAL 首爆奖金：铜域戒指   
+VAR Integer GLOBAL 首爆奖金：铜域靴子   
+VAR Integer GLOBAL 首爆奖金：铜域腰带   
+VAR Integer GLOBAL 首爆奖金：幽灵法袍   
+VAR Integer GLOBAL 首爆奖金：幽灵法甲   
+VAR Integer GLOBAL 首爆奖金：幽灵法杖   
+VAR Integer GLOBAL 首爆奖金：水域头盔   
+VAR Integer GLOBAL 首爆奖金：水域项链   
+VAR Integer GLOBAL 首爆奖金：水域手镯   
+VAR Integer GLOBAL 首爆奖金：水域戒指   
+VAR Integer GLOBAL 首爆奖金：水域靴子   
+VAR Integer GLOBAL 首爆奖金：水域腰带   
+VAR Integer GLOBAL 首爆奖金：玄冥道袍   
+VAR Integer GLOBAL 首爆奖金：玄冥道甲   
+VAR Integer GLOBAL 首爆奖金：玄冥道刃   
+VAR Integer GLOBAL 首爆奖金：土域头盔   
+VAR Integer GLOBAL 首爆奖金：土域项链   
+VAR Integer GLOBAL 首爆奖金：土域手镯   
+VAR Integer GLOBAL 首爆奖金：土域戒指   
+VAR Integer GLOBAL 首爆奖金：土域靴子   
+VAR Integer GLOBAL 首爆奖金：土域腰带   
+VAR Integer GLOBAL 首爆奖金：白虎战袍[圣]   
+VAR Integer GLOBAL 首爆奖金：白虎战甲[圣]   
+VAR Integer GLOBAL 首爆奖金：天罡战刃   
+VAR Integer GLOBAL 首爆奖金：黄金头盔   
+VAR Integer GLOBAL 首爆奖金：黄金项链   
+VAR Integer GLOBAL 首爆奖金：黄金手镯   
+VAR Integer GLOBAL 首爆奖金：黄金戒指   
+VAR Integer GLOBAL 首爆奖金：黄金靴子   
+VAR Integer GLOBAL 首爆奖金：黄金腰带   
+VAR Integer GLOBAL 首爆奖金：朱雀法袍[圣]   
+VAR Integer GLOBAL 首爆奖金：朱雀法甲[圣]   
+VAR Integer GLOBAL 首爆奖金：贪狼法杖   
+VAR Integer GLOBAL 首爆奖金：精灵头盔   
+VAR Integer GLOBAL 首爆奖金：精灵项链   
+VAR Integer GLOBAL 首爆奖金：精灵手镯   
+VAR Integer GLOBAL 首爆奖金：精灵戒指   
+VAR Integer GLOBAL 首爆奖金：精灵靴子   
+VAR Integer GLOBAL 首爆奖金：精灵腰带   
+VAR Integer GLOBAL 首爆奖金：青龙道袍[圣]   
+VAR Integer GLOBAL 首爆奖金：青龙道甲[圣]   
+VAR Integer GLOBAL 首爆奖金：青罡佛尘   
+VAR Integer GLOBAL 首爆奖金：玄天头盔   
+VAR Integer GLOBAL 首爆奖金：玄天项链   
+VAR Integer GLOBAL 首爆奖金：玄天手镯   
+VAR Integer GLOBAL 首爆奖金：玄天戒指   
+VAR Integer GLOBAL 首爆奖金：玄天靴子   
+VAR Integer GLOBAL 首爆奖金：玄天腰带   
+VAR Integer GLOBAL 首爆奖金：恶魔战袍   
+VAR Integer GLOBAL 首爆奖金：恶魔战甲   
+VAR Integer GLOBAL 首爆奖金：鬼斩   
+VAR Integer GLOBAL 首爆奖金：恶魔头盔   
+VAR Integer GLOBAL 首爆奖金：恶魔项链   
+VAR Integer GLOBAL 首爆奖金：恶魔手镯   
+VAR Integer GLOBAL 首爆奖金：恶魔戒指   
+VAR Integer GLOBAL 首爆奖金：恶魔靴子   
+VAR Integer GLOBAL 首爆奖金：恶魔腰带   
+VAR Integer GLOBAL 首爆奖金：红魔法袍   
+VAR Integer GLOBAL 首爆奖金：红魔法甲   
+VAR Integer GLOBAL 首爆奖金：寒冰   
+VAR Integer GLOBAL 首爆奖金：红魔头盔   
+VAR Integer GLOBAL 首爆奖金：红魔项链   
+VAR Integer GLOBAL 首爆奖金：红魔手镯   
+VAR Integer GLOBAL 首爆奖金：红魔戒指   
+VAR Integer GLOBAL 首爆奖金：红魔靴子   
+VAR Integer GLOBAL 首爆奖金：红魔腰带   
+VAR Integer GLOBAL 首爆奖金：蓝魔道袍   
+VAR Integer GLOBAL 首爆奖金：蓝魔道甲   
+VAR Integer GLOBAL 首爆奖金：七彩   
+VAR Integer GLOBAL 首爆奖金：蓝魔头盔   
+VAR Integer GLOBAL 首爆奖金：蓝魔项链   
+VAR Integer GLOBAL 首爆奖金：蓝魔手镯   
+VAR Integer GLOBAL 首爆奖金：蓝魔戒指   
+VAR Integer GLOBAL 首爆奖金：蓝魔靴子   
+VAR Integer GLOBAL 首爆奖金：蓝魔腰带   
+VAR Integer GLOBAL 首爆奖金：龍麟圣袍   
+VAR Integer GLOBAL 首爆奖金：龍麟圣甲   
+VAR Integer GLOBAL 首爆奖金：龍麟破天   
+VAR Integer GLOBAL 首爆奖金：龍麟圣盔   
+VAR Integer GLOBAL 首爆奖金：龍麟圣链   
+VAR Integer GLOBAL 首爆奖金：龍麟圣镯   
+VAR Integer GLOBAL 首爆奖金：龍麟圣戒[麻痹]   
+VAR Integer GLOBAL 首爆奖金：龍麟圣戒[复活]   
+VAR Integer GLOBAL 首爆奖金：龍麟圣戒[护身]   
+VAR Integer GLOBAL 首爆奖金：龍麟圣靴   
+VAR Integer GLOBAL 首爆奖金：龍麟圣带   
+   
+VAR String GLOBAL 首爆获奖：绿寂战袍   
+VAR String GLOBAL 首爆获奖：绿寂战甲   
+VAR String GLOBAL 首爆获奖：绿玉裁决   
+VAR String GLOBAL 首爆获奖：浮游头盔   
+VAR String GLOBAL 首爆获奖：浮游项链   
+VAR String GLOBAL 首爆获奖：浮游手镯   
+VAR String GLOBAL 首爆获奖：浮游戒指   
+VAR String GLOBAL 首爆获奖：浮游靴子   
+VAR String GLOBAL 首爆获奖：浮游腰带   
+VAR String GLOBAL 首爆获奖：红鹰法袍   
+VAR String GLOBAL 首爆获奖：红鹰法甲   
+VAR String GLOBAL 首爆获奖：蓝灵法杖   
+VAR String GLOBAL 首爆获奖：梦幻头盔   
+VAR String GLOBAL 首爆获奖：梦幻项链   
+VAR String GLOBAL 首爆获奖：梦幻手镯   
+VAR String GLOBAL 首爆获奖：梦幻戒指   
+VAR String GLOBAL 首爆获奖：梦幻靴子   
+VAR String GLOBAL 首爆获奖：梦幻腰带   
+VAR String GLOBAL 首爆获奖：黄沙道袍   
+VAR String GLOBAL 首爆获奖：黄沙道甲   
+VAR String GLOBAL 首爆获奖：绿玉无极棍   
+VAR String GLOBAL 首爆获奖：蓝灵头盔   
+VAR String GLOBAL 首爆获奖：蓝灵项链   
+VAR String GLOBAL 首爆获奖：蓝灵手镯   
+VAR String GLOBAL 首爆获奖：蓝灵戒指   
+VAR String GLOBAL 首爆获奖：蓝灵靴子   
+VAR String GLOBAL 首爆获奖：蓝灵腰带   
+VAR String GLOBAL 首爆获奖：白虎战袍   
+VAR String GLOBAL 首爆获奖：白虎战甲   
+VAR String GLOBAL 首爆获奖：绿玉屠龙   
+VAR String GLOBAL 首爆获奖：藤域头盔   
+VAR String GLOBAL 首爆获奖：藤域项链   
+VAR String GLOBAL 首爆获奖：藤域手镯   
+VAR String GLOBAL 首爆获奖：藤域戒指   
+VAR String GLOBAL 首爆获奖：藤域靴子   
+VAR String GLOBAL 首爆获奖：藤域腰带   
+VAR String GLOBAL 首爆获奖：朱雀法袍   
+VAR String GLOBAL 首爆获奖：朱雀法甲   
+VAR String GLOBAL 首爆获奖：法神之仗   
+VAR String GLOBAL 首爆获奖：沐域头盔   
+VAR String GLOBAL 首爆获奖：沐域项链   
+VAR String GLOBAL 首爆获奖：沐域手镯   
+VAR String GLOBAL 首爆获奖：沐域戒指   
+VAR String GLOBAL 首爆获奖：沐域靴子   
+VAR String GLOBAL 首爆获奖：沐域腰带   
+VAR String GLOBAL 首爆获奖：青龙道袍   
+VAR String GLOBAL 首爆获奖：青龙道甲   
+VAR String GLOBAL 首爆获奖：天尊之扇   
+VAR String GLOBAL 首爆获奖：道域头盔   
+VAR String GLOBAL 首爆获奖：道域项链   
+VAR String GLOBAL 首爆获奖：道域手镯   
+VAR String GLOBAL 首爆获奖：道域戒指   
+VAR String GLOBAL 首爆获奖：道域靴子   
+VAR String GLOBAL 首爆获奖：道域腰带   
+VAR String GLOBAL 首爆获奖：帝王战袍   
+VAR String GLOBAL 首爆获奖：帝王战甲   
+VAR String GLOBAL 首爆获奖：帝王战刃   
+VAR String GLOBAL 首爆获奖：铜域头盔   
+VAR String GLOBAL 首爆获奖：铜域项链   
+VAR String GLOBAL 首爆获奖：铜域手镯   
+VAR String GLOBAL 首爆获奖：铜域戒指   
+VAR String GLOBAL 首爆获奖：铜域靴子   
+VAR String GLOBAL 首爆获奖：铜域腰带   
+VAR String GLOBAL 首爆获奖：幽灵法袍   
+VAR String GLOBAL 首爆获奖：幽灵法甲   
+VAR String GLOBAL 首爆获奖：幽灵法杖   
+VAR String GLOBAL 首爆获奖：水域头盔   
+VAR String GLOBAL 首爆获奖：水域项链   
+VAR String GLOBAL 首爆获奖：水域手镯   
+VAR String GLOBAL 首爆获奖：水域戒指   
+VAR String GLOBAL 首爆获奖：水域靴子   
+VAR String GLOBAL 首爆获奖：水域腰带   
+VAR String GLOBAL 首爆获奖：玄冥道袍   
+VAR String GLOBAL 首爆获奖：玄冥道甲   
+VAR String GLOBAL 首爆获奖：玄冥道刃   
+VAR String GLOBAL 首爆获奖：土域头盔   
+VAR String GLOBAL 首爆获奖：土域项链   
+VAR String GLOBAL 首爆获奖：土域手镯   
+VAR String GLOBAL 首爆获奖：土域戒指   
+VAR String GLOBAL 首爆获奖：土域靴子   
+VAR String GLOBAL 首爆获奖：土域腰带   
+VAR String GLOBAL 首爆获奖：白虎战袍[圣]   
+VAR String GLOBAL 首爆获奖：白虎战甲[圣]   
+VAR String GLOBAL 首爆获奖：天罡战刃   
+VAR String GLOBAL 首爆获奖：黄金头盔   
+VAR String GLOBAL 首爆获奖：黄金项链   
+VAR String GLOBAL 首爆获奖：黄金手镯   
+VAR String GLOBAL 首爆获奖：黄金戒指   
+VAR String GLOBAL 首爆获奖：黄金靴子   
+VAR String GLOBAL 首爆获奖：黄金腰带   
+VAR String GLOBAL 首爆获奖：朱雀法袍[圣]   
+VAR String GLOBAL 首爆获奖：朱雀法甲[圣]   
+VAR String GLOBAL 首爆获奖：贪狼法杖   
+VAR String GLOBAL 首爆获奖：精灵头盔   
+VAR String GLOBAL 首爆获奖：精灵项链   
+VAR String GLOBAL 首爆获奖：精灵手镯   
+VAR String GLOBAL 首爆获奖：精灵戒指   
+VAR String GLOBAL 首爆获奖：精灵靴子   
+VAR String GLOBAL 首爆获奖：精灵腰带   
+VAR String GLOBAL 首爆获奖：青龙道袍[圣]   
+VAR String GLOBAL 首爆获奖：青龙道甲[圣]   
+VAR String GLOBAL 首爆获奖：青罡佛尘   
+VAR String GLOBAL 首爆获奖：玄天头盔   
+VAR String GLOBAL 首爆获奖：玄天项链   
+VAR String GLOBAL 首爆获奖：玄天手镯   
+VAR String GLOBAL 首爆获奖：玄天戒指   
+VAR String GLOBAL 首爆获奖：玄天靴子   
+VAR String GLOBAL 首爆获奖：玄天腰带   
+VAR String GLOBAL 首爆获奖：恶魔战袍   
+VAR String GLOBAL 首爆获奖：恶魔战甲   
+VAR String GLOBAL 首爆获奖：鬼斩   
+VAR String GLOBAL 首爆获奖：恶魔头盔   
+VAR String GLOBAL 首爆获奖：恶魔项链   
+VAR String GLOBAL 首爆获奖：恶魔手镯   
+VAR String GLOBAL 首爆获奖：恶魔戒指   
+VAR String GLOBAL 首爆获奖：恶魔靴子   
+VAR String GLOBAL 首爆获奖：恶魔腰带   
+VAR String GLOBAL 首爆获奖：红魔法袍   
+VAR String GLOBAL 首爆获奖：红魔法甲   
+VAR String GLOBAL 首爆获奖：寒冰   
+VAR String GLOBAL 首爆获奖：红魔头盔   
+VAR String GLOBAL 首爆获奖：红魔项链   
+VAR String GLOBAL 首爆获奖：红魔手镯   
+VAR String GLOBAL 首爆获奖：红魔戒指   
+VAR String GLOBAL 首爆获奖：红魔靴子   
+VAR String GLOBAL 首爆获奖：红魔腰带   
+VAR String GLOBAL 首爆获奖：蓝魔道袍   
+VAR String GLOBAL 首爆获奖：蓝魔道甲   
+VAR String GLOBAL 首爆获奖：七彩   
+VAR String GLOBAL 首爆获奖：蓝魔头盔   
+VAR String GLOBAL 首爆获奖：蓝魔项链   
+VAR String GLOBAL 首爆获奖：蓝魔手镯   
+VAR String GLOBAL 首爆获奖：蓝魔戒指   
+VAR String GLOBAL 首爆获奖：蓝魔靴子   
+VAR String GLOBAL 首爆获奖：蓝魔腰带   
+VAR String GLOBAL 首爆获奖：龍麟圣袍   
+VAR String GLOBAL 首爆获奖：龍麟圣甲   
+VAR String GLOBAL 首爆获奖：龍麟破天   
+VAR String GLOBAL 首爆获奖：龍麟圣盔   
+VAR String GLOBAL 首爆获奖：龍麟圣链   
+VAR String GLOBAL 首爆获奖：龍麟圣镯   
+VAR String GLOBAL 首爆获奖：龍麟圣戒[麻痹]   
+VAR String GLOBAL 首爆获奖：龍麟圣戒[复活]   
+VAR String GLOBAL 首爆获奖：龍麟圣戒[护身]   
+VAR String GLOBAL 首爆获奖：龍麟圣靴   
+VAR String GLOBAL 首爆获奖：龍麟圣带   
+   
+LOADVAR GLOBAL 首爆奖金：绿寂战袍  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：绿寂战甲  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：绿玉裁决  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：浮游头盔  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：浮游项链  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：浮游手镯  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：浮游戒指  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：浮游靴子  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：浮游腰带  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：红鹰法袍  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：红鹰法甲  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：蓝灵法杖  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：梦幻头盔  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：梦幻项链  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：梦幻手镯  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：梦幻戒指  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：梦幻靴子  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：梦幻腰带  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：黄沙道袍  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：黄沙道甲  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：绿玉无极棍  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：蓝灵头盔  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：蓝灵项链  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：蓝灵手镯  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：蓝灵戒指  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：蓝灵靴子  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：蓝灵腰带  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：白虎战袍  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：白虎战甲  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：绿玉屠龙  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：藤域头盔  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：藤域项链  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：藤域手镯  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：藤域戒指  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：藤域靴子  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：藤域腰带  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：朱雀法袍  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：朱雀法甲  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：法神之仗  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：沐域头盔  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：沐域项链  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：沐域手镯  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：沐域戒指  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：沐域靴子  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：沐域腰带  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：青龙道袍  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：青龙道甲  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：天尊之扇  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：道域头盔  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：道域项链  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：道域手镯  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：道域戒指  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：道域靴子  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：道域腰带  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：帝王战袍  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：帝王战甲  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：帝王战刃  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：铜域头盔  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：铜域项链  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：铜域手镯  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：铜域戒指  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：铜域靴子  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：铜域腰带  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：幽灵法袍  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：幽灵法甲  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：幽灵法杖  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：水域头盔  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：水域项链  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：水域手镯  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：水域戒指  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：水域靴子  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：水域腰带  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：玄冥道袍  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：玄冥道甲  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：玄冥道刃  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：土域头盔  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：土域项链  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：土域手镯  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：土域戒指  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：土域靴子  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：土域腰带  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：白虎战袍[圣]  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：白虎战甲[圣]  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：天罡战刃  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：黄金头盔  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：黄金项链  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：黄金手镯  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：黄金戒指  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：黄金靴子  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：黄金腰带  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：朱雀法袍[圣]  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：朱雀法甲[圣]  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：贪狼法杖  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：精灵头盔  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：精灵项链  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：精灵手镯  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：精灵戒指  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：精灵靴子  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：精灵腰带  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：青龙道袍[圣]  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：青龙道甲[圣]  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：青罡佛尘  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：玄天头盔  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：玄天项链  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：玄天手镯  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：玄天戒指  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：玄天靴子  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：玄天腰带  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：恶魔战袍  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：恶魔战甲  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：鬼斩  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：恶魔头盔  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：恶魔项链  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：恶魔手镯  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：恶魔戒指  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：恶魔靴子  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：恶魔腰带  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：红魔法袍  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：红魔法甲  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：寒冰  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：红魔头盔  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：红魔项链  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：红魔手镯  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：红魔戒指  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：红魔靴子  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：红魔腰带  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：蓝魔道袍  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：蓝魔道甲  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：七彩  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：蓝魔头盔  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：蓝魔项链  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：蓝魔手镯  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：蓝魔戒指  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：蓝魔靴子  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：蓝魔腰带  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：龍麟圣袍  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：龍麟圣甲  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：龍麟破天  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：龍麟圣盔  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：龍麟圣链  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：龍麟圣镯  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：龍麟圣戒[麻痹]  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：龍麟圣戒[复活]  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：龍麟圣戒[护身]  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：龍麟圣靴  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆奖金：龍麟圣带  ..\QuestDiary\列表文件\首爆装备变量.txt   
+   
+LOADVAR GLOBAL 首爆获奖：绿寂战袍  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：绿寂战甲  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：绿玉裁决  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：浮游头盔  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：浮游项链  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：浮游手镯  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：浮游戒指  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：浮游靴子  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：浮游腰带  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：红鹰法袍  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：红鹰法甲  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：蓝灵法杖  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：梦幻头盔  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：梦幻项链  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：梦幻手镯  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：梦幻戒指  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：梦幻靴子  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：梦幻腰带  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：黄沙道袍  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：黄沙道甲  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：绿玉无极棍  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：蓝灵头盔  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：蓝灵项链  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：蓝灵手镯  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：蓝灵戒指  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：蓝灵靴子  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：蓝灵腰带  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：白虎战袍  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：白虎战甲  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：绿玉屠龙  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：藤域头盔  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：藤域项链  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：藤域手镯  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：藤域戒指  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：藤域靴子  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：藤域腰带  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：朱雀法袍  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：朱雀法甲  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：法神之仗  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：沐域头盔  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：沐域项链  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：沐域手镯  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：沐域戒指  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：沐域靴子  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：沐域腰带  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：青龙道袍  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：青龙道甲  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：天尊之扇  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：道域头盔  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：道域项链  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：道域手镯  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：道域戒指  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：道域靴子  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：道域腰带  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：帝王战袍  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：帝王战甲  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：帝王战刃  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：铜域头盔  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：铜域项链  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：铜域手镯  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：铜域戒指  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：铜域靴子  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：铜域腰带  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：幽灵法袍  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：幽灵法甲  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：幽灵法杖  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：水域头盔  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：水域项链  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：水域手镯  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：水域戒指  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：水域靴子  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：水域腰带  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：玄冥道袍  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：玄冥道甲  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：玄冥道刃  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：土域头盔  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：土域项链  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：土域手镯  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：土域戒指  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：土域靴子  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：土域腰带  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：白虎战袍[圣]  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：白虎战甲[圣]  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：天罡战刃  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：黄金头盔  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：黄金项链  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：黄金手镯  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：黄金戒指  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：黄金靴子  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：黄金腰带  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：朱雀法袍[圣]  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：朱雀法甲[圣]  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：贪狼法杖  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：精灵头盔  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：精灵项链  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：精灵手镯  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：精灵戒指  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：精灵靴子  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：精灵腰带  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：青龙道袍[圣]  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：青龙道甲[圣]  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：青罡佛尘  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：玄天头盔  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：玄天项链  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：玄天手镯  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：玄天戒指  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：玄天靴子  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：玄天腰带  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：恶魔战袍  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：恶魔战甲  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：鬼斩  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：恶魔头盔  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：恶魔项链  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：恶魔手镯  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：恶魔戒指  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：恶魔靴子  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：恶魔腰带  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：红魔法袍  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：红魔法甲  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：寒冰  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：红魔头盔  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：红魔项链  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：红魔手镯  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：红魔戒指  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：红魔靴子  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：红魔腰带  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：蓝魔道袍  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：蓝魔道甲  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：七彩  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：蓝魔头盔  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：蓝魔项链  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：蓝魔手镯  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：蓝魔戒指  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：蓝魔靴子  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：蓝魔腰带  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：龍麟圣袍  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：龍麟圣甲  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：龍麟破天  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：龍麟圣盔  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：龍麟圣链  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：龍麟圣镯  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：龍麟圣戒[麻痹]  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：龍麟圣戒[复活]  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：龍麟圣戒[护身]  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：龍麟圣靴  ..\QuestDiary\列表文件\首爆装备变量.txt   
+LOADVAR GLOBAL 首爆获奖：龍麟圣带  ..\QuestDiary\列表文件\首爆装备变量.txt   
+break   
+}   
+   
+   
+   
+  
+  
+ 
+ 
+

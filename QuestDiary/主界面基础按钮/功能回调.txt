@@ -1,0 +1,60 @@
+[@QM功能回调]
+{
+;HCALL调用
+
+
+[@主界面_包满切换]
+
+#IF
+CHECKBAGSIZE 10
+#ACT
+DELBUTTON 104 9999
+BREAK
+
+
+#IF
+EQUAL <$CLIENTFLAG> 1
+#ACT
+MOV S$主界面UI <Effect|x=-99.0|y=-163.0|effecttype=0|effectid=9008|dir=1|speed=1|scale=1|act=0>
+ADDBUTTON 104 9999 <$str(S$主界面UI)>
+BREAK
+
+#IF
+EQUAL <$CLIENTFLAG> 2
+#ACT
+MOV S$主界面UI <Effect|x=-64.0|y=-473.0|effecttype=0|effectid=9009|dir=1|speed=1|scale=1|act=0>
+ADDBUTTON 104 9999 <$str(S$主界面UI)>
+BREAK
+
+;9006端游
+;9007手游
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

@@ -1,0 +1,432 @@
+[@main]
+#if
+small U10 36
+#ACT
+;MOV U10 37
+SENDMSG 9 【提示】请先去冰雪之境将黑色切割升满后再来找我！
+break
+
+;#act
+;MOV U10 0
+;SENDMSG 9 <$str(U10)>
+
+#if
+EQUAL U10 36
+#act
+MOV N$下阶展示 10616
+mov S$所需元宝 100000
+mov S$原切割 570
+mov S$原爆率 37%
+mov S$原血蓝 41
+mov S$原生命 370
+mov S$新切割 580
+mov S$新爆率 38%
+mov S$新血蓝 42
+mov S$新生命 380
+goto @页面展示 
+break
+
+#if
+EQUAL U10 37
+#act
+MOV N$下阶展示 10617
+mov S$所需元宝 200000
+mov S$原切割 580
+mov S$原爆率 38%
+mov S$原血蓝 42
+mov S$原生命 380
+mov S$新切割 590
+mov S$新爆率 39%
+mov S$新血蓝 43
+mov S$新生命 390
+goto @页面展示 
+break
+
+#if
+EQUAL U10 38
+#act
+MOV N$下阶展示 10618
+mov S$所需元宝 300000
+mov S$原切割 590
+mov S$原爆率 39%
+mov S$原血蓝 43
+mov S$原生命 390
+mov S$新切割 600
+mov S$新爆率 40%
+mov S$新血蓝 44
+mov S$新生命 400
+goto @页面展示 
+break
+
+#if
+EQUAL U10 39
+#act
+MOV N$下阶展示 10619
+mov S$所需元宝 400000
+mov S$原切割 600
+mov S$原爆率 40%
+mov S$原血蓝 44
+mov S$原生命 400
+mov S$新切割 610
+mov S$新爆率 41%
+mov S$新血蓝 45
+mov S$新生命 410
+goto @页面展示 
+break
+
+#if
+EQUAL U10 40
+#act
+MOV N$下阶展示 10620
+mov S$所需元宝 500000
+mov S$原切割 610
+mov S$原爆率 41%
+mov S$原血蓝 45
+mov S$原生命 410
+mov S$新切割 620
+mov S$新爆率 42%
+mov S$新血蓝 46
+mov S$新生命 420
+goto @页面展示 
+break
+
+#if
+EQUAL U10 41
+#act
+MOV N$下阶展示 10621
+mov S$所需元宝 600000
+mov S$原切割 620
+mov S$原爆率 42%
+mov S$原血蓝 46
+mov S$原生命 420
+mov S$新切割 630
+mov S$新爆率 43%
+mov S$新血蓝 47
+mov S$新生命 430
+goto @页面展示 
+break
+
+#if
+EQUAL U10 42
+#act
+MOV N$下阶展示 10622
+mov S$所需元宝 700000
+mov S$原切割 630
+mov S$原爆率 43%
+mov S$原血蓝 47
+mov S$原生命 430
+mov S$新切割 640
+mov S$新爆率 44%
+mov S$新血蓝 48
+mov S$新生命 440
+goto @页面展示 
+break
+
+#if
+EQUAL U10 43
+#act
+MOV N$下阶展示 10623
+mov S$所需元宝 800000
+mov S$原切割 640
+mov S$原爆率 44%
+mov S$原血蓝 48
+mov S$原生命 440
+mov S$新切割 650
+mov S$新爆率 45%
+mov S$新血蓝 49
+mov S$新生命 450
+goto @页面展示 
+break
+
+#if
+EQUAL U10 44
+#act
+MOV N$下阶展示 10624
+mov S$所需元宝 900000
+mov S$原切割 650
+mov S$原爆率 45%
+mov S$原血蓝 49
+mov S$原生命 450
+mov S$新切割 710
+mov S$新爆率 46%
+mov S$新血蓝 50
+mov S$新生命 460
+goto @页面展示 
+break
+
+#if
+LARGE U10 44
+#ACT
+goto @升级完成页面
+
+[@页面展示]
+#IF
+#say
+<Img|a=4|x=450.0|y=273.0|width=950|height=593|bg=1|loadDelay=0|reset=1|img=npc/hsqg/bj.png|esc=1|show=4|move=1>
+<Button|x=845.0|y=14.0|mimg=public/close-2.png|nimg=public/close-2.png|link=@exit>
+<Img|x=140.0|y=110.0|width=60|height=60|bg=0|move=0|esc=1|show=4|reset=1|img=npc/hsqg/kuang.png|loadDelay=0>
+<Img|x=355.0|y=110.0|width=60|height=60|bg=0|move=0|esc=1|show=4|reset=1|img=npc/hsqg/kuang.png|loadDelay=0>
+<Effect|x=642.0|y=205.0|scale=0.8|speed=5|act=0|effectid=70200|effecttype=0|dir=5>
+<Button|x=215.0|y=464.0|width=140|height=42|nimg=npc/hsqg/btn.png|mimg=npc/hsqg/btn.png|link=@升级>
+<Text|x=120.0|y=360.0|size=14|outline=1|color=249|text=升级条件>
+<Text|x=120.0|y=388.0|size=14|outline=1|color=246|text=1、请将需要升级的"黑切"佩戴在身上>
+<RText|x=119.0|y=416.0|size=14|outline=1|color=246|text=2、当前升级需要元宝<$str(S$所需元宝)>>
+
+<RText|x=215.0|y=191.0|size=14|outline=1|color=250|text=<$str(S$原切割)>>
+<RText|x=216.0|y=220.0|size=14|outline=1|color=250|text=<$str(S$原爆率)>>
+<RText|x=217.0|y=250.0|size=14|outline=1|color=250|text=<$str(S$原血蓝)>>
+<RText|x=217.0|y=280.0|size=14|outline=1|color=250|text=<$str(S$原生命)>>
+
+<RText|x=427.0|y=191.0|size=14|outline=1|color=250|text=<$str(S$新切割)>>
+<RText|x=427.0|y=220.0|size=14|outline=1|color=250|text=<$str(S$新爆率)>>
+<RText|x=428.0|y=250.0|size=14|outline=1|color=250|text=<$str(S$新血蓝)>>
+<RText|x=428.0|y=280.0|size=14|outline=1|color=250|text=<$str(S$新生命)>>
+<EquipShow|x=136.0|y=107.0|width=60|height=60|index=78|showtips=1|reload=1>
+<ItemShow|x=352.0|y=108.0|width=60|height=60|itemid=<$str(N$下阶展示)>|itemcount=1|bgtype=0|showtips=1>
+
+[@升级完成页面]
+#IF
+#say
+<Img|a=4|x=450.0|y=273.0|width=950|height=593|loadDelay=0|bg=1|esc=1|show=4|reset=1|img=npc/hsqg/bj1.png|move=1>
+<Button|x=845.0|y=14.0|mimg=public/close-2.png|nimg=public/close-2.png|link=@exit>
+<Effect|x=642.0|y=205.0|scale=0.8|speed=5|act=0|effecttype=0|dir=5|effectid=70200>
+<RText|x=144.0|y=277.0|size=18|outline=2|color=255|text=本大陆的黑色切割已经升级完成>
+
+
+
+
+[@升级]
+#if
+EQUAL U10 36
+#ACT
+goto @升级38
+break
+
+#if
+EQUAL U10 37
+#ACT
+goto @升级39
+break
+
+#if
+EQUAL U10 38
+#ACT
+goto @升级40
+break
+
+#if
+EQUAL U10 39
+#ACT
+goto @升级41
+break
+
+#if
+EQUAL U10 40
+#ACT
+goto @升级42
+break
+
+#if
+EQUAL U10 41
+#ACT
+goto @升级43
+break
+
+#if
+EQUAL U10 42
+#ACT
+goto @升级44
+break
+
+#if
+EQUAL U10 43
+#ACT
+goto @升级45
+break
+
+#if
+EQUAL U10 44
+#ACT
+goto @升级46
+break
+
+#if
+EQUAL U10 45
+#ACT
+goto @升级47
+break
+
+
+[@升级38]
+#if
+CHECKBINDMONEY 绑定元宝 ? 100000
+#act
+mov U10 37
+CHANGEBINDMONEY 绑定元宝 100000
+takeW 黑色切割[五重Lv.1] 1
+give 黑色切割[五重Lv.2] 1
+TakeOn 黑色切割[五重Lv.2] 78
+goto @main
+goto @判断是否有斩龙
+#elseact
+sendmsg 9 抱歉，你的元宝数量不够！
+
+[@升级39]
+#if
+CHECKBINDMONEY 绑定元宝 ? 200000
+#act
+mov U10 38
+CHANGEBINDMONEY 绑定元宝 200000
+takeW 黑色切割[五重Lv.2] 1
+give 黑色切割[五重Lv.3] 1
+TakeOn 黑色切割[五重Lv.3] 78
+goto @main
+goto @判断是否有斩龙
+#elseact
+sendmsg 9 抱歉，你的元宝数量不够！
+
+[@升级40]
+#if
+CHECKBINDMONEY 绑定元宝 ? 300000
+#act
+mov U10 39
+CHANGEBINDMONEY 绑定元宝 300000
+takeW 黑色切割[五重Lv.3] 1
+give 黑色切割[五重Lv.4] 1
+TakeOn 黑色切割[五重Lv.4] 78
+goto @main
+goto @判断是否有斩龙
+#elseact
+sendmsg 9 抱歉，你的元宝数量不够！
+
+[@升级41]
+#if
+CHECKBINDMONEY 绑定元宝 ? 400000
+#act
+mov U10 40
+CHANGEBINDMONEY 绑定元宝 400000
+takeW 黑色切割[五重Lv.4] 1
+give 黑色切割[五重Lv.5] 1
+TakeOn 黑色切割[五重Lv.5] 78
+goto @main
+goto @判断是否有斩龙
+#elseact
+sendmsg 9 抱歉，你的元宝数量不够！
+
+[@升级42]
+#if
+CHECKBINDMONEY 绑定元宝 ? 500000
+#act
+mov U10 41
+CHANGEBINDMONEY 绑定元宝 500000
+takeW 黑色切割[五重Lv.5] 1
+give 黑色切割[五重Lv.6] 1
+TakeOn 黑色切割[五重Lv.6] 78
+goto @main
+goto @判断是否有斩龙
+#elseact
+sendmsg 9 抱歉，你的元宝数量不够！
+
+[@升级43]
+#if
+CHECKBINDMONEY 绑定元宝 ? 600000
+#act
+mov U10 42
+CHANGEBINDMONEY 绑定元宝 600000
+takeW 黑色切割[五重Lv.6] 1
+give 黑色切割[五重Lv.7] 1
+TakeOn 黑色切割[五重Lv.7] 78
+goto @main
+goto @判断是否有斩龙
+#elseact
+sendmsg 9 抱歉，你的元宝数量不够！
+
+[@升级44]
+#if
+CHECKBINDMONEY 绑定元宝 ? 700000
+#act
+mov U10 43
+CHANGEBINDMONEY 绑定元宝 700000
+takeW 黑色切割[五重Lv.7] 1
+give 黑色切割[五重Lv.8] 1
+TakeOn 黑色切割[五重Lv.8] 78
+goto @main
+goto @判断是否有斩龙
+#elseact
+sendmsg 9 抱歉，你的元宝数量不够！
+
+[@升级45]
+#if
+CHECKBINDMONEY 绑定元宝 ? 800000
+#act
+mov U10 44
+CHANGEBINDMONEY 绑定元宝 800000
+takeW 黑色切割[五重Lv.8] 1
+give 黑色切割[五重Lv.9] 1
+TakeOn 黑色切割[五重Lv.9] 78
+goto @main
+goto @判断是否有斩龙
+#elseact
+sendmsg 9 抱歉，你的元宝数量不够！
+
+[@升级46]
+#if
+CHECKBINDMONEY 绑定元宝 ? 900000
+#act
+mov U10 45
+CHANGEBINDMONEY 绑定元宝 900000
+takeW 黑色切割[五重Lv.9] 1
+give 黑色切割[六重Lv.1] 1
+TakeOn 黑色切割[六重Lv.1] 78
+set [75] 1
+goto @main
+goto @判断是否有斩龙
+#CALL [\任务系统\任务系统QF.txt] @任务系统QF
+#elseact
+sendmsg 9 抱歉，你的元宝数量不够！
+
+[@判断是否有斩龙]
+#if
+equal U160 0
+#act
+CHANGECUSTOMITEMTEXT 78 斩击：高于95%BOSS斩击血量20% 0
+CHANGECUSTOMITEMTEXTCOLOR 78 56 0
+
+CHANGECUSTOMITEMTEXT 78 未激活 1
+CHANGECUSTOMITEMTEXTCOLOR 78 10 1
+
+#if
+large U160 0
+equal U162 0
+#act
+CHANGECUSTOMITEMTEXT 78 斩击：高于95%BOSS斩击血量30% 0
+CHANGECUSTOMITEMTEXTCOLOR 78 56 0
+
+CHANGECUSTOMITEMTEXT 78 未激活 1
+CHANGECUSTOMITEMTEXTCOLOR 78 10 1
+
+
+#if
+large U160 0
+large U162 0
+#act
+CHANGECUSTOMITEMTEXT 78 斩击：高于95%BOSS斩击血量30% 0
+CHANGECUSTOMITEMTEXTCOLOR 78 56 0
+
+CHANGECUSTOMITEMTEXT 78 已激活 1
+CHANGECUSTOMITEMTEXTCOLOR 78 250 1
+
+#if
+equal U164 0
+#act
+CHANGECUSTOMITEMTEXT 78 斩杀：低于10%血量BOSS进行斩杀 2
+CHANGECUSTOMITEMTEXTCOLOR 78 56 2
+
+CHANGECUSTOMITEMTEXT 78 状态：未激活 3
+CHANGECUSTOMITEMTEXTCOLOR 78 10 3
+#elseact
+CHANGECUSTOMITEMTEXT 78 斩杀：低于10%血量BOSS进行斩杀 2
+CHANGECUSTOMITEMTEXTCOLOR 78 56 2
+
+CHANGECUSTOMITEMTEXT 78 状态：已激活 3
+CHANGECUSTOMITEMTEXTCOLOR 78 250 3

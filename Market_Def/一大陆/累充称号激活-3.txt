@@ -1,0 +1,67 @@
+[@main]
+
+
+#IF
+#ACT
+newpicktask <$STR(U7)>
+GOTO @累充称号页面
+
+[@累充称号页面]
+#IF
+#say
+<Button|x=-2526.0|y=-1172.0|width=115120|height=112880|color=224|nimg=npc/zd.png|pimg=npc/zd.png|mimg=npc/zd.png|size=18|link=@exit>
+<Img|a=4|children={0,1,2,3,4,5}|x=479.0|y=284.0|width=980|height=594|show=4|move=0|loadDelay=0|esc=1|reset=1|img=npc/chjh/bj.png|bg=1>
+<Button|id=0|x=820.0|y=115.0|mimg=public/close-t.png|nimg=public/close-t.png|link=@exit>
+
+<Img|id=1|a=4|children={a,aa}|x=550.5|y=281.5|show=4|loadDelay=0|img=npc/chjh/yy.png|reset=1|move=0|esc=1>
+<Text|id=a|x=9|y=11|color=255|outline=2|size=14|text=累计击杀龙龟：>
+<Text|id=aa|x=105|y=11|color=251|outline=2|size=14|text=<$STR(U90)>只>
+<Img|id=2|a=4|children={b,bb}|x=713.5|y=281.5|show=4|loadDelay=0|img=npc/chjh/yy.png|reset=1|move=0|esc=1>
+<Text|id=b|x=9|y=11|color=255|outline=2|size=14|text=累计击杀BOSS：>
+<Text|id=bb|x=106|y=11|color=251|outline=2|size=14|text=<$STR(U91)>只>
+<Img|id=3|a=4|children={c,cc}|x=550.5|y=444.5|show=4|loadDelay=0|img=npc/chjh/yy.png|reset=1|move=0|esc=1>
+<Text|id=c|x=9|y=11|color=255|outline=2|size=14|text=累计充值金额：>
+<Text|id=cc|x=105|y=11|color=250|outline=2|size=14|text=$STM(MONEY_充值点)元>
+
+
+
+<Button|id=4|x=826.0|y=189.0|mimg=npc/chjh/2.png|nimg=npc/chjh/2.png|link=@任务激活称号>
+<Button|id=5|x=826.0|y=353.0|mimg=npc/chjh/1.png|nimg=npc/chjh/1.png|link=@金额激活称号>
+
+
+
+[@任务激活称号]
+#if
+CHECKTITLE 君临天下
+#act
+sendmsg 9 您已经拥有该称号了了，无需重复激活！
+break
+
+#if
+large U90 49
+large U91 299
+#act
+CONFERTITLE 君临天下
+
+sendmsg 9 激活成功！
+close
+#elseact
+sendmsg 9 条件未满足,无法激活！
+
+[@金额激活称号]
+#if
+CHECKTITLE 君临天下
+#act
+sendmsg 9 您已经拥有该称号了了，无需重复激活！
+break
+
+#if
+CHECKMONEY 充值点 > 1999
+NOT CHECKTITLE 君临天下
+#act
+CONFERTITLE 君临天下
+SetIcon 0 1 15725 -98 -68 0 0
+sendmsg 9 激活成功！
+close
+#elseact
+sendmsg 9 您的充值金额未达标,无法激活！

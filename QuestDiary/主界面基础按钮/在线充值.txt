@@ -1,0 +1,428 @@
+[@在线充值界面]
+{
+#IF
+#ACT
+
+MOV S$微信 
+MOV S$支付宝 <Img|x=891|y=555|img=private/powerful_secret/bg_czzya_05_1.png|esc=0>
+MOV S$花呗
+MOV N$充值渠道 1
+GOTO @充值主界面
+
+
+[@充值主界面]
+#if
+#ACT
+goto @首次充值检测
+#say
+
+<Button|x=-2526.0|y=-1172.0|width=115120|height=112880|color=224|pimg=npc/zd.png|nimg=npc/zd.png|mimg=npc/zd.png|size=18|link=@exit>
+<Img|children={3,4,5,6,aaa}|ay=1|x=6.0|y=-10.0|width=1150|height=640|img=topbtn/zxcz/bj.png|show=4|bg=1|loadDelay=0|reset=1|move=0|esc=1>
+<ListView|id=aaa|children={1,2,333}|x=75|y=130.0|width=1000|height=420|margin=0|bounce=0|direction=1|cantouch=1>
+<Button|x=1088.0|y=23.0|nimg=public/close-2.png|mimg=public/close-2.png|link=@exit>
+<Layout|id=1|children={1a,2a,3a,4a}|x=0.0|y=0.0|width=1000|height=210.0>
+
+<Img|id=1a|children={1b,1001,1002,1003,1004,1005,1006,1007,1008,1009,1010,1011,1012}|x=14.0|y=0|width=230|height=210|move=0|show=4|reset=1|img=topbtn/zxcz/kuang.png|loadDelay=0>
+<Button|id=1b|percentx=27.4|percenty=79.5|nimg=public/queding.png|mimg=public/queding.png|link=@充值10>
+<Img|id=1001|x=68.0|y=6.0|show=4|esc=1|loadDelay=0|img=topbtn/zxcz/1.png|move=0|reset=1>
+<Img|id=1002|x=91.0|y=103.0|esc=0|img=public/60.png>
+<$STR(S$领取1)>
+
+
+
+<Img|id=1008|x=2.0|y=111.0|show=4|esc=1|loadDelay=0|reset=1|move=0|img=topbtn/zxcz/sz.png>
+<Img|id=1009|x=-8.0|y=-17.0|width=70|height=69|esc=1|loadDelay=0|img=topbtn/zxcz/cz.png|show=4|move=0|reset=1>
+<Text|id=1010|a=4|x=25|y=22|percentx=50|percenty=35.2|color=251|outline=1|size=14|text=获得点卷100，元宝5万>
+<Img|id=1011|x=2.0|y=88.0|width=225|height=2|esc=1|loadDelay=0|img=topbtn/zxcz/heitiao.png|show=4|move=0|reset=1>
+<Img|id=1012|x=3.0|y=157.0|width=225|height=2|esc=1|loadDelay=0|img=topbtn/zxcz/heitiao.png|show=4|move=0|reset=1>
+
+
+
+
+<Img|id=2a|children={2b,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013}|x=267.0|y=0.0|width=230|height=210|move=0|show=4|reset=1|img=topbtn/zxcz/kuang.png|loadDelay=0>
+<Button|id=2b|percentx=27.4|percenty=79.5|nimg=public/queding.png|mimg=public/queding.png|link=@充值28>
+<Img|id=2001|x=68.0|y=6.0|show=4|esc=1|loadDelay=0|img=topbtn/zxcz/12.png|move=0|reset=1>
+
+
+<$STR(S$领取2)>
+<Img|id=2008|x=2.0|y=111.0|show=4|esc=1|loadDelay=0|reset=1|move=0|img=topbtn/zxcz/sz.png>
+<Img|id=2009|x=-8.0|y=-17.0|width=70|height=69|esc=1|loadDelay=0|img=topbtn/zxcz/cz.png|show=4|move=0|reset=1>
+<Text|id=2010|a=4|x=25|y=22|percentx=50|percenty=35.2|color=251|outline=1|size=14|text=获得点卷280，元宝14万>
+<Img|id=2011|x=2.0|y=88.0|width=225|height=2|esc=1|loadDelay=0|img=topbtn/zxcz/heitiao.png|show=4|move=0|reset=1>
+<Img|id=2012|x=3.0|y=157.0|width=225|height=2|esc=1|loadDelay=0|img=topbtn/zxcz/heitiao.png|show=4|move=0|reset=1>
+
+
+
+
+
+
+<Img|id=3a|children={3b,3001,3002,3003,3004,3005,3006,3007,3008,3009,3010,3011,3012,3013}|x=513.0|y=0.0|width=230|height=210|move=0|show=4|reset=1|img=topbtn/zxcz/kuang.png|loadDelay=0>
+<Button|id=3b|percentx=27.4|percenty=79.5|nimg=public/queding.png|mimg=public/queding.png|link=@充值88>
+<Img|id=3001|x=68.0|y=6.0|show=4|esc=1|loadDelay=0|img=topbtn/zxcz/13.png|move=0|reset=1>
+<$STR(S$领取3)>
+<Img|id=3008|x=2.0|y=111.0|show=4|esc=1|loadDelay=0|reset=1|move=0|img=topbtn/zxcz/sz.png>
+<Img|id=3009|x=-8.0|y=-17.0|width=70|height=69|esc=1|loadDelay=0|img=topbtn/zxcz/cz.png|show=4|move=0|reset=1>
+<Text|id=3010|a=4|x=25|y=20|percentx=50|percenty=35.2|color=251|outline=1|size=14|text=获得点卷880，元宝44万>
+<Img|id=3011|x=2.0|y=88.0|width=225|height=2|esc=1|loadDelay=0|img=topbtn/zxcz/heitiao.png|show=4|move=0|reset=1>
+<Img|id=3012|x=3.0|y=157.0|width=225|height=2|esc=1|loadDelay=0|img=topbtn/zxcz/heitiao.png|show=4|move=0|reset=1>
+
+
+<Img|id=4a|children={4b,4001,4002,4003,4004,4005,4006,4007,4008,4009,4010,4011,4012,4013}|x=759.0|y=0|width=230|height=210|move=0|show=4|reset=1|img=topbtn/zxcz/kuang.png|loadDelay=0>
+<Button|id=4b|percentx=27.4|percenty=79.5|nimg=public/queding.png|mimg=public/queding.png|link=@充值198>
+<Img|id=4001|x=68.0|y=6.0|show=4|esc=1|loadDelay=0|img=topbtn/zxcz/4.png|move=0|reset=1>
+<$STR(S$领取4)>
+<Img|id=4008|x=2.0|y=111.0|show=4|esc=1|loadDelay=0|reset=1|move=0|img=topbtn/zxcz/sz.png>
+<Img|id=4009|x=-8.0|y=-17.0|width=70|height=69|esc=1|loadDelay=0|img=topbtn/zxcz/cz.png|show=4|move=0|reset=1>
+<Text|id=4010|a=4|x=25|y=22|percentx=50|percenty=35.2|color=251|outline=1|size=14|text=获得点卷1980，元宝99万>
+<Img|id=4011|x=2.0|y=88.0|width=225|height=2|esc=1|loadDelay=0|img=topbtn/zxcz/heitiao.png|show=4|move=0|reset=1>
+<Img|id=4012|x=3.0|y=157.0|width=225|height=2|esc=1|loadDelay=0|img=topbtn/zxcz/heitiao.png|show=4|move=0|reset=1>
+
+
+
+
+<Layout|id=2|children={5a,6a,11a,12a}|x=75.0|y=343.0|width=750|height=210.0>
+
+
+
+
+
+
+
+<Img|id=5a|children={5b,5001,5002,5003,5004,5005,5006,5007,5008,5009,5010,5011,5012,5013}|x=14.0|y=0.0|width=230|height=210|move=0|show=4|reset=1|img=topbtn/zxcz/kuang.png|loadDelay=0>
+<Button|id=5b|percentx=27.4|percenty=79.5|nimg=public/queding.png|mimg=public/queding.png|link=@充值328>
+<Img|id=5001|x=68.0|y=6.0|show=4|esc=1|loadDelay=0|img=topbtn/zxcz/5.png|move=0|reset=1>
+
+<Img|id=5008|x=2.0|y=111.0|show=4|esc=1|loadDelay=0|reset=1|move=0|img=topbtn/zxcz/sz.png>
+<Img|id=5009|x=-8.0|y=-17.0|width=70|height=69|esc=1|loadDelay=0|img=topbtn/zxcz/cz.png|show=4|move=0|reset=1>
+<Text|id=5010|a=4|x=25|y=22|percentx=50|percenty=35.2|color=251|outline=1|size=14|text=获得点卷3280，元宝164万>
+<Img|id=5011|x=3.0|y=88.0|width=225|height=2|esc=1|loadDelay=0|img=topbtn/zxcz/heitiao.png|show=4|move=0|reset=1>
+<Img|id=5012|x=3.0|y=157.0|width=225|height=2|esc=1|loadDelay=0|img=topbtn/zxcz/heitiao.png|show=4|move=0|reset=1>
+<$STR(S$领取5)>
+
+
+
+
+<Img|id=6a|children={6b,6001,6002,6003,6004,6005,6006,6007,6008,6009,6010,6011,6012,6013}|x=267.0|y=0.0|width=230|height=210|move=0|show=4|reset=1|img=topbtn/zxcz/kuang.png|loadDelay=0>
+<Button|id=6b|percentx=27.4|percenty=79.5|nimg=public/queding.png|mimg=public/queding.png|link=@充值648>
+<Img|id=6001|x=68.0|y=6.0|show=4|esc=1|loadDelay=0|img=topbtn/zxcz/6.png|move=0|reset=1>
+<$STR(S$领取6)>
+<Img|id=6008|x=2.0|y=111.0|show=4|esc=1|loadDelay=0|reset=1|move=0|img=topbtn/zxcz/sz.png>
+<Img|id=6009|x=-8.0|y=-17.0|width=70|height=69|esc=1|loadDelay=0|img=topbtn/zxcz/cz.png|show=4|move=0|reset=1>
+<Text|id=6010|a=4|x=25|y=22|percentx=50|percenty=35.2|color=251|outline=1|size=14|text=获得点卷6480，元宝324万>
+<Img|id=6011|x=2.0|y=88.0|width=225|height=2|esc=1|loadDelay=0|img=topbtn/zxcz/heitiao.png|show=4|move=0|reset=1>
+<Img|id=6012|x=3.0|y=157.0|width=225|height=2|esc=1|loadDelay=0|img=topbtn/zxcz/heitiao.png|show=4|move=0|reset=1>
+
+
+<Img|id=11a|children={11b,11001,11002,11003,11004,11005,11006,11007,11008,11009,11010,11011,11012,11013}|x=513.0|y=0|width=230|height=210|move=0|show=4|reset=1|img=topbtn/zxcz/kuang.png|loadDelay=0>
+<Button|id=11b|percentx=27.4|percenty=79.5|nimg=public/queding.png|mimg=public/queding.png|link=@充值1000>
+<Img|id=11001|x=68.0|y=6.0|show=4|esc=1|loadDelay=0|img=topbtn/zxcz/7.png|move=0|reset=1>
+
+<$STR(S$领取7)>
+
+
+
+<Img|id=11008|x=2.0|y=111.0|show=4|esc=1|loadDelay=0|reset=1|move=0|img=topbtn/zxcz/sz.png>
+<Img|id=11009|x=-8.0|y=-17.0|width=70|height=69|esc=1|loadDelay=0|img=topbtn/zxcz/cz.png|show=4|move=0|reset=1>
+<Text|id=11010|a=4|x=25|y=22|percentx=50|percenty=35.2|color=251|outline=1|size=14|text=获得点卷10000，元宝500万>
+<Img|id=11011|x=2.0|y=88.0|width=225|height=2|esc=1|loadDelay=0|img=topbtn/zxcz/heitiao.png|show=4|move=0|reset=1>
+<Img|id=11012|x=3.0|y=157.0|width=225|height=2|esc=1|loadDelay=0|img=topbtn/zxcz/heitiao.png|show=4|move=0|reset=1>
+
+
+;
+
+<Img|id=12a|children={12b,12001,12002,12003,12004,12005,12006,12007,12008,12009,12010,12011,12012,12013}|x=759.0|y=0|width=230|height=210|move=0|show=4|reset=1|img=topbtn/zxcz/kuang.png|loadDelay=0>
+<Button|id=12b|percentx=27.4|percenty=79.5|nimg=public/queding.png|mimg=public/queding.png|link=@充值1998>
+<Img|id=12001|x=68.0|y=6.0|show=4|esc=1|loadDelay=0|img=topbtn/zxcz/8.png|move=0|reset=1>
+
+
+<$STR(S$领取8)>
+
+
+<Img|id=12008|x=2.0|y=111.0|show=4|esc=1|loadDelay=0|reset=1|move=0|img=topbtn/zxcz/sz.png>
+<Img|id=12009|x=-8.0|y=-17.0|width=70|height=69|esc=1|loadDelay=0|img=topbtn/zxcz/cz.png|show=4|move=0|reset=1>
+<Text|id=12010|a=4|x=25|y=22|percentx=50|percenty=35.2|color=251|outline=1|size=14|text=获得点卷19800，元宝1000万>
+<Img|id=12011|x=2.0|y=88.0|width=225|height=2|esc=1|loadDelay=0|img=topbtn/zxcz/heitiao.png|show=4|move=0|reset=1>
+<Img|id=12012|x=3.0|y=157.0|width=225|height=2|esc=1|loadDelay=0|img=topbtn/zxcz/heitiao.png|show=4|move=0|reset=1>
+
+
+
+
+<Img|id=3|x=88.0|y=555.0|show=4|img=topbtn/zxcz/txt.png|loadDelay=0|reset=1|move=0|esc=1>
+<Img|id=4|x=236.0|y=574.0|width=120|height=22|show=4|esc=1|move=0|reset=1|loadDelay=0|img=topbtn/zxcz/1900015004.png>
+<Input|id=5|x=236|y=574|width=120|height=22|type=1|placecolor=246|size=16|inputid=2|color=255|place=请输入金额|errortips=请输入充值金额|maxcount=5|mincount=2>
+<Button|id=6|x=366|y=561|width=99|height=43|nimg=topbtn/zxcz/btn.png|mimg=topbtn/zxcz/btn.png|submitInput=2|link=@确认充值>
+
+
+<Text|x=264.0|y=82.0|outline=2|color=150|size=16|text=1元等于10点卷/5000元宝，奖励仅能通过充值对应档位获得>
+<Text|x=927.0|y=82.0|outline=2|color=150|size=16|text=累充：$STM(MONEY_充值点)元>
+
+
+<Button|x=695.0|y=555.0|nimg=private/powerful_secret/bg_czzya_04.png|size=18|color=255|pimg=private/powerful_secret/bg_czzya_04.png|mimg=private/powerful_secret/bg_czzya_04.png|link=@微信>
+<Button|x=824.0|y=555.0|nimg=private/powerful_secret/bg_czzya_05.png|size=18|color=255|pimg=private/powerful_secret/bg_czzya_05.png|mimg=private/powerful_secret/bg_czzya_05.png|link=@支付宝>
+<Button|x=958.0|y=555.0|nimg=private/powerful_secret/bg_czzya_06.png|size=18|color=255|pimg=private/powerful_secret/bg_czzya_06.png|mimg=private/powerful_secret/bg_czzya_06.png|link=@花呗>
+
+<$STR(S$微信)>
+<$STR(S$支付宝)>
+<$STR(S$花呗)>
+
+
+[@首次充值检测]
+#if
+CHECKJOB Warrior
+#act
+mov S$职业技能书 20117
+
+#if
+CHECKJOB Wizard
+#act
+mov S$职业技能书 20097
+
+#if
+CHECKJOB Taoist
+#act
+mov S$职业技能书 20112
+
+#if
+check [150] 0
+#act
+mov S$领取1 <Img|id=1002|x=55.0|y=97.0|show=4|esc=1|loadDelay=0|img=topbtn/zxcz/kuang1.png|move=0|reset=1>
+INC S$领取1 <ItemShow|id=1003|x=49.0|y=90.0|width=40|height=40|itemid=1|itemcount=100000|bgtype=0|showtips=1>
+INC S$领取1 <Img|id=1004|x=112.0|y=96.0|show=4|esc=1|loadDelay=0|img=topbtn/zxcz/kuang1.png|move=0|reset=1>
+INC S$领取1 <ItemShow|id=1005|x=106.0|y=89.0|width=40|height=40|itemid=3|itemcount=1000|bgtype=0|showtips=1>
+INC S$领取1 <Img|id=1006|x=169.0|y=96.0|show=4|esc=1|loadDelay=0|img=topbtn/zxcz/kuang1.png|move=0|reset=1>
+INC S$领取1 <ItemShow|id=1007|x=164.0|y=89.0|width=40|height=40|itemid=20176|itemcount=2|bgtype=0|showtips=1>
+
+
+#if
+check [151] 0
+#act
+mov S$领取2 <Img|id=2002|x=55.0|y=97.0|show=4|esc=1|loadDelay=0|img=topbtn/zxcz/kuang1.png|move=0|reset=1>
+inc S$领取2 <ItemShow|id=2003|x=49.0|y=90.0|width=40|height=40|itemid=1|itemcount=300000|bgtype=0|showtips=1>
+inc S$领取2 <Img|id=2004|x=112.0|y=96.0|show=4|esc=1|loadDelay=0|img=topbtn/zxcz/kuang1.png|move=0|reset=1>
+inc S$领取2 <ItemShow|id=2005|x=106.0|y=89.0|width=40|height=40|itemid=20223|itemcount=1|bgtype=0|showtips=1>
+inc S$领取2 <Img|id=2006|x=169.0|y=96.0|show=4|esc=1|loadDelay=0|img=topbtn/zxcz/kuang1.png|move=0|reset=1>
+inc S$领取2 <ItemShow|id=2007|x=164.0|y=89.0|width=40|height=40|itemid=20196|itemcount=1|bgtype=0|showtips=1>
+inc S$领取2 <Effect|id=2013|x=195|y=121|scale=1|speed=2|dir=5|effectid=34008|act=0|effecttype=0>
+
+#if
+check [152] 0
+#act
+mov S$领取3 <Img|id=3002|x=55.0|y=97.0|show=4|esc=1|loadDelay=0|img=topbtn/zxcz/kuang1.png|move=0|reset=1>
+inc S$领取3 <ItemShow|id=3003|x=49.0|y=90.0|width=40|height=40|itemid=1|itemcount=980000|bgtype=0|showtips=1>
+inc S$领取3 <Img|id=3004|x=112.0|y=96.0|show=4|esc=1|loadDelay=0|img=topbtn/zxcz/kuang1.png|move=0|reset=1>
+inc S$领取3 <ItemShow|id=3005|x=106.0|y=89.0|width=40|height=40|itemid=3|itemcount=8800|bgtype=0|showtips=1>
+inc S$领取3 <Img|id=3006|x=169.0|y=96.0|show=4|esc=1|loadDelay=0|img=topbtn/zxcz/kuang1.png|move=0|reset=1>
+inc S$领取3 <ItemShow|id=3007|x=164.0|y=89.0|width=40|height=40|itemid=10318|itemcount=1|bgtype=0|showtips=1>
+inc S$领取3 <Effect|id=3013|x=195|y=121|scale=1|speed=2|dir=5|effectid=34008|act=0|effecttype=0>
+
+
+
+#if
+check [153] 0
+#act
+mov S$领取4 <Img|id=4002|x=55.0|y=97.0|show=4|esc=1|loadDelay=0|img=topbtn/zxcz/kuang1.png|move=0|reset=1>
+inc S$领取4 <ItemShow|id=4003|x=49.0|y=90.0|width=40|height=40|itemid=1|itemcount=2000000|bgtype=0|showtips=1>
+inc S$领取4 <Img|id=4004|x=112.0|y=96.0|show=4|esc=1|loadDelay=0|img=topbtn/zxcz/kuang1.png|move=0|reset=1>
+inc S$领取4 <ItemShow|id=4005|x=106.0|y=89.0|width=40|height=40|itemid=3|itemcount=19800|bgtype=0|showtips=1>
+inc S$领取4 <Img|id=4006|x=169.0|y=96.0|show=4|esc=1|loadDelay=0|img=topbtn/zxcz/kuang1.png|move=0|reset=1>
+inc S$领取4 <ItemShow|id=4007|x=164.0|y=89.0|width=40|height=40|itemid=<$STR(S$职业技能书)>|itemcount=1|bgtype=0|showtips=1>
+inc S$领取4 <Effect|id=4013|x=195|y=121|scale=1|speed=2|dir=5|effectid=34008|act=0|effecttype=0>
+
+
+#if
+check [154] 0
+#act
+mov S$领取5 <Img|id=5002|x=55.0|y=97.0|show=4|esc=1|loadDelay=0|img=topbtn/zxcz/kuang1.png|move=0|reset=1>
+inc S$领取5 <ItemShow|id=5003|x=49.0|y=90.0|width=40|height=40|itemid=1|itemcount=3300000|bgtype=0|showtips=1> 
+inc S$领取5 <Img|id=5004|x=112.0|y=96.0|show=4|esc=1|loadDelay=0|img=topbtn/zxcz/kuang1.png|move=0|reset=1>
+inc S$领取5 <ItemShow|id=5005|x=106.0|y=89.0|width=40|height=40|itemid=3|itemcount=32800|bgtype=0|showtips=1>
+inc S$领取5 <Img|id=5006|x=169.0|y=96.0|show=4|esc=1|loadDelay=0|img=topbtn/zxcz/kuang1.png|move=0|reset=1>
+inc S$领取5 <ItemShow|id=5007|x=164.0|y=89.0|width=40|height=40|itemid=10406|itemcount=1|scale=0.8|bgtype=0|showtips=1>
+inc S$领取5 <Effect|id=5013|x=195|y=121|scale=1|speed=2|dir=5|effectid=34008|act=0|effecttype=0>
+
+#if
+check [155] 0
+#act
+mov S$领取6 <Img|id=6002|x=55.0|y=97.0|show=4|esc=1|loadDelay=0|img=topbtn/zxcz/kuang1.png|move=0|reset=1>
+inc S$领取6 <ItemShow|id=6003|x=49.0|y=90.0|width=40|height=40|itemid=1|itemcount=6500000|bgtype=0|showtips=1>
+inc S$领取6 <Img|id=6004|x=112.0|y=96.0|show=4|esc=1|loadDelay=0|img=topbtn/zxcz/kuang1.png|move=0|reset=1>
+inc S$领取6 <ItemShow|id=6005|x=106.0|y=89.0|width=40|height=40|itemid=3|itemcount=64800|bgtype=0|showtips=1>
+inc S$领取6 <Img|id=6006|x=169.0|y=96.0|show=4|esc=1|loadDelay=0|img=topbtn/zxcz/kuang1.png|move=0|reset=1>
+inc S$领取6 <ItemShow|id=6007|x=164.0|y=89.0|width=40|height=40|itemid=20197|itemcount=3|bgtype=0|showtips=1>
+inc S$领取6 <Effect|id=6013|x=195|y=121|scale=1|speed=2|dir=5|effectid=34008|act=0|effecttype=0>
+
+#if
+check [157] 0
+#act
+mov S$领取7 <Img|id=11002|x=55.0|y=97.0|show=4|esc=1|loadDelay=0|img=topbtn/zxcz/kuang1.png|move=0|reset=1>
+inc S$领取7 <ItemShow|id=11003|x=49.0|y=90.0|width=40|height=40|itemid=1|itemcount=10000000|bgtype=0|showtips=1>
+inc S$领取7 <Img|id=11004|x=112.0|y=96.0|show=4|esc=1|loadDelay=0|img=topbtn/zxcz/kuang1.png|move=0|reset=1>
+inc S$领取7 <ItemShow|id=11005|x=106.0|y=89.0|width=40|height=40|itemid=3|itemcount=100000|bgtype=0|showtips=1>
+inc S$领取7 <Img|id=11006|x=169.0|y=96.0|show=4|esc=1|loadDelay=0|img=topbtn/zxcz/kuang1.png|move=0|reset=1>
+inc S$领取7 <ItemShow|id=11007|x=164.0|y=89.0|width=40|height=40|itemid=20267|itemcount=1|bgtype=0|showtips=1>
+inc S$领取7 <Effect|id=11013|x=195|y=121|scale=1|speed=2|dir=5|effectid=34008|act=0|effecttype=0>
+
+#if
+check [158] 0
+#act
+mov S$领取8 <Img|id=12002|x=55.0|y=97.0|show=4|esc=1|loadDelay=0|img=topbtn/zxcz/kuang1.png|move=0|reset=1>
+inc S$领取8 <ItemShow|id=12003|x=49.0|y=90.0|width=40|height=40|itemid=1|itemcount=20000000|bgtype=0|showtips=1>
+inc S$领取8 <Img|id=12004|x=112.0|y=96.0|show=4|esc=1|loadDelay=0|img=topbtn/zxcz/kuang1.png|move=0|reset=1>
+inc S$领取8 <ItemShow|id=12005|x=106.0|y=89.0|width=40|height=40|itemid=3|itemcount=200000|bgtype=0|showtips=1>
+inc S$领取8 <Img|id=12006|x=169.0|y=96.0|show=4|esc=1|loadDelay=0|img=topbtn/zxcz/kuang1.png|move=0|reset=1>
+inc S$领取8 <ItemShow|id=12007|x=164.0|y=89.0|width=40|height=40|itemid=20198|itemcount=2|bgtype=0|showtips=1>
+inc S$领取8 <Effect|id=12013|x=195|y=121|scale=1|speed=2|dir=5|effectid=34008|act=0|effecttype=0>
+
+#if
+check [150] 1
+#act
+mov S$领取1 <Img|id=1002|x=85.0|y=95.0|width=100|height=50|esc=0|img=public/60.png>
+
+
+#if
+check [151] 1
+#act
+mov S$领取2 <Img|id=2002|x=85.0|y=95.0|width=100|height=50|esc=0|img=public/60.png>
+
+
+#if
+check [152] 1
+#act
+mov S$领取3 <Img|id=3002|x=85.0|y=95.0|width=100|height=50|esc=0|img=public/60.png>
+
+
+#if
+check [153] 1
+#act
+mov S$领取4 <Img|id=4002|x=85.0|y=95.0|width=100|height=50|esc=0|img=public/60.png>
+
+
+#if
+check [154] 1
+#act
+mov S$领取5 <Img|id=5002|x=85.0|y=95.0|width=100|height=50|esc=0|img=public/60.png>
+
+#if
+check [155] 1
+#act
+mov S$领取6 <Img|id=6002|x=85.0|y=95.0|width=100|height=50|esc=0|img=public/60.png>
+
+#if
+check [157] 1
+#act
+mov S$领取7 <Img|id=11002|x=85.0|y=95.0|width=100|height=50|esc=0|img=public/60.png>
+
+#if
+check [158] 1
+#act
+mov S$领取8 <Img|id=12002|x=85.0|y=95.0|width=100|height=50|esc=0|img=public/60.png>
+
+
+[@确认充值]
+#IF
+SMALL <$NPCINPUT(2)> 10
+#ACT
+SENDMSG 9 最低充值金额为10元
+BREAK
+
+#IF
+LARGE <$NPCINPUT(2)> 10000
+#ACT
+SENDMSG 9 最高充值金额为10000元
+BREAK
+
+#if
+#act
+goto @确认拉起充值
+break
+
+#if
+#act
+MESSAGEBOX 　　　　请优先选择下面金额进行充值\　　　　如果自定义金额数量不等于下面金额，将导致首赠无法领取！  @确认拉起充值 @取消
+
+
+[@确认拉起充值]
+#IF
+LARGE <$NPCINPUT(2)> 9
+SMALL <$NPCINPUT(2)> 10001
+#ACT
+Pullpay <$NPCINPUT(2)> <$STR(N$充值渠道)> 2
+
+[@微信]
+#if
+#act
+MOV S$微信 <Img|x=762|y=555|img=private/powerful_secret/bg_czzya_04_1.png|esc=0>
+MOV S$支付宝
+MOV S$花呗
+MOV N$充值渠道 3
+goto @充值主界面
+
+[@支付宝]
+#if
+#act
+mov S$支付宝 <Img|x=891|y=555|img=private/powerful_secret/bg_czzya_05_1.png|esc=0>
+MOV S$微信
+MOV S$花呗
+MOV N$充值渠道 1
+goto @充值主界面
+
+[@花呗]
+#if
+#act
+mov S$花呗 <Img|x=1028|y=555|img=private/powerful_secret/bg_czzya_06_1.png|esc=0>
+MOV S$微信
+MOV S$支付宝
+MOV N$充值渠道 2
+goto @充值主界面
+
+
+
+
+[@充值10]
+#IF
+#ACT
+Pullpay 10 <$STR(N$充值渠道)> 2
+
+[@充值28]
+#IF
+#ACT
+Pullpay 28 <$STR(N$充值渠道)> 2
+
+[@充值88]
+#IF
+#ACT
+Pullpay 88 <$STR(N$充值渠道)> 2
+
+[@充值198]
+#IF
+#ACT
+Pullpay 198 <$STR(N$充值渠道)> 2
+
+[@充值328]
+#IF
+#ACT
+Pullpay 328 <$STR(N$充值渠道)> 2
+
+[@充值648]
+#IF
+#ACT
+Pullpay 648 <$STR(N$充值渠道)> 2
+
+[@充值1000]
+#IF
+#ACT
+Pullpay 1000 <$STR(N$充值渠道)> 2
+
+[@充值1998]
+#IF
+#ACT
+Pullpay 1998 <$STR(N$充值渠道)> 2
+
+
+
+
+
+
+
+
+}

@@ -1,0 +1,202 @@
+[@个人首爆奖励页面]
+{
+#if
+#act
+#CALL [\主界面基础按钮\福利大厅红点检测.txt] @福利大厅按钮
+
+#if
+#act
+NEWREADCSV ..\QuestDiary\功能表格\cfg_grsb.csv
+mov S$首爆状态展示
+Mov n$初始下标_1 0
+Mov n$初始上标_1 21
+Mov s$当前页数 1
+
+Goto @个人首爆初始
+
+[@个人首爆初始]
+#if
+#act
+While n$初始下标_1 < <$STR(n$初始上标_1)>
+Goto @执行个人首爆跳转
+inc S$首爆状态展示 <$STR(s$首爆状态_<$STR(n$初始下标_1)>)>
+EndWhile
+Goto @个人首爆展示
+
+[@执行个人首爆跳转]
+#if
+#act
+INC N$初始下标_1 1
+INC S$首爆标签 4b<$STR(n$初始下标_1)>,
+
+#IF
+#ACT
+Mov s$首爆状态_<$STR(n$初始下标_1)> <Img|id=4b<$STR(n$初始下标_1)>|children={4a<$STR(n$初始下标_1)>1,4a<$STR(n$初始下标_1)>2,4a<$STR(n$初始下标_1)>3,4a<$STR(n$初始下标_1)>4,4a<$STR(n$初始下标_1)>5,4a<$STR(n$初始下标_1)>6}|x=266.0|y=99.0|width=555||img=topbtn/fldt/kuang-2.png>
+INC s$首爆状态_<$STR(n$初始下标_1)> <Img|id=4a<$STR(n$初始下标_1)>1|x=28|y=5.0|move=0|loadDelay=0|show=4|esc=1|reset=1|img=topbtn/fldt/box.png>
+INC s$首爆状态_<$STR(n$初始下标_1)> <ItemShow|id=4a<$STR(n$初始下标_1)>2|x=28.0|y=6.0|width=70|height=70|itemid=<$cfg_grsb(<$STR(n$初始下标_1)>_1)>|itemcount=1|showtips=1|bgtype=0>
+INC s$首爆状态_<$STR(n$初始下标_1)> <Text|id=4a<$STR(n$初始下标_1)>3|x=106.0|y=27.0|size=16|color=250|text=<$cfg_grsb(<$STR(n$初始下标_1)>_0)>>
+INC s$首爆状态_<$STR(n$初始下标_1)> <Effect|id=4a<$STR(n$初始下标_1)>4|x=285.0|y=61.0|scale=1|speed=2|effecttype=0|effectid=5111|act=0|dir=5>
+INC s$首爆状态_<$STR(n$初始下标_1)> <ItemShow|id=4a<$STR(n$初始下标_1)>5|x=253.0|y=3.0|width=70|height=70|itemid=4|itemcount=<$cfg_grsb(<$STR(n$初始下标_1)>_3)>|bgtype=0|showtips=1>
+INC s$首爆状态_<$STR(n$初始下标_1)> <Button|id=4a<$STR(n$初始下标_1)>6|x=420.0|y=16.0|mimg=topbtn/fldt/<$STR(<$cfg_grsb(<$STR(n$初始下标_1)>_5)>)>.png|nimg=topbtn/fldt/<$STR(<$cfg_grsb(<$STR(n$初始下标_1)>_5)>)>.png>
+
+[@个人首爆展示]
+#if
+#say
+<Button|x=-2526.0|y=-1172.0|width=115120|height=112880|mimg=npc/zd.png|color=224|nimg=npc/zd.png|pimg=npc/zd.png|size=18|link=@exit>
+<Img|children={1a,2a,3a}|x=38.0|y=-9.0|width=890|height=510|move=0|esc=1|show=4|bg=1|reset=1|loadDelay=0|img=topbtn/fldt/bj.png>
+<ListView|id=1a|children={a,b,c,d,e,f,g}|x=75.0|y=66.0|width=183|height=400|bounce=0|direction=1|margin=1>
+<Button|id=a|x=0|y=0|width=183|height=55|nimg=topbtn/fldt/4.png|mimg=topbtn/fldt/4.png|link=@七日签到>
+<Button|id=b|x=0|y=0|width=183|height=55|nimg=topbtn/fldt/6.png|mimg=topbtn/fldt/6.png|link=@击杀奖励>
+<Button|id=c|x=0|y=0|width=183|height=55|nimg=topbtn/fldt/7.png|mimg=topbtn/fldt/7.png|link=@在线奖励>
+<Button|id=d|x=0|y=0|width=183|height=55|nimg=topbtn/fldt/1.png|mimg=topbtn/fldt/1.png|link=@等级福利>
+<Button|id=e|x=0|y=0|width=183|height=55|nimg=topbtn/fldt/2.png|mimg=topbtn/fldt/2.png|link=@个人首爆>
+<Button|id=f|x=0|y=0|width=183|height=55|nimg=topbtn/fldt/5.png|mimg=topbtn/fldt/5.png|link=@全服首爆>
+<Button|id=g|x=0|y=0|width=183|height=55|nimg=topbtn/fldt/3.png|mimg=topbtn/fldt/3.png|link=@联系客服>
+<$str(S$七日签到红点)>
+<$str(S$杀怪奖励)>
+<$str(S$在线奖励)>
+<$str(S$等级奖励)>
+<Layout|id=2a|children={7a,7b}|x=-23.0|y=-48.0|width=1002|height=565|margin=0|bounce=0>
+<Img|id=7a|x=279.0|y=118.0|width=560|height=76|move=0|show=4|esc=1|reset=1|loadDelay=0|img=topbtn/fldt/sb2.png>
+<Img|id=7b|x=279.0|y=188.0|width=560|height=45|move=0|loadDelay=0|img=topbtn/fldt/22.png|reset=1|show=4|esc=1>
+<Layout|x=826.0|y=-17.0|width=80|height=80|link=@exit>
+<Button|x=852.0|y=29.0|nimg=public/close-2.png|mimg=public/close-2.png|link=@exit>
+<Img|x=382.0|y=-6.0|width=200|height=67|show=4|reset=1|img=topbtn/fldt/title.png|move=0|loadDelay=0|esc=1>
+
+<Layout|id=3a|children={12,13}|x=256.0|y=181.0|width=559|height=292|rotate=0>
+<Button|id=12|children={150,151}|x=217.0|y=267.0|nimg=topbtn/fldt/zuo.png|size=18|link=@个人首爆上一页>
+<RText|id=150|a=4|x=56.0|y=12.0|percentx=224.0|percenty=50.0|color=161|size=16|outline=2|text=第<$STR(s$当前页数)>页>
+<Button|id=151|x=97.0|y=0.0|size=18|nimg=topbtn/fldt/you.png|link=@个人首爆下一页>
+
+<ListView|id=13|children={<$STR(S$首爆标签)>}|x=1.0|y=1.0|width=555|height=260|bounce=1|direction=1|margin=1>
+<$str(S$首爆状态展示)>
+
+[@个人首爆上一页]
+#IF
+Equal s$当前页数 1
+#act
+SENDMSG 9 提示：目前是第一页，请前往下一页！
+BREAK
+
+
+
+#IF
+Equal s$当前页数 7
+#act
+Mov s$当前页数 6
+Mov s$首爆状态展示 
+Mov n$初始下标_1 105
+Mov n$初始上标_1 125
+Goto @个人首爆初始
+BREAK
+
+#IF
+Equal s$当前页数 6
+#act
+Mov s$当前页数 5
+Mov s$首爆状态展示 
+Mov n$初始下标_1 84
+Mov n$初始上标_1 105
+Goto @个人首爆初始
+BREAK
+
+#IF
+Equal s$当前页数 5
+#act
+Mov s$当前页数 4
+Mov s$首爆状态展示 
+Mov n$初始下标_1 63
+Mov n$初始上标_1 84
+Goto @个人首爆初始
+BREAK
+
+#IF
+Equal s$当前页数 4
+#act
+Mov s$当前页数 3
+Mov s$首爆状态展示 
+Mov n$初始下标_1 42
+Mov n$初始上标_1 63
+Goto @个人首爆初始
+BREAK
+
+#IF
+Equal s$当前页数 3
+#act
+Mov s$当前页数 2
+Mov s$首爆状态展示 
+Mov n$初始下标_1 21
+Mov n$初始上标_1 42
+Goto @个人首爆初始
+BREAK
+
+
+#IF
+Equal s$当前页数 2
+#act
+Mov s$当前页数 1
+Mov s$首爆状态展示 
+Mov n$初始下标_1 0
+Mov n$初始上标_1 21
+Goto @个人首爆初始
+BREAK
+
+[@个人首爆下一页]
+
+
+#IF
+Equal s$当前页数 6
+#act
+SENDMSG 9 提示：目前是最后一页，请返回上一页！
+BREAK
+
+#IF
+Equal s$当前页数 5
+#act
+Mov s$当前页数 6
+Mov s$首爆状态展示 
+Mov n$初始下标_1 105
+Mov n$初始上标_1 125
+Goto @个人首爆初始
+BREAK
+
+#IF
+Equal s$当前页数 4
+#act
+Mov s$当前页数 5
+Mov s$首爆状态展示 
+Mov n$初始下标_1 84
+Mov n$初始上标_1 105
+Goto @个人首爆初始
+BREAK
+
+#IF
+Equal s$当前页数 3
+#act
+Mov s$当前页数 4
+Mov s$首爆状态展示 
+Mov n$初始下标_1 63
+Mov n$初始上标_1 84
+Goto @个人首爆初始
+BREAK
+
+#IF
+Equal s$当前页数 2
+#act
+Mov s$当前页数 3
+Mov s$首爆状态展示 
+Mov n$初始下标_1 42
+Mov n$初始上标_1 63
+Goto @个人首爆初始
+BREAK
+
+#IF
+Equal s$当前页数 1
+#act
+Mov s$当前页数 2
+Mov s$首爆状态展示 
+Mov n$初始下标_1 21
+Mov n$初始上标_1 42
+Goto @个人首爆初始
+BREAK
+}

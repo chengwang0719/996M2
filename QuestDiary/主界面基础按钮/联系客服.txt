@@ -1,0 +1,192 @@
+[@微信礼包页面]
+{
+#if
+#act
+#CALL [\主界面基础按钮\福利大厅红点检测.txt] @福利大厅按钮
+
+#IF
+CHECK [301] 0
+#ACT
+SET [301] 1
+Navigation 0 10 点击领取
+
+#if
+#say
+<Button|x=-2526.0|y=-1172.0|width=115120|height=112880|nimg=npc/zd.png|pimg=npc/zd.png|color=224|mimg=npc/zd.png|size=18|link=@exit>
+<Img|children={1a,2a}|x=38.0|y=-9.0|width=890|height=510|img=topbtn/fldt/bj.png|bg=1|loadDelay=0|esc=1|move=0|reset=1|show=4>
+<ListView|id=1a|children={a,b,c,d,e,f,g}|x=75.0|y=66.0|width=183|height=400|margin=1|direction=1|bounce=0>
+<Button|id=a|x=0|y=0|width=183|height=55|nimg=topbtn/fldt/4.png|mimg=topbtn/fldt/4.png|link=@七日签到>
+<Button|id=b|x=0|y=0|width=183|height=55|nimg=topbtn/fldt/6.png|mimg=topbtn/fldt/6.png|link=@击杀奖励>
+<Button|id=c|x=0|y=0|width=183|height=55|nimg=topbtn/fldt/7.png|mimg=topbtn/fldt/7.png|link=@在线奖励>
+<Button|id=d|x=0|y=0|width=183|height=55|nimg=topbtn/fldt/1.png|mimg=topbtn/fldt/1.png|link=@等级福利>
+<Button|id=e|x=0|y=0|width=183|height=55|nimg=topbtn/fldt/2.png|mimg=topbtn/fldt/2.png|link=@个人首爆>
+<Button|id=f|x=0|y=0|width=183|height=55|nimg=topbtn/fldt/5.png|mimg=topbtn/fldt/5.png|link=@全服首爆>
+<Button|id=g|x=0|y=0|width=183|height=55|nimg=topbtn/fldt/3.png|mimg=topbtn/fldt/3.png|link=@联系客服>
+<$str(S$七日签到红点)>
+<$str(S$杀怪奖励)>
+<$str(S$在线奖励)>
+<$str(S$等级奖励)>
+<Layout|id=2a|children={7a,7b,7e,7f,7d}|x=-18|y=-37.0|width=1002|height=565|bounce=0|margin=0>
+
+<Text|id=7a|x=295.0|y=164.0|size=18|outline=1|color=255|text=游戏如有任何BUG以及游戏问题联系客服>
+<Text|id=7b|x=295.0|y=206.0|size=18|outline=1|color=255|text=严禁一切挂机脚本外挂，系统检测发现永久封号处理>
+<Text|id=7e|x=295.0|y=245.0|size=18|outline=1|color=255|text=凡是利用游戏BUG等影响游戏生态环境以及玩家>
+<Text|id=7f|x=295.0|y=286.0|size=18|outline=1|color=255|text=游戏体验将进行观察封禁角色处理若发现>
+<Text|id=7d|x=295.0|y=327.0|size=18|outline=1|color=255|text=游戏BUG应当及时上报客服让技术做修复处理>
+
+
+
+
+
+<Text|x=318|y=349|size=18|color=251|text=联系客服>
+<Text|x=620|y=349|size=16|color=250|text=CDK礼包>
+<Input|x=407|y=343|width=200|height=34|type=0|placecolor=255|size=18|inputid=6|color=255|place=tqcq1809|maxcount=10|mincount=2>
+<Img|x=407|y=343|width=200|height=34|show=4|esc=1|move=0|reset=1|loadDelay=0|img=topbtn/zxcz/1900015004.png>
+<Layout|x=826.0|y=-17.0|width=80|height=80|link=@exit>
+<Button|x=852.0|y=29.0|nimg=public/close-2.png|mimg=public/close-2.png|link=@exit>
+<Button|id=10|x=371.0|y=396.0|nimg=topbtn/fldt/btnlb.png|mimg=topbtn/fldt/btnlb.png|submitInput=6|link=@领取客服好礼>
+<Img|x=382.0|y=-6.0|width=200|height=67|esc=1|move=0|show=4|reset=1|loadDelay=0|img=topbtn/fldt/title.png>
+<Img|x=701.0|y=152.0|width=325|height=320|esc=1|move=0|show=4|reset=1|loadDelay=0|img=topbtn/fldt/nv.png>
+<Button|x=552.0|y=396.0|nimg=topbtn/fldt/996kf_red.png|mimg=topbtn/fldt/996kf_red.png|submitInput=6|link=@联系客服对接>
+
+;<Img|id=7b|x=290.0|y=166.0|reset=1|img=topbtn/fldt/txt.png|show=4|move=0|loadDelay=0|esc=1>
+
+;<ItemShow|id=100|x=0|y=0|width=70|height=70|itemid=20178|itemcount=500|bgtype=1|showtips=1>
+;<ItemShow|id=101|x=0|y=0|width=70|height=70|itemid=20180|itemcount=10|bgtype=1|showtips=1>
+;<ItemShow|id=102|x=0|y=0|width=70|height=70|itemid=20000|itemcount=2|bgtype=1|showtips=1>
+;<ItemShow|id=103|x=0|y=0|width=70|height=70|itemid=20001|itemcount=2|bgtype=1|showtips=1>
+
+[@联系客服对接]
+#if
+#act
+OPENHYPERLINK 701
+
+
+[@领取客服好礼]
+
+
+#IF
+CHECK [10] 1
+#ACT
+goto @输入CDK领取东西
+break
+
+#IF
+CHECK [10] 0
+#ACT
+SET [10] 1
+mov U8 1
+GiveStateItem 盟重传送石 2 1 0 0 0 0 0 0 1
+GiveStateItem 随机传送石 2 1 0 0 0 0 0 0 1
+GiveStateItem 书页 500 1 0 0 0 0 1 0 1
+MONEY 绑定点卡 + 50000
+#CALL [\任务系统\任务系统QF.txt] @任务系统QF
+CLOSE
+
+
+[@输入CDK领取东西]
+#if
+Equal <$NPCINPUT(6)> 
+#act
+SENDMSG 9 请输入CDK礼包码！
+break
+
+
+
+#if
+Equal <$NPCINPUT(6)> hfcm777
+#act
+goto @第三个礼包码
+
+#if
+Equal <$NPCINPUT(6)> hfcm666
+#act
+goto @第一个礼包码
+
+#if
+Equal <$NPCINPUT(6)> hfcm888
+#act
+goto @第二个礼包码
+
+
+#if
+Equal <$NPCINPUT(6)> zbzs1122
+#act
+goto @第四个礼包码
+
+#if
+Equal <$NPCINPUT(6)> tianquan
+#act
+goto @第五个礼包码
+
+[@第一个礼包码]
+#if
+CHECK [410] 0
+#act
+SET [410] 1
+MailGIVE 星辰石[小] 3 #0#1#4#5#6#8
+MailGIVE 佩饰碎片 10 #0#1#4#5#6#8
+MailGIVE 书页 50 #0#1#4#5#6#8
+MailGIVE 绑定元宝 50000
+SendMail 1 系统奖励 你好<$USERNAME>，CDK礼包码已发送，请查收!
+sendmsg 9 领取成功！
+#elseact
+SENDMSG 9 CDK错误或者该CDK礼包码已经领取过了！
+
+[@第二个礼包码]
+#if
+CHECK [411] 0
+#act
+MailGIVE 神秘钥匙☆ 2 #0#1#4#5#6#8
+MailGIVE 祝福油 5 #0#1#4#5#6#8
+MailGIVE 鲜花碎片 10 #0#1#4#5#6#8
+SendMail 1 系统奖励 你好<$USERNAME>，CDK礼包码已发送，请查收!
+set [411] 1
+sendmsg 9 领取成功！
+#elseact
+SENDMSG 9 CDK错误或者该CDK礼包码已经领取过了！
+
+[@第三个礼包码]
+#if
+CHECK [412] 0
+#act
+
+MailGIVE 神秘宝箱☆ 2 #0#1#4#5#6#8
+MailGIVE 修复油 2 #0#1#4#5#6#8
+MailGIVE 盾牌碎片 10 #0#1#4#5#6#8
+SendMail 1 系统奖励 你好<$USERNAME>，CDK礼包码已发送，请查收!
+SET [412] 1
+sendmsg 9 领取成功！
+#elseact
+SENDMSG 9 CDK错误或者该CDK礼包码已经领取过了！
+
+[@第四个礼包码]
+#if
+CHECK [413] 0
+#act
+SET [413] 1
+
+MailGIVE 斗笠碎片 5 #0#1#4#5#6#8
+MailGIVE 刷新卷 5 #0#1#4#5#6#8
+MailGIVE 点卡福袋 1 #0#1#4#5#6#8
+MailGIVE 元宝福袋 3 #0#1#4#5#6#8
+SendMail 1 系统奖励 你好<$USERNAME>，CDK礼包码已发送，请查收!
+sendmsg 9 领取成功！
+#elseact
+SENDMSG 9 CDK错误或者该CDK礼包码已经领取过了！
+
+[@第五个礼包码]
+#if
+CHECK [414] 0
+#act
+SET [414] 1
+MailGIVE 星辰石[小] 10 #0#1#4#5#6#8
+MailGIVE 星辰石[中] 5 #0#1#4#5#6#8
+MailGIVE 神秘钥匙★ 1 #0#1#4#5#6#8
+MailGIVE 神秘宝箱★ 1 #0#1#4#5#6#8
+MailGIVE 超级祝福油 1 #0#1#4#5#6#8
+SendMail 1 系统奖励 你好<$USERNAME>，CDK礼包码已发送，请查收!
+sendmsg 9 领取成功！
+#elseact
+SENDMSG 9 CDK错误或者该CDK礼包码已经领取过了！
+}

@@ -1,0 +1,173 @@
+[@开始回收]   
+{   
+#IF   
+#ACT   
+DELAYgoto 100 @假人~一级回收1   
+DELAYgoto 200 @假人~一级回收2   
+DELAYgoto 300 @假人~一级回收3   
+DELAYgoto 400 @假人~一级回收4   
+DELAYgoto 500 @假人~一级回收5   
+DELAYgoto 600 @假人~一级回收6   
+DELAYgoto 2000 @假人~清理包裹垃圾   
+   
+[@假人~清理包裹垃圾]   
+#IF   
+ISDUMMY   
+#ACT   
+GMEXECUTE 清理垃圾 Self   
+   
+[@假人~一级回收1]   
+#ACT   
+  MOV N81 0   
+  TakeBagItem 圣战头盔 46 0 0 0 0 N82   
+  INC N81 <$STR(N82)>   
+  TakeBagItem 圣战项链 46 0 0 0 0 N82   
+  INC N81 <$STR(N82)>   
+  TakeBagItem 圣战手镯 46 0 0 0 0 N82   
+  INC N81 <$STR(N82)>   
+  TakeBagItem 圣战戒指 46 0 0 0 0 N82   
+  INC N81 <$STR(N82)>   
+#IF   
+  LARGE N81 0   
+#ACT   
+  MUL N83 N81 50   
+  MUL N84 N81 750   
+  GAMEGOLD  + <$STR(N83)>   
+  CHANGEEXP + <$STR(N84)>   
+  GuildNoticeMsg 249 151 玩家{【<$USERNAME>】|250:0:1}回收{「<$STR(N81)>」|250:0:1}件赤月系列装备,获得{[<$STR(N83)>]|250:0:1}元宝+{[<$STR(N84)>]|250:0:1}经验.   
+  MOV N81 0   
+   
+[@假人~一级回收2]   
+#ACT   
+  MOV N81 0   
+  TakeBagItem 天魔神甲 46 0 0 0 0 N82   
+  INC N81 <$STR(N82)>   
+  TakeBagItem 圣战宝甲 46 0 0 0 0 N82   
+  INC N81 <$STR(N82)>   
+  TakeBagItem 怒斩 46 0 0 0 0 N82   
+  INC N81 <$STR(N82)>   
+   
+#IF   
+  LARGE N81 0   
+#ACT   
+  MUL N83 N81 50   
+  MUL N84 N81 1500   
+  GAMEGOLD  + <$STR(N83)>   
+  CHANGEEXP + <$STR(N84)>   
+  GuildNoticeMsg 249 151 玩家{【<$USERNAME>】|250:0:1}回收{「<$STR(N81)>」|250:0:1}件赤月刀衣系列装备,获得{[<$STR(N83)>]|250:0:1}元宝+{[<$STR(N84)>]|250:0:1}经验.   
+  MOV N81 0   
+   
+[@假人~一级回收3]   
+#ACT   
+  MOV N81 0   
+  TakeBagItem 雷霆头盔 46 0 0 0 0 N82   
+  INC N81 <$STR(N82)>   
+  TakeBagItem 雷霆项链 46 0 0 0 0 N82   
+  INC N81 <$STR(N82)>   
+  TakeBagItem 雷霆手镯 46 0 0 0 0 N82   
+  INC N81 <$STR(N82)>   
+  TakeBagItem 雷霆戒指 46 0 0 0 0 N82   
+  INC N81 <$STR(N82)>   
+  TakeBagItem 雷霆腰带 46 0 0 0 0 N82   
+  INC N81 <$STR(N82)>   
+  TakeBagItem 雷霆靴子 46 0 0 0 0 N82   
+  INC N81 <$STR(N82)>   
+  TakeBagItem 雷霆勋章 46 0 0 0 0 N82   
+  INC N81 <$STR(N82)>   
+#IF   
+  LARGE N81 0   
+#ACT   
+  MUL N83 N81 150   
+  MUL N84 N81 1500   
+  GAMEGOLD  + <$STR(N83)>   
+  CHANGEEXP + <$STR(N84)>   
+  GuildNoticeMsg 249 151 玩家{【<$USERNAME>】|250:0:1}回收{「<$STR(N81)>」|250:0:1}件雷霆系列装备,获得{[<$STR(N83)>]|250:0:1}元宝+{[<$STR(N84)>]|250:0:1}经验.   
+  MOV N81 0   
+   
+   
+   
+[@假人~一级回收4]   
+   
+#ACT   
+  MOV N81 0   
+  TakeBagItem 雷霆战甲(男) 46 0 0 0 0 N82   
+  INC N81 <$STR(N82)>   
+  TakeBagItem 雷霆战甲(女) 46 0 0 0 0 N82   
+  INC N81 <$STR(N82)>   
+  TakeBagItem 屠龙 46 0 0 0 0 N82   
+  INC N81 <$STR(N82)>   
+   
+#IF   
+  LARGE N81 0   
+#ACT   
+  MUL N83 N81 150   
+  MUL N84 N81 3000   
+  GAMEGOLD  + <$STR(N83)>   
+  CHANGEEXP + <$STR(N84)>   
+  GuildNoticeMsg 249 151 玩家{【<$USERNAME>】|250:0:1}回收{「<$STR(N81)>」|250:0:1}件雷霆刀衣系列装备,获得{[<$STR(N83)>]|250:0:1}元宝+{[<$STR(N84)>]|250:0:1}经验.   
+  MOV N81 0   
+   
+[@假人~一级回收5]   
+#ACT   
+  MOV N81 0   
+  TakeBagItem 战神头盔 46 0 0 0 0 N82   
+  INC N81 <$STR(N82)>   
+  TakeBagItem 战神项链 46 0 0 0 0 N82   
+  INC N81 <$STR(N82)>   
+  TakeBagItem 战神手镯 46 0 0 0 0 N82   
+  INC N81 <$STR(N82)>   
+  TakeBagItem 战神戒指 46 0 0 0 0 N82   
+  INC N81 <$STR(N82)>   
+  TakeBagItem 战神腰带 46 0 0 0 0 N82   
+  INC N81 <$STR(N82)>   
+  TakeBagItem 战神靴子 46 0 0 0 0 N82   
+  INC N81 <$STR(N82)>   
+  TakeBagItem 战神勋章 46 0 0 0 0 N82   
+  INC N81 <$STR(N82)>   
+#IF   
+  LARGE N81 0   
+#ACT   
+  MUL N83 N81 500   
+  MUL N84 N81 2250   
+  GAMEGOLD  + <$STR(N83)>   
+  CHANGEEXP + <$STR(N84)>   
+  GuildNoticeMsg 249 151 玩家{【<$USERNAME>】|250:0:1}回收{「<$STR(N81)>」|250:0:1}件战神系列装备,获得{[<$STR(N83)>]|250:0:1}元宝+{[<$STR(N84)>]|250:0:1}经验.   
+  MOV N81 0   
+   
+[@假人~一级回收6]   
+   
+   
+#ACT   
+  MOV N81 0   
+  TakeBagItem 凤天魔甲 46 0 0 0 0 N82   
+  INC N81 <$STR(N82)>   
+  TakeBagItem 凰天魔衣 46 0 0 0 0 N82   
+  INC N81 <$STR(N82)>   
+  TakeBagItem 开天 46 0 0 0 0 N82   
+  INC N81 <$STR(N82)>   
+   
+#IF   
+  LARGE N81 0   
+#ACT   
+  MUL N83 N81 500   
+  MUL N84 N81 4450   
+  GAMEGOLD  + <$STR(N83)>   
+  CHANGEEXP + <$STR(N84)>   
+  GuildNoticeMsg 249 151 玩家{【<$USERNAME>】|250:0:1}回收{「<$STR(N81)>」|250:0:1}件战神刀衣系列装备,获得{[<$STR(N83)>]|250:0:1}元宝+{[<$STR(N84)>]|250:0:1}经验.   
+  MOV N81 0   
+   
+   
+   
+}   
+   
+   
+   
+   
+   
+   
+   
+  
+  
+ 
+ 
+

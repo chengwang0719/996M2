@@ -1,0 +1,116 @@
+[@装备成长]   
+{   
+   
+#IF   
+CheckCustomItemProgressBar 1 1   
+#act   
+;SetCustomItemProgressbarValue 1 1 1 + 1   
+#elseact   
+break   
+   
+#if   
+CHECKCUSTOMITEMPROGRESSBARVALUE 0 0 1 < 10   
+CHECKCUSTOMITEMPROGRESSBARVALUE 0 1 1 > 99   
+#act   
+;SetCustomItemProgressbarValue 0 0 1 + 1   
+;SetCustomItemProgressbarValue 0 1 1 = 0   
+movr S15 0 5   
+CHANGEITEMADDVALUE 0 <$STR(S15)> + 1   
+   
+#if   
+CHECKCUSTOMITEMPROGRESSBARVALUE 1 0 1 < 10   
+CHECKCUSTOMITEMPROGRESSBARVALUE 1 1 1 > 99   
+#act   
+;SetCustomItemProgressbarValue 1 0 1 + 1   
+;SetCustomItemProgressbarValue 1 1 1 = 0   
+movr S15 0 3   
+CHANGEITEMADDVALUE 1 <$STR(S15)> + 1   
+   
+#if   
+CHECKCUSTOMITEMPROGRESSBARVALUE 2 0 1 < 10   
+CHECKCUSTOMITEMPROGRESSBARVALUE 2 1 1 > 99   
+#act   
+;SetCustomItemProgressbarValue 2 0 1 + 1   
+;SetCustomItemProgressbarValue 2 1 1 = 0   
+movr S15 2 5   
+CHANGEITEMADDVALUE 2 <$STR(S15)> + 1   
+   
+#if   
+CHECKCUSTOMITEMPROGRESSBARVALUE 3 0 1 < 10   
+CHECKCUSTOMITEMPROGRESSBARVALUE 3 1 1 > 99   
+#act   
+;SetCustomItemProgressbarValue 3 0 1 + 1   
+;SetCustomItemProgressbarValue 3 1 1 = 0   
+movr S15 2 5   
+CHANGEITEMADDVALUE 3 <$STR(S15)> + 1   
+   
+#if   
+CHECKCUSTOMITEMPROGRESSBARVALUE 4 0 1 < 10   
+CHECKCUSTOMITEMPROGRESSBARVALUE 4 1 1 > 99   
+#act   
+;SetCustomItemProgressbarValue 4 0 1 + 1   
+;SetCustomItemProgressbarValue 4 1 1 = 0   
+movr S15 2 5   
+CHANGEITEMADDVALUE 4 <$STR(S15)> + 1   
+   
+#if   
+CHECKCUSTOMITEMPROGRESSBARVALUE 5 0 1 < 10   
+CHECKCUSTOMITEMPROGRESSBARVALUE 5 1 1 > 99   
+#act   
+;SetCustomItemProgressbarValue 5 0 1 + 1   
+;SetCustomItemProgressbarValue 5 1 1 = 0   
+movr S15 2 5   
+CHANGEITEMADDVALUE 5 <$STR(S15)> + 1   
+   
+#if   
+CHECKCUSTOMITEMPROGRESSBARVALUE 6 0 1 < 10   
+CHECKCUSTOMITEMPROGRESSBARVALUE 6 1 1 > 99   
+#act   
+;SetCustomItemProgressbarValue 6 0 1 + 1   
+;SetCustomItemProgressbarValue 6 1 1 = 0   
+movr S15 2 5   
+CHANGEITEMADDVALUE 6 <$STR(S15)> + 1   
+   
+#if   
+CHECKCUSTOMITEMPROGRESSBARVALUE 7 0 1 < 10   
+CHECKCUSTOMITEMPROGRESSBARVALUE 7 1 1 > 99   
+#act   
+;SetCustomItemProgressbarValue 7 0 1 + 1   
+;SetCustomItemProgressbarValue 7 1 1 = 0   
+movr S15 2 5   
+CHANGEITEMADDVALUE 7 <$STR(S15)> + 1   
+   
+#if   
+CHECKCUSTOMITEMPROGRESSBARVALUE 8 0 1 < 10   
+CHECKCUSTOMITEMPROGRESSBARVALUE 8 1 1 > 99   
+#act   
+;SetCustomItemProgressbarValue 8 0 1 + 1   
+;SetCustomItemProgressbarValue 8 1 1 = 0   
+movr S15 2 5   
+CHANGEITEMADDVALUE 8 <$STR(S15)> + 1   
+   
+#if   
+CHECKCUSTOMITEMPROGRESSBARVALUE 10 0 1 < 10   
+CHECKCUSTOMITEMPROGRESSBARVALUE 10 1 1 > 99   
+#act   
+;SetCustomItemProgressbarValue 10 0 1 + 1   
+;SetCustomItemProgressbarValue 10 1 1 = 0   
+movr S15 2 5   
+CHANGEITEMADDVALUE 10 <$STR(S15)> + 1   
+   
+#if   
+CHECKCUSTOMITEMPROGRESSBARVALUE 11 0 1 < 10   
+CHECKCUSTOMITEMPROGRESSBARVALUE 11 1 1 > 99   
+#act   
+;SetCustomItemProgressbarValue 11 0 1 + 1   
+;SetCustomItemProgressbarValue 11 1 1 = 0   
+movr S15 2 5   
+CHANGEITEMADDVALUE 11 <$STR(S15)> + 1   
+   
+}   
+   
+  
+  
+ 
+ 
+

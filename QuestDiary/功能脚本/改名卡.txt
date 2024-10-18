@@ -1,0 +1,38 @@
+[@改名卡]
+{
+#if
+#act
+#say
+<Img|x=266.0|y=162.0|bg=1|show=0|move=0|loadDelay=1|img=public/bg_npc_01.png|reset=1>
+<Button|x=774.0|y=168.0|mimg=public/close-2.png|nimg=public/close-2.png|link=@exit>
+<Text|x=314.0|y=220.0|size=18|color=255|text=⒈名字长度仅可为 2 - 7 个字！>
+<Text|x=314.0|y=250.0|size=18|color=255|text=⒉名字中不可有任何数字和特殊字符！>
+<Text|x=313.0|y=280.0|size=18|color=255|text=⒊名字中不可带有任何广告文字！(否则封号)>
+<Text|x=313.0|y=309.0|size=18|color=255|text=⒋不能起特别难以辨识的名字和任何形式的空白名字！>
+<Button|x=481.0|y=332.0|nimg=public/00000361.png|size=18|mimg=public/00000363.png|color=255|pimg=public/00000362.png|link=@@InputString6(请输入要修改的新名称：)>
+
+
+[@InputString6]
+#IF
+Equal S6
+#ACT
+MESSAGEBOX 请输入一个正确的名称
+Break
+
+#OR
+CheckStringlength S6 > 15
+CheckStringlength S6 < 4
+#ACT
+MESSAGEBOX 输入名称长度不正确
+Break
+
+#IF
+#ACT
+CHANGEHUMNAME <$str(S6)>
+
+
+
+
+
+
+}

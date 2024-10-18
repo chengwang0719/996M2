@@ -1,0 +1,825 @@
+[@main]
+#if
+#act
+# set [350] 0
+;mov U120 0 
+;DEPRIVETITLE 色欲
+;DELBUTTON 3902 200
+
+
+#if
+check [250] 0
+#act
+mov S$色欲展示图片 zs
+#elseact
+mov S$色欲展示图片 yzs
+
+#if
+check [251] 0
+#act
+mov S$饕餮展示图片 zs
+#elseact
+mov S$饕餮展示图片 yzs
+
+#if
+check [252] 0
+#act
+mov S$嫉妒展示图片 zs
+#elseact
+mov S$嫉妒展示图片 yzs
+
+#if
+check [253] 0
+#act
+mov S$懒惰展示图片 zs
+#elseact
+mov S$懒惰展示图片 yzs
+
+#if
+check [254] 0
+#act
+mov S$贪婪展示图片 zs
+#elseact
+mov S$贪婪展示图片 yzs
+
+#if
+check [255] 0
+#act
+mov S$傲慢展示图片 zs
+#elseact
+mov S$傲慢展示图片 yzs
+
+#if
+check [256] 0
+#act
+mov S$暴怒展示图片 zs
+#elseact
+mov S$暴怒展示图片 yzs
+
+#if
+equal U120 0
+#act
+mov s$色欲 <Img|id=1|children={1a,1b,1c,1d,1e,1f}|width=205|height=410|img=custom/qzz/dk.png>
+INC S$色欲 <Effect|id=1b|x=83|y=140|effectid=70271|effecttype=0|scale=0.85|count=999999999999|act=0|speed=1>
+INC S$色欲 <Img|id=1e|x=-7|y=24|width=212|height=383|img=custom/qzz/sysl.png>
+INC S$色欲 <Button|id=1f|x=50|y=360|width=106|height=39|nimg=custom/qzz/jh.png|link=@激活色欲>
+goto @主页
+
+#if
+large U120 0
+#act
+mov s$色欲 <Img|id=1|children={1a,1b,1c,1d,1e,1f,1h}|width=205|height=410|img=custom/qzz/dk.png>
+INC S$色欲 <Img|id=1a|x=9|y=23|width=50|height=130|img=custom/qzz/sy.png>
+INC S$色欲 <Effect|id=1b|x=83|y=140|effectid=70271|effecttype=0|scale=0.85|count=999999999999|act=0|speed=1>                       
+INC S$色欲 <Img|id=1c|x=155|y=75|width=47|height=329|img=custom/qzz/syjs.png>
+INC S$色欲 <Button|id=1d|x=157|y=27|width=35|height=85|nimg=custom/qzz/<$STR(S$色欲展示图片)>.png|link=@佩戴色欲>
+INC S$色欲 <Button|id=1f|x=50|y=360|width=106|height=39|nimg=custom/qzz/jj.png|link=@进阶色欲>
+goto @主页
+
+#if
+equal U121 0
+#act
+mov s$饕餮 <Img|id=2|children={2a,2b,2c,2d,2e,2f}|width=205|height=410|img=custom/qzz/dk.png>
+INC S$饕餮 <Effect|id=2b|x=80|y=150|effectid=70276|effecttype=0|scale=0.8|count=999999999999|act=0|speed=1>
+INC S$饕餮 <Img|id=2e|x=-7|y=24|width=212|height=383|img=custom/qzz/ttsl.png>
+INC S$饕餮 <Button|id=2f|x=50|y=360|width=106|height=39|nimg=custom/qzz/jh.png|link=@激活饕餮>
+goto @主页
+
+#if
+large U121 0
+#act
+mov s$饕餮 <Img|id=2|children={2a,2b,2c,2d,2e,2f}|width=205|height=410|img=custom/qzz/dk.png>
+INC S$饕餮 <Img|id=2a|x=9|y=23|width=50|height=130|img=custom/qzz/tt.png>
+INC S$饕餮 <Effect|id=2b|x=80|y=150|effectid=70276|effecttype=0|scale=0.8|count=999999999999|act=0|speed=1>
+INC S$饕餮 <Img|id=2c|x=155|y=75|width=47|height=329|img=custom/qzz/ttjs.png>
+INC S$饕餮 <Button|id=2d|x=157|y=27|width=35|height=85|nimg=custom/qzz/<$STR(S$饕餮展示图片)>.png|link=@佩戴饕餮>
+INC S$饕餮 <Button|id=2f|x=50|y=360|width=106|height=39|nimg=custom/qzz/jj.png|link=@进阶饕餮>
+goto @主页
+
+#if
+equal U122 0
+#act
+mov s$嫉妒 <Img|id=3|children={3a,3b,3c,3d,3e,3f}|width=205|height=410|img=custom/qzz/dk.png>
+INC S$嫉妒 <Effect|id=3b|x=85|y=150|effectid=70280|effecttype=0|scale=0.7|count=999999999999|act=0|speed=1>
+INC S$嫉妒 <Img|id=3e|x=-7|y=24|width=212|height=383|img=custom/qzz/jdsl.png>
+INC S$嫉妒 <Button|id=3f|x=50|y=360|width=106|height=39|nimg=custom/qzz/jh.png|link=@激活嫉妒>
+goto @主页
+
+#if
+large U122 0
+#act
+mov s$嫉妒 <Img|id=3|children={3a,3b,3c,3d,3e,3f}|width=205|height=410|img=custom/qzz/dk.png>
+INC S$嫉妒 <Img|id=3a|x=9|y=23|width=50|height=130|img=custom/qzz/jd.png>
+INC S$嫉妒 <Effect|id=3b|x=85|y=150|effectid=70280|effecttype=0|scale=0.7|count=999999999999|act=0|speed=1>
+INC S$嫉妒 <Img|id=3c|x=155|y=75|width=47|height=329|img=custom/qzz/jdjs.png>
+INC S$嫉妒 <Button|id=3d|x=157|y=27|width=35|height=85|nimg=custom/qzz/<$STR(S$嫉妒展示图片)>.png|link=@佩戴嫉妒>
+INC S$嫉妒 <Button|id=3f|x=50|y=360|width=106|height=39|nimg=custom/qzz/jj.png|link=@进阶嫉妒>
+goto @主页
+
+#if
+equal U123 0
+#act
+mov s$懒惰 <Img|id=4|children={4a,4b,4c,4d,4e,4f}|width=205|height=410|img=custom/qzz/dk.png>
+INC S$懒惰 <Effect|id=4b|x=83|y=138|effectid=70281|effecttype=0|scale=0.7|count=999999999999|act=0|speed=1>
+INC S$懒惰 <Img|id=4e|x=-7|y=24|width=212|height=383|img=custom/qzz/ldsl.png>
+INC S$懒惰 <Button|id=4f|x=50|y=360|width=106|height=39|nimg=custom/qzz/jh.png|link=@激活懒惰>
+goto @主页
+
+#if
+large U123 0
+#act
+mov s$懒惰 <Img|id=4|children={4a,4b,4c,4d,4e,4f}|width=205|height=410|img=custom/qzz/dk.png>
+INC S$懒惰 <Img|id=4a|x=9|y=23|width=50|height=130|img=custom/qzz/ld.png>
+INC S$懒惰 <Effect|id=4b|x=83|y=138|effectid=70281|effecttype=0|scale=0.7|count=999999999999|act=0|speed=1>
+INC S$懒惰 <Img|id=4c|x=155|y=75|width=47|height=329|img=custom/qzz/ldjs.png>
+INC S$懒惰 <Button|id=4d|x=157|y=27|width=35|height=85|nimg=custom/qzz/<$STR(S$懒惰展示图片)>.png|link=@佩戴懒惰>
+INC S$懒惰 <Button|id=4f|x=50|y=360|width=106|height=39|nimg=custom/qzz/jj.png|link=@进阶懒惰>
+goto @主页
+
+#if
+equal U124 0
+#act
+mov s$贪婪 <Img|id=5|children={5a,5b,5c,5d,5e,5f}|width=205|height=410|img=custom/qzz/dk.png>
+INC S$贪婪 <Effect|id=5b|x=84|y=148|effectid=70279|effecttype=0|scale=0.8|count=999999999999|act=0|speed=1>
+INC S$贪婪 <Img|id=5e|x=-7|y=24|width=212|height=383|img=custom/qzz/tlsl.png>
+INC S$贪婪 <Button|id=5f|x=50|y=360|width=106|height=39|nimg=custom/qzz/jh.png|link=@激活贪婪>
+goto @主页
+
+#if
+large U124 0
+#act
+mov s$贪婪 <Img|id=5|children={5a,5b,5c,5d,5e,5f}|width=205|height=410|img=custom/qzz/dk.png>
+INC S$贪婪 <Img|id=5a|x=9|y=23|width=50|height=130|img=custom/qzz/tl.png>
+INC S$贪婪 <Effect|id=5b|x=84|y=148|effectid=70279|effecttype=0|scale=0.8|count=999999999999|act=0|speed=1>
+INC S$贪婪 <Img|id=5c|x=155|y=75|width=47|height=329|img=custom/qzz/tljs.png>
+INC S$贪婪 <Button|id=5d|x=157|y=27|width=35|height=85|nimg=custom/qzz/<$STR(S$贪婪展示图片)>.png|link=@佩戴贪婪>
+INC S$贪婪 <Button|id=5f|x=50|y=360|width=106|height=39|nimg=custom/qzz/jj.png|link=@进阶贪婪>
+goto @主页
+
+#if
+equal U125 0
+#act
+mov s$傲慢 <Img|id=6|children={6a,6b,6c,6d,6e,6f}|width=205|height=410|img=custom/qzz/dk.png>
+INC S$傲慢 <Effect|id=6b|x=82|y=148|effectid=70282|effecttype=0|scale=0.8|count=999999999999|act=0|speed=1>
+INC S$傲慢 <Img|id=6e|x=-7|y=24|width=212|height=383|img=custom/qzz/amsl.png>
+INC S$傲慢 <Button|id=6f|x=50|y=360|width=106|height=39|nimg=custom/qzz/jh.png|link=@激活傲慢>
+goto @主页
+
+#if
+large U125 0
+#act
+mov s$傲慢 <Img|id=6|children={6a,6b,6c,6d,6e,6f}|width=205|height=410|img=custom/qzz/dk.png>
+INC S$傲慢 <Img|id=6a|x=9|y=23|width=50|height=130|img=custom/qzz/am.png>
+INC S$傲慢 <Effect|id=6b|x=82|y=148|effectid=70282|effecttype=0|scale=0.8|count=999999999999|act=0|speed=1>
+INC S$傲慢 <Img|id=6c|x=155|y=75|width=47|height=329|img=custom/qzz/amjs.png>
+INC S$傲慢 <Button|id=6d|x=157|y=27|width=35|height=85|nimg=custom/qzz/<$STR(S$傲慢展示图片)>.png|link=@佩戴傲慢>
+INC S$傲慢 <Button|id=6f|x=50|y=360|width=106|height=39|nimg=custom/qzz/jj.png|link=@进阶傲慢>
+goto @主页
+
+#if
+equal U126 0
+#act
+mov s$暴怒 <Img|id=7|children={7a,7b,7c,7d,7e,7f}|width=205|height=410|img=custom/qzz/dk.png>
+INC S$暴怒 <Effect|id=7b|x=82|y=148|effectid=70277|effecttype=0|scale=0.75|count=999999999999|act=0|speed=1>
+INC S$暴怒 <Img|id=7e|x=-7|y=24|width=212|height=383|img=custom/qzz/bnsl.png>
+INC S$暴怒 <Button|id=7f|x=50|y=360|width=106|height=39|nimg=custom/qzz/jh.png|link=@激活暴怒>
+goto @主页
+
+#if
+large U126 0
+#act
+mov s$暴怒 <Img|id=7|children={7a,7b,7c,7d,7e,7f}|width=205|height=410|img=custom/qzz/dk.png>
+INC S$暴怒 <Img|id=7a|x=9|y=23|width=50|height=130|img=custom/qzz/bn.png>
+INC S$暴怒 <Effect|id=7b|x=82|y=148|effectid=70277|effecttype=0|scale=0.75|count=999999999999|act=0|speed=1>
+INC S$暴怒 <Img|id=7c|x=155|y=75|width=47|height=329|img=custom/qzz/bnjs.png>
+INC S$暴怒 <Button|id=7d|x=157|y=27|width=35|height=85|nimg=custom/qzz/<$STR(S$暴怒展示图片)>.png|link=@佩戴暴怒>
+INC S$暴怒 <Button|id=7f|x=50|y=360|width=106|height=39|nimg=custom/qzz/jj.png|link=@进阶暴怒>
+goto @主页
+
+[@主页]
+#if
+#say
+<Img|x=11.0|y=-1.0|width=892|height=620|loadDelay=0|img=custom/qzz/bj.png|esc=1|bg=1|show=4|reset=1|move=1>
+<Img|x=70|y=510|width=769|height=6|img=custom/qzz/jx.png>
+<Img|x=80|y=525|width=760|height=43|img=custom/qzz/wz.png>
+<Button|x=847.0|y=42.0|mimg=public/close-2.png|nimg=public/close-2.png|link=@exit>
+<ListView|children={1,2,3,4,5,6,7}|x=75.0|y=90.0|width=756|height=413|direction=2|bounce=0|margin=1>
+
+<$STR(S$色欲)>
+<$STR(S$饕餮)>
+<$STR(S$嫉妒)>
+<$STR(S$懒惰)>
+<$STR(S$贪婪)>
+<$STR(S$傲慢)>
+<$STR(S$暴怒)>
+
+[@激活色欲]
+#if
+#act
+messagebox 提示：激活需要残剑碎片100片，是否确认激活“色欲”     @确定激活色欲 @取消
+
+[@确定激活色欲]
+#if
+checkitems 残剑碎片#100
+#act
+takes 残剑碎片#100
+mov U120 1
+sendmsg 9 激活　“色欲”　成功！
+CONFERTITLE 色欲
+goto @main
+#elseact
+sendmsg 9 背包里的残剑碎片不足，无法激活！
+
+[@佩戴色欲]
+#if
+check [250] 0
+#act
+mov S$色欲佩戴 <Effect|x=150|y=110|effectid=70271|effecttype=0|scale=0.85|count=999999999999|act=0|speed=1>
+addbutton 3902 200 <$STR(s$色欲佩戴)>
+DELBUTTON 3902 201
+DELBUTTON 3902 202
+DELBUTTON 3902 203
+DELBUTTON 3902 204
+DELBUTTON 3902 205
+DELBUTTON 3902 206
+set [250] 1
+set [251] 0
+set [252] 0
+set [253] 0
+set [254] 0
+set [255] 0
+set [256] 0
+goto @main
+sendmsg 9 【提示】佩戴成功！
+#elseact
+sendmsg 9 【提示】你已佩戴“色欲” ！
+
+[@进阶色欲]
+#if
+equal U120 2
+#act
+sendmsg 9 提示：“色欲”已经是最顶级！     
+break
+
+#if
+#act
+messagebox 提示：进阶需要残剑碎片300片+点卷3000，是否确认进阶“色欲”     @确定进阶色欲 @取消
+
+[@确定进阶色欲]
+
+
+#if
+CheckBindMoney 绑定点卷 < 3000
+#act
+sendmsg 9 点卷不足！无法进阶！
+break
+
+#if
+checkitems 残剑碎片#300
+#act
+takes 残剑碎片#300
+ChangeBindMoney 绑定点卷 3000
+DEPRIVETITLE 色欲
+CONFERTITLE 色·欲
+sendmsg 9 恭喜您！进阶“色欲”成功！！！
+mov U120 2
+#elseact
+sendmsg 9 背包里的残剑碎片不足，无法激活！
+;===============================================================
+[@激活饕餮]
+#if
+equal U120 0
+#act
+sendmsg 9 请先激活“色欲” 再来激活饕餮！
+break
+
+#if
+#act
+messagebox 提示：激活需要残剑碎片100片，是否确认激活“饕餮”     @确定激活饕餮 @取消
+
+[@确定激活饕餮]
+#if
+checkitems 残剑碎片#100
+#act
+takes 残剑碎片#100
+mov U121 1
+sendmsg 9 激活　“饕餮”　成功！
+CONFERTITLE 饕餮
+goto @main
+#elseact
+sendmsg 9 背包里的残剑碎片不足，无法激活！
+
+[@佩戴饕餮]
+#if
+check [251] 0
+#act
+mov S$饕餮佩戴 <Effect|x=150|y=110|effectid=70276|effecttype=0|scale=0.85|count=999999999999|act=0|speed=1>
+addbutton 3902 201 <$STR(s$饕餮佩戴)>
+set [250] 0
+set [251] 1
+set [252] 0
+set [253] 0
+set [254] 0
+set [255] 0
+set [256] 0
+DELBUTTON 3902 200
+DELBUTTON 3902 202
+DELBUTTON 3902 202
+DELBUTTON 3902 203
+DELBUTTON 3902 204
+DELBUTTON 3902 205
+DELBUTTON 3902 206
+goto @main
+sendmsg 9 【提示】佩戴成功！
+#elseact
+sendmsg 9 【提示】你已佩戴“饕餮” ！
+
+[@进阶饕餮]
+#if
+small U120 2
+#act
+sendmsg 9 提示：需先进阶“色欲”！ 
+break
+
+#if
+equal U121 2
+#act
+sendmsg 9 提示：“饕餮”已经是最顶级！     
+break
+
+#if
+#act
+messagebox 提示：进阶需要残剑碎片300片+点卷3000，是否确认进阶“饕餮”     @确定进阶饕餮 @取消
+
+[@确定进阶饕餮]
+
+
+#if
+CheckBindMoney 绑定点卷 < 3000
+#act
+sendmsg 9 点卷不足！无法进阶！
+break
+
+#if
+checkitems 残剑碎片#300
+#act
+takes 残剑碎片#300
+ChangeBindMoney 绑定点卷 3000
+DEPRIVETITLE 饕餮
+CONFERTITLE  饕·餮
+sendmsg 9 恭喜您！进阶“饕餮”成功！！！
+mov U121 2
+#elseact
+sendmsg 9 背包里的残剑碎片不足，无法激活！
+;===============================================================
+[@激活嫉妒]
+#if
+equal U121 0
+#act
+sendmsg 9 请先激活“饕餮” 再来激活嫉妒！
+break
+
+#if
+#act
+messagebox 提示：激活需要残剑碎片100片，是否确认激活“嫉妒”     @确定激活嫉妒 @取消
+
+[@确定激活嫉妒]
+#if
+checkitems 残剑碎片#100
+#act
+takes 残剑碎片#100
+mov U122 1
+sendmsg 9 激活　“嫉妒”　成功！
+CONFERTITLE 嫉妒
+goto @main
+#elseact
+sendmsg 9 背包里的残剑碎片不足，无法激活！
+
+[@佩戴嫉妒]
+#if
+check [252] 0
+#act
+mov S$嫉妒佩戴 <Effect|x=150|y=110|effectid=70280|effecttype=0|scale=0.85|count=999999999999|act=0|speed=1>
+addbutton 3902 202 <$STR(s$嫉妒佩戴)>
+set [250] 0
+set [251] 0
+set [252] 1
+set [253] 0
+set [254] 0
+set [255] 0
+set [256] 0
+DELBUTTON 3902 200
+DELBUTTON 3902 201
+DELBUTTON 3902 203
+DELBUTTON 3902 204
+DELBUTTON 3902 205
+DELBUTTON 3902 206
+goto @main
+sendmsg 9 【提示】佩戴成功！
+#elseact
+sendmsg 9 【提示】你已佩戴“嫉妒” ！
+
+[@进阶嫉妒]
+#if
+small U121 2
+#act
+sendmsg 9 提示：需先进阶“饕餮”！ 
+break
+
+#if
+equal U122 2
+#act
+sendmsg 9 提示：“嫉妒”已经是最顶级！     
+break
+
+#if
+#act
+messagebox 提示：进阶需要残剑碎片300片+点卷3000，是否确认进阶“嫉妒”     @确定进阶嫉妒 @取消
+
+[@确定进阶嫉妒]
+
+
+#if
+CheckBindMoney 绑定点卷 < 3000
+#act
+sendmsg 9 点卷不足！无法进阶！
+break
+
+#if
+checkitems 残剑碎片#300
+#act
+takes 残剑碎片#300
+ChangeBindMoney 绑定点卷 3000
+DEPRIVETITLE 嫉妒
+CONFERTITLE 嫉·妒
+sendmsg 9 恭喜您！进阶“嫉妒”成功！！！
+mov U122 2
+#elseact
+sendmsg 9 背包里的残剑碎片不足，无法激活！
+;===============================================================
+
+
+[@激活懒惰]
+#if
+equal U122 0
+#act
+sendmsg 9 请先激活“嫉妒” 再来激活懒惰！
+break
+
+
+#if
+#act
+messagebox 提示：激活需要残剑碎片100片，是否确认激活“懒惰”     @确定激活懒惰 @取消
+
+[@确定激活懒惰]
+#if
+checkitems 残剑碎片#100
+#act
+takes 残剑碎片#100
+mov U123 1
+sendmsg 9 激活　“懒惰”　成功！
+CONFERTITLE 懒惰
+goto @main
+#elseact
+sendmsg 9 背包里的残剑碎片不足，无法激活！
+
+[@佩戴懒惰]
+#if
+check [253] 0
+#act
+mov S$懒惰佩戴 <Effect|x=150|y=110|effectid=70281|effecttype=0|scale=0.85|count=999999999999|act=0|speed=1>
+addbutton 3902 203 <$STR(s$懒惰佩戴)>
+set [250] 0
+set [251] 0
+set [252] 0
+set [253] 1
+set [254] 0
+set [255] 0
+set [256] 0
+DELBUTTON 3902 200
+DELBUTTON 3902 201
+DELBUTTON 3902 202
+DELBUTTON 3902 204
+DELBUTTON 3902 205
+DELBUTTON 3902 206
+goto @main
+sendmsg 9 【提示】佩戴成功！
+#elseact
+sendmsg 9 【提示】你已佩戴“懒惰” ！
+
+[@进阶懒惰]
+#if
+small U122 2
+#act
+sendmsg 9 提示：需先进阶“嫉妒”！ 
+break
+
+#if
+equal U123 2
+#act
+sendmsg 9 提示：“懒惰”已经是最顶级！     
+break
+
+#if
+#act
+messagebox 提示：进阶需要残剑碎片300片+点卷3000，是否确认进阶“懒惰”     @确定进阶懒惰 @取消
+
+[@确定进阶懒惰]
+
+
+#if
+CheckBindMoney 绑定点卷 < 3000
+#act
+sendmsg 9 点卷不足！无法进阶！
+break
+
+#if
+checkitems 残剑碎片#300
+#act
+takes 残剑碎片#300
+ChangeBindMoney 绑定点卷 3000
+DEPRIVETITLE 懒惰
+CONFERTITLE 懒·惰
+sendmsg 9 恭喜您！进阶“懒惰”成功！！！
+mov U123 2
+#elseact
+sendmsg 9 背包里的残剑碎片不足，无法激活！
+;=================================================================
+[@激活贪婪]
+#if
+equal U123 0
+#act
+sendmsg 9 请先激活“懒惰” 再来激活贪婪！
+break
+
+
+#if
+#act
+messagebox 提示：激活需要残剑碎片100片，是否确认激活“贪婪”     @确定激活贪婪 @取消
+
+[@确定激活贪婪]
+#if
+checkitems 残剑碎片#100
+#act
+takes 残剑碎片#100
+mov U124 1
+sendmsg 9 激活　“贪婪”　成功！
+CONFERTITLE 贪婪
+#CALL [\功能脚本\经验管理.txt] @经验管理页面
+goto @main
+#elseact
+sendmsg 9 背包里的残剑碎片不足，无法激活！
+
+[@佩戴贪婪]
+#if
+check [254] 0
+#act
+mov S$贪婪佩戴 <Effect|x=150|y=110|effectid=70279|effecttype=0|scale=0.85|count=999999999999|act=0|speed=1>
+addbutton 3902 204 <$STR(s$贪婪佩戴)>
+set [250] 0
+set [251] 0
+set [252] 0
+set [253] 0
+set [254] 1
+set [255] 0
+set [256] 0
+DELBUTTON 3902 200
+DELBUTTON 3902 201
+DELBUTTON 3902 202
+DELBUTTON 3902 203
+DELBUTTON 3902 205
+DELBUTTON 3902 206
+goto @main
+sendmsg 9 【提示】佩戴成功！
+#elseact
+sendmsg 9 【提示】你已佩戴“贪婪” ！
+
+[@进阶贪婪]
+#if
+small U123 2
+#act
+sendmsg 9 提示：需先进阶“懒惰”！ 
+break
+
+#if
+equal U124 2
+#act
+sendmsg 9 提示：“贪婪”已经是最顶级！     
+break
+
+#if
+#act
+messagebox 提示：进阶需要残剑碎片300片+点卷3000，是否确认进阶“贪婪”     @确定进阶贪婪 @取消
+
+[@确定进阶贪婪]
+
+
+#if
+CheckBindMoney 绑定点卷 < 3000
+#act
+sendmsg 9 点卷不足！无法进阶！
+break
+
+#if
+checkitems 残剑碎片#300
+#act
+takes 残剑碎片#300
+ChangeBindMoney 绑定点卷 3000
+DEPRIVETITLE 贪婪
+CONFERTITLE 贪·婪
+#CALL [\功能脚本\经验管理.txt] @经验管理页面
+sendmsg 9 恭喜您！进阶“贪婪”成功！！！
+mov U124 2
+#elseact
+sendmsg 9 背包里的残剑碎片不足，无法激活！
+
+;-=====================================================================================
+
+
+
+[@激活傲慢]
+#if
+equal U124 0
+#act
+sendmsg 9 请先激活“贪婪” 再来激活傲慢！
+break
+
+
+
+#if
+#act
+messagebox 提示：激活需要残剑碎片100片，是否确认激活“傲慢”     @确定激活傲慢 @取消
+
+[@确定激活傲慢]
+#if
+checkitems 残剑碎片#100
+#act
+takes 残剑碎片#100
+mov U125 1
+sendmsg 9 激活　“傲慢”　成功！
+CONFERTITLE 傲慢
+goto @main
+#elseact
+sendmsg 9 背包里的残剑碎片不足，无法激活！
+
+[@佩戴傲慢]
+#if
+check [255] 0
+#act
+mov S$傲慢佩戴 <Effect|x=150|y=110|effectid=70282|effecttype=0|scale=0.85|count=999999999999|act=0|speed=1>
+addbutton 3902 205 <$STR(s$傲慢佩戴)>
+set [250] 0
+set [251] 0
+set [252] 0
+set [253] 0
+set [254] 0
+set [255] 1
+set [256] 0
+DELBUTTON 3902 200
+DELBUTTON 3902 201
+DELBUTTON 3902 202
+DELBUTTON 3902 203
+DELBUTTON 3902 204
+DELBUTTON 3902 206
+goto @main
+sendmsg 9 【提示】佩戴成功！
+#elseact
+sendmsg 9 【提示】你已佩戴“傲慢” ！
+
+[@进阶傲慢]
+#if
+small U124 2
+#act
+sendmsg 9 提示：需先进阶“懒惰”！ 
+break
+
+#if
+equal U125 2
+#act
+sendmsg 9 提示：“傲慢”已经是最顶级！     
+break
+
+#if
+#act
+messagebox 提示：进阶需要残剑碎片300片+点卷3000，是否确认进阶“傲慢”     @确定进阶傲慢 @取消
+
+[@确定进阶傲慢]
+
+
+#if
+CheckBindMoney 绑定点卷 < 3000
+#act
+sendmsg 9 点卷不足！无法进阶！
+break
+
+#if
+checkitems 残剑碎片#300
+#act
+takes 残剑碎片#300
+ChangeBindMoney 绑定点卷 3000
+DEPRIVETITLE 傲慢
+CONFERTITLE 傲·慢
+sendmsg 9 恭喜您！进阶“傲慢”成功！！！
+mov U125 2
+#elseact
+sendmsg 9 背包里的残剑碎片不足，无法激活！
+
+[@激活暴怒]
+#if
+equal U125 0
+#act
+sendmsg 9 请先激活“傲慢” 再来激活暴怒！
+break
+
+
+
+#if
+#act
+messagebox 提示：激活需要残剑碎片100片，是否确认激活“暴怒”     @确定激活暴怒 @取消
+
+[@确定激活暴怒]
+#if
+checkitems 残剑碎片#100
+#act
+takes 残剑碎片#100
+mov U126 1
+sendmsg 9 激活　“暴怒”　成功！
+CONFERTITLE 暴怒
+#CALL [\功能脚本\切割管理.txt] @称号切割伤害
+goto @main
+#elseact
+sendmsg 9 背包里的残剑碎片不足，无法激活！
+
+[@佩戴暴怒]
+#if
+check [256] 0
+#act
+mov S$暴怒佩戴 <Effect|x=150|y=110|effectid=70277|effecttype=0|scale=0.85|count=999999999999|act=0|speed=1>
+addbutton 3902 206 <$STR(s$暴怒佩戴)>
+set [250] 0
+set [251] 0
+set [252] 0
+set [253] 0
+set [254] 0
+set [255] 0
+set [256] 1
+DELBUTTON 3902 200
+DELBUTTON 3902 201
+DELBUTTON 3902 202
+DELBUTTON 3902 203
+DELBUTTON 3902 204
+DELBUTTON 3902 205
+goto @main
+sendmsg 9 【提示】佩戴成功！
+#elseact
+sendmsg 9 【提示】你已佩戴“暴怒” ！
+
+[@进阶暴怒]
+#if
+small U125 2
+#act
+sendmsg 9 提示：需先进阶“傲慢”！ 
+break
+
+#if
+equal U126 2
+#act
+sendmsg 9 提示：“暴怒”已经是最顶级！     
+break
+
+#if
+#act
+messagebox 提示：进阶需要残剑碎片300片+点卷3000，是否确认进阶“暴怒”     @确定进阶暴怒 @取消
+
+[@确定进阶暴怒]
+
+
+#if
+CheckBindMoney 绑定点卷 < 3000
+#act
+sendmsg 9 点卷不足！无法进阶！
+break
+
+#if
+checkitems 残剑碎片#300
+#act
+takes 残剑碎片#300
+ChangeBindMoney 绑定点卷 3000
+DEPRIVETITLE 暴怒
+CONFERTITLE 暴·怒
+#CALL [\功能脚本\切割管理.txt] @称号切割伤害
+sendmsg 9 恭喜您！进阶“暴怒”成功！！！
+mov U126 2
+#elseact
+sendmsg 9 背包里的残剑碎片不足，无法激活！
+
+
+
+
+
+
+
+
+
+
+

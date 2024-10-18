@@ -1,0 +1,77 @@
+[@微信界面]   
+{   
+#act   
+;CloseBigDialogBox   
+#say   
+;<>  <img:69:8:0:40>   
+<> <输入微信礼包码领取微信礼包！/FCOLOR=254>\   
+<> <微信礼包码: lvzhou666 /FCOLOR=254>\   
+<> <礼包赠送：/FCOLOR=70><双倍经验卷 * 3/FCOLOR=250>\   
+<> <100w经验/FCOLOR=250>  <夜明珠 * 1/FCOLOR=250>  <输入微信礼包码/@@InPutString8(请输入您的微信专属礼包码：)>\   
+<> <--------------------------------------/FCOLOR=90>\   
+<> <加入“白月沉默”官方担保QQ群：601817401/FCOLOR=253>\   
+<> <领QQ群专属礼包码！/FCOLOR=253>  \   
+<> <礼包赠送：/FCOLOR=70><聚灵珠(大)*5/FCOLOR=250>\   
+<> <100w经验/FCOLOR=250>  <勾玉 * 1/FCOLOR=250>  <输入QQ群礼包码/@@InPutString9(请输入您的QQ群专属礼包码：)>\   
+;<>  <img:69:8:-10:-140>   
+   
+[@InPutString8]   
+#if   
+checklevelex < 35   
+#act   
+messagebox 你连35级都没有，还是先去升级吧！   
+break   
+#if   
+check [4] 1   
+#act   
+messagebox 您已经领取过此礼包！   
+break   
+#if   
+equal S8 lvzhou666   
+CHECKBAGSIZE 5   
+#act   
+set [4] 1   
+CHANGEEXP + 1000000   
+GiveStateItem 双倍卷轴 1 1 0 0 1 1 0 3   
+GiveStateItem 夜明珠[普通] 0 1 0 0 1 1 1 1   
+sendmsg 0 恭喜玩家【<$USERNAME>】成功领取微信专属礼包！ 250 0   
+sendmsg 0 恭喜玩家【<$USERNAME>】成功领取微信专属礼包！ 250 0   
+break   
+#elseact   
+messagebox 您输入的微信专属礼包码不正确,或者背包空格不足5个   
+break   
+   
+[@InPutString9]   
+#if   
+checklevelex < 35   
+#act   
+messagebox 你连35级都没有，还是先去升级吧！   
+break   
+#if   
+check [3] 1   
+#act   
+messagebox 您已经领取过此礼包！   
+break   
+#if   
+equal S9 lvzhou888   
+CHECKBAGSIZE 6   
+#act   
+set [3] 1   
+CHANGEEXP + 1000000   
+GiveStateItem 勾玉[普通] 0 1 0 0 1 1 1 1   
+GiveStateItem 聚灵珠(大) 1 1 0 0 1 1 0 5   
+sendmsg 0 恭喜玩家【<$USERNAME>】成功领取QQ群专属礼包！ 250 0   
+sendmsg 0 恭喜玩家【<$USERNAME>】成功领取QQ群专属礼包！ 250 0   
+break   
+#elseact   
+messagebox 您输入的QQ群专属礼包码不正确,或者背包空格不足6个   
+break   
+   
+   
+}   
+   
+  
+  
+ 
+ 
+

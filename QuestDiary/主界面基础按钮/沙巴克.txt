@@ -1,0 +1,278 @@
+[@沙巴克界面]
+{
+
+
+
+
+#if
+#act
+mov S$行会报名的页面
+mov S$攻城规则的页面
+mov S$打开沙巴克的页面
+goto @沙巴克选择页面
+
+[@沙巴克选择页面]
+<Button|x=-2526.0|y=-1172.0|width=115120|height=112880|pimg=npc/zd.png|size=18|color=224|nimg=npc/zd.png|mimg=npc/zd.png|link=@exit>
+<Img|x=-64.0|y=-14.0|width=1026|height=660|rotate=0|img=topbtn/sbk/bj.png|reset=1|esc=1|move=0|bg=1|show=4|loadDelay=0>
+<Button|x=895.0|y=29.0|mimg=public/close-2.png|nimg=public/close-2.png|link=@exit>
+<Button|x=356.0|y=533.0|width=199|height=52|mimg=topbtn/sbk/1.png|nimg=topbtn/sbk/1.png|link=@前往沙巴克>
+<Button|x=12.0|y=563.0|width=107|height=36|nimg=topbtn/sbk/2.png|mimg=topbtn/sbk/2.png|link=@行会报名>
+<Button|x=792.0|y=563.0|width=107|height=36|nimg=topbtn/sbk/3.png|mimg=topbtn/sbk/3.png|link=@攻城规则>
+
+
+<Img|x=614|y=69|width=284|height=238|children={a,b}|rotate=0|img=topbtn/sbk/bj3.png|reset=1|esc=1|move=0|show=4|loadDelay=0>
+<Button|id=a|x=27.0|y=196.0|width=99|height=32|mimg=topbtn/sbk/4.png|nimg=topbtn/sbk/4.png|link=@胜方领取>
+<Button|id=b|x=165.0|y=196.0|width=99|height=32|mimg=topbtn/sbk/5.png|nimg=topbtn/sbk/5.png|link=@败方领取>
+
+
+
+
+
+<$STR(S$打开沙巴克的页面)>
+<$STR(S$行会报名的页面)>
+<$STR(S$攻城规则的页面)>
+
+
+[@胜方领取]
+#IF
+EQUAL <$HOUR> 21
+SMALL <$MINUTE> 10
+#ELSEACT
+SENDMSG 9 21:00~21:10分之间方可进入
+BREAK
+
+#IF
+CHECKUNDERWAR 沙巴克
+#ACT
+SENDMSG 9 沙巴克攻城期间禁止进入
+BREAK
+
+#IF
+EQUAL A1 
+#ACT
+SENDMSG 9 未开启攻城或奖励发放完毕
+BREAK
+
+#IF
+NOT ISCASTLEGUILD
+#ACT
+SENDMSG 9 非沙巴克成员统一失败方进入
+BREAK
+
+#if
+NOT CHECKTITLE 狂暴之力
+#act
+SENDMSG 9 没有开启狂暴者无法进入
+BREAK
+
+#IF
+#ACT
+MAPMOVE slf 22 32 5
+
+[@败方领取]
+#IF
+EQUAL <$HOUR> 21
+SMALL <$MINUTE> 10
+#ELSEACT
+SENDMSG 9 21:00~21:10分之间方可进入
+BREAK
+
+#IF
+CHECKUNDERWAR 沙巴克
+#ACT
+SENDMSG 9 沙巴克攻城期间禁止进入
+BREAK
+
+#IF
+EQUAL A1 
+#ACT
+SENDMSG 9 未开启攻城或奖励发放完毕
+BREAK
+
+#IF
+ISCASTLEGUILD
+#ACT
+SENDMSG 9 沙巴克成员统一胜利方进入
+BREAK
+
+#if
+NOT CHECKTITLE 狂暴之力
+#act
+SENDMSG 9 没有开启狂暴者无法进入
+BREAK
+
+#IF
+#ACT
+MAPMOVE sbf 22 32 5
+
+
+[@前往沙巴克]
+#if
+#act
+
+mov S$打开沙巴克的页面 <Img|x=-17.0|y=93.0|rotate=0|img=topbtn/sbk/000030.png|bg=0|move=0|esc=1|reset=1|show=4|loadDelay=0>
+inc S$打开沙巴克的页面 <Button|x=602.0|y=243.0|mimg=topbtn/sbk/01.png|nimg=topbtn/sbk/01.png|link=@沙巴克大门>
+inc S$打开沙巴克的页面 <Button|x=423.0|y=93.0|mimg=topbtn/sbk/02.png|nimg=topbtn/sbk/06.png|link=@沙巴克服装>
+inc S$打开沙巴克的页面 <Button|x=376.0|y=139.0|mimg=topbtn/sbk/03.png|nimg=topbtn/sbk/03.png|link=@沙巴克复活点>
+inc S$打开沙巴克的页面 <Button|x=292.0|y=171.0|mimg=topbtn/sbk/04.png|nimg=topbtn/sbk/04.png|link=@沙巴克垃圾口>
+inc S$打开沙巴克的页面 <Button|x=463.0|y=254.0|mimg=topbtn/sbk/05.png|nimg=topbtn/sbk/05.png|link=@沙巴克武器>
+inc S$打开沙巴克的页面 <Button|x=556.0|y=168.0|mimg=topbtn/sbk/06.png|nimg=topbtn/sbk/02.png|link=@沙巴克练武场>
+inc S$打开沙巴克的页面 <Button|x=745.0|y=257.0|mimg=topbtn/sbk/guanbi.png|nimg=topbtn/sbk/guanbi.png|link=@关闭沙巴克>
+inc S$打开沙巴克的页面 <Effect|x=70.0|y=249.0|scale=1|speed=2|dir=5|effecttype=0|effectid=69000|act=0>
+goto @沙巴克选择页面
+
+
+[@沙巴克大门]
+#IF   
+NOT CHECKUNDERWAR 沙巴克   
+#ACT   
+SENDMSG 9 该功能只有在攻城期间才可使用！   
+break   
+
+
+
+#if
+#act
+MAPMOVE 3 675 333 5
+
+
+[@沙巴克服装]
+#IF   
+NOT CHECKUNDERWAR 沙巴克   
+#ACT   
+SENDMSG 9 该功能只有在攻城期间才可使用！   
+break   
+
+#if
+#act
+MAPMOVE 3 663 283 5
+
+[@沙巴克复活点]
+#IF   
+NOT CHECKUNDERWAR 沙巴克   
+#ACT   
+SENDMSG 9 该功能只有在攻城期间才可使用！   
+break   
+
+#if
+#act
+MAPMOVE 3 628 283 0
+
+[@沙巴克垃圾口]
+#IF   
+NOT CHECKUNDERWAR 沙巴克   
+#ACT   
+SENDMSG 9 该功能只有在攻城期间才可使用！   
+break   
+
+#if
+#act
+MAPMOVE 3 596 294 5
+
+[@沙巴克武器]
+#IF   
+NOT CHECKUNDERWAR 沙巴克   
+#ACT   
+SENDMSG 9 该功能只有在攻城期间才可使用！   
+break   
+
+#if
+#act
+MAPMOVE 3 636 317 5
+
+[@沙巴克练武场]
+#IF   
+NOT CHECKUNDERWAR 沙巴克   
+#ACT   
+SENDMSG 9 该功能只有在攻城期间才可使用！   
+break   
+
+#if
+#act
+MAPMOVE 3 686 294 5
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[@关闭沙巴克]
+#if
+#act
+mov S$打开沙巴克的页面
+goto @沙巴克选择页面
+
+
+
+[@行会报名]
+#if
+#act
+mov S$行会报名的页面 <Button|x=-2526.0|y=-1172.0|width=115120|height=112880|pimg=npc/zd.png|size=18|color=224|nimg=npc/zd.png|mimg=npc/zd.png|link=@关闭行会报名>
+inc S$行会报名的页面 <Img|x=223.0|y=228.0|width=461|height=250|rotate=0|bg=0|img=topbtn/sbk/331.png|esc=1|move=0|show=4|reset=1|loadDelay=0>
+inc S$行会报名的页面 <Button|x=402.0|y=393.0|width=106|height=34|nimg=topbtn/sbk/bm.png|mimg=topbtn/sbk/bm.png|link=@提交沙巴克报名>
+inc S$行会报名的页面 <ItemShow|x=320.0|y=369.0|width=70|height=70|itemid=20048|itemcount=1|bgtype=1|showtips=1>
+goto @沙巴克选择页面
+
+[@提交沙巴克报名]
+#if
+equal <$HFDAYS> 0
+#act
+sendmsg 9 首次沙巴克不需要报名
+break
+
+#if
+equal <$HFDAYS> 1
+#act
+sendmsg 9 合区首次沙巴克不需要报名
+break
+
+#if
+not equal <$USERNAME> <$ChiefName>
+#act
+sendmsg 9 只有掌门才可以报名！
+break
+
+#if
+checkitem 祖玛头像 1
+#act
+take 祖玛头像 1
+ADDTOCASTLEWARLIST 沙巴克 <$GUILDNAME>
+sendmsg 9 报名成功
+
+[@关闭行会报名]
+#if
+#act
+mov S$行会报名的页面 
+goto @沙巴克选择页面
+
+[@攻城规则]
+#if
+#act
+mov S$攻城规则的页面 <Button|x=-2526.0|y=-1172.0|width=115120|height=112880|pimg=npc/zd.png|size=18|color=224|nimg=npc/zd.png|mimg=npc/zd.png|link=@关闭规则>
+inc S$攻城规则的页面 <Img|x=229.0|y=162.0|width=450|height=320|rotate=0|bg=0|img=topbtn/sbk/00110.png|show=4|reset=1|esc=1|move=0|loadDelay=0>
+goto @沙巴克选择页面
+
+[@关闭规则]
+#if
+#act
+mov S$攻城规则的页面 
+goto @沙巴克选择页面
+}

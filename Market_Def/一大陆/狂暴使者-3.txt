@@ -1,0 +1,52 @@
+[@main]
+#if
+check [66] 0
+#act
+set [66] 1
+#CALL [\任务系统\任务系统QF.txt] @任务系统QF
+
+
+
+#IF
+#say
+<Button|x=-2526.0|y=-1172.0|width=115120|height=112880|mimg=npc/zd.png|color=224|nimg=npc/zd.png|size=18|pimg=npc/zd.png|link=@exit>
+<Img|children={1}|a=4|x=453.0|y=233.5|width=900|height=507|reset=1|show=4|img=npc/kbzl/bj.png|move=0|bg=1|loadDelay=0|esc=1>
+<Frames|id=1|a=4|x=174.0|y=272.5|width=450|height=375|speed=8|loop=-1|prefix=npc/kbzld/kb_|suffix=.png|count=15>
+<Text|x=521.0|y=79.0|size=16|outline=2|color=116|text=+20%>
+<Text|x=690.0|y=80.0|size=16|outline=2|color=116|text=+15%>
+<Text|x=521.0|y=109.0|size=16|outline=2|color=116|text=+15%>
+<Text|x=688.0|y=109.0|size=16|outline=2|color=116|text=+1.1倍>
+<Text|x=549.0|y=359.0|size=16|outline=2|color=116|text=100点卷>
+<Text|x=583.0|y=388.0|size=16|outline=2|color=116|text=50点卷>
+<Button|x=196.0|y=391.0|nimg=npc/kbzl/btn.png|mimg=npc/kbzl/btn.png|link=@开启狂暴>
+<Button|x=789.0|y=14.0|nimg=public/close-t.png|mimg=public/close-t.png|link=@exit>
+
+
+
+[@开启狂暴]
+#if
+CHECKTITLE 狂暴之力
+#act
+sendmsg 9 [提示]: 你已经拥有狂暴之力，无需再次点击
+
+break
+
+#if   
+CHECKMONEY 点卷 ? 100 
+#act   
+goto @去狂暴
+#elseact
+sendmsg 9 [提示]: 你没有足够的点卷,无法开启狂暴之力！
+break
+
+[@去狂暴]
+#act
+CONFERTITLE 狂暴之力
+SetIcon 2 1 20320 -40 25 0 0
+MONEY 点卷 - 100
+sendmsg 9 [提示]: 你已成功开启狂暴之力！
+
+
+
+
+

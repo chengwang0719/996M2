@@ -1,0 +1,315 @@
+[@main]
+#if
+CheckMonMap 1111 1
+#act
+sendmsg 9 你需要将该地图的怪物全部清理！才可以打开！
+#elseact
+goto @兑换的页面
+
+[@兑换的页面]
+#if
+#say
+<Button|x=-2526.0|y=-1172.0|width=115120|height=112880|pimg=npc/zd.png|nimg=npc/zd.png|color=224|mimg=npc/zd.png|size=18|link=@exit>
+<Img|a=4|x=516.0|y=261.0|width=976|height=550|loadDelay=0|reset=1|bg=1|show=4|move=0|esc=1|img=npc/swd/bj.png>
+<Button|x=795.0|y=65.0|mimg=public/close-t.png|nimg=public/close-t.png|link=@exit>
+
+<Button|x=401.0|y=297.0|width=146|height=38|mimg=npc/swd/1.png|nimg=npc/swd/1.png|link=@1号前往>
+<Button|x=658.0|y=297.0|width=146|height=38|mimg=npc/swd/2.png|nimg=npc/swd/2.png|link=@2号前往>
+<Button|x=401.0|y=353.0|width=146|height=38|mimg=npc/swd/3.png|nimg=npc/swd/3.png|link=@3号前往>
+<Button|x=658.0|y=353.0|width=146|height=38|mimg=npc/swd/4.png|nimg=npc/swd/4.png|link=@4号前往>
+<Button|x=542.0|y=414.0|width=122|height=38|mimg=npc/swd/5.png|nimg=npc/swd/5.png|link=@书页兑换页面>
+
+
+
+
+[@1号前往]
+#if
+#act
+mapmove 1112  15 13 1
+
+[@2号前往]
+#if
+#act
+mapmove 1113  15 13 1
+
+[@3号前往]
+#if
+#act
+mapmove 1114  15 13 1
+
+[@4号前往]
+#if
+#act
+mapmove 1115  15 13 1
+
+
+[@书页兑换页面]
+#if
+#act
+close
+goto @最终兑换的页面
+
+[@最终兑换的页面]
+#if
+#say
+<Button|x=-2526.0|y=-1172.0|width=115120|height=112880|pimg=npc/zd.png|nimg=npc/zd.png|color=224|mimg=npc/zd.png|size=18|link=@exit>
+<Img|x=2.0|y=-10.0|width=780|height=480|reset=1|esc=1|move=0|loadDelay=0|bg=1|show=4|img=npc/swd/bj2.png>
+<ListView|children={1,2,3,4,5,6,7,8,9,10,11,12,13,14}|x=54.0|y=103.0|width=680|height=340|reload=1|direction=1|cantouch=1|margin=4>
+<Button|x=737.0|y=-1.0|mimg=public/close-2.png|nimg=public/close-2.png|link=@exit>
+
+
+
+<Img|id=1|children={1a,2a,3a,4a}|x=0.0|y=0.0|width=675|loadDelay=0|reset=1|show=4|move=0|img=npc/swd/20.png>
+<Text|id=1a|x=34.0|y=22.0|size=16|color=246|outline=2|text=基本剑术>
+<ItemShow|id=2a|x=104.0|y=0.0|width=70|height=70|itemid=20051|itemcount=1|scale=0.8|showtips=1|bgtype=1>
+<Text|id=3a|x=308.0|y=22.0|size=16|color=246|outline=2|text=200书页>
+<Button|id=4a|x=505.0|y=12.0|width=123|height=39|nimg=npc/swd/434.png|mimg=npc/swd/434.png|link=@兑书#兑换的名字=基本剑术>
+
+
+
+<Img|id=2|children={1b,2b,3b,4b}|x=0.0|y=65.0|width=675|loadDelay=0|reset=1|show=4|move=0|img=npc/swd/20.png>
+<Text|id=1b|x=34.0|y=22.0|size=16|color=246|outline=2|text=魔法盾>
+<ItemShow|id=2b|x=104.0|y=0.0|width=70|height=70|itemid=20076|itemcount=1|scale=0.8|showtips=1|bgtype=1>
+<Text|id=3b|x=308.0|y=22.0|size=16|color=246|outline=2|text=200书页>
+<Button|id=4b|x=505.0|y=12.0|width=123|height=39|nimg=npc/swd/434.png|mimg=npc/swd/434.png|link=@兑书#兑换的名字=魔法盾>
+
+
+
+<Img|id=3|children={1c,2c,3c,4c}|x=0.0|y=130.0|width=675|loadDelay=0|reset=1|show=4|move=0|img=npc/swd/20.png>
+<Text|id=1c|x=28.0|y=22.0|size=16|color=246|outline=2|text=群体施毒术>
+<ItemShow|id=2c|x=104.0|y=0.0|width=70|height=70|itemid=20135|itemcount=1|scale=0.8|showtips=1|bgtype=1>
+<Text|id=3c|x=308.0|y=22.0|size=16|color=246|outline=2|text=200书页>
+<Button|id=4c|x=505.0|y=12.0|width=123|height=39|nimg=npc/swd/434.png|mimg=npc/swd/434.png|link=@兑书#兑换的名字=群体施毒术>
+
+
+<Img|id=4|children={1d,2d,3d,4d}|x=0.0|y=195.0|width=675|loadDelay=0|reset=1|show=4|move=0|img=npc/swd/20.png>
+<Text|id=1d|x=34.0|y=22.0|size=16|color=246|outline=2|text=烈火剑法>
+<ItemShow|id=2d|x=104.0|y=0.0|width=70|height=70|itemid=20079|itemcount=1|scale=0.8|showtips=1|bgtype=1>
+<Text|id=3d|x=308.0|y=22.0|size=16|color=246|outline=2|text=300书页>
+<Button|id=4d|x=505.0|y=12.0|width=123|height=39|nimg=npc/swd/434.png|mimg=npc/swd/434.png|link=@兑书#兑换的名字=烈火剑法>
+
+
+<Img|id=5|children={1e,2e,3e,4e}|x=0.0|y=260.0|width=675|loadDelay=0|reset=1|show=4|move=0|img=npc/swd/20.png>
+<Text|id=1e|x=34.0|y=22.0|size=16|color=246|outline=2|text=逐日剑法>
+<ItemShow|id=2e|x=104.0|y=0.0|width=70|height=70|itemid=20087|itemcount=1|scale=0.8|showtips=1|bgtype=1>
+<Text|id=3e|x=308.0|y=22.0|size=16|color=246|outline=2|text=350书页>
+<Button|id=4e|x=505.0|y=12.0|width=123|height=39|nimg=npc/swd/434.png|mimg=npc/swd/434.png|link=@兑书#兑换的名字=逐日剑法>
+
+<Img|id=6|children={1f,2f,3f,4f}|x=0.0|y=325.0|width=675|loadDelay=0|reset=1|show=4|move=0|img=npc/swd/20.png>
+<Text|id=1f|x=34.0|y=22.0|size=16|color=246|outline=2|text=冰咆哮>
+<ItemShow|id=2f|x=104.0|y=0.0|width=70|height=70|itemid=20081|itemcount=1|scale=0.8|showtips=1|bgtype=1>
+<Text|id=3f|x=308.0|y=22.0|size=16|color=246|outline=2|text=350书页>
+<Button|id=4f|x=505.0|y=12.0|width=123|height=39|nimg=npc/swd/434.png|mimg=npc/swd/434.png|link=@兑书#兑换的名字=冰咆哮>
+
+
+<Img|id=7|children={1g,2g,3g,4g}|x=0.0|y=390.0|width=675|loadDelay=0|reset=1|show=4|move=0|img=npc/swd/20.png>
+<Text|id=1g|x=34.0|y=22.0|size=16|color=246|outline=2|text=幽灵盾>
+<ItemShow|id=2g|x=104.0|y=0.0|width=70|height=70|itemid=20066|itemcount=1|scale=0.8|showtips=1|bgtype=1>
+<Text|id=3g|x=308.0|y=22.0|size=16|color=246|outline=2|text=300书页>
+<Button|id=4g|x=505.0|y=12.0|width=123|height=39|nimg=npc/swd/434.png|mimg=npc/swd/434.png|link=@兑书#兑换的名字=幽灵盾>
+
+
+<Img|id=8|children={1h,2h,3h,4h}|x=0.0|y=455.0|width=675|loadDelay=0|reset=1|show=4|move=0|img=npc/swd/20.png>
+<Text|id=1h|x=28.0|y=22.0|size=16|color=246|outline=2|text=神圣战甲术>
+<ItemShow|id=2h|x=104.0|y=0.0|width=70|height=70|itemid=20069|itemcount=1|scale=0.8|showtips=1|bgtype=1>
+<Text|id=3h|x=308.0|y=22.0|size=16|color=246|outline=2|text=300书页>
+<Button|id=4h|x=505.0|y=12.0|width=123|height=39|nimg=npc/swd/434.png|mimg=npc/swd/434.png|link=@兑书#兑换的名字=神圣战甲术>
+
+<Img|id=9|children={1i,2i,3i,4i}|x=0.0|y=520.0|width=675|loadDelay=0|reset=1|show=4|move=0|img=npc/swd/20.png>
+<Text|id=1i|x=34.0|y=22.0|size=16|color=246|outline=2|text=开天斩>
+<ItemShow|id=2i|x=104.0|y=0.0|width=70|height=70|itemid=20088|itemcount=1|scale=0.8|showtips=1|bgtype=1>
+<Text|id=3i|x=308.0|y=22.0|size=16|color=246|outline=2|text=500书页>
+<Button|id=4i|x=505.0|y=12.0|width=123|height=39|nimg=npc/swd/434.png|mimg=npc/swd/434.png|link=@兑书#兑换的名字=开天斩>
+
+
+<Img|id=10|children={1j,2j,3j,4j}|x=0.0|y=585.0|width=675|loadDelay=0|reset=1|show=4|move=0|img=npc/swd/20.png>
+<Text|id=1j|x=34.0|y=22.0|size=16|color=246|outline=2|text=流星火雨>
+<ItemShow|id=2j|x=104.0|y=0.0|width=70|height=70|itemid=20094|itemcount=1|scale=0.8|showtips=1|bgtype=1>
+<Text|id=3j|x=308.0|y=22.0|size=16|color=246|outline=2|text=500书页>
+<Button|id=4j|x=505.0|y=12.0|width=123|height=39|nimg=npc/swd/434.png|mimg=npc/swd/434.png|link=@兑书#兑换的名字=流星火雨>
+
+<Img|id=11|children={1k,2k,3k,4k}|x=0.0|y=650|width=675|loadDelay=0|reset=1|show=4|move=0|img=npc/swd/20.png>
+<Text|id=1k|x=34.0|y=22.0|size=16|color=246|outline=2|text=飓风破>
+<ItemShow|id=2k|x=104.0|y=0.0|width=70|height=70|itemid=20102|itemcount=1|scale=0.8|showtips=1|bgtype=1>
+<Text|id=3k|x=308.0|y=22.0|size=16|color=246|outline=2|text=500书页>
+<Button|id=4k|x=505.0|y=12.0|width=123|height=39|nimg=npc/swd/434.png|mimg=npc/swd/434.png|link=@兑书#兑换的名字=飓风破>
+
+
+<Img|id=12|children={1q,2q,3q,4q}|x=0.0|y=715.0|width=675|loadDelay=0|reset=1|show=4|move=0|img=npc/swd/20.png>
+<Text|id=1q|x=34.0|y=22.0|size=16|color=246|outline=2|text=十步一杀>
+<ItemShow|id=2q|x=104.0|y=0.0|width=70|height=70|itemid=20117|itemcount=1|scale=0.8|showtips=1|bgtype=1>
+<Text|id=3q|x=308.0|y=22.0|size=16|color=246|outline=2|text=750书页>
+<Button|id=4q|x=505.0|y=12.0|width=123|height=39|nimg=npc/swd/434.png|mimg=npc/swd/434.png|link=@兑书#兑换的名字=十步一杀>
+
+
+
+<Img|id=13|children={2w,1w,3w,4w}|x=0.0|y=780.0|width=675|loadDelay=0|reset=1|show=4|move=0|img=npc/swd/20.png>
+<Text|id=2w|x=34.0|y=22.0|size=16|color=246|outline=2|text=冰霜群雨>
+<ItemShow|id=1w|x=104.0|y=0.0|width=70|height=70|itemid=20097|itemcount=1|scale=0.8|showtips=1|bgtype=1>
+<Text|id=3w|x=308.0|y=22.0|size=16|color=246|outline=2|text=750书页>
+<Button|id=4w|x=505.0|y=12.0|width=123|height=39|nimg=npc/swd/434.png|mimg=npc/swd/434.png|link=@兑书#兑换的名字=冰霜群雨>
+
+<Img|id=14|children={1r,2r,3r,4r}|x=0.0|y=780.0|width=675|loadDelay=0|reset=1|show=4|move=0|img=npc/swd/20.png>
+<Text|id=1r|x=34.0|y=22.0|size=16|color=246|outline=2|text=死亡之眼>
+<ItemShow|id=2r|x=104.0|y=0.0|width=70|height=70|itemid=20112|itemcount=1|scale=0.8|showtips=1|bgtype=1>
+<Text|id=3r|x=308.0|y=22.0|size=16|color=246|outline=2|text=750书页>
+<Button|id=4r|x=505.0|y=12.0|width=123|height=39|nimg=npc/swd/434.png|mimg=npc/swd/434.png|link=@兑书#兑换的名字=死亡之眼>
+
+<$STR(S$兑换的名字)>
+
+[@兑书]
+#or
+equal S$兑换的名字 基本剑术
+equal S$兑换的名字 魔法盾
+equal S$兑换的名字 群体施毒术
+#act
+goto @200书页兑换
+
+#or
+equal S$兑换的名字 逐日剑法
+equal S$兑换的名字 冰咆哮
+#act
+goto @350书页兑换
+
+#or
+equal S$兑换的名字 烈火剑法
+equal S$兑换的名字 幽灵盾
+equal S$兑换的名字 神圣战甲术
+#act
+goto @300书页兑换
+
+#or
+equal S$兑换的名字 开天斩
+equal S$兑换的名字 流星火雨
+equal S$兑换的名字 飓风破
+#act
+goto @500书页兑换
+
+#or
+equal S$兑换的名字 十步一杀
+equal S$兑换的名字 冰霜群雨
+equal S$兑换的名字 死亡之眼
+#act
+goto @750书页兑换
+
+
+[@200书页兑换]
+#if
+NOT CHECKITEMS <$STR(S$兑换的名字)>#1 0
+#act
+sendmsg 9 没有该技能书！无法兑换！
+break
+
+
+#if
+CHECKITEMS <$STR(S$兑换的名字)>#1
+equal U50 1 
+#act
+takes <$STR(S$兑换的名字)> 1
+give 书页 200
+sendmsg 9 兑换成功！
+
+#if
+CHECKITEMS <$STR(S$兑换的名字)>#1
+equal U50 0
+#act
+takes <$STR(S$兑换的名字)> 1
+GiveStateItem 书页 200 1 1 0 0 1 0 1 1
+sendmsg 9 兑换成功！
+
+[@300书页兑换]
+#if
+NOT CHECKITEMS <$STR(S$兑换的名字)>#1 0
+#act
+sendmsg 9 没有该技能书！无法兑换！
+break
+
+
+#if
+CHECKITEMS <$STR(S$兑换的名字)>#1
+equal U50 1 
+#act
+takes <$STR(S$兑换的名字)> 1
+give 书页 300
+sendmsg 9 兑换成功！
+
+#if
+CHECKITEMS <$STR(S$兑换的名字)>#1
+equal U50 0
+#act
+takes <$STR(S$兑换的名字)> 1
+GiveStateItem 书页 300 1 1 0 0 1 0 1 1
+sendmsg 9 兑换成功！
+
+[@350书页兑换]
+#if
+NOT CHECKITEMS <$STR(S$兑换的名字)>#1
+#act
+sendmsg 9 没有该技能书！无法兑换！
+break
+
+
+#if
+CHECKITEMS <$STR(S$兑换的名字)>#1
+equal U50 1 
+#act
+takes <$STR(S$兑换的名字)> 1
+give 书页 350
+sendmsg 9 兑换成功！
+
+#if
+CHECKITEMS <$STR(S$兑换的名字)>#1
+equal U50 0
+#act
+takes <$STR(S$兑换的名字)> 1
+GiveStateItem 书页 350 1 1 0 0 1 0 1 1
+sendmsg 9 兑换成功！
+
+[@500书页兑换]
+#if
+NOT CHECKITEMS <$STR(S$兑换的名字)>#1
+#act
+sendmsg 9 没有该技能书！无法兑换！
+break
+
+
+#if
+CHECKITEMS <$STR(S$兑换的名字)>#1
+equal U50 1 
+#act
+takes <$STR(S$兑换的名字)> 1
+give 书页 500
+sendmsg 9 兑换成功！
+
+#if
+CHECKITEMS <$STR(S$兑换的名字)>#1
+equal U50 0
+#act
+takes <$STR(S$兑换的名字)> 1
+GiveStateItem 书页 500 1 1 0 0 1 0 1 1
+sendmsg 9 兑换成功！
+
+
+[@750书页兑换]
+#if
+NOT CHECKITEMS <$STR(S$兑换的名字)>#1
+#act
+sendmsg 9 没有该技能书！无法兑换！
+break
+
+
+#if
+CHECKITEMS <$STR(S$兑换的名字)>#1
+equal U50 1 
+#act
+takes <$STR(S$兑换的名字)> 1
+give 书页 750
+sendmsg 9 兑换成功！
+
+#if
+CHECKITEMS <$STR(S$兑换的名字)>#1
+equal U50 0
+#act
+takes <$STR(S$兑换的名字)> 1
+GiveStateItem 书页 750 1 1 0 0 1 0 1 1
+sendmsg 9 兑换成功！

@@ -1,0 +1,87 @@
+[@会员主页面]
+{
+
+<Button|x=-2526.0|y=-1172.0|width=115120|height=112880|mimg=npc/zd.png|color=224|nimg=npc/zd.png|size=18|pimg=npc/zd.png|link=@exit>
+<Img|reset=1|img=npc/sclb/bj1.png|bg=1|show=0|move=0|esc=1|loadDelay=1>
+<Layout|x=840.0|y=8.0|width=80|height=80|link=@exit>
+<Button|x=866.0|y=33.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|x=350.0|y=488.0|size=18|outline=1|outlinecolor=0|color=150|text=当前您累计充值：$STM(MONEY_充值点)元>
+<Button|x=615.0|y=480.0|color=255|nimg=npc/sclb/jh-1.png|pimg=npc/sclb/jh-2.png|mimg=npc/sclb/jh-3.png|size=18|link=@激活会员>
+<Img|x=294.0|y=559.0|width=600|img=public/bg_npcsm_01.png|esc=0>
+<Text|x=299.0|y=569.0|size=18|color=253|bgtype=0|showtips=1|text=会员豪华礼包>
+<Img|x=451.0|y=557.0|width=72|height=65|img=public/1900000678_1.png|esc=0>
+<Img|x=779.0|y=557.0|width=72|height=65|img=public/1900000678_1.png|esc=0>
+<Img|x=669.0|y=557.0|width=72|height=65|img=public/1900000678_1.png|esc=0>
+<Img|x=560.0|y=557.0|width=72|height=65|img=public/1900000678_1.png|esc=0>
+;<ItemShow|x=456.0|y=554.0|width=70|height=70|itemid=10443|itemcount=1|bgtype=0|showtips=1>
+;<ItemShow|x=782.0|y=555.0|width=70|height=70|itemid=20015|itemcount=3|bgtype=0|showtips=1>
+;<ItemShow|x=673.0|y=557.0|width=70|height=70|itemid=20169|itemcount=1|bgtype=0|showtips=1>
+;<ItemShow|x=565.0|y=556.0|width=70|height=70|itemid=20109|itemcount=1|bgtype=0|showtips=1>
+<ItemShow|x=456.0|y=554.0|width=70|height=70|itemid=10404|itemcount=1|bgtype=0|showtips=1>
+<ItemShow|x=565.0|y=555.0|width=70|height=70|itemid=10404|itemcount=1|bgtype=0|showtips=1>
+<ItemShow|x=673.0|y=557.0|width=70|height=70|itemid=20015|itemcount=3|bgtype=0|showtips=1>
+<ItemShow|x=782.0|y=556.0|width=70|height=70|itemid=20169|itemcount=1|bgtype=0|showtips=1>
+<Text|x=299.0|y=595.0|size=18|color=253|text=激活会员赠送>
+
+
+
+[@激活会员]
+#IF
+CHECKMONEY 充值点 < 98
+#ACT
+Pullpay 98 3 2
+BREAK
+
+#if
+CHECKTITLE 湘逢会员
+#act
+SENDMSG 9 您已经拥有该称号了！
+break
+
+
+#IF
+CHECKMONEY 充值点 ? 98
+NOT CHECKTITLE 湘逢会员
+check [51] 1
+#act
+DEPRIVETITLE 首充辅助
+CONFERTITLE 首充辅助(永久)
+CONFERTITLE 湘逢会员
+;GiveStateItem 昔缘 1 0 1 0 0 1 1 1 1
+;GiveStateItem 聚灵珠(大) 3 0 1 0 0 1 1 1 1
+GiveStateItem 湘逢护剑[寒光] 1 0 1 0 0 1 1 1 1
+GiveStateItem 湘逢护剑[寒光] 1 0 1 0 0 1 1 1 1
+GiveStateItem 聚灵珠(大) 3 0 1 0 0 1 1 1 1
+GiveStateItem 首充助力 1 0 1 0 0 1 1 1 1
+SET [203] 1
+#CALL [\主界面基础按钮\主界面游戏按钮.txt] @界面游戏按钮
+SENDMSG 9 恭喜您成功领取会员称号！
+break
+
+
+#IF
+CHECKMONEY 充值点 ? 98
+NOT CHECKTITLE 湘逢会员
+#ACT
+CONFERTITLE 湘逢会员
+;GiveStateItem 昔缘 1 0 1 0 0 1 1 1 1
+;GiveStateItem 聚灵珠(大) 3 0 1 0 0 1 1 1 1
+GiveStateItem 湘逢护剑[寒光] 1 0 1 0 0 1 1 1 1
+GiveStateItem 湘逢护剑[寒光] 1 0 1 0 0 1 1 1 1
+GiveStateItem 聚灵珠(大) 3 0 1 0 0 1 1 1 1
+GiveStateItem 首充助力 1 0 1 0 0 1 1 1 1
+SET [203] 1
+#CALL [\主界面基础按钮\主界面游戏按钮.txt] @界面游戏按钮
+SENDMSG 9 恭喜您成功领取会员称号！
+break
+
+
+
+[@确定充值]
+#IF
+#ACT
+OPENHYPERLINK 26
+
+
+
+}

@@ -1,0 +1,24 @@
+[@main]
+#if
+check [236] 0
+#act
+set [236] 1
+sendmsg 7 恭喜您！完成隐藏任务...奖励已领取
+GiveStateItem 锻造神石 30 0 0 0 0 0 0 1 0
+MONEY 绑定元宝 + 1000000
+
+
+#if
+CheckJob Warrior
+#act
+#call [\合成脚本\战士.txt] @战士武器合成
+
+#if
+CheckJob Wizard
+#act
+#call [\合成脚本\法师.txt] @法师武器合成
+
+#if
+CheckJob Taoist
+#act
+#call [\合成脚本\道士.txt] @道士武器合成

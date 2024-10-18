@@ -1,0 +1,3284 @@
+[@main]
+#if
+#act
+;sendmsg 9 <$STR(U110)>
+;mov U111 0
+
+;------
+;-mov U107 0
+;-mov U109 0
+
+;------
+;-MOV U75 0
+;-MOV U76 0
+
+
+
+#if
+#act
+set [240] 0
+set [241] 0
+set [242] 0
+set [243] 0
+set [244] 0
+
+set [400] 0
+mov N$第一坐标 -1000
+mov N$第二坐标 -1000
+mov N$坐标1 -1000
+mov N$坐标2 -1000
+mov N$坐标3 -1000
+mov N$坐标4 -1000
+mov N$坐标5 -1000
+mov S$激活页面
+mov S$紫阳花页面银框
+mov S$红军果页面银框
+mov S$紫菱花页面银框
+mov S$白莲灵页面银框
+mov S$九阴灵芝页面银框
+mov S$紫阳花页面逻辑
+mov S$红军果页面逻辑
+mov S$紫菱花页面逻辑
+mov S$白莲灵页面逻辑
+mov S$九阴灵芝页面逻辑
+mov S$药剂规则
+goto @刷新页面
+
+[@刷新页面]
+#if
+equal U101 0
+equal U68 1
+#act
+mov S$紫阳花名字 紫阳花Lv.1
+mov S$紫阳花属性 攻击上限+5
+mov S$紫阳花点卡费用 点卡1000
+
+#if
+equal U101 1
+equal U68 1
+#act
+mov S$紫阳花名字 紫阳花Lv.2
+mov S$紫阳花属性 攻击上限+10
+mov S$紫阳花点卡费用 点卡2000
+
+#if
+equal U101 2
+equal U68 1
+#act
+mov S$紫阳花名字 紫阳花Lv.3
+mov S$紫阳花属性 攻击上限+15
+mov S$紫阳花点卡费用 点卡3000
+
+#if
+equal U101 3
+equal U68 1
+#act
+mov S$紫阳花名字 紫阳花Lv.4
+mov S$紫阳花属性 攻击上限+20
+mov S$紫阳花点卡费用 点卡4000
+
+#if
+equal U101 4
+equal U68 1
+#act
+mov S$紫阳花名字 紫阳花Lv.5
+mov S$紫阳花属性 攻击上限+25
+mov S$紫阳花点卡费用 点卡5000
+
+
+#if
+equal U101 0
+equal U68 2
+#act
+mov S$紫阳花名字 紫阳花Lv.1
+mov S$紫阳花属性 魔法上限+5
+mov S$紫阳花点卡费用 点卡1000
+
+#if
+equal U101 1
+equal U68 2
+#act
+mov S$紫阳花名字 紫阳花Lv.2
+mov S$紫阳花属性 魔法上限+10
+mov S$紫阳花点卡费用 点卡2000
+
+#if
+equal U101 2
+equal U68 2
+#act
+mov S$紫阳花名字 紫阳花Lv.3
+mov S$紫阳花属性 魔法上限+15
+mov S$紫阳花点卡费用 点卡3000
+
+#if
+equal U101 3
+equal U68 2
+#act
+mov S$紫阳花名字 紫阳花Lv.4
+mov S$紫阳花属性 魔法上限+20
+mov S$紫阳花点卡费用 点卡4000
+
+#if
+equal U101 4
+equal U68 2
+#act
+mov S$紫阳花名字 紫阳花Lv.5
+mov S$紫阳花属性 魔法上限+25
+mov S$紫阳花卡费用 点卡5000
+
+#if
+equal U101 0
+equal U68 3
+#act
+mov S$紫阳花名字 紫阳花Lv.1
+mov S$紫阳花属性 道术上限+5
+mov S$紫阳花点卡费用 点卡1000
+
+#if
+equal U101 1
+equal U68 3
+#act
+mov S$紫阳花名字 紫阳花Lv.2
+mov S$紫阳花属性 道术上限+10
+mov S$紫阳花点卡费用 点卡2000
+
+#if
+equal U101 2
+equal U68 3
+#act
+mov S$紫阳花名字 紫阳花Lv.3
+mov S$紫阳花属性 道术上限+15
+mov S$紫阳花点卡费用 点卡3000
+
+#if
+equal U101 3
+equal U68 3
+#act
+mov S$紫阳花名字 紫阳花Lv.4
+mov S$紫阳花属性 道术上限+20
+mov S$紫阳花点卡费用 点卡4000
+
+#if
+equal U101 4
+equal U68 3
+#act
+mov S$紫阳花名字 紫阳花Lv.5
+mov S$紫阳花属性 道术上限+25
+mov S$紫阳花点卡费用 点卡5000
+;=================================================
+
+#if
+equal U102 0
+equal U69 1
+#act
+mov S$红军果名字 红军果Lv.1
+mov S$红军果属性 生命值+100
+mov S$红军果点卡费用 点卡1000
+
+#if
+equal U102 1
+equal U69 1
+#act
+mov S$红军果名字 红军果Lv.2
+mov S$红军果属性 生命值+150
+mov S$红军果点卡费用 点卡2000
+
+#if
+equal U102 2
+equal U69 1
+#act
+mov S$红军果名字 红军果Lv.3
+mov S$红军果属性 生命值+200
+mov S$红军果点卡费用 点卡3000
+
+#if
+equal U102 3
+equal U69 1
+#act
+mov S$红军果名字 红军果Lv.4
+mov S$红军果属性 生命值+250
+mov S$红军果点卡费用 点卡4000
+
+#if
+equal U102 4
+equal U69 1
+#act
+mov S$红军果名字 红军果Lv.5
+mov S$红军果属性 生命值+300
+mov S$红军果点卡费用 点卡5000
+
+
+#if
+equal U102 0
+equal U69 2
+#act
+mov S$红军果名字 红军果Lv.1
+mov S$红军果属性 魔法防御+5
+mov S$红军果点卡费用 点卡1000
+
+#if
+equal U102 1
+equal U69 2
+#act
+mov S$红军果名字 红军果Lv.2
+mov S$红军果属性 魔法防御+10
+mov S$红军果点卡费用 点卡2000
+
+#if
+equal U102 2
+equal U69 2
+#act
+mov S$红军果名字 红军果Lv.3
+mov S$红军果属性 魔法防御+15
+mov S$红军果点卡费用 点卡3000
+
+#if
+equal U102 3
+equal U69 2
+#act
+mov S$红军果名字 红军果Lv.4
+mov S$红军果属性 魔法防御+20
+mov S$红军果点卡费用 点卡4000
+
+#if
+equal U102 4
+equal U69 2
+#act
+mov S$红军果名字 红军果Lv.5
+mov S$红军果属性 魔法防御+25
+mov S$红军果点卡费用 点卡5000
+
+#if
+equal U102 0
+equal U69 3
+#act
+mov S$红军果名字 红军果Lv.1
+mov S$红军果属性 物理防御+5
+mov S$红军果点卡费用 点卡1000
+
+#if
+equal U102 1
+equal U69 3
+#act
+mov S$红军果名字 红军果Lv.2
+mov S$红军果属性 物理防御+10
+mov S$红军果点卡费用 点卡2000
+
+#if
+equal U102 2
+equal U69 3
+#act
+mov S$红军果名字 红军果Lv.3
+mov S$红军果属性 物理防御+15
+mov S$红军果点卡费用 点卡3000
+
+#if
+equal U102 3
+equal U69 3
+#act
+mov S$红军果名字 红军果Lv.4
+mov S$红军果属性 物理防御+20
+mov S$红军果点卡费用 点卡4000
+
+#if
+equal U102 4
+equal U69 3
+#act
+mov S$红军果名字 红军果Lv.5
+mov S$红军果属性 物理防御+25
+mov S$红军果点卡费用 点卡5000
+
+
+;=================================================
+
+#if
+equal U103 0
+equal U70 1
+#act
+mov S$紫菱花名字 紫菱花Lv.1
+mov S$紫菱花属性 降低暴装概率+1%
+mov S$紫菱花点卡费用 点卡1000
+
+#if
+equal U103 1
+equal U70 1
+#act
+mov S$紫菱花名字 紫菱花Lv.2
+mov S$紫菱花属性 降低暴装概率+2%
+mov S$紫菱花点卡费用 点卡2000
+
+#if
+equal U103 2
+equal U70 1
+#act
+mov S$紫菱花名字 紫菱花Lv.3
+mov S$紫菱花属性 降低暴装概率+3%
+mov S$紫菱花点卡费用 点卡3000
+
+#if
+equal U103 3
+equal U70 1
+#act
+mov S$紫菱花名字 紫菱花Lv.4
+mov S$紫菱花属性 降低暴装概率+4%
+mov S$紫菱花点卡费用 点卡4000
+
+#if
+equal U103 4
+equal U70 1
+#act
+mov S$紫菱花名字 紫菱花Lv.5
+mov S$紫菱花属性 降低暴装概率+5%
+mov S$紫菱花点卡费用 点卡5000
+
+
+#if
+equal U103 0
+equal U70 2
+#act
+mov S$紫菱花名字 紫菱花Lv.1
+mov S$紫菱花属性 人物爆率+1%
+mov S$紫菱花点卡费用 点卡1000
+
+#if
+equal U103 1
+equal U70 2
+#act
+mov S$紫菱花名字 紫菱花Lv.2
+mov S$紫菱花属性 人物爆率+2%
+mov S$紫菱花点卡费用 点卡2000
+
+#if
+equal U103 2
+equal U70 2
+#act
+mov S$紫菱花名字 紫菱花Lv.3
+mov S$紫菱花属性 人物爆率+3%
+mov S$紫菱花点卡费用 点卡3000
+
+#if
+equal U103 3
+equal U70 2
+#act
+mov S$紫菱花名字 紫菱花Lv.4
+mov S$紫菱花属性 人物爆率+4%
+mov S$紫菱花点卡费用 点卡4000
+
+#if
+equal U103 4
+equal U70 2
+#act
+mov S$紫菱花名字 紫菱花Lv.5
+mov S$紫菱花属性 人物爆率+5%
+mov S$紫菱花点卡费用 点卡5000
+
+#if
+equal U103 0
+equal U70 3
+#act
+mov S$紫菱花名字 紫菱花Lv.1
+mov S$紫菱花属性 怪物爆率+1%
+mov S$紫菱花点卡费用 点卡1000
+
+#if
+equal U103 1
+equal U70 3
+#act
+mov S$紫菱花名字 紫菱花Lv.2
+mov S$紫菱花属性 怪物爆率+2%
+mov S$紫菱花点卡费用 点卡2000
+
+#if
+equal U103 2
+equal U70 3
+#act
+mov S$紫菱花名字 紫菱花Lv.3
+mov S$紫菱花属性 怪物爆率+3%
+mov S$紫菱花点卡费用 点卡3000
+
+#if
+equal U103 3
+equal U70 3
+#act
+mov S$紫菱花名字 紫菱花Lv.4
+mov S$紫菱花属性 怪物爆率+4%
+mov S$紫菱花点卡费用 点卡4000
+
+#if
+equal U103 4
+equal U70 3
+#act
+mov S$紫菱花名字 紫菱花Lv.5
+mov S$紫菱花属性 怪物爆率+5%
+mov S$紫菱花点卡费用 点卡5000
+;===============================================================
+;=================================================
+
+#if
+equal U107 0
+equal U75 1
+#act
+mov S$白莲灵名字 白莲灵Lv.1
+mov S$白莲灵属性 韧性+1%
+mov S$白莲灵点卡费用 点卡1000
+
+#if
+equal U107 1
+equal U75 1
+#act
+mov S$白莲灵名字 白莲灵Lv.2
+mov S$白莲灵属性 韧性+2%
+mov S$白莲灵点卡费用 点卡2000
+
+#if
+equal U107 2
+equal U75 1
+#act
+mov S$白莲灵名字 白莲灵Lv.3
+mov S$白莲灵属性 韧性+3%
+mov S$白莲灵点卡费用 点卡3000
+
+#if
+equal U107 3
+equal U75 1
+#act
+mov S$白莲灵名字 白莲灵Lv.4
+mov S$白莲灵属性 韧性+4%
+mov S$白莲灵点卡费用 点卡4000
+
+#if
+equal U107 4
+equal U75 1
+#act
+mov S$白莲灵名字 白莲灵Lv.5
+mov S$白莲灵属性 韧性+5%
+mov S$白莲灵点卡费用 点卡5000
+
+
+#if
+equal U107 0
+equal U75 2
+#act
+mov S$白莲灵名字 白莲灵Lv.1
+mov S$白莲灵属性 伤害减免+1%
+mov S$白莲灵点卡费用 点卡1000
+
+#if
+equal U107 1
+equal U75 2
+#act
+mov S$白莲灵名字 白莲灵Lv.2
+mov S$白莲灵属性 伤害减免+2%
+mov S$白莲灵点卡费用 点卡2000
+
+#if
+equal U107 2
+equal U75 2
+#act
+mov S$白莲灵名字 白莲灵Lv.3
+mov S$白莲灵属性 伤害减免+3%
+mov S$白莲灵点卡费用 点卡3000
+
+#if
+equal U107 3
+equal U75 2
+#act
+mov S$白莲灵名字 白莲灵Lv.4
+mov S$白莲灵属性 伤害减免+4%
+mov S$白莲灵点卡费用 点卡4000
+
+#if
+equal U107 4
+equal U75 2
+#act
+mov S$白莲灵名字 白莲灵Lv.5
+mov S$白莲灵属性 伤害减免+5%
+mov S$白莲灵点卡费用 点卡5000
+
+#if
+equal U107 0
+equal U75 3
+#act
+mov S$白莲灵名字 白莲灵Lv.1
+mov S$白莲灵属性 暴击抵抗+1%
+mov S$白莲灵点卡费用 点卡1000
+
+#if
+equal U107 1
+equal U75 3
+#act
+mov S$白莲灵名字 白莲灵Lv.2
+mov S$白莲灵属性 暴击抵抗+2%
+mov S$白莲灵点卡费用 点卡2000
+
+#if
+equal U107 2
+equal U75 3
+#act
+mov S$白莲灵名字 白莲灵Lv.3
+mov S$白莲灵属性 暴击抵抗+3%
+mov S$白莲灵点卡费用 点卡3000
+
+#if
+equal U107 3
+equal U75 3
+#act
+mov S$白莲灵名字 白莲灵Lv.4
+mov S$白莲灵属性 暴击抵抗+4%
+mov S$白莲灵点卡费用 点卡4000
+
+#if
+equal U107 4
+equal U75 3
+#act
+mov S$白莲灵名字 白莲灵Lv.5
+mov S$白莲灵属性 暴击抵抗+5%
+mov S$白莲灵点卡费用 点卡5000
+;=================================================
+#if
+equal U110 0
+equal U78 1
+#act
+mov S$九阴灵芝名字 九阴灵芝Lv.1
+mov S$九阴灵芝属性 暴击率+1%
+mov S$九阴灵芝点卡费用 点卡1000
+
+#if
+equal U110 1
+equal U78 1
+#act
+mov S$九阴灵芝名字 九阴灵芝Lv.2
+mov S$九阴灵芝属性 暴击率+2%
+mov S$九阴灵芝点卡费用 点卡2000
+
+#if
+equal U110 2
+equal U78 1
+#act
+mov S$九阴灵芝名字 九阴灵芝Lv.3
+mov S$九阴灵芝属性 暴击率+3%
+mov S$九阴灵芝点卡费用 点卡3000
+
+#if
+equal U110 3
+equal U78 1
+#act
+mov S$九阴灵芝名字 九阴灵芝Lv.4
+mov S$九阴灵芝属性 暴击率+4%
+mov S$九阴灵芝点卡费用 点卡4000
+
+#if
+equal U110 4
+equal U78 1
+#act
+mov S$九阴灵芝名字 九阴灵芝Lv.5
+mov S$九阴灵芝属性 暴击率+5%
+mov S$九阴灵芝点卡费用 点卡5000
+
+
+#if
+equal U110 0
+equal U78 2
+#act
+mov S$九阴灵芝名字 九阴灵芝Lv.1
+mov S$九阴灵芝属性 暴击伤害+1%
+mov S$九阴灵芝点卡费用 点卡1000
+
+#if
+equal U110 1
+equal U78 2
+#act
+mov S$九阴灵芝名字 九阴灵芝Lv.2
+mov S$九阴灵芝属性 暴击伤害+2%
+mov S$九阴灵芝点卡费用 点卡2000
+
+#if
+equal U110 2
+equal U78 2
+#act
+mov S$九阴灵芝名字 九阴灵芝Lv.3
+mov S$九阴灵芝属性 暴击伤害+3%
+mov S$九阴灵芝点卡费用 点卡3000
+
+#if
+equal U110 3
+equal U78 2
+#act
+mov S$九阴灵芝名字 九阴灵芝Lv.4
+mov S$九阴灵芝属性 暴击伤害+4%
+mov S$九阴灵芝点卡费用 点卡4000
+
+#if
+equal U110 4
+equal U78 2
+#act
+mov S$九阴灵芝名字 九阴灵芝Lv.5
+mov S$九阴灵芝属性 暴击伤害+5%
+mov S$九阴灵芝点卡费用 点卡5000
+
+#if
+equal U110 0
+equal U78 3
+#act
+mov S$九阴灵芝名字 九阴灵芝Lv.1
+mov S$九阴灵芝属性 攻击增伤+1%
+mov S$九阴灵芝点卡费用 点卡1000
+
+#if
+equal U110 1
+equal U78 3
+#act
+mov S$九阴灵芝名字 九阴灵芝Lv.2
+mov S$九阴灵芝属性 攻击增伤+2%
+mov S$九阴灵芝点卡费用 点卡2000
+
+#if
+equal U110 2
+equal U78 3
+#act
+mov S$九阴灵芝名字 九阴灵芝Lv.3
+mov S$九阴灵芝属性 攻击增伤+3%
+mov S$九阴灵芝点卡费用 点卡3000
+
+#if
+equal U110 3
+equal U78 3
+#act
+mov S$九阴灵芝名字 九阴灵芝Lv.4
+mov S$九阴灵芝属性 攻击增伤+4%
+mov S$九阴灵芝点卡费用 点卡4000
+
+#if
+equal U110 4
+equal U78 3
+#act
+mov S$九阴灵芝名字 九阴灵芝Lv.5
+mov S$九阴灵芝属性 攻击增伤+5%
+mov S$九阴灵芝点卡费用 点卡5000
+
+
+
+
+#if
+equal U68 0
+#act
+mov S$紫阳花页面 <Img|id=b|children={100,101,102,103}|a=4|x=113.0|y=74.5|width=228|height=93|img=npc/yjs/kuang.png|move=0|loadDelay=0|esc=1|show=4|reset=1|link=@点击激活>
+INC S$紫阳花页面 <Effect|id=100|x=48.0|y=47.0|scale=1.2|speed=2|effectid=45000|effecttype=0|dir=5|act=0>
+INC S$紫阳花页面 <Text|id=101|x=98.0|y=19.0|size=18|color=255|text=紫阳花Lv.1>
+INC S$紫阳花页面 <Text|id=102|x=92.0|y=47.0|size=16|color=255|text=三选一:攻魔道>
+INC S$紫阳花页面 <Img|id=103|a=4|x=112.0|y=48.5|width=228|height=93|img=npc/yjs/jh.png|loadDelay=0|reset=1|move=0|esc=1|show=4>
+goto @药剂师页面
+
+#if
+large U68 0
+#act
+mov S$紫阳花页面 <Img|id=b|children={100,101,102,103,104}|a=4|x=113.0|y=74.5|width=228|height=93|img=npc/yjs/kuang.png|move=0|loadDelay=0|esc=1|show=4|reset=1|link=@点击展示>
+INC S$紫阳花页面 <Effect|id=100|x=48.0|y=47.0|scale=1.2|speed=2|effectid=45000|effecttype=0|dir=5|act=0>
+INC S$紫阳花页面 <Text|id=101|x=90.0|y=19.0|size=18|color=255|text=<$STR(S$紫阳花名字)>>
+INC S$紫阳花页面 <Text|id=102|x=92.0|y=49.0|size=16|color=255|text=<$STR(S$紫阳花属性)>>
+goto @药剂师页面
+
+;-------------------------------------------------------
+#if
+equal U69 0
+CHECKLEVELEX < 52
+#act
+mov S$红军果页面 <Img|id=c|children={200,201,202,203,204}|a=4|x=113.0|y=180.5|width=228|height=93|img=npc/yjs/kuang.png|move=0|loadDelay=0|esc=1|show=4|reset=1|link=@点击红军果>
+INC S$红军果页面 <Effect|id=200|x=48.0|y=47.0|scale=1.2|speed=2|effectid=45001|effecttype=0|dir=5|act=0>
+INC S$红军果页面 <Text|id=201|x=98.0|y=19.0|size=18|color=255|text=红军果Lv.1>
+INC S$红军果页面 <Text|id=202|x=92.0|y=47.0|size=16|color=255|text=三选一:防御加成>
+INC S$红军果页面 <Img|id=203|a=4|x=112.0|y=48.5|width=228|height=93|img=npc/yjs/lock.png|loadDelay=0|reset=1|move=0|esc=1|show=4>
+goto @药剂师页面
+
+#if
+equal U69 0
+CHECKLEVELEX > 51
+#act
+mov S$红军果页面 <Img|id=c|children={200,201,202,203,204}|a=4|x=113.0|y=180.5|width=228|height=93|img=npc/yjs/kuang.png|move=0|loadDelay=0|esc=1|show=4|reset=1|link=@点击激活红军果>
+INC S$红军果页面 <Effect|id=200|x=48.0|y=47.0|scale=1.2|speed=2|effectid=45001|effecttype=0|dir=5|act=0>
+INC S$红军果页面 <Text|id=201|x=98.0|y=19.0|size=18|color=255|text=红军果Lv.1>
+INC S$红军果页面 <Text|id=202|x=92.0|y=47.0|size=16|color=255|text=三选一:防御加成>
+INC S$红军果页面 <Img|id=203|a=4|x=112.0|y=48.5|width=228|height=93|img=npc/yjs/jh.png|loadDelay=0|reset=1|move=0|esc=1|show=4>
+goto @药剂师页面
+
+#if
+large U69 0
+CHECKLEVELEX > 51
+#act
+mov S$红军果页面 <Img|id=c|children={200,201,202,203,204}|a=4|x=113.0|y=180.5|width=228|height=93|img=npc/yjs/kuang.png|move=0|loadDelay=0|esc=1|show=4|reset=1|link=@点击展示红军果>
+INC S$红军果页面 <Effect|id=200|x=48.0|y=47.0|scale=1.2|speed=2|effectid=45001|effecttype=0|dir=5|act=0>
+INC S$红军果页面 <Text|id=201|x=90.0|y=19.0|size=18|color=255|text=<$STR(S$红军果名字)>>
+INC S$红军果页面 <Text|id=202|x=92.0|y=49.0|size=16|color=255|text=<$STR(S$红军果属性)>>
+goto @药剂师页面
+
+;--------------------------------------------------------------------------------
+#if
+equal U70 0
+CHECKLEVELEX < 53
+#act
+mov S$紫菱花页面 <Img|id=d|children={300,301,302,303,304}|a=4|x=113.0|y=283.5|width=228|height=93|img=npc/yjs/kuang.png|move=0|loadDelay=0|esc=1|show=4|reset=1|link=@点击紫菱花>
+INC S$紫菱花页面 <Effect|id=300|x=48.0|y=47.0|scale=1.2|speed=2|effectid=45002|effecttype=0|dir=5|act=0>
+INC S$紫菱花页面 <Text|id=301|x=98.0|y=19.0|size=18|color=255|text=紫菱花Lv.1>
+INC S$紫菱花页面 <Text|id=302|x=92.0|y=47.0|size=16|color=255|text=三选一:爆率增加>
+INC S$紫菱花页面 <Img|id=303|a=4|x=112.0|y=48.5|width=228|height=93|img=npc/yjs/lock.png|loadDelay=0|reset=1|move=0|esc=1|show=4>
+goto @药剂师页面
+
+#if
+equal U70 0
+CHECKLEVELEX > 52
+#act
+mov S$紫菱花页面 <Img|id=d|children={300,301,302,303,304}|a=4|x=113.0|y=283.5|width=228|height=93|img=npc/yjs/kuang.png|move=0|loadDelay=0|esc=1|show=4|reset=1|link=@点击激活紫菱花>
+INC S$紫菱花页面 <Effect|id=300|x=48.0|y=47.0|scale=1.2|speed=2|effectid=45002|effecttype=0|dir=5|act=0>
+INC S$紫菱花页面 <Text|id=301|x=98.0|y=19.0|size=18|color=255|text=紫菱花Lv.1>
+INC S$紫菱花页面 <Text|id=302|x=92.0|y=47.0|size=16|color=255|text=三选一:爆率增加>
+INC S$紫菱花页面 <Img|id=303|a=4|x=112.0|y=48.5|width=228|height=93|img=npc/yjs/jh.png|loadDelay=0|reset=1|move=0|esc=1|show=4>
+goto @药剂师页面
+
+#if
+large U70 0
+CHECKLEVELEX > 52
+#act
+mov S$紫菱花页面 <Img|id=d|children={300,301,302,303,304}|a=4|x=113.0|y=283.5|width=228|height=93|img=npc/yjs/kuang.png|move=0|loadDelay=0|esc=1|show=4|reset=1|link=@点击展示紫菱花>
+INC S$紫菱花页面 <Effect|id=300|x=48.0|y=50.0|scale=1.2|speed=2|effectid=45002|effecttype=0|dir=5|act=0>
+INC S$紫菱花页面 <Text|id=301|x=90.0|y=19.0|size=18|color=255|text=<$STR(S$紫菱花名字)>>
+INC S$紫菱花页面 <Text|id=302|x=92.0|y=49.0|size=16|color=255|text=<$STR(S$紫菱花属性)>>
+goto @药剂师页面
+
+
+;--------------------------------------------------------------------------------
+#if
+equal U75 0
+CHECKRENEWLEVEL < 8
+CHECKLEVELEX < 54
+#act
+mov S$白莲灵页面 <Img|id=e|children={400,401,402,403,404}|a=4|x=113.0|y=392.5|width=228|height=93|img=npc/yjs/kuang.png|move=0|loadDelay=0|esc=1|show=4|reset=1|link=@点击白莲灵>
+INC S$白莲灵页面 <Effect|id=400|x=48.0|y=47.0|scale=1.2|speed=2|effectid=45003|effecttype=0|dir=5|act=0>
+INC S$白莲灵页面 <Text|id=401|x=98.0|y=19.0|size=18|color=255|text=白莲灵Lv.1>
+INC S$白莲灵页面 <Text|id=402|x=92.0|y=47.0|size=16|color=255|text=三选一:抗性加成>
+INC S$白莲灵页面 <Img|id=403|a=4|x=112.0|y=48.5|width=228|height=93|img=npc/yjs/lock.png|loadDelay=0|reset=1|move=0|esc=1|show=4>
+goto @药剂师页面
+
+
+#if
+equal U75 0
+CHECKRENEWLEVEL > 7
+CHECKLEVELEX < 54
+#act
+mov S$白莲灵页面 <Img|id=e|children={400,401,402,403,404}|a=4|x=113.0|y=392.5|width=228|height=93|img=npc/yjs/kuang.png|move=0|loadDelay=0|esc=1|show=4|reset=1|link=@点击白莲灵>
+INC S$白莲灵页面 <Effect|id=400|x=48.0|y=47.0|scale=1.2|speed=2|effectid=45003|effecttype=0|dir=5|act=0>
+INC S$白莲灵页面 <Text|id=401|x=98.0|y=19.0|size=18|color=255|text=白莲灵Lv.1>
+INC S$白莲灵页面 <Text|id=402|x=92.0|y=47.0|size=16|color=255|text=三选一:抗性加成>
+INC S$白莲灵页面 <Img|id=403|a=4|x=112.0|y=48.5|width=228|height=93|img=npc/yjs/lock.png|loadDelay=0|reset=1|move=0|esc=1|show=4>
+goto @药剂师页面
+
+
+#if
+equal U75 0
+CHECKRENEWLEVEL < 8
+CHECKLEVELEX > 53
+#act
+mov S$白莲灵页面 <Img|id=e|children={400,401,402,403,404}|a=4|x=113.0|y=392.5|width=228|height=93|img=npc/yjs/kuang.png|move=0|loadDelay=0|esc=1|show=4|reset=1|link=@点击白莲灵>
+INC S$白莲灵页面 <Effect|id=400|x=48.0|y=47.0|scale=1.2|speed=2|effectid=45003|effecttype=0|dir=5|act=0>
+INC S$白莲灵页面 <Text|id=401|x=98.0|y=19.0|size=18|color=255|text=白莲灵Lv.1>
+INC S$白莲灵页面 <Text|id=402|x=92.0|y=47.0|size=16|color=255|text=三选一:抗性加成>
+INC S$白莲灵页面 <Img|id=403|a=4|x=112.0|y=48.5|width=228|height=93|img=npc/yjs/lock.png|loadDelay=0|reset=1|move=0|esc=1|show=4>
+goto @药剂师页面
+
+
+
+#if
+equal U75 0
+CHECKRENEWLEVEL > 7
+CHECKLEVELEX > 53
+#act
+mov S$白莲灵页面 <Img|id=e|children={400,401,402,403,404}|a=4|x=113.0|y=392.5|width=228|height=93|img=npc/yjs/kuang.png|move=0|loadDelay=0|esc=1|show=4|reset=1|link=@点击激活白莲灵>
+INC S$白莲灵页面 <Effect|id=400|x=43.0|y=47.0|scale=1.1|speed=2|effectid=45003|effecttype=0|dir=5|act=0>
+INC S$白莲灵页面 <Text|id=401|x=98.0|y=19.0|size=18|color=255|text=白莲灵Lv.1>
+INC S$白莲灵页面 <Text|id=402|x=92.0|y=47.0|size=16|color=255|text=三选一:抗性加成>
+INC S$白莲灵页面 <Img|id=403|a=4|x=112.0|y=48.5|width=228|height=93|img=npc/yjs/jh.png|loadDelay=0|reset=1|move=0|esc=1|show=4>
+goto @药剂师页面
+
+#if
+large U75 0
+CHECKRENEWLEVEL > 7
+CHECKLEVELEX > 53
+#act
+mov S$白莲灵页面 <Img|id=e|children={400,401,402,403,404}|a=4|x=113.0|y=392.5|width=228|height=93|img=npc/yjs/kuang.png|move=0|loadDelay=0|esc=1|show=4|reset=1|link=@点击展示白莲灵>
+INC S$白莲灵页面 <Effect|id=400|x=43.0|y=47.0|scale=1.1|speed=2|effectid=45003|effecttype=0|dir=5|act=0>
+INC S$白莲灵页面 <Text|id=401|x=90.0|y=19.0|size=18|color=255|text=<$STR(S$白莲灵名字)>>
+INC S$白莲灵页面 <Text|id=402|x=92.0|y=49.0|size=16|color=255|text=<$STR(S$白莲灵属性)>>
+goto @药剂师页面
+
+;--------------------------------------------------------------------------------
+#if
+equal U78 0
+CHECKRENEWLEVEL < 8
+CHECKLEVELEX < 55
+#act
+mov S$九阴灵芝页面 <Img|id=f|children={500,501,502,503,504}|a=4|x=113.0|y=498.5|width=228|height=93|img=npc/yjs/kuang.png|move=0|loadDelay=0|esc=1|show=4|reset=1|link=@点击九阴灵芝>
+INC S$九阴灵芝页面 <Effect|id=500|x=48.0|y=47.0|scale=1.2|speed=2|effectid=45004|effecttype=0|dir=5|act=0>
+INC S$九阴灵芝页面 <Text|id=501|x=98.0|y=19.0|size=18|color=255|text=九阴灵芝Lv.1>
+INC S$九阴灵芝页面 <Text|id=502|x=92.0|y=47.0|size=16|color=255|text=三选一:爆发加成>
+INC S$九阴灵芝页面 <Img|id=503|a=4|x=112.0|y=48.5|width=228|height=93|img=npc/yjs/lock.png|loadDelay=0|reset=1|move=0|esc=1|show=4>
+goto @药剂师页面
+
+
+#if
+equal U78 0
+CHECKRENEWLEVEL > 7
+CHECKLEVELEX < 55
+#act
+mov S$九阴灵芝页面 <Img|id=f|children={500,501,502,503,504}|a=4|x=113.0|y=498.5|width=228|height=93|img=npc/yjs/kuang.png|move=0|loadDelay=0|esc=1|show=4|reset=1|link=@点击九阴灵芝>
+INC S$九阴灵芝页面 <Effect|id=500|x=48.0|y=47.0|scale=1.2|speed=2|effectid=45004|effecttype=0|dir=5|act=0>
+INC S$九阴灵芝页面 <Text|id=501|x=98.0|y=19.0|size=18|color=255|text=九阴灵芝Lv.1>
+INC S$九阴灵芝页面 <Text|id=502|x=92.0|y=47.0|size=16|color=255|text=三选一:爆发加成>
+INC S$九阴灵芝页面 <Img|id=503|a=4|x=112.0|y=48.5|width=228|height=93|img=npc/yjs/lock.png|loadDelay=0|reset=1|move=0|esc=1|show=4>
+goto @药剂师页面
+
+
+#if
+equal U78 0
+CHECKRENEWLEVEL < 8
+CHECKLEVELEX > 54
+#act
+mov S$九阴灵芝页面 <Img|id=f|children={500,501,502,503,504}|a=4|x=113.0|y=498.5|width=228|height=93|img=npc/yjs/kuang.png|move=0|loadDelay=0|esc=1|show=4|reset=1|link=@点击九阴灵芝>
+INC S$九阴灵芝页面 <Effect|id=500|x=48.0|y=47.0|scale=1.2|speed=2|effectid=45004|effecttype=0|dir=5|act=0>
+INC S$九阴灵芝页面 <Text|id=501|x=98.0|y=19.0|size=18|color=255|text=九阴灵芝Lv.1>
+INC S$九阴灵芝页面 <Text|id=502|x=92.0|y=47.0|size=16|color=255|text=三选一:爆发加成>
+INC S$九阴灵芝页面 <Img|id=503|a=4|x=112.0|y=48.5|width=228|height=93|img=npc/yjs/lock.png|loadDelay=0|reset=1|move=0|esc=1|show=4>
+goto @药剂师页面
+
+
+
+#if
+equal U78 0
+CHECKRENEWLEVEL > 7
+CHECKLEVELEX > 54
+#act
+mov S$九阴灵芝页面 <Img|id=f|children={500,501,502,503,504}|a=4|x=113.0|y=498.5|width=228|height=93|img=npc/yjs/kuang.png|move=0|loadDelay=0|esc=1|show=4|reset=1|link=@点击激活九阴灵芝>
+INC S$九阴灵芝页面 <Effect|id=500|x=43.0|y=47.0|scale=1.1|speed=2|effectid=45004|effecttype=0|dir=5|act=0>
+INC S$九阴灵芝页面 <Text|id=501|x=98.0|y=19.0|size=18|color=255|text=九阴灵芝Lv.1>
+INC S$九阴灵芝页面 <Text|id=502|x=92.0|y=47.0|size=16|color=255|text=三选一:爆发加成>
+INC S$九阴灵芝页面 <Img|id=503|a=4|x=112.0|y=48.5|width=228|height=93|img=npc/yjs/jh.png|loadDelay=0|reset=1|move=0|esc=1|show=4>
+goto @药剂师页面
+
+#if
+large U78 0
+CHECKRENEWLEVEL > 7
+CHECKLEVELEX > 54
+#act
+mov S$九阴灵芝页面 <Img|id=f|children={500,501,502,503,504}|a=4|x=113.0|y=498.5|width=228|height=93|img=npc/yjs/kuang.png|move=0|loadDelay=0|esc=1|show=4|reset=1|link=@点击展示九阴灵芝>
+INC S$九阴灵芝页面 <Effect|id=500|x=43.0|y=47.0|scale=1.1|speed=2|effectid=45004|effecttype=0|dir=5|act=0>
+INC S$九阴灵芝页面 <Text|id=501|x=90.0|y=19.0|size=18|color=255|text=<$STR(S$九阴灵芝名字)>>
+INC S$九阴灵芝页面 <Text|id=502|x=92.0|y=49.0|size=16|color=255|text=<$STR(S$九阴灵芝属性)>>
+goto @药剂师页面
+
+[@药剂师页面]
+
+
+#if
+#say
+<Button|x=-2526.0|y=-1172.0|width=115120|height=112880|color=224|size=18|pimg=npc/zd.png|mimg=npc/zd.png|nimg=npc/zd.png|link=@exit>
+<Img|children={1,2,666}|a=4|x=476.0|y=326.0|width=1096|height=650|move=0|img=npc/yjs/bj.png|reset=1|loadDelay=0|esc=1|show=4|bg=1>
+<ListView|id=1|children={1000}|x=794|y=120|width=228|height=475|margin=1|direction=1|reload=0|bounce=0>
+<Layout|id=1000|children={a,b,c,d,e,f}|x=0|y=0|width=228|height=580>
+<Img|id=a|a=4|x=110|y=18|width=228|height=38|img=npc/yjs/title.png|move=0|loadDelay=0|reset=1|esc=1|show=4>
+
+
+
+
+
+
+<Button|id=666|x=166|y=87|color=224|size=18|pimg=npc/xyxc/5.png|mimg=npc/xyxc/5.png|nimg=npc/xyxc/5.png|link=@打开药剂规则>
+
+<Frames|id=4q|x=<$STR(N$第一坐标)>|y=<$STR(N$第二坐标)>|width=240|height=350|speed=20|prefix=custom/jz_ui/sfx_|count=10|suffix=.png|loop=-1>
+
+;==================================================================================
+
+
+<$STR(S$药剂规则)>
+
+
+<$STR(S$激活页面)>
+<$STR(S$紫阳花页面)>
+<$STR(S$紫阳花页面银框)>
+<$STR(S$红军果页面银框)>
+<$STR(S$紫菱花页面银框)>
+<$STR(S$白莲灵页面银框)>
+<$STR(S$九阴灵芝页面银框)>
+<$STR(S$红军果页面)>
+<$STR(S$紫菱花页面)>
+<$STR(S$白莲灵页面)>
+<$STR(S$九阴灵芝页面)>
+<$STR(S$紫阳花页面逻辑)>
+<$STR(S$红军果页面逻辑)>
+<$STR(S$紫菱花页面逻辑)>
+<$STR(S$白莲灵页面逻辑)>
+<$STR(S$九阴灵芝页面逻辑)>
+
+
+<Button|x=957.0|y=46.0|nimg=public/close-2.png|mimg=public/close-2.png|link=@exit>
+
+#if
+check [400] 0
+#say
+<Img|id=o2|children={cl1}|x=<$STR(N$坐标1)>|y=<$STR(N$坐标2)>|width=68|height=25|img=npc/yjs/<$STR(S$材料框带金边框1)>.png|reset=1|show=4|move=0|loadDelay=0|esc=1|link=@选择材料1>
+<Img|id=o5|children={cl2}|x=<$STR(N$坐标3)>|y=<$STR(N$坐标2)>|width=68|height=25|loadDelay=0|show=4|move=0|img=npc/yjs/<$STR(S$材料框带金边框2)>.png|reset=1|esc=1|link=@选择材料2>
+
+#if
+check [400] 0
+equal S$红军果页面逻辑
+equal S$紫菱花页面逻辑
+equal S$白莲灵页面逻辑
+equal S$九阴灵芝页面逻辑
+small U101 4
+small U100 100
+equal S$显示 显示
+#say
+<Button|id=o6|x=119|y=50|width=78|height=34|nimg=npc/yjs/tj.png|mimg=npc/yjs/tj.png|link=@提交材料>
+<RText|x=340|y=557|size=14|color=255|text=进度：<<$STR(U100)>/FCOLOR=250>%>
+#act
+break
+
+
+#if
+check [400] 0
+equal S$红军果页面逻辑
+equal S$紫菱花页面逻辑
+equal S$白莲灵页面逻辑
+equal S$九阴灵芝页面逻辑
+equal U101 0
+large U100 99
+equal S$显示 显示
+#say
+<Button|id=o6|x=119|y=50|width=78|height=34|nimg=npc/yjs/tp.png|mimg=npc/yjs/tj.png|link=@突破1>
+<RText|x=340|y=557|size=14|color=255|text=需要：<点卷300/FCOLOR=251>>
+#act
+break
+#if
+check [400] 0
+equal S$红军果页面逻辑
+equal S$紫菱花页面逻辑
+equal S$白莲灵页面逻辑
+equal S$九阴灵芝页面逻辑
+equal U101 1
+large U100 99
+equal S$显示 显示
+#say
+<Button|id=o6|x=119|y=50|width=78|height=34|nimg=npc/yjs/tp.png|mimg=npc/yjs/tj.png|link=@突破2>
+<RText|x=340|y=557|size=14|color=255|text=需要：<点卷600/FCOLOR=251>>
+#act
+break
+#if
+check [400] 0
+equal S$红军果页面逻辑
+equal S$紫菱花页面逻辑
+equal S$白莲灵页面逻辑
+equal S$九阴灵芝页面逻辑
+equal U101 2
+large U100 99
+equal S$显示 显示
+#say
+<Button|id=o6|x=119|y=50|width=78|height=34|nimg=npc/yjs/tp.png|mimg=npc/yjs/tj.png|link=@突破3>
+<RText|x=340|y=557|size=14|color=255|text=需要：<点卷900/FCOLOR=251>>
+#act
+break
+#if
+check [400] 0
+equal S$红军果页面逻辑
+equal S$紫菱花页面逻辑
+equal S$白莲灵页面逻辑
+equal S$九阴灵芝页面逻辑
+equal U101 3
+large U100 99
+equal S$显示 显示
+#say
+<Button|id=o6|x=119|y=50|width=78|height=34|nimg=npc/yjs/tp.png|mimg=npc/yjs/tj.png|link=@突破4>
+<RText|x=340|y=557|size=14|color=255|text=需要：<点卷1200/FCOLOR=251>>
+#act
+break
+#if
+
+check [400] 0
+equal S$红军果页面逻辑
+equal S$紫菱花页面逻辑
+equal S$白莲灵页面逻辑
+equal S$九阴灵芝页面逻辑
+equal U101 4
+large U100 99
+equal S$显示 显示
+#say
+<Img|id=o6|x=80|y=47|width=91|height=36|img=npc/yjs/ymj.png|loadDelay=0|reset=1|move=0|esc=1|show=4>
+
+#act
+
+break
+;----------------------------------------------------------------------
+#if
+check [400] 0
+equal S$紫阳花页面逻辑
+equal S$紫菱花页面逻辑
+equal S$白莲灵页面逻辑
+equal S$九阴灵芝页面逻辑
+small U102 4
+small U104 100
+equal S$显示 显示
+#say
+<Button|id=o6|x=119|y=50|width=78|height=34|nimg=npc/yjs/tj.png|mimg=npc/yjs/tj.png|link=@提交红军果材料>
+<RText|x=340|y=557|size=14|color=255|text=进度：<<$STR(U104)>/FCOLOR=250>%>
+#act
+break
+#if
+check [400] 0
+equal S$紫阳花页面逻辑
+equal S$紫菱花页面逻辑
+equal S$白莲灵页面逻辑
+equal S$九阴灵芝页面逻辑
+equal U102 0
+large U104 99
+equal S$显示 显示
+#say
+<Button|id=o6|x=119|y=50|width=78|height=34|nimg=npc/yjs/tp.png|mimg=npc/yjs/tj.png|link=@红军果突破1>
+<RText|x=340|y=557|size=14|color=255|text=需要：<点卷300/FCOLOR=251>>
+#act
+break
+#if
+check [400] 0
+equal S$紫阳花页面逻辑
+equal S$紫菱花页面逻辑
+equal S$白莲灵页面逻辑
+equal S$九阴灵芝页面逻辑
+equal U102 1
+large U104 99
+equal S$显示 显示
+#say
+<Button|id=o6|x=119|y=50|width=78|height=34|nimg=npc/yjs/tp.png|mimg=npc/yjs/tj.png|link=@红军果突破2>
+<RText|x=340|y=557|size=14|color=255|text=需要：<点卷600/FCOLOR=251>>
+#act
+break
+#if
+check [400] 0
+equal S$紫阳花页面逻辑
+equal S$紫菱花页面逻辑
+equal S$白莲灵页面逻辑
+equal S$九阴灵芝页面逻辑
+equal U102 2
+large U104 99
+equal S$显示 显示
+#say
+<Button|id=o6|x=119|y=50|width=78|height=34|nimg=npc/yjs/tp.png|mimg=npc/yjs/tj.png|link=@红军果突破3>
+<RText|x=340|y=557|size=14|color=255|text=需要：<点卷900/FCOLOR=251>>
+#act
+break
+#if
+check [400] 0
+equal S$紫阳花页面逻辑
+equal S$紫菱花页面逻辑
+equal S$九阴灵芝页面逻辑
+equal S$白莲灵页面逻辑
+equal U102 3
+large U104 99
+equal S$显示 显示
+#say
+<Button|id=o6|x=119|y=50|width=78|height=34|nimg=npc/yjs/tp.png|mimg=npc/yjs/tj.png|link=@红军果突破4>
+<RText|x=340|y=557|size=14|color=255|text=需要：<点卷1200/FCOLOR=251>>
+#act
+break
+#if
+
+check [400] 0
+equal S$紫阳花页面逻辑
+equal S$紫菱花页面逻辑
+equal S$九阴灵芝页面逻辑
+equal S$白莲灵页面逻辑
+equal U102 4
+large U104 99
+equal S$显示 显示
+#say
+<Img|id=o6|x=80|y=47|width=91|height=36|img=npc/yjs/ymj.png|loadDelay=0|reset=1|move=0|esc=1|show=4>
+#act
+
+break
+;----------------------------------------------------------------------
+#if
+check [400] 0
+equal S$白莲灵页面逻辑
+equal S$紫阳花页面逻辑
+equal S$红军果页面逻辑
+equal S$九阴灵芝页面逻辑
+small U105 100
+small U103 4
+equal S$显示 显示
+#say
+<Button|id=o6|x=119|y=50|width=78|height=34|nimg=npc/yjs/tj.png|mimg=npc/yjs/tj.png|link=@提交紫菱花材料>
+<RText|x=340|y=557|size=14|color=255|text=进度：<<$STR(U105)>/FCOLOR=250>%>
+#act
+break
+
+#if
+check [400] 0
+equal S$白莲灵页面逻辑
+equal S$紫阳花页面逻辑
+equal S$红军果页面逻辑
+equal S$九阴灵芝页面逻辑
+equal U103 0
+large U105 99
+equal S$显示 显示
+#say
+<Button|id=o6|x=119|y=50|width=78|height=34|nimg=npc/yjs/tp.png|mimg=npc/yjs/tj.png|link=@紫菱花突破1>
+<RText|x=340|y=557|size=14|color=255|text=需要：<点卷300/FCOLOR=251>>
+#act
+break
+
+#if
+check [400] 0
+equal S$白莲灵页面逻辑
+equal S$紫阳花页面逻辑
+equal S$九阴灵芝页面逻辑
+equal S$红军果页面逻辑
+equal U103 1
+large U105 99
+equal S$显示 显示
+#say
+<Button|id=o6|x=119|y=50|width=78|height=34|nimg=npc/yjs/tp.png|mimg=npc/yjs/tj.png|link=@紫菱花突破2>
+<RText|x=340|y=557|size=14|color=255|text=需要：<点卷600/FCOLOR=251>>
+#act
+break
+
+#if
+check [400] 0
+equal S$白莲灵页面逻辑
+equal S$紫阳花页面逻辑
+equal S$九阴灵芝页面逻辑
+equal S$红军果页面逻辑
+equal U103 2
+large U105 99
+equal S$显示 显示
+#say
+<Button|id=o6|x=119|y=50|width=78|height=34|nimg=npc/yjs/tp.png|mimg=npc/yjs/tj.png|link=@紫菱花突破3>
+<RText|x=340|y=557|size=14|color=255|text=需要：<点卷900/FCOLOR=251>>
+#act
+break
+
+#if
+check [400] 0
+equal S$白莲灵页面逻辑
+equal S$紫阳花页面逻辑
+equal S$红军果页面逻辑
+equal S$九阴灵芝页面逻辑
+equal U103 3
+large U105 99
+equal S$显示 显示
+#say
+<Button|id=o6|x=119|y=50|width=78|height=34|nimg=npc/yjs/tp.png|mimg=npc/yjs/tj.png|link=@紫菱花突破4>
+<RText|x=340|y=557|size=14|color=255|text=需要：<点卷1200/FCOLOR=251>>
+#act
+break
+
+#if
+
+check [400] 0
+equal S$白莲灵页面逻辑
+equal S$紫阳花页面逻辑
+equal S$红军果页面逻辑
+equal S$九阴灵芝页面逻辑
+equal U103 4
+large U105 99
+equal S$显示 显示
+#say
+<Img|id=o6|x=80|y=47|width=91|height=36|img=npc/yjs/ymj.png|loadDelay=0|reset=1|move=0|esc=1|show=4>
+#act
+
+break
+
+;----------------------------------------------------------------------
+#if
+check [400] 0
+equal S$紫菱花页面逻辑
+equal S$紫阳花页面逻辑
+equal S$红军果页面逻辑
+equal S$九阴灵芝页面逻辑
+small U109 100
+SMALL U107 4
+equal S$显示 显示
+#say
+<Button|id=o6|x=119|y=50|width=78|height=34|nimg=npc/yjs/tj.png|mimg=npc/yjs/tj.png|link=@提交白莲灵材料>
+<RText|x=340|y=557|size=14|color=255|text=进度：<<$STR(U109)>/FCOLOR=250>%>
+#act
+
+break
+
+#if
+check [400] 0
+equal S$紫菱花页面逻辑
+equal S$紫阳花页面逻辑
+equal S$红军果页面逻辑
+equal S$九阴灵芝页面逻辑
+equal U107 0
+large U109 99
+equal S$显示 显示
+#say
+<Button|id=o6|x=119|y=50|width=78|height=34|nimg=npc/yjs/tp.png|mimg=npc/yjs/tj.png|link=@白莲灵突破1>
+<RText|x=340|y=557|size=14|color=255|text=需要：<点卷300/FCOLOR=251>>
+#act
+break
+#if
+check [400] 0
+equal S$紫菱花页面逻辑
+equal S$紫阳花页面逻辑
+equal S$红军果页面逻辑
+equal S$九阴灵芝页面逻辑
+equal U107 1
+large U109 99
+equal S$显示 显示
+#say
+<Button|id=o6|x=119|y=50|width=78|height=34|nimg=npc/yjs/tp.png|mimg=npc/yjs/tj.png|link=@白莲灵突破2>
+<RText|x=340|y=557|size=14|color=255|text=需要：<点卷600/FCOLOR=251>>
+#act
+break
+#if
+check [400] 0
+equal S$紫菱花页面逻辑
+equal S$紫阳花页面逻辑
+equal S$红军果页面逻辑
+equal S$九阴灵芝页面逻辑
+equal U107 2
+large U109 99
+equal S$显示 显示
+#say
+<Button|id=o6|x=119|y=50|width=78|height=34|nimg=npc/yjs/tp.png|mimg=npc/yjs/tj.png|link=@白莲灵突破3>
+<RText|x=340|y=557|size=14|color=255|text=需要：<点卷900/FCOLOR=251>>
+#act
+break
+#if
+check [400] 0
+equal S$紫菱花页面逻辑
+equal S$紫阳花页面逻辑
+equal S$九阴灵芝页面逻辑
+equal S$红军果页面逻辑
+equal U107 3
+large U109 99
+equal S$显示 显示
+#say
+<Button|id=o6|x=119|y=50|width=78|height=34|nimg=npc/yjs/tp.png|mimg=npc/yjs/tj.png|link=@白莲灵突破4>
+<RText|x=340|y=557|size=14|color=255|text=需要：<点卷1200/FCOLOR=251>>
+#act
+break
+#if
+check [400] 0
+equal S$紫菱花页面逻辑
+equal S$紫阳花页面逻辑
+equal S$红军果页面逻辑
+equal S$九阴灵芝页面逻辑
+equal U107 4
+large U109 99
+equal S$显示 显示
+#say
+<Img|id=o6|x=80|y=47|width=91|height=36|img=npc/yjs/ymj.png|loadDelay=0|reset=1|move=0|esc=1|show=4>
+#act
+
+break
+;----------------------------------------------------------------------
+#if
+check [400] 0
+equal S$紫菱花页面逻辑
+equal S$紫阳花页面逻辑
+equal S$红军果页面逻辑
+equal S$白莲灵页面逻辑
+SMALL U110 4
+small U111 100
+equal S$显示 显示
+#say
+<Button|id=o6|x=119|y=50|width=78|height=34|nimg=npc/yjs/tj.png|mimg=npc/yjs/tj.png|link=@提交九阴灵芝材料>
+<RText|x=340|y=557|size=14|color=255|text=进度：<<$STR(U111)>/FCOLOR=250>%>
+
+#act
+break
+#if
+check [400] 0
+equal S$紫菱花页面逻辑
+equal S$紫阳花页面逻辑
+equal S$红军果页面逻辑
+equal S$白莲灵页面逻辑
+equal U110 0
+large U111 99
+equal S$显示 显示
+#say
+<Button|id=o6|x=119|y=50|width=78|height=34|nimg=npc/yjs/tp.png|mimg=npc/yjs/tj.png|link=@九阴灵芝突破1>
+<RText|x=340|y=557|size=14|color=255|text=需要：<点卷300/FCOLOR=251>>
+#act
+break
+#if
+check [400] 0
+equal S$紫菱花页面逻辑
+equal S$紫阳花页面逻辑
+equal S$红军果页面逻辑
+equal S$白莲灵页面逻辑
+equal U110 1
+large U111 99
+equal S$显示 显示
+#say
+<Button|id=o6|x=119|y=50|width=78|height=34|nimg=npc/yjs/tp.png|mimg=npc/yjs/tj.png|link=@九阴灵芝突破2>
+<RText|x=340|y=557|size=14|color=255|text=需要：<点卷600/FCOLOR=251>>
+#act
+break
+#if
+check [400] 0
+equal S$紫菱花页面逻辑
+equal S$紫阳花页面逻辑
+equal S$红军果页面逻辑
+equal S$白莲灵页面逻辑
+equal U110 2
+large U111 99
+equal S$显示 显示
+#say
+<Button|id=o6|x=119|y=50|width=78|height=34|nimg=npc/yjs/tp.png|mimg=npc/yjs/tj.png|link=@九阴灵芝突破3>
+<RText|x=340|y=557|size=14|color=255|text=需要：<点卷900/FCOLOR=251>>
+#act
+break
+#if
+check [400] 0
+equal S$紫菱花页面逻辑
+equal S$紫阳花页面逻辑
+equal S$白莲灵页面逻辑
+equal S$红军果页面逻辑
+equal U110 3
+large U111 99
+equal S$显示 显示
+#say
+<Button|id=o6|x=119|y=50|width=78|height=34|nimg=npc/yjs/tp.png|mimg=npc/yjs/tj.png|link=@九阴灵芝突破4>
+<RText|x=340|y=557|size=14|color=255|text=需要：<点卷1200/FCOLOR=251>>
+#act
+break
+#if
+check [400] 0
+equal S$紫菱花页面逻辑
+equal S$紫阳花页面逻辑
+equal S$红军果页面逻辑
+equal S$白莲灵页面逻辑
+equal U110 4
+large U111 99
+equal S$显示 显示
+#say
+<Img|id=o6|x=80|y=47|width=91|height=36|img=npc/yjs/ymj.png|loadDelay=0|reset=1|move=0|esc=1|show=4>
+#act
+
+break
+[@点击红军果]
+
+#if
+CHECKRENEWLEVEL > 5
+CHECKLEVELEX > 51
+#act
+#elseact
+sendmsg 9 转生等级达到6转和人物等级到达52级才能解锁激活！
+
+[@点击紫菱花]
+
+#if
+CHECKRENEWLEVEL > 5
+CHECKLEVELEX > 52
+#act
+#elseact
+sendmsg 9 转生等级达到6转和人物等级到达53级才能解锁激活！
+
+[@点击白莲灵]
+#if
+CHECKRENEWLEVEL > 7
+CHECKLEVELEX > 53
+#act
+#elseact
+sendmsg 9 转生等级达到8转和人物等级到达54级才能解锁激活！
+
+[@点击九阴灵芝]
+#if
+CHECKRENEWLEVEL > 7
+CHECKLEVELEX > 54
+#act
+#elseact
+sendmsg 9 转生等级达到8转和人物等级到达55级才能解锁激活！
+
+
+
+[@点击激活]
+#if
+#act
+set [400] 1
+
+#if
+check [240] 0
+#act
+mov S$确定选择
+;mov N$第一坐标 32
+;mov N$第二坐标 42
+
+mov S$激活页面 <Img|id=2|children={1q,2q,3q,5q,6q,7q,8q,9q}|x=161.0|y=66.0|width=870|height=550|move=0|esc=1|img=npc/yjs/tm.png|reset=1|show=4|loadDelay=0|link=@aaa>
+inc S$激活页面 <Img|id=1q|x=36.0|y=44.0|move=0|reset=1|img=npc/yjs/gj.png|loadDelay=0|esc=1|show=4|link=@选择花朵特效#特效坐标1=122#特效坐标2=104#选择的东西=攻击>
+inc S$激活页面 <Img|id=2q|x=324.0|y=44.0|move=0|reset=1|img=npc/yjs/mf.png|loadDelay=0|esc=1|show=4|link=@选择花朵特效#特效坐标1=408#特效坐标2=104#选择的东西=魔法>
+inc S$激活页面 <Img|id=3q|x=610.0|y=44.0|move=0|reset=1|img=npc/yjs/ds.png|loadDelay=0|esc=1|show=4|link=@选择花朵特效#特效坐标1=694#特效坐标2=104#选择的东西=道术>
+inc S$激活页面 <Effect|id=5q|x=155.0|y=155.0|scale=1.2|speed=2|effecttype=0|dir=5|act=0|effectid=45000>
+inc S$激活页面 <Effect|id=6q|x=446.0|y=155.0|scale=1.2|speed=2|effecttype=0|dir=5|act=0|effectid=45000>
+inc S$激活页面 <Effect|id=7q|x=730.0|y=155.0|scale=1.2|speed=2|effecttype=0|dir=5|act=0|effectid=45000>
+inc S$激活页面 <Button|id=8q|x=394.0|y=418.0|nimg=public/92.png|mimg=public/92.png|size=18|text=确认选择|link=@确认选择花朵>
+inc S$激活页面 <RText|id=9q|x=27.0|y=485.0|size=16|color=251|outline=1|text=注：属性三选一，谨慎选择自己所需属性，机会只有一次>
+
+
+
+mov S$紫阳花页面逻辑
+mov S$红军果页面逻辑
+mov S$紫菱花页面逻辑
+mov S$白莲灵页面逻辑
+mov S$九阴灵芝页面逻辑
+goto @药剂师页面
+#elseact
+sendmsg 9 你已经领取到了,不能重复领取
+
+
+
+[@点击激活红军果]
+#if
+#act
+set [400] 1
+
+#if
+check [241] 0
+#act
+mov S$确定选择
+
+;mov N$第一坐标 32
+;mov N$第二坐标 42
+mov S$激活页面 <Img|id=2|children={1q,2q,3q,5q,6q,7q,8q,9q}|x=161.0|y=66.0|width=870|height=550|move=0|esc=1|img=npc/yjs/tm.png|reset=1|show=4|loadDelay=0|link=@aaa>
+inc S$激活页面 <Img|id=1q|x=36.0|y=44.0|move=0|reset=1|img=npc/yjs/syjc.png|loadDelay=0|esc=1|show=4|link=@选择花朵特效#特效坐标1=122#特效坐标2=104#选择的东西=生命加成>
+inc S$激活页面 <Img|id=2q|x=324.0|y=44.0|move=0|reset=1|img=npc/yjs/mffy.png|loadDelay=0|esc=1|show=4|link=@选择花朵特效#特效坐标1=408#特效坐标2=104#选择的东西=魔法防御>
+inc S$激活页面 <Img|id=3q|x=610.0|y=44.0|move=0|reset=1|img=npc/yjs/wlfy.png|loadDelay=0|esc=1|show=4|link=@选择花朵特效#特效坐标1=694#特效坐标2=104#选择的东西=物理防御>
+inc S$激活页面 <Effect|id=5q|x=155.0|y=155.0|scale=1.2|speed=2|effecttype=0|dir=5|act=0|effectid=45001>
+inc S$激活页面 <Effect|id=6q|x=446.0|y=155.0|scale=1.2|speed=2|effecttype=0|dir=5|act=0|effectid=45001>
+inc S$激活页面 <Effect|id=7q|x=730.0|y=155.0|scale=1.2|speed=2|effecttype=0|dir=5|act=0|effectid=45001>
+inc S$激活页面 <Button|id=8q|x=394.0|y=418.0|nimg=public/92.png|mimg=public/92.png|size=18|text=确认选择|link=@确认选择红军果花朵>
+inc S$激活页面 <RText|id=9q|x=27.0|y=485.0|size=16|color=251|outline=1|text=注：属性三选一，谨慎选择自己所需属性，机会只有一次>
+mov S$紫阳花页面逻辑
+mov S$红军果页面逻辑
+mov S$紫菱花页面逻辑
+mov S$白莲灵页面逻辑
+mov S$九阴灵芝页面逻辑
+goto @药剂师页面
+#elseact
+sendmsg 9 你已经领取到了,不能重复领取
+
+[@点击激活紫菱花]
+#if
+#act
+set [400] 1
+
+#if
+check [242] 0
+#act
+mov S$确定选择
+;mov N$第一坐标 32
+;mov N$第二坐标 42
+
+
+
+mov S$激活页面 <Img|id=2|children={1q,2q,3q,5q,6q,7q,8q,9q}|x=161.0|y=66.0|width=870|height=550|move=0|esc=1|img=npc/yjs/tm.png|reset=1|show=4|loadDelay=0|link=@aaa>
+inc S$激活页面 <Img|id=1q|x=36.0|y=44.0|move=0|reset=1|img=npc/yjs/fbgl.png|loadDelay=0|esc=1|show=4|link=@选择花朵特效#特效坐标1=122#特效坐标2=104#选择的东西=防暴概率>
+inc S$激活页面 <Img|id=2q|x=324.0|y=44.0|move=0|reset=1|img=npc/yjs/rwbl.png|loadDelay=0|esc=1|show=4|link=@选择花朵特效#特效坐标1=408#特效坐标2=104#选择的东西=人物爆率>
+inc S$激活页面 <Img|id=3q|x=610.0|y=44.0|move=0|reset=1|img=npc/yjs/gwbl.png|loadDelay=0|esc=1|show=4|link=@选择花朵特效#特效坐标1=694#特效坐标2=104#选择的东西=怪物爆率>
+inc S$激活页面 <Effect|id=5q|x=155.0|y=155.0|scale=1.2|speed=2|effecttype=0|dir=5|act=0|effectid=45002>
+inc S$激活页面 <Effect|id=6q|x=446.0|y=155.0|scale=1.2|speed=2|effecttype=0|dir=5|act=0|effectid=45002>
+inc S$激活页面 <Effect|id=7q|x=730.0|y=155.0|scale=1.2|speed=2|effecttype=0|dir=5|act=0|effectid=45002>
+inc S$激活页面 <Button|id=8q|x=394.0|y=418.0|nimg=public/92.png|mimg=public/92.png|size=18|text=确认选择|link=@确认选择紫菱花朵>
+inc S$激活页面 <RText|id=9q|x=27.0|y=485.0|size=16|color=251|outline=1|text=注：属性三选一，谨慎选择自己所需属性，机会只有一次>
+mov S$紫阳花页面逻辑
+mov S$红军果页面逻辑
+mov S$紫菱花页面逻辑
+mov S$白莲灵页面逻辑
+mov S$九阴灵芝页面逻辑
+goto @药剂师页面
+#elseact
+sendmsg 9 你已经领取到了,不能重复领取
+
+[@点击激活白莲灵]
+#if
+#act
+set [400] 1
+
+#if
+check [243] 0
+#act
+mov S$确定选择
+;mov N$第一坐标 32
+;mov N$第二坐标 42
+
+
+
+
+
+
+mov S$激活页面 <Img|id=2|children={1q,2q,3q,5q,6q,7q,8q,9q}|x=161.0|y=66.0|width=870|height=550|move=0|esc=1|img=npc/yjs/tm.png|reset=1|show=4|loadDelay=0|link=@aaa>
+inc S$激活页面 <Img|id=1q|x=36.0|y=44.0|move=0|reset=1|img=npc/yjs/rx.png|loadDelay=0|esc=1|show=4|link=@选择花朵特效#特效坐标1=122#特效坐标2=104#选择的东西=韧性>
+inc S$激活页面 <Img|id=2q|x=324.0|y=44.0|move=0|reset=1|img=npc/yjs/shjm.png|loadDelay=0|esc=1|show=4|link=@选择花朵特效#特效坐标1=408#特效坐标2=104#选择的东西=伤害减免>
+inc S$激活页面 <Img|id=3q|x=610.0|y=44.0|move=0|reset=1|img=npc/yjs/bjdk.png|loadDelay=0|esc=1|show=4|link=@选择花朵特效#特效坐标1=694#特效坐标2=104#选择的东西=暴击抵抗>
+inc S$激活页面 <Effect|id=5q|x=155.0|y=155.0|scale=1.2|speed=2|effecttype=0|dir=5|act=0|effectid=45003>
+inc S$激活页面 <Effect|id=6q|x=446.0|y=155.0|scale=1.2|speed=2|effecttype=0|dir=5|act=0|effectid=45003>
+inc S$激活页面 <Effect|id=7q|x=730.0|y=155.0|scale=1.2|speed=2|effecttype=0|dir=5|act=0|effectid=45003>
+inc S$激活页面 <Button|id=8q|x=394.0|y=418.0|nimg=public/92.png|mimg=public/92.png|size=18|text=确认选择|link=@确认选择白莲灵>
+inc S$激活页面 <RText|id=9q|x=27.0|y=485.0|size=16|color=251|outline=1|text=注：属性三选一，谨慎选择自己所需属性，机会只有一次>
+mov S$紫阳花页面逻辑
+mov S$红军果页面逻辑
+mov S$紫菱花页面逻辑
+mov S$白莲灵页面逻辑
+mov S$九阴灵芝页面逻辑
+goto @药剂师页面
+
+
+
+[@点击激活九阴灵芝]
+#if
+#act
+set [400] 1
+
+#if
+check [244] 0
+#act
+mov S$确定选择
+
+
+
+
+mov S$激活页面 <Img|id=2|children={1q,2q,3q,5q,6q,7q,8q,9q}|x=161.0|y=66.0|width=870|height=550|move=0|esc=1|img=npc/yjs/tm.png|reset=1|show=4|loadDelay=0|link=@aaa>
+inc S$激活页面 <Img|id=1q|x=36.0|y=44.0|move=0|reset=1|img=npc/yjs/bjl.png|loadDelay=0|esc=1|show=4|link=@选择花朵特效#特效坐标1=122#特效坐标2=104#选择的东西=暴击率>
+inc S$激活页面 <Img|id=2q|x=324.0|y=44.0|move=0|reset=1|img=npc/yjs/bjsh.png|loadDelay=0|esc=1|show=4|link=@选择花朵特效#特效坐标1=408#特效坐标2=104#选择的东西=暴击伤害>
+inc S$激活页面 <Img|id=3q|x=610.0|y=44.0|move=0|reset=1|img=npc/yjs/gjsh.png|loadDelay=0|esc=1|show=4|link=@选择花朵特效#特效坐标1=694#特效坐标2=104#选择的东西=攻击增伤>
+inc S$激活页面 <Effect|id=5q|x=155.0|y=155.0|scale=1.2|speed=2|effecttype=0|dir=5|act=0|effectid=45004>
+inc S$激活页面 <Effect|id=6q|x=446.0|y=155.0|scale=1.2|speed=2|effecttype=0|dir=5|act=0|effectid=45004>
+inc S$激活页面 <Effect|id=7q|x=730.0|y=155.0|scale=1.2|speed=2|effecttype=0|dir=5|act=0|effectid=45004>
+inc S$激活页面 <Button|id=8q|x=394.0|y=418.0|nimg=public/92.png|mimg=public/92.png|size=18|text=确认选择|link=@确认选择九阴灵芝>
+inc S$激活页面 <RText|id=9q|x=27.0|y=485.0|size=16|color=251|outline=1|text=注：属性三选一，谨慎选择自己所需属性，机会只有一次>
+mov S$紫阳花页面逻辑
+mov S$红军果页面逻辑
+mov S$紫菱花页面逻辑
+mov S$白莲灵页面逻辑
+mov S$九阴灵芝页面逻辑
+goto @药剂师页面
+
+[@exit]
+#if
+#act
+mov S$显示 
+
+[@选择花朵特效]
+
+#if
+#act
+mov S$确定选择 <$STR(S$选择的东西)>
+mov N$第一坐标 <$STR(S$特效坐标1)>
+mov N$第二坐标 <$STR(S$特效坐标2)>
+goto @药剂师页面
+
+[@确认选择花朵]
+#if
+equal S$确定选择
+#act
+sendmsg 9 请先选择一个
+break
+
+
+#if
+#act
+
+messagebox 是否选择该属性，机会只有一次  @确定选择按钮 @取消
+
+[@确认选择红军果花朵]
+#if
+equal S$确定选择
+#act
+sendmsg 9 请先选择一个
+break
+
+#if
+#act
+
+messagebox 是否选择该属性，机会只有一次  @确定选择红军果按钮 @取消
+
+[@确认选择紫菱花朵]
+#if
+equal S$确定选择
+#act
+sendmsg 9 请先选择一个
+break
+
+#if
+#act
+
+messagebox 是否选择该属性，机会只有一次  @确定选择紫菱花按钮 @取消
+
+[@确认选择白莲灵]
+#if
+equal S$确定选择
+#act
+sendmsg 9 请先选择一个
+break
+
+#if
+#act
+
+messagebox 是否选择该属性，机会只有一次  @确定选择白莲灵按钮 @取消
+
+[@确认选择九阴灵芝]
+#if
+equal S$确定选择
+#act
+sendmsg 9 请先选择一个
+break
+
+#if
+#act
+
+messagebox 是否选择该属性，机会只有一次  @确定选择九阴灵芝按钮 @取消
+
+[@确定选择按钮]
+#if
+check [238] 0
+#act
+set [238] 1
+sendmsg 7 恭喜您！完成隐藏任务...奖励已领取
+GiveStateItem 药魂石 100 0 0 0 0 0 0 1 0
+MONEY 绑定点卡 + 50000
+
+
+#if
+#act
+set [400] 1
+
+#if
+equal S$确定选择 攻击
+#act
+sendmsg 9 【紫阳花Lv.1】激活成功！
+mov U66 1
+mov U68 1
+set [240] 1
+set [180] 1
+goto @main
+#CALL [\主界面基础按钮\主界面基础按钮QM.txt] @基础按钮QM
+break 
+
+
+
+#if
+equal S$确定选择 魔法
+#act
+sendmsg 6 【紫阳花Lv.1】激活成功！
+mov U66 2
+mov U68 2
+
+set [240] 1
+set [180] 1
+goto @main
+#CALL [\主界面基础按钮\主界面基础按钮QM.txt] @基础按钮QM
+break 
+
+#if
+equal S$确定选择 道术
+#act
+sendmsg 6 【紫阳花Lv.1】激活成功！
+mov U66 3
+mov U68 3
+set [240] 1
+set [180] 1
+#CALL [\主界面基础按钮\主界面基础按钮QM.txt] @基础按钮QM
+goto @main
+
+break 
+
+[@确定选择红军果按钮]
+#if
+#act
+set [400] 1
+
+#if
+equal S$确定选择 生命加成
+#act
+sendmsg 6 【红军果Lv.1】激活成功！
+mov U69 1
+mov U71 1
+set [241] 1
+set [180] 1
+#CALL [\主界面基础按钮\主界面基础按钮QM.txt] @基础按钮QM
+goto @main
+
+break
+
+#if
+equal S$确定选择 魔法防御
+#act
+sendmsg 6 【红军果Lv.1】激活成功！
+mov U69 2
+mov U71 2
+set [241] 1
+set [180] 1
+#CALL [\主界面基础按钮\主界面基础按钮QM.txt] @基础按钮QM
+goto @main
+
+break
+
+#if
+equal S$确定选择 物理防御
+#act
+sendmsg 6 【红军果Lv.1】激活成功！
+mov U69 3
+mov U71 3
+set [241] 1
+set [180] 1
+#CALL [\主界面基础按钮\主界面基础按钮QM.txt] @基础按钮QM
+goto @main
+
+break
+
+
+[@确定选择紫菱花按钮]
+#if
+#act
+set [400] 1
+
+#if
+equal S$确定选择 防暴概率
+#act
+sendmsg 6 【紫菱花Lv.1】激活成功！
+mov U70 1
+mov U73 1
+set [242] 1
+set [180] 1
+goto @main
+#CALL [\主界面基础按钮\主界面基础按钮QM.txt] @基础按钮QM
+break
+
+#if
+equal S$确定选择 人物爆率
+#act
+sendmsg 6 【紫菱花Lv.1】激活成功！
+mov U70 2
+mov U73 2
+set [242] 1
+goto @main
+set [180] 1
+#CALL [\主界面基础按钮\主界面基础按钮QM.txt] @基础按钮QM
+break
+
+#if
+equal S$确定选择 怪物爆率
+#act
+sendmsg 6 【紫菱花Lv.1】激活成功！
+mov U70 3
+mov U73 3
+set [242] 1
+goto @main
+set [180] 1
+#CALL [\主界面基础按钮\主界面基础按钮QM.txt] @基础按钮QM
+break
+
+
+
+[@确定选择白莲灵按钮]
+#if
+#act
+set [400] 1
+
+#if
+equal S$确定选择 韧性
+#act
+sendmsg 6 【白莲灵Lv.1】激活成功！
+mov U75 1
+mov U76 1
+set [243] 1
+set [180] 1
+#CALL [\主界面基础按钮\主界面基础按钮QM.txt] @基础按钮QM
+goto @main
+
+break
+
+#if
+equal S$确定选择 伤害减免
+#act
+sendmsg 6 【白莲灵Lv.1】激活成功！
+mov U75 2
+mov U76 2
+set [243] 1
+goto @main
+set [180] 1
+#CALL [\主界面基础按钮\主界面基础按钮QM.txt] @基础按钮QM
+break
+
+#if
+equal S$确定选择 暴击抵抗
+#act
+sendmsg 6 【白莲灵Lv.1】激活成功！
+mov U75 3
+mov U76 3
+set [243] 1
+goto @main
+set [180] 1
+#CALL [\主界面基础按钮\主界面基础按钮QM.txt] @基础按钮QM
+break
+
+[@确定选择九阴灵芝按钮]
+#if
+#act
+set [400] 1
+
+#if
+equal S$确定选择 暴击率
+#act
+sendmsg 6 【九阴灵芝Lv.1】激活成功！
+mov U78 1
+mov U79 1
+set [244] 1
+set [180] 1
+#CALL [\主界面基础按钮\主界面基础按钮QM.txt] @基础按钮QM
+goto @main
+
+break
+
+#if
+equal S$确定选择 暴击伤害
+#act
+sendmsg 6 【九阴灵芝Lv.1】激活成功！
+mov U78 2
+mov U79 2
+set [244] 1
+goto @main
+set [180] 1
+#CALL [\主界面基础按钮\主界面基础按钮QM.txt] @基础按钮QM
+break
+
+#if
+equal S$确定选择 攻击增伤
+#act
+sendmsg 6 【九阴灵芝Lv.1】激活成功！
+mov U78 3
+mov U79 3
+set [244] 1
+goto @main
+set [180] 1
+#CALL [\主界面基础按钮\主界面基础按钮QM.txt] @基础按钮QM
+break
+[@点击展示]
+#if
+#act
+mov S$显示 显示
+mov S$红军果页面逻辑
+mov S$红军果页面银框
+mov S$紫菱花页面逻辑
+mov S$紫菱花页面银框
+mov S$白莲灵页面银框
+mov S$白莲灵页面逻辑
+mov S$九阴灵芝页面逻辑
+mov S$九阴灵芝页面银框
+
+#if
+;large U100 99
+equal U101 4
+#act
+mov N$坐标1 12
+mov N$坐标2 15
+mov N$坐标3 88
+mov N$坐标6 10
+mov N$坐标7 60
+mov S$材料框带金边框1 b
+mov S$材料框带金边框2 b
+mov S$紫阳花页面逻辑 <Effect|x=531.0|y=397.0|scale=2|speed=2|effectid=45000|effecttype=0|dir=5|act=0>
+INC S$紫阳花页面逻辑 <Img|x=329.0|y=500.0|children={o1,o2,o3,o4,o5,o6,o7,o8}|width=228|height=93|loadDelay=0|esc=1|move=0|img=npc/yjs/1-1.png|reset=1|show=4>
+INC S$紫阳花页面逻辑 <Text|id=cl1|x=12.0|y=6.0|size=14|color=254|text=药魂石>
+INC S$紫阳花页面逻辑 <Button|id=o7|x=162|y=15|width=60|height=25|nimg=npc/yjs/b.png|mimg=npc/yjs/b.png|size=16|text=重置|link=@重置>
+INC S$紫阳花页面逻辑 <Text|id=cl2|x=12.0|y=6.0|size=14|color=242|text=药魂晶>
+INC S$紫阳花页面逻辑 <Img|x=560.0|y=500.0|children={j1,j2}|width=157|height=93|loadDelay=0|esc=1|move=0|img=npc/yjs/1-1.png|reset=1|show=4>
+INC S$紫阳花页面逻辑 <Button|id=j1|x=42|y=50|width=78|height=34|nimg=npc/yjs/gm.png|mimg=npc/yjs/gm.png|link=@购买紫阳花>
+INC S$紫阳花页面逻辑 <Text|id=j2|x=45.0|y=19.0|size=16|color=255|text=<$STR(S$紫阳花点卡费用)>>
+mov S$紫阳花页面银框 <Img|id=104|a=4|x=113.0|y=44|width=228|height=93|img=npc/yjs/yk.png|move=0|loadDelay=0|esc=1|show=4|reset=1>
+goto @药剂师页面
+break
+
+#if
+small U100 100
+#act
+mov N$坐标1 12
+mov N$坐标2 15
+mov N$坐标3 88
+mov N$坐标4 10
+mov N$坐标5 60
+mov S$材料框带金边框1 b
+mov S$材料框带金边框2 b
+mov S$紫阳花页面逻辑 <Effect|x=531.0|y=397.0|scale=2|speed=2|effectid=45000|effecttype=0|dir=5|act=0>
+INC S$紫阳花页面逻辑 <Img|x=329.0|y=500.0|children={o1,o2,o3,o4,o5,o6,o7}|width=228|height=93|loadDelay=0|esc=1|move=0|img=npc/yjs/1-1.png|reset=1|show=4>
+INC S$紫阳花页面逻辑 <Text|id=cl1|x=14.0|y=6.0|size=14|color=254|text=药魂石>
+INC S$紫阳花页面逻辑 <Button|id=o7|x=162|y=15|width=60|height=25|nimg=npc/yjs/b.png|mimg=npc/yjs/b.png|size=16|text=重置|link=@重置>
+INC S$紫阳花页面逻辑 <Text|id=cl2|x=12.0|y=6.0|size=14|color=242|text=药魂晶>
+INC S$紫阳花页面逻辑 <Img|x=560.0|y=500.0|children={j1,j2}|width=157|height=93|loadDelay=0|esc=1|move=0|img=npc/yjs/1-1.png|reset=1|show=4>
+INC S$紫阳花页面逻辑 <Button|id=j1|x=42|y=50|width=78|height=34|nimg=npc/yjs/gm.png|mimg=npc/yjs/gm.png|link=@购买紫阳花>
+INC S$紫阳花页面逻辑 <Text|id=j2|x=45.0|y=19.0|size=16|color=255|text=<$STR(S$紫阳花点卡费用)>>
+mov S$紫阳花页面银框 <Img|id=104|a=4|x=113.0|y=44|width=228|height=93|img=npc/yjs/yk.png|move=0|loadDelay=0|esc=1|show=4|reset=1>
+goto @药剂师页面
+
+
+#if
+large U100 99
+equal U101 4
+#act
+mov N$坐标1 12
+mov N$坐标2 15
+mov N$坐标3 88
+mov N$坐标6 10
+mov N$坐标7 60
+mov S$材料框带金边框1 b
+mov S$材料框带金边框2 b
+mov S$紫阳花页面逻辑 <Effect|x=531.0|y=397.0|scale=2|speed=2|effectid=45000|effecttype=0|dir=5|act=0>
+INC S$紫阳花页面逻辑 <Img|x=329.0|y=500.0|children={o1,o2,o3,o4,o5,o6,o7,o8}|width=228|height=93|loadDelay=0|esc=1|move=0|img=npc/yjs/1-1.png|reset=1|show=4>
+INC S$紫阳花页面逻辑 <Text|id=cl1|x=12.0|y=6.0|size=14|color=254|text=药魂石>
+INC S$紫阳花页面逻辑 <Button|id=o7|x=162|y=15|width=60|height=25|nimg=npc/yjs/b.png|mimg=npc/yjs/b.png|size=16|text=重置|link=@重置>
+INC S$紫阳花页面逻辑 <Text|id=cl2|x=12.0|y=6.0|size=14|color=242|text=药魂晶>
+INC S$紫阳花页面逻辑 <Img|x=560.0|y=500.0|children={j1,j2}|width=157|height=93|loadDelay=0|esc=1|move=0|img=npc/yjs/1-1.png|reset=1|show=4>
+INC S$紫阳花页面逻辑 <Button|id=j1|x=42|y=50|width=78|height=34|nimg=npc/yjs/gm.png|mimg=npc/yjs/gm.png|link=@购买紫阳花>
+INC S$紫阳花页面逻辑 <Text|id=j2|x=45.0|y=19.0|size=16|color=255|text=<$STR(S$紫阳花点卡费用)>>
+mov S$紫阳花页面银框 <Img|id=104|a=4|x=113.0|y=44|width=228|height=93|img=npc/yjs/yk.png|move=0|loadDelay=0|esc=1|show=4|reset=1>
+goto @药剂师页面
+
+[@点击展示红军果]
+#if
+#act
+mov S$显示 显示
+mov S$紫阳花页面逻辑
+mov S$紫阳花页面银框
+mov S$紫菱花页面逻辑
+mov S$紫菱花页面银框
+mov S$白莲灵页面银框
+mov S$白莲灵页面逻辑
+mov S$九阴灵芝页面逻辑
+mov S$九阴灵芝页面银框
+
+#if
+equal U102 4
+#act
+mov N$坐标1 12
+mov N$坐标2 15
+mov N$坐标3 88
+mov N$坐标6 10
+mov N$坐标7 60
+mov S$材料框带金边框1 b
+mov S$材料框带金边框2 b
+mov S$红军果页面逻辑 <Effect|x=531.0|y=397.0|scale=2|speed=2|effectid=45001|effecttype=0|dir=5|act=0>
+INC S$红军果页面逻辑 <Img|x=329.0|y=500.0|children={o1,o2,o3,o4,o5,o6,o7,o8}|width=228|height=93|loadDelay=0|esc=1|move=0|img=npc/yjs/1-1.png|reset=1|show=4>
+INC S$红军果页面逻辑 <Text|id=cl1|x=12.0|y=6.0|size=14|color=254|text=药魂石>
+INC S$红军果页面逻辑 <Button|id=o7|x=162|y=15|width=60|height=25|nimg=npc/yjs/b.png|mimg=npc/yjs/b.png|size=16|text=重置|link=@重置>
+INC S$红军果页面逻辑 <Text|id=cl2|x=12.0|y=6.0|size=14|color=242|text=药魂晶>
+INC S$红军果页面逻辑 <Img|x=560.0|y=500.0|children={j1,j2}|width=157|height=93|loadDelay=0|esc=1|move=0|img=npc/yjs/1-1.png|reset=1|show=4>
+INC S$红军果页面逻辑 <Button|id=j1|x=42|y=50|width=78|height=34|nimg=npc/yjs/gm.png|mimg=npc/yjs/gm.png|link=@购买红军果>
+INC S$红军果页面逻辑 <Text|id=j2|x=45.0|y=19.0|size=16|color=255|text=<$STR(S$红军果点卡费用)>>
+mov S$红军果页面银框 <Img|id=204|a=4|x=113.0|y=44|width=228|height=93|img=npc/yjs/yk.png|move=0|loadDelay=0|esc=1|show=4|reset=1>
+
+goto @药剂师页面
+break
+
+#if
+small U104 100
+#act
+mov N$坐标1 12
+mov N$坐标2 15
+mov N$坐标3 88
+mov N$坐标4 10
+mov N$坐标5 60
+mov S$材料框带金边框1 b
+mov S$材料框带金边框2 b
+mov S$红军果页面逻辑 <Effect|x=531.0|y=397.0|scale=2|speed=2|effectid=45001|effecttype=0|dir=5|act=0>
+INC S$红军果页面逻辑 <Img|x=329.0|y=500.0|children={o1,o2,o3,o4,o5,o6,o7}|width=228|height=93|loadDelay=0|esc=1|move=0|img=npc/yjs/1-1.png|reset=1|show=4>
+INC S$红军果页面逻辑 <Text|id=cl1|x=14.0|y=6.0|size=14|color=254|text=药魂石>
+INC S$红军果页面逻辑 <Button|id=o7|x=162|y=15|width=60|height=25|nimg=npc/yjs/b.png|mimg=npc/yjs/b.png|size=16|text=重置|link=@重置>
+INC S$红军果页面逻辑 <Text|id=cl2|x=12.0|y=6.0|size=14|color=242|text=药魂晶>
+INC S$红军果页面逻辑 <Img|x=560.0|y=500.0|children={j1,j2}|width=157|height=93|loadDelay=0|esc=1|move=0|img=npc/yjs/1-1.png|reset=1|show=4>
+INC S$红军果页面逻辑 <Button|id=j1|x=42|y=50|width=78|height=34|nimg=npc/yjs/gm.png|mimg=npc/yjs/gm.png|link=@购买红军果>
+INC S$红军果页面逻辑 <Text|id=j2|x=45.0|y=19.0|size=16|color=255|text=<$STR(S$红军果点卡费用)>>
+mov S$红军果页面银框 <Img|id=204|a=4|x=113.0|y=44|width=228|height=93|img=npc/yjs/yk.png|move=0|loadDelay=0|esc=1|show=4|reset=1>
+
+goto @药剂师页面
+
+
+
+#if
+large U104 99
+equal U102 4
+#act
+mov N$坐标1 12
+mov N$坐标2 15
+mov N$坐标3 88
+mov N$坐标6 10
+mov N$坐标7 60
+mov S$材料框带金边框1 b
+mov S$材料框带金边框2 b
+mov S$红军果页面逻辑 <Effect|x=531.0|y=397.0|scale=2|speed=2|effectid=45001|effecttype=0|dir=5|act=0>
+INC S$红军果页面逻辑 <Img|x=329.0|y=500.0|children={o1,o2,o3,o4,o5,o6,o7,o8}|width=228|height=93|loadDelay=0|esc=1|move=0|img=npc/yjs/1-1.png|reset=1|show=4>
+INC S$红军果页面逻辑 <Text|id=cl1|x=12.0|y=6.0|size=14|color=254|text=药魂石>
+INC S$红军果页面逻辑 <Button|id=o7|x=162|y=15|width=60|height=25|nimg=npc/yjs/b.png|mimg=npc/yjs/b.png|size=16|text=重置|link=@重置>
+INC S$红军果页面逻辑 <Text|id=cl2|x=12.0|y=6.0|size=14|color=242|text=药魂晶>
+INC S$红军果页面逻辑 <Img|x=560.0|y=500.0|children={j1,j2}|width=157|height=93|loadDelay=0|esc=1|move=0|img=npc/yjs/1-1.png|reset=1|show=4>
+INC S$红军果页面逻辑 <Button|id=j1|x=42|y=50|width=78|height=34|nimg=npc/yjs/gm.png|mimg=npc/yjs/gm.png|link=@购买红军果>
+INC S$红军果页面逻辑 <Text|id=j2|x=45.0|y=19.0|size=16|color=255|text=<$STR(S$红军果点卡费用)>>
+mov S$红军果页面银框 <Img|id=204|a=4|x=113.0|y=44|width=228|height=93|img=npc/yjs/yk.png|move=0|loadDelay=0|esc=1|show=4|reset=1>
+
+goto @药剂师页面
+
+[@点击展示紫菱花]
+#if
+#act
+mov S$显示 显示
+mov S$紫阳花页面逻辑
+mov S$紫阳花页面银框
+mov S$红军果页面逻辑
+mov S$红军果页面银框
+mov S$白莲灵页面银框
+mov S$白莲灵页面逻辑
+mov S$九阴灵芝页面逻辑
+mov S$九阴灵芝页面银框
+
+#if
+;large U105 99
+equal U103 4
+#act
+mov N$坐标1 12
+mov N$坐标2 15
+mov N$坐标3 88
+mov N$坐标6 10
+mov N$坐标7 60
+mov S$材料框带金边框1 b
+mov S$材料框带金边框2 b
+mov S$紫菱花页面逻辑 <Effect|x=531.0|y=397.0|scale=2|speed=2|effectid=45002|effecttype=0|dir=5|act=0>
+INC S$紫菱花页面逻辑 <Img|x=329.0|y=500.0|children={o1,o2,o3,o4,o5,o6,o7,o8}|width=228|height=93|loadDelay=0|esc=1|move=0|img=npc/yjs/1-1.png|reset=1|show=4>
+INC S$紫菱花页面逻辑 <Text|id=cl1|x=12.0|y=6.0|size=14|color=254|text=药魂石>
+INC S$紫菱花页面逻辑 <Button|id=o7|x=162|y=15|width=60|height=25|nimg=npc/yjs/b.png|mimg=npc/yjs/b.png|size=16|text=重置|link=@重置>
+INC S$紫菱花页面逻辑 <Text|id=cl2|x=12.0|y=6.0|size=14|color=242|text=药魂晶>
+INC S$紫菱花页面逻辑 <Img|x=560.0|y=500.0|children={j1,j2}|width=157|height=93|loadDelay=0|esc=1|move=0|img=npc/yjs/1-1.png|reset=1|show=4>
+INC S$紫菱花页面逻辑 <Button|id=j1|x=42|y=50|width=78|height=34|nimg=npc/yjs/gm.png|mimg=npc/yjs/gm.png|link=@购买紫菱花>
+INC S$紫菱花页面逻辑 <Text|id=j2|x=45.0|y=19.0|size=16|color=255|text=<$STR(S$紫菱花点卡费用)>>
+mov S$紫菱花页面银框 <Img|id=304|a=4|x=113.0|y=44|width=228|height=93|img=npc/yjs/yk.png|move=0|loadDelay=0|esc=1|show=4|reset=1>
+
+goto @药剂师页面
+break
+
+#if
+small U105 100
+#act
+mov N$坐标1 12
+mov N$坐标2 15
+mov N$坐标3 88
+mov N$坐标4 10
+mov N$坐标5 60
+mov S$材料框带金边框1 b
+mov S$材料框带金边框2 b
+mov S$紫菱花页面逻辑 <Effect|x=531.0|y=397.0|scale=2|speed=2|effectid=45002|effecttype=0|dir=5|act=0>
+INC S$紫菱花页面逻辑 <Img|x=329.0|y=500.0|children={o1,o2,o3,o4,o5,o6,o7}|width=228|height=93|loadDelay=0|esc=1|move=0|img=npc/yjs/1-1.png|reset=1|show=4>
+INC S$紫菱花页面逻辑 <Text|id=cl1|x=14.0|y=6.0|size=14|color=254|text=药魂石>
+INC S$紫菱花页面逻辑 <Button|id=o7|x=162|y=15|width=60|height=25|nimg=npc/yjs/b.png|mimg=npc/yjs/b.png|size=16|text=重置|link=@重置>
+INC S$紫菱花页面逻辑 <Text|id=cl2|x=12.0|y=6.0|size=14|color=242|text=药魂晶>
+INC S$紫菱花页面逻辑 <Img|x=560.0|y=500.0|children={j1,j2}|width=157|height=93|loadDelay=0|esc=1|move=0|img=npc/yjs/1-1.png|reset=1|show=4>
+INC S$紫菱花页面逻辑 <Button|id=j1|x=42|y=50|width=78|height=34|nimg=npc/yjs/gm.png|mimg=npc/yjs/gm.png|link=@购买紫菱花>
+INC S$紫菱花页面逻辑 <Text|id=j2|x=45.0|y=19.0|size=16|color=255|text=<$STR(S$紫菱花点卡费用)>>
+mov S$紫菱花页面银框 <Img|id=304|a=4|x=113.0|y=44|width=228|height=93|img=npc/yjs/yk.png|move=0|loadDelay=0|esc=1|show=4|reset=1>
+
+goto @药剂师页面
+
+
+#if
+large U105 99
+equal U103 4
+#act
+mov N$坐标1 12
+mov N$坐标2 15
+mov N$坐标3 72
+mov N$坐标6 10
+mov N$坐标7 60
+mov S$材料框带金边框1 b
+mov S$材料框带金边框2 b
+mov S$紫菱花页面逻辑 <Effect|x=531.0|y=397.0|scale=2|speed=2|effectid=45002|effecttype=0|dir=5|act=0>
+INC S$紫菱花页面逻辑 <Img|x=329.0|y=500.0|children={o1,o2,o3,o4,o5,o6,o7,o8}|width=228|height=93|loadDelay=0|esc=1|move=0|img=npc/yjs/1-1.png|reset=1|show=4>
+INC S$紫菱花页面逻辑 <Text|id=cl1|x=12.0|y=6.0|size=14|color=254|text=药魂石>
+INC S$紫菱花页面逻辑 <Button|id=o7|x=162|y=15|width=60|height=25|nimg=npc/yjs/b.png|mimg=npc/yjs/b.png|size=16|text=重置|link=@重置>
+INC S$紫菱花页面逻辑 <Text|id=cl2|x=12.0|y=6.0|size=14|color=242|text=药魂晶>
+INC S$紫菱花页面逻辑 <Img|x=560.0|y=500.0|children={j1,j2}|width=157|height=93|loadDelay=0|esc=1|move=0|img=npc/yjs/1-1.png|reset=1|show=4>
+INC S$紫菱花页面逻辑 <Button|id=j1|x=42|y=50|width=78|height=34|nimg=npc/yjs/gm.png|mimg=npc/yjs/gm.png|link=@购买紫菱花>
+INC S$紫菱花页面逻辑 <Text|id=j2|x=45.0|y=19.0|size=16|color=255|text=点卡1000>
+mov S$紫菱花页面银框 <Img|id=304|a=4|x=113.0|y=44|width=228|height=93|img=npc/yjs/yk.png|move=0|loadDelay=0|esc=1|show=4|reset=1>
+
+goto @药剂师页面
+
+[@点击展示白莲灵]
+
+
+#if
+#act
+mov S$显示 显示
+mov S$紫阳花页面逻辑
+mov S$紫阳花页面银框
+mov S$红军果页面逻辑
+mov S$红军果页面银框
+mov S$紫菱花页面逻辑
+mov S$紫菱花页面银框
+mov S$九阴灵芝页面逻辑
+mov S$九阴灵芝页面银框
+
+
+
+#if
+;large U109 99
+equal U107 4
+#act
+mov N$坐标1 12
+mov N$坐标2 15
+mov N$坐标3 88
+mov N$坐标6 10
+mov N$坐标7 60
+mov S$材料框带金边框1 b
+mov S$材料框带金边框2 b
+mov S$白莲灵页面逻辑 <Effect|x=531.0|y=397.0|scale=2|speed=1.8|effectid=45003|effecttype=0|dir=5|act=0>
+INC S$白莲灵页面逻辑 <Img|x=329.0|y=500.0|children={o1,o2,o3,o4,o5,o6,o7,o8}|width=228|height=93|loadDelay=0|esc=1|move=0|img=npc/yjs/1-1.png|reset=1|show=4>
+INC S$白莲灵页面逻辑 <Text|id=cl1|x=12.0|y=6.0|size=14|color=254|text=药魂石>
+INC S$白莲灵页面逻辑 <Button|id=o7|x=162|y=15|width=60|height=25|nimg=npc/yjs/b.png|mimg=npc/yjs/b.png|size=16|text=重置|link=@重置>
+INC S$白莲灵页面逻辑 <Text|id=cl2|x=12.0|y=6.0|size=14|color=242|text=药魂晶>
+INC S$白莲灵页面逻辑 <Img|x=560.0|y=500.0|children={j1,j2}|width=157|height=93|loadDelay=0|esc=1|move=0|img=npc/yjs/1-1.png|reset=1|show=4>
+INC S$白莲灵页面逻辑 <Button|id=j1|x=42|y=50|width=78|height=34|nimg=npc/yjs/gm.png|mimg=npc/yjs/gm.png|link=@购买白莲灵>
+INC S$白莲灵页面逻辑 <Text|id=j2|x=45.0|y=19.0|size=16|color=255|text=<$STR(S$白莲灵点卡费用)>>
+mov S$白莲灵页面银框 <Img|id=404|a=4|x=113.0|y=44|width=228|height=93|img=npc/yjs/yk.png|move=0|loadDelay=0|esc=1|show=4|reset=1>
+goto @药剂师页面
+break
+
+#if
+small U109 100
+#act
+mov N$坐标1 12
+mov N$坐标2 15
+mov N$坐标3 88
+mov N$坐标4 10
+mov N$坐标5 60
+mov S$材料框带金边框1 b
+mov S$材料框带金边框2 b
+mov S$白莲灵页面逻辑 <Effect|x=531.0|y=397.0|scale=1.8|speed=2|effectid=45003|effecttype=0|dir=5|act=0>
+INC S$白莲灵页面逻辑 <Img|x=329.0|y=500.0|children={o1,o2,o3,o4,o5,o6,o7}|width=228|height=93|loadDelay=0|esc=1|move=0|img=npc/yjs/1-1.png|reset=1|show=4>
+INC S$白莲灵页面逻辑 <Text|id=cl1|x=12.0|y=6.0|size=14|color=254|text=药魂石>
+INC S$白莲灵页面逻辑 <Button|id=o7|x=162|y=15|width=60|height=25|nimg=npc/yjs/b.png|mimg=npc/yjs/b.png|size=16|text=重置|link=@重置>
+INC S$白莲灵页面逻辑 <Text|id=cl2|x=12.0|y=6.0|size=14|color=242|text=药魂晶>
+INC S$白莲灵页面逻辑 <Img|x=560.0|y=500.0|children={j1,j2}|width=157|height=93|loadDelay=0|esc=1|move=0|img=npc/yjs/1-1.png|reset=1|show=4>
+INC S$白莲灵页面逻辑 <Button|id=j1|x=42|y=50|width=78|height=34|nimg=npc/yjs/gm.png|mimg=npc/yjs/gm.png|link=@购买白莲灵>
+INC S$白莲灵页面逻辑 <Text|id=j2|x=45.0|y=19.0|size=16|color=255|text=<$STR(S$白莲灵点卡费用)>>
+mov S$白莲灵页面银框 <Img|id=404|a=4|x=113.0|y=44|width=228|height=93|img=npc/yjs/yk.png|move=0|loadDelay=0|esc=1|show=4|reset=1>
+
+goto @药剂师页面
+
+
+#if
+large U109 99
+equal U107 4
+#act
+mov N$坐标1 12
+mov N$坐标2 15
+mov N$坐标3 88
+mov N$坐标6 10
+mov N$坐标7 60
+mov S$材料框带金边框1 b
+mov S$材料框带金边框2 b
+mov S$白莲灵页面逻辑 <Effect|x=531.0|y=397.0|scale=2|speed=1.8|effectid=45003|effecttype=0|dir=5|act=0>
+INC S$白莲灵页面逻辑 <Img|x=329.0|y=500.0|children={o1,o2,o3,o4,o5,o6,o7,o8}|width=228|height=93|loadDelay=0|esc=1|move=0|img=npc/yjs/1-1.png|reset=1|show=4>
+INC S$白莲灵页面逻辑 <Text|id=cl1|x=12.0|y=6.0|size=14|color=254|text=药魂石>
+INC S$白莲灵页面逻辑 <Button|id=o7|x=162|y=15|width=60|height=25|nimg=npc/yjs/b.png|mimg=npc/yjs/b.png|size=16|text=重置|link=@重置>
+INC S$白莲灵页面逻辑 <Text|id=cl2|x=12.0|y=6.0|size=14|color=242|text=药魂晶>
+INC S$白莲灵页面逻辑 <Img|x=560.0|y=500.0|children={j1,j2}|width=157|height=93|loadDelay=0|esc=1|move=0|img=npc/yjs/1-1.png|reset=1|show=4>
+INC S$白莲灵页面逻辑 <Button|id=j1|x=42|y=50|width=78|height=34|nimg=npc/yjs/gm.png|mimg=npc/yjs/gm.png|link=@购买白莲灵>
+INC S$白莲灵页面逻辑 <Text|id=j2|x=45.0|y=19.0|size=16|color=255|text=点卡1000>
+mov S$白莲灵页面银框 <Img|id=404|a=4|x=113.0|y=44|width=228|height=93|img=npc/yjs/yk.png|move=0|loadDelay=0|esc=1|show=4|reset=1>
+
+goto @药剂师页面
+
+
+[@点击展示九阴灵芝]
+
+#if
+#act
+mov S$显示 显示
+mov S$紫阳花页面逻辑
+mov S$紫阳花页面银框
+mov S$红军果页面逻辑
+mov S$红军果页面银框
+mov S$紫菱花页面逻辑
+mov S$紫菱花页面银框
+mov S$白莲灵页面银框
+mov S$白莲灵页面逻辑
+
+#if
+;large U111 99
+equal U110 4
+#act
+mov N$坐标1 12
+mov N$坐标2 15
+mov N$坐标3 88
+mov N$坐标6 10
+mov N$坐标7 60
+mov S$材料框带金边框1 b
+mov S$材料框带金边框2 b
+mov S$九阴灵芝页面逻辑 <Effect|x=531.0|y=397.0|scale=2|speed=1.8|effectid=45004|effecttype=0|dir=5|act=0>
+INC S$九阴灵芝页面逻辑 <Img|x=329.0|y=500.0|children={o1,o2,o3,o4,o5,o6,o7,o8}|width=228|height=93|loadDelay=0|esc=1|move=0|img=npc/yjs/1-1.png|reset=1|show=4>
+INC S$九阴灵芝页面逻辑 <Text|id=cl1|x=12.0|y=6.0|size=14|color=254|text=药魂石>
+INC S$九阴灵芝页面逻辑 <Button|id=o7|x=162|y=15|width=60|height=25|nimg=npc/yjs/b.png|mimg=npc/yjs/b.png|size=16|text=重置|link=@重置>
+INC S$九阴灵芝页面逻辑 <Text|id=cl2|x=12.0|y=6.0|size=14|color=242|text=药魂晶>
+INC S$九阴灵芝页面逻辑 <Img|x=560.0|y=500.0|children={j1,j2}|width=157|height=93|loadDelay=0|esc=1|move=0|img=npc/yjs/1-1.png|reset=1|show=4>
+INC S$九阴灵芝页面逻辑 <Button|id=j1|x=42|y=50|width=78|height=34|nimg=npc/yjs/gm.png|mimg=npc/yjs/gm.png|link=@购买九阴灵芝>
+INC S$九阴灵芝页面逻辑 <Text|id=j2|x=45.0|y=19.0|size=16|color=255|text=<$STR(S$九阴灵芝点卡费用)>>
+mov S$九阴灵芝页面银框 <Img|id=504|a=4|x=113.0|y=44|width=228|height=93|img=npc/yjs/yk.png|move=0|loadDelay=0|esc=1|show=4|reset=1>
+
+goto @药剂师页面
+break
+
+#if
+small U111 100
+#act
+mov N$坐标1 12
+mov N$坐标2 15
+mov N$坐标3 88
+mov N$坐标4 10
+mov N$坐标5 60
+mov S$材料框带金边框1 b
+mov S$材料框带金边框2 b
+mov S$九阴灵芝页面逻辑 <Effect|x=531.0|y=397.0|scale=1.8|speed=2|effectid=45004|effecttype=0|dir=5|act=0>
+INC S$九阴灵芝页面逻辑 <Img|x=329.0|y=500.0|children={o1,o2,o3,o4,o5,o6,o7}|width=228|height=93|loadDelay=0|esc=1|move=0|img=npc/yjs/1-1.png|reset=1|show=4>
+INC S$九阴灵芝页面逻辑 <Text|id=cl1|x=14.0|y=6.0|size=14|color=254|text=药魂石>
+INC S$九阴灵芝页面逻辑 <Button|id=o7|x=162|y=15|width=60|height=25|nimg=npc/yjs/b.png|mimg=npc/yjs/b.png|size=16|text=重置|link=@重置>
+INC S$九阴灵芝页面逻辑 <Text|id=cl2|x=12.0|y=6.0|size=14|color=242|text=药魂晶>
+INC S$九阴灵芝页面逻辑 <Img|x=560.0|y=500.0|children={j1,j2}|width=157|height=93|loadDelay=0|esc=1|move=0|img=npc/yjs/1-1.png|reset=1|show=4>
+INC S$九阴灵芝页面逻辑 <Button|id=j1|x=42|y=50|width=78|height=34|nimg=npc/yjs/gm.png|mimg=npc/yjs/gm.png|link=@购买九阴灵芝>
+INC S$九阴灵芝页面逻辑 <Text|id=j2|x=45.0|y=19.0|size=16|color=255|text=<$STR(S$九阴灵芝点卡费用)>>
+mov S$九阴灵芝页面银框 <Img|id=504|a=4|x=113.0|y=44|width=228|height=93|img=npc/yjs/yk.png|move=0|loadDelay=0|esc=1|show=4|reset=1>
+
+goto @药剂师页面
+
+
+#if
+large U111 99
+equal U110 4
+#act
+mov N$坐标1 12
+mov N$坐标2 15
+mov N$坐标3 88
+mov N$坐标6 10
+mov N$坐标7 60
+mov S$材料框带金边框1 b
+mov S$材料框带金边框2 b
+mov S$九阴灵芝页面逻辑 <Effect|x=531.0|y=397.0|scale=2|speed=1.8|effectid=45004|effecttype=0|dir=5|act=0>
+INC S$九阴灵芝页面逻辑 <Img|x=329.0|y=500.0|children={o1,o2,o3,o4,o5,o6,o7,o8}|width=228|height=93|loadDelay=0|esc=1|move=0|img=npc/yjs/1-1.png|reset=1|show=4>
+INC S$九阴灵芝页面逻辑 <Text|id=cl1|x=12.0|y=6.0|size=14|color=254|text=药魂石>
+INC S$九阴灵芝页面逻辑 <Button|id=o7|x=162|y=15|width=60|height=25|nimg=npc/yjs/b.png|mimg=npc/yjs/b.png|size=16|text=重置|link=@重置>
+INC S$九阴灵芝页面逻辑 <Text|id=cl2|x=12.0|y=6.0|size=14|color=242|text=药魂晶>
+INC S$九阴灵芝页面逻辑 <Img|x=560.0|y=500.0|children={j1,j2}|width=157|height=93|loadDelay=0|esc=1|move=0|img=npc/yjs/1-1.png|reset=1|show=4>
+INC S$九阴灵芝页面逻辑 <Button|id=j1|x=42|y=50|width=78|height=34|nimg=npc/yjs/gm.png|mimg=npc/yjs/gm.png|link=@购买九阴灵芝>
+INC S$九阴灵芝页面逻辑 <Text|id=j2|x=45.0|y=19.0|size=16|color=255|text=点卡1000>
+mov S$九阴灵芝页面银框 <Img|id=504|a=4|x=113.0|y=44|width=228|height=93|img=npc/yjs/yk.png|move=0|loadDelay=0|esc=1|show=4|reset=1>
+
+goto @药剂师页面
+
+
+[@购买紫阳花]
+#if
+equal U101 0
+CheckBindMoney 绑定点卡 < 1000
+#act
+sendmsg 9 货币不足
+
+#if
+equal U101 1
+CheckBindMoney 绑定点卡 < 2000
+#act
+sendmsg 9 货币不足
+
+#if
+equal U101 2
+CheckBindMoney 绑定点卡 < 3000
+#act
+sendmsg 9 货币不足
+
+#if
+equal U101 3
+CheckBindMoney 绑定点卡 < 4000
+#act
+sendmsg 9 货币不足
+
+#if
+equal U101 4
+CheckBindMoney 绑定点卡 < 5000
+#act
+sendmsg 9 货币不足
+
+
+
+
+#if
+equal U101 0
+CheckBindMoney 绑定点卡 > 999
+#act
+ChangeBindMoney 绑定点卡 1000
+give 紫阳花Lv.1 1
+sendmsg 6 【紫阳花Lv.1】购买成功！在背包里可以使用
+
+#if
+equal U101 1
+CheckBindMoney 绑定点卡 > 1999
+#act
+ChangeBindMoney 绑定点卡 2000
+give 紫阳花Lv.2 1
+sendmsg 6 【紫阳花Lv.2】购买成功！在背包里可以使用
+
+#if
+equal U101 2
+CheckBindMoney 绑定点卡 > 2999
+#act
+ChangeBindMoney 绑定点卡 3000
+give 紫阳花Lv.3 1
+sendmsg 6 【紫阳花Lv.3】购买成功！在背包里可以使用
+
+#if
+equal U101 3
+CheckBindMoney 绑定点卡 > 3999
+#act
+ChangeBindMoney 绑定点卡 4000
+give 紫阳花Lv.4 1
+sendmsg 6 【紫阳花Lv.4】购买成功！在背包里可以使用
+
+#if
+equal U101 4
+CheckBindMoney 绑定点卡 > 4999
+#act
+ChangeBindMoney 绑定点卡 5000
+give 紫阳花Lv.5 1
+sendmsg 6 【紫阳花Lv.5】购买成功！在背包里可以使用
+
+;==========================================================
+[@购买红军果]
+#if
+equal U102 0
+CheckBindMoney 绑定点卡 < 1000
+#act
+sendmsg 9 货币不足
+
+#if
+equal U102 1
+CheckBindMoney 绑定点卡 < 2000
+#act
+sendmsg 9 货币不足
+
+#if
+equal U102 2
+CheckBindMoney 绑定点卡 < 3000
+#act
+sendmsg 9 货币不足
+
+#if
+equal U102 3
+CheckBindMoney 绑定点卡 < 4000
+#act
+sendmsg 9 货币不足
+
+#if
+equal U102 4
+CheckBindMoney 绑定点卡 < 5000
+#act
+sendmsg 9 货币不足
+
+
+
+
+#if
+equal U102 0
+CheckBindMoney 绑定点卡 > 999
+#act
+ChangeBindMoney 绑定点卡 1000
+give 红军果Lv.1 1
+sendmsg 6 【红军果Lv.1】购买成功！在背包里可以使用
+
+#if
+equal U102 1
+CheckBindMoney 绑定点卡 > 1999
+#act
+ChangeBindMoney 绑定点卡 2000
+give 红军果Lv.2 1
+sendmsg 6 【红军果Lv.2】购买成功！在背包里可以使用
+
+#if
+equal U102 2
+CheckBindMoney 绑定点卡 > 2999
+#act
+ChangeBindMoney 绑定点卡 3000
+give 红军果Lv.3 1
+sendmsg 6 【红军果Lv.3】购买成功！在背包里可以使用
+
+#if
+equal U102 3
+CheckBindMoney 绑定点卡 > 3999
+#act
+ChangeBindMoney 绑定点卡 4000
+give 红军果Lv.4 1
+sendmsg 6 【红军果Lv.4】购买成功！在背包里可以使用
+
+#if
+equal U102 4
+CheckBindMoney 绑定点卡 > 4999
+#act
+ChangeBindMoney 绑定点卡 5000
+give 红军果Lv.5 1
+sendmsg 6 【红军果Lv.5】购买成功！在背包里可以使用
+
+;==========================================================
+[@购买紫菱花]
+#if
+equal U103 0
+CheckBindMoney 绑定点卡 < 1000
+#act
+sendmsg 9 货币不足
+
+#if
+equal U103 1
+CheckBindMoney 绑定点卡 < 2000
+#act
+sendmsg 9 货币不足
+
+#if
+equal U103 2
+CheckBindMoney 绑定点卡 < 3000
+#act
+sendmsg 9 货币不足
+
+#if
+equal U103 3
+CheckBindMoney 绑定点卡 < 4000
+#act
+sendmsg 9 货币不足
+
+#if
+equal U103 4
+CheckBindMoney 绑定点卡 < 5000
+#act
+sendmsg 9 货币不足
+
+
+
+
+#if
+equal U103 0
+CheckBindMoney 绑定点卡 > 999
+#act
+ChangeBindMoney 绑定点卡 1000
+give 紫菱花Lv.1 1
+sendmsg 6 【紫菱花Lv.1】购买成功！在背包里可以使用
+
+#if
+equal U103 1
+CheckBindMoney 绑定点卡 > 1999
+#act
+ChangeBindMoney 绑定点卡 2000
+give 紫菱花Lv.2 1
+sendmsg 6 【紫菱花Lv.2】购买成功！在背包里可以使用
+
+#if
+equal U103 2
+CheckBindMoney 绑定点卡 > 2999
+#act
+ChangeBindMoney 绑定点卡 3000
+give 紫菱花Lv.3 1
+sendmsg 6 【紫菱花Lv.3】购买成功！在背包里可以使用
+
+#if
+equal U103 3
+CheckBindMoney 绑定点卡 > 3999
+#act
+ChangeBindMoney 绑定点卡 4000
+give 紫菱花Lv.4 1
+sendmsg 6 【紫菱花Lv.4】购买成功！在背包里可以使用
+
+#if
+equal U103 4
+CheckBindMoney 绑定点卡 > 4999
+#act
+ChangeBindMoney 绑定点卡 5000
+give 紫菱花Lv.5 1
+sendmsg 6 【紫菱花Lv.5】购买成功！在背包里可以使用
+
+
+
+;==========================================================
+[@购买白莲灵]
+#if
+equal U107 0
+CheckBindMoney 绑定点卡 < 1000
+#act
+sendmsg 9 货币不足
+
+#if
+equal U107 1
+CheckBindMoney 绑定点卡 < 2000
+#act
+sendmsg 9 货币不足
+
+#if
+equal U107 2
+CheckBindMoney 绑定点卡 < 3000
+#act
+sendmsg 9 货币不足
+
+#if
+equal U107 3
+CheckBindMoney 绑定点卡 < 4000
+#act
+sendmsg 9 货币不足
+
+#if
+equal U107 4
+CheckBindMoney 绑定点卡 < 5000
+#act
+sendmsg 9 货币不足
+
+
+
+
+#if
+equal U107 0
+CheckBindMoney 绑定点卡 > 999
+#act
+ChangeBindMoney 绑定点卡 1000
+give 白莲灵Lv.1 1
+sendmsg 6 【白莲灵Lv.1】购买成功！在背包里可以使用
+
+#if
+equal U107 1
+CheckBindMoney 绑定点卡 > 1999
+#act
+ChangeBindMoney 绑定点卡 2000
+give 白莲灵Lv.2 1
+sendmsg 6 【白莲灵Lv.2】购买成功！在背包里可以使用
+
+#if
+equal U107 2
+CheckBindMoney 绑定点卡 > 2999
+#act
+ChangeBindMoney 绑定点卡 3000
+give 白莲灵Lv.3 1
+sendmsg 6 【白莲灵Lv.3】购买成功！在背包里可以使用
+
+#if
+equal U107 3
+CheckBindMoney 绑定点卡 > 3999
+#act
+ChangeBindMoney 绑定点卡 4000
+give 白莲灵Lv.4 1
+sendmsg 6 【白莲灵Lv.4】购买成功！在背包里可以使用
+
+#if
+equal U107 4
+CheckBindMoney 绑定点卡 > 4999
+#act
+ChangeBindMoney 绑定点卡 5000
+give 白莲灵Lv.5 1
+sendmsg 6 【白莲灵Lv.5】购买成功！在背包里可以使用
+
+
+
+;==========================================================
+[@购买九阴灵芝]
+#if
+equal U110 0
+CheckBindMoney 绑定点卡 < 1000
+#act
+sendmsg 9 货币不足
+
+#if
+equal U110 1
+CheckBindMoney 绑定点卡 < 2000
+#act
+sendmsg 9 货币不足
+
+#if
+equal U110 2
+CheckBindMoney 绑定点卡 < 3000
+#act
+sendmsg 9 货币不足
+
+#if
+equal U110 3
+CheckBindMoney 绑定点卡 < 4000
+#act
+sendmsg 9 货币不足
+
+#if
+equal U110 4
+CheckBindMoney 绑定点卡 < 5000
+#act
+sendmsg 9 货币不足
+
+
+
+
+#if
+equal U110 0
+CheckBindMoney 绑定点卡 > 999
+#act
+ChangeBindMoney 绑定点卡 1000
+give 九阴灵芝Lv.1 1
+sendmsg 6 【九阴灵芝Lv.1】购买成功！在背包里可以使用
+
+#if
+equal U110 1
+CheckBindMoney 绑定点卡 > 1999
+#act
+ChangeBindMoney 绑定点卡 2000
+give 九阴灵芝Lv.2 1
+sendmsg 6 【九阴灵芝Lv.2】购买成功！在背包里可以使用
+
+#if
+equal U110 2
+CheckBindMoney 绑定点卡 > 2999
+#act
+ChangeBindMoney 绑定点卡 3000
+give 九阴灵芝Lv.3 1
+sendmsg 6 【九阴灵芝Lv.3】购买成功！在背包里可以使用
+
+#if
+equal U110 3
+CheckBindMoney 绑定点卡 > 3999
+#act
+ChangeBindMoney 绑定点卡 4000
+give 九阴灵芝Lv.4 1
+sendmsg 6 【九阴灵芝Lv.4】购买成功！在背包里可以使用
+
+#if
+equal U110 4
+CheckBindMoney 绑定点卡 > 4999
+#act
+ChangeBindMoney 绑定点卡 5000
+give 九阴灵芝Lv.5 1
+sendmsg 6 【九阴灵芝Lv.5】购买成功！在背包里可以使用
+
+
+
+
+[@选择材料1]
+#if
+#act
+
+mov S$材料框带金边框1 a
+mov S$材料框带金边框2 b
+mov S$选择的材料名字 药魂石
+goto @药剂师页面
+
+[@选择材料2]
+#if
+#act
+
+mov S$材料框带金边框1 b
+mov S$材料框带金边框2 a
+mov S$选择的材料名字 药魂晶
+goto @药剂师页面
+
+
+[@提交材料]
+
+
+#if
+equal S$材料框带金边框1 b
+equal S$材料框带金边框2 b
+#act
+sendmsg 9 请先选择材料，再来提交！
+break
+
+
+#if
+equal S$选择的材料名字 药魂石
+#act
+goto @药魂石的提交
+
+#if
+equal S$选择的材料名字 药魂晶
+#act
+goto @药魂晶的提交
+
+;----------------------------------------
+
+[@提交红军果材料]
+
+#if
+equal S$材料框带金边框1 b
+equal S$材料框带金边框2 b
+#act
+sendmsg 9 请先选择材料，再来提交！
+break
+
+
+#if
+equal S$选择的材料名字 药魂石
+#act
+goto @红军果药魂石的提交
+
+#if
+equal S$选择的材料名字 药魂晶
+#act
+goto @红军果药魂晶的提交
+
+;----------------------------------------
+
+[@提交紫菱花材料]
+
+#if
+equal S$材料框带金边框1 b
+equal S$材料框带金边框2 b
+#act
+sendmsg 9 请先选择材料，再来提交！
+break
+
+
+#if
+equal S$选择的材料名字 药魂石
+#act
+goto @紫菱花药魂石的提交
+
+#if
+equal S$选择的材料名字 药魂晶
+#act
+goto @紫菱花药魂晶的提交
+
+
+[@提交白莲灵材料]
+
+#if
+equal S$材料框带金边框1 b
+equal S$材料框带金边框2 b
+#act
+sendmsg 9 请先选择材料，再来提交！
+break
+
+
+#if
+equal S$选择的材料名字 药魂石
+#act
+goto @白莲灵药魂石的提交
+
+#if
+equal S$选择的材料名字 药魂晶
+#act
+goto @白莲灵药魂晶的提交
+
+[@提交九阴灵芝材料]
+
+#if
+equal S$材料框带金边框1 b
+equal S$材料框带金边框2 b
+#act
+sendmsg 9 请先选择材料，再来提交！
+break
+
+
+#if
+equal S$选择的材料名字 药魂石
+#act
+goto @九阴灵芝药魂石的提交
+
+#if
+equal S$选择的材料名字 药魂晶
+#act
+goto @九阴灵芝药魂晶的提交
+
+
+[@药魂石的提交]
+#if
+checkitem 药魂石 1
+#act
+take 药魂石 1
+inc U100 1
+inc U201 1
+goto @药剂师页面
+#elseact
+sendmsg 9 你输入的数量背包不足，无法提交
+
+[@药魂晶的提交]
+#if
+checkitem 药魂晶 1
+#act
+take 药魂晶 1
+
+inc U100 5
+inc U202 1
+goto @药剂师页面
+#elseact
+sendmsg 9 你输入的数量背包不足，无法提交
+
+[@红军果药魂石的提交]
+#if
+checkitem 药魂石 1
+#act
+take 药魂石 1
+inc U104 1
+inc U201 1
+goto @药剂师页面
+#elseact
+sendmsg 9 你输入的数量背包不足，无法提交
+
+[@红军果药魂晶的提交]
+#if
+checkitem 药魂晶 1
+#act
+take 药魂晶 1
+
+inc U104 5
+inc U202 1
+goto @药剂师页面
+#elseact
+sendmsg 9 你输入的数量背包不足，无法提交
+
+[@紫菱花药魂石的提交]
+#if
+checkitem 药魂石 1
+#act
+take 药魂石 1
+inc U105 1
+inc U201 1
+goto @药剂师页面
+#elseact
+sendmsg 9 你输入的数量背包不足，无法提交
+
+[@紫菱花药魂晶的提交]
+#if
+checkitem 药魂晶 1
+#act
+take 药魂晶 1
+
+inc U105 5
+inc U202 1
+goto @药剂师页面
+#elseact
+sendmsg 9 你输入的数量背包不足，无法提交
+
+
+[@白莲灵药魂石的提交]
+#if
+checkitem 药魂石 1
+#act
+take 药魂石 1
+inc U109 1
+inc U201 1
+goto @药剂师页面
+#elseact
+sendmsg 9 你输入的数量背包不足，无法提交
+
+[@白莲灵药魂晶的提交]
+#if
+checkitem 药魂晶 1
+#act
+take 药魂晶 1
+
+inc U109 5
+inc U202 1
+goto @药剂师页面
+#elseact
+sendmsg 9 你输入的数量背包不足，无法提交
+
+
+[@九阴灵芝药魂石的提交]
+#if
+checkitem 药魂石 1
+#act
+take 药魂石 1
+inc U111 1
+inc U201 1
+goto @药剂师页面
+#elseact
+sendmsg 9 你输入的数量背包不足，无法提交
+
+[@九阴灵芝药魂晶的提交]
+#if
+checkitem 药魂晶 1
+#act
+take 药魂晶 1
+
+inc U111 5
+inc U202 1
+goto @药剂师页面
+#elseact
+sendmsg 9 你输入的数量背包不足，无法提交
+
+[@突破1]
+#if
+CheckBindMoney 绑定点卷 > 299
+#act
+ChangeBindMoney 绑定点卷 300
+mov U67 0 
+sendmsg 9 突破成功！效果已清零，请重新购买
+mov U101 1
+MOV U100 0
+goto @刷新页面
+goto @点击展示
+goto @药剂师页面
+#elseact
+sendmsg 9 提示：货币不足！
+
+[@突破2]
+#if
+CheckBindMoney 绑定点卷 > 599
+#act
+ChangeBindMoney 绑定点卷 600
+mov U67 0 
+sendmsg 9 突破成功！效果已清零，请重新购买
+mov U101 2
+MOV U100 0
+goto @刷新页面
+goto @点击展示
+goto @药剂师页面
+#elseact
+sendmsg 9 提示：货币不足！
+
+[@突破3]
+#if
+CheckBindMoney 绑定点卷 > 899
+#act
+ChangeBindMoney 绑定点卷 900
+mov U67 0 
+sendmsg 9 突破成功！效果已清零，请重新购买
+mov U101 3
+MOV U100 0
+goto @刷新页面
+goto @点击展示
+goto @药剂师页面
+#elseact
+sendmsg 9 提示：货币不足！
+
+
+[@突破4]
+#if
+CheckBindMoney 绑定点卷 > 1199
+#act
+ChangeBindMoney 绑定点卷 1200
+mov U67 0 
+sendmsg 9 突破成功！效果已清零，请重新购买
+mov U101 4
+;MOV U100 0
+goto @刷新页面
+goto @点击展示
+goto @药剂师页面
+#elseact
+sendmsg 9 提示：货币不足！
+
+;----------------------------------------------------------
+
+[@红军果突破1]
+#if
+CheckBindMoney 绑定点卷 > 299
+#act
+ChangeBindMoney 绑定点卷 300
+mov U72 0 
+sendmsg 9 突破成功！效果已清零，请重新购买
+mov U102 1
+MOV U104 0
+goto @刷新页面
+goto @点击展示红军果
+goto @药剂师页面
+#elseact
+sendmsg 9 提示：货币不足！
+
+[@红军果突破2]
+#if
+CheckBindMoney 绑定点卷 > 599
+#act
+ChangeBindMoney 绑定点卷 600
+mov U72 0 
+sendmsg 9 突破成功！效果已清零，请重新购买
+mov U102 2
+MOV U104 0
+goto @刷新页面
+goto @点击展示红军果
+goto @药剂师页面
+#elseact
+sendmsg 9 提示：货币不足！
+
+[@红军果突破3]
+#if
+CheckBindMoney 绑定点卷 > 899
+#act
+ChangeBindMoney 绑定点卷 900
+mov U72 0 
+sendmsg 9 突破成功！效果已清零，请重新购买
+mov U102 3
+MOV U104 0
+goto @刷新页面
+goto @点击展示红军果
+goto @药剂师页面
+#elseact
+sendmsg 9 提示：货币不足！
+
+
+[@红军果突破4]
+#if
+CheckBindMoney 绑定点卷 > 1199
+#act
+ChangeBindMoney 绑定点卷 1200
+mov U72 0 
+sendmsg 9 突破成功！效果已清零，请重新购买
+mov U102 4
+;MOV U104 0
+
+goto @刷新页面
+goto @点击展示红军果
+goto @药剂师页面
+#elseact
+sendmsg 9 提示：货币不足！
+
+
+;----------------------------------------------------------
+
+[@紫菱花突破1]
+#if
+CheckBindMoney 绑定点卷 > 299
+#act
+ChangeBindMoney 绑定点卷 300
+mov U74 0 
+sendmsg 9 突破成功！效果已清零，请重新购买
+mov U103 1
+MOV U105 0
+goto @刷新页面
+goto @点击展示紫菱花
+goto @药剂师页面
+#elseact
+sendmsg 9 提示：货币不足！
+
+[@紫菱花突破2]
+#if
+CheckBindMoney 绑定点卷 > 599
+#act
+ChangeBindMoney 绑定点卷 600
+mov U74 0 
+sendmsg 9 突破成功！效果已清零，请重新购买
+mov U103 2
+MOV U105 0
+goto @刷新页面
+goto @点击展示紫菱花
+goto @药剂师页面
+#elseact
+sendmsg 9 提示：货币不足！
+
+[@紫菱花突破3]
+#if
+CheckBindMoney 绑定点卷 > 899
+#act
+ChangeBindMoney 绑定点卷 900
+mov U74 0 
+sendmsg 9 突破成功！效果已清零，请重新购买
+mov U103 3
+MOV U105 0
+goto @刷新页面
+goto @点击展示紫菱花
+goto @药剂师页面
+#elseact
+sendmsg 9 提示：货币不足！
+
+
+[@紫菱花突破4]
+#if
+CheckBindMoney 绑定点卷 > 1199
+#act
+ChangeBindMoney 绑定点卷 1200
+mov U74 0 
+sendmsg 9 突破成功！效果已清零，请重新购买
+mov U103 4
+;MOV U105 0
+
+goto @刷新页面
+goto @点击展示紫菱花
+goto @药剂师页面
+#elseact
+sendmsg 9 提示：货币不足！
+
+
+;----------------------------------------------------------
+
+[@白莲灵突破1]
+#if
+CheckBindMoney 绑定点卷 > 299
+#act
+ChangeBindMoney 绑定点卷 300
+mov U77 0 
+sendmsg 9 突破成功！效果已清零，请重新购买
+mov U107 1
+MOV U109 0
+goto @刷新页面
+goto @点击展示白莲灵
+goto @药剂师页面
+#elseact
+sendmsg 9 提示：货币不足！
+
+[@白莲灵突破2]
+#if
+CheckBindMoney 绑定点卷 > 599
+#act
+ChangeBindMoney 绑定点卷 600
+mov U77 0 
+sendmsg 9 突破成功！效果已清零，请重新购买
+mov U107 2
+MOV U109 0
+goto @刷新页面
+goto @点击展示白莲灵
+goto @药剂师页面
+#elseact
+sendmsg 9 提示：货币不足！
+
+[@白莲灵突破3]
+#if
+CheckBindMoney 绑定点卷 > 899
+#act
+ChangeBindMoney 绑定点卷 900
+mov U77 0 
+sendmsg 9 突破成功！效果已清零，请重新购买
+mov U107 3
+MOV U109 0
+goto @刷新页面
+goto @点击展示白莲灵
+goto @药剂师页面
+#elseact
+sendmsg 9 提示：货币不足！
+
+
+[@白莲灵突破4]
+#if
+CheckBindMoney 绑定点卷 > 1199
+#act
+ChangeBindMoney 绑定点卷 1200
+mov U77 0 
+sendmsg 9 突破成功！效果已清零，请重新购买
+mov U107 4
+;MOV U109 0
+
+goto @刷新页面
+goto @点击展示白莲灵
+goto @药剂师页面
+#elseact
+sendmsg 9 提示：货币不足！
+
+;----------------------------------------------------------
+
+[@九阴灵芝突破1]
+#if
+CheckBindMoney 绑定点卷 > 299
+#act
+ChangeBindMoney 绑定点卷 300
+mov U80 0 
+sendmsg 9 突破成功！效果已清零，请重新购买
+mov U110 1
+MOV U111 0
+goto @刷新页面
+goto @点击展示九阴灵芝
+goto @药剂师页面
+#elseact
+sendmsg 9 提示：货币不足！
+
+[@九阴灵芝突破2]
+#if
+CheckBindMoney 绑定点卷 > 599
+#act
+ChangeBindMoney 绑定点卷 600
+mov U80 0 
+sendmsg 9 突破成功！效果已清零，请重新购买
+mov U110 2
+MOV U111 0
+goto @刷新页面
+goto @点击展示九阴灵芝
+goto @药剂师页面
+#elseact
+sendmsg 9 提示：货币不足！
+
+[@九阴灵芝突破3]
+#if
+CheckBindMoney 绑定点卷 > 899
+#act
+ChangeBindMoney 绑定点卷 900
+mov U80 0 
+sendmsg 9 突破成功！效果已清零，请重新购买
+mov U110 3
+MOV U111 0
+goto @刷新页面
+goto @点击展示九阴灵芝
+goto @药剂师页面
+#elseact
+sendmsg 9 提示：货币不足！
+
+
+[@九阴灵芝突破4]
+#if
+CheckBindMoney 绑定点卷 > 1199
+#act
+ChangeBindMoney 绑定点卷 1200
+mov U80 0 
+sendmsg 9 突破成功！效果已清零，请重新购买
+mov U110 4
+;MOV U111 0
+
+goto @刷新页面
+goto @点击展示九阴灵芝
+goto @药剂师页面
+#elseact
+sendmsg 9 提示：货币不足！
+
+[@重置]
+#if
+#act
+messagebox 一旦点击重置，需耗费1000点卷。所有药草属性皆会重置，并返还之前提升的材料，而点卷无法返还。是否确定重置？   @确定重置 @取消
+
+[@确定重置]
+#if
+#act
+mov U101 0
+mov U100 0
+;-------
+mov U102 0
+mov U104 0
+;------
+mov U103 0
+mov U105 0
+;------
+mov U107 0
+mov U109 0
+;------
+mov U110 0
+mov U111 0
+;========================
+MOV U66 0
+MOV U68 0
+;-------
+MOV U69 0
+MOV U71 0
+;-------
+MOV U70 0
+MOV U73 0
+;------
+MOV U75 0
+MOV U76 0
+;------
+MOV U78 0
+MOV U79 0
+;---------
+GIVE 药魂石 <$STR(U201)>
+GIVE 药魂晶 <$STR(U202)>
+mov U201 0
+mov U202 0
+set [180] 0
+#CALL [\主界面基础按钮\主界面基础按钮QM.txt] @基础按钮QM
+sendmsg 6 重置成功！
+mov S$显示 
+goto @main
+
+[@打开药剂规则]
+#if
+#act
+mov S$药剂规则 <Img|a=4|children={eee}|x=453|y=253|width=657|height=280|img=npc/yjs/bj-2.png|move=0|loadDelay=0|reset=1|esc=1|show=4>
+inc S$药剂规则 <Button|id=eee|x=626|y=6|nimg=public/close-2.png|mimg=public/close-2.png|link=@关闭药剂规则>
+goto @药剂师页面
+
+[@关闭药剂规则]
+#if
+#act
+mov S$药剂规则
+goto @药剂师页面

@@ -1,0 +1,79 @@
+[@至尊年卡页面]
+{
+#IF
+#ACT
+#CALL [\主界面基础按钮\主界面游戏按钮.txt] @界面游戏按钮
+#CALL [\主界面基础按钮\福利大厅红点检测.txt] @福利大厅按钮
+
+#IF
+#ACT
+GetDBItemFieldValue 昔缘 idx N$展示IDX1
+#SAY
+<Button|x=-2526.0|y=-1172.0|width=115120|height=112880|nimg=npc/zd.png|mimg=npc/zd.png|color=224|size=18|pimg=npc/zd.png|link=@exit>
+<Img|show=0|bg=1|loadDelay=0|move=0|esc=1|img=npc/flzx/5/bj.png|reset=1>
+<Layout|x=724.0|y=0.0|width=80|height=80|link=@exit>
+<Button|x=751.0|y=14.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+
+
+<ListView|children={1,2,3,4,5,6}|x=37.0|y=169.0|width=205|height=362|direction=1|bounce=0|margin=1|default=8|reload=1>
+
+<Button|id=1|children={1a}|x=485.0|y=366.0|pimg=npc/flzx/1-2.png|color=255|size=18|mimg=npc/flzx/1-3.png|nimg=npc/flzx/1-1.png|link=@七日签到>
+
+<Button|id=2|children={2a}|x=485.0|y=366.0|pimg=npc/flzx/2-2.png|color=255|size=18|mimg=npc/flzx/2-3.png|nimg=npc/flzx/2-1.png|link=@在线奖励>
+
+<Button|id=3|children={3a}|x=485.0|y=366.0|pimg=npc/flzx/3-2.png|color=255|size=18|mimg=npc/flzx/3-3.png|nimg=npc/flzx/3-1.png|link=@首爆奖励>
+
+<Button|id=4|children={4a}|x=485.0|y=366.0|pimg=npc/flzx/4-2.png|color=255|size=18|mimg=npc/flzx/4-3.png|nimg=npc/flzx/4-1.png|link=@微信礼包>
+
+<Button|id=5|children={5a}|x=485.0|y=366.0|pimg=npc/flzx/5-2.png|color=255|size=18|mimg=npc/flzx/5-3.png|nimg=npc/flzx/5-3.png|link=@至尊年卡>
+
+<Button|id=6|children={6a}|x=485.0|y=366.0|pimg=npc/flzx/6-2.png|color=255|size=18|mimg=npc/flzx/6-3.png|nimg=npc/flzx/6-1.png|link=@经验爆率>
+
+<$STR(S$七日签到)>
+<$STR(S$在线奖励)>
+<$STR(S$首爆奖励)>
+<$STR(S$微信礼包)>
+<$STR(S$至尊年卡)>
+<$STR(S$经验爆率)>
+
+<Text|a=4|x=412.0|y=468.0|size=18|color=150|outlinecolor=0|outline=1|text=$STM(MONEY_充值点)>
+
+<Button|x=535.0|y=437.0|color=255|size=18|mimg=npc/flzx/5/jh-3.png|nimg=npc/flzx/5/jh-1.png|pimg=npc/flzx/5/jh-2.png|link=@激活年卡>
+<Text|x=543.0|y=372.0|size=17|color=253|text=附加赠送:传送戒指>
+<Text|x=286.0|y=399.0|size=17|color=253|text=至尊年卡激活:宝宝施放绿毒几率+100%>
+<Text|x=286.0|y=420.0|size=17|color=253|text=至尊年卡激活:增加BOSS探查功能>
+
+
+
+
+;===================================================================================================================================
+
+[@激活年卡]
+#IF
+CHECKMONEY 充值点 < 298
+#ACT
+Pullpay 298 3 1
+BREAK
+
+#IF
+CHECKMONEY 充值点 ? 298
+NOT CHECKTITLE 至尊年卡
+#ACT
+CONFERTITLE 至尊年卡
+#CALL [\主界面基础按钮\主界面游戏按钮.txt] @界面游戏按钮
+GiveStateItem 书页 100 0 1 0 0 1 1 1 1
+give 传送戒指 1
+SENDMSG 9 恭喜您成功领取至尊年卡！
+GOTO @至尊年卡页面
+#ELSEACT
+SENDMSG 9 您已经拥有该称号！
+
+
+[@确定充值]
+#IF
+#ACT
+OPENHYPERLINK 26
+
+
+
+}

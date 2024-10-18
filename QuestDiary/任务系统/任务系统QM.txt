@@ -1,0 +1,232 @@
+[@任务系统QM]
+{
+;U7=主线任务编号
+;U8=刷新任务状态显示数字
+;U19=支线任务编号
+;-----------------------------------开始任务在这
+;主线任务登陆
+;-----------------------------------
+
+
+
+
+#IF
+CHECK [50] 0
+#ACT
+SET [50] 1
+MOV U7 1
+newpicktask <$STR(U7)>
+newchangetask <$STR(U7)> <$STR(U8)>
+tasktopshow <$STR(U7)>
+Navigation 110 1 点击进行任务
+goto @任务奖励展示
+BREAK
+
+
+
+;==============打怪100任务完成============
+#IF
+equal U7 2
+large U8 99
+#ACT
+newcompletetask <$STR(U7)>
+BREAK
+
+#IF
+equal U7 2
+#ACT
+newpicktask <$STR(U7)>
+newchangetask <$STR(U7)> <$STR(U8)>
+BREAK
+
+;==============激活黑切成神成功============
+#IF
+equal U7 3
+check [18] 1
+check [19] 1
+#ACT
+newcompletetask <$STR(U7)>
+BREAK
+
+#IF
+equal U7 3
+check [18] 0
+check [19] 0
+#ACT
+newpicktask <$STR(U7)>
+newchangetask <$STR(U7)> <$STR(U8)>
+BREAK
+
+#IF
+equal U7 3
+check [18] 1
+check [19] 0
+#ACT
+newpicktask <$STR(U7)>
+newchangetask <$STR(U7)> <$STR(U8)>
+BREAK
+
+#IF
+equal U7 3
+check [18] 0
+check [19] 1
+#ACT
+newpicktask <$STR(U7)>
+newchangetask <$STR(U7)> <$STR(U8)>
+BREAK
+
+;==============激活顶级赞助成功============
+#IF
+equal U7 4
+check [28] 1
+#ACT
+newcompletetask <$STR(U7)>
+BREAK
+
+#IF
+equal U7 4
+check [28] 0
+#ACT
+newpicktask <$STR(U7)>
+newchangetask <$STR(U7)>
+BREAK
+;==============激活顶级黑切切割和成神============
+#IF
+equal U7 5
+check [40] 1
+check [49] 1
+#ACT
+newcompletetask <$STR(U7)>
+BREAK
+
+#IF
+equal U7 5
+check [40] 0
+check [49] 0
+
+#ACT
+newpicktask <$STR(U7)>
+newchangetask <$STR(U7)>
+BREAK
+
+#IF
+equal U7 5
+check [40] 0
+check [49] 1
+
+#ACT
+newpicktask <$STR(U7)>
+newchangetask <$STR(U7)>
+BREAK
+
+#IF
+equal U7 5
+check [40] 1
+check [49] 0
+
+#ACT
+newpicktask <$STR(U7)>
+newchangetask <$STR(U7)>
+BREAK
+
+;==============转生达到2级============
+#IF
+equal U7 6
+CHECKRENEWLEVEL = 2
+#ACT
+newcompletetask <$STR(U7)>
+BREAK
+
+#IF
+equal U7 6
+CHECKRENEWLEVEL < 2
+#ACT
+newpicktask <$STR(U7)>
+newchangetask <$STR(U7)>
+BREAK
+
+
+
+;==============前往比奇省============
+#IF
+equal U7 7
+check [20] 1
+#ACT
+newcompletetask <$STR(U7)>
+BREAK
+
+#IF
+equal U7 7
+check [20] 0
+#ACT
+newpicktask <$STR(U7)>
+newchangetask <$STR(U7)>
+BREAK
+;===========讨伐任务================
+#IF
+equal U7 8
+large U48 49
+#ACT
+newcompletetask <$STR(U7)>
+BREAK
+
+#IF
+equal U7 8
+#ACT
+newpicktask <$STR(U7)>
+newchangetask <$STR(U7)> <$STR(U48)>
+BREAK
+;===============黑切成神满===========
+#IF
+equal U7 9
+check [74] 1
+check [75] 1
+#ACT
+newcompletetask <$STR(U7)>
+BREAK
+
+#IF
+equal U7 9
+check [74] 0
+check [75] 0
+#ACT
+newpicktask <$STR(U7)>
+newchangetask <$STR(U7)> <$STR(U8)>
+BREAK
+
+#IF
+equal U7 9
+check [74] 1
+check [75] 0
+#ACT
+newpicktask <$STR(U7)>
+newchangetask <$STR(U7)> <$STR(U8)>
+BREAK
+
+#IF
+equal U7 9
+check [74] 0
+check [75] 1
+#ACT
+newpicktask <$STR(U7)>
+newchangetask <$STR(U7)> <$STR(U8)>
+BREAK
+;==============前往百日门============
+#IF
+equal U7 10
+CHECKRENEWLEVEL > 3
+check [76] 1
+CHECKLEVELEX > 48
+#ACT
+newcompletetask <$STR(U7)>
+BREAK
+
+#IF
+equal U7 10
+CHECKRENEWLEVEL < 5
+CHECKLEVELEX < 51
+#ACT
+newpicktask <$STR(U7)>
+newchangetask <$STR(U7)>
+BREAK
+}

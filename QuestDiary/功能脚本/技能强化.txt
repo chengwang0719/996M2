@@ -1,0 +1,1571 @@
+[@技能升级页面]   
+{ 
+#if
+#act
+mov S$选中坐标1 71
+mov S$选中坐标2 62
+
+
+#IF
+checkjob  Warrior
+CHECKSKILL 基本剑术 = 3 0
+#act
+mov S$技能名称 基本剑术　LV.4
+mov S$技能效果 随着攻击次数增加提升1-3点攻速，最高上限3点攻速
+mov S$技能书  20051
+mov S$要升级的技能 基本剑术
+mov S$技能书页数 50
+mov S$技能框显示 <Img|id=1c|children={1d}|x=11.0|y=8.0|width=60|height=60|reset=1|loadDelay=0|esc=1|img=npc/jnqh/kuang.png|show=4|move=0>
+inc S$技能框显示 <ItemShow|id=1d|x=-3.0|y=-3.0|width=60|height=60|itemid=<$STR(S$技能书)>|itemcount=1|bgtype=0|showtips=1>
+inc S$技能框显示 <Img|id=2c|children={2d}|x=81.0|y=8.0|width=60|height=60|reset=1|loadDelay=0|esc=1|img=npc/jnqh/kuang.png|show=4|move=0>
+inc S$技能框显示 <ItemShow|id=2d|x=0.0|y=-2.0|width=60|height=60|itemid=20178|itemcount=<$STR(S$技能书页数)>|bgtype=0|showtips=1>
+goto @颜色等级判断
+goto @战士页面展示
+
+#IF
+checkjob  Warrior
+CHECKSKILL 基本剑术 = 4 0
+#act
+mov S$技能名称 基本剑术　LV.5
+mov S$技能效果 随着攻击次数增加提升1-6点攻速，最高上限6点攻速
+mov S$技能书  20051
+mov S$要升级的技能 基本剑术
+mov S$技能书页数 100
+mov S$技能框显示 <Img|id=1c|children={1d}|x=11.0|y=8.0|width=60|height=60|reset=1|loadDelay=0|esc=1|img=npc/jnqh/kuang.png|show=4|move=0>
+inc S$技能框显示 <ItemShow|id=1d|x=-3.0|y=-3.0|width=60|height=60|itemid=<$STR(S$技能书)>|itemcount=1|bgtype=0|showtips=1>
+inc S$技能框显示 <Img|id=2c|children={2d}|x=81.0|y=8.0|width=60|height=60|reset=1|loadDelay=0|esc=1|img=npc/jnqh/kuang.png|show=4|move=0>
+inc S$技能框显示 <ItemShow|id=2d|x=0.0|y=-2.0|width=60|height=60|itemid=20178|itemcount=<$STR(S$技能书页数)>|bgtype=0|showtips=1>
+goto @颜色等级判断
+goto @战士页面展示
+
+#IF
+checkjob  Warrior
+CHECKSKILL 基本剑术 = 5 0
+#act
+mov S$技能名称 基本剑术　LV.5
+mov S$技能效果 攻速随着攻击次数持续叠加最高40%
+mov S$技能书  
+mov S$要升级的技能 基本剑术
+mov S$技能书页数 
+mov S$技能框显示 <Text|id=1c|x=-26.0|y=24.0|size=18|outline=2|color=243|text=已到达最高级,无需升级>
+goto @颜色等级判断
+goto @战士页面展示
+
+
+#IF
+checkjob  Wizard
+CHECKSKILL 魔法盾 = 3 0
+#act
+mov S$技能图标 mfd
+mov S$技能名称 魔法盾　LV.4
+mov S$技能效果 物理魔法伤害减少5%
+mov S$要升级的技能 魔法盾
+mov S$技能书  20076
+mov S$技能书页数 50
+mov S$技能框显示 <Img|id=1c|children={1d}|x=11.0|y=8.0|width=60|height=60|reset=1|loadDelay=0|esc=1|img=npc/jnqh/kuang.png|show=4|move=0>
+inc S$技能框显示 <ItemShow|id=1d|x=-3.0|y=-3.0|width=60|height=60|itemid=<$STR(S$技能书)>|itemcount=1|bgtype=0|showtips=1>
+inc S$技能框显示 <Img|id=2c|children={2d}|x=81.0|y=8.0|width=60|height=60|reset=1|loadDelay=0|esc=1|img=npc/jnqh/kuang.png|show=4|move=0>
+inc S$技能框显示 <ItemShow|id=2d|x=0.0|y=-2.0|width=60|height=60|itemid=20178|itemcount=<$STR(S$技能书页数)>|bgtype=0|showtips=1>
+goto @颜色等级判断
+goto @法师页面展示
+
+#IF
+checkjob  Wizard
+CHECKSKILL 魔法盾 = 4 0
+#act
+mov S$技能图标 mfd
+mov S$技能名称 魔法盾　LV.5
+mov S$技能效果 物理魔法伤害减少10%
+mov S$要升级的技能 魔法盾
+mov S$技能书  20076
+mov S$技能书页数 100
+mov S$技能框显示 <Img|id=1c|children={1d}|x=11.0|y=8.0|width=60|height=60|reset=1|loadDelay=0|esc=1|img=npc/jnqh/kuang.png|show=4|move=0>
+inc S$技能框显示 <ItemShow|id=1d|x=-3.0|y=-3.0|width=60|height=60|itemid=<$STR(S$技能书)>|itemcount=1|bgtype=0|showtips=1>
+inc S$技能框显示 <Img|id=2c|children={2d}|x=81.0|y=8.0|width=60|height=60|reset=1|loadDelay=0|esc=1|img=npc/jnqh/kuang.png|show=4|move=0>
+inc S$技能框显示 <ItemShow|id=2d|x=0.0|y=-2.0|width=60|height=60|itemid=20178|itemcount=<$STR(S$技能书页数)>|bgtype=0|showtips=1>
+goto @颜色等级判断
+goto @法师页面展示
+
+#IF
+checkjob  Wizard
+CHECKSKILL 魔法盾 = 5 0
+#act
+mov S$技能图标 mfd
+mov S$技能名称 魔法盾　LV.5
+mov S$技能效果 物理魔法伤害减少10%
+mov S$要升级的技能 
+mov S$技能书  
+mov S$技能书页数 
+mov S$技能框显示 <Text|id=1c|x=-26.0|y=24.0|size=18|outline=2|color=243|text=已到达最高级,无需升级>
+
+goto @颜色等级判断
+goto @法师页面展示
+
+
+
+
+#IF
+checkjob  Taoist
+CHECKSKILL 幽灵盾 = 3 0
+#act
+mov S$技能图标 yld
+mov S$技能名称 幽灵盾　LV.4
+mov S$技能效果 魔抗双倍效果
+mov S$要升级的技能 幽灵盾
+mov S$技能书  20066
+mov S$技能书页数 50
+mov S$技能框显示 <Img|id=1c|children={1d}|x=11.0|y=8.0|width=60|height=60|reset=1|loadDelay=0|esc=1|img=npc/jnqh/kuang.png|show=4|move=0>
+inc S$技能框显示 <ItemShow|id=1d|x=-3.0|y=-3.0|width=60|height=60|itemid=<$STR(S$技能书)>|itemcount=1|bgtype=0|showtips=1>
+inc S$技能框显示 <Img|id=2c|children={2d}|x=81.0|y=8.0|width=60|height=60|reset=1|loadDelay=0|esc=1|img=npc/jnqh/kuang.png|show=4|move=0>
+inc S$技能框显示 <ItemShow|id=2d|x=0.0|y=-2.0|width=60|height=60|itemid=20178|itemcount=<$STR(S$技能书页数)>|bgtype=0|showtips=1>
+goto @颜色等级判断
+goto @道士页面展示
+
+#IF
+checkjob  Taoist
+CHECKSKILL 幽灵盾 = 4 0
+#act
+mov S$技能图标 yld
+mov S$技能名称 幽灵盾　LV.5
+mov S$技能效果 魔抗四倍效果
+mov S$要升级的技能 幽灵盾
+mov S$技能书  20066
+mov S$技能书页数 100
+mov S$技能框显示 <Img|id=1c|children={1d}|x=11.0|y=8.0|width=60|height=60|reset=1|loadDelay=0|esc=1|img=npc/jnqh/kuang.png|show=4|move=0>
+inc S$技能框显示 <ItemShow|id=1d|x=-3.0|y=-3.0|width=60|height=60|itemid=<$STR(S$技能书)>|itemcount=1|bgtype=0|showtips=1>
+inc S$技能框显示 <Img|id=2c|children={2d}|x=81.0|y=8.0|width=60|height=60|reset=1|loadDelay=0|esc=1|img=npc/jnqh/kuang.png|show=4|move=0>
+inc S$技能框显示 <ItemShow|id=2d|x=0.0|y=-2.0|width=60|height=60|itemid=20178|itemcount=<$STR(S$技能书页数)>|bgtype=0|showtips=1>
+goto @颜色等级判断
+goto @道士页面展示
+
+#IF
+checkjob  Taoist
+CHECKSKILL 幽灵盾 = 5 0
+#act
+mov S$技能图标 yld
+mov S$技能名称 幽灵盾　LV.5
+mov S$技能效果 魔抗四倍效果
+mov S$要升级的技能 
+mov S$技能书  
+mov S$技能书页数 
+mov S$技能框显示 <Text|id=1c|x=-26.0|y=24.0|size=18|outline=2|color=243|text=已到达最高级,无需升级>
+
+goto @颜色等级判断
+goto @道士页面展示
+
+[@战士页面展示]
+#if
+#say
+<Img|children={aa,bb}|a=4|x=450.0|y=273.0|width=950|height=593|esc=1|move=1|img=npc/jnqh/bg.png|show=4|reset=1|loadDelay=0|bg=1>
+<Button|x=845.0|y=14.0|nimg=public/close-2.png|mimg=public/close-2.png|link=@exit>
+<ListView|id=aa|children={a,b,c,d,e,1bb}|x=97.0|y=87.0|width=216|height=459|direction=1|bounce=0|margin=1>
+<Img|id=a|children={1b}|x=150.0|y=110.0|width=215|height=75|move=0|loadDelay=0|show=4|esc=1|img=npc/jnqh/90.png|reset=1|link=@点击技能强化#技能图标=jbjs#坐标1=71#坐标2=62>
+<Text|id=1b|x=122.0|y=40.0|size=18|outline=2|color=<$STR(S$技能颜色1)>|text=<$STR(S$技能等级1)>>
+<Img|id=b|children={2b}|x=150.0|y=175.0|width=215|height=75|move=0|loadDelay=0|show=4|esc=1|img=npc/jnqh/91.png|reset=1|link=@点击技能强化#技能图标=lhjf#坐标1=71#坐标2=137>
+<Text|id=2b|x=122.0|y=40.0|size=18|outline=2|color=<$STR(S$技能颜色2)>|text=<$STR(S$技能等级2)>>
+
+<Img|id=c|children={4b}|x=150.0|y=325.0|width=215|height=75|move=0|loadDelay=0|show=4|esc=1|img=npc/jnqh/94.png|reset=1|link=@点击技能强化#技能图标=ktz#坐标1=71#坐标2=213>
+<Text|id=5b|x=122.0|y=40.0|size=18|outline=2|color=<$STR(S$技能颜色3)>|text=<$STR(S$技能等级3)>>
+
+<Img|id=d|children={5b}|x=150.0|y=395.0|width=215|height=75|move=0|loadDelay=0|show=4|esc=1|img=npc/jnqh/93.png|reset=1|link=@点击技能强化#技能图标=sbys#坐标1=71#坐标2=290>
+<Text|id=4b|x=122.0|y=40.0|size=18|outline=2|color=<$STR(S$技能颜色4)>|text=<$STR(S$技能等级4)>>
+
+
+<Img|x=<$STR(S$选中坐标1)>|y=<$STR(S$选中坐标2)>|move=0|loadDelay=0|width=218|height=80|show=4|esc=1|img=npc/jnqh/909.png|reset=1>
+
+
+<Layout|id=bb|children={1a,2a,3a,4a,5a}|x=315.0|y=87.0|width=534.0|height=457.0>
+<Text|id=1a|x=205.0|y=16.0|size=18|color=255|outline=2|text=<$STR(S$技能名称)>>
+<Img|id=2a|x=232.0|y=91.0|width=60|height=60|esc=1|show=4|loadDelay=0|reset=1|img=npc/jnqh/<$STR(S$技能图标)>.png|move=0>
+<Text|a=4|id=3a|percentx=50|percenty=51.4|size=16|color=255|outline=2|text=效果：<$STR(S$技能效果)>>
+
+<Layout|id=4a|children={1c,2c}|a=4|percentx=50.0|percenty=72.6|width=153.0|height=74.0>
+<$STR(S$技能框显示)>
+<Button|id=5a|a=4|percentx=50|percenty=91|width=132|height=40|mimg=npc/jnqh/an.png|nimg=npc/jnqh/an.png|link=@战士强化技能>
+
+
+[@法师页面展示]
+#if
+#say
+<Img|children={aa,bb}|a=4|x=450.0|y=273.0|width=950|height=593|esc=1|move=1|img=npc/jnqh/bg.png|show=4|reset=1|loadDelay=0|bg=1>
+<Button|x=845.0|y=14.0|nimg=public/close-2.png|mimg=public/close-2.png|link=@exit>
+<ListView|id=aa|children={a,b,c,d,e,f}|x=97.0|y=87.0|width=216|height=459|direction=1|bounce=0|margin=1>
+
+
+<Img|id=c|children={3b}|x=150.0|y=110.0|width=215|height=75|move=0|loadDelay=0|show=4|esc=1|img=npc/jnqh/97.png|reset=1|link=@点击技能强化#技能图标=mfd#坐标1=71#坐标2=62>
+<Text|id=3b|x=122.0|y=40.0|size=18|outline=2|color=<$STR(S$技能颜色8)>|text=<$STR(S$技能等级8)>>
+<Img|id=d|children={4b}|x=150.0|y=175.0|width=215|height=75|move=0|loadDelay=0|show=4|esc=1|img=npc/jnqh/98.png|reset=1|link=@点击技能强化#技能图标=bpx#坐标1=71#坐标2=137>
+<Text|id=4b|x=122.0|y=40.0|size=18|outline=2|color=<$STR(S$技能颜色9)>|text=<$STR(S$技能等级9)>>
+
+<Img|id=e|children={6b}|x=150.0|y=255.0|width=215|height=75|move=0|loadDelay=0|show=4|esc=1|img=npc/jnqh/106.png|reset=1|link=@点击技能强化#技能图标=lxhy#坐标1=71#坐标2=213>
+<Text|id=6b|x=122.0|y=40.0|size=18|outline=2|color=<$STR(S$技能颜色17)>|text=<$STR(S$技能等级17)>>
+
+<Img|id=f|children={5b}|x=150.0|y=325.0|width=215|height=75|move=0|loadDelay=0|show=4|esc=1|img=npc/jnqh/99.png|reset=1|link=@点击技能强化#技能图标=bsqy#坐标1=71#坐标2=290>
+<Text|id=5b|x=122.0|y=40.0|size=18|outline=2|color=<$STR(S$技能颜色10)>|text=<$STR(S$技能等级10)>>
+
+<Img|x=<$STR(S$选中坐标1)>|y=<$STR(S$选中坐标2)>|move=0|loadDelay=0|width=218|height=80|show=4|esc=1|img=npc/jnqh/909.png|reset=1>
+
+<Layout|id=bb|children={1a,2a,3a,4a,5a}|x=315.0|y=87.0|width=534.0|height=457.0>
+<Text|id=1a|x=205.0|y=16.0|size=18|color=255|outline=2|text=<$STR(S$技能名称)>>
+<Img|id=2a|x=232.0|y=91.0|width=60|height=60|esc=1|show=4|loadDelay=0|reset=1|img=npc/jnqh/<$STR(S$技能图标)>.png|move=0>
+<Text|a=4|id=3a|percentx=50|percenty=51.4|size=16|color=255|outline=2|text=效果：<$STR(S$技能效果)>>
+
+<Layout|id=4a|children={1c,2c}|a=4|percentx=50.0|percenty=72.6|width=153.0|height=74.0>
+
+
+<$STR(S$技能框显示)>
+
+<Button|id=5a|a=4|percentx=50|percenty=91|width=132|height=40|mimg=npc/jnqh/an.png|nimg=npc/jnqh/an.png|link=@法师技能强化>
+[@道士页面展示]
+#if
+#say
+<Img|children={aa,bb}|a=4|x=450.0|y=273.0|width=950|height=593|esc=1|move=1|img=npc/jnqh/bg.png|show=4|reset=1|loadDelay=0|bg=1>
+<Button|x=845.0|y=14.0|nimg=public/close-2.png|mimg=public/close-2.png|link=@exit>
+<ListView|id=aa|children={a,b,c,d,e,f}|x=97.0|y=87.0|width=216|height=459|direction=1|bounce=0|margin=1>
+
+<Img|id=b|children={2b}|x=150.0|y=175.0|width=215|height=75|move=0|loadDelay=0|show=4|esc=1|img=npc/jnqh/101.png|reset=1|link=@点击技能强化#技能图标=yld#坐标1=71#坐标2=62>
+<Text|id=2b|x=122.0|y=40.0|size=18|outline=2|color=<$STR(S$技能颜色12)>|text=<$STR(S$技能等级12)>>
+
+<Img|id=d|children={5b}|x=150.0|y=395.0|width=215|height=75|move=0|loadDelay=0|show=4|esc=1|img=npc/jnqh/104.png|reset=1|link=@点击技能强化#技能图标=sszjs#坐标1=71#坐标2=137>
+<Text|id=5b|x=122.0|y=40.0|size=18|outline=2|color=<$STR(S$技能颜色15)>|text=<$STR(S$技能等级15)>>
+
+<Img|id=e|children={4b}|x=150.0|y=325.0|width=215|height=75|move=0|loadDelay=0|show=4|esc=1|img=npc/jnqh/103.png|reset=1|link=@点击技能强化#技能图标=jfp#坐标1=71#坐标2=213>
+<Text|id=4b|x=122.0|y=40.0|size=18|outline=2|color=<$STR(S$技能颜色14)>|text=<$STR(S$技能等级14)>>
+
+<Img|id=f|children={6b}|x=150.0|y=475.0|width=215|height=75|move=0|loadDelay=0|show=4|esc=1|img=npc/jnqh/105.png|reset=1|link=@点击技能强化#技能图标=swzy#坐标1=71#坐标2=290>
+<Text|id=6b|x=122.0|y=40.0|size=18|outline=2|color=<$STR(S$技能颜色16)>|text=<$STR(S$技能等级16)>>
+<Img|x=<$STR(S$选中坐标1)>|y=<$STR(S$选中坐标2)>|move=0|loadDelay=0|width=218|height=80|show=4|esc=1|img=npc/jnqh/909.png|reset=1>
+
+<Layout|id=bb|children={1a,2a,3a,4a,5a}|x=315.0|y=87.0|width=534.0|height=457.0>
+<Text|id=1a|x=205.0|y=16.0|size=18|color=255|outline=2|text=<$STR(S$技能名称)>>
+<Img|id=2a|x=232.0|y=91.0|width=60|height=60|esc=1|show=4|loadDelay=0|reset=1|img=npc/jnqh/<$STR(S$技能图标)>.png|move=0>
+<Text|a=4|id=3a|percentx=50|percenty=51.4|size=16|color=255|outline=2|text=效果：<$STR(S$技能效果)>>
+
+<Layout|id=4a|children={1c,2c}|a=4|percentx=50.0|percenty=72.6|width=153.0|height=74.0>
+<$STR(S$技能框显示)>
+<Button|id=5a|a=4|percentx=50|percenty=91|width=132|height=40|mimg=npc/jnqh/an.png|nimg=npc/jnqh/an.png|link=@道士技能强化>
+
+[@点击技能强化]
+
+
+
+#if
+#act
+mov S$选中坐标1 <$STR(S$坐标1)>
+mov S$选中坐标2 <$STR(S$坐标2)>
+
+
+
+
+#IF
+equal S$技能图标 jbjs
+CHECKSKILL 基本剑术 = 3 0
+#act
+mov S$技能名称 基本剑术　LV.4
+mov S$技能效果 随着攻击次数增加提升1-3点攻速，最高上限3点攻速
+mov S$技能书  20051
+mov S$要升级的技能 基本剑术
+mov S$技能书页数 50
+mov S$技能框显示 <Img|id=1c|children={1d}|x=11.0|y=8.0|width=60|height=60|reset=1|loadDelay=0|esc=1|img=npc/jnqh/kuang.png|show=4|move=0>
+inc S$技能框显示 <ItemShow|id=1d|x=-3.0|y=-3.0|width=60|height=60|itemid=<$STR(S$技能书)>|itemcount=1|bgtype=0|showtips=1>
+inc S$技能框显示 <Img|id=2c|children={2d}|x=81.0|y=8.0|width=60|height=60|reset=1|loadDelay=0|esc=1|img=npc/jnqh/kuang.png|show=4|move=0>
+inc S$技能框显示 <ItemShow|id=2d|x=0.0|y=-2.0|width=60|height=60|itemid=20178|itemcount=<$STR(S$技能书页数)>|bgtype=0|showtips=1>
+goto @颜色等级判断
+goto @战士页面展示
+
+#IF
+equal S$技能图标 jbjs
+CHECKSKILL 基本剑术 = 4 0
+#act
+mov S$技能名称 基本剑术　LV.5
+mov S$技能效果 随着攻击次数增加提升1-6点攻速，最高上限6点攻速
+mov S$技能书  20051
+mov S$要升级的技能 基本剑术
+mov S$技能书页数 100
+mov S$技能框显示 <Img|id=1c|children={1d}|x=11.0|y=8.0|width=60|height=60|reset=1|loadDelay=0|esc=1|img=npc/jnqh/kuang.png|show=4|move=0>
+inc S$技能框显示 <ItemShow|id=1d|x=-3.0|y=-3.0|width=60|height=60|itemid=<$STR(S$技能书)>|itemcount=1|bgtype=0|showtips=1>
+inc S$技能框显示 <Img|id=2c|children={2d}|x=81.0|y=8.0|width=60|height=60|reset=1|loadDelay=0|esc=1|img=npc/jnqh/kuang.png|show=4|move=0>
+inc S$技能框显示 <ItemShow|id=2d|x=0.0|y=-2.0|width=60|height=60|itemid=20178|itemcount=<$STR(S$技能书页数)>|bgtype=0|showtips=1>
+goto @颜色等级判断
+goto @战士页面展示
+
+#IF
+equal S$技能图标 jbjs
+CHECKSKILL 基本剑术 = 5 0
+#act
+mov S$技能名称 基本剑术　LV.5
+mov S$技能效果 随着攻击次数增加提升1-6点攻速，最高上限6点攻速
+mov S$技能书  
+mov S$要升级的技能 基本剑术
+mov S$技能书页数 
+mov S$技能框显示 <Text|id=1c|x=-26.0|y=24.0|size=18|outline=2|color=243|text=已到达最高级,无需升级>
+goto @颜色等级判断
+goto @战士页面展示
+
+
+#IF
+equal S$技能图标 lhjf
+CHECKSKILL 烈火剑法 = 3 0
+#act
+mov S$技能名称 烈火剑法　LV.4
+mov S$技能效果 技能伤害增加10%
+mov S$技能书  20079
+mov S$要升级的技能 烈火剑法
+mov S$技能书页数 100
+mov S$技能框显示 <Img|id=1c|children={1d}|x=11.0|y=8.0|width=60|height=60|reset=1|loadDelay=0|esc=1|img=npc/jnqh/kuang.png|show=4|move=0>
+inc S$技能框显示 <ItemShow|id=1d|x=-3.0|y=-3.0|width=60|height=60|itemid=<$STR(S$技能书)>|itemcount=1|bgtype=0|showtips=1>
+inc S$技能框显示 <Img|id=2c|children={2d}|x=81.0|y=8.0|width=60|height=60|reset=1|loadDelay=0|esc=1|img=npc/jnqh/kuang.png|show=4|move=0>
+inc S$技能框显示 <ItemShow|id=2d|x=0.0|y=-2.0|width=60|height=60|itemid=20178|itemcount=<$STR(S$技能书页数)>|bgtype=0|showtips=1>
+goto @颜色等级判断
+goto @战士页面展示
+
+#IF
+equal S$技能图标 lhjf
+CHECKSKILL 烈火剑法 = 4 0
+#act
+mov S$技能名称 烈火剑法　LV.5
+mov S$技能效果 技能伤害增加20%
+mov S$技能书  20079
+mov S$要升级的技能 烈火剑法
+mov S$技能书页数 200
+mov S$技能框显示 <Img|id=1c|children={1d}|x=11.0|y=8.0|width=60|height=60|reset=1|loadDelay=0|esc=1|img=npc/jnqh/kuang.png|show=4|move=0>
+inc S$技能框显示 <ItemShow|id=1d|x=-3.0|y=-3.0|width=60|height=60|itemid=<$STR(S$技能书)>|itemcount=1|bgtype=0|showtips=1>
+inc S$技能框显示 <Img|id=2c|children={2d}|x=81.0|y=8.0|width=60|height=60|reset=1|loadDelay=0|esc=1|img=npc/jnqh/kuang.png|show=4|move=0>
+inc S$技能框显示 <ItemShow|id=2d|x=0.0|y=-2.0|width=60|height=60|itemid=20178|itemcount=<$STR(S$技能书页数)>|bgtype=0|showtips=1>
+goto @颜色等级判断
+goto @战士页面展示
+
+#IF
+equal S$技能图标 lhjf
+CHECKSKILL 烈火剑法 = 5 0
+#act
+mov S$技能名称 烈火剑法　LV.5
+mov S$技能效果 技能伤害增加20%
+mov S$技能书  
+mov S$要升级的技能 烈火剑法
+mov S$技能书页数 
+mov S$技能框显示 <Text|id=1c|x=-26.0|y=24.0|size=18|outline=2|color=243|text=已到达最高级,无需升级>
+goto @颜色等级判断
+goto @战士页面展示
+
+
+
+
+
+#IF
+equal S$技能图标 sbys
+not CheckMagicName 十步一杀
+#act
+
+
+mov S$技能名称 十步一杀　LV.4
+mov S$技能效果 技能伤害增加10%
+mov S$技能书  20117
+mov S$要升级的技能 十步一杀
+mov S$技能书页数 300
+mov S$技能框显示 <Img|id=1c|children={1d}|x=11.0|y=8.0|width=60|height=60|reset=1|loadDelay=0|esc=1|img=npc/jnqh/kuang.png|show=4|move=0>
+inc S$技能框显示 <ItemShow|id=1d|x=-3.0|y=-3.0|width=60|height=60|itemid=<$STR(S$技能书)>|itemcount=1|bgtype=0|showtips=1>
+inc S$技能框显示 <Img|id=2c|children={2d}|x=81.0|y=8.0|width=60|height=60|reset=1|loadDelay=0|esc=1|img=npc/jnqh/kuang.png|show=4|move=0>
+inc S$技能框显示 <ItemShow|id=2d|x=0.0|y=-2.0|width=60|height=60|itemid=20178|itemcount=<$STR(S$技能书页数)>|bgtype=0|showtips=1>
+goto @颜色等级判断
+goto @战士页面展示
+
+#IF
+equal S$技能图标 sbys
+CHECKSKILL 十步一杀 = 3 0
+#act
+mov S$技能名称 十步一杀　LV.4
+mov S$技能效果 技能伤害增加10%
+mov S$技能书  20117
+mov S$要升级的技能 十步一杀
+mov S$技能书页数 300
+mov S$技能框显示 <Img|id=1c|children={1d}|x=11.0|y=8.0|width=60|height=60|reset=1|loadDelay=0|esc=1|img=npc/jnqh/kuang.png|show=4|move=0>
+inc S$技能框显示 <ItemShow|id=1d|x=-3.0|y=-3.0|width=60|height=60|itemid=<$STR(S$技能书)>|itemcount=1|bgtype=0|showtips=1>
+inc S$技能框显示 <Img|id=2c|children={2d}|x=81.0|y=8.0|width=60|height=60|reset=1|loadDelay=0|esc=1|img=npc/jnqh/kuang.png|show=4|move=0>
+inc S$技能框显示 <ItemShow|id=2d|x=0.0|y=-2.0|width=60|height=60|itemid=20178|itemcount=<$STR(S$技能书页数)>|bgtype=0|showtips=1>
+goto @颜色等级判断
+goto @战士页面展示
+
+#IF
+equal S$技能图标 sbys
+CHECKSKILL 十步一杀 = 4 0
+#act
+mov S$技能名称 十步一杀　LV.5
+mov S$技能效果 技能伤害增加20%
+mov S$技能书  20117
+mov S$要升级的技能 十步一杀
+mov S$技能书页数 500
+mov S$技能框显示 <Img|id=1c|children={1d}|x=11.0|y=8.0|width=60|height=60|reset=1|loadDelay=0|esc=1|img=npc/jnqh/kuang.png|show=4|move=0>
+inc S$技能框显示 <ItemShow|id=1d|x=-3.0|y=-3.0|width=60|height=60|itemid=<$STR(S$技能书)>|itemcount=1|bgtype=0|showtips=1>
+inc S$技能框显示 <Img|id=2c|children={2d}|x=81.0|y=8.0|width=60|height=60|reset=1|loadDelay=0|esc=1|img=npc/jnqh/kuang.png|show=4|move=0>
+inc S$技能框显示 <ItemShow|id=2d|x=0.0|y=-2.0|width=60|height=60|itemid=20178|itemcount=<$STR(S$技能书页数)>|bgtype=0|showtips=1>
+goto @颜色等级判断
+goto @战士页面展示
+
+#IF
+equal S$技能图标 sbys
+CHECKSKILL 十步一杀 = 5 0
+#act
+mov S$技能名称 十步一杀　LV.5
+mov S$技能效果 技能伤害增加20%
+mov S$技能书  
+mov S$要升级的技能 十步一杀
+mov S$技能书页数 
+mov S$技能框显示 <Text|id=1c|x=-26.0|y=24.0|size=18|outline=2|color=243|text=已到达最高级,无需升级>
+goto @颜色等级判断
+goto @战士页面展示
+
+#IF
+equal S$技能图标 ktz
+not CheckMagicName 开天斩
+#act
+mov S$技能名称 开天斩　LV.4
+mov S$技能效果 技能伤害增加10%
+mov S$技能书  20088
+mov S$要升级的技能 开天斩
+mov S$技能书页数 200
+mov S$技能框显示 <Img|id=1c|children={1d}|x=11.0|y=8.0|width=60|height=60|reset=1|loadDelay=0|esc=1|img=npc/jnqh/kuang.png|show=4|move=0>
+inc S$技能框显示 <ItemShow|id=1d|x=-3.0|y=-3.0|width=60|height=60|itemid=<$STR(S$技能书)>|itemcount=1|bgtype=0|showtips=1>
+inc S$技能框显示 <Img|id=2c|children={2d}|x=81.0|y=8.0|width=60|height=60|reset=1|loadDelay=0|esc=1|img=npc/jnqh/kuang.png|show=4|move=0>
+inc S$技能框显示 <ItemShow|id=2d|x=0.0|y=-2.0|width=60|height=60|itemid=20178|itemcount=<$STR(S$技能书页数)>|bgtype=0|showtips=1>
+goto @颜色等级判断
+goto @战士页面展示
+
+
+#IF
+equal S$技能图标 ktz
+CHECKSKILL 开天斩 = 3 0
+#act
+mov S$技能名称 开天斩　LV.4
+mov S$技能效果 技能伤害增加10%
+mov S$技能书  20088
+mov S$要升级的技能 开天斩
+mov S$技能书页数 200
+mov S$技能框显示 <Img|id=1c|children={1d}|x=11.0|y=8.0|width=60|height=60|reset=1|loadDelay=0|esc=1|img=npc/jnqh/kuang.png|show=4|move=0>
+inc S$技能框显示 <ItemShow|id=1d|x=-3.0|y=-3.0|width=60|height=60|itemid=<$STR(S$技能书)>|itemcount=1|bgtype=0|showtips=1>
+inc S$技能框显示 <Img|id=2c|children={2d}|x=81.0|y=8.0|width=60|height=60|reset=1|loadDelay=0|esc=1|img=npc/jnqh/kuang.png|show=4|move=0>
+inc S$技能框显示 <ItemShow|id=2d|x=0.0|y=-2.0|width=60|height=60|itemid=20178|itemcount=<$STR(S$技能书页数)>|bgtype=0|showtips=1>
+goto @颜色等级判断
+goto @战士页面展示
+
+#IF
+equal S$技能图标 ktz
+CHECKSKILL 开天斩 = 4 0
+#act
+mov S$技能名称 开天斩　LV.5
+mov S$技能效果 技能伤害增加20%
+mov S$技能书  20088
+mov S$要升级的技能 开天斩
+mov S$技能书页数 300
+mov S$技能框显示 <Img|id=1c|children={1d}|x=11.0|y=8.0|width=60|height=60|reset=1|loadDelay=0|esc=1|img=npc/jnqh/kuang.png|show=4|move=0>
+inc S$技能框显示 <ItemShow|id=1d|x=-3.0|y=-3.0|width=60|height=60|itemid=<$STR(S$技能书)>|itemcount=1|bgtype=0|showtips=1>
+inc S$技能框显示 <Img|id=2c|children={2d}|x=81.0|y=8.0|width=60|height=60|reset=1|loadDelay=0|esc=1|img=npc/jnqh/kuang.png|show=4|move=0>
+inc S$技能框显示 <ItemShow|id=2d|x=0.0|y=-2.0|width=60|height=60|itemid=20178|itemcount=<$STR(S$技能书页数)>|bgtype=0|showtips=1>
+goto @颜色等级判断
+goto @战士页面展示
+
+#IF
+equal S$技能图标 ktz
+CHECKSKILL 开天斩 = 5 0
+#act
+mov S$技能名称 开天斩　LV.5
+mov S$技能效果 技能伤害增加20%
+mov S$技能书  
+mov S$要升级的技能 开天斩
+mov S$技能书页数 
+mov S$技能框显示 <Text|id=1c|x=-26.0|y=24.0|size=18|outline=2|color=243|text=已到达最高级,无需升级>
+goto @颜色等级判断
+goto @战士页面展示
+
+
+
+
+
+;-----------------------------------------------------------------------------------------------------------------
+
+
+
+
+#IF
+equal S$技能图标 mfd
+CHECKSKILL 魔法盾 = 3 0
+#act
+mov S$技能名称 魔法盾　LV.4
+mov S$技能效果 物理魔法伤害减少5%
+mov S$要升级的技能 魔法盾
+mov S$技能书  20076
+mov S$技能书页数 50
+mov S$技能框显示 <Img|id=1c|children={1d}|x=11.0|y=8.0|width=60|height=60|reset=1|loadDelay=0|esc=1|img=npc/jnqh/kuang.png|show=4|move=0>
+inc S$技能框显示 <ItemShow|id=1d|x=-3.0|y=-3.0|width=60|height=60|itemid=<$STR(S$技能书)>|itemcount=1|bgtype=0|showtips=1>
+inc S$技能框显示 <Img|id=2c|children={2d}|x=81.0|y=8.0|width=60|height=60|reset=1|loadDelay=0|esc=1|img=npc/jnqh/kuang.png|show=4|move=0>
+inc S$技能框显示 <ItemShow|id=2d|x=0.0|y=-2.0|width=60|height=60|itemid=20178|itemcount=<$STR(S$技能书页数)>|bgtype=0|showtips=1>
+goto @颜色等级判断
+goto @法师页面展示
+
+#IF
+equal S$技能图标 mfd
+CHECKSKILL 魔法盾 = 4 0
+#act
+mov S$技能名称 魔法盾　LV.5
+mov S$技能效果 物理魔法伤害减少10%
+mov S$要升级的技能 魔法盾
+mov S$技能书  20076
+mov S$技能书页数 100
+mov S$技能框显示 <Img|id=1c|children={1d}|x=11.0|y=8.0|width=60|height=60|reset=1|loadDelay=0|esc=1|img=npc/jnqh/kuang.png|show=4|move=0>
+inc S$技能框显示 <ItemShow|id=1d|x=-3.0|y=-3.0|width=60|height=60|itemid=<$STR(S$技能书)>|itemcount=1|bgtype=0|showtips=1>
+inc S$技能框显示 <Img|id=2c|children={2d}|x=81.0|y=8.0|width=60|height=60|reset=1|loadDelay=0|esc=1|img=npc/jnqh/kuang.png|show=4|move=0>
+inc S$技能框显示 <ItemShow|id=2d|x=0.0|y=-2.0|width=60|height=60|itemid=20178|itemcount=<$STR(S$技能书页数)>|bgtype=0|showtips=1>
+goto @颜色等级判断
+goto @法师页面展示
+
+#IF
+equal S$技能图标 mfd
+CHECKSKILL 魔法盾 = 5 0
+#act
+mov S$技能名称 魔法盾　LV.5
+mov S$技能效果 物理魔法伤害减少19%
+mov S$要升级的技能 魔法盾
+mov S$技能书  
+mov S$技能书页数 
+mov S$技能框显示 <Text|id=1c|x=-26.0|y=24.0|size=18|outline=2|color=243|text=已到达最高级,无需升级>
+goto @颜色等级判断
+goto @法师页面展示
+
+
+
+#IF
+equal S$技能图标 bpx
+CHECKSKILL 冰咆哮 = 3 0
+#act
+mov S$技能名称 冰咆哮　LV.4
+mov S$要升级的技能 冰咆哮
+mov S$技能效果 技能伤害10%
+mov S$技能书  20081
+mov S$技能书页数 100
+mov S$技能框显示 <Img|id=1c|children={1d}|x=11.0|y=8.0|width=60|height=60|reset=1|loadDelay=0|esc=1|img=npc/jnqh/kuang.png|show=4|move=0>
+inc S$技能框显示 <ItemShow|id=1d|x=-3.0|y=-3.0|width=60|height=60|itemid=<$STR(S$技能书)>|itemcount=1|bgtype=0|showtips=1>
+inc S$技能框显示 <Img|id=2c|children={2d}|x=81.0|y=8.0|width=60|height=60|reset=1|loadDelay=0|esc=1|img=npc/jnqh/kuang.png|show=4|move=0>
+inc S$技能框显示 <ItemShow|id=2d|x=0.0|y=-2.0|width=60|height=60|itemid=20178|itemcount=<$STR(S$技能书页数)>|bgtype=0|showtips=1>
+goto @颜色等级判断
+goto @法师页面展示
+
+#IF
+equal S$技能图标 bpx
+CHECKSKILL 冰咆哮 = 4 0
+#act
+mov S$技能名称 冰咆哮　LV.5
+mov S$要升级的技能 冰咆哮
+mov S$技能效果 技能伤害20%
+mov S$技能书  20081
+mov S$技能书页数 200
+mov S$技能框显示 <Img|id=1c|children={1d}|x=11.0|y=8.0|width=60|height=60|reset=1|loadDelay=0|esc=1|img=npc/jnqh/kuang.png|show=4|move=0>
+inc S$技能框显示 <ItemShow|id=1d|x=-3.0|y=-3.0|width=60|height=60|itemid=<$STR(S$技能书)>|itemcount=1|bgtype=0|showtips=1>
+inc S$技能框显示 <Img|id=2c|children={2d}|x=81.0|y=8.0|width=60|height=60|reset=1|loadDelay=0|esc=1|img=npc/jnqh/kuang.png|show=4|move=0>
+inc S$技能框显示 <ItemShow|id=2d|x=0.0|y=-2.0|width=60|height=60|itemid=20178|itemcount=<$STR(S$技能书页数)>|bgtype=0|showtips=1>
+goto @颜色等级判断
+goto @法师页面展示
+
+#IF
+equal S$技能图标 bpx
+CHECKSKILL 冰咆哮 = 5 0
+#act
+mov S$技能名称 冰咆哮　LV.5
+mov S$要升级的技能 冰咆哮
+mov S$技能效果 技能伤害20%
+mov S$技能书  
+mov S$技能书页数 
+mov S$技能框显示 <Text|id=1c|x=-26.0|y=24.0|size=18|outline=2|color=243|text=已到达最高级,无需升级>
+goto @颜色等级判断
+goto @法师页面展示
+
+#IF
+equal S$技能图标 bsqy
+not CheckMagicName 冰霜群雨
+#act
+mov S$技能名称 冰霜群雨　LV.4
+mov S$要升级的技能 冰霜群雨
+mov S$技能效果 技能伤害10%
+mov S$技能书  20097
+mov S$技能书页数 300
+mov S$技能框显示 <Img|id=1c|children={1d}|x=11.0|y=8.0|width=60|height=60|reset=1|loadDelay=0|esc=1|img=npc/jnqh/kuang.png|show=4|move=0>
+inc S$技能框显示 <ItemShow|id=1d|x=-3.0|y=-3.0|width=60|height=60|itemid=<$STR(S$技能书)>|itemcount=1|bgtype=0|showtips=1>
+inc S$技能框显示 <Img|id=2c|children={2d}|x=81.0|y=8.0|width=60|height=60|reset=1|loadDelay=0|esc=1|img=npc/jnqh/kuang.png|show=4|move=0>
+inc S$技能框显示 <ItemShow|id=2d|x=0.0|y=-2.0|width=60|height=60|itemid=20178|itemcount=<$STR(S$技能书页数)>|bgtype=0|showtips=1>
+goto @颜色等级判断
+goto @法师页面展示
+
+#IF
+equal S$技能图标 bsqy
+CHECKSKILL 冰霜群雨 = 3 0
+#act
+mov S$技能名称 冰霜群雨　LV.4
+mov S$要升级的技能 冰霜群雨
+mov S$技能效果 技能伤害10%
+mov S$技能书  20097
+mov S$技能书页数 300
+mov S$技能框显示 <Img|id=1c|children={1d}|x=11.0|y=8.0|width=60|height=60|reset=1|loadDelay=0|esc=1|img=npc/jnqh/kuang.png|show=4|move=0>
+inc S$技能框显示 <ItemShow|id=1d|x=-3.0|y=-3.0|width=60|height=60|itemid=<$STR(S$技能书)>|itemcount=1|bgtype=0|showtips=1>
+inc S$技能框显示 <Img|id=2c|children={2d}|x=81.0|y=8.0|width=60|height=60|reset=1|loadDelay=0|esc=1|img=npc/jnqh/kuang.png|show=4|move=0>
+inc S$技能框显示 <ItemShow|id=2d|x=0.0|y=-2.0|width=60|height=60|itemid=20178|itemcount=<$STR(S$技能书页数)>|bgtype=0|showtips=1>
+goto @颜色等级判断
+goto @法师页面展示
+
+#IF
+equal S$技能图标 bsqy
+CHECKSKILL 冰霜群雨 = 4 0
+#act
+mov S$技能名称 冰霜群雨　LV.5
+mov S$要升级的技能 冰霜群雨
+mov S$技能效果 技能伤害20%
+mov S$技能书  20097
+mov S$技能书页数 500
+mov S$技能框显示 <Img|id=1c|children={1d}|x=11.0|y=8.0|width=60|height=60|reset=1|loadDelay=0|esc=1|img=npc/jnqh/kuang.png|show=4|move=0>
+inc S$技能框显示 <ItemShow|id=1d|x=-3.0|y=-3.0|width=60|height=60|itemid=<$STR(S$技能书)>|itemcount=1|bgtype=0|showtips=1>
+inc S$技能框显示 <Img|id=2c|children={2d}|x=81.0|y=8.0|width=60|height=60|reset=1|loadDelay=0|esc=1|img=npc/jnqh/kuang.png|show=4|move=0>
+inc S$技能框显示 <ItemShow|id=2d|x=0.0|y=-2.0|width=60|height=60|itemid=20178|itemcount=<$STR(S$技能书页数)>|bgtype=0|showtips=1>
+goto @颜色等级判断
+goto @法师页面展示
+
+#IF
+equal S$技能图标 bsqy
+CHECKSKILL 冰霜群雨 = 5 0
+#act
+mov S$技能名称 冰霜群雨　LV.5
+mov S$要升级的技能 冰霜群雨
+mov S$技能效果 技能伤害20%
+mov S$技能书  
+mov S$技能书页数 
+mov S$技能框显示 <Text|id=1c|x=-26.0|y=24.0|size=18|outline=2|color=243|text=已到达最高级,无需升级>
+goto @颜色等级判断
+goto @法师页面展示
+
+#IF
+equal S$技能图标 lxhy
+not CheckMagicName 流星火雨
+#act
+mov S$技能名称 流星火雨　LV.4
+mov S$要升级的技能 流星火雨
+mov S$技能效果 技能伤害提高10%
+mov S$技能书  20094
+mov S$技能书页数 200
+mov S$技能框显示 <Img|id=1c|children={1d}|x=11.0|y=8.0|width=60|height=60|reset=1|loadDelay=0|esc=1|img=npc/jnqh/kuang.png|show=4|move=0>
+inc S$技能框显示 <ItemShow|id=1d|x=-3.0|y=-3.0|width=60|height=60|itemid=<$STR(S$技能书)>|itemcount=1|bgtype=0|showtips=1>
+inc S$技能框显示 <Img|id=2c|children={2d}|x=81.0|y=8.0|width=60|height=60|reset=1|loadDelay=0|esc=1|img=npc/jnqh/kuang.png|show=4|move=0>
+inc S$技能框显示 <ItemShow|id=2d|x=0.0|y=-2.0|width=60|height=60|itemid=20178|itemcount=<$STR(S$技能书页数)>|bgtype=0|showtips=1>
+goto @颜色等级判断
+goto @法师页面展示
+
+#IF
+equal S$技能图标 lxhy
+CHECKSKILL 流星火雨 = 3 0
+#act
+mov S$技能名称 流星火雨　LV.4
+mov S$要升级的技能 流星火雨
+mov S$技能效果 技能伤害提高10%
+mov S$技能书  20094
+mov S$技能书页数 200
+mov S$技能框显示 <Img|id=1c|children={1d}|x=11.0|y=8.0|width=60|height=60|reset=1|loadDelay=0|esc=1|img=npc/jnqh/kuang.png|show=4|move=0>
+inc S$技能框显示 <ItemShow|id=1d|x=-3.0|y=-3.0|width=60|height=60|itemid=<$STR(S$技能书)>|itemcount=1|bgtype=0|showtips=1>
+inc S$技能框显示 <Img|id=2c|children={2d}|x=81.0|y=8.0|width=60|height=60|reset=1|loadDelay=0|esc=1|img=npc/jnqh/kuang.png|show=4|move=0>
+inc S$技能框显示 <ItemShow|id=2d|x=0.0|y=-2.0|width=60|height=60|itemid=20178|itemcount=<$STR(S$技能书页数)>|bgtype=0|showtips=1>
+goto @颜色等级判断
+goto @法师页面展示
+
+#IF
+equal S$技能图标 lxhy
+CHECKSKILL 流星火雨 = 4 0
+#act
+mov S$技能名称 流星火雨　LV.5
+mov S$要升级的技能 流星火雨
+mov S$技能效果 技能伤害提高20%
+mov S$技能书  20094
+mov S$技能书页数 300
+mov S$技能框显示 <Img|id=1c|children={1d}|x=11.0|y=8.0|width=60|height=60|reset=1|loadDelay=0|esc=1|img=npc/jnqh/kuang.png|show=4|move=0>
+inc S$技能框显示 <ItemShow|id=1d|x=-3.0|y=-3.0|width=60|height=60|itemid=<$STR(S$技能书)>|itemcount=1|bgtype=0|showtips=1>
+inc S$技能框显示 <Img|id=2c|children={2d}|x=81.0|y=8.0|width=60|height=60|reset=1|loadDelay=0|esc=1|img=npc/jnqh/kuang.png|show=4|move=0>
+inc S$技能框显示 <ItemShow|id=2d|x=0.0|y=-2.0|width=60|height=60|itemid=20178|itemcount=<$STR(S$技能书页数)>|bgtype=0|showtips=1>
+goto @颜色等级判断
+goto @法师页面展示
+
+#IF
+equal S$技能图标 lxhy
+CHECKSKILL 流星火雨 = 5 0
+#act
+mov S$技能名称 流星火雨　LV.5
+mov S$要升级的技能 流星火雨
+mov S$技能效果 技能伤害提高20%
+mov S$技能书  
+mov S$技能书页数 
+mov S$技能框显示 <Text|id=1c|x=-26.0|y=24.0|size=18|outline=2|color=243|text=已到达最高级,无需升级>
+goto @颜色等级判断
+goto @法师页面展示
+
+;=======================================================================================================================================
+
+
+
+#IF
+equal S$技能图标 yld
+CHECKSKILL 幽灵盾 = 3 0
+#act
+mov S$技能名称 幽灵盾　LV.4
+mov S$要升级的技能 幽灵盾
+mov S$技能效果 魔抗双倍效果
+mov S$技能书  20066
+mov S$技能书页数 50
+mov S$技能框显示 <Img|id=1c|children={1d}|x=11.0|y=8.0|width=60|height=60|reset=1|loadDelay=0|esc=1|img=npc/jnqh/kuang.png|show=4|move=0>
+inc S$技能框显示 <ItemShow|id=1d|x=-3.0|y=-3.0|width=60|height=60|itemid=<$STR(S$技能书)>|itemcount=1|bgtype=0|showtips=1>
+inc S$技能框显示 <Img|id=2c|children={2d}|x=81.0|y=8.0|width=60|height=60|reset=1|loadDelay=0|esc=1|img=npc/jnqh/kuang.png|show=4|move=0>
+inc S$技能框显示 <ItemShow|id=2d|x=0.0|y=-2.0|width=60|height=60|itemid=20178|itemcount=<$STR(S$技能书页数)>|bgtype=0|showtips=1>
+goto @颜色等级判断
+goto @道士页面展示
+
+#IF
+equal S$技能图标 yld
+CHECKSKILL 幽灵盾 = 4 0
+#act
+mov S$技能名称 幽灵盾　LV.5
+mov S$要升级的技能 幽灵盾
+mov S$技能效果 魔抗四倍效果
+mov S$技能书  20066
+mov S$技能书页数 100
+mov S$技能框显示 <Img|id=1c|children={1d}|x=11.0|y=8.0|width=60|height=60|reset=1|loadDelay=0|esc=1|img=npc/jnqh/kuang.png|show=4|move=0>
+inc S$技能框显示 <ItemShow|id=1d|x=-3.0|y=-3.0|width=60|height=60|itemid=<$STR(S$技能书)>|itemcount=1|bgtype=0|showtips=1>
+inc S$技能框显示 <Img|id=2c|children={2d}|x=81.0|y=8.0|width=60|height=60|reset=1|loadDelay=0|esc=1|img=npc/jnqh/kuang.png|show=4|move=0>
+inc S$技能框显示 <ItemShow|id=2d|x=0.0|y=-2.0|width=60|height=60|itemid=20178|itemcount=<$STR(S$技能书页数)>|bgtype=0|showtips=1>
+goto @颜色等级判断
+goto @道士页面展示
+
+#IF
+equal S$技能图标 yld
+CHECKSKILL 幽灵盾 = 5 0
+#act
+mov S$技能名称 幽灵盾　LV.5
+mov S$要升级的技能 幽灵盾
+mov S$技能效果 魔抗四倍效果
+mov S$技能书  
+mov S$技能书页数 
+mov S$技能框显示 <Text|id=1c|x=-26.0|y=24.0|size=18|outline=2|color=243|text=已到达最高级,无需升级>
+goto @颜色等级判断
+goto @道士页面展示
+
+
+
+
+#IF
+equal S$技能图标 jfp
+not CheckMagicName 飓风破
+#act
+mov S$技能名称 飓风破　LV.4
+mov S$要升级的技能 飓风破
+mov S$技能效果 技能伤害增加10%
+mov S$技能书  20102
+mov S$技能书页数 200
+mov S$技能框显示 <Img|id=1c|children={1d}|x=11.0|y=8.0|width=60|height=60|reset=1|loadDelay=0|esc=1|img=npc/jnqh/kuang.png|show=4|move=0>
+inc S$技能框显示 <ItemShow|id=1d|x=-3.0|y=-3.0|width=60|height=60|itemid=<$STR(S$技能书)>|itemcount=1|bgtype=0|showtips=1>
+inc S$技能框显示 <Img|id=2c|children={2d}|x=81.0|y=8.0|width=60|height=60|reset=1|loadDelay=0|esc=1|img=npc/jnqh/kuang.png|show=4|move=0>
+inc S$技能框显示 <ItemShow|id=2d|x=0.0|y=-2.0|width=60|height=60|itemid=20178|itemcount=<$STR(S$技能书页数)>|bgtype=0|showtips=1>
+goto @颜色等级判断
+goto @道士页面展示
+
+#IF
+equal S$技能图标 jfp
+CHECKSKILL 飓风破 = 3 0
+#act
+mov S$技能名称 飓风破　LV.4
+mov S$要升级的技能 飓风破
+mov S$技能效果 技能伤害增加10%
+mov S$技能书  20102
+mov S$技能书页数 200
+mov S$技能框显示 <Img|id=1c|children={1d}|x=11.0|y=8.0|width=60|height=60|reset=1|loadDelay=0|esc=1|img=npc/jnqh/kuang.png|show=4|move=0>
+inc S$技能框显示 <ItemShow|id=1d|x=-3.0|y=-3.0|width=60|height=60|itemid=<$STR(S$技能书)>|itemcount=1|bgtype=0|showtips=1>
+inc S$技能框显示 <Img|id=2c|children={2d}|x=81.0|y=8.0|width=60|height=60|reset=1|loadDelay=0|esc=1|img=npc/jnqh/kuang.png|show=4|move=0>
+inc S$技能框显示 <ItemShow|id=2d|x=0.0|y=-2.0|width=60|height=60|itemid=20178|itemcount=<$STR(S$技能书页数)>|bgtype=0|showtips=1>
+goto @颜色等级判断
+goto @道士页面展示
+
+#IF
+equal S$技能图标 jfp
+CHECKSKILL 飓风破 = 4 0
+#act
+mov S$技能名称 飓风破　LV.5
+mov S$要升级的技能 飓风破
+mov S$技能效果 技能伤害增加20%
+mov S$技能书  20102
+mov S$技能书页数 300
+mov S$技能框显示 <Img|id=1c|children={1d}|x=11.0|y=8.0|width=60|height=60|reset=1|loadDelay=0|esc=1|img=npc/jnqh/kuang.png|show=4|move=0>
+inc S$技能框显示 <ItemShow|id=1d|x=-3.0|y=-3.0|width=60|height=60|itemid=<$STR(S$技能书)>|itemcount=1|bgtype=0|showtips=1>
+inc S$技能框显示 <Img|id=2c|children={2d}|x=81.0|y=8.0|width=60|height=60|reset=1|loadDelay=0|esc=1|img=npc/jnqh/kuang.png|show=4|move=0>
+inc S$技能框显示 <ItemShow|id=2d|x=0.0|y=-2.0|width=60|height=60|itemid=20178|itemcount=<$STR(S$技能书页数)>|bgtype=0|showtips=1>
+goto @颜色等级判断
+goto @道士页面展示
+
+#IF
+equal S$技能图标 jfp
+CHECKSKILL 飓风破 = 5 0
+#act
+mov S$技能名称 飓风破　LV.5
+mov S$要升级的技能 飓风破
+mov S$技能效果 6%概率触发人物减速,减速4秒,减速效果人物基础移动速度的50%
+mov S$技能书  
+mov S$技能书页数 
+mov S$技能框显示 <Text|id=1c|x=-26.0|y=24.0|size=18|outline=2|color=243|text=已到达最高级,无需升级>
+goto @颜色等级判断
+goto @道士页面展示
+
+
+#IF
+equal S$技能图标 sszjs
+CHECKSKILL 神圣战甲术 = 3 0
+#act
+mov S$技能名称 神圣战甲术　LV.4
+mov S$要升级的技能 神圣战甲术
+mov S$技能效果 物抗双倍效果
+mov S$技能书  20069
+mov S$技能书页数 100
+mov S$技能框显示 <Img|id=1c|children={1d}|x=11.0|y=8.0|width=60|height=60|reset=1|loadDelay=0|esc=1|img=npc/jnqh/kuang.png|show=4|move=0>
+inc S$技能框显示 <ItemShow|id=1d|x=-3.0|y=-3.0|width=60|height=60|itemid=<$STR(S$技能书)>|itemcount=1|bgtype=0|showtips=1>
+inc S$技能框显示 <Img|id=2c|children={2d}|x=81.0|y=8.0|width=60|height=60|reset=1|loadDelay=0|esc=1|img=npc/jnqh/kuang.png|show=4|move=0>
+inc S$技能框显示 <ItemShow|id=2d|x=0.0|y=-2.0|width=60|height=60|itemid=20178|itemcount=<$STR(S$技能书页数)>|bgtype=0|showtips=1>
+goto @颜色等级判断
+goto @道士页面展示
+
+#IF
+equal S$技能图标 sszjs
+CHECKSKILL 神圣战甲术 = 4 0
+#act
+mov S$技能名称 神圣战甲术　LV.5
+mov S$要升级的技能 神圣战甲术
+mov S$技能效果 物抗四倍效果
+mov S$技能书  20069
+mov S$技能书页数 200
+mov S$技能框显示 <Img|id=1c|children={1d}|x=11.0|y=8.0|width=60|height=60|reset=1|loadDelay=0|esc=1|img=npc/jnqh/kuang.png|show=4|move=0>
+inc S$技能框显示 <ItemShow|id=1d|x=-3.0|y=-3.0|width=60|height=60|itemid=<$STR(S$技能书)>|itemcount=1|bgtype=0|showtips=1>
+inc S$技能框显示 <Img|id=2c|children={2d}|x=81.0|y=8.0|width=60|height=60|reset=1|loadDelay=0|esc=1|img=npc/jnqh/kuang.png|show=4|move=0>
+inc S$技能框显示 <ItemShow|id=2d|x=0.0|y=-2.0|width=60|height=60|itemid=20178|itemcount=<$STR(S$技能书页数)>|bgtype=0|showtips=1>
+goto @颜色等级判断
+goto @道士页面展示
+
+#IF
+equal S$技能图标 sszjs
+CHECKSKILL 神圣战甲术 = 5 0
+#act
+mov S$技能名称 神圣战甲术　LV.5
+mov S$要升级的技能 神圣战甲术
+mov S$技能效果 物抗四倍效果
+mov S$技能书  
+mov S$技能书页数 
+mov S$技能框显示 <Text|id=1c|x=-26.0|y=24.0|size=18|outline=2|color=243|text=已到达最高级,无需升级>
+goto @颜色等级判断
+goto @道士页面展示
+
+
+
+
+#IF
+equal S$技能图标 swzy
+not CheckMagicName 死亡之眼
+#act
+mov S$技能名称 死亡之眼　LV.4
+mov S$要升级的技能 死亡之眼
+mov S$技能效果 技能伤害增加10%
+mov S$技能书  20112
+mov S$技能书页数 300
+mov S$技能框显示 <Img|id=1c|children={1d}|x=11.0|y=8.0|width=60|height=60|reset=1|loadDelay=0|esc=1|img=npc/jnqh/kuang.png|show=4|move=0>
+inc S$技能框显示 <ItemShow|id=1d|x=-3.0|y=-3.0|width=60|height=60|itemid=<$STR(S$技能书)>|itemcount=1|bgtype=0|showtips=1>
+inc S$技能框显示 <Img|id=2c|children={2d}|x=81.0|y=8.0|width=60|height=60|reset=1|loadDelay=0|esc=1|img=npc/jnqh/kuang.png|show=4|move=0>
+inc S$技能框显示 <ItemShow|id=2d|x=0.0|y=-2.0|width=60|height=60|itemid=20178|itemcount=<$STR(S$技能书页数)>|bgtype=0|showtips=1>
+goto @颜色等级判断
+goto @道士页面展示
+
+#IF
+equal S$技能图标 swzy
+CHECKSKILL 死亡之眼 = 3 0
+#act
+mov S$技能名称 死亡之眼　LV.4
+mov S$要升级的技能 死亡之眼
+mov S$技能效果 技能伤害增加10%
+mov S$技能书  20112
+mov S$技能书页数 300
+mov S$技能框显示 <Img|id=1c|children={1d}|x=11.0|y=8.0|width=60|height=60|reset=1|loadDelay=0|esc=1|img=npc/jnqh/kuang.png|show=4|move=0>
+inc S$技能框显示 <ItemShow|id=1d|x=-3.0|y=-3.0|width=60|height=60|itemid=<$STR(S$技能书)>|itemcount=1|bgtype=0|showtips=1>
+inc S$技能框显示 <Img|id=2c|children={2d}|x=81.0|y=8.0|width=60|height=60|reset=1|loadDelay=0|esc=1|img=npc/jnqh/kuang.png|show=4|move=0>
+inc S$技能框显示 <ItemShow|id=2d|x=0.0|y=-2.0|width=60|height=60|itemid=20178|itemcount=<$STR(S$技能书页数)>|bgtype=0|showtips=1>
+goto @颜色等级判断
+goto @道士页面展示
+
+#IF
+equal S$技能图标 swzy
+CHECKSKILL 死亡之眼 = 4 0
+#act
+mov S$技能名称 死亡之眼　LV.5
+mov S$要升级的技能 死亡之眼
+mov S$技能效果 技能伤害增加20%
+mov S$技能书  20112
+mov S$技能书页数 500
+mov S$技能框显示 <Img|id=1c|children={1d}|x=11.0|y=8.0|width=60|height=60|reset=1|loadDelay=0|esc=1|img=npc/jnqh/kuang.png|show=4|move=0>
+inc S$技能框显示 <ItemShow|id=1d|x=-3.0|y=-3.0|width=60|height=60|itemid=<$STR(S$技能书)>|itemcount=1|bgtype=0|showtips=1>
+inc S$技能框显示 <Img|id=2c|children={2d}|x=81.0|y=8.0|width=60|height=60|reset=1|loadDelay=0|esc=1|img=npc/jnqh/kuang.png|show=4|move=0>
+inc S$技能框显示 <ItemShow|id=2d|x=0.0|y=-2.0|width=60|height=60|itemid=20178|itemcount=<$STR(S$技能书页数)>|bgtype=0|showtips=1>
+goto @颜色等级判断
+goto @道士页面展示
+
+#IF
+equal S$技能图标 swzy
+CHECKSKILL 死亡之眼 = 5 0
+#act
+mov S$技能名称 死亡之眼　LV.5
+mov S$要升级的技能 死亡之眼
+mov S$技能效果 技能伤害增加20%
+mov S$技能书  
+mov S$技能书页数 
+mov S$技能框显示 <Text|id=1c|x=-26.0|y=24.0|size=18|outline=2|color=243|text=已到达最高级,无需升级>
+goto @颜色等级判断
+goto @道士页面展示
+
+
+
+
+
+
+
+
+[@战士强化技能]
+#IF
+#ACT
+MOV N$书页数量 0
+
+#if
+CHECKSKILL <$STR(S$要升级的技能)> = 5
+#act
+SENDMSG 9 【提示】<$STR(S$要升级的技能)>已经最高！无需再升级！
+BREAK
+
+
+#IF
+CHECKSKILL <$STR(S$要升级的技能)> = 3
+EQUAL <$STR(S$要升级的技能)> 十步一杀
+#ACT
+MOV N$书页数量 300
+
+#IF
+CHECKSKILL <$STR(S$要升级的技能)> = 4
+EQUAL <$STR(S$要升级的技能)> 十步一杀
+#ACT
+MOV N$书页数量 500
+
+
+
+#IF
+CHECKSKILL <$STR(S$要升级的技能)> = 3
+EQUAL <$STR(S$要升级的技能)> 开天斩
+#ACT
+MOV N$书页数量 200
+
+#IF
+CHECKSKILL <$STR(S$要升级的技能)> = 4
+EQUAL <$STR(S$要升级的技能)> 开天斩
+#ACT
+MOV N$书页数量 300
+
+#IF
+CHECKSKILL <$STR(S$要升级的技能)> = 3
+EQUAL <$STR(S$要升级的技能)> 烈火剑法
+#ACT
+MOV N$书页数量 100
+
+#IF
+CHECKSKILL <$STR(S$要升级的技能)> = 4
+EQUAL <$STR(S$要升级的技能)> 烈火剑法
+#ACT
+MOV N$书页数量 200
+
+
+
+#IF
+CHECKSKILL <$STR(S$要升级的技能)> = 3
+EQUAL <$STR(S$要升级的技能)> 基本剑术
+#ACT
+MOV N$书页数量 50
+
+#IF
+CHECKSKILL <$STR(S$要升级的技能)> = 4
+EQUAL <$STR(S$要升级的技能)> 基本剑术
+#ACT
+MOV N$书页数量 100
+
+
+#IF
+CHECKITEM 书页 <$STR(N$书页数量)>
+CHECKITEM <$STR(S$要升级的技能)> 1
+#ACT
+goto @强化开启
+#elseact
+SENDMSG 9 【提示】您的材料不足！
+BREAK
+
+[@法师技能强化]
+#IF
+#ACT
+MOV N$书页数量 0
+
+#if
+CHECKSKILL <$STR(S$要升级的技能)> = 5
+#act
+SENDMSG 9 【提示】<$STR(S$要升级的技能)>已经最高！无需再升级！
+BREAK
+
+
+
+#IF
+CHECKSKILL <$STR(S$要升级的技能)> = 3
+EQUAL <$STR(S$要升级的技能)> 魔法盾
+#ACT
+MOV N$书页数量 50
+
+#IF
+CHECKSKILL <$STR(S$要升级的技能)> = 4
+EQUAL <$STR(S$要升级的技能)> 魔法盾
+#ACT
+MOV N$书页数量 100
+
+
+#IF
+CHECKSKILL <$STR(S$要升级的技能)> = 3
+EQUAL <$STR(S$要升级的技能)> 冰咆哮
+#ACT
+MOV N$书页数量 100
+
+#IF
+CHECKSKILL <$STR(S$要升级的技能)> = 4
+EQUAL <$STR(S$要升级的技能)> 冰咆哮
+#ACT
+MOV N$书页数量 200
+
+
+#IF
+CHECKSKILL <$STR(S$要升级的技能)> = 3
+EQUAL <$STR(S$要升级的技能)> 流星火雨
+#ACT
+MOV N$书页数量 200
+
+#IF
+CHECKSKILL <$STR(S$要升级的技能)> = 4
+EQUAL <$STR(S$要升级的技能)> 流星火雨
+#ACT
+MOV N$书页数量 300
+
+#IF
+CHECKSKILL <$STR(S$要升级的技能)> = 3
+EQUAL <$STR(S$要升级的技能)> 冰霜群雨
+#ACT
+MOV N$书页数量 300
+
+#IF
+CHECKSKILL <$STR(S$要升级的技能)> = 4
+EQUAL <$STR(S$要升级的技能)> 冰霜群雨
+#ACT
+MOV N$书页数量 500
+
+
+
+
+
+#IF
+CHECKITEM 书页 <$STR(N$书页数量)>
+CHECKITEM <$STR(S$要升级的技能)> 1
+#ACT
+goto @强化开启
+#elseact
+SENDMSG 9 【提示】您的材料不足！
+BREAK
+
+
+[@道士技能强化]
+#IF
+#ACT
+MOV N$书页数量 0
+
+#if
+CHECKSKILL <$STR(S$要升级的技能)> = 5
+#act
+SENDMSG 9 【提示】<$STR(S$要升级的技能)>已经最高！无需再升级！
+BREAK
+
+#IF
+CHECKSKILL <$STR(S$要升级的技能)> = 3
+EQUAL <$STR(S$要升级的技能)> 神圣战甲术
+#ACT
+MOV N$书页数量 100
+
+#IF
+CHECKSKILL <$STR(S$要升级的技能)> = 4
+EQUAL <$STR(S$要升级的技能)> 神圣战甲术
+#ACT
+MOV N$书页数量 200
+
+#IF
+CHECKSKILL <$STR(S$要升级的技能)> = 3
+EQUAL <$STR(S$要升级的技能)> 幽灵盾
+#ACT
+MOV N$书页数量 50
+
+#IF
+CHECKSKILL <$STR(S$要升级的技能)> = 4
+EQUAL <$STR(S$要升级的技能)> 幽灵盾
+#ACT
+MOV N$书页数量 100
+
+#IF
+CHECKSKILL <$STR(S$要升级的技能)> = 3
+EQUAL <$STR(S$要升级的技能)> 飓风破
+#ACT
+MOV N$书页数量 200
+
+#IF
+CHECKSKILL <$STR(S$要升级的技能)> = 4
+EQUAL <$STR(S$要升级的技能)> 飓风破
+#ACT
+MOV N$书页数量 300
+
+
+
+#IF
+CHECKSKILL <$STR(S$要升级的技能)> = 3
+EQUAL <$STR(S$要升级的技能)> 死亡之眼
+#ACT
+MOV N$书页数量 300
+
+#IF
+CHECKSKILL <$STR(S$要升级的技能)> = 4
+EQUAL <$STR(S$要升级的技能)> 死亡之眼
+#ACT
+MOV N$书页数量 500
+
+
+
+
+
+#IF
+CHECKITEM 书页 <$STR(N$书页数量)>
+CHECKITEM <$STR(S$要升级的技能)> 1
+#ACT
+goto @强化开启
+#elseact
+SENDMSG 9 【提示】您的材料不足！
+BREAK
+
+
+[@强化开启]
+#if
+not CheckMagicName <$STR(S$要升级的技能)>
+#act
+SENDMSG 9 【提示】<$STR(S$要升级的技能)>未修炼！请修炼到3级再来提升！
+break
+
+#if
+CHECKSKILL <$STR(S$要升级的技能)> < 3 
+#act
+SENDMSG 9 【提示】<$STR(S$要升级的技能)>等级不足3级,暂不能提升
+BREAK
+
+
+
+#if
+CHECKSKILL <$STR(S$要升级的技能)> = 3 0
+#act
+SKILLLEVEL <$STR(S$要升级的技能)> = 4 0
+take 书页 <$STR(N$书页数量)>
+take <$STR(S$要升级的技能)> 1
+SENDMSG 9 [<$STR(S$要升级的技能)>]强化成功！
+goto @技能升级页面
+break
+
+#if
+CHECKSKILL <$STR(S$要升级的技能)> = 4 0
+#act
+goto @升5级
+
+[@升5级]
+#if
+checkjob Warrior
+#act
+goto @战士升五级
+
+#if
+checkjob Wizard
+#act
+goto @法师升五级
+
+#if
+checkjob taoist
+#act
+goto @道士升五级
+
+[@战士升五级]
+
+#if
+CHECKSKILL 基本剑术 > 3
+CHECKSKILL 开天斩 > 3
+CHECKSKILL 十步一杀 > 3
+CHECKSKILL 烈火剑法 > 3
+
+
+#act
+SKILLLEVEL <$STR(S$要升级的技能)> = 5 0
+take 书页 <$STR(N$书页数量)>
+take <$STR(S$要升级的技能)> 1
+SENDMSG 9 [<$STR(S$要升级的技能)>]强化成功！
+goto @技能升级页面
+#elseact
+SENDMSG 9 需要将全部技能升级到4级才可以升5级哦！
+
+[@法师升五级]
+
+#if
+CHECKSKILL 魔法盾 > 3
+CHECKSKILL 冰咆哮 > 3
+CHECKSKILL 冰霜群雨 > 3
+CHECKSKILL 流星火雨 > 3
+#act
+SKILLLEVEL <$STR(S$要升级的技能)> = 5 0
+take 书页 <$STR(N$书页数量)>
+take <$STR(S$要升级的技能)> 1
+SENDMSG 9 [<$STR(S$要升级的技能)>]强化成功！
+goto @技能升级页面
+#elseact
+SENDMSG 9 需要将全部技能升级到4级才可以升5级哦！
+
+[@道士升五级]
+
+#if
+CHECKSKILL 死亡之眼 > 3
+CHECKSKILL 幽灵盾 > 3
+CHECKSKILL 飓风破 > 3
+CHECKSKILL 神圣战甲术 > 3
+#act
+SKILLLEVEL <$STR(S$要升级的技能)> = 5 0
+take 书页 <$STR(N$书页数量)>
+take <$STR(S$要升级的技能)> 1
+SENDMSG 9 [<$STR(S$要升级的技能)>]强化成功！
+goto @技能升级页面
+#elseact
+SENDMSG 9 需要将全部技能升级到4级才可以升5级哦！
+
+[@颜色等级判断]
+#if
+CHECKSKILL 基本剑术 = 3 0
+#act
+mov S$技能等级1 LV.3
+mov S$技能颜色1 255
+
+#if
+CHECKSKILL 基本剑术 = 4 0
+#act
+mov S$技能等级1 LV.4
+mov S$技能颜色1 224
+
+#if
+CHECKSKILL 基本剑术 = 5 0
+#act
+mov S$技能等级1 LV.5
+mov S$技能颜色1 243
+
+
+#if
+CHECKSKILL 烈火剑法 = 3 0
+#act
+mov S$技能等级2 LV.3
+mov S$技能颜色2 255
+
+#if
+CHECKSKILL 烈火剑法 = 4 0
+#act
+mov S$技能等级2 LV.4
+mov S$技能颜色2 224
+
+#if
+CHECKSKILL 烈火剑法 = 5 0
+#act
+mov S$技能等级2 LV.5
+mov S$技能颜色2 243
+
+#or
+not CheckMagicName 开天斩
+CHECKSKILL 开天斩 < 4 0
+#act
+mov S$技能等级4 LV.3
+mov S$技能颜色4 255
+
+#if
+CHECKSKILL 开天斩 = 4 0
+#act
+mov S$技能等级4 LV.4
+mov S$技能颜色4 224
+
+#if
+CHECKSKILL 开天斩 = 5 0
+#act
+mov S$技能等级4 LV.5
+mov S$技能颜色4 243
+
+#or
+not CheckMagicName 十步一杀
+CHECKSKILL 十步一杀 < 4 0
+#act
+mov S$技能等级3 LV.3
+mov S$技能颜色3 255
+
+#if
+CHECKSKILL 十步一杀 = 4 0
+#act
+mov S$技能等级3 LV.4
+mov S$技能颜色3 224
+
+#if
+CHECKSKILL 十步一杀 = 5 0
+#act
+mov S$技能等级3 LV.5
+mov S$技能颜色3 243
+
+
+
+
+
+#if
+CHECKSKILL 雷电术 = 3 0
+#act
+mov S$技能等级6 LV.3
+mov S$技能颜色6 255
+
+#if
+CHECKSKILL 雷电术 = 4 0
+#act
+mov S$技能等级6 LV.4
+mov S$技能颜色6 224
+
+#if
+CHECKSKILL 雷电术 = 5 0
+#act
+mov S$技能等级6 LV.5
+mov S$技能颜色6 243
+
+
+#if
+CHECKSKILL 火墙 = 3 0
+#act
+mov S$技能等级7 LV.3
+mov S$技能颜色7 255
+
+#if
+CHECKSKILL 火墙 = 4 0
+#act
+mov S$技能等级7 LV.4
+mov S$技能颜色7 224
+
+#if
+CHECKSKILL 火墙 = 5 0
+#act
+mov S$技能等级7 LV.5
+mov S$技能颜色7 243
+
+#if
+CHECKSKILL 魔法盾 = 3 0
+#act
+mov S$技能等级8 LV.3
+mov S$技能颜色8 255
+
+#if
+CHECKSKILL 魔法盾 = 4 0
+#act
+mov S$技能等级8 LV.4
+mov S$技能颜色8 224
+
+#if
+CHECKSKILL 魔法盾 = 5 0
+#act
+mov S$技能等级8 LV.5
+mov S$技能颜色8 243
+
+#if
+CHECKSKILL 冰咆哮 = 3 0
+#act
+mov S$技能等级9 LV.3
+mov S$技能颜色9 255
+
+#if
+CHECKSKILL 冰咆哮 = 4 0
+#act
+mov S$技能等级9 LV.4
+mov S$技能颜色9 224
+
+#if
+CHECKSKILL 冰咆哮 = 5 0
+#act
+mov S$技能等级9 LV.5
+mov S$技能颜色9 243
+
+#or
+not CheckMagicName 冰霜群雨
+CHECKSKILL 冰霜群雨 < 4 0
+#act
+mov S$技能等级10 LV.3
+mov S$技能颜色10 255
+
+#if
+CHECKSKILL 冰霜群雨 = 4 0
+#act
+mov S$技能等级10 LV.4
+mov S$技能颜色10 224
+
+#if
+CHECKSKILL 冰霜群雨 = 5 0
+#act
+mov S$技能等级10 LV.5
+mov S$技能颜色10 243
+
+#or
+not CheckMagicName 流星火雨
+CHECKSKILL 流星火雨 < 4 0
+#act
+mov S$技能等级17 LV.3
+mov S$技能颜色17 255
+
+#if
+CHECKSKILL 流星火雨 = 4 0
+#act
+mov S$技能等级17 LV.4
+mov S$技能颜色17 224
+
+#if
+CHECKSKILL 流星火雨 = 5 0
+#act
+mov S$技能等级17 LV.5
+mov S$技能颜色17 243
+
+
+
+
+
+
+
+#or
+CHECKSKILL 死亡之眼 < 4 0
+not CheckMagicName 死亡之眼
+#act
+mov S$技能等级16 LV.3
+mov S$技能颜色16 255
+
+#if
+CHECKSKILL 死亡之眼 = 4 0
+#act
+mov S$技能等级16 LV.4
+mov S$技能颜色16 224
+
+#if
+CHECKSKILL 死亡之眼 = 5 0
+#act
+mov S$技能等级16 LV.5
+mov S$技能颜色16 243
+
+
+#if
+CHECKSKILL 神圣战甲术 = 3 0
+#act
+mov S$技能等级15 LV.3
+mov S$技能颜色15 255
+
+#if
+CHECKSKILL 神圣战甲术 = 4 0
+#act
+mov S$技能等级15 LV.4
+mov S$技能颜色15 224
+
+#if
+CHECKSKILL 神圣战甲术 = 5 0
+#act
+mov S$技能等级15 LV.5
+mov S$技能颜色15 243
+
+
+#or
+not CheckMagicName 飓风破
+CHECKSKILL 飓风破 < 4 0
+#act
+mov S$技能等级14 LV.3
+mov S$技能颜色14 255
+
+#if
+CHECKSKILL 飓风破 = 4 0
+#act
+mov S$技能等级14 LV.4
+mov S$技能颜色14 224
+
+#if
+CHECKSKILL 飓风破 = 5 0
+#act
+mov S$技能等级14 LV.5
+mov S$技能颜色14 243
+
+
+
+#if
+CHECKSKILL 灵魂火符 = 3 0
+#act
+mov S$技能等级13 LV.3
+mov S$技能颜色13 255
+
+#if
+CHECKSKILL 灵魂火符 = 4 0
+#act
+mov S$技能等级13 LV.4
+mov S$技能颜色13 224
+
+#if
+CHECKSKILL 灵魂火符 = 5 0
+#act
+mov S$技能等级13 LV.5
+mov S$技能颜色13 243
+
+
+
+
+#if
+CHECKSKILL 幽灵盾 = 3 0
+#act
+mov S$技能等级12 LV.3
+mov S$技能颜色12 255
+
+#if
+CHECKSKILL 幽灵盾 = 4 0
+#act
+mov S$技能等级12 LV.4
+mov S$技能颜色12 224
+
+#if
+CHECKSKILL 幽灵盾 = 5 0
+#act
+mov S$技能等级12 LV.5
+mov S$技能颜色12 243
+
+
+
+
+#if
+CHECKSKILL 施毒术 = 3 0
+#act
+mov S$技能等级11 LV.3
+mov S$技能颜色11 255
+
+#if
+CHECKSKILL 施毒术 = 4 0
+#act
+mov S$技能等级11 LV.4
+mov S$技能颜色11 224
+
+#if
+CHECKSKILL 施毒术 = 5 0
+#act
+mov S$技能等级11 LV.5
+mov S$技能颜色11 243
+}

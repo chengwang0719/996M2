@@ -1,0 +1,1283 @@
+[@大陆传送页面]
+{
+#if
+#act
+mov S$弹窗选择
+goto @DL传送页面
+[@DL传送页面]    
+#if
+#say
+<Img|x=-76.0|y=-12.0|width=936|height=600|img=topbtn/dlcs/bj.png|move=0|esc=1|bg=1|reset=1|show=4|loadDelay=0>
+<Button|x=799.0|y=30.0|mimg=public/close-2.png|nimg=public/close-2.png|link=@exit>
+<Button|x=392.0|y=175.0|width=180|height=80|mimg=topbtn/dlcs/1.png|nimg=topbtn/dlcs/1.png|link=@前往一大陆>
+<Button|x=261.0|y=342.0|width=180|height=80|mimg=topbtn/dlcs/2.png|nimg=topbtn/dlcs/2.png|link=@前往二大陆>
+<Button|x=48.0|y=248.0|width=180|height=80|mimg=topbtn/dlcs/3.png|nimg=topbtn/dlcs/3.png|link=@前往三大陆>
+<Button|x=499.0|y=107.0|width=180|height=80|mimg=topbtn/dlcs/4.png|nimg=topbtn/dlcs/4.png|link=@前往四大陆>
+<Button|x=195.0|y=128.0|width=180|height=80|mimg=topbtn/dlcs/5.png|nimg=topbtn/dlcs/5.png|link=@前往五大陆>
+<Button|x=534.0|y=375.0|width=180|height=80|mimg=topbtn/dlcs/6.png|nimg=topbtn/dlcs/6.png|link=@敬请期待>
+
+
+;<Button|x=13.0|y=85.0|width=80|height=77|mimg=topbtn/dlcs/dlcs.png|nimg=topbtn/dlcs/dlcs.png|link=@DL传送页面>
+<Button|x=13.0|y=85.0|width=80|height=76|mimg=topbtn/dlcs/dtzc.png|nimg=topbtn/dlcs/dtzc.png|link=@DT传送页面>
+
+[@前往一大陆]
+#if
+#act
+mapmove 3 330 330 1
+
+
+[@前往二大陆]
+#if
+CHECKRENEWLEVEL > 1
+#act
+mapmove xbqc1 92 96 1
+#elseact
+sendmsg 9 [提示] 您还未满足条件,无法前往！！
+
+
+
+[@前往三大陆]
+#if
+CHECKLEVELEX > 48
+CHECKRENEWLEVEL > 3
+#act
+mapmove 3213 184 317 1
+#elseact
+sendmsg 9 [提示] 您还未满足条件,无法前往！！
+
+
+
+[@前往四大陆]
+#if
+CHECKLEVELEX > 53
+CHECKRENEWLEVEL > 5
+#act
+mapmove bxzj2 446 233 1
+#elseact
+sendmsg 9 [提示] 您还未满足条件,无法前往！！
+
+
+[@前往五大陆]
+#if
+CHECKRENEWLEVEL > 7
+#act
+mapmove plxd 123 129 5
+#elseact
+sendmsg 9 [提示] 您还未满足条件,无法前往！！
+
+
+[@敬请期待]
+#if
+#act
+
+MESSAGEBOX 敬请期待！  @关闭
+
+
+[@DT传送页面]
+
+
+#if
+#say
+<Img|children={90,91,92,93,94,100,200,300,400,500}|x=-76.0|y=-12.0|width=936|height=600|img=topbtn/dlcs/t/bj.png|move=0|esc=1|bg=1|reset=1|show=4|loadDelay=0>
+<Button|x=799.0|y=30.0|mimg=public/close-2.png|nimg=public/close-2.png|link=@exit>
+
+<Text|x=193|y=527|color=254|outline=2|size=14|text=需要拥有【君临天下】称号才可以地图直达，另 每次传送消耗1w元宝>
+
+
+
+
+
+
+<Button|x=713.0|y=461.0|width=80|height=77|mimg=topbtn/dlcs/dlcs.png|nimg=topbtn/dlcs/dlcs.png|link=@DL传送页面>
+
+<Img|id=90|x=90.0|y=87.0|width=160|height=65|esc=1|loadDelay=0|reset=1|move=0|img=topbtn/dlcs/t/1.png|show=4>
+<Img|id=91|x=239.0|y=85.0|width=160|height=65|esc=1|loadDelay=0|reset=1|move=0|img=topbtn/dlcs/t/1.png|show=4>
+<Img|id=92|x=389.0|y=82.0|width=160|height=65|esc=1|loadDelay=0|reset=1|move=0|img=topbtn/dlcs/t/2.png|show=4>
+<Img|id=93|x=540.0|y=78.0|width=160|height=65|esc=1|loadDelay=0|reset=1|move=0|img=topbtn/dlcs/t/3.png|show=4>
+<Img|id=94|x=689.0|y=76.0|width=160|height=65|esc=1|loadDelay=0|reset=1|move=0|img=topbtn/dlcs/t/4.png|show=4>
+
+<Layout|id=100|children={1,2,3,4,5,6,7}|x=115.0|y=164.0|width=150|height=400>
+<Button|id=1|x=0.0|y=1.0|width=141|height=30|mimg=topbtn/dlcs/t/0/1.png|nimg=topbtn/dlcs/t/0/1.png|link=@打开#传送名字=蜈蚣>
+<Button|id=2|x=0.0|y=54.0|width=141|height=30|mimg=topbtn/dlcs/t/a/1.png|nimg=topbtn/dlcs/t/a/1.png|link=@打开#传送名字=祖玛>
+<Button|id=3|x=0.0|y=108.0|width=141|height=30|mimg=topbtn/dlcs/t/b/1.png|nimg=topbtn/dlcs/t/b/1.png|link=@打开#传送名字=尸王>
+<Button|id=4|x=0.0|y=164.0|width=141|height=30|mimg=topbtn/dlcs/t/c/1.png|nimg=topbtn/dlcs/t/c/1.png|link=@打开#传送名字=骨魔>
+<Button|id=5|x=0.0|y=220.0|width=141|height=30|mimg=topbtn/dlcs/t/d/1.png|nimg=topbtn/dlcs/t/d/1.png|link=@打开#传送名字=沃玛>
+<Button|id=6|x=0.0|y=275.0|width=141|height=30|mimg=topbtn/dlcs/t/e/1.png|nimg=topbtn/dlcs/t/e/1.png|link=@打开#传送名字=牛魔>
+<Button|id=7|x=0.0|y=330.0|width=141|height=30|mimg=topbtn/dlcs/t/f/1.png|nimg=topbtn/dlcs/t/f/1.png|link=@打开#传送名字=石墓>
+
+
+<Layout|id=200|children={11,12,13,14,15,16,17}|x=263.0|y=164.0|width=150|height=400>
+
+<Button|id=11|x=13.0|y=1.0|width=141|height=30|mimg=topbtn/dlcs/t/01/1.png|nimg=topbtn/dlcs/t/01/1.png|link=@打开#传送名字=封魔>
+<Button|id=12|x=0.0|y=54.0|width=141|height=30|mimg=topbtn/dlcs/t/a1/1.png|nimg=topbtn/dlcs/t/a1/1.png|link=@打开#传送名字=桃花>
+<Button|id=13|x=0.0|y=108.0|width=141|height=30|mimg=topbtn/dlcs/t/b1/1.png|nimg=topbtn/dlcs/t/b1/1.png|link=@打开#传送名字=蚂蚁>
+<Button|id=14|x=0.0|y=164.0|width=141|height=30|mimg=topbtn/dlcs/t/c1/1.png|nimg=topbtn/dlcs/t/c1/1.png|link=@打开#传送名字=海盗>
+<Button|id=15|x=0.0|y=220.0|width=141|height=30|mimg=topbtn/dlcs/t/d1/1.png|nimg=topbtn/dlcs/t/d1/1.png|link=@打开#传送名字=水世界>
+<Button|id=16|x=0.0|y=275.0|width=141|height=30|mimg=topbtn/dlcs/t/e1/1.png|nimg=topbtn/dlcs/t/e1/1.png|link=@打开#传送名字=血色>
+<Button|id=17|x=0.0|y=330.0|width=141|height=30|mimg=topbtn/dlcs/t/f1/1.png|nimg=topbtn/dlcs/t/f1/1.png|link=@打开#传送名字=火龙>
+
+
+<Layout|id=300|children={21,22,23,24,25,26,27}|x=415.0|y=164.0|width=150|height=400>
+
+<Button|id=21|x=0.0|y=1.0|width=141|height=30|mimg=topbtn/dlcs/t/02/1.png|nimg=topbtn/dlcs/t/02/1.png|link=@打开#传送名字=修罗>
+<Button|id=22|x=0.0|y=54.0|width=141|height=30|mimg=topbtn/dlcs/t/a2/1.png|nimg=topbtn/dlcs/t/a2/1.png|link=@打开#传送名字=秦始皇>
+<Button|id=23|x=0.0|y=108.0|width=141|height=30|mimg=topbtn/dlcs/t/b2/1.png|nimg=topbtn/dlcs/t/b2/1.png|link=@打开#传送名字=沙漠>
+<Button|id=24|x=0.0|y=164.0|width=141|height=30|mimg=topbtn/dlcs/t/c2/1.png|nimg=topbtn/dlcs/t/c2/1.png|link=@打开#传送名字=大佛窟>
+<Button|id=25|x=0.0|y=220.0|width=141|height=30|mimg=topbtn/dlcs/t/d2/1.png|nimg=topbtn/dlcs/t/d2/1.png|link=@打开#传送名字=雷音>
+<Button|id=26|x=0.0|y=275.0|width=141|height=30|mimg=topbtn/dlcs/t/e2/1.png|nimg=topbtn/dlcs/t/e2/1.png|link=@打开#传送名字=时空>
+<Button|id=27|x=0.0|y=330.0|width=141|height=30|mimg=topbtn/dlcs/t/f2/1.png|nimg=topbtn/dlcs/t/f2/1.png|link=@打开#传送名字=赤月>
+
+<Layout|id=400|children={31,32,33,34,35,36,37}|x=561.0|y=164.0|width=150|height=400>
+
+<Button|id=31|x=0.0|y=1.0|width=141|height=30|mimg=topbtn/dlcs/t/03/1.png|nimg=topbtn/dlcs/t/03/1.png|link=@打开#传送名字=剑冢>
+<Button|id=32|x=0.0|y=54.0|width=141|height=30mimg=topbtn/dlcs/t/a3/1.png|nimg=topbtn/dlcs/t/a3/1.png|link=@打开#传送名字=熔岩>
+<Button|id=33|x=0.0|y=108.0|width=141|height=30|mimg=topbtn/dlcs/t/b3/1.png|nimg=topbtn/dlcs/t/b3/1.png|link=@打开#传送名字=沉寂>
+<Button|id=34|x=0.0|y=164.0|width=141|height=30|mimg=topbtn/dlcs/t/c3/1.png|nimg=topbtn/dlcs/t/c3/1.png|link=@打开#传送名字=雪融>
+<Button|id=35|x=0.0|y=220.0|width=141|height=30|mimg=topbtn/dlcs/t/d3/1.png|nimg=topbtn/dlcs/t/d3/1.png|link=@打开#传送名字=冰天>
+<Button|id=36|x=0.0|y=275.0|width=141|height=30|mimg=topbtn/dlcs/t/e3/1.png|nimg=topbtn/dlcs/t/e3/1.png|link=@打开#传送名字=冰封>
+<Button|id=37|x=0.0|y=330.0|width=141|height=30|mimg=topbtn/dlcs/t/f3/1.png|nimg=topbtn/dlcs/t/f3/1.png|link=@打开#传送名字=冰雪>
+
+
+<Layout|id=500|children={41,42,43,44,45}|x=725.0|y=164.0|width=150|height=400>
+
+<Button|id=41|x=0.0|y=1.0|width=141|height=30|mimg=topbtn/dlcs/t/04/1.png|nimg=topbtn/dlcs/t/04/1.png|link=@打开#传送名字=枫林>
+<Button|id=42|x=0.0|y=54.0|width=141|height=30|mimg=topbtn/dlcs/t/a4/1.png|nimg=topbtn/dlcs/t/a4/1.png|link=@打开#传送名字=蓬莱>
+<Button|id=43|x=0.0|y=108.0|width=141|height=30|mimg=topbtn/dlcs/t/b4/1.png|nimg=topbtn/dlcs/t/b4/1.png|link=@打开#传送名字=云顶>
+<Button|id=44|x=11.0|y=164.0|width=141|height=30|mimg=topbtn/dlcs/t/c4/1.png|nimg=topbtn/dlcs/t/c4/1.png|link=@打开#传送名字=云宫>
+<Button|id=45|x=0.0|y=220.0|width=141|height=30|mimg=topbtn/dlcs/t/d4/1.png|nimg=topbtn/dlcs/t/d4/1.png|link=@打开#传送名字=仙城>
+<$str(S$弹窗选择)>
+
+[@关闭]
+#if
+#act
+mov S$弹窗选择
+goto @DT传送页面
+
+[@打开]
+#if
+not CHECKTITLE 君临天下
+#act
+sendmsg 9 你没有[君临天下]的称号，无法使用该功能！
+break
+
+#if
+equal S$传送名字 蜈蚣
+#act
+goto @传送1
+
+
+
+#if
+equal S$传送名字 祖玛
+#act
+goto @传送2
+
+
+
+
+
+#if
+equal S$传送名字 尸王
+#act
+goto @传送3
+
+
+
+#if
+equal S$传送名字 骨魔
+#act
+goto @传送4
+
+
+
+#if
+equal S$传送名字 沃玛
+#act
+goto @传送5
+
+
+
+#if
+equal S$传送名字 牛魔
+#act
+goto @传送6
+
+
+
+#if
+equal S$传送名字 石墓
+#act
+goto @传送7
+
+
+#if
+equal S$传送名字 封魔
+#act
+goto @传送8
+
+
+
+#if
+equal S$传送名字 桃花
+#act
+goto @传送9
+
+
+
+#if
+equal S$传送名字 秦始皇
+#act
+goto @传送10
+
+
+#if
+equal S$传送名字 蚂蚁
+#act
+goto @传送11
+
+
+
+#if
+equal S$传送名字 海盗
+#act
+goto @传送12
+
+
+#if
+
+equal S$传送名字 水世界
+#act
+goto @传送13
+
+
+
+#if
+
+equal S$传送名字 血色
+#act
+goto @传送14
+
+
+#if
+
+equal S$传送名字 火龙
+#act
+goto @传送15 
+
+
+#if
+equal S$传送名字 修罗
+#act
+goto @传送16
+
+
+#if
+equal S$传送名字 沙漠
+#act
+goto @传送17
+
+
+
+#if
+
+equal S$传送名字 大佛窟
+#act
+goto @传送18
+
+
+
+#if
+equal S$传送名字 雷音
+#act
+goto @传送19
+
+
+#if
+equal S$传送名字 时空
+#act
+goto @传送20
+
+
+
+#if
+equal S$传送名字 赤月
+#act
+goto @传送21
+
+#if
+equal S$传送名字 剑冢
+#act
+goto @传送22
+
+#if
+equal S$传送名字 熔岩
+#act
+goto @传送23
+
+#if
+equal S$传送名字 沉寂
+#act
+goto @传送24
+
+#if
+equal S$传送名字 雪融
+#act
+goto @传送25
+
+
+#if
+equal S$传送名字 冰天
+#act
+goto @传送26
+
+#if
+equal S$传送名字 冰封
+#act
+goto @传送27
+
+#if
+equal S$传送名字 冰雪
+#act
+goto @传送28
+
+
+#if
+equal S$传送名字 枫林
+#act
+goto @传送29
+
+#if
+equal S$传送名字 蓬莱
+#act
+goto @传送30
+
+#if
+equal S$传送名字 云顶
+#act
+goto @传送31
+
+
+#if
+equal S$传送名字 云宫
+#act
+goto @传送32
+
+#if
+equal S$传送名字 仙城
+#act
+goto  @传送33
+
+[@传送1]
+#if
+small G19 2000
+#act
+sendmsg 9 进入地图条件不满足！无法进入！
+break
+
+#if
+CHECKRENEWLEVEL > 1
+#act
+mov S$弹窗选择 <Button|children={p,pp}|x=-2|y=64|width=800|height=480|color=224|size=18|pimg=npc/zd.png|mimg=npc/zd.png|nimg=npc/zd.png>
+inc S$弹窗选择 <Button|id=pp|x=576|y=111|mimg=public/1900000510.png|nimg=public/1900000510.png|link=@关闭>
+inc S$弹窗选择 <Img|id=p|children={m1,m2}|x=207|y=109|img=topbtn/dlcs/t/bbb.png|move=0|esc=1|reset=1|show=4|loadDelay=0>
+
+inc S$弹窗选择 <Button|id=m1|x=216.0|y=108.0|mimg=topbtn/dlcs/t/0/12.png|nimg=topbtn/dlcs/t/0/12.png|link=@下图#下图名字=蜈蚣一层>
+inc S$弹窗选择 <Button|id=m2|x=47.0|y=107.0|mimg=topbtn/dlcs/t/0/11.png|nimg=topbtn/dlcs/t/0/11.png|link=@下图#下图名字=蜈蚣二层>
+goto @DT传送页面
+#elseact
+sendmsg 9 转生等级不够或者条件不满足，无法传送！
+
+[@传送2]
+#if
+small G19 6000
+#act
+sendmsg 9 进入地图条件不满足！无法进入！
+break
+
+#if
+CHECKRENEWLEVEL > 1
+#act
+mov S$弹窗选择 <Button|children={p,pp}|x=-2|y=64|width=800|height=480|color=224|size=18|pimg=npc/zd.png|mimg=npc/zd.png|nimg=npc/zd.png>
+inc S$弹窗选择 <Button|id=pp|x=576|y=111|mimg=public/1900000510.png|nimg=public/1900000510.png|link=@关闭>
+inc S$弹窗选择 <Img|id=p|children={m1,m2,m3,m4,m5,m6,m7}|x=207|y=109|img=topbtn/dlcs/t/bbb.png|move=0|esc=1|reset=1|show=4|loadDelay=0>
+inc S$弹窗选择 <Button|id=m1|x=135.0|y=186.0|width=145|height=28|nimg=topbtn/dlcs/t/a/11.png|mimg=topbtn/dlcs/t/a/11.png|link=@下图#下图名字=祖玛寺庙之家>
+inc S$弹窗选择 <Button|id=m2|x=49.0|y=142.0|width=145|height=28|nimg=topbtn/dlcs/t/a/12.png|mimg=topbtn/dlcs/t/a/12.png|link=@下图#下图名字=祖玛寺庙大厅>
+inc S$弹窗选择 <Button|id=m3|x=216.0|y=57.0|width=145|height=28|nimg=topbtn/dlcs/t/a/13.png|mimg=topbtn/dlcs/t/a/13.png|link=@下图#下图名字=祖玛寺庙二层>
+inc S$弹窗选择 <Button|id=m4|x=49.0|y=100.0|width=145|height=28|nimg=topbtn/dlcs/t/a/14.png|mimg=topbtn/dlcs/t/a/14.png|link=@下图#下图名字=祖玛寺庙三层>
+inc S$弹窗选择 <Button|id=m5|x=218.0|y=101.0|width=145|height=28|nimg=topbtn/dlcs/t/a/15.png|mimg=topbtn/dlcs/t/a/15.png|link=@下图#下图名字=祖玛寺庙四层>
+inc S$弹窗选择 <Button|id=m6|x=48.0|y=57.0|width=145|height=28|nimg=topbtn/dlcs/t/a/16.png|mimg=topbtn/dlcs/t/a/16.png|link=@下图#下图名字=祖玛寺庙一层>
+inc S$弹窗选择 <Button|id=m7|x=220.0|y=142.0|width=145|height=28|nimg=topbtn/dlcs/t/a/17.png|mimg=topbtn/dlcs/t/a/17.png|link=@下图#下图名字=祖玛寺庙长廊>
+goto @DT传送页面
+#elseact
+sendmsg 9 转生等级不够或者条件不满足，无法传送！
+
+[@传送3]
+#if
+small G19 3000
+#act
+sendmsg 9 进入地图条件不满足！无法进入！
+break
+
+#if
+CHECKRENEWLEVEL > 1
+#act
+mov S$弹窗选择 <Button|children={p,pp}|x=-2|y=64|width=800|height=480|color=224|pimg=npc/zd.png|nimg=npc/zd.png|size=18|mimg=npc/zd.png>
+inc S$弹窗选择 <Img|id=p|children={m1,m2,m3}|x=207|y=109|esc=1|move=0|img=topbtn/dlcs/t/bbb.png|show=4|loadDelay=0|reset=1>
+inc S$弹窗选择 <Button|id=m1|x=133.0|y=148.0|mimg=topbtn/dlcs/t/b/11.png|nimg=topbtn/dlcs/t/b/11.png|link=@下图#下图名字=矿区东部>
+inc S$弹窗选择 <Button|id=m2|x=240.0|y=79.0|mimg=topbtn/dlcs/t/b/12.png|nimg=topbtn/dlcs/t/b/12.png|link=@下图#下图名字=矿区入口>
+inc S$弹窗选择 <Button|id=m3|x=45.0|y=79.0|mimg=topbtn/dlcs/t/b/13.png|nimg=topbtn/dlcs/t/b/13.png|link=@下图#下图名字=矿区一层>
+inc S$弹窗选择 <Button|id=pp|x=576|y=111|mimg=public/1900000510.png|nimg=public/1900000510.png|link=@关闭>
+goto @DT传送页面
+#elseact
+sendmsg 9 转生等级不够或者条件不满足，无法传送！
+
+[@传送4]
+#if
+small G19 12000
+#act
+sendmsg 9 进入地图条件不满足！无法进入！
+break
+
+#if
+CHECKRENEWLEVEL > 1
+#act
+mov S$弹窗选择 <Button|children={p,pp}|x=-2|y=64|width=800|height=480|color=224|pimg=npc/zd.png|nimg=npc/zd.png|size=18|mimg=npc/zd.png>
+inc S$弹窗选择 <Img|id=p|children={m1,m2,m3,m4}|x=207|y=109|show=4|esc=1|img=topbtn/dlcs/t/bbb.png|move=0|loadDelay=0|reset=1>
+inc S$弹窗选择 <Button|id=m1|x=240.0|y=78.0|mimg=topbtn/dlcs/t/c/11.png|nimg=topbtn/dlcs/t/c/11.png|link=@下图#下图名字=骨魔二层>
+inc S$弹窗选择 <Button|id=m2|x=46.0|y=143.0|mimg=topbtn/dlcs/t/c/12.png|nimg=topbtn/dlcs/t/c/12.png|link=@下图#下图名字=骨魔三层>
+inc S$弹窗选择 <Button|id=m3|x=243.0|y=144.0|mimg=topbtn/dlcs/t/c/13.png|nimg=topbtn/dlcs/t/c/13.png|link=@下图#下图名字=骨魔四层>
+inc S$弹窗选择 <Button|id=m4|x=45.0|y=79.0|mimg=topbtn/dlcs/t/c/14.png|nimg=topbtn/dlcs/t/c/14.png|link=@下图#下图名字=骨魔一层>
+inc S$弹窗选择 <Button|id=pp|x=576|y=111|mimg=public/1900000510.png|nimg=public/1900000510.png|link=@关闭>
+goto @DT传送页面
+#elseact
+sendmsg 9 转生等级不够或者条件不满足，无法传送！
+
+[@传送5]
+#if
+small G19 1000
+#act
+sendmsg 9 进入地图条件不满足！无法进入！
+break
+
+#if
+CHECKRENEWLEVEL > 1
+#act
+mov S$弹窗选择 <Button|children={p,pp}|x=-2|y=64|width=800|height=480|color=224|pimg=npc/zd.png|nimg=npc/zd.png|size=18|mimg=npc/zd.png>
+inc S$弹窗选择 <Img|id=p|children={m1,m2,m3}|x=207|y=109|show=4|esc=1|img=topbtn/dlcs/t/bbb.png|move=0|loadDelay=0|reset=1>
+inc S$弹窗选择 <Button|id=m1|x=57.0|y=80.0|mimg=topbtn/dlcs/t/d/11.png|nimg=topbtn/dlcs/t/d/11.png|link=@下图#下图名字=沃玛一层>
+inc S$弹窗选择 <Button|id=m2|x=151.0|y=148.0|mimg=topbtn/dlcs/t/d/12.png|nimg=topbtn/dlcs/t/d/12.png|link=@下图#下图名字=沃玛入口>
+inc S$弹窗选择 <Button|id=m3|x=235.0|y=79.0|mimg=topbtn/dlcs/t/d/13.png|nimg=topbtn/dlcs/t/d/13.png|link=@下图#下图名字=沃玛二层>
+inc S$弹窗选择 <Button|id=pp|x=576|y=111|mimg=public/1900000510.png|nimg=public/1900000510.png|link=@关闭>
+goto @DT传送页面
+#elseact
+sendmsg 9 转生等级不够或者条件不满足，无法传送！
+
+[@传送6]
+#if
+small G19 9000
+#act
+sendmsg 9 进入地图条件不满足！无法进入！
+break
+
+#if
+CHECKRENEWLEVEL > 1
+#act
+mov S$弹窗选择 <Button|children={p,pp}|x=-2|y=64|width=800|height=480|color=224|pimg=npc/zd.png|nimg=npc/zd.png|size=18|mimg=npc/zd.png>
+inc S$弹窗选择 <Img|id=p|children={m1,m2,m3,m4}|x=207|y=109|show=4|esc=1|img=topbtn/dlcs/t/bbb.png|move=0|loadDelay=0|reset=1>
+inc S$弹窗选择 <Button|id=m1|x=54.0|y=75.0|mimg=topbtn/dlcs/t/e/11.png|nimg=topbtn/dlcs/t/e/11.png|link=@下图#下图名字=牛魔入口>
+inc S$弹窗选择 <Button|id=m2|x=192.0|y=75.0|mimg=topbtn/dlcs/t/e/12.png|nimg=topbtn/dlcs/t/e/12.png|link=@下图#下图名字=牛魔一层>
+inc S$弹窗选择 <Button|id=m3|x=108.0|y=124.0|mimg=topbtn/dlcs/t/e/13.png|nimg=topbtn/dlcs/t/e/13.png|link=@下图#下图名字=牛魔二层>
+inc S$弹窗选择 <Button|id=m4|x=111.0|y=172.0|mimg=topbtn/dlcs/t/e/14.png|nimg=topbtn/dlcs/t/e/14.png|link=@下图#下图名字=牛魔三层>
+inc S$弹窗选择 <Button|id=pp|x=576|y=111|mimg=public/1900000510.png|nimg=public/1900000510.png|link=@关闭>
+goto @DT传送页面
+#elseact
+sendmsg 9 转生等级不够或者条件不满足，无法传送！
+
+
+[@传送7]
+#if
+small G19 15000
+#act
+sendmsg 9 进入地图条件不满足！无法进入！
+break
+
+#if
+CHECKRENEWLEVEL > 1
+#act
+mov S$弹窗选择 <Button|children={p,pp}|x=-2|y=64|width=800|height=480|color=224|pimg=npc/zd.png|nimg=npc/zd.png|size=18|mimg=npc/zd.png>
+inc S$弹窗选择 <Img|id=p|children={m1,m2,m3,m4,m5,m6,m7,m8}|x=207|y=109|show=4|esc=1|img=topbtn/dlcs/t/bbb.png|move=0|loadDelay=0|reset=1>
+inc S$弹窗选择 <Button|id=m1|x=54.0|y=53.0|mimg=topbtn/dlcs/t/f/11.png|nimg=topbtn/dlcs/t/f/11.png|link=@下图#下图名字=石墓一层>
+inc S$弹窗选择 <Button|id=m2|x=231.0|y=53.0|mimg=topbtn/dlcs/t/f/12.png|nimg=topbtn/dlcs/t/f/12.png|link=@下图#下图名字=石墓二层>
+inc S$弹窗选择 <Button|id=m3|x=55.0|y=92.0|mimg=topbtn/dlcs/t/f/13.png|nimg=topbtn/dlcs/t/f/13.png|link=@下图#下图名字=石墓三层>
+inc S$弹窗选择 <Button|id=m4|x=230.0|y=94.0|mimg=topbtn/dlcs/t/f/14.png|nimg=topbtn/dlcs/t/f/14.png|link=@下图#下图名字=石墓四层>
+inc S$弹窗选择 <Button|id=m5|x=54.0|y=137.0|mimg=topbtn/dlcs/t/f/15.png|nimg=topbtn/dlcs/t/f/15.png|link=@下图#下图名字=石墓五层>
+inc S$弹窗选择 <Button|id=m6|x=233.0|y=139.0|mimg=topbtn/dlcs/t/f/16.png|nimg=topbtn/dlcs/t/f/16.png|link=@下图#下图名字=石墓六层>
+inc S$弹窗选择 <Button|id=m7|x=55.0|y=182.0|mimg=topbtn/dlcs/t/f/17.png|nimg=topbtn/dlcs/t/f/17.png|link=@下图#下图名字=石墓七层>
+inc S$弹窗选择 <Button|id=pp|x=576|y=111|mimg=public/1900000510.png|nimg=public/1900000510.png|link=@关闭>
+goto @DT传送页面
+#elseact
+sendmsg 9 转生等级不够或者条件不满足，无法传送！
+[@传送9]
+#if
+CHECKRENEWLEVEL > 1
+CheckBindMoney 绑定元宝 > 9999
+#act
+ChangeBindMoney 绑定元宝 10000
+mapmove wysg 10 10 50
+close
+#elseact
+sendmsg 9 转生等级不够或者条件不满足，无法传送！
+
+[@传送8]
+#if
+small G19 20000
+#act
+sendmsg 9 进入地图条件不满足！无法进入！
+break
+
+#if
+CHECKRENEWLEVEL > 1
+#act
+mov S$弹窗选择 <Button|children={p,pp}|x=-2|y=64|width=800|height=480|color=224|pimg=npc/zd.png|nimg=npc/zd.png|size=18|mimg=npc/zd.png>
+inc S$弹窗选择 <Img|id=p|children={m1,m2,m3,m4,m5,m6,m7,m8,m9,m10}|x=207|y=109|show=4|esc=1|img=topbtn/dlcs/t/bbb.png|move=0|loadDelay=0|reset=1>
+inc S$弹窗选择 <Button|id=m1|x=54.0|y=50.0|mimg=topbtn/dlcs/t/01/11.png|nimg=topbtn/dlcs/t/01/11.png|link=@下图#下图名字=封魔道>
+inc S$弹窗选择 <Button|id=m2|x=231.0|y=48.0|mimg=topbtn/dlcs/t/01/12.png|nimg=topbtn/dlcs/t/01/12.png|link=@下图#下图名字=疾风殿>
+inc S$弹窗选择 <Button|id=m3|x=55.0|y=84.0|mimg=topbtn/dlcs/t/01/13.png|nimg=topbtn/dlcs/t/01/13.png|link=@下图#下图名字=光芒回廊>
+inc S$弹窗选择 <Button|id=m4|x=230.0|y=81.0|mimg=topbtn/dlcs/t/01/14.png|nimg=topbtn/dlcs/t/01/14.png|link=@下图#下图名字=烈焰殿>
+inc S$弹窗选择 <Button|id=m5|x=54.0|y=119.0|mimg=topbtn/dlcs/t/01/15.png|nimg=topbtn/dlcs/t/01/15.png|link=@下图#下图名字=雷霆之路>
+inc S$弹窗选择 <Button|id=m6|x=231.0|y=116.0|mimg=topbtn/dlcs/t/01/16.png|nimg=topbtn/dlcs/t/01/16.png|link=@下图#下图名字=霸者大厅>
+inc S$弹窗选择 <Button|id=m7|x=55.0|y=154.0|mimg=topbtn/dlcs/t/01/17.png|nimg=topbtn/dlcs/t/01/17.png|link=@下图#下图名字=幽冥回廊>
+inc S$弹窗选择 <Button|id=m8|x=231.0|y=153.0|mimg=topbtn/dlcs/t/01/18.png|nimg=topbtn/dlcs/t/01/18.png|link=@下图#下图名字=魔魂殿>
+inc S$弹窗选择 <Button|id=m9|x=56.0|y=187.0|mimg=topbtn/dlcs/t/01/19.png|nimg=topbtn/dlcs/t/01/19.png|link=@下图#下图名字=炼狱回廊>
+;inc S$弹窗选择 <Button|id=m10|x=232.0|y=188.0|mimg=topbtn/dlcs/t/01/20.png|nimg=topbtn/dlcs/t/01/20.png|link=@下图#下图名字=封魔殿>
+inc S$弹窗选择 <Button|id=pp|x=576|y=111|mimg=public/1900000510.png|nimg=public/1900000510.png|link=@关闭>
+goto @DT传送页面
+#elseact
+sendmsg 9 转生等级不够或者条件不满足，无法传送！
+[@传送10]
+#if
+CHECKRENEWLEVEL > 3
+CHECKLEVELEX > 48
+#act
+mov S$弹窗选择 <Button|children={p,pp}|x=-2|y=64|width=800|height=480|color=224|pimg=npc/zd.png|nimg=npc/zd.png|size=18|mimg=npc/zd.png>
+inc S$弹窗选择 <Img|id=p|children={m1,m2,m3,m4,m5}|x=207|y=109|show=4|esc=1|img=topbtn/dlcs/t/bbb.png|move=0|loadDelay=0|reset=1>
+inc S$弹窗选择 <Button|id=m1|x=54.0|y=72.0|mimg=topbtn/dlcs/t/a2/11.png|nimg=topbtn/dlcs/t/a2/11.png|link=@下图#下图名字=皇陵一层>
+inc S$弹窗选择 <Button|id=m2|x=231.0|y=73.0|mimg=topbtn/dlcs/t/a2/12.png|nimg=topbtn/dlcs/t/a2/12.png|link=@下图#下图名字=皇陵二层>
+inc S$弹窗选择 <Button|id=m3|x=55.0|y=132.0|mimg=topbtn/dlcs/t/a2/13.png|nimg=topbtn/dlcs/t/a2/13.png|link=@下图#下图名字=皇陵三层>
+inc S$弹窗选择 <Button|id=m4|x=230.0|y=132.0|mimg=topbtn/dlcs/t/a2/14.png|nimg=topbtn/dlcs/t/a2/14.png|link=@下图#下图名字=皇陵四层>
+inc S$弹窗选择 <Button|id=m5|x=150.0|y=183.0|mimg=topbtn/dlcs/t/a2/15.png|nimg=topbtn/dlcs/t/a2/15.png|link=@下图#下图名字=皇陵入口>
+inc S$弹窗选择 <Button|id=pp|x=576|y=111|mimg=public/1900000510.png|nimg=public/1900000510.png|link=@关闭>
+goto @DT传送页面
+#elseact
+sendmsg 9 转生等级不够或者条件不满足，无法传送！
+[@传送11]
+#if
+CHECKRENEWLEVEL > 1
+#act
+mov S$弹窗选择 <Button|children={p,pp}|x=-2|y=64|width=800|height=480|color=224|pimg=npc/zd.png|nimg=npc/zd.png|size=18|mimg=npc/zd.png>
+inc S$弹窗选择 <Img|id=p|children={m1,m2}|x=207|y=109|show=4|esc=1|img=topbtn/dlcs/t/bbb.png|move=0|loadDelay=0|reset=1>
+inc S$弹窗选择 <Button|id=m1|x=43.0|y=119.0|mimg=topbtn/dlcs/t/b1/11.png|nimg=topbtn/dlcs/t/b1/11.png|link=@下图#下图名字=蚂蚁洞一层>
+inc S$弹窗选择 <Button|id=m2|x=222.0|y=120.0|mimg=topbtn/dlcs/t/b1/12.png|nimg=topbtn/dlcs/t/b1/12.png|link=@下图#下图名字=蚂蚁洞二层>
+inc S$弹窗选择 <Button|id=pp|x=576|y=111|mimg=public/1900000510.png|nimg=public/1900000510.png|link=@关闭>
+goto @DT传送页面
+#elseact
+sendmsg 9 转生等级不够或者条件不满足，无法传送！
+[@传送12]
+#if
+CHECKRENEWLEVEL > 1
+#act
+mov S$弹窗选择 <Button|children={p,pp}|x=-2|y=64|width=800|height=480|color=224|pimg=npc/zd.png|nimg=npc/zd.png|size=18|mimg=npc/zd.png>
+inc S$弹窗选择 <Img|id=p|children={m1,m2}|x=207|y=109|show=4|esc=1|img=topbtn/dlcs/t/bbb.png|move=0|loadDelay=0|reset=1>
+inc S$弹窗选择 <Button|id=m1|x=54.0|y=110.0|mimg=topbtn/dlcs/t/c1/11.png|nimg=topbtn/dlcs/t/c1/11.png|link=@下图#下图名字=船外>
+inc S$弹窗选择 <Button|id=m2|x=231.0|y=109.0|mimg=topbtn/dlcs/t/c1/12.png|nimg=topbtn/dlcs/t/c1/12.png|link=@下图#下图名字=船舱>
+inc S$弹窗选择 <Button|id=pp|x=576|y=111|mimg=public/1900000510.png|nimg=public/1900000510.png|link=@关闭>
+goto @DT传送页面
+#elseact
+sendmsg 9 转生等级不够或者条件不满足，无法传送！
+[@传送13]
+#if
+CHECKRENEWLEVEL > 1
+CheckBindMoney 绑定元宝 > 9999
+#act
+ChangeBindMoney 绑定元宝 10000
+mapmove newss 10 10 50
+close
+#elseact
+sendmsg 9 转生等级不够或者条件不满足，无法传送！
+[@传送14]
+#if
+CHECKRENEWLEVEL > 1
+#act
+mov S$弹窗选择 <Button|children={p,pp}|x=-2|y=64|width=800|height=480|color=224|pimg=npc/zd.png|nimg=npc/zd.png|size=18|mimg=npc/zd.png>
+inc S$弹窗选择 <Img|id=p|children={m1,m2}|x=207|y=109|show=4|esc=1|img=topbtn/dlcs/t/bbb.png|move=0|loadDelay=0|reset=1>
+inc S$弹窗选择 <Button|id=m1|x=54.0|y=110.0|mimg=topbtn/dlcs/t/e1/11.png|nimg=topbtn/dlcs/t/e1/11.png|link=@下图#下图名字=血色一层>
+inc S$弹窗选择 <Button|id=m2|x=231.0|y=109.0|mimg=topbtn/dlcs/t/e1/12.png|nimg=topbtn/dlcs/t/e1/12.png|link=@下图#下图名字=血色二层>
+inc S$弹窗选择 <Button|id=pp|x=576|y=111|mimg=public/1900000510.png|nimg=public/1900000510.png|link=@关闭>
+goto @DT传送页面
+#elseact
+sendmsg 9 转生等级不够或者条件不满足，无法传送！
+[@传送15]
+#if
+CHECKRENEWLEVEL > 1
+#act
+mov S$弹窗选择 <Button|children={p,pp}|x=-2|y=64|width=800|height=480|color=224|pimg=npc/zd.png|nimg=npc/zd.png|size=18|mimg=npc/zd.png>
+inc S$弹窗选择 <Img|id=p|children={m1,m2,m3}|x=207|y=109|show=4|esc=1|img=topbtn/dlcs/t/bbb.png|move=0|loadDelay=0|reset=1>
+inc S$弹窗选择 <Button|id=m1|x=43.0|y=82.0|mimg=topbtn/dlcs/t/f1/11.png|nimg=topbtn/dlcs/t/f1/11.png|link=@下图#下图名字=魔龙殿一层>
+inc S$弹窗选择 <Button|id=m2|x=220.0|y=82.0|mimg=topbtn/dlcs/t/f1/12.png|nimg=topbtn/dlcs/t/f1/12.png|link=@下图#下图名字=魔龙殿二层>
+inc S$弹窗选择 <Button|id=m3|x=137.0|y=152.0|mimg=topbtn/dlcs/t/f1/13.png|nimg=topbtn/dlcs/t/f1/13.png|link=@下图#下图名字=魔龙殿三层>
+inc S$弹窗选择 <Button|id=pp|x=576|y=111|mimg=public/1900000510.png|nimg=public/1900000510.png|link=@关闭>
+goto @DT传送页面
+#elseact
+sendmsg 9 转生等级不够或者条件不满足，无法传送！
+[@传送16]
+#if
+CHECKRENEWLEVEL > 3
+CHECKLEVELEX > 48
+#act
+mov S$弹窗选择 <Button|children={p,pp}|x=-2|y=64|width=800|height=480|color=224|pimg=npc/zd.png|nimg=npc/zd.png|size=18|mimg=npc/zd.png>
+inc S$弹窗选择 <Img|id=p|children={m1,m2}|x=207|y=109|show=4|esc=1|img=topbtn/dlcs/t/bbb.png|move=0|loadDelay=0|reset=1>
+inc S$弹窗选择 <Button|id=m1|x=54.0|y=112.0|mimg=topbtn/dlcs/t/02/11.png|nimg=topbtn/dlcs/t/02/11.png|link=@下图#下图名字=神殿一层>
+inc S$弹窗选择 <Button|id=m2|x=234.0|y=113.0|mimg=topbtn/dlcs/t/02/12.png|nimg=topbtn/dlcs/t/02/12.png|link=@下图#下图名字=神殿二层>
+inc S$弹窗选择 <Button|id=pp|x=576|y=111|mimg=public/1900000510.png|nimg=public/1900000510.png|link=@关闭>
+goto @DT传送页面
+#elseact
+sendmsg 9 转生等级不够或者条件不满足，无法传送！
+[@传送17]
+#if
+CHECKRENEWLEVEL > 3
+CHECKLEVELEX > 48
+#act
+mov S$弹窗选择 <Button|children={p,pp}|x=-2|y=64|width=800|height=480|color=224|pimg=npc/zd.png|nimg=npc/zd.png|size=18|mimg=npc/zd.png>
+inc S$弹窗选择 <Img|id=p|children={m1,m2,m3,m4}|x=207|y=109|show=4|esc=1|img=topbtn/dlcs/t/bbb.png|move=0|loadDelay=0|reset=1>
+inc S$弹窗选择 <Button|id=m1|x=54.0|y=82.0|mimg=topbtn/dlcs/t/b2/11.png|nimg=topbtn/dlcs/t/b2/11.png|link=@下图#下图名字=遗址一层>
+inc S$弹窗选择 <Button|id=m2|x=231.0|y=80.0|mimg=topbtn/dlcs/t/b2/12.png|nimg=topbtn/dlcs/t/b2/12.png|link=@下图#下图名字=遗址二层>
+inc S$弹窗选择 <Button|id=m3|x=54.0|y=132.0|mimg=topbtn/dlcs/t/b2/13.png|nimg=topbtn/dlcs/t/b2/13.png|link=@下图#下图名字=试炼之道>
+inc S$弹窗选择 <Button|id=m4|x=231.0|y=129.0|mimg=topbtn/dlcs/t/b2/14.png|nimg=topbtn/dlcs/t/b2/14.png|link=@下图#下图名字=沙漠试炼>
+inc S$弹窗选择 <Button|id=pp|x=576|y=111|mimg=public/1900000510.png|nimg=public/1900000510.png|link=@关闭>
+goto @DT传送页面
+#elseact
+sendmsg 9 转生等级不够或者条件不满足，无法传送！
+[@传送18]
+#if
+CHECKRENEWLEVEL > 3
+CHECKLEVELEX > 48
+#act
+mov S$弹窗选择 <Button|children={p,pp}|x=-2|y=64|width=800|height=480|color=224|pimg=npc/zd.png|nimg=npc/zd.png|size=18|mimg=npc/zd.png>
+inc S$弹窗选择 <Img|id=p|children={m1,m2}|x=207|y=109|show=4|esc=1|img=topbtn/dlcs/t/bbb.png|move=0|loadDelay=0|reset=1>
+inc S$弹窗选择 <Button|id=m1|x=79.0|y=106.0|mimg=topbtn/dlcs/t/c2/11.png|nimg=topbtn/dlcs/t/c2/11.png|link=@下图#下图名字=敦煌>
+inc S$弹窗选择 <Button|id=m2|x=257.0|y=105.0|mimg=topbtn/dlcs/t/c2/12.png|nimg=topbtn/dlcs/t/c2/12.png|link=@下图#下图名字=佛林>
+inc S$弹窗选择 <Button|id=pp|x=576|y=111|mimg=public/1900000510.png|nimg=public/1900000510.png|link=@关闭>
+goto @DT传送页面
+#elseact
+sendmsg 9 转生等级不够或者条件不满足，无法传送！
+
+[@传送19]
+#if
+CHECKRENEWLEVEL > 3
+CHECKLEVELEX > 48
+#act
+mov S$弹窗选择 <Button|children={p,pp}|x=-2|y=64|width=800|height=480|color=224|pimg=npc/zd.png|nimg=npc/zd.png|size=18|mimg=npc/zd.png>
+inc S$弹窗选择 <Img|id=p|children={m1,m2}|x=207|y=109|show=4|esc=1|img=topbtn/dlcs/t/bbb.png|move=0|loadDelay=0|reset=1>
+inc S$弹窗选择 <Button|id=m1|x=47.0|y=117.0|mimg=topbtn/dlcs/t/d2/11.png|nimg=topbtn/dlcs/t/d2/11.png|link=@下图#下图名字=雷音殿一层>
+inc S$弹窗选择 <Button|id=m2|x=220.0|y=118.0|mimg=topbtn/dlcs/t/d2/12.png|nimg=topbtn/dlcs/t/d2/12.png|link=@下图#下图名字=雷音殿二层>
+inc S$弹窗选择 <Button|id=pp|x=576|y=111|mimg=public/1900000510.png|nimg=public/1900000510.png|link=@关闭>
+goto @DT传送页面
+#elseact
+sendmsg 9 转生等级不够或者条件不满足，无法传送！
+
+[@传送20]
+#if
+CHECKRENEWLEVEL > 3
+CHECKLEVELEX > 48
+#act
+mov S$弹窗选择 <Button|children={p,pp}|x=-2|y=64|width=800|height=480|color=224|pimg=npc/zd.png|nimg=npc/zd.png|size=18|mimg=npc/zd.png>
+inc S$弹窗选择 <Img|id=p|children={m1,m2,m3,m4,m5}|x=207|y=109|show=4|esc=1|img=topbtn/dlcs/t/bbb.png|move=0|loadDelay=0|reset=1>
+inc S$弹窗选择 <Button|id=m1|x=53.0|y=65.0|mimg=topbtn/dlcs/t/e2/11.png|nimg=topbtn/dlcs/t/e2/11.png|link=@下图#下图名字=迷城一层>
+inc S$弹窗选择 <Button|id=m2|x=231.0|y=66.0|mimg=topbtn/dlcs/t/e2/12.png|nimg=topbtn/dlcs/t/e2/12.png|link=@下图#下图名字=迷城二层>
+inc S$弹窗选择 <Button|id=m3|x=54.0|y=115.0|mimg=topbtn/dlcs/t/e2/13.png|nimg=topbtn/dlcs/t/e2/13.png|link=@下图#下图名字=迷城三层>
+inc S$弹窗选择 <Button|id=m4|x=231.0|y=117.0|mimg=topbtn/dlcs/t/e2/14.png|nimg=topbtn/dlcs/t/e2/14.png|link=@下图#下图名字=迷城四层>
+inc S$弹窗选择 <Button|id=m5|x=147.0|y=173.0|mimg=topbtn/dlcs/t/e2/15.png|nimg=topbtn/dlcs/t/e2/15.png|link=@下图#下图名字=迷城五层>
+inc S$弹窗选择 <Button|id=pp|x=576|y=111|mimg=public/1900000510.png|nimg=public/1900000510.png|link=@关闭>
+goto @DT传送页面
+#elseact
+sendmsg 9 转生等级不够或者条件不满足，无法传送！
+
+[@传送21]
+#if
+CHECKRENEWLEVEL > 3
+CHECKLEVELEX > 48
+#act
+mov S$弹窗选择 <Button|children={p,pp}|x=-2|y=64|width=800|height=480|color=224|pimg=npc/zd.png|nimg=npc/zd.png|size=18|mimg=npc/zd.png>
+inc S$弹窗选择 <Img|id=p|children={m1,m2,m3,m4,m5}|x=207|y=109|show=4|esc=1|img=topbtn/dlcs/t/bbb.png|move=0|loadDelay=0|reset=1>
+inc S$弹窗选择 <Button|id=m1|x=54.0|y=69.0|mimg=topbtn/dlcs/t/f2/11.png|nimg=topbtn/dlcs/t/f2/11.png|link=@下图#下图名字=赤月迷宫>
+inc S$弹窗选择 <Button|id=m2|x=231.0|y=68.0|mimg=topbtn/dlcs/t/f2/12.png|nimg=topbtn/dlcs/t/f2/12.png|link=@下图#下图名字=抉择之地>
+inc S$弹窗选择 <Button|id=m3|x=54.0|y=125.0|mimg=topbtn/dlcs/t/f2/13.png|nimg=topbtn/dlcs/t/f2/13.png|link=@下图#下图名字=西回隧道>
+inc S$弹窗选择 <Button|id=m4|x=252.0|y=126.0|mimg=topbtn/dlcs/t/f2/14.png|nimg=topbtn/dlcs/t/f2/14.png|link=@下图#下图名字=东二层>
+inc S$弹窗选择 <Button|id=m5|x=168.0|y=172.0|mimg=topbtn/dlcs/t/f2/15.png|nimg=topbtn/dlcs/t/f2/15.png|link=@下图#下图名字=东长廊>
+inc S$弹窗选择 <Button|id=pp|x=576|y=111|mimg=public/1900000510.png|nimg=public/1900000510.png|link=@关闭>
+goto @DT传送页面
+#elseact
+sendmsg 9 转生等级不够或者条件不满足，无法传送！
+
+[@传送22]
+#if
+CHECKLEVELEX > 53
+CHECKRENEWLEVEL > 5
+CheckBindMoney 绑定元宝 > 9999
+#act
+ChangeBindMoney 绑定元宝 10000
+mapmove fmjz 5 5 50
+close
+#elseact
+sendmsg 9 转生等级不够或者条件不满足，无法传送！
+
+[@传送23]
+#if
+CHECKLEVELEX > 53
+CHECKRENEWLEVEL > 5
+#act
+mov S$弹窗选择 <Button|children={p,pp}|x=-2|y=64|width=800|height=480|color=224|pimg=npc/zd.png|nimg=npc/zd.png|size=18|mimg=npc/zd.png>
+inc S$弹窗选择 <Img|id=p|children={m1,m2,m3}|x=207|y=109|show=4|esc=1|img=topbtn/dlcs/t/bbb.png|move=0|loadDelay=0|reset=1>
+inc S$弹窗选择 <Button|id=m1|x=54.0|y=78.0|mimg=topbtn/dlcs/t/a3/11.png|nimg=topbtn/dlcs/t/a3/11.png|link=@下图#下图名字=熔岩一层>
+inc S$弹窗选择 <Button|id=m2|x=231.0|y=79.0|mimg=topbtn/dlcs/t/a3/12.png|nimg=topbtn/dlcs/t/a3/12.png|link=@下图#下图名字=熔岩二层>
+inc S$弹窗选择 <Button|id=m3|x=54.0|y=141.0|mimg=topbtn/dlcs/t/a3/13.png|nimg=topbtn/dlcs/t/a3/13.png|link=@下图#下图名字=熔岩三层>
+inc S$弹窗选择 <Button|id=pp|x=576|y=111|mimg=public/1900000510.png|nimg=public/1900000510.png|link=@关闭>
+goto @DT传送页面
+#elseact
+sendmsg 9 转生等级不够或者条件不满足，无法传送！
+
+[@传送24]
+#if
+CHECKLEVELEX > 53
+CHECKRENEWLEVEL > 5
+CheckBindMoney 绑定元宝 > 9999
+#act
+ChangeBindMoney 绑定元宝 10000
+mapmove cjzd 5 5 50
+close
+#elseact
+sendmsg 9 转生等级不够或者条件不满足，无法传送！
+
+
+[@传送25]
+#if
+CHECKLEVELEX > 53
+CHECKRENEWLEVEL > 5
+CheckBindMoney 绑定元宝 > 9999
+#act
+ChangeBindMoney 绑定元宝 10000
+mapmove xrzd 1 1 50
+close
+#elseact
+sendmsg 9 转生等级不够或者条件不满足，无法传送！
+
+[@传送26]
+#if
+CHECKLEVELEX > 53
+CHECKRENEWLEVEL > 5
+CheckBindMoney 绑定元宝 > 9999
+#act
+ChangeBindMoney 绑定元宝 10000
+mapmove btxd 5 5 50 
+close
+#elseact
+sendmsg 9 转生等级不够或者条件不满足，无法传送！
+
+[@传送27]
+#if
+CHECKLEVELEX > 53
+CHECKRENEWLEVEL > 5
+#act
+mov S$弹窗选择 <Button|children={p,pp}|x=-2|y=64|width=800|height=480|color=224|pimg=npc/zd.png|nimg=npc/zd.png|size=18|mimg=npc/zd.png>
+inc S$弹窗选择 <Img|id=p|children={m1,m2}|x=207|y=109|show=4|esc=1|img=topbtn/dlcs/t/bbb.png|move=0|loadDelay=0|reset=1>
+inc S$弹窗选择 <Button|id=m1|x=54.0|y=107.0|mimg=topbtn/dlcs/t/e3/11.png|nimg=topbtn/dlcs/t/e3/11.png|link=@下图#下图名字=宫殿一层>
+inc S$弹窗选择 <Button|id=m2|x=228.0|y=107.0|mimg=topbtn/dlcs/t/e3/12.png|nimg=topbtn/dlcs/t/e3/12.png|link=@下图#下图名字=宫殿二层>
+inc S$弹窗选择 <Button|id=pp|x=576|y=111|mimg=public/1900000510.png|nimg=public/1900000510.png|link=@关闭>
+goto @DT传送页面
+#elseact
+sendmsg 9 转生等级不够或者条件不满足，无法传送！
+
+
+[@传送28]
+#if
+CHECKLEVELEX > 53
+CHECKRENEWLEVEL > 5
+CheckBindMoney 绑定元宝 > 9999
+#act
+ChangeBindMoney 绑定元宝 10000
+mapmove bszd 5 5 50
+close
+#elseact
+sendmsg 9 转生等级不够或者条件不满足，无法传送！
+
+
+[@传送29]
+#if
+CHECKRENEWLEVEL > 7
+CheckBindMoney 绑定元宝 > 9999
+#act
+ChangeBindMoney 绑定元宝 10000
+mapmove flt 5 5 50
+close
+#elseact
+sendmsg 9 转生等级不够或者条件不满足，无法传送！
+
+
+[@传送30]
+#if
+CHECKRENEWLEVEL > 7
+CheckBindMoney 绑定元宝 > 9999
+#act
+ChangeBindMoney 绑定元宝 10000
+mapmove xjzd 5 5 50
+close
+#elseact
+sendmsg 9 转生等级不够或者条件不满足，无法传送！
+
+
+[@传送31]
+#if
+CHECKRENEWLEVEL > 7
+CheckBindMoney 绑定元宝 > 9999
+#act
+ChangeBindMoney 绑定元宝 10000
+mapmove ydtg 5 5 50
+close
+#elseact
+sendmsg 9 转生等级不够或者条件不满足，无法传送！
+
+[@传送32]
+#if
+CHECKRENEWLEVEL > 7
+CheckBindMoney 绑定元宝 > 9999
+#act
+ChangeBindMoney 绑定元宝 10000
+mapmove yg 5 5 50
+close
+#elseact
+sendmsg 9 转生等级不够或者条件不满足，无法传送！
+[@传送33]
+#if
+CHECKRENEWLEVEL > 7
+CheckBindMoney 绑定元宝 > 9999
+#act
+ChangeBindMoney 绑定元宝 10000
+mapmove xctg 5 5 50
+close
+#elseact
+sendmsg 9 转生等级不够或者条件不满足，无法传送！
+
+[@下图]
+
+
+#if
+CheckBindMoney 绑定元宝 < 10000
+#act
+sendmsg 9 货币不足！
+break
+#elseact
+ChangeBindMoney 绑定元宝 10000
+
+
+#if
+equal S$下图名字 蜈蚣一层
+#act
+mapmove d613 40 30 50
+
+#if
+equal S$下图名字 蜈蚣二层
+#act
+mapmove d616 15 15 50
+
+#if
+equal S$下图名字 祖玛寺庙之家
+#act
+mapmove zmjzzj 1 1 50
+
+#if
+equal S$下图名字 祖玛寺庙大厅
+#act
+mapmove zmsddt 1 1 50
+
+#if
+equal S$下图名字 祖玛寺庙二层
+#act
+mapmove zmsmec 1 1 50
+
+#if
+equal S$下图名字 祖玛寺庙三层
+#act
+mapmove zmsmsc 1 1 50
+
+#if
+equal S$下图名字 祖玛寺庙四层
+#act
+mapmove zmsm4c 1 1 50
+
+#if
+equal S$下图名字 祖玛寺庙一层
+#act
+mapmove zmsmyc 1 1 50
+
+#if
+equal S$下图名字 祖玛寺庙长廊
+#act
+mapmove zmsmcl 1 1 50
+
+#if
+equal S$下图名字 矿区东部
+#act
+mapmove fkqdb 1 1 50
+
+#if
+equal S$下图名字 矿区入口
+#act
+mapmove fkrk  1 1 50
+
+#if
+equal S$下图名字 矿区一层
+#act
+mapmove kqyc  1 1 50
+
+#if
+equal S$下图名字 骨魔二层
+#act
+mapmove gmdec  1 1 50
+
+#if
+equal S$下图名字 骨魔三层
+#act
+mapmove gmdsc  1 1 50
+
+#if
+equal S$下图名字 骨魔四层
+#act
+mapmove gmd4c  1 1 50
+
+#if
+equal S$下图名字 骨魔一层
+#act
+mapmove gmdyc  1 1 50
+
+#if
+equal S$下图名字 沃玛一层
+#act
+mapmove wmsmyc  1 1 50
+
+#if
+equal S$下图名字 沃玛入口
+#act
+mapmove wmsmrk  1 1 50
+
+#if
+equal S$下图名字 沃玛二层
+#act
+mapmove wmsmec  1 1 50
+
+#if
+equal S$下图名字 牛魔入口
+#act
+mapmove nmsmrk  1 1 50
+
+#if
+equal S$下图名字 牛魔一层
+#act
+mapmove nmsmyc  1 1 50
+
+#if
+equal S$下图名字 牛魔二层
+#act
+mapmove nmsmec  1 1 50
+
+#if
+equal S$下图名字 牛魔三层
+#act
+mapmove nmsmsc  1 1 50
+
+#if
+equal S$下图名字 石墓一层
+#act
+mapmove smyc  1 1 50
+
+#if
+equal S$下图名字 石墓二层
+#act
+mapmove smec  1 1 50
+
+#if
+equal S$下图名字 石墓三层
+#act
+mapmove smsc  1 1 50
+
+#if
+equal S$下图名字 石墓四层
+#act
+mapmove smsic  1 1 50
+
+#if
+equal S$下图名字 石墓五层
+#act
+mapmove smwc  1 1 50
+
+#if
+equal S$下图名字 石墓六层
+#act
+mapmove smlc  1 1 50
+
+#if
+equal S$下图名字 石墓七层
+#act
+mapmove smqc  1 1 50
+
+#if
+equal S$下图名字 封魔道
+#act
+mapmove fmd 1 1 50
+
+#if
+equal S$下图名字 封魔道
+#act
+mapmove jfd  1 1 50
+
+#if
+equal S$下图名字 光芒回廊
+#act
+mapmove 2000 1 1 50
+
+#if
+equal S$下图名字 烈焰殿
+#act
+mapmove lyd 1 1 50
+
+#if
+equal S$下图名字 雷霆之路
+#act
+mapmove ltzl 1 1 50
+
+#if
+equal S$下图名字 霸者大厅
+#act
+mapmove bzdt 1 1 50
+
+#if
+equal S$下图名字 幽冥回廊
+#act
+mapmove 2001 1 1 50
+
+#if
+equal S$下图名字 魔魂殿
+#act
+mapmove mhd 1 1 50
+
+#if
+equal S$下图名字 炼狱回廊
+#act
+mapmove 2002 1 1 50
+
+#if
+equal S$下图名字 封魔殿
+#act
+mapmove fmdian 1 1 50
+
+#if
+equal S$下图名字 皇陵一层
+#act
+mapmove hlyc 1 1 50
+
+#if
+equal S$下图名字 皇陵二层
+#act
+mapmove hlec 1 1 50
+
+#if
+equal S$下图名字 皇陵三层
+#act
+mapmove hlsc 1 1 50
+
+#if
+equal S$下图名字 皇陵四层
+#act
+mapmove hl4c 1 1 50
+
+#if
+equal S$下图名字 皇陵入口
+#act
+mapmove hlrk 1 1 50
+
+#if
+equal S$下图名字 蚂蚁洞一层
+#act
+mapmove 162 1 1 50
+
+#if
+equal S$下图名字 蚂蚁洞二层
+#act
+mapmove 163 1 1 50
+
+#if
+equal S$下图名字 船外
+#act
+mapmove ylc1 1 1 50
+
+#if
+equal S$下图名字 船舱
+#act
+mapmove ylc2 1 1 50
+
+#if
+equal S$下图名字 血色一层
+#act
+mapmove tlxy01 1 1 50
+
+#if
+equal S$下图名字 血色二层
+#act
+mapmove tlxy02 1 1 50
+
+#if
+equal S$下图名字 魔龙殿一层
+#act
+mapmove hlk1  1 1 50
+
+#if
+equal S$下图名字 魔龙殿二层
+#act
+mapmove hlk2  1 1 50
+
+#if
+equal S$下图名字 魔龙殿三层
+#act
+mapmove hlk3  1 1 50
+
+#if
+equal S$下图名字 神殿一层
+#act
+mapmove xlsdyc  1 1 50
+
+#if
+equal S$下图名字 神殿二层
+#act
+mapmove xlsdec  1 1 50
+
+#if
+equal S$下图名字 遗址一层
+#act
+mapmove yzyc 1 1 50
+
+#if
+equal S$下图名字 遗址二层
+#act
+mapmove yzec 1 1 50
+
+#if
+equal S$下图名字 试炼之道
+#act
+mapmove slzd 1 1 50
+
+#if
+equal S$下图名字 沙漠试炼
+#act
+mapmove smsl 1 1 50
+
+#if
+equal S$下图名字 敦煌
+#act
+mapmove dh 1 1 50
+
+#if
+equal S$下图名字 佛林
+#act
+mapmove fl 1 1 50
+
+#if
+equal S$下图名字 雷音殿一层
+#act
+mapmove lydyc 1 1 50
+
+#if
+equal S$下图名字 雷音殿二层
+#act
+mapmove lydec 1 1 50
+
+#if
+equal S$下图名字 迷城一层
+#act
+mapmove skmcyc 1 1 50
+
+#if
+equal S$下图名字 迷城二层
+#act
+mapmove skmcec 1 1 50
+
+#if
+equal S$下图名字 迷城三层
+#act
+mapmove skmcsc 1 1 50
+
+#if
+equal S$下图名字 迷城四层
+#act
+mapmove skmc4c 1 1 50
+
+#if
+equal S$下图名字 迷城五层
+#act
+mapmove skmcwc 1 1 50
+
+#if
+equal S$下图名字 赤月迷宫
+#act
+mapmove ygfx1 1 1 50
+
+#if
+equal S$下图名字 抉择之地
+#act
+mapmove jzzd 1 1 50
+
+#if
+equal S$下图名字 西回隧道
+#act
+mapmove xhsd 1 1 50
+
+#if
+equal S$下图名字 东二层
+#act
+mapmove cyxgdec 1 1 50
+
+#if
+equal S$下图名字 东长廊
+#act
+mapmove cyxgdcl 1 1 50
+
+#if
+equal S$下图名字 熔岩一层
+#act
+mapmove rydxyc 1 1 50
+
+#if
+equal S$下图名字 熔岩二层
+#act
+mapmove rydxec 1 1 50
+
+#if
+equal S$下图名字 熔岩三层
+#act
+mapmove rydxsc 1 1 50
+
+#if
+equal S$下图名字 宫殿一层
+#act
+mapmove bfgdyc 1 1 50
+
+#if
+
+equal S$下图名字 宫殿二层
+#act
+mapmove bfgdec 1 1 50
+
+
+
+
+[@下图扣钱1]
+
+}

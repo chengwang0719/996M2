@@ -1,0 +1,433 @@
+[@main]
+#if
+small U11 36
+#ACT
+SENDMSG 9 【提示】请先去白日门将神胚升满后再来找我！
+break
+#if
+#act
+;MOV U11 36
+
+#if
+EQUAL U11 36
+#act
+MOV N$下阶神胚展示 10641
+mov S$所需费用 1000000
+mov S$原攻魔道 37
+mov S$原增伤 38%
+mov S$原怪爆率 37%
+mov S$原生命值 370
+
+mov S$新攻魔道 38
+mov S$新增伤 39%
+mov S$新怪爆率 38%
+mov S$新生命值 380
+goto @页面展示 
+break
+
+#if
+EQUAL U11 37
+#act
+MOV N$下阶神胚展示 10642
+mov S$所需费用 1100000
+mov S$原攻魔道 38
+mov S$原增伤 39%
+mov S$原怪爆率 38%
+mov S$原生命值 380
+
+mov S$新攻魔道 39
+mov S$新增伤 40%
+mov S$新怪爆率 39%
+mov S$新生命值 390
+goto @页面展示 
+break
+
+#if
+EQUAL U11 38
+#act
+MOV N$下阶神胚展示 10643
+mov S$所需费用 1200000
+mov S$原攻魔道 39
+mov S$原增伤 40%
+mov S$原怪爆率 39%
+mov S$原生命值 390
+
+mov S$新攻魔道 40
+mov S$新增伤 41%
+mov S$新怪爆率 40%
+mov S$新生命值 400
+goto @页面展示 
+break
+
+#if
+EQUAL U11 39
+#act
+MOV N$下阶神胚展示 10644
+mov S$所需费用 1300000
+mov S$原攻魔道 40
+mov S$原增伤 41%
+mov S$原怪爆率 40%
+mov S$原生命值 400
+
+
+mov S$新攻魔道 41
+mov S$新增伤 42%
+mov S$新怪爆率 41%
+mov S$新生命值 410
+goto @页面展示 
+break
+
+#if
+EQUAL U11 40
+#act
+MOV N$下阶神胚展示 10645
+mov S$所需费用 1400000
+mov S$原攻魔道 41
+mov S$原增伤 42%
+mov S$原怪爆率 41%
+mov S$原生命值 410
+
+
+mov S$新攻魔道 42
+mov S$新增伤 43%
+mov S$新怪爆率 42%
+mov S$新生命值 420
+goto @页面展示 
+break
+
+#if
+EQUAL U11 41
+#act
+MOV N$下阶神胚展示 10646
+mov S$所需费用 1500000
+mov S$原攻魔道 42
+mov S$原增伤 43%
+mov S$原怪爆率 42%
+mov S$原生命值 420
+
+mov S$新攻魔道 43
+mov S$新增伤 44%
+mov S$新怪爆率 43%
+mov S$新生命值 430
+goto @页面展示 
+break
+
+#if
+EQUAL U11 42
+#act
+MOV N$下阶神胚展示 10647
+mov S$所需费用 1600000
+mov S$原攻魔道 43
+mov S$原增伤 44%
+mov S$原怪爆率 43%
+mov S$原生命值 430
+
+mov S$新攻魔道 44
+mov S$新增伤 45%
+mov S$新怪爆率 44%
+mov S$新生命值 440
+goto @页面展示 
+break
+
+#if
+EQUAL U11 43
+#act
+MOV N$下阶神胚展示 10648
+mov S$所需费用 1700000
+mov S$原攻魔道 44
+mov S$原增伤 45%
+mov S$原怪爆率 44%
+mov S$原生命值 440
+
+mov S$新攻魔道 45
+mov S$新增伤 46%
+mov S$新怪爆率 45%
+mov S$新生命值 450
+goto @页面展示 
+break
+
+#if
+EQUAL U11 44
+#act
+MOV N$下阶神胚展示 10649
+mov S$所需费用 1800000
+mov S$原攻魔道 45
+mov S$原增伤 46%
+mov S$原怪爆率 45%
+mov S$原生命值 450
+
+mov S$新攻魔道 46
+mov S$新增伤 47%
+mov S$新怪爆率 46%
+mov S$新生命值 460
+goto @页面展示 
+break
+
+#if
+LARGE U11 44
+#ACT
+goto @升级完成页面
+
+[@页面展示]
+#IF
+#say
+<Img|a=4|x=450.0|y=273.0|width=950|height=593|loadDelay=0|move=1|show=4|esc=1|img=npc/cszl/bj.png|reset=1|bg=1>
+<Button|x=845.0|y=14.0|nimg=public/close-2.png|mimg=public/close-2.png|link=@exit>
+<Img|x=140.0|y=110.0|width=60|height=60|bg=0|loadDelay=0|reset=1|show=4|move=0|img=npc/hsqg/kuang.png|esc=1>
+<Img|x=355.0|y=110.0|width=60|height=60|bg=0|loadDelay=0|reset=1|show=4|move=0|img=npc/hsqg/kuang.png|esc=1>
+<Effect|x=645.0|y=200.0|scale=1|speed=1|act=0|effecttype=0|effectid=70202|dir=5>
+<Button|x=215.0|y=464.0|width=140|height=42|nimg=npc/hsqg/btn.png|mimg=npc/hsqg/btn.png|link=@升级>
+<Text|x=120.0|y=360.0|color=249|outline=1|size=14|text=升级条件>
+<Text|x=120.0|y=388.0|color=246|outline=1|size=14|text=1、请将需要升级的"神胚"佩戴在身上>
+<RText|x=119.0|y=416.0|color=246|outline=1|size=14|text=2、当前升级需要元宝<$str(S$所需费用)>>
+<RText|x=215.0|y=191.0|color=250|outline=1|size=14|text=<$str(S$原攻魔道)>>
+<RText|x=216.0|y=220.0|color=250|outline=1|size=14|text=<$str(S$原增伤)>>
+<RText|x=217.0|y=250.0|color=250|outline=1|size=14|text=<$str(S$原怪爆率)>>
+<RText|x=217.0|y=280.0|color=250|outline=1|size=14|text=<$str(S$原生命值)>>
+<RText|x=427.0|y=191.0|color=250|outline=1|size=14|text=<$str(S$新攻魔道)>>
+<RText|x=427.0|y=220.0|color=250|outline=1|size=14|text=<$str(S$新增伤)>>
+<RText|x=428.0|y=250.0|color=250|outline=1|size=14|text=<$str(S$新怪爆率)>>
+<RText|x=428.0|y=280.0|color=250|outline=1|size=14|text=<$str(S$新生命值)>>
+<EquipShow|x=136.0|y=107.0|width=60|height=60|index=77|showtips=1|reload=1>
+<ItemShow|x=351.0|y=107.0|width=60|height=60|itemid=<$str(N$下阶神胚展示)>|itemcount=1|bgtype=0|showtips=1>
+
+[@升级完成页面]
+<Img|a=4|x=450.0|y=273.0|width=950|height=593|loadDelay=0|bg=1|esc=1|show=4|reset=1|img=npc/cszl/bj1.png|move=1>
+<Button|x=845.0|y=14.0|mimg=public/close-2.png|nimg=public/close-2.png|link=@exit>
+<Effect|x=645.0|y=200.0|scale=1|speed=2|dir=5|act=0|effectid=70202|effecttype=0>
+<RText|x=144.0|y=277.0|size=18|outline=2|color=255|text=本大陆的成神之路已经升级完成>
+
+[@升级]
+#if
+EQUAL U11 36
+#ACT
+goto @成升级42
+break
+
+#if
+EQUAL U11 37
+#ACT
+goto @成升级43
+break
+
+#if
+EQUAL U11 38
+#ACT
+goto @成升级44
+break
+
+#if
+EQUAL U11 39
+#ACT
+goto @成升级45
+break
+
+#if
+EQUAL U11 40
+#ACT
+goto @成升级46
+break
+
+#if
+EQUAL U11 41
+#ACT
+goto @成升级47
+break
+
+#if
+EQUAL U11 42
+#ACT
+goto @成升级48
+break
+
+#if
+EQUAL U11 43
+#ACT
+goto @成升级49
+break
+
+#if
+EQUAL U11 44
+#ACT
+goto @成升级50
+break
+
+#if
+EQUAL U11 45
+#ACT
+goto @成升级51
+break
+
+
+[@成升级42]
+#if
+CHECKBINDMONEY 绑定元宝 ? 1000000
+#act
+mov U11 37
+CHANGEBINDMONEY 绑定元宝 1000000
+takeW 神胚[五重Lv.1] 1
+give 神胚[五重Lv.2] 1
+TakeOn 神胚[五重Lv.2] 77
+goto @main
+goto @判断是否有神技
+#elseact
+sendmsg 9 抱歉，你的元宝数量不够！
+
+[@成升级43]
+#if
+CHECKBINDMONEY 绑定元宝 ? 1100000
+#act
+mov U11 38
+CHANGEBINDMONEY 绑定元宝 1100000
+takeW 神胚[五重Lv.2] 1
+give 神胚[五重Lv.3] 1
+TakeOn 神胚[五重Lv.3] 77
+goto @main
+goto @判断是否有神技
+#elseact
+sendmsg 9 抱歉，你的元宝数量不够！
+
+[@成升级44]
+#if
+CHECKBINDMONEY 绑定元宝 ? 1200000
+#act
+mov U11 39
+CHANGEBINDMONEY 绑定元宝 1200000
+takeW 神胚[五重Lv.3] 1
+give 神胚[五重Lv.4] 1
+TakeOn 神胚[五重Lv.4] 77
+goto @main
+goto @判断是否有神技
+#elseact
+sendmsg 9 抱歉，你的元宝数量不够！
+
+[@成升级45]
+#if
+CHECKBINDMONEY 绑定元宝 ? 1300000
+#act
+mov U11 40
+CHANGEBINDMONEY 绑定元宝 1300000
+takeW 神胚[五重Lv.4] 1
+give 神胚[五重Lv.5] 1
+TakeOn 神胚[五重Lv.5] 77
+goto @main
+goto @判断是否有神技
+#elseact
+sendmsg 9 抱歉，你的元宝数量不够！
+
+[@成升级46]
+#if
+CHECKBINDMONEY 绑定元宝 ? 1400000
+#act
+mov U11 41
+CHANGEBINDMONEY 绑定元宝 1400000
+takeW 神胚[五重Lv.5] 1
+give 神胚[五重Lv.6] 1
+TakeOn 神胚[五重Lv.6] 77
+goto @main
+goto @判断是否有神技
+#elseact
+sendmsg 9 抱歉，你的元宝数量不够！
+
+[@成升级47]
+#if
+CHECKBINDMONEY 绑定元宝 ? 1500000
+#act
+mov U11 42
+CHANGEBINDMONEY 绑定元宝 1500000
+takeW 神胚[五重Lv.6] 1
+give 神胚[五重Lv.7] 1
+TakeOn 神胚[五重Lv.7] 77
+goto @main
+goto @判断是否有神技
+#elseact
+sendmsg 9 抱歉，你的元宝数量不够！
+
+[@成升级48]
+#if
+CHECKBINDMONEY 绑定元宝 ? 1600000
+#act
+mov U11 43
+CHANGEBINDMONEY 绑定元宝 1600000
+takeW 神胚[五重Lv.7] 1
+give 神胚[五重Lv.8] 1
+TakeOn 神胚[五重Lv.8] 77
+goto @main
+goto @判断是否有神技
+#elseact
+sendmsg 9 抱歉，你的元宝数量不够！
+
+[@成升级49]
+#if
+CHECKBINDMONEY 绑定元宝 ? 1700000
+#act
+mov U11 44
+CHANGEBINDMONEY 绑定元宝 1700000
+takeW 神胚[五重Lv.8] 1
+give 神胚[五重Lv.9] 1
+TakeOn 神胚[五重Lv.9] 77
+goto @main
+goto @判断是否有神技
+#elseact
+sendmsg 9 抱歉，你的元宝数量不够！
+
+[@成升级50]
+#if
+CHECKBINDMONEY 绑定元宝 ? 1800000
+#act
+mov U11 45
+CHANGEBINDMONEY 绑定元宝 1800000
+takeW 神胚[五重Lv.9] 1
+give 神胚[六重Lv.1] 1
+TakeOn 神胚[六重Lv.1] 77
+goto @main
+goto @判断是否有神技
+#elseact
+sendmsg 9 抱歉，你的元宝数量不够！
+
+
+
+[@判断是否有神技]
+#if
+equal U161 0
+#act
+CHANGECUSTOMITEMTEXT 77 神技:降龙，真实伤害500\被动技能，冷却时间60秒 0
+CHANGECUSTOMITEMTEXTCOLOR 77 255 0
+
+CHANGECUSTOMITEMTEXT 77 状态：未激活 1
+CHANGECUSTOMITEMTEXTCOLOR 77 10 1
+
+#if
+large U161 0
+equal U163 0
+equal U165 0
+#act
+CHANGECUSTOMITEMTEXT 77 神技:降龙，真实伤害1000\被动技能，冷却时间60秒 0
+CHANGECUSTOMITEMTEXTCOLOR 77 255 0
+
+CHANGECUSTOMITEMTEXT 77 状态：未激活 1
+CHANGECUSTOMITEMTEXTCOLOR 77 10 1
+
+CHANGECUSTOMITEMTEXT 77 神技:金钟，格挡部分伤害\被动技能，被攻击5%概率触发 2
+CHANGECUSTOMITEMTEXTCOLOR 77 255 2
+
+CHANGECUSTOMITEMTEXT 77 状态：未激活 3
+CHANGECUSTOMITEMTEXTCOLOR 77 10 3
+
+
+#if
+large U161 0
+large U163 0
+large U165 0
+#act
+CHANGECUSTOMITEMTEXT 77 神技:降龙，真实伤害1000\被动技能，冷却时间60秒 0
+CHANGECUSTOMITEMTEXTCOLOR 77 255 0
+
+CHANGECUSTOMITEMTEXT 77 状态：已激活 1
+CHANGECUSTOMITEMTEXTCOLOR 77 250 1
+
+CHANGECUSTOMITEMTEXT 77 神技:金钟，格挡部分伤害\被动技能，被攻击5%概率触发 2
+CHANGECUSTOMITEMTEXTCOLOR 77 255 2
+
+CHANGECUSTOMITEMTEXT 77 状态：已激活 3
+CHANGECUSTOMITEMTEXTCOLOR 77 250 3

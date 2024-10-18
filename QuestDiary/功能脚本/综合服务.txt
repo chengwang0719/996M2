@@ -1,0 +1,627 @@
+[@综合服务]   
+{   
+#if   
+#act   
+OPENMERCHANTBIGDLG 3 4526 1 4 0 0 1 321 5 1   
+#say   
+<>                    <综 合 服 务>\   
+<--------------------------------------------------/SCOLOR=90>\   
+<转职/SCOLOR=254><：/SCOLOR=70><玩腻了当前职业？那就换一个职业玩吧！/SCOLOR=250>           \   
+<单次服务费1000萍水币！/SCOLOR=243>\   
+<--------------------------------------------------/SCOLOR=90>     \   
+<变性/SCOLOR=254><：/SCOLOR=70><打到了异性的高级衣服？来试试变性吧！/SCOLOR=250>\   
+<单次服务费100W金币！/SCOLOR=243>    \                                     
+<--------------------------------------------------/SCOLOR=90>\   
+        <我 要 转 职/@zhuanzhi>          <我 要 变 性/@bx>　                  \    
+   
+<>                                    <【/SCOLOR=253><开启自动检取/@小白兔><】/SCOLOR=253> \   
+   
+        <购买祝福油/@买祝福油>           <幸运项链转移/@转移幸运>\ \   
+<--------------------------------------------------/SCOLOR=90>\    
+   
+     <100萍水币兑换5  0W金币/@换金币1>      <1000萍水币兑换50  0W金币/@换金币2>\ \   
+     <100萍水币兑换100福源/@换爆发1>      <1000萍水币兑换1000福源/@换爆发2>\   
+<--------------------------------------------------/SCOLOR=90>\   
+   
+<>     <宝石镶嵌服务/@镶嵌界面11>              <福源数量查询/@查询>    
+   
+   
+   
+   
+[@小白兔]   
+#IF   
+check [199] 1   
+#ACT   
+GiveGamePetEx 小白兔   
+RecallGamePet 小白兔   
+#ELSEACT   
+MESSAGEBOX 请前往不归路开启自动拾取。   
+   
+   
+   
+   
+   
+   
+   
+   
+[@查询]   
+#if   
+#act   
+MESSAGEBOX 您目前拥有福源数量为<$CREDITPOINT>！   
+   
+   
+   
+[@镶嵌界面11]   
+#if   
+#act   
+ReturnBoxItem 10   
+OPENMERCHANTBIGDLG 3 4321 1 4 40 -60 1 428 22 1   
+#act   
+MOV S$1号孔显示 <img:251:7:178:-185|70#孔位尚未开启！>   
+MOV S$1号宝石名 此孔位尚未开启！   
+MOV S$1号孔按钮 <text:钻开孔位|70#钻开孔位^254#需要10W金币！:0:40/@开孔1>   
+goto @镶嵌界面   
+   
+[@镶嵌界面]   
+#SAY   
+<> \ \   
+<>                             <宝石镶嵌系统>\   
+<> \ \   
+<> <系统说明：/FCOLOR=70><在这里可以对装备进行打孔、镶嵌、和摘除宝石！/FCOLOR=250>\   
+<> <只有[/FCOLOR=250><武器/FCOLOR=254><][衣服/FCOLOR=254><][/FCOLOR=250><头盔/FCOLOR=254><][/FCOLOR=250><项链/FCOLOR=254><][/FCOLOR=250><手镯/FCOLOR=254><][/FCOLOR=250><戒指/FCOLOR=254><][/FCOLOR=250><腰带/FCOLOR=254><][/FCOLOR=250><靴子/FCOLOR=254><]可以进行镶嵌！/FCOLOR=250>\   
+<> <----------------------------------------------------------------------/SCOLOR=90>\   
+<>   <『/FCOLOR=70> <镶嵌框/FCOLOR=253> <』/FCOLOR=70>            <『/FCOLOR=70> <宝石孔位/FCOLOR=251> <』/FCOLOR=70><$str(S$1号孔按钮)> \   
+<>                          \   
+<>                   \   
+<>                                      \ \   
+<>                       <镶嵌详情：/FCOLOR=254>{<$str(S$1号宝石名)>/FCOLOR=253}                               \   
+<> <----------------------------------------------------------------------/SCOLOR=90>\   
+<> <镶嵌说明：/FCOLOR=70><请先将装备放入镶嵌框中！才可进行[打孔][镶嵌][摘除]等后续操作！/FCOLOR=243>\   
+<> <装备需先开孔后才可进行镶嵌！镶嵌时请先将宝石放入孔位中，点击确认镶嵌！/FCOLOR=243>\   
+<> <---------------------------------------------------------------------/SCOLOR=90>\   
+<> \   
+<>    <攻击宝石+2兑换|249#10个+1宝石兑换/@换宝石1>       <魔法宝石+2兑换|249#10个+1宝石兑换/@换宝石2>       <道术宝石+2兑换|249#10个+1宝石兑换/@换宝石3> \   
+   
+<><ITEMBOX:10:7:251:49:170:40:40:*:253#请放入装备！> \   
+<><$str(S$1号孔显示)>   
+   
+   
+[@换宝石3]   
+#if   
+checkitem 道术宝石+1 10   
+#act   
+take 道术宝石+1 10   
+give 道术宝石+2   
+#elseact   
+messagebox 兑换需要10个道术宝石+1！   
+break   
+   
+   
+   
+[@换宝石2]   
+#if   
+checkitem 魔法宝石+1 10   
+#act   
+take 魔法宝石+1 10   
+give 魔法宝石+2   
+#elseact   
+messagebox 兑换需要10个魔法宝石+1！   
+break   
+   
+   
+   
+[@换宝石1]   
+#if   
+checkitem 攻击宝石+1 10   
+#act   
+take 攻击宝石+1 10   
+give 攻击宝石+2   
+#elseact   
+messagebox 兑换需要10个攻击宝石+1！   
+break   
+   
+   
+   
+   
+   
+[@ItemIntoBox10]   
+   
+#if   
+NOT CHECKTEXTLIST ..\QuestDiary\列表文件\可镶嵌物品.txt <$BOXITEM[10].NAME>   
+#ACT   
+ReturnBoxItem 10   
+MESSAGEBOX 此物品不可进行镶嵌！   
+break   
+   
+#IF   
+;CheckFluteCount boxitem10 > 0   
+#ACT   
+MOV S$1号孔显示 <ITEMBOX:11:7:251:198:167:40:40:46:253#①号宝石孔位！>   
+MOV S$1号孔按钮 <text:确认镶嵌|70#镶嵌宝石需要^254#支付20W金币！:0:40/@镶嵌1孔>   
+MOV S$1号宝石名 可放入镶嵌宝石！   
+   
+   
+#if   
+;CheckItemFluteIndexHasStone boxitem10 1   
+#act   
+;GetItemStoneInfo boxitem10 0 0 <$STR(S$1号宝石名)>   
+GetDBItemFieldValue <$STR(S$1号宝石名)> idx <$STR(S$1号宝石idx)>   
+MOV S$1号孔显示 <img:251:7:178:-185><ItemShow:<$STR(S$1号宝石idx)>:0:138:-172:0>   
+MOV S$1号孔按钮 <text:摘除宝石|70#摘除宝石需要^254#支付20W金币！:0:40/@摘除1孔>   
+   
+   
+#if   
+#act   
+goto @镶嵌界面   
+break   
+   
+[@ItemOutBox10]   
+#act   
+goto @镶嵌界面11   
+break   
+   
+[@开孔1]   
+#if   
+CHECKBINDMONEY 绑定金币 ? 100000   
+#act   
+CHANGEBINDMONEY 绑定金币 100000   
+;SETFLUTECOUNT boxitem10 1   
+goto @ItemIntoBox10   
+messagebox 恭喜您成功在这件装备上钻出一个孔位！\　\快去镶嵌属于它的第一颗宝石吧！   
+break   
+#elseact   
+messagebox 钻开1号孔位需要10W金币！   
+break   
+   
+[@开孔2]   
+#if   
+;NOT CheckFluteCount boxitem10 = 1   
+#act   
+messagebox 请先钻开1号孔位后再来尝试！   
+break   
+   
+#if   
+CHECKBINDMONEY 绑定金币 ? 300000   
+#act   
+CHANGEBINDMONEY 绑定金币 300000   
+;SETFLUTECOUNT boxitem10 2   
+goto @ItemIntoBox10   
+messagebox 恭喜您成功在这件装备上钻开第二个孔位！\　\赶快再去镶嵌一颗宝石吧！   
+break   
+#elseact   
+messagebox 钻开2号孔位需要30W金币！   
+break   
+   
+   
+   
+[@镶嵌1孔]   
+#IF   
+NOT CheckBoxItemCount 10   
+#ACT   
+MESSAGEBOX 请先将要镶嵌宝石的装备放入镶嵌框中！   
+BREAK   
+#IF   
+NOT CheckBoxItemCount 11   
+#ACT   
+MESSAGEBOX 请先将要镶嵌的宝石放入孔位中！   
+BREAK   
+#if   
+CHECKBINDMONEY 绑定金币 ? 200000   
+#act   
+CHANGEBINDMONEY 绑定金币 200000   
+;ItemFluteStone 10 11   
+goto @ItemIntoBox10   
+MESSAGEBOX 恭喜你成功在装备上镶嵌了一颗宝石！   
+break   
+#elseact   
+MESSAGEBOX 镶嵌宝石需要20W金币！   
+break   
+   
+[@镶嵌2孔]   
+#IF   
+NOT CheckBoxItemCount 10   
+#ACT   
+MESSAGEBOX 请先将要镶嵌宝石的装备放入镶嵌框中！   
+BREAK   
+#IF   
+NOT CheckBoxItemCount 12   
+#ACT   
+MESSAGEBOX 请先将要镶嵌的宝石放入孔位中！   
+BREAK   
+#if   
+;NOT CheckItemFluteIndexHasStone boxitem10 1   
+#act   
+MESSAGEBOX 1号孔位还空着呢，请先镶嵌1号孔位！   
+BREAK   
+#if   
+CHECKBINDMONEY 绑定金币 ? 200000   
+#act   
+CHANGEBINDMONEY 绑定金币 200000   
+;ItemFluteStone 10 12   
+goto @ItemIntoBox10   
+MESSAGEBOX 恭喜你成功在装备上镶嵌了一颗宝石！   
+break   
+#elseact   
+MESSAGEBOX 镶嵌宝石需要20W金币！   
+break   
+   
+   
+   
+[@摘除1孔]   
+#if   
+;NOT CheckItemFluteIndexHasStone boxitem10 1   
+#act   
+goto @ItemIntoBox10   
+break   
+#if   
+NOT CHECKBAGSIZE 1   
+#act   
+MESSAGEBOX 你的背包满了，请先清理一下吧！   
+break   
+   
+#if   
+CHECKBINDMONEY 绑定金币 ? 200000   
+#act   
+CHANGEBINDMONEY 绑定金币 200000   
+ItemoffStone boxitem10 1   
+MESSAGEBOX 恭喜你成功摘取下了这颗宝石！   
+goto @ItemIntoBox10   
+break   
+#elseact   
+MESSAGEBOX 摘取宝石需要20W金币！   
+break   
+   
+[@摘除2孔]   
+#if   
+;NOT CheckItemFluteIndexHasStone boxitem10 2   
+#act   
+goto @ItemIntoBox10   
+break   
+#if   
+NOT CHECKBAGSIZE 1   
+#act   
+MESSAGEBOX 你的背包满了，请先清理一下吧！   
+break   
+   
+#if   
+CHECKBINDMONEY 绑定金币 ? 200000   
+#act   
+CHANGEBINDMONEY 绑定金币 200000   
+ItemoffStone boxitem10 2   
+MESSAGEBOX 恭喜你成功摘取下了这颗宝石！   
+goto @ItemIntoBox10   
+break   
+#elseact   
+MESSAGEBOX 摘取宝石需要20W金币！   
+break   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+[@换爆发2]   
+#if   
+CHECKGAMEGIRD > 999   
+#act   
+GAMEGIRD - 1000   
+CREDITPOINT + 1000   
+SENDMSG 7 兑换成功,目前福源为<$CREDITPOINT>   
+#ELSEACT   
+MESSAGEBOX 萍水币不足1000无法换取   
+break   
+   
+   
+   
+[@换爆发1]   
+#if   
+CHECKGAMEGIRD > 99   
+#act   
+GAMEGIRD - 100   
+CREDITPOINT + 100   
+SENDMSG 7 兑换成功,目前福源为<$CREDITPOINT>   
+#ELSEACT   
+MESSAGEBOX 萍水币不足100无法换取   
+break   
+   
+   
+   
+   
+   
+[@换金币1]   
+#if   
+CHECKGAMEGIRD > 99   
+#act   
+GAMEGIRD - 100   
+give 金币 500000   
+#ELSEACT   
+MESSAGEBOX 萍水币不足100无法换取   
+break   
+   
+   
+   
+[@换金币2]   
+#if   
+CHECKGAMEGIRD > 999   
+#act   
+GAMEGIRD - 1000   
+give 金币 5000000   
+#ELSEACT   
+MESSAGEBOX 萍水币不足1000无法换取   
+break   
+   
+   
+   
+   
+   
+   
+[@转移幸运]   
+#IF   
+#ACT   
+OPENMERCHANTBIGDLG 5 241 1 4 40 -60 1 430 5 1   
+#SAY   
+<>       \   
+<-------------------------------------------------------------/SCOLOR=90>\   
+<> <只有幸运加3的项链才可进行转移,转移费用1000W/SCOLOR=243> \   
+<-------------------------------------------------------------/SCOLOR=90>\ \   
+<> <ITEMBOX:1:7:251:78:75:40:40:*:253#请放入幸运+3的项链>             转移至  <ITEMBOX:2:7:251:220:75:40:40:*:253#请放入项链>  \   
+<>   \     \              
+   
+<>                      <确定转移/@转移>\     
+   
+   
+   
+[@转移]   
+#OR   
+NOT CheckBoxItemCount 1   
+NOT CheckBoxItemCount 2   
+#act   
+MESSAGEBOX 项链还未放入,无法转移.   
+break   
+   
+#if   
+CHECKBINDMONEY 绑定金币 ? 10000000   
+#act   
+CHANGEBINDMONEY 绑定金币 10000000   
+SetUpgradeItem 1   
+SetUpgradeItem 2   
+CHANGEITEMADDVALUE boxitem1 1 = 0   
+CHANGEITEMADDVALUE boxitem2 1 = 3   
+;updateitem boxitem1   
+;updateitem boxitem2   
+;clearLinkItem   
+RefreshBag   
+MESSAGEBOX 恭喜您转移幸运项链成功.   
+#ELSEACT   
+MESSAGEBOX 您没有1000W金币,无法转移.   
+break   
+   
+   
+[@ItemIntoBox1]   
+#if   
+not CHECKITEMTYPE boxitem1 19   
+#act   
+MESSAGEBOX 只能放入项链   
+ReturnBoxItem 1   
+break   
+   
+   
+#if   
+not CHECKITEMADDVALUE boxitem1 1 > 2   
+#act   
+MESSAGEBOX 请放入幸运+3的项链   
+ReturnBoxItem 1   
+break   
+   
+   
+[@ItemIntoBox2]   
+#if   
+not CHECKITEMTYPE boxitem2 19   
+#act   
+MESSAGEBOX 只能放入项链   
+ReturnBoxItem 2   
+break   
+   
+   
+   
+   
+   
+   
+   
+[@买祝福油]   
+#IF   
+CHECKBINDMONEY 绑定金币 ? 200000   
+#ACT   
+CHANGEBINDMONEY 绑定金币 200000   
+give 祝福油 10   
+SENDMSG 6 恭喜您购买祝福油10瓶,祝福油可吃到8点   
+#ELSEACT   
+MESSAGEBOX 您没有20W金币,无法购买祝福油10瓶.祝福油最高可点到8点.   
+break   
+   
+   
+   
+   
+   
+[@zhuanzhi]   
+<> \ \   
+<>                        <text:转职服务:5:0>  \   
+<-------------------------------------------------------------/SCOLOR=90>\   
+<【/SCOLOR=70><二/SCOLOR=254><】/SCOLOR=70><转职后保留您现有的级别，但您的部分技能可就要从头学起了，/SCOLOR=250>\   
+<>      <我们要相信“好好学习，天天向上”的真理，不懈的努力！/SCOLOR=250>\ \   
+<>  <好了，祝好运！快去体验那完全不一样的职业给您带来的快感吧！/SCOLOR=250>\ \   
+<>                <确定转职/@3612>             <还是算了/@exit>\   
+   
+   
+   
+[@3612]   
+#IF   
+CHECKGAMEGIRD > 999   
+#SAY   
+<> \ \   
+<>                        <text:转职服务:5:0>  \   
+<-------------------------------------------------------------/SCOLOR=90>\   
+<> <请选择你想转换的职业：/SCOLOR=70>\ \ \   
+<>                 <武士/@warr>      <魔法师/@wizard>      <道士/@taos> \ \ \ \   
+<-------------------------------------------------------------/SCOLOR=90>\   
+#ELSESAY   
+<> \ \   
+<>                        <text:转职服务:5:0>  \   
+<-------------------------------------------------------------/SCOLOR=90>\   
+<> 干吗？想作弊，快把白月币交出来，不然别想转职！\   
+<> \ \ \ \ \   
+<>                                               <灰溜溜的离开/@exit> \   
+<-------------------------------------------------------------/SCOLOR=90>\   
+   
+[@warr]   
+#IF   
+CHECKGAMEGIRD > 999   
+#ACT   
+GAMEGIRD - 1000   
+CLEARSKILL   
+KillSlave 1   
+CHANGEJOB Warrior   
+ADDSKILL 基本剑术 3   
+ADDSKILL 攻杀剑术 3   
+ADDSKILL 刺杀剑术 3   
+ADDSKILL 半月弯刀 3   
+ADDSKILL 野蛮冲撞 3   
+ADDSKILL 烈火剑法 3   
+#SAY   
+<> \ \   
+<>                        <text:转职服务:5:0>  \   
+<-------------------------------------------------------------/SCOLOR=90>\   
+<> <伟大的传奇之神：/SCOLOR=253>\   
+<>                 <亲爱的勇士，你已经完成了转职！/SCOLOR=250>\   
+<>                 <你现在已经是一位伟大的战士了。/SCOLOR=250>\ \ \ \   
+<>                                                       <离开/@exit>\   
+<-------------------------------------------------------------/SCOLOR=90>\   
+#ELSESAY   
+<> \ \   
+<>                        <text:转职服务:5:0>  \   
+<-------------------------------------------------------------/SCOLOR=90>\   
+<> 干吗？想作弊，快把金币交出来，不然别想转职！\   
+<> \ \ \ \ \   
+<>                                               <灰溜溜的离开/@exit> \   
+<-------------------------------------------------------------/SCOLOR=90>\   
+   
+   
+[@wizard]   
+#IF   
+CHECKGAMEGIRD > 999   
+#ACT   
+GAMEGIRD - 1000   
+KillSlave 1   
+CLEARSKILL   
+CHANGEJOB Wizard   
+ADDSKILL 火球术 3   
+ADDSKILL 雷电术 3   
+ADDSKILL 抗拒火环 3   
+ADDSKILL 疾光电影 3   
+ADDSKILL 爆裂火焰 3   
+ADDSKILL 地狱雷光 3   
+ADDSKILL 火墙 3   
+ADDSKILL 魔法盾 3   
+ADDSKILL 冰咆哮 3   
+#SAY   
+<> \ \   
+<>                        <text:转职服务:5:0>  \   
+<-------------------------------------------------------------/SCOLOR=90>\   
+<> <伟大的传奇之神：/SCOLOR=253>\   
+<>                 <亲爱的勇士，你已经完成了转职！/SCOLOR=250>\   
+<>                 <你现在已经是一位伟大的魔法师了。/SCOLOR=250>\ \ \ \   
+<>                                                       <离开/@exit>\   
+<-------------------------------------------------------------/SCOLOR=90>\   
+#ELSESAY   
+<> \ \   
+<>                        <text:转职服务:5:0>  \   
+<-------------------------------------------------------------/SCOLOR=90>\   
+<> 干吗？想作弊，快把金币交出来，不然别想转职！\   
+<> \ \ \ \ \   
+<>                                               <灰溜溜的离开/@exit> \   
+<-------------------------------------------------------------/SCOLOR=90>\   
+   
+[@taos]   
+#IF   
+CHECKGAMEGIRD > 999   
+#ACT   
+GAMEGIRD - 1000   
+KillSlave 1   
+CLEARSKILL   
+CHANGEJOB Taoist   
+ADDSKILL 治愈术 3   
+ADDSKILL 施毒术 3   
+ADDSKILL 精神力战法 3   
+ADDSKILL 灵魂火符 3   
+ADDSKILL 幽灵盾 3   
+ADDSKILL 神圣战甲术 3   
+ADDSKILL 困魔咒 3   
+ADDSKILL 隐身术 3   
+ADDSKILL 集体隐身术 3   
+ADDSKILL 心灵启示 3   
+ADDSKILL 召唤神兽 3   
+ADDSKILL 群体治疗术 3   
+#SAY   
+<> \ \   
+<>                        <text:转职服务:5:0>  \   
+<-------------------------------------------------------------/SCOLOR=90>\   
+<> <伟大的传奇之神：/SCOLOR=253>\   
+<>                 <亲爱的勇士，你已经完成了转职！/SCOLOR=250>\   
+<>                 <你现在已经是一位伟大的道士了。/SCOLOR=250>\ \ \ \   
+<>                                                       <离开/@exit>\   
+<-------------------------------------------------------------/SCOLOR=90>\   
+#ELSESAY   
+<> \ \   
+<>                        <text:转职服务:5:0>  \   
+<-------------------------------------------------------------/SCOLOR=90>\   
+<> 干吗？想作弊，快把金币交出来，不然别想转职！\   
+<> \ \ \ \ \   
+<>                                               <灰溜溜的离开/@exit> \   
+<-------------------------------------------------------------/SCOLOR=90>\   
+   
+   
+[@bx]   
+#if   
+CHECKBINDMONEY 绑定金币 ? 1000000   
+#act   
+CHANGEBINDMONEY 绑定金币 1000000   
+#ELSEACT   
+MESSAGEBOX 您没有足够的金币，无法使用此功能！   
+break   
+   
+#IF   
+gender man   
+#ACT   
+CHANGEGENDER 1   
+MESSAGEBOX 恭喜您已经成功的变成一位淑女了！   
+close   
+break   
+#ELSEACT   
+CHANGEGENDER 0   
+MESSAGEBOX 恭喜您已经成功的变成一位猛男了！   
+close   
+break   
+   
+   
+   
+   
+   
+}   
+  
+  
+ 
+ 
+

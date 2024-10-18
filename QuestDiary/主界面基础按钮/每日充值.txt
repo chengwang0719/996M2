@@ -1,0 +1,179 @@
+[@每日界面]
+{
+
+#if
+large G0 6
+#act
+mov S$开启状态 活动已结束
+#ELSEACT   
+mov S$开启状态 活动进行中
+
+#if
+#act
+#say
+<Img|x=301.8|y=125.6|width=546|height=379|loadDelay=1|img=public/bg_npc_01.png|show=0|esc=1|reset=1|bg=1|move=0>
+<Layout|x=96.0|y=-307.0|width=80|height=80|link=@exit>
+<Button|x=819.0|y=125.0|pimg=public/1900000511.png|nimg=public/1900000510.png|link=@exit>
+<Text|x=341.0|y=158.0|color=222|size=18|text=新区限时五天活动:当天累充达到即可领取[凌晨准时刷新活动]>
+<Text|x=337.0|y=201.0|color=253|size=18|text=今日充值\达到 100>
+<ItemShow|x=412.0|y=183.0|width=70|height=70|itemid=20122|itemcount=60|showtips=1|bgtype=1>
+<ItemShow|x=480.0|y=182.4|width=70|height=70|itemid=20160|itemcount=10|showtips=1|bgtype=1>
+<ItemShow|x=547.0|y=183.0|width=70|height=70|itemid=20014|itemcount=2|showtips=1|bgtype=1>
+<ItemShow|x=615.4|y=182.8|width=70|height=70|itemid=20040|itemcount=2|showtips=1|bgtype=1>
+<Img|x=312.0|y=246.0|width=530|esc=0|img=public/1900000667.png>
+<Text|x=338.0|y=258.0|color=253|size=18|text=今日充值\达到 300>
+<ItemShow|x=412.0|y=244.0|width=70|height=70|itemid=20154|itemcount=50|showtips=1|bgtype=1>
+<ItemShow|x=480.8|y=245.4|width=70|height=70|itemid=20160|itemcount=20|showtips=1|bgtype=1>
+<ItemShow|x=547.0|y=246.0|width=70|height=70|itemid=20015|itemcount=1|showtips=1|bgtype=1>
+<ItemShow|x=616.0|y=244.0|width=70|height=70|itemid=20040|itemcount=4|showtips=1|bgtype=1>
+<Img|x=311.0|y=306.0|width=530|esc=0|img=public/1900000667.png>
+<Text|x=336.0|y=319.0|color=253|size=18|text=今日充值\达到 500>
+<ItemShow|x=413.0|y=304.0|width=70|height=70|itemid=20157|itemcount=50|showtips=1|bgtype=1>
+<ItemShow|x=480.2|y=305.0|width=70|height=70|itemid=20160|itemcount=40|showtips=1|bgtype=1>
+<ItemShow|x=547.0|y=305.4|width=70|height=70|itemid=20015|itemcount=2|showtips=1|bgtype=1>
+<ItemShow|x=616.6|y=305.0|width=70|height=70|itemid=20042|itemcount=1|showtips=1|bgtype=1>
+<Img|x=317.0|y=367.0|width=530|esc=0|img=public/1900000667.png>
+<Text|x=335.0|y=380.0|color=253|size=18|text=今日充值\达到1000>
+<ItemShow|x=411.0|y=366.0|width=70|height=70|itemid=20154|itemcount=120|showtips=1|bgtype=1>
+<ItemShow|x=474.6|y=367.0|width=70|height=70|itemid=20157|itemcount=120|showtips=1|bgtype=1>
+<ItemShow|x=537.8|y=367.0|width=70|height=70|itemid=20160|itemcount=80|showtips=1|bgtype=1>
+<ItemShow|x=600.9|y=366.4|width=70|height=70|itemid=20015|itemcount=4|showtips=1|bgtype=1>
+<ItemShow|x=663.4|y=366.0|width=70|height=70|itemid=20042|itemcount=3|showtips=1|bgtype=1>
+<Img|x=309.0|y=431.0|width=530|esc=0|img=public/1900000667.png>
+<Text|x=456.0|y=463.0|color=221|size=19|text=您今日充值数额为:<$STR(J100)>>
+<Text|x=352.0|y=435.0|color=249|size=19|text=只限新区开区5天内>
+<Button|x=732.0|y=196.4|color=255|pimg=npc/flzx/2/lq-2.png|size=18|mimg=npc/flzx/2/lq-3.png|nimg=npc/flzx/2/lq-1.png|link=@每日领1>
+<Button|x=731.8|y=258.0|color=255|pimg=npc/flzx/2/lq-2.png|size=18|mimg=npc/flzx/2/lq-3.png|nimg=npc/flzx/2/lq-1.png|link=@每日领2>
+<Button|x=732.0|y=323.0|color=255|pimg=npc/flzx/2/lq-2.png|size=18|mimg=npc/flzx/2/lq-3.png|nimg=npc/flzx/2/lq-1.png|link=@每日领3>
+<Button|x=733.6|y=379.0|color=255|pimg=npc/flzx/2/lq-2.png|size=18|mimg=npc/flzx/2/lq-3.png|nimg=npc/flzx/2/lq-1.png|link=@每日领4>
+<Text|x=550.0|y=435.0|color=251|size=18|text=活动状态:>
+<Text|x=637.0|y=435.0|color=249|size=18|text=<$STR(S$开启状态)>>
+
+
+
+[@每日领1]
+#IF
+large G0 6
+#ACT
+MESSAGEBOX 活动已经结束,无法领取了。
+break
+
+
+#if
+small J100 100
+#act
+MESSAGEBOX 您今日充值未达标无法领取
+break 
+
+#IF
+large J100 99
+equal J105 0
+#act
+GiveStateItem 六艺残片 60 1 1 0 0 1 1 1 1
+GiveStateItem 护剑残片 10 1 1 0 0 1 1 1 1
+GiveStateItem 聚灵珠(小) 2 1 1 0 0 1 1 1 1
+GiveStateItem 金条 2 1 1 0 0 1 1 1 1
+SENDMSG 9 恭喜您领取成功
+mov J105 1
+#ELSEACT   
+MESSAGEBOX 您今日已经领取过了
+break 
+
+
+
+[@每日领2]
+#IF
+large G0 6
+#ACT
+MESSAGEBOX 活动已经结束,无法领取了。
+break
+
+#if
+small J100 300
+#act
+MESSAGEBOX 您今日充值未达标无法领取
+break 
+
+#IF
+large J100 299
+equal J106 0
+#act
+GiveStateItem 湘宝残片 50 1 1 0 0 1 1 1 1
+GiveStateItem 护剑残片 20 1 1 0 0 1 1 1 1
+GiveStateItem 聚灵珠(大) 1 1 1 0 0 1 1 1 1
+GiveStateItem 金条 4 1 1 0 0 1 1 1 1
+SENDMSG 9 恭喜您领取成功
+mov J106 1
+#ELSEACT   
+MESSAGEBOX 您今日已经领取过了
+break 
+
+
+[@每日领3]
+#IF
+large G0 6
+#ACT
+MESSAGEBOX 活动已经结束,无法领取了。
+break
+
+#if
+small J100 500
+#act
+MESSAGEBOX 您今日充值未达标无法领取
+break 
+
+#IF
+large J100 499
+equal J107 0
+#act
+GiveStateItem 逢宝残片 50 1 1 0 0 1 1 1 1
+GiveStateItem 护剑残片 40 1 1 0 0 1 1 1 1
+GiveStateItem 聚灵珠(大) 2 1 1 0 0 1 1 1 1
+GiveStateItem 金盒 1 1 1 0 0 1 1 1 1
+SENDMSG 9 恭喜您领取成功
+mov J107 1
+#ELSEACT   
+MESSAGEBOX 您今日已经领取过了
+break 
+
+[@每日领4]
+#IF
+large G0 6
+#ACT
+MESSAGEBOX 活动已经结束,无法领取了。
+break
+
+#if
+small J100 1000
+#act
+MESSAGEBOX 您今日充值未达标无法领取
+break 
+
+#IF
+large J100 999
+equal J108 0
+#act
+GiveStateItem 湘宝残片 120 1 1 0 0 1 1 1 1
+GiveStateItem 逢宝残片 120 1 1 0 0 1 1 1 1
+GiveStateItem 护剑残片 80 1 1 0 0 1 1 1 1
+GiveStateItem 聚灵珠(大) 4 1 1 0 0 1 1 1 1
+GiveStateItem 金盒 3 1 1 0 0 1 1 1 1
+SENDMSG 9 恭喜您领取成功
+mov J108 1
+#ELSEACT   
+MESSAGEBOX 您今日已经领取过了
+break 
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

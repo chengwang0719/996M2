@@ -1,0 +1,102 @@
+[@打怪神器页面]
+{
+#if
+#act
+goto @激活打怪神器的页面
+
+
+[@激活打怪神器的页面]
+#if
+check [52] 0
+#act
+mov S$激活切割的图片 jh
+#elseact
+mov S$激活切割的图片 yjh
+
+#if
+check [53] 0
+#act
+mov S$激活成神的图片 jh
+#elseact
+mov S$激活成神的图片 yjh
+
+#if
+#say
+<Button|x=-2526.0|y=-1172.0|width=115120|height=112880|mimg=npc/zd.png|color=224|pimg=npc/zd.png|size=18|nimg=npc/zd.png|link=@exit>
+<Img|children={1a,2a,3a}|x=-25.0|y=-19.0|width=964|height=620|rotate=0|bg=1|loadDelay=0|reset=1|show=4|esc=1|move=0|img=topbtn/yxgl/bj2.png>
+<ListView|id=1a|children={a,b,c,d,de,e,f,g,h}|x=76.0|y=96.0|width=140|height=400|margin=3|direction=1|bounce=0>
+<Button|id=a|x=0|y=0|width=140|height=41|nimg=topbtn/yxgl/1.png|mimg=topbtn/yxgl/1.png|link=@游戏攻略>
+<Button|id=b|x=0|y=0|width=140|height=41|nimg=topbtn/yxgl/4.png|mimg=topbtn/yxgl/4.png|link=@打怪神器>
+<Button|id=c|x=0|y=0|width=140|height=41|nimg=topbtn/yxgl/3.png|mimg=topbtn/yxgl/3.png|link=@副装详情>
+<Button|id=d|x=0|y=0|width=140|height=41|nimg=topbtn/yxgl/2.png|mimg=topbtn/yxgl/2.png|link=@虎符详情>
+<Button|id=de|x=0|y=0|width=140|height=41|nimg=topbtn/yxgl/9.png|mimg=topbtn/yxgl/9.png|link=@十二器详情>
+<Button|id=e|x=0|y=0|width=140|height=41|nimg=topbtn/yxgl/5.png|mimg=topbtn/yxgl/5.png|link=@地图跑法>
+<Button|id=f|x=0|y=0|width=140|height=41|nimg=topbtn/yxgl/6.png|mimg=topbtn/yxgl/6.png|link=@大陆玩法>
+;<Button|id=g|x=0|y=0|width=140|height=41|nimg=topbtn/yxgl/7.png|mimg=topbtn/yxgl/7.png|link=@材料用途>
+;<Button|id=h|x=0|y=0|width=140|height=41|nimg=topbtn/yxgl/8.png|mimg=topbtn/yxgl/8.png|link=@消费攻略>
+<Button|id=2a|x=899|y=39.0|nimg=public/close-2.png|mimg=public/close-2.png|link=@exit>
+
+
+<Layout|id=3a|children={101,102,103,104,105,106,107,108,109,110}|x=222.0|y=91.0|width=670|height=435|bounce=0|margin=0>
+<Effect|id=101|x=128.0|y=68.0|scale=0.9|speed=2|act=0|effecttype=0|effectid=20326|dir=5>
+<Effect|id=102|x=355.0|y=54.0|scale=0.9|speed=2|act=0|effecttype=0|effectid=20330|dir=5>
+
+
+<Button|id=103|x=114|y=386|width=112|height=36|nimg=topbtn/yxgl/<$STR(S$激活切割的图片)>.png|mimg=topbtn/fldt/<$STR(S$激活切割的图片)>.png|link=@激活黑切>
+<Button|id=104|x=456|y=386|width=112|height=36|nimg=topbtn/yxgl/<$STR(S$激活成神的图片)>.png|mimg=topbtn/fldt/<$STR(S$激活成神的图片)>.png|link=@激活成神>
+<Effect|id=105|x=40.0|y=350.0|scale=1|speed=2|act=0|effecttype=0|effectid=34009|dir=5>
+<Effect|id=106|x=643.0|y=350.0|scale=1|speed=2|act=0|effecttype=0|effectid=34009|dir=5>
+<ItemShow|id=107|x=6|y=316|width=70|height=70|itemid=20221|itemcount=50|bgtype=0|showtips=1>
+<ItemShow|id=108|x=610|y=316|width=70|height=70|itemid=20222|itemcount=50|bgtype=0|showtips=1>
+
+<Text|id=109|x=73|y=338|size=16|color=255|outline=2|text=:需>
+<Text|id=110|x=592|y=338|size=16|color=255|outline=2|text=需:>
+
+
+
+
+
+[@激活黑切]
+#if
+not equal <$USEITEMNAME[78]> 
+#act
+sendmsg 9 已经激活过了
+break
+
+
+
+#if
+CHECKITEM 邪 50
+#act
+give 黑色切割[一重Lv.1] 1
+TakeOn 黑色切割[一重Lv.1] 78
+SENDMSG 9 恭喜！激活成功
+set [52] 1
+set [18] 1
+take 邪 50
+goto @激活打怪神器的页面
+#CALL [\任务系统\任务系统QF.txt] @任务系统QF
+#elseact
+SENDMSG 9 [提示]背包里的"邪"数量不够
+
+[@激活成神]
+#if
+not equal <$USEITEMNAME[77]> 
+#act
+sendmsg 9 已经激活过了
+break
+
+#if
+CHECKITEM 佛 50
+#act
+give 神胚[一重Lv.1] 1
+TakeOn 神胚[一重Lv.1] 77
+take 佛 50
+SENDMSG 9 恭喜！激活成功
+set [53] 1
+set [19] 1
+goto @激活打怪神器的页面
+#CALL [\任务系统\任务系统QF.txt] @任务系统QF
+#elseact
+SENDMSG 9 [提示]背包里的"佛"数量不够
+}

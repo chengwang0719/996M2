@@ -1,0 +1,353 @@
+[@道士武器合成]
+{
+#if
+#act
+mov U249 0
+
+mov S$道士进阶按钮 
+goto @道士合成展示逻辑
+goto @合成道士的页面
+
+
+[@合成道士的页面]
+#if
+#say
+<Img|a=4|x=450.0|y=316.0|width=848|height=650|loadDelay=0|esc=1|img=npc/wqhc/bg.png|move=1|bg=1|reset=1|show=4>
+<Button|x=798.0|y=31.0|mimg=public/close-2.png|nimg=public/close-2.png|link=@exit>
+;<Img|x=110.0|y=75.0|width=180|height=35|loadDelay=0|reset=1|img=npc/wqhc/zs.png|show=4|move=0|esc=1|link=@合成道士的页面>
+;<Img|x=363.0|y=75.0|width=180|height=35|loadDelay=0|reset=1|img=npc/wqhc/fs_1.png|show=4|move=0|esc=1|link=@合成法师的页面>
+;<Img|x=600.0|y=75.0|width=180|height=35|loadDelay=0|reset=1|img=npc/wqhc/ds_1.png|show=4|move=0|esc=1|link=@合成道士的页面>
+<Button|x=736.0|y=111.0|width=55|height=53|nimg=npc/wqhc/dui.png|mimg=npc/wqhc/dui.png|link=@兑换圣石页面>
+
+<Img|x=521.0|y=388.0|width=24|height=27|loadDelay=0|reset=1|img=npc/wqhc/j.png|esc=1|move=0|show=4>
+<Img|x=653.0|y=388.0|width=24|height=27|loadDelay=0|reset=1|img=npc/wqhc/j.png|esc=1|move=0|show=4>
+<Img|x=586.0|y=467.0|width=24|height=27|loadDelay=0|img=npc/wqhc/j.png|reset=1|move=0|esc=1|show=4>
+<Effect|x=504.0|y=133.0|scale=1|speed=0.9|effecttype=0|effectid=34001|dir=5|act=0>
+
+
+
+
+
+<$STR(S$道士进阶按钮)>
+
+<$STR(S$道士的锻造展示)>
+<$STR(S$道士的锻造货币)>
+<$STR(S$道士的锻造按钮)>
+<$STR(S$道士的锻造材料)>
+
+[@兑换圣石页面]
+#if
+#say
+
+<Button|id=666|x=-2526.0|y=-1172.0|width=115120|height=112880|mimg=npc/zd.png|pimg=npc/zd.png|nimg=npc/zd.png|color=224|size=18>
+<Img|a=4|children={99,100,101,102,103,104,105,106}|x=249.5|y=145.5|show=4|move=0|reset=1|esc=1|loadDelay=0|img=npc/wqhc/bj.png|bg=1>
+<Button|id=99|x=602|y=6|mimg=public/close-2.png|nimg=public/close-2.png|link=@关闭兑换圣石>
+<Text|id=100|x=44.0|y=205.0|size=16|outlinecolor=0|outline=2|color=251|text=兑换规则：1个锻造圣石=2个锻造神石，比例为1:2，兑换前请检查背包\锻造神石是否足够>
+ <ItemShow|id=101|x=66.0|y=53.0|width=60|height=60|itemid=20276|itemcount=1|showtips=1|bgtype=1>
+ <ItemShow|id=102|x=271.0|y=53.0|width=60|height=60|itemid=20276|itemcount=10|showtips=1|bgtype=1>
+ <ItemShow|id=103|x=486.0|y=53.0|width=60|height=60|itemid=20276|itemcount=50|showtips=1|bgtype=1>
+ <Button|id=104|x=44.0|y=147.0|width=106|height=38|nimg=npc/wqhc/btn.png|mimg=npc/wqhc/btn.png|link=@兑换一个>
+ <Button|id=105|x=250.0|y=147.0|width=106|height=38|nimg=npc/wqhc/btn.png|mimg=npc/wqhc/btn.png|link=@兑换十个>
+ <Button|id=106|x=470.0|y=147.0|width=106|height=38|nimg=npc/wqhc/btn.png|mimg=npc/wqhc/btn.png|link=@兑换五十个>
+
+
+[@关闭兑换圣石]
+#if
+#act
+close
+goto @战士武器合成
+
+[@兑换一个]
+#if
+checkitems 锻造神石#2
+#act
+takes 锻造神石#2
+give 锻造圣石 1
+sendmsg 9 兑换成功！
+#elseact
+sendmsg 9 兑换失败！背包里没有2个锻造神石
+
+[@兑换十个]
+#if
+checkitems 锻造神石#20
+#act
+takes 锻造神石#20
+give 锻造圣石 10
+sendmsg 9 兑换成功！
+#elseact
+sendmsg 9 兑换失败！背包里没有20个锻造神石
+
+[@兑换五十个]
+#if
+checkitems 锻造神石#100
+#act
+takes 锻造神石#100
+give 锻造圣石 50
+sendmsg 9 兑换成功！
+#elseact
+sendmsg 9 兑换失败！背包里没有100个锻造神石
+
+[@道士合成展示逻辑]
+#if
+equal U249 0
+#act
+mov S$道士的锻造展示 <Effect|x=206.0|y=332.0|scale=0.9|speed=1|effecttype=0|effectid=70098|dir=5|act=0>
+inc S$道士的锻造展示 <ItemShow|x=564.0|y=193.0|width=60|height=60|itemid=10718|itemcount=1|showtips=1|bgtype=0>
+
+mov S$道士的锻造货币 <ItemShow|x=626.0|y=446.0|width=60|height=60|itemid=2|itemcount=1000|showtips=1|bgtype=0>
+inc S$道士的锻造货币 <ItemShow|x=505.0|y=446.0|width=60|height=60|itemid=20275|itemcount=50|showtips=1|bgtype=0>
+
+mov S$道士的锻造按钮 <Button|ay=1|x=537.0|y=531.0|width=142|height=50|nimg=npc/wqhc/dz.png|mimg=npc/wqhc/dz.png|link=@开始锻造7转道士武器>
+
+mov S$道士的锻造材料 <ItemShow|x=435.0|y=367.0|width=60|height=60|itemid=10489|itemcount=1|showtips=1|bgtype=0>
+inc S$道士的锻造材料 <ItemShow|x=697.0|y=367.0|width=60|height=60|itemid=10491|itemcount=1|showtips=1|bgtype=0>
+inc S$道士的锻造材料 <ItemShow|x=564.0|y=367.0|width=60|height=60|itemid=10490|itemcount=1|showtips=1|bgtype=0>
+
+mov S$道士进阶按钮 <Button|ay=1|x=335.0|y=322.0|width=34|height=44|nimg=public/y.png|mimg=public/y.png|link=@去看8转d>
+goto @合成道士的页面
+
+#if
+equal U249 1
+#act
+mov S$道士的锻造展示 <Effect|x=214.0|y=352.0|scale=0.8|speed=1|effecttype=0|effectid=70089|dir=5|act=0>
+inc S$道士的锻造展示 <ItemShow|x=564.0|y=193.0|width=60|height=60|itemid=10751|itemcount=1|showtips=1|bgtype=0>
+
+mov S$道士的锻造货币 <ItemShow|x=626.0|y=446.0|width=60|height=60|itemid=2|itemcount=3000|showtips=1|bgtype=0>
+inc S$道士的锻造货币 <ItemShow|x=505.0|y=446.0|width=60|height=60|itemid=20276|itemcount=150|showtips=1|bgtype=0>
+
+mov S$道士的锻造按钮 <Button|ay=1|x=537.0|y=531.0|width=142|height=50|nimg=npc/wqhc/dz.png|mimg=npc/wqhc/dz.png|link=@开始锻造8转道士武器>
+
+mov S$道士的锻造材料 <ItemShow|x=435.0|y=367.0|width=60|height=60|itemid=10491|itemcount=1|showtips=1|bgtype=0>
+inc S$道士的锻造材料 <ItemShow|x=697.0|y=367.0|width=60|height=60|itemid=10718|itemcount=1|showtips=1|bgtype=0>
+inc S$道士的锻造材料 <ItemShow|x=564.0|y=367.0|width=60|height=60|itemid=10718|itemcount=1|showtips=1|bgtype=0>
+
+mov S$道士进阶按钮 <Button|ay=1|x=113.0|y=322.0|width=34|height=44|nimg=public/z.png|mimg=public/z.png|link=@去看7转d>
+inc S$道士进阶按钮 <Button|ay=1|x=335.0|y=322.0|width=34|height=44|nimg=public/y.png|mimg=public/y.png|link=@去看9转d>
+goto @合成道士的页面
+
+#if
+equal U249 2
+#act
+mov S$道士的锻造展示 <Effect|x=210.0|y=332.0|scale=0.9|speed=1|effecttype=0|effectid=70117|dir=5|act=0>
+inc S$道士的锻造展示 <ItemShow|x=564.0|y=193.0|width=60|height=60|itemid=10778|itemcount=1|showtips=1|bgtype=0>
+
+mov S$道士的锻造货币 <ItemShow|x=626.0|y=446.0|width=60|height=60|itemid=2|itemcount=5000|showtips=1|bgtype=0>
+inc S$道士的锻造货币 <ItemShow|x=505.0|y=446.0|width=60|height=60|itemid=20276|itemcount=300|showtips=1|bgtype=0>
+
+mov S$道士的锻造按钮 <Button|ay=1|x=537.0|y=531.0|width=142|height=50|nimg=npc/wqhc/dz.png|mimg=npc/wqhc/dz.png|link=@开始锻造9转道士武器>
+
+mov S$道士的锻造材料 <ItemShow|x=435.0|y=367.0|width=60|height=60|itemid=10718|itemcount=1|showtips=1|bgtype=0>
+inc S$道士的锻造材料 <ItemShow|x=697.0|y=367.0|width=60|height=60|itemid=10751|itemcount=1|showtips=1|bgtype=0>
+inc S$道士的锻造材料 <ItemShow|x=564.0|y=367.0|width=60|height=60|itemid=10751|itemcount=1|showtips=1|bgtype=0>
+mov S$道士进阶按钮 <Button|ay=1|x=113.0|y=322.0|width=34|height=44|nimg=public/z.png|mimg=public/z.png|link=@去看8转d>
+inc S$道士进阶按钮 <Button|ay=1|x=335.0|y=322.0|width=34|height=44|nimg=public/y.png|mimg=public/y.png|link=@去看10转d>
+goto @合成道士的页面
+
+#if
+equal U249 3
+#act
+mov S$道士的锻造展示 <Effect|x=206.0|y=332.0|scale=0.9|speed=1|effecttype=0|effectid=70130|dir=5|act=0>
+inc S$道士的锻造展示 <ItemShow|x=564.0|y=193.0|width=60|height=60|itemid=10811|itemcount=1|showtips=1|bgtype=0>
+
+mov S$道士的锻造货币 <ItemShow|x=626.0|y=446.0|width=60|height=60|itemid=2|itemcount=10000|showtips=1|bgtype=0>
+inc S$道士的锻造货币 <ItemShow|x=505.0|y=446.0|width=60|height=60|itemid=20276|itemcount=450|showtips=1|bgtype=0>
+
+mov S$道士的锻造按钮 <Button|ay=1|x=537.0|y=531.0|width=142|height=50|nimg=npc/wqhc/dz.png|mimg=npc/wqhc/dz.png|link=@开始锻造10转道士武器>
+
+mov S$道士的锻造材料 <ItemShow|x=435.0|y=367.0|width=60|height=60|itemid=10751|itemcount=1|showtips=1|bgtype=0>
+inc S$道士的锻造材料 <ItemShow|x=697.0|y=367.0|width=60|height=60|itemid=10778|itemcount=1|showtips=1|bgtype=0>
+inc S$道士的锻造材料 <ItemShow|x=564.0|y=367.0|width=60|height=60|itemid=10778|itemcount=1|showtips=1|bgtype=0>
+
+mov S$道士进阶按钮 <Button|ay=1|x=113.0|y=322.0|width=34|height=44|nimg=public/z.png|mimg=public/z.png|link=@去看9转d>
+
+goto @合成道士的页面
+
+[@去看10转d]
+#if
+check [403] 0
+#act
+sendmsg 9 请先合成一次【冥天玄魔刃】再查看下一阶装备
+break
+
+#if
+#act
+mov U249 3
+goto @道士合成展示逻辑
+
+[@去看9转d]
+#if
+check [402] 0
+#act
+sendmsg 9 请先合成一次【凛冬寒霜扇】再查看下一阶装备
+break
+
+#if
+#act
+mov U249 2
+goto @道士合成展示逻辑
+
+[@去看8转d]
+#if
+check [401] 0
+#act
+sendmsg 9 请先合成一次【玄天道扇】再查看下一阶装备
+break
+
+#if
+#act
+mov U249 1
+goto @道士合成展示逻辑
+
+[@去看7转d]
+#if
+#act
+mov U249 0
+goto @道士合成展示逻辑
+
+[@开始锻造7转道士武器]
+#if
+CheckBindMoney 绑定点卷 < 1000
+#act
+sendmsg 9 【提示】货币不足，无法锻造！
+break
+
+#if
+not checkitem 锻造神石 50
+#act
+sendmsg 9 【提示】锻造神石不足，无法锻造！
+break
+
+#or
+not checkitem 鬼王の斩 1
+not checkitem 降魔の剑 1
+not checkitem 天界の扇 1
+#act
+SENDMSG 9 【提示】背包合成材料武器不足，无法锻造！
+Break
+
+#if
+#act
+take 鬼王の斩 1
+take 降魔の剑 1
+take 天界の扇 1
+take 锻造神石 50
+ChangeBindMoney 绑定点卷 1000
+give 玄天道扇 1
+Screffects 100 36003 600 300 1 1 0
+set [401] 1
+goto @道士武器合成
+break
+
+
+[@开始锻造8转道士武器]
+#if
+CheckBindMoney 绑定点卷 < 3000
+#act
+sendmsg 9 【提示】货币不足，无法锻造！
+break
+
+#if
+not checkitem 锻造圣石 150
+#act
+sendmsg 9 【提示】锻造神石不足，无法锻造！
+break
+
+#or
+not checkitem 天界の扇 1
+not checkitems 玄天道扇#2
+#act
+SENDMSG 9 【提示】背包合成材料武器不足，无法锻造！
+Break
+
+#if
+#act
+take 天界の扇 1
+takes 玄天道扇#2
+take 锻造圣石 150
+ChangeBindMoney 绑定点卷 3000
+give 凛冬寒霜扇 1
+Screffects 100 36003 600 300 1 1 0
+set [402] 1
+goto @道士武器合成
+break
+
+[@开始锻造9转道士武器]
+#if
+CheckBindMoney 绑定点卷 < 5000
+#act
+sendmsg 9 【提示】货币不足，无法锻造！
+break
+
+#if
+not checkitem 锻造圣石 300
+#act
+sendmsg 9 【提示】锻造神石不足，无法锻造！
+break
+
+#or
+not checkitem 玄天道扇 1
+not checkitems 凛冬寒霜扇#2
+#act
+SENDMSG 9 【提示】背包合成材料武器不足，无法锻造！
+Break
+
+#if
+#act
+take 玄天道扇 1
+takes 凛冬寒霜扇#2
+take 锻造圣石 300
+ChangeBindMoney 绑定点卷 5000
+give 冥天玄魔刃 1
+Screffects 100 36003 600 300 1 1 0
+set [403] 1
+goto @道士武器合成
+break
+
+
+[@开始锻造10转道士武器]
+#if
+CheckBindMoney 绑定点卷 < 10000
+#act
+sendmsg 9 【提示】货币不足，无法锻造！
+break
+
+#if
+not checkitem 锻造圣石 450
+#act
+sendmsg 9 【提示】锻造神石不足，无法锻造！
+break
+
+#or
+not checkitem 凛冬寒霜扇 1
+not checkitems 冥天玄魔刃#2
+#act
+SENDMSG 9 【提示】背包合成材料武器不足，无法锻造！
+Break
+
+#if
+#act
+take 凛冬寒霜扇 1
+takes 冥天玄魔刃#2
+take 锻造圣石 450
+ChangeBindMoney 绑定点卷 10000
+give 仙戮之剑 1
+Screffects 100 36003 600 300 1 1 0
+set [404] 1
+goto @道士武器合成
+break
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+

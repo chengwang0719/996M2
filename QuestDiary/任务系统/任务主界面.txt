@@ -1,0 +1,836 @@
+[@任务主界面]
+{
+;U7=主线任务编号
+;U8=刷新任务状态显示数字
+;-------------------------点击任务在这
+#if
+CheckInWarArea
+#act
+SENDMSG 9 攻沙区域无法使用此功能
+break
+
+
+#IF
+EQUAL <$CURRTASKID> <$STR(U7)>
+#ACT
+GOTO @任务界面<$STR(U7)>
+
+#IF
+EQUAL <$CURRTASKID> <$STR(U19)>
+#ACT
+GOTO @任务界面<$STR(U19)>
+
+#IF
+EQUAL <$CURRTASKID> <$STR(U49)>
+#ACT
+GOTO @任务界面<$STR(U49)>
+
+#IF
+EQUAL <$CURRTASKID> <$STR(U84)>
+#ACT
+GOTO @任务界面<$STR(U84)>
+
+
+[@任务界面1]
+#IF
+CHECK [300] 0
+#ACT
+SET [300] 1
+
+#IF
+CHECK [11] 1
+#ACT
+SET [11] 0
+#CALL [\主界面基础按钮\主界面游戏按钮.txt] @界面游戏按钮
+Navigation 102 3002 点击福利大厅
+BREAK
+
+
+#IF
+EQUAL U7 1
+EQUAL U8 1
+#ACT
+newdeletetask <$STR(U7)>
+inc U7 1
+mov U8 0
+mov U19 100
+mov U49 200
+mov U84 300
+MONEY 绑定元宝 + 10000
+newchangetask <$STR(U7)>
+newchangetask <$STR(U7)> <$STR(U8)>
+newchangetask <$STR(U19)>
+GOTO @完成任务触发
+BREAK
+
+;=======================================================================
+
+[@任务界面2]
+#IF
+EQUAL U7 2
+SMALL U8 100
+#ACT
+goto @主线任务自动挂机
+newchangetask <$STR(U7)>
+newchangetask <$STR(U7)> <$STR(U8)>
+BREAK
+
+#IF
+EQUAL U7 2
+EQUAL U8 100
+#ACT
+newdeletetask <$STR(U7)>
+inc U7 1
+mov U8 0
+MONEY 绑定元宝 + 20000
+newchangetask <$STR(U7)>
+newchangetask <$STR(U7)> <$STR(U8)>
+mapmove 3 333 333 5
+GOTO @完成任务触发
+BREAK
+
+
+
+
+[@主线任务自动挂机]
+#OR
+ISONMAP khpy
+ISONMAP yzsl
+ISONMAP jqzd
+ISONMAP xsts
+ISONMAP dbzl
+ISONMAP wxly
+#ACT
+StartAutoPlayGame
+
+
+[@任务界面3]
+#OR
+check [18] 0
+check [19] 0
+#ACT
+#CALL [\主界面基础按钮\打怪神器.txt] @打怪神器页面
+newchangetask <$STR(U7)>
+BREAK
+
+#IF
+EQUAL U7 3
+check [18] 1
+check [19] 1
+#ACT
+newdeletetask <$STR(U7)>
+inc U7 1
+MONEY 绑定元宝 + 30000
+newchangetask <$STR(U7)>
+GOTO @完成任务触发
+BREAK
+
+
+
+
+[@任务界面4]
+#IF
+EQUAL U7 4
+check [28] 0
+#ACT
+#CALL [\主界面基础按钮\唯一赞助.txt] @唯一赞助页面
+newchangetask <$STR(U7)>
+newchangetask <$STR(U7)> <$STR(U8)>
+BREAK
+
+#IF
+EQUAL U7 4
+check [28] 1
+#ACT
+newdeletetask <$STR(U7)>
+inc U7 1
+
+MONEY 绑定元宝 + 40000
+newchangetask <$STR(U7)>
+newchangetask <$STR(U7)> <$STR(U8)>
+GOTO @完成任务触发
+BREAK
+
+
+[@任务界面5]
+#OR
+check [40] 0
+check [49] 0
+#ACT
+mapmove 3 324 325 1
+newchangetask <$STR(U7)>
+BREAK
+
+#IF
+EQUAL U7 5
+check [40] 1
+check [49] 1
+#ACT
+newdeletetask <$STR(U7)>
+inc U7 1
+MONEY 绑定元宝 + 50000
+newchangetask <$STR(U7)>
+GOTO @完成任务触发
+BREAK
+
+
+[@任务界面6]
+#if
+EQUAL U7 6
+CHECKRENEWLEVEL < 2
+#ACT
+mapmove 3 320 332 1
+newchangetask <$STR(U7)>
+BREAK
+
+#IF
+EQUAL U7 6
+CHECKRENEWLEVEL > 1
+#ACT
+newdeletetask <$STR(U7)>
+inc U7 1
+GiveStateItem 经验源泉 1 1 0 0 0 0 0 0 1
+newchangetask <$STR(U7)>
+GOTO @完成任务触发
+BREAK
+
+
+[@任务界面7]
+#if
+EQUAL U7 7
+check [20] 0
+#ACT
+mapmove 3 319 338 1
+newchangetask <$STR(U7)>
+BREAK
+
+#IF
+EQUAL U7 7
+check [20] 1
+#ACT
+newdeletetask <$STR(U7)>
+inc U7 1
+CHANGEEXP + 60000
+newchangetask <$STR(U7)>
+GOTO @完成任务触发
+BREAK
+
+[@任务界面8]
+#if
+EQUAL U7 8
+small U48 50
+#ACT
+;sendmsg 9 <$STR(U49)>
+newchangetask <$STR(U7)> <$STR(U48)>
+BREAK
+
+#IF
+EQUAL U7 8
+large U48 49
+#ACT
+newdeletetask <$STR(U7)>
+inc U7 1
+mov U48 0
+CHANGEEXP + 5000000
+newchangetask <$STR(U7)> <$STR(U48)>
+GOTO @完成任务触发
+BREAK
+
+
+
+[@任务界面9]
+#OR
+check [74] 0
+check [75] 0
+#ACT
+
+mapmove xbqc1 100 96 1
+newchangetask <$STR(U7)>
+BREAK
+
+#IF
+EQUAL U7 9
+check [74] 1
+check [75] 1
+#ACT
+newdeletetask <$STR(U7)>
+inc U7 1
+CHANGEEXP + 5000000
+newchangetask <$STR(U7)>
+GOTO @完成任务触发
+BREAK
+
+[@任务界面10]
+#IF
+EQUAL U7 10
+check [76] 1
+CHECKRENEWLEVEL > 3
+CHECKLEVELEX > 48
+#ACT
+newdeletetask <$STR(U7)>
+inc U7 1
+CHANGEEXP + 5000000
+newchangetask <$STR(U7)>
+GOTO @完成任务触发
+BREAK
+
+#if
+EQUAL U7 10
+CHECKRENEWLEVEL < 5
+CHECKLEVELEX < 51
+#ACT
+mapmove xbqc1 97 89 1
+newchangetask <$STR(U7)>
+BREAK
+;===============================================支线任务======================================
+[@任务界面100]
+#if
+EQUAL U19 100
+check [17] 0
+#ACT
+#CALL [\主界面基础按钮\唯一赞助.txt] @唯一赞助页面
+newchangetask <$STR(U19)>
+BREAK
+
+#IF
+EQUAL U19 100
+check [17] 1
+#ACT
+newdeletetask <$STR(U19)>
+inc U19 1
+MONEY 绑定元宝 + 10000
+newchangetask <$STR(U19)>
+GOTO @完成支线任务触发
+BREAK
+
+[@任务界面101]
+#IF
+EQUAL U19 101
+SMALL U9 5
+ISONMAP 3
+#ACT
+OPENNPCSHOWEX 6
+newchangetask <$STR(U19)>
+newchangetask <$STR(U19)> <$STR(U9)>
+BREAK
+
+#IF
+EQUAL U19 101
+LARGE U9 4
+#ACT
+newdeletetask <$STR(U19)>
+inc U19 1
+mov U9 0
+CHANGEEXP + 5000
+newchangetask <$STR(U19)>
+newchangetask <$STR(U19)> <$STR(U9)>
+GOTO @完成任务触发
+BREAK
+
+
+[@任务界面102]
+#IF
+EQUAL U19 102
+check [29] 0
+#ACT
+newchangetask <$STR(U19)>
+BREAK
+
+#IF
+EQUAL U19 102
+check [29] 1
+#ACT
+newdeletetask <$STR(U19)>
+inc U19 1
+CHANGEEXP + 10000
+newchangetask <$STR(U19)>
+GOTO @完成任务触发
+BREAK
+
+[@任务界面103]
+#IF
+EQUAL U19 103
+check [60] 0
+ISONMAP 3
+#ACT
+OPENNPCSHOWEX 7
+newchangetask <$STR(U19)>
+BREAK
+
+#IF
+EQUAL U19 103
+check [60] 1
+#ACT
+newdeletetask <$STR(U19)>
+inc U19 1
+CHANGEEXP + 20000
+newchangetask <$STR(U19)>
+GOTO @完成任务触发
+BREAK
+
+[@任务界面104]
+#IF
+EQUAL U19 104
+check [61] 0
+ISONMAP 3
+#ACT
+OPENNPCSHOWEX 8
+newchangetask <$STR(U19)>
+BREAK
+
+#IF
+EQUAL U19 104
+check [61] 1
+#ACT
+newdeletetask <$STR(U19)>
+inc U19 1
+CHANGEEXP + 30000
+newchangetask <$STR(U19)>
+GOTO @完成任务触发
+BREAK
+
+
+[@任务界面105]
+#IF
+EQUAL U19 105
+check [62] 0
+#ACT
+newchangetask <$STR(U19)>
+BREAK
+
+#IF
+EQUAL U19 105
+check [62] 1
+#ACT
+newdeletetask <$STR(U19)>
+inc U19 1
+GiveStateItem 转生石Lv.1 10 0 0 0 0 0 0 1 1
+newchangetask <$STR(U19)>
+GOTO @完成任务触发
+BREAK
+
+[@任务界面106]
+#IF
+EQUAL U19 106
+check [69] 0
+#ACT
+mapmove 3 320 332 1
+newchangetask <$STR(U19)>
+BREAK
+
+#IF
+EQUAL U19 106
+check [69] 1
+#ACT
+newdeletetask <$STR(U19)>
+inc U19 1
+MONEY 绑定元宝 + 10000
+newchangetask <$STR(U19)>
+GOTO @完成任务触发
+BREAK
+[@任务界面107]
+#IF
+EQUAL U19 107
+check [63] 0
+ISONMAP 3
+#ACT
+OPENNPCSHOWEX 9
+newchangetask <$STR(U19)>
+BREAK
+
+#IF
+EQUAL U19 107
+check [63] 1
+#ACT
+newdeletetask <$STR(U19)>
+inc U19 1
+CHANGEEXP + 40000
+newchangetask <$STR(U19)>
+newchangetask <$STR(U84)>
+GOTO @完成任务触发
+BREAK
+
+[@任务界面108]
+#IF
+EQUAL U19 108
+check [64] 0
+#ACT
+newchangetask <$STR(U19)>
+BREAK
+
+#IF
+EQUAL U19 108
+check [64] 1
+#ACT
+newdeletetask <$STR(U19)>
+inc U19 1
+MONEY 绑定元宝 + 10000
+newchangetask <$STR(U19)>
+GOTO @完成任务触发
+BREAK
+
+[@任务界面109]
+#IF
+EQUAL U19 109
+check [65] 0
+ISONMAP 3
+#ACT
+OPENNPCSHOWEX 10
+newchangetask <$STR(U19)>
+BREAK
+
+#IF
+EQUAL U19 109
+check [65] 1
+#ACT
+newdeletetask <$STR(U19)>
+inc U19 1
+CHANGEEXP + 50000
+newchangetask <$STR(U19)>
+GOTO @完成任务触发
+BREAK
+
+[@任务界面110]
+#IF
+EQUAL U19 110
+check [66] 0
+#ACT
+mapmove 3 330 324 1
+newchangetask <$STR(U19)>
+BREAK
+
+#IF
+EQUAL U19 110
+check [66] 1
+#ACT
+newdeletetask <$STR(U19)>
+inc U19 1
+MONEY 绑定元宝 + 10000
+newchangetask <$STR(U19)>
+GOTO @完成任务触发
+BREAK
+
+[@任务界面111]
+#IF
+EQUAL U19 111
+check [67] 0
+ISONMAP 3
+#ACT
+OPENNPCSHOWEX 11
+newchangetask <$STR(U19)>
+BREAK
+
+#IF
+EQUAL U19 111
+check [67] 1
+#ACT
+newdeletetask <$STR(U19)>
+inc U19 1
+CHANGEEXP + 60000
+newchangetask <$STR(U19)>
+GOTO @完成任务触发
+BREAK
+
+[@任务界面112]
+#IF
+EQUAL U19 112
+check [68] 0
+#ACT
+newchangetask <$STR(U19)>
+BREAK
+
+#IF
+EQUAL U19 112
+check [68] 1
+#ACT
+newdeletetask <$STR(U19)>
+inc U19 2
+CHANGEEXP + 60000
+newchangetask <$STR(U19)>
+GOTO @完成任务触发
+BREAK
+
+[@任务界面113]
+#if
+CHECKRENEWLEVEL < 2
+#act
+sendmsg 9 请先将角色升到2转
+break
+
+#IF
+EQUAL U19 113
+check [77] 0
+#ACT
+mapmove xbqc1 90 85 1
+newchangetask <$STR(U19)>
+BREAK
+
+#IF
+EQUAL U19 113
+check [77] 1
+#ACT
+newdeletetask <$STR(U19)>
+inc U19 1
+GiveStateItem 星辰石[小] 10 1 0 0 0 0 0 0 1
+newchangetask <$STR(U19)>
+GOTO @完成任务触发
+BREAK
+
+[@任务界面114]
+#if
+CHECKRENEWLEVEL < 2
+#act
+sendmsg 9 请先将角色升到2转
+break
+
+#IF
+EQUAL U19 114
+check [78] 0
+#ACT
+mapmove xbqc1 85 90 1
+newchangetask <$STR(U19)>
+BREAK
+
+#IF
+EQUAL U19 114
+check [78] 1
+#ACT
+newdeletetask <$STR(U19)>
+inc U19 1
+CHANGEEXP + 100000
+newchangetask <$STR(U19)>
+GOTO @完成任务触发
+BREAK
+
+[@任务界面115]
+#if
+CHECKRENEWLEVEL < 2
+#act
+sendmsg 9 请先将角色升到2转
+break
+
+#IF
+EQUAL U19 115
+check [79] 0
+#ACT
+newchangetask <$STR(U19)>
+BREAK
+
+#IF
+EQUAL U19 115
+check [79] 1
+#ACT
+newdeletetask <$STR(U19)>
+inc U19 1
+GiveStateItem 转生石Lv.2 5 0 0 0 0 0 0 1 1
+newchangetask <$STR(U19)>
+GOTO @完成任务触发
+BREAK
+
+
+[@任务界面116]
+#if
+CHECKRENEWLEVEL < 2
+#act
+sendmsg 9 请先将角色升到2转
+break
+
+#IF
+EQUAL U19 116
+check [159] 0
+#ACT
+newchangetask <$STR(U19)>
+mapmove xbqc1 92 95
+OPENNPCSHOWEX 39
+BREAK
+
+#IF
+EQUAL U19 116
+check [159] 1
+#ACT
+newdeletetask <$STR(U19)>
+inc U19 1
+MONEY 绑定元宝 + 50000
+newchangetask <$STR(U19)>
+GOTO @完成二大陆支线任务触发
+BREAK
+
+
+
+[@任务界面200]
+#if
+CHECKRENEWLEVEL < 2
+#act
+sendmsg 9 请先将角色升到2转
+break
+
+#IF
+EQUAL U49 200
+check [80] 0
+#ACT
+newchangetask <$STR(U49)>
+mapmove xbqc1 92 95
+OPENNPCSHOWEX 37
+BREAK
+
+#IF
+EQUAL U49 200
+check [80] 1
+#ACT
+newdeletetask <$STR(U49)>
+inc U49 1
+MONEY 绑定元宝 + 50000
+newchangetask <$STR(U49)>
+GOTO @完成二大陆支线任务触发
+BREAK
+
+[@任务界面201]
+#if
+CHECKRENEWLEVEL < 2
+#act
+sendmsg 9 请先将角色升到2转
+break
+
+#IF
+EQUAL U49 201
+check [81] 0
+#ACT
+newchangetask <$STR(U49)>
+mapmove xbqc1 92 95
+OPENNPCSHOWEX 45
+BREAK
+
+#IF
+EQUAL U49 201
+check [81] 1
+#ACT
+newdeletetask <$STR(U49)>
+inc U49 1
+MONEY 绑定元宝 + 50000
+newchangetask <$STR(U49)>
+GOTO @完成二大陆支线任务触发
+BREAK
+
+[@任务界面202]
+#if
+CHECKRENEWLEVEL < 2
+#act
+sendmsg 9 请先将角色升到2转
+break
+
+#IF
+EQUAL U49 202
+check [82] 0
+#ACT
+newchangetask <$STR(U49)>
+mapmove xbqc1 92 95
+OPENNPCSHOWEX 41
+BREAK
+
+#IF
+EQUAL U49 202
+check [82] 1
+#ACT
+newdeletetask <$STR(U49)>
+inc U49 1
+MONEY 绑定元宝 + 50000
+newchangetask <$STR(U49)>
+GOTO @完成二大陆支线任务触发
+BREAK
+
+[@任务界面300]
+#IF
+EQUAL U84 300
+check [83] 0
+#ACT
+OPENHYPERLINK 31
+BREAK
+
+#IF
+check [83] 1
+EQUAL U84 300
+#ACT
+
+CHANGEEXP + 3600000
+NEWDELETETASK <$STR(U84)>
+inc U84 1
+GOTO @完成行会支线任务触发
+BREAK
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[@完成任务触发]
+#IF
+Equal <$CLIENTFLAG> 1
+#ACT
+Screffects 100 4011 535 200 1 1 0
+#CALL [\任务系统\任务系统QM.txt] @任务系统QM
+
+#IF
+Equal <$CLIENTFLAG> 2
+#ACT
+Screffects 100 4011 565 70 1 1 0
+#CALL [\任务系统\任务系统QM.txt] @任务系统QM
+
+
+[@完成支线任务触发]
+#IF
+Equal <$CLIENTFLAG> 1
+#ACT
+Screffects 100 4011 535 200 1 1 0
+#CALL [\任务系统\支线任务系统QM.txt] @支线任务系统QM
+
+
+
+
+#IF
+Equal <$CLIENTFLAG> 2
+#ACT
+Screffects 100 4011 565 70 1 1 0
+#CALL [\任务系统\支线任务系统QM.txt] @支线任务系统QM
+
+
+
+
+[@完成二大陆支线任务触发]
+#IF
+Equal <$CLIENTFLAG> 1
+#ACT
+Screffects 100 4011 565 70 1 1 0
+#CALL [\任务系统\支线任务系统二大陆QM.txt] @二大陆支线任务系统QM
+
+#IF
+Equal <$CLIENTFLAG> 2
+#ACT
+Screffects 100 4011 565 70 1 1 0
+#CALL [\任务系统\支线任务系统二大陆QM.txt] @二大陆支线任务系统QM
+;======================================================================
+
+[@完成行会支线任务触发]
+#IF
+Equal <$CLIENTFLAG> 1
+#ACT
+Screffects 100 4011 565 70 1 1 0
+#CALL [\任务系统\支线任务系统行会QM.txt] @行会支线任务系统QM
+
+#IF
+Equal <$CLIENTFLAG> 2
+#ACT
+Screffects 100 4011 565 70 1 1 0
+#CALL [\任务系统\支线任务系统行会QM.txt] @行会支线任务系统QM
+}

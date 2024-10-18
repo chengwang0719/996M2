@@ -1,0 +1,310 @@
+[@main]
+
+
+#IF
+#ACT
+
+
+
+#SAY 
+<Img|x=299.0|y=190.0|img=public/bg_npc_10.jpg|loadDelay=1|move=0|reset=1|bg=1|show=0>
+<Layout|x=545|y=0|width=80|height=80|link=@exit>
+<Button|x=893.0|y=190.0|pimg=public/1900000511.png|nimg=public/1900000510.png|link=@exit>
+<Text|x=345.0|y=236.0|size=18|color=255|text=管理权限|link=@巨量管理>
+<Text|x=435.0|y=237.0|size=18|color=255|text=刷装备: @11   调级:@j>
+<Text|x=343.0|y=274.0|size=18|color=255|text=领取10元充值|link=@巨量10元>
+<Text|x=464.0|y=275.0|size=18|color=255|text=领取68元充值|link=@巨量68元>
+<Text|x=586.0|y=276.0|size=18|color=255|text=领取98元充值|link=@巨量98元>
+<Text|x=703.0|y=275.0|size=18|color=255|text=领取198充值|link=@巨量198元>
+<Text|x=345.0|y=313.0|size=18|color=255|text=领取328充值|link=@巨量328元>
+<Text|x=465.0|y=312.0|size=18|color=255|text=领取648充值|link=@巨量648元>
+<Text|x=580.0|y=311.0|size=18|color=255|text=领取1000充值|link=@巨量1000元>
+<Text|x=698.0|y=311.0|size=18|color=255|text=领取1998充值|link=@巨量1998元>
+<Text|x=472.0|y=357.0|size=18|color=255|text=增加开区天数|link=@巨量天数>
+<Text|x=343.0|y=357.0|size=18|color=250|text=减少开区天数|link=@减巨量天数>
+<Text|x=343.0|y=402.0|size=18|color=255|text=转生5直购礼包|link=@转生5直购礼包>
+<Text|x=484.0|y=401.0|size=18|color=255|text=转生6直购礼包|link=@转生6直购礼包>
+<Text|x=343.0|y=437.0|size=18|color=255|text=转生7直购礼包|link=@转生7直购礼包>
+<Text|x=486.0|y=437.0|size=18|color=255|text=转生8直购礼包|link=@转生8直购礼包>
+<Text|x=616.0|y=437.0|size=18|color=255|text=转生9直购礼包|link=@转生9直购礼包>
+<Text|x=742.0|y=437.0|size=18|color=255|text=转生10直购礼包|link=@转生10直购礼包>
+
+
+
+
+
+
+
+[@巨量天数]
+#IF
+#ACT
+INC G0 1
+SENDMSG 9 开区天数增加1
+
+
+
+[@减巨量天数]
+#IF
+#ACT
+DEC G0 1
+SENDMSG 9 开区天数减1
+
+
+
+
+
+
+
+[@巨量管理]
+#if
+#act
+CHANGEPERMISSION 10
+CHANGEMODE 1 1
+CHANGEMODE 2 1
+CHANGEMODE 3 1
+SENDMSG 9 权限给与成功
+
+[@巨量10元]
+#if
+#act
+money 元宝 + 50000
+money 点卷 + 100
+money 充值点 + 10
+inc J100 10
+
+#IF
+CHECK [150] 0
+#ACT
+SET [150] 1
+MailGIVE 点卡福袋 2 #0#1#4#6#8
+MailGIVE 点卡 1000 
+MailGIVE 元宝 100000 
+SendMail 1 充值首赠送 您本次充值10元，奖励你[首赠礼包]请点提取! 
+
+[@巨量68元]
+#if
+#act
+money 元宝 + 340000
+money 点卷 + 680
+money 充值点 + 68
+inc J100 68
+
+#IF
+CHECK [151] 0
+#ACT
+SET [151] 1
+MailGIVE 传送功能 1 #0#1#4#6#8
+MailGIVE 点卡 6800 
+MailGIVE 元宝 700000 
+SendMail 1 充值首赠送 您本次充值68元，奖励你[首赠礼包]请点提取! 
+
+[@巨量98元]
+#if
+#act
+money 元宝 + 490000
+money 点卷 + 980
+money 充值点 + 98
+inc J100 98
+
+#IF
+CHECK [152] 0
+#ACT
+SET [152] 1
+MailGIVE 超级祝福油 4 #0#1#4#6#8
+MailGIVE 点卡 9800
+MailGIVE 元宝 1000000 
+SendMail 1 充值首赠送 您本次充值98元，奖励你[首赠礼包]请点提取! 
+
+[@巨量198元]
+#if
+#act
+money 元宝 + 990000
+money 点卷 + 1980
+money 充值点 + 198
+inc J100 198
+
+#IF
+CHECK [153] 0
+#ACT
+SET [153] 1
+CONFERTITLE 切割500
+#CALL [\功能脚本\切割管理.txt] @称号切割伤害
+MailGIVE 点卡 19800 
+MailGIVE 元宝 2000000
+SendMail 1 充值首赠送 您本次充值198元，奖励你[首赠礼包]请点提取! 
+
+
+[@巨量328元]
+#if
+#act
+money 元宝 + 1640000
+money 点卷 + 3280
+money 充值点 + 328
+inc J100 328
+
+
+#IF
+CHECK [154] 0
+#ACT
+SET [154] 1
+MailGIVE 书页 1000 #0#1#4#6#8
+MailGIVE 点卡 32800
+MailGIVE 元宝 3300000 
+SendMail 1 充值首赠送 您本次充值328元，奖励你[首赠礼包]请点提取! 
+
+
+[@巨量648元]
+#if
+#act
+money 元宝 + 3280000
+money 点卷 + 6480
+money 充值点 + 648
+inc J100 648
+
+#IF
+CHECK [155] 0
+#ACT
+SET [155] 1
+MailGIVE 符石自选(小)礼盒 3 #0#1#4#6#8
+MailGIVE 点卡 64800
+MailGIVE 元宝 6500000 
+SendMail 1 充值首赠送 您本次充值648元，奖励你[首赠礼包]请点提取!  
+
+
+[@巨量1000元]
+#if
+#act
+money 元宝 + 5000000
+money 点卷 + 10000
+money 充值点 + 1000
+inc J100 1000
+
+#IF
+CHECK [157] 0
+#ACT
+SET [157] 1
+MailGIVE 随机大符石 1 #0#1#4#6#8
+MailGIVE 点卡 100000
+MailGIVE 元宝 10000000 
+SendMail 1 充值首赠送 您本次充值1000元，奖励你[首赠礼包]请点提取! 
+
+[@巨量1998元]
+#if
+#act
+money 元宝 + 10000000
+money 点卷 + 19800
+money 充值点 + 1998
+inc J100 1998
+
+#IF
+CHECK [158] 0
+#ACT
+SET [158] 1
+MailGIVE 符石自选(大)礼盒 2 #0#1#4#6#8
+MailGIVE 点卡 200000
+MailGIVE 元宝 20000000
+SendMail 1 充值首赠送 您本次充值1998元，奖励你[首赠礼包]请点提取! 
+
+[@转生5直购礼包]
+#if
+check [190] 0
+CHECKRENEWLEVEL = 4
+#act
+inc J100 98
+MONEY 充值点 + 98
+set [190] 1
+MailGIVE 藏器宝令 10 0#1#4#5#8
+MailGIVE 转生石Lv.3 21 0#1#4#5#8
+MailGIVE 点卡福袋 20 0#1#4#5#8
+MailGIVE 元宝福袋 40 0#1#4#5#8
+SendMail 1 98转生礼包已发送,请点击提取
+#CALL [\主界面基础按钮\主界面基础按钮QM.txt] @基础按钮QM
+#CALL [\主界面基础按钮\主界面游戏按钮.txt] @界面游戏按钮
+#elseact
+sendmsg 9 只可以转生4级的时候购买，且只能买一次
+
+[@转生6直购礼包]
+#if
+check [191] 0
+CHECKRENEWLEVEL = 5
+#act
+inc J100 128
+MONEY 充值点 + 128
+set [191] 1
+MailGIVE 藏器宝令 15 0#1#4#5#8
+MailGIVE 转生石Lv.3 30 0#1#4#5#8
+MailGIVE 点卡福袋 25 0#1#4#5#8
+MailGIVE 元宝福袋 50 0#1#4#5#8
+SendMail 1 128转生礼包已发送,请点击提取
+#CALL [\主界面基础按钮\主界面基础按钮QM.txt] @基础按钮QM
+#CALL [\主界面基础按钮\主界面游戏按钮.txt] @界面游戏按钮
+#elseact
+sendmsg 9 只可以转生5级的时候购买，且只能买一次
+[@转生7直购礼包]
+#if
+check [192] 0
+CHECKRENEWLEVEL = 6
+#act
+inc J100 288
+MONEY 充值点 + 288
+set [192] 1
+MailGIVE 藏器圣令 10 0#1#4#5#8
+MailGIVE 转生石Lv.4 38 0#1#4#5#8
+MailGIVE 点卡福袋 30 0#1#4#5#8
+MailGIVE 元宝福袋 60 0#1#4#5#8
+SendMail 1 288转生礼包已发送,请点击提取
+#CALL [\主界面基础按钮\主界面基础按钮QM.txt] @基础按钮QM
+#CALL [\主界面基础按钮\主界面游戏按钮.txt] @界面游戏按钮
+#elseact
+sendmsg 9 只可以转生6级的时候购买，且只能买一次
+[@转生8直购礼包]
+#if
+check [193] 0
+CHECKRENEWLEVEL = 7
+#act
+inc J100 328
+set [193] 1
+MONEY 充值点 + 328
+MailGIVE 藏器圣令 15 0#1#4#5#8
+MailGIVE 转生石Lv.4 50 0#1#4#5#8
+MailGIVE 点卡福袋 35 0#1#4#5#8
+MailGIVE 元宝福袋 70 0#1#4#5#8
+SendMail 1 328转生礼包已发送,请点击提取
+#CALL [\主界面基础按钮\主界面基础按钮QM.txt] @基础按钮QM
+#CALL [\主界面基础按钮\主界面游戏按钮.txt] @界面游戏按钮
+#elseact
+sendmsg 9 只可以转生7级的时候购买，且只能买一次
+[@转生9直购礼包]
+#if
+check [194] 0
+CHECKRENEWLEVEL = 8
+#act
+inc J100 788
+set [194] 1
+MONEY 充值点 + 788
+MailGIVE 藏器圣令 20 0#1#4#5#8
+MailGIVE 转生石Lv.5 50 0#1#4#5#8
+MailGIVE 点卡福袋 40 0#1#4#5#8
+MailGIVE 元宝福袋 80 0#1#4#5#8
+SendMail 1 788转生礼包已发送,请点击提取
+#CALL [\主界面基础按钮\主界面基础按钮QM.txt] @基础按钮QM
+#CALL [\主界面基础按钮\主界面游戏按钮.txt] @界面游戏按钮
+#elseact
+sendmsg 9 只可以转生8级的时候购买，且只能买一次
+[@转生10直购礼包]
+#if
+check [195] 0
+CHECKRENEWLEVEL = 9
+#act
+inc J100 999
+set [195] 1
+MONEY 充值点 + 999
+MailGIVE 藏器圣令 27 0#1#4#5#8
+MailGIVE 转生石Lv.5 62 0#1#4#5#8
+MailGIVE 点卡福袋 50 0#1#4#5#8
+MailGIVE 元宝福袋 120 0#1#4#5#8
+SendMail 1 999转生礼包已发送,请点击提取
+#CALL [\主界面基础按钮\主界面基础按钮QM.txt] @基础按钮QM
+#CALL [\主界面基础按钮\主界面游戏按钮.txt] @界面游戏按钮
+#elseact
+sendmsg 9 只可以转生9级的时候购买，且只能买一次

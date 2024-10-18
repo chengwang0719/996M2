@@ -1,0 +1,71 @@
+[@main]
+
+
+
+;#if
+;small <$HFDAYS> 0
+;#act
+;sendmsg 9 【提示】未到开放时间
+;break
+
+
+
+#if
+equal U240 1
+#act
+goto @提交押镖页面
+#elseact
+goto @镖车在路上
+
+
+[@镖车在路上]
+#or
+CheckSlaveName 普通镖车
+CheckSlaveName 中级镖车
+CheckSlaveName 高级镖车
+CheckSlaveName 豪华镖车
+#act
+sendmsg 9 押镖任务未完成,请完成押镖任务
+break
+#elseact
+sendmsg 9 请先接下押镖任务再来吧！
+break
+
+[@提交押镖页面]
+#if
+#say
+<Button|x=-2526.0|y=-1172.0|width=115120|height=112880|color=224|nimg=npc/zd.png|size=18|mimg=npc/zd.png|pimg=npc/zd.png|link=@exit>
+<Img|x=1.0|y=-20.0|width=465|height=307|rotate=0|scale=1.2|loadDelay=0|move=0|bg=1|show=4|esc=1|reset=1|img=topbtn/xsyb/tk.png>
+<Button|x=435.0|y=-9.0|nimg=public/close-2.png|mimg=public/close-2.png|link=@exit>
+
+<Img|children={1d}|x=169.0|y=144.0|width=50|height=50|reset=1|esc=1|loadDelay=0|show=4|img=npc/jnqh/kuang.png|move=0>
+<Img|children={1a}|x=238.0|y=144.0|width=50|height=50|reset=1|esc=1|loadDelay=0|show=4|img=npc/jnqh/kuang.png|move=0>
+#if
+equal <$STR(T210)> 普通镖车
+#say
+<ItemShow|id=1d|x=-7.0|y=-9.0|width=50|height=50|itemid=20225|itemcount=1|scale=0.8|bgtype=0|showtips=1>
+<ItemShow|id=1a|x=-7.0|y=-9.0|width=50|height=50|itemid=20179|itemcount=2|scale=0.8|bgtype=0|showtips=1>
+#if
+equal <$STR(T210)> 中级镖车
+#say
+<ItemShow|id=1d|x=-7.0|y=-9.0|width=50|height=50|itemid=20226|itemcount=1|scale=0.8|bgtype=0|showtips=1>
+<ItemShow|id=1a|x=-7.0|y=-9.0|width=50|height=50|itemid=20179|itemcount=4|scale=0.8|bgtype=0|showtips=1>
+
+#if
+equal <$STR(T210)> 高级镖车
+#say
+<ItemShow|id=1d|x=-7.0|y=-9.0|width=50|height=50|itemid=20227|itemcount=1|scale=0.8|bgtype=0|showtips=1>
+<ItemShow|id=1a|x=-7.0|y=-9.0|width=50|height=50|itemid=20179|itemcount=6|scale=0.8|bgtype=0|showtips=1>
+
+#if
+equal <$STR(T210)> 豪华镖车
+#say
+<ItemShow|id=1d|x=-7.0|y=-9.0|width=50|height=50|itemid=20228|itemcount=1|scale=0.8|bgtype=0|showtips=1>
+<ItemShow|id=1a|x=-7.0|y=-9.0|width=50|height=50|itemid=20179|itemcount=9|scale=0.8|bgtype=0|showtips=1>
+[@exit]
+#if
+#act
+KILLCALLMOB <$STR(T210)> 1 1
+mov U240 0
+mov T210 
+

@@ -1,0 +1,175 @@
+[@法师] 
+{
+#if
+gender man
+#act
+mov N$特效 4123
+#elseact
+mov N$特效 4129
+
+#if
+#act
+GETVALIDSTRSUPER <$STR(A6)> # S$法师信息_
+goto @天下第一展示
+
+
+[@天下第一展示]
+#if
+equal A5
+#say
+<Img|x=208.0|y=10.0|img=npc/txdy/01.png|reset=1|bg=1|move=0|loadDelay=1|show=0>
+<Layout|x=51.0|y=-414.0|width=80|height=80|link=@exit>
+<Button|x=948.0|y=50.0|pimg=public/1900000511.png|nimg=public/1900000510.png|link=@exit>
+<Button|x=460.0|y=298.0|img=npc/txdy/bt.png|nimg=npc/txdy/bt.png|link=@申请>
+<Img|x=193.0|y=318.0|rotate=0|move=0|reset=1|bg=0|img=npc/txdy/123.png|show=0|loadDelay=1>
+<RText|x=249.0|y=399.0|size=12|color=251|outline=2|text=1.等级需达到45级才可申请>
+<RText|x=248.0|y=421.0|size=12|color=251|outline=2|text=2.优先等级其次本职业主属性(攻、魔、道)>
+<RText|x=248.0|y=443.0|size=12|color=251|outline=2|text=3.同等级情况对比本职业(攻、魔、道)>
+<RText|x=248.0|y=464.0|size=12|color=251|outline=2|text=4.称号[天下第一]:杀怪爆率增加10%和攻击伤害5%>
+
+
+
+
+#if
+not equal A5
+#say
+<Img|x=208.0|y=10.0|img=npc/txdy/3.png|reset=1|bg=1|move=0|loadDelay=1|show=0>
+<Layout|x=51.0|y=-414.0|width=80|height=80|link=@exit>
+<Button|x=948.0|y=50.0|pimg=public/1900000511.png|nimg=public/1900000510.png|link=@exit>
+<Img|x=524.0|y=136.0|rotate=0|loadDelay=1|reset=1|bg=0|img=npc/txdy/dyzs.png|move=0|show=0>
+<Effect|x=579.0|y=377.0|scale=1|speed=1|act=0|effectid=<$STR(N$特效)>|dir=5|effecttype=0>
+<RText|x=375.0|y=265.0|size=16|color=246|outline=1|text=<$STR(S$法师信息_3)>>
+<RText|x=375.0|y=296.0|size=16|color=246|outline=1|text=<$STR(S$法师信息_2)>>
+<RText|x=767.0|y=295.0|size=16|color=246|outline=1|text=<$STR(S$法师信息_1)>>
+<Button|x=703.0|y=312.0|img=npc/txdy/bt.png|nimg=npc/txdy/bt.png|link=@申请>
+<Img|x=193.0|y=318.0|rotate=0|move=0|reset=1|bg=0|img=npc/txdy/123.png|show=0|loadDelay=1>
+<RText|x=249.0|y=399.0|size=12|color=251|outline=2|text=1.等级需达到45级才可申请>
+<RText|x=248.0|y=421.0|size=12|color=251|outline=2|text=2.优先等级其次本职业主属性(攻、魔、道)>
+<RText|x=248.0|y=443.0|size=12|color=251|outline=2|text=3.同等级情况对比本职业(攻、魔、道)>
+<RText|x=248.0|y=464.0|size=12|color=251|outline=2|text=4.称号[天下第一]:杀怪爆率增加10%和攻击伤害5%>
+
+
+
+#if
+equal A401
+equal A5 <$USERNAME>
+#say
+<Input|x=454.0|y=506.0|width=305|height=24|type=0|size=16|maxcount=20|inputid=3|mincount=2|color=255|placecolor=158|place=请输入你的宣言|errortips=1>
+<Button|x=775.0|y=507.0|color=251|size=16|text=发送|submitInput=3|link=@发送宣言>
+
+#if
+not equal A401
+#say
+<RText|a=4|x=25|y=20.0|percentx=76.3|percenty=90.2|size=16|color=246|outline=2|text=宣言: <<$STR(A401)>/FCOLOR=250>>
+
+[@发送宣言]
+#if
+#act
+MOV A401 <$NPCINPUT(3)>
+goto @天下第一展示
+
+
+
+[@申请]
+#if
+NOT CHECKLEVELEX ? 45
+#act
+sendmsg 9 你需要到达45级才可以申请天下第一哦！
+break
+
+#if
+checkjob Wizard
+#act
+#elseact
+sendmsg 9 你的职业不是法师
+break
+
+;=======当前天下第一是空时申请
+#if
+equal A5
+#act
+mov A5 <$USERNAME>
+mov A6 <$USERNAME>#
+inc A6 <$LEVEL>#
+inc A6 <$MAXMC>#
+Mov A7 天下第一法\<$str(A5)>
+CONFERTITLE 天下第一
+Goto @执行称号刷新
+SENDMSGNEW 255 0 <<$USERNAME>/FCOLOR=251>成功申请天下第一法师！ 1 5
+CLOSE
+break
+
+
+#IF
+#ACT
+GETVALIDSTRSUPER <$STR(A6)> # S$法师信息_
+
+;=======当前天下第一再榜是当前人物
+#IF
+EQUAL S$法师信息_1 <$USERNAME>
+#ACT
+Mov A5 <$USERNAME>
+Mov A6 <$USERNAME>#
+INC A6 <$LEVEL>#
+INC A6 <$MAXMC>#
+Mov A7 天下第一法\<$str(A5)>
+
+DelConfigFileSection ..\QuestDiary\天下第一\第一存储.ini <$STR(S$法师信息_1)>
+SENDMSG 9 你已经是天下第一，信息已经帮你刷新！
+CLOSE
+BREAK
+
+;=======申请天下第一等级要大于再榜人物
+#if
+large <$LEVEL> <$STR(S$法师信息_2)>
+#act
+Mov A5 <$USERNAME>
+Mov A6 <$USERNAME>#
+INC A6 <$LEVEL>#
+INC A6 <$MAXMC>#
+Mov A7 天下第一法\<$str(A5)>
+CONFERTITLE 天下第一
+sendmsg 9 <$STR(S$法师信息_1)>
+<$STR(S$法师信息_1)>.DEPRIVETITLE 天下第一
+;<$STR(S$战士信息_1)>.Goto @执行称号刷新
+mov A401 
+Goto @执行称号刷新
+DelConfigFileSection ..\QuestDiary\天下第一\第一存储.ini <$STR(S$法师信息_1)>
+SENDMSGNEW 255 0 <<$USERNAME>/FCOLOR=251>成功申请天下第一法师！ 1 5
+CLOSE
+break
+
+;=========申请天下第一等级和攻击大于在帮人物
+#if
+EQUAL <$LEVEL> <$STR(S$法师信息_2)>
+large <$MAXMC> <$STR(S$法师信息_3)>
+#act
+Mov A5 <$USERNAME>
+Mov A6 <$USERNAME>#
+INC A6 <$LEVEL>#
+INC A6 <$MAXMC>#
+Mov A7 天下第一战\<$str(A5)>
+CONFERTITLE 天下第一
+sendmsg 9 <$STR(S$法师信息_1)>
+<$STR(S$法师信息_1)>.DEPRIVETITLE 天下第一
+mov A401 
+;<$STR(S$战士信息_1)>.Goto @执行称号刷新
+Goto @执行称号刷新
+DelConfigFileSection ..\QuestDiary\天下第一\第一存储.ini <$STR(S$法师信息_1)>
+SENDMSGNEW 255 0 <<$USERNAME>/FCOLOR=251>成功申请天下第一法师！ 1 5
+CLOSE
+break
+
+#IF
+#ACT
+SENDMSG 9 继续努力，你只差一点点就可以上榜了！
+break
+
+
+[@执行称号刷新]
+#IF
+CHECKTITLE 天下第一
+#ACT
+SetIcon 2 1 20319 -116 -108 0 0
+
+}

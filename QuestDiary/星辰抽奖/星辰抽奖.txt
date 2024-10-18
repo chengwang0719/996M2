@@ -1,0 +1,264 @@
+[@页面]
+{
+#if
+#act
+;mov J19 0
+mov S$规则 
+
+
+#if
+SMALL J17 20
+#act
+mov T200 暂无
+goto @星辰页面
+break
+
+#if
+LARGE J17 19
+small J17 40
+#act
+mov T200 星辰之光
+goto @星辰页面
+break
+
+#if
+LARGE J17 39
+SMALL J17 60
+
+#act
+mov T200 星辰之梦
+goto @星辰页面
+break
+
+#if
+LARGE J17 59
+SMALL J17 80
+#act
+mov T200 星辰之涌
+goto @星辰页面
+break
+
+#if
+LARGE J17 79
+SMALL J17 100
+#act
+mov T200 星辰耀眼
+goto @星辰页面
+break
+
+#if
+large J17 100
+#act
+mov T200 星辰辉煌
+mov J17 100
+goto @星辰页面
+break
+
+#if
+EQUAL J17 100
+#act
+mov T200 星辰辉煌
+mov J17 100
+goto @星辰页面
+break
+
+
+
+[@星辰页面]
+#IF
+#say
+<Button|x=-2526.0|y=-1172.0|width=115120|height=112880|nimg=npc/zd.png|color=224|mimg=npc/zd.png|size=18|pimg=npc/zd.png|link=@exit>
+<Img|children={1,2,3,4,6,7,8,9,10,11,12,13,14,15}|a=4|x=553.0|y=295.5|show=4|esc=1|reset=1|loadDelay=0|move=0|img=npc/xyxc/bj.png|bg=1>
+<Img|id=2|x=507.0|y=101.0|width=445|height=49|loadDelay=0|show=4|esc=1|reset=1|img=npc/xyxc/1.png|move=0>
+<Img|id=3|x=572.0|y=171.0|width=202|height=35|move=0|show=4|esc=1|reset=1|img=npc/xyxc/6.png|loadDelay=0>
+
+<Button|id=4|x=697.0|y=157.0|width=53|height=52|mimg=npc/xyxc/5.png|nimg=npc/xyxc/5.png|link=@规则>
+
+<$str(S$规则)>
+
+<Img|id=6|children={101,102,103}|x=579.0|y=240.0|width=288|height=100|reset=1|loadDelay=0|esc=1|move=0|img=npc/xyxc/4.png|show=4>
+
+<Text|id=101|x=177.0|y=2.0|color=251|outline=1|size=16|text=<$str(J17)>%>
+<Text|id=102|x=177.0|y=40.0|color=251|outline=1|size=16|text=<$str(T200)>>
+<Text|id=103|x=177.0|y=76.0|color=251|outline=1|size=16|text=<$str(J19)>次>
+
+<Img|id=7|x=518.0|y=479.0|reset=1|loadDelay=0|show=4|img=topbtn/fldt/box.png|esc=1|move=0>
+<ItemShow|id=8|x=519.0|y=480.0|width=70|height=70|itemid=20193|itemcount=1|showtips=1|bgtype=0>
+<Img|id=9|x=582.0|y=479.0|reset=1|loadDelay=0|show=4|img=topbtn/fldt/box.png|esc=1|move=0>
+<ItemShow|id=10|x=583.0|y=479.0|width=70|height=70|itemid=20194|itemcount=1|showtips=1|bgtype=0>
+<Img|id=11|x=647.0|y=479.0|reset=1|loadDelay=0|show=4|img=topbtn/fldt/box.png|esc=1|move=0>
+<ItemShow|id=12|x=648.0|y=478.0|width=70|height=70|itemid=20195|itemcount=1|showtips=1|bgtype=0>
+
+<Img|id=13|x=455.0|y=559.0|width=293|height=20|loadDelay=0|show=4|esc=1|reset=1|img=npc/xyxc/txt.png|move=0>
+<Button|id=14|x=661.0|y=385.0|width=202|height=42|mimg=npc/xyxc/00522.png|nimg=npc/xyxc/00522.png|link=@供奉>
+<Button|id=15|x=976.0|y=130.0|mimg=public/close-t.png|nimg=public/close-t.png|link=@exit>
+
+<$str(S$星辰特效)>
+
+<Img|id=1|children={1a}|x=9.0|y=59.0|move=0|img=npc/xyxc/sfx_0.png|show=4|reset=1|esc=1|loadDelay=0>
+
+
+
+
+
+
+
+[@供奉]
+
+;J17 星辰值
+;T200 星辰称号
+;J19 星辰次数
+#if
+equal U19 114
+large J19 8
+#act
+set [78] 1
+#CALL [\任务系统\任务系统QF.txt] @任务系统QF
+
+
+
+
+
+#if
+equal G7 1
+#act
+sendmsg 9 今日供奉时间已到，请明日12点过后再来
+BREAK
+
+#or
+checkitem 星辰石[大] 1
+checkitem 星辰石[中] 1
+checkitem 星辰石[小] 1
+#act
+#elseact
+sendmsg 9 背包里缺少星辰石材料！
+break
+
+
+#if
+large J19 99
+#ACT
+SENDMSG 9 今日供奉已到次数，请明日12点过后再来！
+break
+
+#if
+check [222] 0
+checkitem 星辰石[小] 1
+#act
+mov S$星辰抽奖识别 小
+set [222] 1
+take 星辰石[小] 1
+inc J19 1
+inc J17 1
+mov S$星辰特效 <Effect|id=1a|x=0.0|y=0.0|scale=1|speed=10|effecttype=0|dir=5|effectid=42000|act=0>
+goto @页面
+goto @到达星辰值给称号
+SetOnTimer 4 1
+break
+
+#if
+check [222] 0
+checkitem 星辰石[中] 1
+#act
+mov S$星辰抽奖识别 中
+set [222] 1
+take 星辰石[中] 1
+inc J19 1
+inc J17 3
+mov S$星辰特效 <Effect|id=1a|x=0.0|y=0.0|scale=1|speed=10|effecttype=0|dir=5|effectid=42000|act=0>
+goto @页面
+goto @到达星辰值给称号
+SetOnTimer 4 2
+break
+
+
+#if
+check [222] 0
+checkitem 星辰石[大] 1
+#act
+mov S$星辰抽奖识别 大
+set [222] 1
+take 星辰石[大] 1
+inc J19 1
+inc J17 6
+mov S$星辰特效 <Effect|id=1a|x=0.0|y=0.0|scale=1|speed=10|effecttype=0|dir=5|effectid=42000|act=0>
+goto @页面
+goto @到达星辰值给称号
+SetOnTimer 4 2
+break
+
+[@规则]
+#if
+#act
+mov S$规则 <Img|id=5|x=300|y=150|width=767|height=350|move=0|img=npc/xyxc/21.png|show=4|reset=1|esc=1|loadDelay=0>
+inc S$规则 <Button|x=1037|y=154|mimg=public/close-2.png|nimg=public/close-2.png|link=@关闭规则>
+goto @星辰页面
+
+[@关闭规则]
+#if
+#act
+mov S$规则 
+goto @星辰页面
+
+
+[@到达星辰值给称号]
+
+#if
+NOT CHECKTITLE  星辰之光
+LARGE J17 19
+small J17 40
+#act
+CONFERTITLE 星辰之光
+
+break
+
+#if
+LARGE J17 39
+SMALL J17 60
+NOT CHECKTITLE  星辰之梦
+#act
+CONFERTITLE 星辰之梦
+DEPRIVETITLE 星辰之光
+
+break
+
+#if
+NOT CHECKTITLE  星辰之涌
+LARGE J17 59
+SMALL J17 80
+#act
+CONFERTITLE 星辰之涌
+DEPRIVETITLE 星辰之梦
+
+break
+
+#if
+LARGE J17 79
+SMALL J17 100
+NOT CHECKTITLE  星辰耀眼
+#act
+CONFERTITLE 星辰耀眼
+DEPRIVETITLE 星辰之涌
+
+break
+
+#if
+equal J17 100
+NOT CHECKTITLE  星辰辉煌
+#act
+CONFERTITLE 星辰辉煌
+DEPRIVETITLE 星辰耀眼
+
+break
+
+#if
+large J17 100
+NOT CHECKTITLE  星辰辉煌
+#act
+CONFERTITLE 星辰辉煌
+DEPRIVETITLE 星辰耀眼
+
+break
+}
+
+

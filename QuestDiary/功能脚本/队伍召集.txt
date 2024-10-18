@@ -1,0 +1,139 @@
+[@启动召集]
+{
+#IF
+#ACT
+MOV S$召集地图 <$MAP>
+MOV S$召集地图名称A <$MAPTITLE>
+MOV S$召集X <$X>
+MOV S$召集Y <$Y>
+MOV N$发起召集 1
+
+#IF
+NOT EQUAL <$TEAM1>
+#ACT
+SetHumVar <$TEAM1> S73 <$str(S$召集地图名称A)>
+SetHumVar <$TEAM1> S70 <$STR(S$召集地图)>
+SetHumVar <$TEAM1> S71 <$STR(S$召集X)>
+SetHumVar <$TEAM1> S72 <$STR(S$召集Y)>
+
+#IF
+NOT EQUAL <$TEAM2>
+#ACT
+SetHumVar <$TEAM2> S73 <$str(S$召集地图名称A)>
+SetHumVar <$TEAM2> S70 <$STR(S$召集地图)>
+SetHumVar <$TEAM2> S71 <$STR(S$召集X)>
+SetHumVar <$TEAM2> S72 <$STR(S$召集Y)>
+
+#IF
+NOT EQUAL <$TEAM3>
+#ACT
+SetHumVar <$TEAM3> S73 <$str(S$召集地图名称A)>
+SetHumVar <$TEAM3> S70 <$STR(S$召集地图)>
+SetHumVar <$TEAM3> S71 <$STR(S$召集X)>
+SetHumVar <$TEAM3> S72 <$STR(S$召集Y)>
+
+#IF
+NOT EQUAL <$TEAM4>
+#ACT
+SetHumVar <$TEAM4> S73 <$str(S$召集地图名称A)>
+SetHumVar <$TEAM4> S70 <$STR(S$召集地图)>
+SetHumVar <$TEAM4> S71 <$STR(S$召集X)>
+SetHumVar <$TEAM4> S72 <$STR(S$召集Y)>
+
+#IF
+NOT EQUAL <$TEAM5>
+#ACT
+SetHumVar <$TEAM5> S73 <$str(S$召集地图名称A)>
+SetHumVar <$TEAM5> S70 <$STR(S$召集地图)>
+SetHumVar <$TEAM5> S71 <$STR(S$召集X)>
+SetHumVar <$TEAM5> S72 <$STR(S$召集Y)>
+
+#IF
+NOT EQUAL <$TEAM6>
+#ACT
+SetHumVar <$TEAM6> S73 <$str(S$召集地图名称A)>
+SetHumVar <$TEAM6> S70 <$STR(S$召集地图)>
+SetHumVar <$TEAM6> S71 <$STR(S$召集X)>
+SetHumVar <$TEAM6> S72 <$STR(S$召集Y)>
+
+#IF
+NOT EQUAL <$TEAM7>
+#ACT
+SetHumVar <$TEAM7> S73 <$str(S$召集地图名称A)>
+SetHumVar <$TEAM7> S70 <$STR(S$召集地图)>
+SetHumVar <$TEAM7> S71 <$STR(S$召集X)>
+SetHumVar <$TEAM7> S72 <$STR(S$召集Y)>
+
+
+#IF
+NOT EQUAL <$TEAM8>
+#ACT
+SetHumVar <$TEAM8> S73 <$str(S$召集地图名称A)>
+SetHumVar <$TEAM8> S70 <$STR(S$召集地图)>
+SetHumVar <$TEAM8> S71 <$STR(S$召集X)>
+SetHumVar <$TEAM8> S72 <$STR(S$召集Y)>
+
+#IF
+NOT EQUAL <$TEAM9>
+#ACT
+SetHumVar <$TEAM9> S73 <$str(S$召集地图名称A)>
+SetHumVar <$TEAM9> S70 <$STR(S$召集地图)>
+SetHumVar <$TEAM9> S71 <$STR(S$召集X)>
+SetHumVar <$TEAM9> S72 <$STR(S$召集Y)>
+
+#IF
+#ACT
+MOV N$队伍集合 1
+sendmsg 7 一支穿云箭，千军万马来相见。队伍召集已发出！
+GOTOLABEL 0 @队伍召集小地图
+
+[@队伍召集小地图]
+
+#IF
+NOT EQUAL S70
+NOT EQUAL <$TEAM0> <$USERNAME>
+#SAY
+<Img|ay=1|x=0|y=0|width=500|height=200|show=4|reset=1|bg=1|scale9r=10|scale9l=10|move=0|scale9b=10|esc=1|img=public/bg_hhzy_01.png|scale9t=10>
+<Img|ay=1|x=0|y=0|width=500|height=200|reset=1|show=4|scale9r=10|scale9l=10|img=public/bg_hhzy_01.png|scale9b=10|move=0|esc=1|scale9t=10>
+<Layout|x=427.0|y=-28.0|width=80|height=80|link=@exit>
+<Button|x=445.0|y=5.0|nimg=public/an_cha_5.png|link=@exit>
+<Img|x=18.0|y=53.0|rotate=0|img=public/bj_tiaozhan.png>
+<Text|ax=2|x=355.0|y=9.0|rotate=0|color=100|size=18|text=支援队友>
+<RText|x=44.0|y=54.0|color=255|size=16|text=<地图(<$str(S73)>(<$str(S71)>.<$str(S72)>))/FCOLOR=254>>
+<RText|x=43.0|y=86.0|color=251|size=16|text=<需要支援.自动放弃/FCOLOR=251>>
+<COUNTDOWN|id=5|x=177.0|y=86.0|size=16|time=5|color=251|count=1|link=@exit>
+<Button|x=86.0|y=110.0|nimg=public/btn_sifud_03.png|size=18|color=100|text=协助队长|link=@执行协助队长>
+<Button|x=284.0|y=113.0|nimg=public/btn_sifud_03.png|size=18|color=100|text=放弃支援|link=@exit>
+
+[@执行协助队长]
+#IF
+CHECKLEVELEX < 43
+#ACT
+sendmsg 9 你等级太低了，请到43级再去帮忙！
+BREAK
+
+#IF
+CheckHumanState 8
+#ACT
+SENDMSG 9 你已被麻痹状态，无法传送！
+break
+
+#IF
+not CHECKTITLE 狂暴之力
+#ACT
+SENDMSG 9 你没开启【狂暴之力】无法进入！
+break
+
+
+
+#IF
+NOT EQUAL S70
+#ACT
+MAPMOVE <$STR(S70)> <$STR(S71)> <$STR(S72)>
+MOV S70
+MOV S71
+MOV S72
+MOV S73
+BREAK
+
+}

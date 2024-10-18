@@ -1,0 +1,737 @@
+;======================一大陆======================
+[xbqc1 比奇省] onkillmon  allowusemyshop saylevel(42) RUNMON(1)　NORECONNECT(3:333:333)
+[3  盟重城] onkillmon  allowusemyshop saylevel(42) RUNMON(1)　NORECONNECT(3:333:333) NORUNMON
+[khpy|khpy  开荒平原] ONKILLMON NORECONNECT(3:333:333) NORUNMON
+[yzsl  勇者试炼] ONKILLMON NORECONNECT(3:333:333) NORUNMON
+[jqzd  崛起之地] ONKILLMON NORECONNECT(3:333:333) NORUNMON
+[xsts  新手探索] ONKILLMON NORECONNECT(3:333:333) NORUNMON
+[dbzl  打宝之路] ONKILLMON NORECONNECT(3:333:333) NORUNMON
+[wxly  危险领域] ONKILLMON NORECONNECT(3:333:333) NORUNMON
+
+[D5071 怪物送财] ONKILLMON NORECONNECT(3:333:333) NORUNMON
+;======================二大陆======================
+;[11  二大陆] onkillmon  allowusemyshop saylevel(42) RUNMON(1)　NORECONNECT(3:333:333)
+[wysg  仙境桃花岛] NORUNMON
+[3213  白日门] onkillmon  allowusemyshop saylevel(42) RUNMON(1)　NORECONNECT(3:333:333)
+;======================蚂蚁洞======================
+[162  万坑蚂蚁洞一层] onkillmon  saylevel(42) RUNMON(1) NORUNMON
+[163  万坑蚂蚁洞二层] onkillmon  saylevel(42) RUNMON(1) NORUNMON
+[164  万坑蚂蚁洞三层] onkillmon  saylevel(42) RUNMON(1) NORUNMON
+
+162  46 100 -> 163  78 72
+163  80 165 -> 164  25 80
+
+163  78 72 -> 162  46 100
+164  25 80 -> 163  80 165
+;======================幽灵船======================
+[ylc1  幽灵船外] onkillmon  saylevel(42) RUNMON(1) NORUNMON
+[ylc2  幽灵船舱] onkillmon  saylevel(42) RUNMON(1) NORUNMON
+[ylc3|ylc3  幽灵船底] onkillmon  saylevel(42) RUNMON(1) NORUNMON
+
+ylc1 50 63  ->  ylc2 40 68
+ylc2 95 69  ->  ylc3 52 37
+
+ylc2 40 68  ->  ylc1 50 63
+ylc3 52 37  ->  ylc2 95 69
+
+
+;======================水上世界======================
+[newss|newss  水上世界] onkillmon  saylevel(42) RUNMON(1) NORUNMON
+
+;======================血色骷髅谷======================
+[tlxy01  血色骷髅谷一层] onkillmon  saylevel(42) RUNMON(1) NORUNMON
+[tlxy02  血色骷髅谷二层] onkillmon  saylevel(42) RUNMON(1) NORUNMON
+[tlxy03  血色骷髅谷三层] onkillmon  saylevel(42) RUNMON(1) NORUNMON
+
+tlxy01  39 173 -> tlxy02  16 134
+tlxy02  123 94 -> tlxy03  15 56
+
+tlxy02  16 134 -> tlxy01  39 173
+tlxy03  15 56 -> tlxy02  123 94
+;======================火龙魔窟殿======================
+[hlk1  火龙魔窟殿一层] onkillmon  saylevel(42) RUNMON(1) NORUNMON
+[hlk2  火龙魔窟殿二层] onkillmon  saylevel(42) RUNMON(1) NORUNMON
+[hlk3  火龙魔窟殿三层] onkillmon  saylevel(42) RUNMON(1) NORUNMON
+[hlk4  火龙魔窟殿四层] onkillmon  saylevel(42) RUNMON(1) NORUNMON
+ 
+hlk1  244 44 -> hlk2 32 157
+hlk2  166 36 -> hlk3  26 476
+hlk3  417 62 -> hlk4  39 61
+
+hlk2  32 157 -> hlk1 244 44
+hlk3  26 476 -> hlk2  166 36
+hlk4  39 61 -> hlk3  417 62
+
+
+;======================石墓地图======================
+[smrk  石墓入口] onkillmon  saylevel(42) RUNMON(1) NORUNMON
+[smyc  石墓一层] onkillmon  saylevel(42) RUNMON(1) NORUNMON
+[smec  石墓二层] onkillmon  saylevel(42) RUNMON(1) NORUNMON
+[smsc  石墓三层] onkillmon  saylevel(42) RUNMON(1) NORUNMON
+[smsic 石墓四层] onkillmon  saylevel(42) RUNMON(1) NORUNMON
+[smwc  石墓五层] onkillmon  saylevel(42) RUNMON(1) NORUNMON
+[smlc  石墓六层] onkillmon  saylevel(42) RUNMON(1) NORUNMON
+[smqc  石墓七层] onkillmon  saylevel(42) RUNMON(1) NORUNMON
+[ty|khpy  桃园] onkillmon  saylevel(42) RUNMON(1) NORUNMON
+
+
+smrk  23 27 -> smyc 203 201
+smyc  364 229 -> smec 365 226
+smec  31 193 -> smsc 32 191
+smsc  350 244 -> smsic 31 342
+smsic  83 81 -> smwc 383 190
+smwc  16 200 -> smlc 33 127
+smlc  33 127 -> smwc 309 80
+smlc  29 22 -> smsic 20 344
+smlc  103 159 -> smsc 32 191
+smlc  169 136 -> smec 365 226
+smlc  172 79 -> smqc 27 74
+smqc  83 25 -> ty 96 96 3
+
+
+smyc  203 201 -> smrk 23 27
+smec  365 226 -> smyc 364 229
+smsc  32 191 -> smec 31 193
+smsic  30 344 -> smsc 350 244
+smwc  383 190 -> smsic 83 81
+smqc  27 74 -> smlc 33 127
+smlc  33 127 -> smwc 16 200
+
+
+[b341 练功房] onkillmon  allowusemyshop saylevel(42) RUNMON(1)　NORECONNECT(3:333:333) NORUNMON
+
+
+
+[0148 客栈] onkillmon  allowusemyshop saylevel(42) RUNMON(1)　NORECONNECT(3:333:333) NORUNMON
+
+3213  177 295 -> b341 24 29
+b341 25 30 -> 3213  177 295
+
+3213  208 271 -> 0148 9 15
+
+0148 9 15 -> 3213 208 271 
+;======================================================
+[wmsmrk 沃玛寺庙入口] NORUNMON
+[wmsmyc 沃玛寺庙一层] NORUNMON 
+[wmsmec 沃玛寺庙二层] NORUNMON
+[wmsm|wmsm 沃玛寺庙] NORUNMON
+ 
+wmsmrk  26 26 -> wmsmyc  338 356
+wmsmyc  251 206 -> wmsmec  198 194
+wmsmec  52 365 -> wmsm  16 19
+wmsmyc  338 356 -> wmsmrk  26 26
+wmsmec  198 194 -> wmsmyc  251 206
+wmsm  16 19 -> wmsmec  52 365
+;============================================================
+[fkrk 废矿入口] NORUNMON
+[kqyc 矿区一层] NORUNMON
+[fkqdb 废矿区东部] NORUNMON
+[1111|swd 尸王殿] NORUNMON
+[1112|swd 尸王殿] NORUNMON
+[1113|swd 尸王殿] NORUNMON
+[1114|swd 尸王殿] NORUNMON
+[1115|swd 尸王殿] NORUNMON
+
+fkrk 179 109 -> kqyc  10 8
+kqyc  85 11 -> fkqdb  8 147
+fkqdb 138 108 -> 1111  15 13
+
+kqyc  10 8 -> fkrk  179 109
+fkqdb 8 147 -> kqyc  85 11
+
+
+;==========================================================
+[gmdyc 骨魔洞一层] NORUNMON
+[gmdec 骨魔洞二层] NORUNMON
+[gmdsc 骨魔洞三层] NORUNMON
+[gmd4c 骨魔洞四层] NORUNMON
+[gmdx 骨魔洞穴]
+gmdyc  21 171 -> gmdec  32 17
+gmdec  133 182 -> gmdsc  88 165
+gmdsc  46 80 -> gmd4c  13 31
+gmd4c  13 181 -> gmdx  91 75
+
+gmdec  32 17 -> gmdyc  21 171
+gmdsc  88 165 -> gmdec  133 182
+gmd4c  13 31 -> gmdsc  46 80
+gmdx  91 75 -> gmd4c  13 181
+;===============================================================
+[nmsmrk 牛魔寺庙入口] NORUNMON
+[nmsmyc  牛魔寺庙一层] NORUNMON
+[nmsmec  牛魔寺庙二层] NORUNMON
+[nmsmsc  牛魔寺庙三层] NORUNMON
+[nmsmdt 牛魔寺庙大厅] NORUNMON
+nmsmrk  40 19 -> nmsmyc  15 19
+nmsmyc  64 53 -> nmsmec  29 28
+nmsmec  60 51 -> nmsmsc  14 17
+nmsmsc  35 23 -> nmsmdt  8 13
+
+nmsmyc  15 19 -> nmsmrk  40 19
+nmsmec  27 25 -> nmsmyc  64 53
+nmsmsc  14 17 -> nmsmec  60 51
+nmsmdt  8 13 -> nmsmsc  35 23
+
+'=============================================================
+[d401 封魔矿区] NORUNMON
+[ql 歧路] NORUNMON
+[07005 连接通道] NORUNMON
+[fmd 封魔道] NORUNMON
+[jfd 疾风殿] NORUNMON
+[lyd 烈焰殿] NORUNMON
+[ltzl 雷霆之路] NORUNMON
+[bzdt 霸者大厅] NORUNMON
+[zhd 纵横道] NORUNMON
+[mhd 魔魂殿] NORUNMON
+[fmdian|fmdian 封魔殿] NORUNMON
+[2000|gmhl 光芒回廊] NORUNMON
+[2001|gmhl 幽冥回廊] NORUNMON
+[2002|gmhl 炼狱回廊] NORUNMON
+d401 79 14 -> ql 258 270
+ql 19 99 -> 07005 33 38
+07005 30 14 -> fmd 285 280
+fmd 29 83 -> jfd  75 73
+jfd 20 17 -> 2000  83 85
+2000 20 23 -> lyd  73 76
+lyd 16 21 -> ltzl  181 176
+ltzl 20 87 -> 2000  83 85
+ltzl 35 60 -> jfd  75 73
+ltzl 38 27 -> bzdt  82 81
+ltzl 95 24 -> lyd  73 76
+bzdt 27 23 -> 2001 83 85
+2001 20 23 -> zhd  284 277
+zhd 60 150 -> lyd  73 76
+zhd 67 53 -> jfd  75 73
+zhd 170 36 -> mhd 84 87
+zhd 218 42 -> bzdt  82 81
+mhd 20 20 -> 2002 83 85
+2002 20 23 -> fmdian 80 79
+
+
+;===========================================================
+[zmsmcl 祖玛寺庙长廊] NORUNMON
+[z1|zmsmcl 祖玛寺庙长廊] NORUNMON
+[zmsmyc 祖玛寺庙一层] NORUNMON
+[zmsmec 祖玛寺庙二层] NORUNMON
+[zmsmsc 祖玛寺庙三层] NORUNMON
+[zmsm4c 祖玛寺庙四层] NORUNMON
+[zmsddt 祖玛神殿大厅] NORUNMON
+[zmjzzj 祖玛教主之家] NORUNMON
+[zmjzzjz 祖玛教主之家终] NORUNMON
+
+zmsmcl 19 16 -> zmsmyc 302 74
+zmsmyc 165 217 -> zmsmec 294 147
+zmsmec 165 217 -> zmsmcl 19 16
+zmsmec 187 230 -> zmsmsc 165 217
+zmsmsc 187 230 -> zmsmyc 302 74
+zmsmsc 52 173 -> zmsm4c 98 98
+zmsm4c 122 10 -> zmsddt 8 11
+zmsddt 39 43 -> zmjzzj 14 14
+zmjzzj 27 14 -> zmjzzjz 31 167
+
+zmsmyc 302 74 -> zmsmcl 19 16
+zmsmec 294 147 -> zmsmyc 165 217
+zmsmsc 165 217 -> zmsmec 187 230
+zmsm4c 98 98 -> zmsmsc 52 173
+zmsddt 8 11 -> zmsm4c 122 10
+zmjzzj 14 14 -> zmsddt 39 43
+zmjzzjz 29 169 -> zmjzzj 27 14
+
+;===============六大重装迷宫跑法
+
+[khsd1|dnxb  迷宫] onkillmon  saylevel(42) RUNMON(1) NORUNMON
+[khsd2|dnxb  迷宫] onkillmon  saylevel(42) RUNMON(1) NORUNMON
+[khsd3|dnxb  迷宫] onkillmon  saylevel(42) RUNMON(1) NORUNMON
+[khsd4|dnxb  迷宫] onkillmon  saylevel(42) RUNMON(1) NORUNMON
+[khsd5|dnxb  迷宫] onkillmon  saylevel(42) RUNMON(1) NORUNMON
+[t118  困惑神殿] onkillmon  saylevel(42) RUNMON(1) NORUNMON
+
+[dlfc1|dnxb  迷宫] onkillmon  saylevel(42) RUNMON(1) NORUNMON
+[dlfc2|dnxb  迷宫] onkillmon  saylevel(42) RUNMON(1) NORUNMON
+[dlfc3|dnxb  迷宫] onkillmon  saylevel(42) RUNMON(1) NORUNMON
+[dlfc4|dnxb  迷宫] onkillmon  saylevel(42) RUNMON(1) NORUNMON
+[dlfc5|dnxb  迷宫] onkillmon  saylevel(42) RUNMON(1) NORUNMON
+[t315  堕落坟场] onkillmon  saylevel(42) RUNMON(1) NORUNMON
+
+[symy1|dnxb  迷宫] onkillmon  saylevel(42) RUNMON(1)
+[symy2|dnxb  迷宫] onkillmon  saylevel(42) RUNMON(1)
+[symy3|dnxb  迷宫] onkillmon  saylevel(42) RUNMON(1)
+[symy4|dnxb  迷宫] onkillmon  saylevel(42) RUNMON(1)
+[symy5|dnxb  迷宫] onkillmon  saylevel(42) RUNMON(1)
+[d611  深渊魔域] onkillmon  saylevel(42) RUNMON(1) NORUNMON
+
+[khsd1|dnxb  迷宫] onkillmon  saylevel(42) RUNMON(1)
+[dyly2|dnxb  迷宫] onkillmon  saylevel(42) RUNMON(1)
+[dyly3|dnxb  迷宫] onkillmon  saylevel(42) RUNMON(1)
+[dyly4|dnxb  迷宫] onkillmon  saylevel(42) RUNMON(1)
+[dyly5|dnxb  迷宫] onkillmon  saylevel(42) RUNMON(1)
+[t339  地狱烈焰] onkillmon  saylevel(42) RUNMON(1) NORUNMON
+
+[khsd1|dnxb  迷宫] onkillmon  saylevel(42) RUNMON(1)
+[qccx2|dnxb  迷宫] onkillmon  saylevel(42) RUNMON(1)
+[qccx3|dnxb  迷宫] onkillmon  saylevel(42) RUNMON(1)
+[qccx4|dnxb  迷宫] onkillmon  saylevel(42) RUNMON(1)
+[qccx5|dnxb  迷宫] onkillmon  saylevel(42) RUNMON(1)
+[t232 钳虫巢穴] onkillmon  saylevel(42) RUNMON(1) NORUNMON
+
+[khsd1|dnxb  迷宫] onkillmon  saylevel(42) RUNMON(1)
+[swsd2|dnxb  迷宫] onkillmon  saylevel(42) RUNMON(1)
+[swsd3|dnxb  迷宫] onkillmon  saylevel(42) RUNMON(1)
+[swsd4|dnxb  迷宫] onkillmon  saylevel(42) RUNMON(1)
+[swsd5|dnxb  迷宫] onkillmon  saylevel(42) RUNMON(1)
+[t218  死亡神殿] onkillmon  saylevel(42) RUNMON(1) NORUNMON
+======困惑神殿boss图走法==========
+khsd1 13 22 -> khsd2 25 33
+khsd1 37 22 -> dyly2 25 33  
+khsd1 37 46 -> symy2 25 33
+khsd1 13 46 -> dlfc2 25 33
+
+khsd2 13 22 -> khsd3 25 33
+khsd2 37 22 -> khsd1 25 33  
+khsd2 37 46 -> khsd1 25 33
+khsd2 13 46 -> khsd1 25 33
+
+khsd3 13 46 -> khsd4 25 33
+khsd3 37 22 -> khsd1 25 33  
+khsd3 37 46 -> khsd1 25 33
+khsd3 13 22 -> khsd1 25 33
+
+khsd4 37 46 -> khsd5 25 33
+khsd4 13 22 -> khsd1 25 33  
+khsd4 13 46 -> khsd1 25 33
+khsd4 37 22 -> khsd1 25 33
+
+khsd5 13 46 -> t118 12 14
+khsd5 37 22 -> khsd1 25 33  
+khsd5 37 46 -> khsd1 25 33
+khsd5 13 22 -> khsd1 25 33
+======钳虫巢穴boss图走法==========
+
+qccx3 13 22 -> qccx4 25 33
+qccx3 37 22 -> khsd1 25 33
+qccx3 37 46 -> khsd1 25 33
+qccx3 13 46 -> khsd1 25 33
+
+qccx4 13 22 -> qccx5 25 33
+qccx4 37 22 -> khsd1 25 33
+qccx4 37 46 -> khsd1 25 33
+qccx4 13 46 -> khsd1 25 33
+
+qccx5 37 22 -> t232 21 26
+qccx5 13 22 -> khsd1 25 33
+qccx5 37 46 -> khsd1 25 33
+qccx5 13 46 -> khsd1 25 33
+
+======死亡神殿boss图走法==========
+
+
+swsd3 37 46 -> swsd4 25 33	
+swsd3 13 22 -> khsd1 25 33
+swsd3 37 22 -> khsd1 25 33
+swsd3 13 46 -> khsd1 25 33
+
+swsd4 13 46 -> swsd5 25 33
+swsd4 37 22 -> khsd1 25 33  
+swsd4 37 46 -> khsd1 25 33
+swsd4 13 22 -> khsd1 25 33
+
+swsd5 37 46 -> t218 14 17
+swsd5 13 22 -> khsd1 25 33
+swsd5 37 22 -> khsd1 25 33
+swsd5 13 46 -> khsd1 25 33
+
+======地狱烈焰boss图走法==========
+
+
+dyly2 13 46 -> dyly3 25 33
+dyly2 37 22 -> swsd3 25 33  
+dyly2 37 46 -> khsd1 25 33
+dyly2 13 22 -> khsd1 25 33
+
+dyly3 37 22 -> dyly4 25 33
+dyly3 13 22 -> khsd1 25 33
+dyly3 37 46 -> khsd1 25 33
+dyly3 13 46 -> khsd1 25 33
+
+dyly4 13 46 -> dyly5 25 33
+dyly4 37 22 -> khsd1 25 33  
+dyly4 37 46 -> khsd1 25 33
+dyly4 13 22 -> khsd1 25 33
+
+dyly5 13 22 -> t339 23 23
+dyly5 37 22 -> khsd1 25 33  
+dyly5 37 46 -> khsd1 25 33
+dyly5 13 46 -> khsd1 25 33
+======深渊魔域boss图走法==========
+
+
+symy2 13 22 -> symy3 25 33
+symy2 37 22 -> qccx3 25 33  
+symy2 37 46 -> khsd1 25 33
+symy2 13 46 -> khsd1 25 33
+
+symy3 37 22 -> symy4 25 33
+symy3 13 22 -> khsd1 25 33
+symy3 37 46 -> khsd1 25 33
+symy3 13 46 -> khsd1 25 33
+
+symy4 37 46 -> symy5 25 33
+symy4 13 22 -> khsd1 25 33
+symy4 37 22 -> khsd1 25 33
+symy4 13 46 -> khsd1 25 33
+
+symy5 13 46 -> d611 49 54
+symy5 37 22 -> khsd1 25 33  
+symy5 37 46 -> khsd1 25 33
+symy5 13 22 -> khsd1 25 33
+
+======堕落坟场boss图走法==========
+
+
+dlfc2 13 22 -> dlfc3 25 33
+dlfc2 37 22 -> khsd1 25 33  
+dlfc2 37 46 -> khsd1 25 33
+dlfc2 13 46 -> khsd1 25 33
+
+dlfc3 37 46 -> dlfc4 25 33
+dlfc3 13 22 -> khsd1 25 33
+dlfc3 37 22 -> khsd1 25 33
+dlfc3 13 46 -> khsd1 25 33
+
+dlfc4 37 22 -> dlfc5 25 33
+dlfc4 13 22 -> khsd1 25 33
+dlfc4 37 46 -> khsd1 25 33
+dlfc4 13 46 -> khsd1 25 33
+
+dlfc5 13 46 -> t315 55 112
+dlfc5 37 22 -> khsd1 25 33  
+dlfc5 37 46 -> khsd1 25 33
+dlfc5 13 22 -> khsd1 25 33
+
+hlk1  244 44 -> hlk2 32 157
+hlk2  166 36 -> hlk3  28 475
+hlk3  417 62 -> hlk4  39 61
+
+==========秦始皇陵=====================
+[hlrk 皇陵入口] NORUNMON
+[hlyc 皇陵一层] NORUNMON
+[ljtd 连接通道] NORUNMON
+[hlec 皇陵二层] NORUNMON
+[hlsc 皇陵三层] NORUNMON
+[hl4c 皇陵四层] NORUNMON
+[qshlgd|qshlgd 秦始皇陵宫殿] NORUNMON
+
+hlrk  154 30 -> hlyc 44 184
+hlyc  187 42 -> ljtd 22 95
+ljtd 93 24 -> hlec 181 167
+hlec 29 21 -> hlsc 162 177
+hlsc 18 24 -> hl4c 76 139
+hl4c 129 29 -> qshlgd 29 72
+
+hlyc  44 184 -> hlrk 154 30
+ljtd  22 95 -> hlyc 187 42
+hlec 181 167 -> ljtd 93 24
+hlsc 162 177 -> hlec 29 21
+hl4c 76 139 -> hlsc 18 24
+qshlgd 29 72 -> hl4c 129 29
+
+
+=======时空迷城================
+[skmcyc 时空迷城一层] NORUNMON
+[skmcec 时空迷城二层] NORUNMON
+[skmcsc 时空迷城三层] NORUNMON
+[skmc4c 时空迷城四层] NORUNMON
+[skmcwc 时空迷城五层] NORUNMON
+[ms1|skms 时空迷室Ⅰ] NORUNMON
+[ms2|skms 时空迷室Ⅱ] NORUNMON
+[ms3|skms 时空迷室Ⅲ] NORUNMON
+[ms4|skms 时空迷室Ⅳ] NORUNMON
+
+skmcyc 146 26 -> skmcec 79 98
+skmcec 148 25 -> skmcsc 79 76
+skmcsc 30 27 -> skmc4c 18 76
+skmc4c 47 47 -> skmcwc 88 84
+skmcwc 35 32 -> ms1 43 63
+skmcwc 140 32 -> ms2 43 63 
+skmcwc 143 140 -> ms3 43 63 
+skmcwc 33 140 -> ms4 43 63
+
+skmcec 79 98 -> skmcyc 146 26
+skmcsc 79 76 -> skmcec 148 25
+skmc4c 18 76 -> skmcsc 30 27
+
+
+
+=========沙漠试炼=================
+[smsl 沙漠试炼] NORUNMON
+[slzd 试炼之道] NORUNMON
+[yzyc 遗址一层] NORUNMON
+[yzec 遗址二层] NORUNMON
+[yzzd 遗址之巅] NORUNMON
+
+smsl 80 94 -> slzd 165 158
+slzd 18 19 -> yzyc 90 155
+yzyc 47 53 -> yzec 145 186
+yzec 88 92 -> yzzd 122 157 
+
+slzd 165 158 -> smsl 80 94
+yzyc 90 155 -> slzd 18 19
+yzec 145 186 -> yzyc 47 53
+yzzd 122 157 -> yzec 88 92
+
+
+
+===========大佛寺=================
+[fl 佛林] NORUNMON
+[dh 敦煌] NORUNMON
+dh 42 82 -> fl 178 165
+fl 178 165 -> dh 42 82
+
+
+
+=========雷音殿========================
+[lydrk 雷音殿入口] NORUNMON
+[lydyc 雷音殿一层] NORUNMON
+[lydec 雷音殿二层] NORUNMON
+[lyddt 雷音殿大厅] NORUNMON
+lydrk 22 27 -> lydyc 195 286
+lydyc 133 50 -> lydec 429 428
+lydec 76 78 -> lyddt 190 262
+
+lydyc 195 286 -> lydrk 22 27
+lydec 429 428 -> lydyc 133 50
+lyddt 190 262 -> lydec 76 78
+
+
+
+===========修罗神殿=============
+[xlsdyc 修罗神殿一层] NORUNMON
+[xlsdec 修罗神殿二层] NORUNMON
+[xlsd 修罗神殿] NORUNMON
+xlsdyc 104 19 -> xlsdec 22 76
+xlsdec 106 19 -> xlsd 34 113
+
+xlsdec 22 76 -> xlsdyc 104 19
+xlsd 34 113 -> xlsdec 106 19
+
+
+
+===============赤月峡谷=================
+[ygfx1 赤月迷宫] NORUNMON
+[cymx 赤月魔穴] NORUNMON
+[cyxgdcl 赤月峡谷东长廊] NORUNMON
+[cyxgdec 赤月峡谷东二层] NORUNMON
+[cyxgdzl 赤月峡谷东走廊] NORUNMON
+[cyxggc 赤月峡谷广场] NORUNMON
+[xhl|cyxgxhl 赤月峡谷西回廊] NORUNMON
+[xhsd|cyxgxhl 赤月峡谷西回隧道] NORUNMON
+[cyxgxzl 赤月峡谷西走廊] NORUNMON
+[emjt 恶魔祭坛] NORUNMON
+[jzzd 抉择之地] NORUNMON
+[sgmd 山谷密道] NORUNMON
+[ysgmd 山谷密道] NORUNMON
+
+;去西走廊
+ygfx1 664 452 -> cyxgxzl 50 283
+;西走廊东二层
+cyxgxzl 289 78 -> cyxgdec 215 267
+;东二层回西走廊
+cyxgdec 215 267 -> cyxgxzl 289 78
+;东二层去西回廊
+cyxgdec 121 189 -> xhl 145 16
+;西回廊回东二层 
+xhl 145 16 -> cyxgdec 121 189
+;东二层去东走廊
+cyxgdec 63 287 -> cyxgdzl 130 19
+;东走廊回东二层
+cyxgdzl 128 22 -> cyxgdec 63 287
+;东二层去赤月峡谷广场
+cyxgdec 13 28 -> cyxggc 290 151 
+;赤月峡谷广场回东二层
+cyxggc 290 151 -> cyxgdec 13 28
+;赤月广场去抉择之地
+cyxggc 150 105 -> jzzd 119 37
+;抉择之地回赤月广场
+jzzd 119 37 -> cyxggc 150 105
+;东二层去东长廊
+cyxgdec 288 139 -> cyxgdcl 11 155
+;东长廊回东二层
+cyxgdcl 11 155 -> cyxgdec 288 139
+;东长廊去抉择之地
+cyxgdcl 200 150 -> jzzd 170 89
+;抉择之地回东长廊
+ jzzd 170 89 -> cyxgdcl 200 150
+;=================================
+;去西回隧道
+ygfx1 760 724 -> xhsd 289 288
+;西回隧道去东二层
+xhsd 147 15 -> cyxgdec 121 189
+;抉择之地去山谷密道1
+jzzd 145 112 -> sgmd 47 189
+;山谷密道1回抉择之地
+sgmd 47 189 -> jzzd 145 112
+;山谷密道1去恶魔祭坛
+sgmd 179 54 -> emjt 20 25
+;恶魔祭坛回山谷密道1
+emjt 20 25 -> sgmd 179 54
+;抉择之地去山谷密道2
+jzzd 215 132 -> ysgmd 97 185
+;山谷密道2回抉择之地
+ysgmd 97 185 -> jzzd 215 132
+;山谷密道2去赤月魔穴
+ysgmd 139 25 -> cymx 11 25
+;赤月魔穴回山谷密道2
+cymx 11 25 -> ysgmd 139 25
+
+[ev002 夺宝奇兵] ONKILLMON NORANDOMMOVE NOPOSITIONMOVE NOALLOWUSEITEMS(盟重传送石|随机传送石)
+[jjc01 秘境] ONKILLMON NORUNMON
+[new0150 沙巴克皇宫] norecall nodearrecall nomasterrecall norandommove noallowuseitems(随机传送石|随机传送卷) nopositionmove RUNMON(1) CHECKQUEST(皇宫规则)
+
+[new0151	武器店]	fight
+[new0152	服饰店]	fight
+[new0153	药品店]	fight
+[new0154	杂货店]	fight
+[new0155	书店]	fight
+[new01571	仓库]	fight
+[new0156	监狱]	fight
+[new01581	首饰店]	fight
+
+
+3 616 269 -> new0150 16 21
+3 617 268 -> new0150 16 21
+3 620 265 -> new0150 20 16
+
+3 610 263  -> new0150 8 24
+
+
+3 613 272 -> new0150 11 25
+3 610 272 -> new0150 7 25
+
+new0150 16 22 -> 3 618 271
+new0150 8 24  -> 3 610 263
+new0150 17 21 -> 3 618 271
+
+[slf|n0139   胜利方颁奖] safe 
+[sbf|n0139   失败方颁奖] safe
+
+
+================幻境====================
+[hjylc3|ylc3  幻境一层] onkillmon  saylevel(42) RUNMON(1) NORUNMON noallowuseitems(随机传送石|随机传送卷)
+[hjnewss|newss  幻境二层] onkillmon  saylevel(42) RUNMON(1) NORUNMON noallowuseitems(随机传送石|随机传送卷)
+[hjwmsm|wmsm 幻境三层] NORUNMON noallowuseitems(随机传送石|随机传送卷)
+[hjfmdian|fmdian 幻境四层] NORUNMON noallowuseitems(随机传送石|随机传送卷)
+[hjqshlgd|qshlgd 幻境五层] NORUNMON noallowuseitems(随机传送石|随机传送卷)
+
+
+===============蜈蚣祭坛==============
+[d613  蜈蚣洞一层]
+[d616 蜈蚣洞二层]
+[wgjt  蜈蚣祭坛]
+
+d613 13 15 -> d616 26 16
+d616 86 17 -> wgjt 15 79
+
+
+wgjt 15 79 -> d616 86 17
+d616 26 16 -> d613 12 14
+
+===============四大陆冰雪==============
+[bxzj2   冰雪之境] 
+[0101 道具店] 
+[B343 武器店] 
+bxzj2 118 238 -> 0101 10 22
+0101 10 22 -> bxzj2 118 238
+
+bxzj2 118 238 -> 0101 10 22
+bxzj2 167 204  -> b343 10 21
+b343 10 21 -> bxzj2 167 205
+===============冰霜之巅==============
+[bszd   冰霜之巅] 
+
+===============冰封王座==============
+[bfgdyc  冰封宫殿一层] 
+[bfgdec  冰封宫殿二层] 
+[bfwz  冰封王座] 
+
+bfgdyc 120 27 -> bfgdec 18 126 
+bfgdec 152 26 -> bfwz 18 62
+
+bfgdec 18 126 -> bfgdyc 120 27
+bfwz 18 62 -> bfgdec  152 26
+
+===============轩辕台==============
+[xyt  轩辕台] 
+
+===============雪融之地==============
+[xrzd  雪融之地] 
+
+
+===============冰天雪地=============
+[btxd 冰天雪地] 
+
+
+===============沉寂之地=============
+[cjzd 沉寂之地] 
+
+
+===============熔岩洞穴=============
+[rydxyc 熔岩洞穴一层] 
+[rydxec 熔岩洞穴二层] 
+[rydxsc 熔岩洞穴三层] 
+[rydx4c 熔岩洞穴四层] 
+[rydx 熔岩洞穴] 
+
+rydxyc 221 241 -> rydxec 201 27
+rydxec 39 39 -> rydxsc 180 180
+rydxsc 17 31 -> rydx4c 49 135
+rydx4c 114 27 -> rydx 32 75
+
+rydxec 201 27 -> rydxyc 221 241
+rydxsc 180 180 -> rydxec 39 39
+rydx4c 49 135 -> rydxsc 17 31
+rydx 32 75 -> rydx4c 114 27
+
+===============封魔剑冢=============
+[fmjz 封魔剑冢] 
+
+
+==============五大路仙境之地=============
+[plxd 仙境之地] 
+
+
+
+
+
+==============云宫=============
+[yg 云宫] 
+
+
+==============仙城天宫=============
+[xctg 仙城天宫] 
+
+
+==============枫林台=============
+[flt 枫林台] 
+
+
+==============蓬莱仙地=============
+[xjzd 蓬莱仙地]
+
+
+==============云顶天宫============
+[ydtg 云顶天宫] 
+
+
+==============特殊地图 藏器秘地============
+[sfst 藏器秘地] NORANDOMMOVE noallowuseitems(随机传送石|随机传送卷)
+
+
+==============特殊地图  藏器宝地============
+[sgt 藏器宝地] NORANDOMMOVE noallowuseitems(随机传送石|随机传送卷)
+
+
+==============特殊地图 藏器圣地============
+[bxjt 藏器圣地] NORANDOMMOVE noallowuseitems(随机传送石|随机传送卷)
+
+
+
+

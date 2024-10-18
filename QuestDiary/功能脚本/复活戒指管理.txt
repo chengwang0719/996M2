@@ -1,0 +1,75 @@
+[@复活状态]
+{
+#or
+equal <$USEITEMNAME[8]> 极光戒指
+equal <$USEITEMNAME[8]> 凤金戒指
+equal <$USEITEMNAME[8]> 翡翠戒指
+equal <$USEITEMNAME[8]> 土域戒指
+equal <$USEITEMNAME[8]> 凤凰の飞
+equal <$USEITEMNAME[8]> 杀伐の灵
+equal <$USEITEMNAME[8]> 无极の道
+equal <$USEITEMNAME[8]> 耀光复戒
+equal <$USEITEMNAME[8]> 耀金复戒
+equal <$USEITEMNAME[8]> 耀玉复戒
+equal <$USEITEMNAME[8]> 海妖·复戒
+equal <$USEITEMNAME[8]> 斩龙·复戒
+equal <$USEITEMNAME[8]> 无形·复戒
+
+equal <$USEITEMNAME[8]> 麒麟ぃ戒
+equal <$USEITEMNAME[8]> 玄武ぃ戒
+equal <$USEITEMNAME[8]> 冰霜ぅ戒
+equal <$USEITEMNAME[8]> 雪寂ぅ戒
+equal <$USEITEMNAME[8]> 凛冬ぅ戒
+equal <$USEITEMNAME[8]> 寂灭え戒
+equal <$USEITEMNAME[8]> 朱雀ぃ戒
+equal <$USEITEMNAME[8]> 麒麟ぃ戒
+equal <$USEITEMNAME[8]> 业火え戒
+equal <$USEITEMNAME[8]> 冥天え戒
+equal <$USEITEMNAME[8]> 神罚之戒
+equal <$USEITEMNAME[8]> 圣裁之戒
+equal <$USEITEMNAME[8]> 仙戮之戒
+
+equal <$USEITEMNAME[7]> 极光戒指
+equal <$USEITEMNAME[7]> 凤金戒指
+equal <$USEITEMNAME[7]> 翡翠戒指
+equal <$USEITEMNAME[7]> 土域戒指
+equal <$USEITEMNAME[7]> 凤凰の飞
+equal <$USEITEMNAME[7]> 杀伐の灵
+equal <$USEITEMNAME[7]> 无极の道
+equal <$USEITEMNAME[7]> 耀光复戒
+equal <$USEITEMNAME[7]> 耀金复戒
+equal <$USEITEMNAME[7]> 耀玉复戒
+equal <$USEITEMNAME[7]> 海妖·复戒
+equal <$USEITEMNAME[7]> 斩龙·复戒
+equal <$USEITEMNAME[7]> 无形·复戒
+
+equal <$USEITEMNAME[7]> 麒麟ぃ戒
+equal <$USEITEMNAME[7]> 玄武ぃ戒
+equal <$USEITEMNAME[7]> 冰霜ぅ戒
+equal <$USEITEMNAME[7]> 雪寂ぅ戒
+equal <$USEITEMNAME[7]> 凛冬ぅ戒
+equal <$USEITEMNAME[7]> 寂灭え戒
+equal <$USEITEMNAME[7]> 朱雀ぃ戒
+equal <$USEITEMNAME[7]> 麒麟ぃ戒
+equal <$USEITEMNAME[7]> 业火え戒
+equal <$USEITEMNAME[7]> 冥天え戒
+equal <$USEITEMNAME[7]> 神罚之戒
+equal <$USEITEMNAME[7]> 圣裁之戒
+equal <$USEITEMNAME[7]> 仙戮之戒
+#act
+goto @复活判断
+#elseact
+mov T211 未穿戴
+
+[@复活判断]
+#if
+equal U217 0
+#act
+mov T211 已就绪
+break
+
+#if
+equal U217 180
+#elseact
+mov T211 <$STR(U217)>秒
+}

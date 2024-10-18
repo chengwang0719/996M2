@@ -1,0 +1,383 @@
+;=========================================
+;                            开区天数累计
+;=========================================
+[@开区天数累计]
+#IF
+#ACT
+INC G0 1
+MOV G30 0
+
+#if
+large G64 0
+#act
+DEC G64 1
+MOV A300 <$str(G64)>
+
+#if
+large G65 0
+#act
+DEC G65 1
+MOV A301 <$str(G65)>
+
+#if
+large G66 0
+#act
+DEC G66 1
+MOV A302 <$str(G66)>
+
+#if
+large G67 0
+#act
+DEC G67 1
+MOV A303 <$str(G67)>
+
+#if
+large G68 0
+#act
+DEC G68 1
+MOV A304 <$str(G68)>
+
+
+
+
+
+
+
+[@随机开]
+#if
+#act
+MOV G11 0
+
+
+[@随机关]
+#if
+#act
+MOV G11 1
+
+
+
+;==================================================================
+
+[@合区首次沙巴克攻城预热]
+#IF
+equal <$HFDAYS> 1
+#ACT
+GuildNoticeMsg 151 0 【沙巴克】今晚20:00准时全区开启沙巴克攻城战！！
+GuildNoticeMsg 151 0 【沙巴克】今晚20:00准时全区开启沙巴克攻城战！！
+GuildNoticeMsg 151 0 【沙巴克】今晚20:00准时全区开启沙巴克攻城战！！
+GuildNoticeMsg 151 0 【沙巴克】今晚20:00准时全区开启沙巴克攻城战！！
+GuildNoticeMsg 151 0 【沙巴克】今晚20:00准时全区开启沙巴克攻城战！！
+SENDMOVEMSG 0 254 0 170 1 【沙巴克】今晚20:00准时全区开启攻城战！！！
+SENDMOVEMSG 0 254 0 220 1 【沙巴克】今晚20:00准时全区开启攻城战！！！
+SENDMOVEMSG 0 254 0 270 1 【沙巴克】今晚20:00准时全区开启攻城战！！！
+BREAK
+
+[@合区首次沙巴克攻城开始]
+#IF
+equal <$HFDAYS> 1
+#ACT
+SENDMSGNEW 254 0 【沙巴克攻城战】已经开启！！！  1 10
+BREAK
+
+[@合区首次沙巴克攻城添加]
+#IF
+equal <$HFDAYS> 1
+#ACT
+MOV A1 沙巴克开启
+GuildNoticeMsg 151 0 【沙巴克】今晚20:00准时全区开启沙巴克攻城战！！
+GuildNoticeMsg 151 0 【沙巴克】今晚20:00准时全区开启沙巴克攻城战！！
+GuildNoticeMsg 151 0 【沙巴克】今晚20:00准时全区开启沙巴克攻城战！！
+GuildNoticeMsg 151 0 【沙巴克】今晚20:00准时全区开启沙巴克攻城战！！
+GuildNoticeMsg 151 0 【沙巴克】今晚20:00准时全区开启沙巴克攻城战！！
+AddAttackSabukAll 0
+SENDMOVEMSG 0 254 0 170 1 【沙巴克】今晚20:00准时全区开启攻城战！！！
+SENDMOVEMSG 0 254 0 220 1 【沙巴克】今晚20:00准时全区开启攻城战！！！
+SENDMOVEMSG 0 254 0 270 1 【沙巴克】今晚20:00准时全区开启攻城战！！！
+BREAK
+
+
+[@合区首次沙巴克攻城结束]
+#IF
+equal <$HFDAYS> 1
+#ACT
+SENDMOVEMSG 0 254 0 170 1 【沙巴克】攻城战已结束！沙巴克颁奖地图已开放，限时10分钟，奖励根据人数平均分配，过时不候！
+SENDMOVEMSG 0 254 0 220 1 【沙巴克】攻城战已结束！沙巴克颁奖地图已开放，限时10分钟，奖励根据人数平均分配，过时不候！
+SENDMOVEMSG 0 254 0 270 1 【沙巴克】攻城战已结束！沙巴克颁奖地图已开放，限时10分钟，奖励根据人数平均分配，过时不候！
+GuildNoticeMsg 151 0 【沙巴克】攻城战已经结束,请玩家前往土城点击沙城使者NPC,点击领取按钮进入颁奖地图！！
+GuildNoticeMsg 151 0 【沙巴克】攻城战已经结束,请玩家前往土城点击沙城使者NPC,点击领取按钮进入颁奖地图！！
+GuildNoticeMsg 151 0 【沙巴克】攻城战已经结束,请玩家前往土城点击沙城使者NPC,点击领取按钮进入颁奖地图！！
+
+BREAK
+
+
+[@合区后沙巴克攻城预热]
+#IF
+large <$HFDAYS> 1
+#ACT
+GuildNoticeMsg 151 0 【沙巴克】今晚20:00准时全区开启沙巴克攻城战！！
+GuildNoticeMsg 151 0 【沙巴克】今晚20:00准时全区开启沙巴克攻城战！！
+GuildNoticeMsg 151 0 【沙巴克】今晚20:00准时全区开启沙巴克攻城战！！
+GuildNoticeMsg 151 0 【沙巴克】今晚20:00准时全区开启沙巴克攻城战！！
+GuildNoticeMsg 151 0 【沙巴克】今晚20:00准时全区开启沙巴克攻城战！！
+SENDMOVEMSG 0 254 0 170 1 【沙巴克】今晚20:00准时全区开启攻城战！！！
+SENDMOVEMSG 0 254 0 220 1 【沙巴克】今晚20:00准时全区开启攻城战！！！
+SENDMOVEMSG 0 254 0 270 1 【沙巴克】今晚20:00准时全区开启攻城战！！！
+BREAK
+
+[@合区后沙巴克攻城开始]
+#IF
+large <$HFDAYS> 1
+#ACT
+SENDMSGNEW 254 0 【沙巴克攻城战】已经开启！！！  1 10
+BREAK
+
+[@合区后沙巴克攻城添加]
+#IF
+large <$HFDAYS> 1
+#ACT
+MOV A1 沙巴克开启
+GuildNoticeMsg 151 0 【沙巴克】今晚20:00准时全区开启沙巴克攻城战！！
+GuildNoticeMsg 151 0 【沙巴克】今晚20:00准时全区开启沙巴克攻城战！！
+GuildNoticeMsg 151 0 【沙巴克】今晚20:00准时全区开启沙巴克攻城战！！
+GuildNoticeMsg 151 0 【沙巴克】今晚20:00准时全区开启沙巴克攻城战！！
+GuildNoticeMsg 151 0 【沙巴克】今晚20:00准时全区开启沙巴克攻城战！！
+SENDMOVEMSG 0 254 0 170 1 【沙巴克】今晚20:00准时全区开启攻城战！！！
+SENDMOVEMSG 0 254 0 220 1 【沙巴克】今晚20:00准时全区开启攻城战！！！
+SENDMOVEMSG 0 254 0 270 1 【沙巴克】今晚20:00准时全区开启攻城战！！！
+BREAK
+
+
+[@合区后沙巴克攻城结束]
+#IF
+large <$HFDAYS> 1
+#ACT
+SENDMOVEMSG 0 254 0 170 1 【沙巴克】攻城战已结束！沙巴克颁奖地图已开放，限时10分钟，奖励根据人数平均分配，过时不候！
+SENDMOVEMSG 0 254 0 220 1 【沙巴克】攻城战已结束！沙巴克颁奖地图已开放，限时10分钟，奖励根据人数平均分配，过时不候！
+SENDMOVEMSG 0 254 0 270 1 【沙巴克】攻城战已结束！沙巴克颁奖地图已开放，限时10分钟，奖励根据人数平均分配，过时不候！
+GuildNoticeMsg 151 0 【沙巴克】攻城战已经结束,请玩家前往土城点击沙城使者NPC,点击领取按钮进入颁奖地图！！
+GuildNoticeMsg 151 0 【沙巴克】攻城战已经结束,请玩家前往土城点击沙城使者NPC,点击领取按钮进入颁奖地图！！
+GuildNoticeMsg 151 0 【沙巴克】攻城战已经结束,请玩家前往土城点击沙城使者NPC,点击领取按钮进入颁奖地图！！
+
+BREAK
+;=================================================
+
+
+
+
+
+
+
+
+;================================================
+[@沙巴克攻城奖励]
+#IF
+EQUAL A1 
+#ACT
+BREAK
+
+;#IF
+;EQUAL <$HFDAYS> 0
+;#ACT
+;MOV G1 7000
+;MOV G2 7000000
+;MOV G3 3000
+;MOV G4 3000000
+
+#IF
+EQUAL <$HFDAYS> 1
+#ACT
+MOV G1 7000
+MOV G2 7000000
+MOV G3 3000
+MOV G4 3000000
+
+#IF
+large <$HFDAYS> 1
+#ACT
+MOV G1 70000
+MOV G2 3500000
+MOV G3 30000
+MOV G4 1500000
+
+#IF
+#ACT
+#CALL [\\功能脚本\胜利方人数.txt] @胜利方人数统计
+#CALL [\\功能脚本\失败方人数.txt] @失败方人数统计
+DIV G1 <$STR(G43)>
+DIV G2 <$STR(G44)>
+DIV G3 <$STR(G43)>
+DIV G4 <$STR(G44)>
+GMEXECUTE 开始提问 @沙城奖励发放
+SENDMOVEMSG 0 254 0 170 1 【沙巴克】本次沙巴克攻城奖励已全部发放/FCOLOR=253}！
+SENDMOVEMSG 0 254 0 220 1 【沙巴克】本次沙巴克攻城奖励已全部发放/FCOLOR=253}！
+SENDMOVEMSG 0 254 0 270 1 【沙巴克】本次沙巴克攻城奖励已全部发放/FCOLOR=253}！
+MOV A1
+
+
+
+
+[@星辰次数满]
+#IF
+#ACT
+mov G7 1
+
+[@星辰次数重启]
+#IF
+#ACT
+mov G7 0
+
+
+
+
+[@夺宝奇兵开启]
+#if
+
+#act
+mov G5 1
+MonGenEx ev002 27 22 ※宝藏守护者※ 1 1 0 249 ※宝藏守护者※
+SENDMOVEMSG 0 254 0 170 1 【夺宝奇兵】已开启，欢迎各位勇士参与！
+SENDMOVEMSG 0 254 0 220 1 【夺宝奇兵】已开启，欢迎各位勇士参与！
+SENDMOVEMSG 0 254 0 270 1 【夺宝奇兵】已开启，欢迎各位勇士参与！
+GMEXECUTE 开始提问 @出现按钮
+
+[@夺宝奇兵不可进入]
+#if
+
+#act
+mov G14 1
+GMEXECUTE 开始提问 @消失按钮
+
+[@夺宝奇兵关闭]
+#if
+
+#act
+mov G5 0
+mov G14 0
+mov G17 1
+
+[@限时BOSS开启]
+#if
+#act
+mov G10 1
+MonGenEx jjc01 20 22 ※秘境黑龙※ 1 1 0 249 ※秘境黑龙※
+SENDMOVEMSG 0 254 0 170 1 【※秘境黑龙※】已复活，欢迎各位勇士参与！
+SENDMOVEMSG 0 254 0 220 1 【※秘境黑龙※】已复活，欢迎各位勇士参与！
+SENDMOVEMSG 0 254 0 270 1 【※秘境黑龙※】已复活，欢迎各位勇士参与！
+GMEXECUTE 开始提问 @出现按钮
+
+[@限时BOSS关闭]
+#if
+#act
+mov G10 0
+SENDMOVEMSG 0 254 0 170 1 【※秘境黑龙※】活动已关闭！
+CLEARMAPMON jjc01
+GMEXECUTE 开始提问 @消失按钮
+
+
+
+[@限时押镖双倍开]
+#if
+;large <$HFDAYS> 0
+#act
+mov G16 1
+SENDMOVEMSG 0 254 0 170 1 【押镖双倍时间】已开放，欢迎各位勇士参与！
+SENDMOVEMSG 0 254 0 220 1 【押镖双倍时间】已开放，欢迎各位勇士参与！
+SENDMOVEMSG 0 254 0 270 1 【押镖双倍时间】已开放，欢迎各位勇士参与！
+GMEXECUTE 开始提问 @出现按钮
+
+[@限时押镖双倍关]
+#if
+;large <$HFDAYS> 0
+#act
+mov G16 0
+GMEXECUTE 开始提问 @消失按钮
+
+
+[@幻境打开]
+#if
+#act
+mov G9 1
+mov G29 0
+SENDMOVEMSG 0 254 0 170 1 幻境之门已开启，欢迎各位勇士参与！
+SENDMOVEMSG 0 254 0 220 1 幻境之门已开启，欢迎各位勇士参与！
+SENDMOVEMSG 0 254 0 270 1 幻境之门已开启，欢迎各位勇士参与！
+GMEXECUTE 开始提问 @出现按钮
+
+[@幻境关闭]
+#if
+#act
+mov G9 0
+mov G29 1
+SENDMOVEMSG 0 254 0 170 1 幻境之门关闭！
+GMEXECUTE 开始提问 @消失按钮
+CLEARMAPMON hjylc3
+CLEARMAPMON hjnewss
+CLEARMAPMON hjwmsm
+CLEARMAPMON hjfmdian
+
+
+
+
+[@散财活动30]
+#if
+equal <$HFDAYS> 0
+equal G28 0
+#act
+inc G8 1
+
+#if
+equal <$HFDAYS> 0
+equal G8 30
+#act
+MonGenEx D5071 20 23 送财树妖 0 1 0 249
+MonGenEx D5071 35 36 送财树妖 0 1 0 249
+MonGenEx D5071 25 27 送财红猪 100 18 0 251
+MonGenEx D5071 25 27 送财黑猪 100 18 0 251
+MonGenEx D5071 25 27 送财白猪 100 18 0 251
+MonGenEx D5071 25 27 送财稻草人 100 18 0 255
+MonGenEx D5071 25 27 送财钉耙猫 100 18 0 255
+SENDMOVEMSG 0 254 0 170 1 【怪物送财】活动已开启，欢迎各位勇士参与！
+SENDMOVEMSG 0 254 0 220 1 【怪物送财】活动已开启，欢迎各位勇士参与！
+SENDMOVEMSG 0 254 0 270 1 【怪物送财】活动已开启，欢迎各位勇士参与！
+GMEXECUTE 开始提问 @出现按钮
+
+#if
+equal <$HFDAYS> 0
+equal G8 46
+#act
+mov G8 0
+inc G28 1
+CLEARMAPMON D5071
+GMEXECUTE 开始提问 @消失按钮
+
+[@散财活动60]
+#if
+equal <$HFDAYS> 0
+equal G38 0
+#act
+inc G18 1
+
+#if
+equal <$HFDAYS> 0
+equal G18 60
+#act
+MonGenEx D5071 20 23 送财树妖 0 1 0 249
+MonGenEx D5071 35 36 送财树妖 0 1 0 249
+MonGenEx D5071 25 27 送财红猪 100 36 0 251
+MonGenEx D5071 25 27 送财黑猪 100 36 0 251
+MonGenEx D5071 25 27 送财白猪 100 36 0 251
+MonGenEx D5071 25 27 送财稻草人 100 38 0 255
+MonGenEx D5071 25 27 送财钉耙猫 100 38 0 255
+SENDMOVEMSG 0 254 0 170 1 【怪物送财】活动已开启，欢迎各位勇士参与！
+SENDMOVEMSG 0 254 0 220 1 【怪物送财】活动已开启，欢迎各位勇士参与！
+SENDMOVEMSG 0 254 0 270 1 【怪物送财】活动已开启，欢迎各位勇士参与！
+GMEXECUTE 开始提问 @出现按钮
+
+#if
+equal <$HFDAYS> 0
+equal G18 76
+#act
+mov G18 0
+inc G38 1
+CLEARMAPMON D5071
+GMEXECUTE 开始提问 @消失按钮

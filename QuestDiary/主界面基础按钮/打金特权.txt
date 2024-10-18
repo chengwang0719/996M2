@@ -1,0 +1,34 @@
+[@打金特权主页面]
+{
+
+
+#SAY
+<Button|x=-2526.0|y=-1172.0|width=115120|height=112880|size=18|nimg=npc/zd.png|color=224|mimg=npc/zd.png|pimg=npc/zd.png|link=@exit>
+<Img|x=-38.0|y=-26.0|width=940|height=530|esc=1|img=topbtn/djtq/bj.png|show=4|loadDelay=1|move=0|bg=1|reset=1>
+<Button|x=434.0|y=312.0|width=179|height=80|nimg=topbtn/djtq/btn.png|link=@解开绑定>
+<Button|x=755.0|y=54.0|mimg=public/close-t.png|nimg=public/close-t.png|link=@exit>
+
+
+
+
+
+
+
+
+
+
+
+[@解开绑定]
+#if
+CHECKMONEY 充值点 > 97
+#act
+mov U50 1
+sendmsg 9 激活成功！之后获得的装备和材料奖不再是绑定！！
+close
+#CALL [\主界面基础按钮\主界面基础按钮QM.txt] @基础按钮QM
+#CALL [\主界面基础按钮\主界面游戏按钮.txt] @界面游戏按钮
+#elseact
+sendmsg 9 条件不足，无法激活！！
+
+
+}

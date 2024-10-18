@@ -1,0 +1,2443 @@
+[@回收脚本]   
+{   
+#if
+check [303] 0
+#act
+set [303] 1
+set [110] 1 
+set [111] 1 
+set [112] 1 
+Navigation 0 15 点击勾选
+
+#IF
+#ACT
+GOTO @装备回收主界面
+
+[@装备回收主界面]
+
+#IF
+#act
+GOTO @回收价格申明
+GOTO @回收按钮检测
+#say
+
+<Img|children={1}|a=4|x=243.0|y=305.0|width=762|height=620|bg=1|reset=1|esc=1|move=1|img=custom/zbhs/bj.png|loadDelay=0|show=4>
+<Img|id=1|a=4|children={10,11,111,1111,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27}|x=383.0|y=308.0|width=762|height=620|reset=1|show=4|esc=1|move=0|img=custom/zbhs/gezi.png|loadDelay=0>
+
+
+<Button|id=10|x=82.0|y=90.0|width=144|height=46|nimg=custom/zbhs/1.png|mimg=custom/zbhs/1.png|link=@装备回收主界面>
+<Button|id=11|x=230.0|y=90.0|width=144|height=46|nimg=custom/zbhs/434.png|mimg=custom/zbhs/434.png|link=@副装回收主界面>
+<Button|id=111|x=379.0|y=90.0|width=144|height=46|nimg=custom/zbhs/22.png|mimg=custom/zbhs/22.png|link=@回收价格说明>
+<Button|id=1111|x=528.0|y=90.0|width=144|height=46|nimg=custom/zbhs/xh2.png|mimg=custom/zbhs/xh2.png|link=@摧毁物品>
+<Button|id=12|x=313.0|y=527.0|width=144|height=46|nimg=custom/zbhs/450.png|mimg=custom/zbhs/450.png|link=@一键全选1>
+<Button|id=13|x=516.0|y=527.0|width=144|height=46|nimg=custom/zbhs/y.png|mimg=custom/zbhs/y.png|link=@一键回收1>
+;<Text|id=27|x=123.0|y=537.0|color=251|outline=2|size=18|text=开启自动回收要勾选回收系列的装备>
+
+
+<Text|id=14|x=123.0|y=537.0|color=251|outline=2|size=18|text=自动回收>
+<Button|id=15|x=212.0|y=534.0|width=29|height=26|nimg=custom/zbhs/<$str(S$自动回收1勾选)>.png|mimg=custom/zbhs/<$str(S$自动回收1勾选)>.png|link=@自动回收1勾选>
+
+
+<Layout|id=16|children={1a,2a,3a,4a,5a,6a,7a,8a,9a}|x=79.0|y=137.0|width=600|height=33>
+<Img|id=1a|x=9.0|y=12.0|width=14|height=14|reset=1|loadDelay=0|esc=1|move=0|show=4|img=custom/zbhs/a.png>
+<Text|id=2a|x=49.0|y=7.0|color=255|outline=2|size=16|text=沃玛系列>
+<Button|id=3a|x=138.0|y=6.0|width=29|height=26|nimg=custom/zbhs/<$str(S$沃玛系列勾选)>.png|mimg=custom/zbhs/<$str(S$沃玛系列勾选)>.png|link=@回收沃玛系列>
+
+<Img|id=4a|x=212.0|y=12.0|width=14|height=14|reset=1|loadDelay=0|esc=1|move=0|show=4|img=custom/zbhs/a.png>
+<Text|id=5a|x=260.0|y=7.0|color=255|outline=2|size=16|text=祖玛系列>
+<Button|id=6a|x=349.0|y=6.0|width=29|height=26|nimg=custom/zbhs/<$str(S$祖玛系列勾选)>.png|mimg=custom/zbhs/<$str(S$祖玛系列勾选)>.png|link=@回收祖玛系列>
+
+
+<Img|id=7a|x=421.0|y=12.0|width=14|height=14|reset=1|loadDelay=0|esc=1|move=0|show=4|img=custom/zbhs/a.png>
+<Text|id=8a|x=459.0|y=7.0|color=255|outline=2|size=16|text=赤月系列>
+<Button|id=9a|x=542.0|y=6.0|width=29|height=26|nimg=custom/zbhs/<$str(S$赤月系列勾选)>.png|mimg=custom/zbhs/<$str(S$赤月系列勾选)>.png|link=@回收赤月系列>
+
+<Layout|id=17|children={1b,2b,3b,4b,5b,6b,7b,8b,9b}|x=79.0|y=172.0|width=600|height=33>
+<Img|id=1b|x=9.0|y=12.0|width=14|height=14|reset=1|loadDelay=0|esc=1|move=0|show=4|img=custom/zbhs/a.png>
+<Text|id=2b|x=49.0|y=7.0|color=250|outline=2|size=16|text=35级系列>
+<Button|id=3b|x=138.0|y=5.0|width=29|height=26|nimg=custom/zbhs/<$str(S$35系列勾选)>.png|mimg=custom/zbhs/<$str(S$35系列勾选)>.png|link=@回收35系列>
+
+
+<Img|id=4b|x=212.0|y=12.0|width=14|height=14|reset=1|loadDelay=0|esc=1|move=0|show=4|img=custom/zbhs/a.png>
+<Text|id=5b|x=260.0|y=7.0|color=254|outline=2|size=16|text=一转系列>
+<Button|id=6b|x=349.0|y=5.0|width=29|height=26|nimg=custom/zbhs/<$str(S$1转系列勾选)>.png|mimg=custom/zbhs/<$str(S$1转系列勾选)>.png|link=@回收1转系列>
+
+
+<Img|id=7b|x=421.0|y=12.0|width=14|height=14|reset=1|loadDelay=0|esc=1|move=0|show=4|img=custom/zbhs/a.png>
+<Text|id=8b|x=459.0|y=7.0|color=243|outline=2|size=16|text=奇茸通天>
+
+<Button|id=9b|x=542.0|y=5.0|width=29|height=26|nimg=custom/zbhs/<$str(S$奇茸通天系列勾选)>.png|mimg=custom/zbhs/<$str(S$奇茸通天系列勾选)>.png|link=@回收奇茸通天系列>
+
+
+
+<Layout|id=18|children={1c,2c,3c,4c,5c,6c,7c,8c,9c}|x=79.0|y=207.0|width=600|height=33>
+<Img|id=1c|x=9.0|y=12.0|width=14|height=14|reset=1|loadDelay=0|esc=1|move=0|show=4|img=custom/zbhs/a.png>
+<Text|id=2c|x=49.0|y=7.0|color=250|outline=2|size=16|text=40级系列>
+
+<Button|id=3c|x=138.0|y=4.0|width=29|height=26|nimg=custom/zbhs/<$str(S$40系列勾选)>.png|mimg=custom/zbhs/<$str(S$40系列勾选)>.png|link=@回收40系列>
+
+
+<Img|id=4c|x=212.0|y=12.0|width=14|height=14|reset=1|loadDelay=0|esc=1|move=0|show=4|img=custom/zbhs/a.png>
+<Text|id=5c|x=260.0|y=7.0|color=254|outline=2|size=16|text=二转系列>
+<Button|id=6c|x=349.0|y=4.0|width=29|height=26|nimg=custom/zbhs/<$str(S$2转系列勾选)>.png|mimg=custom/zbhs/<$str(S$2转系列勾选)>.png|link=@回收2转系列>
+
+
+
+<Img|id=7c|x=421.0|y=12.0|width=14|height=14|reset=1|loadDelay=0|esc=1|move=0|show=4|img=custom/zbhs/a.png>
+<Text|id=8c|x=459.0|y=7.0|color=242|outline=2|size=16|text=天茄弥陀>
+
+<Button|id=9c|x=542.0|y=4.0|width=29|height=26|nimg=custom/zbhs/<$str(S$天茄弥陀系列勾选)>.png|mimg=custom/zbhs/<$str(S$天茄弥陀系列勾选)>.png|link=@回收天茄弥陀系列>
+
+<Layout|id=19|children={1d,2d,3d,4d,5d,6d,7d,8d,9d}|x=79.0|y=242.0|width=600|height=33>
+
+
+
+<Img|id=1d|x=9.0|y=12.0|width=14|height=14|reset=1|loadDelay=0|esc=1|move=0|show=4|img=custom/zbhs/a.png>
+<Text|id=2d|x=49.0|y=7.0|color=92|outline=2|size=16|text=三转系列>
+<Button|id=3d|x=138.0|y=4.0|width=29|height=26|nimg=custom/zbhs/<$str(S$3转系列勾选)>.png|mimg=custom/zbhs/<$str(S$3转系列勾选)>.png|link=@回收3转系列>
+
+<Img|id=4d|x=212.0|y=12.0|width=14|height=14|reset=1|loadDelay=0|esc=1|move=0|show=4|img=custom/zbhs/a.png>
+<Text|id=5d|x=260.0|y=7.0|color=92|outline=2|size=16|text=四转系列>
+
+<Button|id=6d|x=349.0|y=3.0|width=29|height=26|nimg=custom/zbhs/<$str(S$4转系列勾选)>.png|mimg=custom/zbhs/<$str(S$4转系列勾选)>.png|link=@回收4转系列>
+
+
+
+<Img|id=7d|x=421.0|y=12.0|width=14|height=14|reset=1|loadDelay=0|esc=1|move=0|show=4|img=custom/zbhs/a.png>
+<Text|id=8d|x=459.0|y=7.0|color=154|outline=2|size=16|text=八角玄冰>
+
+<Button|id=9d|x=542.0|y=4.0|width=29|height=26|nimg=custom/zbhs/<$str(S$八角玄冰系列勾选)>.png|mimg=custom/zbhs/<$str(S$八角玄冰系列勾选)>.png|link=@回收八角玄冰系列>
+
+<Layout|id=20|children={7e,8e,9e,4e,5e,6e,1e,2e,3e}|x=79.0|y=274.0|width=600|height=33>
+<Img|id=7e|x=9.0|y=12.0|width=14|height=14|reset=1|loadDelay=0|esc=1|move=0|show=4|img=custom/zbhs/a.png>
+<Text|id=8e|x=49.0|y=7.0|color=150|outline=2|size=16|text=五转系列>
+
+<Button|id=9e|x=138.0|y=4.0|width=29|height=26|nimg=custom/zbhs/<$str(S$5转系列勾选)>.png|mimg=custom/zbhs/<$str(S$5转系列勾选)>.png|link=@回收5转系列>
+
+<Img|id=4e|x=212.0|y=12.0|width=14|height=14|reset=1|loadDelay=0|esc=1|move=0|show=4|img=custom/zbhs/a.png>
+<Text|id=5e|x=260.0|y=7.0|color=150|outline=2|size=16|text=六转系列>
+
+<Button|id=6e|x=349.0|y=3.0|width=29|height=26|nimg=custom/zbhs/<$str(S$6转系列勾选)>.png|mimg=custom/zbhs/<$str(S$6转系列勾选)>.png|link=@回收6转系列>
+
+
+<Img|id=1e|x=421.0|y=12.0|width=14|height=14|reset=1|loadDelay=0|esc=1|move=0|show=4|img=custom/zbhs/a.png>
+<Text|id=2e|x=459.0|y=7.0|color=58|outline=2|size=16|text=烈火杏娇>
+
+<Button|id=3e|x=542.0|y=4.0|width=29|height=26|nimg=custom/zbhs/<$str(S$烈火杏娇系列勾选)>.png|mimg=custom/zbhs/<$str(S$烈火杏娇系列勾选)>.png|link=@回收烈火杏娇系列>
+
+<Layout|id=21|children={7f,8f,9f,4f,5f,6f,1f,2f,3f}|x=79.0|y=308.0|width=600|height=33>
+<Img|id=7f|x=9.0|y=12.0|width=14|height=14|reset=1|loadDelay=0|esc=1|move=0|show=4|img=custom/zbhs/a.png>
+<Text|id=8f|x=49.0|y=7.0|color=245|outline=2|size=16|text=七转系列>
+
+<Button|id=9f|x=138.0|y=4.0|width=29|height=26|nimg=custom/zbhs/<$str(S$7转系列勾选)>.png|mimg=custom/zbhs/<$str(S$7转系列勾选)>.png|link=@回收7转系列>
+
+;<Img|id=4f|x=212.0|y=12.0|width=14|height=14|reset=1|loadDelay=0|esc=1|move=0|show=4|img=custom/zbhs/a.png>
+;<Text|id=5f|x=260.0|y=7.0|color=245|outline=2|size=16|text=八转系列>
+
+;<Button|id=6f|x=349.0|y=3.0|width=29|height=26|nimg=custom/zbhs/<$str(S$8转系列勾选)>.png|mimg=custom/zbhs/<$str(S$8转系列勾选)>.png|link=@回收8转系列>
+
+<Img|id=1f|x=421.0|y=12.0|width=14|height=14|reset=1|loadDelay=0|esc=1|move=0|show=4|img=custom/zbhs/a.png>
+<Text|id=2f|x=459.0|y=7.0|color=241|outline=2|size=16|text=幽香绮罗>
+
+<Button|id=3f|x=542.0|y=4.0|width=29|height=26|nimg=custom/zbhs/<$str(S$幽香绮罗系列勾选)>.png|mimg=custom/zbhs/<$str(S$幽香绮罗系列勾选)>.png|link=@回收幽香绮罗系列>
+
+<Layout|id=22|children={1g,2g,3g,4g,5g,6g}|x=79.0|y=341.0|width=600|height=33>
+
+
+<Layout|id=23|children={1h,2h,3h,4h,5h,6h}|x=79.0|y=340.0|width=600|height=33>
+
+;<Img|id=1h|x=9.0|y=12.0|width=14|height=14|reset=1|loadDelay=0|esc=1|move=0|show=4|img=custom/zbhs/a.png>
+;<Text|id=2h|x=49.0|y=7.0|color=249|outline=2|size=16|text=九转系列>
+
+;<Button|id=3h|x=138.0|y=4.0|width=29|height=26|nimg=custom/zbhs/<$str(S$9转系列勾选)>.png|mimg=custom/zbhs/<$str(S$9转系列勾选)>.png|link=@回收9转系列>
+
+;<Img|id=4h|x=212.0|y=12.0|width=14|height=14|reset=1|loadDelay=0|esc=1|move=0|show=4|img=custom/zbhs/a.png>
+;<Text|id=5h|x=260.0|y=7.0|color=249|outline=2|size=16|text=十转系列>
+
+;<Button|id=6h|x=349.0|y=3.0|width=29|height=26|nimg=custom/zbhs/<$str(S$10转系列勾选)>.png|mimg=custom/zbhs/<$str(S$10转系列勾选)>.png|link=@回收10转系列>
+
+
+;<Layout|id=25|children={1j,2j,3j,4j,5j,6j}|x=79.0|y=442.0|width=600|height=33>
+
+;<Img|id=4j|x=212.0|y=12.0|width=14|height=14|reset=1|loadDelay=0|esc=1|move=0|show=4|img=custom/zbhs/a.png>
+;<Text|id=5j|x=260.0|y=7.0|color=244|outline=2|size=16|text=九转系列>
+;<Img|id=6j|x=349.0|y=6.0|width=29|height=26|reset=1|loadDelay=0|esc=1|move=0|show=4|img=custom/zbhs/0.png>
+
+;<Layout|id=26|children={1k,2k,3k,4k,5k,6k}|x=79.0|y=476.0|width=600|height=33>
+
+;<Img|id=4k|x=212.0|y=12.0|width=14|height=14|reset=1|loadDelay=0|esc=1|move=0|show=4|img=custom/zbhs/a.png>
+;<Text|id=5k|x=260.0|y=7.0|color=244|outline=2|size=16|text=十转系列>
+;<Img|id=6k|x=349.0|y=6.0|width=29|height=26|reset=1|loadDelay=0|esc=1|move=0|show=4|img=custom/zbhs/0.png>
+
+<Button|x=543.0|y=31.0|nimg=public/close-2.png|mimg=public/close-2.png|link=@exit>
+
+[@副装回收主界面]
+#IF
+#act
+GOTO @特殊材料价格申明
+GOTO @回收按钮检测
+#say
+
+<Img|children={1}|a=4|x=243.0|y=305.0|width=762|height=620|bg=1|reset=1|esc=1|move=1|img=custom/zbhs/bj.png|loadDelay=0|show=4>
+<Img|id=1|a=4|children={10,11,111,1111,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26}|x=383.0|y=308.0|width=762|height=620|reset=1|show=4|esc=1|move=0|img=custom/zbhs/gezi.png|loadDelay=0>
+
+
+<Button|id=10|x=82.0|y=90.0|width=144|height=46|nimg=custom/zbhs/4341.png|mimg=custom/zbhs/4341.png|link=@装备回收主界面>
+<Button|id=11|x=230.0|y=90.0|width=144|height=46|nimg=custom/zbhs/2.png|mimg=custom/zbhs/2.png|link=@副装回收主界面>
+<Button|id=111|x=379.0|y=90.0|width=144|height=46|nimg=custom/zbhs/22.png|mimg=custom/zbhs/22.png|link=@回收价格说明>
+<Button|id=1111|x=528.0|y=90.0|width=144|height=46|nimg=custom/zbhs/xh2.png|mimg=custom/zbhs/xh2.png|link=@摧毁物品>
+<Button|id=12|x=313.0|y=527.0|width=144|height=46|nimg=custom/zbhs/450.png|mimg=custom/zbhs/450.png|link=@副装全选>
+<Button|id=13|x=516.0|y=527.0|width=144|height=46|nimg=custom/zbhs/y.png|mimg=custom/zbhs/y.png|link=@副装回收>
+
+
+<Text|id=14|x=123.0|y=537.0|color=251|outline=2|size=18|text=自动回收>
+<Button|id=15|x=212.0|y=534.0|width=29|height=26|nimg=custom/zbhs/<$str(S$自动回收1勾选)>.png|mimg=custom/zbhs/<$str(S$自动回收1勾选)>.png|link=@自动回收1勾选>
+
+
+<Layout|id=16|children={1a,2a,3a,4a,5a,6a,7a,8a,9a}|x=79.0|y=137.0|width=600|height=33>
+<Img|id=1a|x=9.0|y=12.0|width=14|height=14|reset=1|loadDelay=0|esc=1|move=0|show=4|img=custom/zbhs/a.png>
+<Text|id=2a|x=50.0|y=7.0|color=161|outline=2|size=16|text=斗笠1-3>
+<Button|id=3a|x=138.0|y=6.0|width=29|height=26|nimg=custom/zbhs/<$str(S$斗笠1系列勾选)>.png|mimg=custom/zbhs/<$str(S$斗笠1系列勾选)>.png|link=@回收斗笠1系列>
+
+
+<Img|id=4a|x=212.0|y=12.0|width=14|height=14|reset=1|loadDelay=0|esc=1|move=0|show=4|img=custom/zbhs/a.png>
+<Text|id=5a|x=259.0|y=7.0|color=161|outline=2|size=16|text=斗笠4-7>
+<Button|id=6a|x=349.0|y=6.0|width=29|height=26|nimg=custom/zbhs/<$str(S$斗笠4系列勾选)>.png|mimg=custom/zbhs/<$str(S$斗笠4系列勾选)>.png|link=@回收斗笠4系列>
+
+<Img|id=7a|x=421.0|y=12.0|width=14|height=14|reset=1|loadDelay=0|esc=1|move=0|show=4|img=custom/zbhs/a.png>
+<Text|id=8a|x=458.0|y=7.0|color=161|outline=2|size=16|text=斗笠8-9>
+<Button|id=9a|x=545.0|y=6.0|width=29|height=26|nimg=custom/zbhs/<$str(S$斗笠7系列勾选)>.png|mimg=custom/zbhs/<$str(S$斗笠7系列勾选)>.png|link=@回收斗笠7系列>
+
+
+<Layout|id=17|children={1b,2b,3b,4b,5b,6b,7b,8b,9b}|x=79.0|y=172.0|width=600|height=33>
+<Img|id=1b|x=9.0|y=12.0|width=14|height=14|reset=1|loadDelay=0|esc=1|move=0|show=4|img=custom/zbhs/a.png>
+<Text|id=2b|x=50.0|y=7.0|color=161|outline=2|size=16|text=鲜花1-3>
+<Button|id=3b|x=138.0|y=6.0|width=29|height=26|nimg=custom/zbhs/<$str(S$鲜花1系列勾选)>.png|mimg=custom/zbhs/<$str(S$鲜花1系列勾选)>.png|link=@回收鲜花1系列>
+
+<Img|id=4b|x=212.0|y=12.0|width=14|height=14|reset=1|loadDelay=0|esc=1|move=0|show=4|img=custom/zbhs/a.png>
+<Text|id=5b|x=259.0|y=7.0|color=161|outline=2|size=16|text=鲜花4-7>
+<Button|id=6b|x=349.0|y=6.0|width=29|height=26|nimg=custom/zbhs/<$str(S$鲜花4系列勾选)>.png|mimg=custom/zbhs/<$str(S$鲜花4系列勾选)>.png|link=@回收鲜花4系列>
+
+<Img|id=7b|x=421.0|y=12.0|width=14|height=14|reset=1|loadDelay=0|esc=1|move=0|show=4|img=custom/zbhs/a.png>
+<Text|id=8b|x=458.0|y=7.0|color=161|outline=2|size=16|text=鲜花8-9>
+<Button|id=9b|x=545.0|y=6.0|width=29|height=26|nimg=custom/zbhs/<$str(S$鲜花7系列勾选)>.png|mimg=custom/zbhs/<$str(S$鲜花7系列勾选)>.png|link=@回收鲜花7系列>
+
+
+<Layout|id=18|children={1c,2c,3c,4c,5c,6c,7c,8c,9c}|x=79.0|y=206.0|width=600|height=33>
+<Img|id=1c|x=9.0|y=12.0|width=14|height=14|reset=1|loadDelay=0|esc=1|move=0|show=4|img=custom/zbhs/a.png>
+<Text|id=2c|x=50.0|y=7.0|color=161|outline=2|size=16|text=盾牌1-3>
+<Button|id=3c|x=138.0|y=6.0|width=29|height=26|nimg=custom/zbhs/<$str(S$盾牌1系列勾选)>.png|mimg=custom/zbhs/<$str(S$盾牌1系列勾选)>.png|link=@回收盾牌1系列>
+
+<Img|id=4c|x=212.0|y=12.0|width=14|height=14|reset=1|loadDelay=0|esc=1|move=0|show=4|img=custom/zbhs/a.png>
+<Text|id=5c|x=259.0|y=7.0|color=161|outline=2|size=16|text=盾牌4-7>
+<Button|id=6c|x=349.0|y=6.0|width=29|height=26|nimg=custom/zbhs/<$str(S$盾牌4系列勾选)>.png|mimg=custom/zbhs/<$str(S$盾牌4系列勾选)>.png|link=@回收盾牌4系列>
+
+<Img|id=7c|x=421.0|y=12.0|width=14|height=14|reset=1|loadDelay=0|esc=1|move=0|show=4|img=custom/zbhs/a.png>
+<Text|id=8c|x=458.0|y=7.0|color=161|outline=2|size=16|text=盾牌8-9>
+<Button|id=9c|x=545.0|y=6.0|width=29|height=26|nimg=custom/zbhs/<$str(S$盾牌7系列勾选)>.png|mimg=custom/zbhs/<$str(S$盾牌7系列勾选)>.png|link=@回收盾牌7系列>
+
+<Layout|id=19|children={1d,2d,3d,4d,5d,6d,7d,8d,9d}|x=79.0|y=240.0|width=600|height=33>
+<Img|id=1d|x=9.0|y=12.0|width=14|height=14|reset=1|loadDelay=0|esc=1|move=0|show=4|img=custom/zbhs/a.png>
+<Text|id=2d|x=50.0|y=7.0|color=161|outline=2|size=16|text=玉佩1-3>
+<Button|id=3d|x=138.0|y=6.0|width=29|height=26|nimg=custom/zbhs/<$str(S$玉佩1系列勾选)>.png|mimg=custom/zbhs/<$str(S$玉佩1系列勾选)>.png|link=@回收玉佩1系列>
+
+<Img|id=4d|x=212.0|y=12.0|width=14|height=14|reset=1|loadDelay=0|esc=1|move=0|show=4|img=custom/zbhs/a.png>
+<Text|id=5d|x=259.0|y=7.0|color=161|outline=2|size=16|text=玉佩4-7>
+<Button|id=6d|x=349.0|y=6.0|width=29|height=26|nimg=custom/zbhs/<$str(S$玉佩4系列勾选)>.png|mimg=custom/zbhs/<$str(S$玉佩4系列勾选)>.png|link=@回收玉佩4系列>
+
+<Img|id=7d|x=421.0|y=12.0|width=14|height=14|reset=1|loadDelay=0|esc=1|move=0|show=4|img=custom/zbhs/a.png>
+<Text|id=8d|x=458.0|y=7.0|color=161|outline=2|size=16|text=玉佩8-9>
+<Button|id=9d|x=545.0|y=6.0|width=29|height=26|nimg=custom/zbhs/<$str(S$玉佩7系列勾选)>.png|mimg=custom/zbhs/<$str(S$玉佩7系列勾选)>.png|link=@回收玉佩7系列>
+
+<Layout|id=20|children={1e,2e,3e,4e,5e,6e,7e,8e,9e}|x=79.0|y=273.0|width=600|height=33>
+<Img|id=1e|x=9.0|y=12.0|width=14|height=14|reset=1|loadDelay=0|esc=1|move=0|show=4|img=custom/zbhs/a.png>
+<Text|id=2e|x=50.0|y=7.0|color=161|outline=2|size=16|text=炽焰标>
+<Button|id=3e|x=138.0|y=6.0|width=29|height=26|nimg=custom/zbhs/<$str(S$炽焰标系列勾选)>.png|mimg=custom/zbhs/<$str(S$炽焰标系列勾选)>.png|link=@回收炽焰标系列>
+
+<Img|id=4e|x=212.0|y=12.0|width=14|height=14|reset=1|loadDelay=0|esc=1|move=0|show=4|img=custom/zbhs/a.png>
+<Text|id=5e|x=259.0|y=7.0|color=161|outline=2|size=16|text=捆仙绳>
+<Button|id=6e|x=349.0|y=6.0|width=29|height=26|nimg=custom/zbhs/<$str(S$捆仙绳系列勾选)>.png|mimg=custom/zbhs/<$str(S$捆仙绳系列勾选)>.png|link=@回收捆仙绳系列>
+
+<Img|id=7e|x=421.0|y=12.0|width=14|height=14|reset=1|loadDelay=0|esc=1|move=0|show=4|img=custom/zbhs/a.png>
+<Text|id=8e|x=458.0|y=7.0|color=161|outline=2|size=16|text=秀发簪>
+<Button|id=9e|x=545.0|y=6.0|width=29|height=26|nimg=custom/zbhs/<$str(S$秀发簪系列勾选)>.png|mimg=custom/zbhs/<$str(S$秀发簪系列勾选)>.png|link=@回收秀发簪系列>
+
+
+
+
+<Layout|id=21|children={1f,2f,3f,4f,5f,6f,7f,8f,9f}|x=79.0|y=308.0|width=600|height=33>
+<Img|id=1f|x=9.0|y=12.0|width=14|height=14|reset=1|loadDelay=0|esc=1|move=0|show=4|img=custom/zbhs/a.png>
+<Text|id=2f|x=50.0|y=7.0|color=161|outline=2|size=16|text=毒物袋>
+<Button|id=3f|x=138.0|y=6.0|width=29|height=26|nimg=custom/zbhs/<$str(S$毒物袋系列勾选)>.png|mimg=custom/zbhs/<$str(S$毒物袋系列勾选)>.png|link=@回收毒物袋系列>
+
+<Img|id=4f|x=212.0|y=12.0|width=14|height=14|reset=1|loadDelay=0|esc=1|move=0|show=4|img=custom/zbhs/a.png>
+<Text|id=5f|x=259.0|y=7.0|color=161|outline=2|size=16|text=圣物令>
+<Button|id=6f|x=349.0|y=6.0|width=29|height=26|nimg=custom/zbhs/<$str(S$圣物令系列勾选)>.png|mimg=custom/zbhs/<$str(S$圣物令系列勾选)>.png|link=@回收圣物令系列>
+
+<Img|id=7f|x=421.0|y=12.0|width=14|height=14|reset=1|loadDelay=0|esc=1|move=0|show=4|img=custom/zbhs/a.png>
+<Text|id=8f|x=458.0|y=7.0|color=161|outline=2|size=16|text=仙人书>
+<Button|id=9f|x=545.0|y=6.0|width=29|height=26|nimg=custom/zbhs/<$str(S$仙人书系列勾选)>.png|mimg=custom/zbhs/<$str(S$仙人书系列勾选)>.png|link=@回收仙人书系列>
+
+
+<Layout|id=22|children={1g,2g,3g,4g,5g,6g,7g,8g,9g}|x=79.0|y=341.0|width=600|height=33>
+<Img|id=1g|x=9.0|y=12.0|width=14|height=14|reset=1|loadDelay=0|esc=1|move=0|show=4|img=custom/zbhs/a.png>
+<Text|id=2g|x=50.0|y=7.0|color=161|outline=2|size=16|text=玉净瓶>
+<Button|id=3g|x=138.0|y=6.0|width=29|height=26|nimg=custom/zbhs/<$str(S$玉净瓶系列勾选)>.png|mimg=custom/zbhs/<$str(S$玉净瓶系列勾选)>.png|link=@回收玉净瓶系列>
+
+<Img|id=4g|x=212.0|y=12.0|width=14|height=14|reset=1|loadDelay=0|esc=1|move=0|show=4|img=custom/zbhs/a.png>
+<Text|id=5g|x=259.0|y=7.0|color=161|outline=2|size=16|text=金刚钵>
+<Button|id=6g|x=349.0|y=6.0|width=29|height=26|nimg=custom/zbhs/<$str(S$金刚钵系列勾选)>.png|mimg=custom/zbhs/<$str(S$金刚钵系列勾选)>.png|link=@回收金刚钵系列>
+
+<Img|id=7g|x=421.0|y=12.0|width=14|height=14|reset=1|loadDelay=0|esc=1|move=0|show=4|img=custom/zbhs/a.png>
+<Text|id=8g|x=458.0|y=7.0|color=161|outline=2|size=16|text=牛魔角>
+<Button|id=9g|x=545.0|y=6.0|width=29|height=26|nimg=custom/zbhs/<$str(S$牛魔角系列勾选)>.png|mimg=custom/zbhs/<$str(S$牛魔角系列勾选)>.png|link=@回收牛魔角系列>
+
+<Layout|id=23|children={1h,2h,3h,4h,5h,6h,7h,8h,9h}|x=79.0|y=375.0|width=600|height=33>
+<Img|id=1h|x=9.0|y=12.0|width=14|height=14|reset=1|loadDelay=0|esc=1|move=0|show=4|img=custom/zbhs/a.png>
+<Text|id=2h|x=50.0|y=7.0|color=161|outline=2|size=16|text=圣火炬>
+<Button|id=3h|x=138.0|y=6.0|width=29|height=26|nimg=custom/zbhs/<$str(S$圣火炬系列勾选)>.png|mimg=custom/zbhs/<$str(S$圣火炬系列勾选)>.png|link=@回收圣火炬系列>
+
+<Img|id=4h|x=212.0|y=12.0|width=14|height=14|reset=1|loadDelay=0|esc=1|move=0|show=4|img=custom/zbhs/a.png>
+<Text|id=5h|x=259.0|y=7.0|color=161|outline=2|size=16|text=金铜鼎>
+<Button|id=6h|x=349.0|y=6.0|width=29|height=26|nimg=custom/zbhs/<$str(S$金铜鼎系列勾选)>.png|mimg=custom/zbhs/<$str(S$金铜鼎系列勾选)>.png|link=@回收金铜鼎系列>
+
+<Img|id=7h|x=421.0|y=12.0|width=14|height=14|reset=1|loadDelay=0|esc=1|move=0|show=4|img=custom/zbhs/a.png>
+<Text|id=8h|x=458.0|y=7.0|color=161|outline=2|size=16|text=骷髅头>
+<Button|id=9h|x=545.0|y=6.0|width=29|height=26|nimg=custom/zbhs/<$str(S$骷髅头系列勾选)>.png|mimg=custom/zbhs/<$str(S$骷髅头系列勾选)>.png|link=@回收骷髅头系列>
+
+
+<Button|x=543.0|y=31.0|nimg=public/close-2.png|mimg=public/close-2.png|link=@exit>
+
+[@回收按钮检测]
+
+
+#IF
+CHECK [210] 0
+#ACT
+MOV s$斗笠1系列勾选 0
+#ELSEACT
+MOV s$斗笠1系列勾选 3
+
+#IF
+CHECK [211] 0
+#ACT
+MOV s$斗笠4系列勾选 0
+#ELSEACT
+MOV s$斗笠4系列勾选 3
+
+#IF
+CHECK [212] 0
+#ACT
+MOV s$斗笠7系列勾选 0
+#ELSEACT
+MOV s$斗笠7系列勾选 3
+
+;=======================
+#IF
+CHECK [213] 0
+#ACT
+MOV s$鲜花1系列勾选 0
+#ELSEACT
+MOV s$鲜花1系列勾选 3
+
+#IF
+CHECK [214] 0
+#ACT
+MOV s$鲜花4系列勾选 0
+#ELSEACT
+MOV s$鲜花4系列勾选 3
+
+#IF
+CHECK [215] 0
+#ACT
+MOV s$鲜花7系列勾选 0
+#ELSEACT
+MOV s$鲜花7系列勾选 3
+;=======================
+#IF
+CHECK [216] 0
+#ACT
+MOV s$盾牌1系列勾选 0
+#ELSEACT
+MOV s$盾牌1系列勾选 3
+
+#IF
+CHECK [217] 0
+#ACT
+MOV s$盾牌4系列勾选 0
+#ELSEACT
+MOV s$盾牌4系列勾选 3
+
+#IF
+CHECK [218] 0
+#ACT
+MOV s$盾牌7系列勾选 0
+#ELSEACT
+MOV s$盾牌7系列勾选 3
+;=======================
+#IF
+CHECK [219] 0
+#ACT
+MOV s$玉佩1系列勾选 0
+#ELSEACT
+MOV s$玉佩1系列勾选 3
+
+#IF
+CHECK [220] 0
+#ACT
+MOV s$玉佩4系列勾选 0
+#ELSEACT
+MOV s$玉佩4系列勾选 3
+
+#IF
+CHECK [221] 0
+#ACT
+MOV s$玉佩7系列勾选 0
+#ELSEACT
+MOV s$玉佩7系列勾选 3
+
+#IF
+CHECK [224] 0
+#ACT
+MOV S$炽焰标系列勾选 0
+#ELSEACT
+MOV s$炽焰标系列勾选 3
+
+#IF
+CHECK [225] 0
+#ACT
+MOV S$捆仙绳系列勾选 0
+#ELSEACT
+MOV s$捆仙绳系列勾选 3
+
+#IF
+CHECK [226] 0
+#ACT
+MOV S$秀发簪系列勾选 0
+#ELSEACT
+MOV s$秀发簪系列勾选 3
+
+#IF
+CHECK [227] 0
+#ACT
+MOV S$毒物袋系列勾选 0
+#ELSEACT
+MOV s$毒物袋系列勾选 3
+
+#IF
+CHECK [228] 0
+#ACT
+MOV S$圣物令系列勾选 0
+#ELSEACT
+MOV s$圣物令系列勾选 3
+
+#IF
+CHECK [229] 0
+#ACT
+MOV S$仙人书系列勾选 0
+#ELSEACT
+MOV s$仙人书系列勾选 3
+
+#IF
+CHECK [230] 0
+#ACT
+MOV S$玉净瓶系列勾选 0
+#ELSEACT
+MOV s$玉净瓶系列勾选 3
+
+#IF
+CHECK [231] 0
+#ACT
+MOV S$金刚钵系列勾选 0
+#ELSEACT
+MOV s$金刚钵系列勾选 3
+
+#IF
+CHECK [232] 0
+#ACT
+MOV S$牛魔角系列勾选 0
+#ELSEACT
+MOV s$牛魔角系列勾选 3
+
+#IF
+CHECK [233] 0
+#ACT
+MOV S$圣火炬系列勾选 0
+#ELSEACT
+MOV s$圣火炬系列勾选 3
+
+#IF
+CHECK [234] 0
+#ACT
+MOV S$金铜鼎系列勾选 0
+#ELSEACT
+MOV s$金铜鼎系列勾选 3
+
+#IF
+CHECK [235] 0
+#ACT
+MOV S$骷髅头系列勾选 0
+#ELSEACT
+MOV s$骷髅头系列勾选 3
+
+#IF
+CHECK [110] 0
+#ACT
+MOV s$沃玛系列勾选 0
+#ELSEACT
+MOV s$沃玛系列勾选 3
+
+#IF
+CHECK [111] 0
+#ACT
+MOV s$祖玛系列勾选 0
+#ELSEACT
+MOV s$祖玛系列勾选 3
+
+#IF
+CHECK [112] 0
+#ACT
+MOV s$赤月系列勾选 0
+#ELSEACT
+MOV s$赤月系列勾选 3
+
+#IF
+CHECK [113] 0
+#ACT
+MOV s$30系列勾选 0
+#ELSEACT
+MOV s$30系列勾选 3
+
+#IF
+CHECK [114] 0
+#ACT
+MOV s$1转系列勾选 0
+#ELSEACT
+MOV s$1转系列勾选 3
+
+#IF
+CHECK [115] 0
+#ACT
+MOV s$奇茸通天系列勾选 0
+#ELSEACT
+MOV s$奇茸通天系列勾选 3
+
+#IF
+CHECK [116] 0
+#ACT
+MOV s$35系列勾选 0
+#ELSEACT
+MOV s$35系列勾选 3
+
+#IF
+CHECK [117] 0
+#ACT
+MOV s$2转系列勾选 0
+#ELSEACT
+MOV s$2转系列勾选 3
+
+#IF
+CHECK [118] 0
+#ACT
+MOV s$天茄弥陀系列勾选 0
+#ELSEACT
+MOV s$天茄弥陀系列勾选 3
+
+#IF
+CHECK [134] 0
+#ACT
+MOV s$八角玄冰系列勾选 0
+#ELSEACT
+MOV s$八角玄冰系列勾选 3
+
+#IF
+CHECK [135] 0
+#ACT
+MOV s$烈火杏娇系列勾选 0
+#ELSEACT
+MOV s$烈火杏娇系列勾选 3
+
+#IF
+CHECK [136] 0
+#ACT
+MOV s$幽香绮罗系列勾选 0
+#ELSEACT
+MOV s$幽香绮罗系列勾选 3
+
+#IF
+CHECK [119] 0
+#ACT
+MOV s$40系列勾选 0
+#ELSEACT
+MOV s$40系列勾选 3
+
+#IF
+CHECK [120] 0
+#ACT
+MOV S$3转系列勾选 0
+#ELSEACT
+MOV S$3转系列勾选 3
+
+#IF
+CHECK [121] 0
+#ACT
+MOV S$4转系列勾选 0
+#ELSEACT
+MOV S$4转系列勾选 3
+
+#IF
+CHECK [122] 0
+#ACT
+MOV S$5转系列勾选 0
+#ELSEACT
+MOV S$5转系列勾选 3
+
+#IF
+CHECK [123] 0
+#ACT
+MOV S$6转系列勾选 0
+#ELSEACT
+MOV S$6转系列勾选 3
+
+#IF
+CHECK [137] 0
+#ACT
+MOV S$7转系列勾选 0
+#ELSEACT
+MOV S$7转系列勾选 3
+
+#IF
+CHECK [138] 0
+#ACT
+MOV S$8转系列勾选 0
+#ELSEACT
+MOV S$8转系列勾选 3
+
+#IF
+CHECK [139] 0
+#ACT
+MOV S$9转系列勾选 0
+#ELSEACT
+MOV S$9转系列勾选 3
+
+#IF
+CHECK [140] 0
+#ACT
+MOV S$10转系列勾选 0
+#ELSEACT
+MOV S$10转系列勾选 3
+
+#IF
+CHECK [124] 0
+#ACT
+MOV S$自动回收1勾选 0
+#ELSEACT
+MOV S$自动回收1勾选 3
+
+
+
+
+
+[@自动回收1勾选]
+#if
+check [124] 0 
+
+equal U7 5
+#act
+set [124] 1 
+
+sendmsg 9 勾选后背包装备小于40个格子将自动回收
+GOTO @装备回收主界面
+#CALL [\任务系统\任务系统QF.txt] @任务系统QF
+break
+
+#if
+check [124] 0 
+
+#act
+set [124] 1 
+
+sendmsg 9 勾选后背包装备小于40个格子将自动回收
+GOTO @装备回收主界面
+#elseact
+SET [124] 0 
+
+sendmsg 9 取消自动回收
+GOTO @装备回收主界面
+
+[@回收斗笠1系列]
+#if
+check [210] 0 
+#act
+set [210] 1 
+GOTO @副装回收主界面
+#elseact
+SET [210] 0 
+GOTO @副装回收主界面
+
+[@回收斗笠4系列]
+#if
+check [211] 0 
+#act
+set [211] 1 
+GOTO @副装回收主界面
+#elseact
+SET [211] 0 
+GOTO @副装回收主界面
+
+[@回收斗笠7系列]
+#if
+check [212] 0 
+#act
+set [212] 1 
+GOTO @副装回收主界面
+#elseact
+SET [212] 0 
+GOTO @副装回收主界面
+
+[@回收鲜花1系列]
+#if
+check [213] 0 
+#act
+set [213] 1 
+GOTO @副装回收主界面
+#elseact
+SET [213] 0 
+GOTO @副装回收主界面
+
+[@回收鲜花4系列]
+#if
+check [214] 0 
+#act
+set [214] 1 
+GOTO @副装回收主界面
+#elseact
+SET [214] 0 
+GOTO @副装回收主界面
+
+[@回收鲜花7系列]
+#if
+check [215] 0 
+#act
+set [215] 1 
+GOTO @副装回收主界面
+#elseact
+SET [215] 0 
+GOTO @副装回收主界面
+
+[@回收盾牌1系列]
+#if
+check [216] 0 
+#act
+set [216] 1 
+GOTO @副装回收主界面
+#elseact
+SET [216] 0 
+GOTO @副装回收主界面
+
+[@回收盾牌4系列]
+#if
+check [217] 0 
+#act
+set [217] 1 
+GOTO @副装回收主界面
+#elseact
+SET [217] 0 
+GOTO @副装回收主界面
+
+[@回收盾牌7系列]
+#if
+check [218] 0 
+#act
+set [218] 1 
+GOTO @副装回收主界面
+#elseact
+SET [218] 0 
+GOTO @副装回收主界面
+
+[@回收玉佩1系列]
+#if
+check [219] 0 
+#act
+set [219] 1 
+GOTO @副装回收主界面
+#elseact
+SET [219] 0 
+GOTO @副装回收主界面
+
+[@回收玉佩4系列]
+#if
+check [220] 0 
+#act
+set [220] 1 
+GOTO @副装回收主界面
+#elseact
+SET [220] 0 
+GOTO @副装回收主界面
+
+[@回收玉佩7系列]
+#if
+check [221] 0 
+#act
+set [221] 1 
+GOTO @副装回收主界面
+#elseact
+SET [221] 0 
+GOTO @副装回收主界面
+
+[@回收炽焰标系列]
+#if
+check [224] 0 
+#act
+set [224] 1 
+GOTO @副装回收主界面
+#elseact
+SET [224] 0 
+GOTO @副装回收主界面
+
+[@回收捆仙绳系列]
+#if
+check [225] 0 
+#act
+set [225] 1 
+GOTO @副装回收主界面
+#elseact
+SET [225] 0 
+GOTO @副装回收主界面
+
+[@回收秀发簪系列]
+#if
+check [226] 0 
+#act
+set [226] 1 
+GOTO @副装回收主界面
+#elseact
+SET [226] 0 
+GOTO @副装回收主界面
+
+[@回收毒物袋系列]
+#if
+check [227] 0 
+#act
+set [227] 1 
+GOTO @副装回收主界面
+#elseact
+SET [227] 0 
+GOTO @副装回收主界面
+
+[@回收圣物令系列]
+#if
+check [228] 0 
+#act
+set [228] 1 
+GOTO @副装回收主界面
+#elseact
+SET [228] 0 
+GOTO @副装回收主界面
+
+[@回收仙人书系列]
+#if
+check [229] 0 
+#act
+set [229] 1 
+GOTO @副装回收主界面
+#elseact
+SET [229] 0 
+GOTO @副装回收主界面
+
+[@回收玉净瓶系列]
+#if
+check [230] 0 
+#act
+set [230] 1 
+GOTO @副装回收主界面
+#elseact
+SET [230] 0 
+GOTO @副装回收主界面
+
+[@回收金刚钵系列]
+#if
+check [231] 0 
+#act
+set [231] 1 
+GOTO @副装回收主界面
+#elseact
+SET [231] 0 
+GOTO @副装回收主界面
+
+[@回收牛魔角系列]
+#if
+check [232] 0 
+#act
+set [232] 1 
+GOTO @副装回收主界面
+#elseact
+SET [232] 0 
+GOTO @副装回收主界面
+
+[@回收圣火炬系列]
+#if
+check [233] 0 
+#act
+set [233] 1 
+GOTO @副装回收主界面
+#elseact
+SET [233] 0 
+GOTO @副装回收主界面
+
+[@回收金铜鼎系列]
+#if
+check [234] 0 
+#act
+set [234] 1 
+GOTO @副装回收主界面
+#elseact
+SET [234] 0 
+GOTO @副装回收主界面
+
+[@回收骷髅头系列]
+#if
+check [235] 0 
+#act
+set [235] 1 
+GOTO @副装回收主界面
+#elseact
+SET [235] 0 
+GOTO @副装回收主界面
+
+[@回收沃玛系列]
+#if
+check [110] 0 
+#act
+set [110] 1 
+
+GOTO @装备回收主界面
+#elseact
+SET [110] 0 
+
+GOTO @装备回收主界面
+
+[@回收祖玛系列]
+#if
+check [111] 0 
+#act
+set [111] 1  
+
+GOTO @装备回收主界面
+#elseact
+SET [111] 0
+
+GOTO @装备回收主界面
+
+[@回收赤月系列]
+#if
+check [112] 0 
+#act
+set [112] 1 
+
+GOTO @装备回收主界面
+#elseact
+SET [112] 0
+
+GOTO @装备回收主界面
+
+[@回收30系列]
+#if
+check [113] 0 
+#act
+set [113] 1 
+
+GOTO @装备回收主界面
+#elseact
+SET [113] 0
+
+GOTO @装备回收主界面
+
+[@回收1转系列]
+#if
+check [114] 0 
+#act
+set [114] 1 
+
+GOTO @装备回收主界面
+#elseact
+SET [114] 0
+
+GOTO @装备回收主界面
+
+[@回收奇茸通天系列]
+#if
+check [115] 0 
+#act
+set [115] 1 
+
+GOTO @装备回收主界面
+#elseact
+SET [115] 0
+
+GOTO @装备回收主界面
+
+[@回收35系列]
+#if
+check [116] 0 
+#act
+set [116] 1 
+
+GOTO @装备回收主界面
+#elseact
+SET [116] 0
+
+GOTO @装备回收主界面
+
+[@回收2转系列]
+#if
+check [117] 0 
+#act
+set [117] 1 
+
+GOTO @装备回收主界面
+#elseact
+SET [117] 0
+
+GOTO @装备回收主界面
+
+[@回收天茄弥陀系列]
+#if
+check [118] 0 
+#act
+set [118] 1 
+
+GOTO @装备回收主界面
+#elseact
+SET [118] 0
+
+GOTO @装备回收主界面
+
+
+[@回收八角玄冰系列]
+#if
+check [134] 0 
+#act
+set [134] 1 
+
+GOTO @装备回收主界面
+#elseact
+SET [134] 0
+
+GOTO @装备回收主界面
+
+[@回收烈火杏娇系列]
+#if
+check [135] 0 
+#act
+set [135] 1 
+
+GOTO @装备回收主界面
+#elseact
+SET [135] 0
+
+GOTO @装备回收主界面
+
+[@回收幽香绮罗系列]
+#if
+check [136] 0 
+#act
+set [136] 1 
+
+GOTO @装备回收主界面
+#elseact
+SET [136] 0
+
+GOTO @装备回收主界面
+
+
+[@回收40系列]
+#if
+check [119] 0 
+#act
+set [119] 1 
+
+GOTO @装备回收主界面
+#elseact
+SET [119] 0
+
+GOTO @装备回收主界面
+
+[@回收3转系列]
+#if
+check [120] 0 
+#act
+set [120] 1 
+
+GOTO @装备回收主界面
+#elseact
+SET [120] 0
+
+GOTO @装备回收主界面
+
+[@回收4转系列]
+#if
+check [121] 0 
+#act
+set [121] 1 
+
+GOTO @装备回收主界面
+#elseact
+SET [121] 0
+
+GOTO @装备回收主界面
+
+[@回收5转系列]
+#if
+check [122] 0 
+#act
+set [122] 1 
+
+GOTO @装备回收主界面
+#elseact
+SET [122] 0
+
+GOTO @装备回收主界面
+
+[@回收6转系列]
+#if
+check [123] 0 
+#act
+set [123] 1 
+
+GOTO @装备回收主界面
+#elseact
+SET [123] 0
+GOTO @装备回收主界面
+[@回收7转系列]
+#if
+check [137] 0 
+#act
+set [137] 1 
+
+GOTO @装备回收主界面
+#elseact
+SET [137] 0
+
+GOTO @装备回收主界面
+
+[@回收8转系列]
+#if
+check [138] 0 
+#act
+set [138] 1 
+
+GOTO @装备回收主界面
+#elseact
+SET [138] 0
+GOTO @装备回收主界面
+[@回收9转系列]
+#if
+check [139] 0 
+#act
+set [139] 1 
+
+GOTO @装备回收主界面
+#elseact
+SET [139] 0
+GOTO @装备回收主界面
+[@回收10转系列]
+#if
+check [140] 0 
+#act
+set [140] 1 
+
+GOTO @装备回收主界面
+#elseact
+SET [140] 0
+GOTO @装备回收主界面
+[@副装全选]
+#if
+check [186] 0
+#act
+set [210] 1
+set [211] 1
+set [212] 1
+set [213] 1
+set [214] 1
+set [215] 1
+set [216] 1
+set [217] 1
+set [218] 1
+set [219] 1
+set [220] 1
+set [221] 1
+set [186] 1
+set [224] 1
+set [225] 1
+set [226] 1
+set [227] 1
+set [228] 1
+set [229] 1
+set [230] 1
+set [231] 1
+set [232] 1
+set [233] 1
+set [234] 1
+set [235] 1
+GOTO @副装回收主界面
+#elseact
+set [210] 0
+set [211] 0
+set [212] 0
+set [213] 0
+set [214] 0
+set [215] 0
+set [216] 0
+set [217] 0
+set [218] 0
+set [219] 0
+set [220] 0
+set [221] 0
+set [186] 0
+set [224] 0
+set [225] 0
+set [226] 0
+set [227] 0
+set [228] 0
+set [229] 0
+set [230] 0
+set [231] 0
+set [232] 0
+set [233] 0
+set [234] 0
+set [235] 0
+GOTO @副装回收主界面
+
+[@一键全选1]
+#if
+check [109] 0
+#act
+set [110] 1
+set [111] 1
+set [112] 1
+set [113] 1
+set [114] 1
+set [115] 1
+set [116] 1
+set [117] 1
+set [118] 1
+set [134] 1
+set [135] 1
+set [136] 1
+set [119] 1
+set [120] 1
+set [121] 1
+set [122] 1
+set [123] 1
+set [109] 1
+set [137] 1
+set [138] 1
+set [139] 1
+set [140] 1
+GOTO @装备回收主界面
+#elseact
+SET [123] 0
+set [110] 0
+set [111] 0
+set [112] 0
+set [113] 0
+set [114] 0
+set [115] 0
+set [116] 0
+set [117] 0
+set [118] 0
+set [134] 0
+set [135] 0
+set [136] 0
+set [119] 0
+set [120] 0
+set [121] 0
+set [122] 0
+set [109] 0
+set [137] 0
+set [138] 0
+set [139] 0
+set [140] 0
+GOTO @装备回收主界面
+
+
+
+
+
+[@一键回收1]
+#IF
+#ACT
+MOV N$回收装备数量 0
+MOV N$回收装备元宝 0
+MOV N$回收装备点卡 0
+mov N$回收洗练石数量 0
+#CALL [\功能脚本\回收脚本.txt] @回收价格申明
+TakeBagItem 轻型盔甲(男)|轻型盔甲(女)|中型盔甲(男)|中型盔甲(女)|斩马刀|凌风|半月|修罗|偃月|降魔|金项链|传统项链|白金项链|钢手镯|银手镯|铁手镯|古铜戒指|六角戒指 100 N$普通装备 0
+TakeBagItem 玻璃戒指|蓝翡翠项链|放大镜|竹笛|幽灵手套|黑檀手镯|道士手镯|珊瑚戒指|魅力戒指|道德戒指|红宝石戒指 100 N$一般装备 0
+inc N$回收装备数量 <$STR(N$普通装备)>
+MUL N$普通装备元宝系列 <$STR(N$普通装备)>
+INC N$回收装备元宝 <$STR(N$普通装备元宝系列)>
+
+inc N$回收装备数量 <$STR(N$一般装备)>
+MUL N$一般装备元宝系列 <$STR(N$一般装备)>
+INC N$回收装备元宝 <$STR(N$一般装备元宝系列)>
+
+#IF   
+CHECK [110] 1
+#ACT  
+TakeBagItem 骷髅头盔|幽灵项链|死神手套|龙之戒指|道士头盔|生命项链|思贝儿手镯|天珠项链|心灵手镯|铂金戒指 100 N$沃玛首饰 0
+TakeBagItem 重盔甲[男]|重盔甲[女]|魔法长袍[男]|魔法长袍[女]|灵魂战衣[男]|灵魂战衣[女] 100 N$沃玛衣服
+TakeBagItem 炼狱|魔杖|银蛇 100 N$沃玛武器
+
+INC N$回收装备数量 <$STR(N$沃玛首饰)>
+INC N$回收装备数量 <$STR(N$沃玛衣服)>
+INC N$回收装备数量 <$STR(N$沃玛武器)>
+
+MUL N$沃玛首饰元宝系列 <$STR(N$沃玛首饰)>
+MUL N$沃玛衣服元宝系列 <$STR(N$沃玛衣服)>
+MUL N$沃玛武器元宝系列 <$STR(N$沃玛武器)>
+
+
+
+INC N$回收装备元宝 <$STR(N$沃玛首饰元宝系列)>
+INC N$回收装备元宝 <$STR(N$沃玛衣服元宝系列)>
+INC N$回收装备元宝 <$STR(N$沃玛武器元宝系列)>
+
+
+
+#IF   
+CHECK [111] 1
+#ACT  
+TakeBagItem 黑铁头盔|绿色项链|骑士手镯|力量戒指|恶魔铃铛|龙之手镯|紫碧螺|灵魂项链|三眼手镯|泰坦戒指 100 N$祖玛首饰 0
+TakeBagItem 战神盔甲[男]|战神盔甲[女]|恶魔长袍[男]|恶魔长袍[女]|幽灵战衣[男]|幽灵战衣[女] 100 N$祖玛衣服
+TakeBagItem 裁决之杖|骨玉权杖|龙纹剑 100 N$祖玛武器
+
+INC N$回收装备数量 <$STR(N$祖玛首饰)>
+INC N$回收装备数量 <$STR(N$祖玛衣服)>
+INC N$回收装备数量 <$STR(N$祖玛武器)>
+
+MUL N$祖玛首饰元宝系列 <$STR(N$祖玛首饰)>
+MUL N$祖玛衣服元宝系列 <$STR(N$祖玛衣服)>
+MUL N$祖玛武器元宝系列 <$STR(N$祖玛武器)>
+
+
+
+INC N$回收装备元宝 <$STR(N$祖玛首饰元宝系列)>
+INC N$回收装备元宝 <$STR(N$祖玛衣服元宝系列)>
+INC N$回收装备元宝 <$STR(N$祖玛武器元宝系列)>
+
+
+
+#IF   
+CHECK [112] 1
+#ACT  
+TakeBagItem 圣战头盔|圣战项链|圣战手镯|圣战戒指|圣战靴子|圣战腰带|法神头盔|法神项链|法神手镯|法神戒指|法神靴子|法神腰带|天尊头盔|天尊项链|天尊手镯|天尊戒指|天尊靴子|天尊腰带 100 N$赤月首饰 0
+TakeBagItem 天魔神甲|圣战宝甲|法神披风|霓裳羽衣|天尊道袍|天师长袍 100 N$赤月衣服
+TakeBagItem 屠龙|嗜魂法杖|霸者之刃 100 N$赤月武器
+
+INC N$回收装备数量 <$STR(N$赤月首饰)>
+INC N$回收装备数量 <$STR(N$赤月衣服)>
+INC N$回收装备数量 <$STR(N$赤月武器)>
+
+MUL N$赤月首饰元宝系列 <$STR(N$赤月首饰)>
+MUL N$赤月衣服元宝系列 <$STR(N$赤月衣服)>
+MUL N$赤月武器元宝系列 <$STR(N$赤月武器)>
+
+
+
+INC N$回收装备元宝 <$STR(N$赤月首饰元宝系列)>
+INC N$回收装备元宝 <$STR(N$赤月衣服元宝系列)>
+INC N$回收装备元宝 <$STR(N$赤月武器元宝系列)>
+
+
+
+#IF   
+CHECK [116] 1
+#ACT  
+TakeBagItem 藤域头盔|藤域项链|藤域手镯|藤域戒指|藤域靴子|藤域腰带|沐域头盔|沐域项链|沐域手镯|沐域戒指|沐域靴子|沐域腰带|道域头盔|道域项链|道域手镯|道域戒指|道域靴子|道域腰带|绿玉戒指|绿玉手镯|绿玉项链|绿玉头盔|绿玉靴子|绿玉腰带|绿疾戒指|绿疾手镯|绿疾项链|绿疾头盔|绿疾靴子|绿疾腰带|紫光戒指|紫光手镯|紫光项链|紫光头盔|紫光靴子|紫光腰带 100 N$35级首饰 0
+TakeBagItem 绿玉战甲|绿玉战袍|紫光法甲|紫光法袍|绿疾道甲|绿疾道袍 100 N$35级衣服
+TakeBagItem 绿玉屠龙|绿玉裁决|紫光法杖|绿玉无极棍 100 N$35级武器
+
+INC N$回收装备数量 <$STR(N$35级首饰)>
+INC N$回收装备数量 <$STR(N$35级衣服)>
+INC N$回收装备数量 <$STR(N$35级武器)>
+
+
+MUL N$35首饰元宝系列 <$STR(N$35级首饰)>
+MUL N$35衣服元宝系列 <$STR(N$35级衣服)>
+MUL N$35武器元宝系列 <$STR(N$35级武器)>
+
+
+
+INC N$回收装备元宝 <$STR(N$35首饰元宝系列)>
+INC N$回收装备元宝 <$STR(N$35衣服元宝系列)>
+INC N$回收装备元宝 <$STR(N$35武器元宝系列)>
+
+
+
+
+
+#IF   
+CHECK [119] 1
+#ACT  
+TakeBagItem 铜域头盔|铜域项链|铜域手镯|铜域戒指|铜域靴子|铜域腰带|水域头盔|水域项链|水域手镯|水域戒指|水域靴子|水域腰带|土域头盔|土域项链|土域手镯|土域戒指|土域靴子|土域腰带 100 N$40级首饰 0
+TakeBagItem 蓝灵法杖|青罡佛尘 100 N$40武器
+
+INC N$回收装备数量 <$STR(N$40级首饰)>
+INC N$回收装备数量 <$STR(N$40武器)>
+
+MUL N$40元宝系列 <$STR(N$40级首饰)>
+
+MUL N$40武器元宝系列 <$STR(N$40武器)>
+
+INC N$回收装备元宝 <$STR(N$40元宝系列)>
+INC N$回收装备元宝 <$STR(N$40武器元宝系列)>
+
+
+
+#IF   
+CHECK [114] 1
+#ACT  
+TakeBagItem 暗光腰带|暗光靴子|暗光头盔|暗光项链|暗光手镯|暗光戒指|红魔腰带|红魔靴子|红魔头盔|红魔项链|红魔手镯|红魔戒指|翡翠腰带|翡翠靴子|翡翠头盔|翡翠项链|翡翠手镯|翡翠戒指 100 N$一转首饰 0
+TakeBagItem 暗光战甲|暗光战袍|红魔法甲|红魔法袍|翡翠道甲|翡翠道袍 100 N$一转衣服
+TakeBagItem 暗光屠龙|红魔法杖|翡翠幽风 100 N$一转武器
+
+INC N$回收装备数量 <$STR(N$一转首饰)>
+INC N$回收装备数量 <$STR(N$一转衣服)>
+INC N$回收装备数量 <$STR(N$一转武器)>
+
+MUL N$一转首饰元宝系列 <$STR(N$一转首饰)>
+MUL N$一转衣服元宝系列 <$STR(N$一转衣服)>
+MUL N$一转武器元宝系列 <$STR(N$一转武器)>
+
+INC N$回收装备元宝 <$STR(N$一转首饰元宝系列)>
+INC N$回收装备元宝 <$STR(N$一转衣服元宝系列)>
+INC N$回收装备元宝 <$STR(N$一转武器元宝系列)>
+
+
+#IF   
+CHECK [117] 1
+#ACT  
+TakeBagItem 白龙腰带|白龙靴子|白龙头盔|白龙项链|白龙手镯|白龙戒指|白虎腰带|白虎靴子|白虎头盔|白虎项链|白虎手镯|白虎戒指|凤金腰带|凤金靴子|凤金头盔|凤金项链|凤金手镯|凤金戒指 100 N$二转首饰 0
+TakeBagItem 白龙法甲|白龙法袍|白虎战甲|白虎战袍|凤金道甲|凤金道袍 100 N$二转衣服
+TakeBagItem 斩神银龙|灭魂鬼斩|天界无极 100 N$二转武器
+
+INC N$回收装备数量 <$STR(N$二转首饰)>
+INC N$回收装备数量 <$STR(N$二转衣服)>
+INC N$回收装备数量 <$STR(N$二转武器)>
+
+MUL N$二转首饰元宝系列 <$STR(N$二转首饰)>
+MUL N$二转衣服元宝系列 <$STR(N$二转衣服)>
+MUL N$二转武器元宝系列 <$STR(N$二转武器)>
+
+INC N$回收装备元宝 <$STR(N$二转首饰元宝系列)>
+INC N$回收装备元宝 <$STR(N$二转衣服元宝系列)>
+INC N$回收装备元宝 <$STR(N$二转武器元宝系列)>
+
+
+
+
+#IF   
+CHECK [120] 1
+#ACT  
+
+TakeBagItem 碧玉腰带|碧玉靴子|碧玉头盔|碧玉项链|碧玉手镯|碧玉戒指|幽光腰带|幽光靴子|幽光头盔|幽光项链|幽光手镯|幽光戒指|极光腰带|极光靴子|极光头盔|极光项链|极光手镯|极光戒指 100 N$三转首饰 0
+TakeBagItem 碧玉战甲|碧玉战袍|幽光法甲|幽光法袍|极光道甲|极光道袍 100 N$三转衣服
+TakeBagItem 春暖花开叶|灵魂收割者|玉佛降魔杵 100 N$三转武器
+
+INC N$回收装备数量 <$STR(N$三转首饰)>
+INC N$回收装备数量 <$STR(N$三转衣服)>
+INC N$回收装备数量 <$STR(N$三转武器)>
+
+MUL N$三转首饰元宝系列 <$STR(N$三转首饰)>
+MUL N$三转衣服元宝系列 <$STR(N$三转衣服)>
+MUL N$三转武器元宝系列 <$STR(N$三转武器)>
+
+
+INC N$回收装备元宝 <$STR(N$三转首饰元宝系列)>
+INC N$回收装备元宝 <$STR(N$三转衣服元宝系列)>
+INC N$回收装备元宝 <$STR(N$三转武器元宝系列)>
+
+
+
+#IF   
+CHECK [121] 1
+#ACT  
+
+TakeBagItem 耀金腰带|耀金靴子|耀金头盔|耀金项链|耀金手镯|耀金麻戒|耀光腰带|耀光靴子|耀光头盔|耀光项链|耀光手镯|耀光麻戒|耀玉腰带|耀玉靴子|耀玉头盔|耀玉项链|耀玉手镯|耀玉麻戒|耀光复戒|耀光护戒|耀金复戒|耀金护戒|耀玉复戒|耀玉护戒 100 N$四转首饰 1
+TakeBagItem 耀金战甲|耀金战袍|耀光法甲|耀光法袍|耀玉道甲|耀玉道袍 100 N$四转衣服
+TakeBagItem 耀金破龍斩|耀光寒冰刃|耀玉青龙刀 100 N$四转武器
+
+INC N$回收装备数量 <$STR(N$四转首饰)>
+INC N$回收装备数量 <$STR(N$四转衣服)>
+INC N$回收装备数量 <$STR(N$四转武器)>
+
+MUL N$四转首饰元宝系列 <$STR(N$四转首饰)>
+MUL N$四转衣服元宝系列 <$STR(N$四转衣服)>
+MUL N$四转武器元宝系列 <$STR(N$四转武器)>
+
+
+MUL N$四转首饰洗练石系列 <$STR(N$四转首饰)>
+MUL N$四转武器洗练石系列 <$STR(N$四转武器)>
+MUL N$四转衣服洗练石系列 <$STR(N$四转衣服)>
+
+INC N$回收洗练石数量 <$STR(N$四转首饰洗练石系列)>
+INC N$回收洗练石数量 <$STR(N$四转武器洗练石系列)>
+INC N$回收洗练石数量 <$STR(N$四转衣服洗练石系列)>
+
+
+INC N$回收装备元宝 <$STR(N$四转首饰元宝系列)>
+INC N$回收装备元宝 <$STR(N$四转衣服元宝系列)>
+INC N$回收装备元宝 <$STR(N$四转武器元宝系列)>
+
+
+
+#IF   
+CHECK [122] 1
+#ACT  
+
+TakeBagItem 海妖·头盔|海妖·项链|海妖·手镯|海妖·麻戒|海妖·腰带|海妖·靴子|斩龙·头盔|斩龙·项链|斩龙·手镯|斩龙·麻戒|斩龙·腰带|斩龙·靴子|无形·头盔|无形·项链|无形·手镯|无形·麻戒|无形·腰带|无形·靴子|海妖·护戒|海妖·复戒|斩龙·护戒|斩龙·复戒|无形·护戒|无形·复戒 100 N$五转首饰 1
+TakeBagItem 海妖·战甲|海妖·战袍|无形·道甲|无形·道袍|斩龙·法甲|斩龙·法袍 100 N$五转衣服
+TakeBagItem 魅影之刃|火龙魔杖|大道七彩 100 N$五转武器
+
+INC N$回收装备数量 <$STR(N$五转首饰)>
+INC N$回收装备数量 <$STR(N$五转衣服)>
+INC N$回收装备数量 <$STR(N$五转武器)>
+
+MUL N$五转首饰元宝系列 <$STR(N$五转首饰)>
+MUL N$五转衣服元宝系列 <$STR(N$五转衣服)>
+MUL N$五转武器元宝系列 <$STR(N$五转武器)>
+
+MUL N$五转首饰洗练石系列 <$STR(N$五转首饰)>
+MUL N$五转武器洗练石系列 <$STR(N$五转武器)>
+MUL N$五转衣服洗练石系列 <$STR(N$五转衣服)>
+
+INC N$回收洗练石数量 <$STR(N$五转首饰洗练石系列)>
+INC N$回收洗练石数量 <$STR(N$五转武器洗练石系列)>
+INC N$回收洗练石数量 <$STR(N$五转衣服洗练石系列)>
+
+INC N$回收装备元宝 <$STR(N$五转首饰元宝系列)>
+INC N$回收装备元宝 <$STR(N$五转衣服元宝系列)>
+INC N$回收装备元宝 <$STR(N$五转武器元宝系列)>
+
+
+
+#IF   
+CHECK [137] 1
+#ACT  
+
+TakeBagItem 麒麟ぃ盔|麒麟ぃ链|麒麟ぃ手|麒麟ぃ镯|麒麟ぃ戒|麒麟ぃ指|麒麟ぃ带|麒麟ぃ靴|朱雀ぃ盔|朱雀ぃ链|朱雀ぃ手|朱雀ぃ镯|朱雀ぃ戒|朱雀ぃ指|朱雀ぃ带|朱雀ぃ靴|玄武ぃ盔|玄武ぃ链|玄武ぃ手|玄武ぃ镯|玄武ぃ戒|玄武ぃ指|玄武ぃ带|玄武ぃ靴 100 N$七转首饰 1
+
+
+INC N$回收装备数量 <$STR(N$七转首饰)>
+
+
+MUL N$七转首饰元宝系列 <$STR(N$七转首饰)>
+
+MUL N$七转首饰洗练石系列 <$STR(N$七转首饰)>
+
+
+INC N$回收洗练石数量 <$STR(N$七转首饰洗练石系列)>
+
+
+INC N$回收装备元宝 <$STR(N$七转首饰元宝系列)>
+
+
+#IF   
+CHECK [138] 1
+#ACT  
+
+TakeBagItem 冰霜ぅ盔|冰霜ぅ链|冰霜ぅ手|冰霜ぅ镯|冰霜ぅ戒|冰霜ぅ指|冰霜ぅ带|冰霜ぅ靴|雪寂ぅ盔|雪寂ぅ链|雪寂ぅ手|雪寂ぅ镯|雪寂ぅ指|雪寂ぅ戒|雪寂ぅ带|雪寂ぅ靴|凛冬ぅ盔|凛冬ぅ链|凛冬ぅ手|凛冬ぅ镯|凛冬ぅ戒|凛冬ぅ指|玄武ぃ带|凛冬ぅ靴 100 N$八转首饰 1
+
+#IF   
+CHECK [139] 1
+#ACT  
+
+TakeBagItem 寂灭え盔|寂灭え链|寂灭え手|寂灭え镯|寂灭え戒|寂灭え指|寂灭え带|寂灭え靴|业火え盔|业火え链|业火え手|业火え镯|业火え戒|业火え指|业火え带|业火え靴|冥天え盔|冥天え链|冥天え手|冥天え镯|冥天え戒|冥天え指|冥天え带|冥天え靴 100 N$九转首饰 1
+
+
+#IF   
+CHECK [140] 1
+#ACT  
+
+TakeBagItem 神罚之盔|神罚之链|神罚之手|神罚之镯|神罚之戒|神罚之指|神罚之带|神罚之靴|圣裁之盔|圣裁之链|圣裁之手|圣裁之镯|圣裁之戒|圣裁之指|圣裁之带|圣裁之靴|仙戮之盔|仙戮之链|仙戮之手|仙戮之镯|仙戮之戒|仙戮之指|仙戮之带|仙戮之靴 100 N$十转首饰 1
+
+
+
+#IF   
+CHECK [115] 1
+#ACT  
+
+TakeBagItem 奇茸通天·头|奇茸通天·链|奇茸通天·手|奇茸通天·镯|奇茸通天·戒|奇茸通天·指|奇茸通天·带|奇茸通天·靴 100 N$副装一 0
+
+INC N$回收装备数量 <$STR(N$副装一)>
+
+MUL N$副装一点卡系列 <$STR(N$副装一)>
+
+MUL N$副装一洗练石系列 <$STR(N$副装一)>
+
+INC N$回收装备点卡 <$STR(N$副装一点卡系列)>
+
+INC N$回收洗练石数量 <$STR(N$副装一洗练石系列)>
+
+
+#IF   
+CHECK [118] 1
+#ACT  
+
+TakeBagItem 天茄弥陀·头|天茄弥陀·链|天茄弥陀·手|天茄弥陀·镯|天茄弥陀·戒|天茄弥陀·指|天茄弥陀·带|天茄弥陀·靴 100 N$副装二 0
+
+INC N$回收装备数量 <$STR(N$副装二)>
+
+MUL N$副装二点卡系列 <$STR(N$副装二)>
+
+MUL N$副装二洗练石系列 <$STR(N$副装二)>
+
+INC N$回收装备点卡 <$STR(N$副装二点卡系列)>
+
+INC N$回收洗练石数量 <$STR(N$副装二洗练石系列)>
+
+#IF   
+CHECK [134] 1
+#ACT  
+
+TakeBagItem 八角玄冰·头|八角玄冰·链|八角玄冰·手|八角玄冰·镯|八角玄冰·戒|八角玄冰·指|八角玄冰·带|八角玄冰·靴 100 N$副装三 0
+
+INC N$回收装备数量 <$STR(N$副装三)>
+
+MUL N$副装三点卡系列 <$STR(N$副装三)>
+
+MUL N$副装三洗练石系列 <$STR(N$副装三)>
+
+INC N$回收装备点卡 <$STR(N$副装三点卡系列)>
+
+INC N$回收洗练石数量 <$STR(N$副装三洗练石系列)>
+
+#IF   
+CHECK [135] 1
+#ACT  
+
+TakeBagItem 烈火杏娇·头|烈火杏娇·链|烈火杏娇·手|烈火杏娇·镯|烈火杏娇·戒|烈火杏娇·指|烈火杏娇·带|烈火杏娇·靴 100 N$副装四 0
+
+INC N$回收装备数量 <$STR(N$副装四)>
+
+MUL N$副装四点卡系列 <$STR(N$副装四)>
+
+MUL N$副装四洗练石系列 <$STR(N$副装四)>
+
+INC N$回收装备点卡 <$STR(N$副装四点卡系列)>
+
+INC N$回收洗练石数量 <$STR(N$副装四洗练石系列)>
+
+#IF   
+CHECK [136] 1
+#ACT  
+
+TakeBagItem 幽香绮罗·头|幽香绮罗·链|幽香绮罗·手|幽香绮罗·镯|幽香绮罗·戒|幽香绮罗·指|幽香绮罗·带|幽香绮罗·靴 100 N$副装五 0
+
+INC N$回收装备数量 <$STR(N$副装五)>
+
+MUL N$副装五点卡系列 <$STR(N$副装五)>
+
+MUL N$副装五洗练石系列 <$STR(N$副装五)>
+
+INC N$回收装备点卡 <$STR(N$副装五点卡系列)>
+
+INC N$回收洗练石数量 <$STR(N$副装五洗练石系列)>
+
+#IF   
+CHECK [123] 1
+#ACT  
+
+TakeBagItem 鬼神の带|鬼神の靴|战神の帝|精灵の翔|傀儡の隐|凤凰の飞|幽灵の魔|诅咒の亡|玄清の带|玄清の靴|魔王の眼|仙人の链|菩提の舍|杀伐の灵|琉璃の塔|强者の魂|帝君の带|帝君の靴|仙帝の王|幽灵の者|败魔の戾|无极の道|道心の坚|轮回の镜 100 N$六转首饰 1
+
+
+
+INC N$回收装备数量 <$STR(N$六转首饰)>
+
+
+MUL N$六转首饰元宝系列 <$STR(N$六转首饰)>
+
+
+MUL N$六转首饰洗练石系列 <$STR(N$六转首饰)>
+
+
+INC N$回收洗练石数量 <$STR(N$六转首饰洗练石系列)>
+
+
+INC N$回收装备元宝 <$STR(N$六转首饰元宝系列)>
+
+
+
+
+#if
+LARGE N$回收装备数量 0
+large N$回收洗练石数量 0
+equal U50 0
+#ACT
+money 绑定元宝 + <$STR(N$回收装备元宝)>
+money 绑定点卡 + <$STR(N$回收装备点卡)>
+GIVES 洗练石#<$STR(N$回收洗练石数量)>#19
+;give 洗练石 <$STR(N$回收洗练石数量)>
+SENDMSG 6 本次回收<$STR(N$回收装备数量)>件装备获得：【<$STR(N$回收装备元宝)>】绑定元宝、【<$STR(N$回收装备点卡)>】绑定点卡、【<$STR(N$回收洗练石数量)>】洗练石
+REFRESHBAG
+break
+
+#if
+LARGE N$回收装备数量 0
+large N$回收洗练石数量 0
+equal U50 1
+#ACT
+money 元宝 + <$STR(N$回收装备元宝)>
+money 点卡 + <$STR(N$回收装备点卡)>
+give 洗练石 <$STR(N$回收洗练石数量)>
+SENDMSG 6 本次回收<$STR(N$回收装备数量)>件装备获得：【<$STR(N$回收装备元宝)>】元宝、【<$STR(N$回收装备点卡)>】点卡、【<$STR(N$回收洗练石数量)>】洗练石
+REFRESHBAG
+break
+
+
+#if
+LARGE N$回收装备数量 0
+equal U50 0
+#ACT
+money 绑定元宝 + <$STR(N$回收装备元宝)>
+money 绑定点卡 + <$STR(N$回收装备点卡)>
+SENDMSG 6 本次回收<$STR(N$回收装备数量)>件装备获得：【<$STR(N$回收装备元宝)>】绑定元宝、【<$STR(N$回收装备点卡)>】绑定点卡
+REFRESHBAG
+break
+
+#if
+LARGE N$回收装备数量 0
+equal U50 1
+#ACT
+money 元宝 + <$STR(N$回收装备元宝)>
+money 点卡 + <$STR(N$回收装备点卡)>
+SENDMSG 6 本次回收<$STR(N$回收装备数量)>件装备获得：【<$STR(N$回收装备元宝)>】元宝、【<$STR(N$回收装备点卡)>】点卡
+REFRESHBAG
+break
+
+[@副装回收]
+#if
+#act
+MOV N$回收装备点卡 0
+
+MOV N$回收装备数量 0
+MOV N$回收装备元宝 0
+mov N$回收斗笠碎片 0
+mov N$回收鲜花碎片 0
+mov N$回收盾牌碎片 0
+mov N$回收玉佩碎片 0
+#CALL [\功能脚本\回收脚本.txt] @特殊材料价格申明
+
+#IF   
+CHECK [210] 1
+#ACT 
+TakeBagItem 斗笠+1 100 N$斗笠1 0
+INC N$回收装备数量 <$STR(N$斗笠1)>
+MUL N$斗笠1元宝 <$STR(N$斗笠1)>
+INC N$回收装备元宝 <$STR(N$斗笠1元宝)>
+
+TakeBagItem 斗笠+2 100 N$斗笠2 0
+INC N$回收装备数量 <$STR(N$斗笠2)>
+MUL N$斗笠2元宝 <$STR(N$斗笠2)>
+INC N$回收装备元宝 <$STR(N$斗笠2元宝)>
+
+TakeBagItem 斗笠+3 100 N$斗笠3 0
+INC N$回收装备数量 <$STR(N$斗笠3)>
+MUL N$斗笠3元宝 <$STR(N$斗笠3)>
+INC N$回收装备元宝 <$STR(N$斗笠3元宝)>
+
+
+#IF   
+CHECK [211] 1
+#act
+TakeBagItem 斗笠+4 100 N$斗笠4 0
+INC N$回收装备数量 <$STR(N$斗笠4)>
+MUL N$斗笠4碎片 <$STR(N$斗笠4)>
+INC N$回收斗笠碎片 <$STR(N$斗笠4碎片)>
+
+TakeBagItem 斗笠+5 100 N$斗笠5 0
+INC N$回收装备数量 <$STR(N$斗笠5)>
+MUL N$斗笠5碎片 <$STR(N$斗笠5)>
+INC N$回收斗笠碎片 <$STR(N$斗笠5碎片)>
+
+TakeBagItem 斗笠+6 100 N$斗笠6 0
+INC N$回收装备数量 <$STR(N$斗笠6)>
+MUL N$斗笠6碎片 <$STR(N$斗笠6)>
+INC N$回收斗笠碎片 <$STR(N$斗笠6碎片)>
+
+TakeBagItem 斗笠+7 100 N$斗笠7 0
+INC N$回收装备数量 <$STR(N$斗笠7)>
+MUL N$斗笠7碎片 <$STR(N$斗笠7)>
+INC N$回收斗笠碎片 <$STR(N$斗笠7碎片)>
+
+#IF   
+CHECK [212] 1
+#act
+
+TakeBagItem 斗笠+8 100 N$斗笠8 0
+INC N$回收装备数量 <$STR(N$斗笠8)>
+MUL N$斗笠8碎片 <$STR(N$斗笠8)>
+INC N$回收斗笠碎片 <$STR(N$斗笠8碎片)>
+
+TakeBagItem 斗笠+9 100 N$斗笠9 0
+INC N$回收装备数量 <$STR(N$斗笠9)>
+MUL N$斗笠9碎片 <$STR(N$斗笠9)>
+INC N$回收斗笠碎片 <$STR(N$斗笠9碎片)>
+
+#IF   
+CHECK [213] 1
+#act
+TakeBagItem 爱情鲜花+1 100 N$鲜花1 0
+INC N$回收装备数量 <$STR(N$鲜花1)>
+MUL N$鲜花1元宝 <$STR(N$鲜花1)>
+INC N$回收装备元宝 <$STR(N$鲜花1元宝)>
+
+TakeBagItem 爱情鲜花+2 100 N$鲜花2 0
+INC N$回收装备数量 <$STR(N$鲜花2)>
+MUL N$鲜花2元宝 <$STR(N$鲜花2)>
+INC N$回收装备元宝 <$STR(N$鲜花2元宝)>
+
+TakeBagItem 爱情鲜花+3 100 N$鲜花3 0
+INC N$回收装备数量 <$STR(N$鲜花3)>
+MUL N$鲜花3元宝 <$STR(N$鲜花3)>
+INC N$回收装备元宝 <$STR(N$鲜花3元宝)>
+
+#IF   
+CHECK [214] 1
+#act
+TakeBagItem 爱情鲜花+4 100 N$鲜花4 0
+INC N$回收装备数量 <$STR(N$鲜花4)>
+MUL N$鲜花4碎片 <$STR(N$鲜花4)>
+INC N$回收鲜花碎片 <$STR(N$鲜花4碎片)>
+
+TakeBagItem 爱情鲜花+5 100 N$鲜花5 0
+INC N$回收装备数量 <$STR(N$鲜花5)>
+MUL N$鲜花5碎片 <$STR(N$鲜花5)>
+INC N$回收鲜花碎片 <$STR(N$鲜花5碎片)>
+
+TakeBagItem 爱情鲜花+6 100 N$鲜花6 0
+INC N$回收装备数量 <$STR(N$鲜花6)>
+MUL N$鲜花6碎片 <$STR(N$鲜花6)>
+INC N$回收鲜花碎片 <$STR(N$鲜花6碎片)>
+
+TakeBagItem 爱情鲜花+7 100 N$鲜花7 0
+INC N$回收装备数量 <$STR(N$鲜花7)>
+MUL N$鲜花7碎片 <$STR(N$鲜花7)>
+INC N$回收鲜花碎片 <$STR(N$鲜花7碎片)>
+
+#IF   
+CHECK [215] 1
+#act
+
+
+TakeBagItem 爱情鲜花+8 100 N$鲜花8 0
+INC N$回收装备数量 <$STR(N$鲜花8)>
+MUL N$鲜花8碎片 <$STR(N$鲜花8)>
+INC N$回收鲜花碎片 <$STR(N$鲜花8碎片)>
+
+TakeBagItem 爱情鲜花+9 100 N$鲜花9 0
+INC N$回收装备数量 <$STR(N$鲜花9)>
+MUL N$鲜花9碎片 <$STR(N$鲜花9)>
+INC N$回收鲜花碎片 <$STR(N$鲜花9碎片)>
+
+#IF   
+CHECK [216] 1
+#act
+TakeBagItem 盾牌+1 100 N$盾牌1 0
+INC N$回收装备数量 <$STR(N$盾牌1)>
+MUL N$盾牌1元宝 <$STR(N$盾牌1)>
+INC N$回收装备元宝 <$STR(N$盾牌1元宝)>
+
+TakeBagItem 盾牌+2 100 N$盾牌2 0
+INC N$回收装备数量 <$STR(N$盾牌2)>
+MUL N$盾牌2元宝 <$STR(N$盾牌2)>
+INC N$回收装备元宝 <$STR(N$盾牌2元宝)>
+
+TakeBagItem 盾牌+3 100 N$盾牌3 0
+INC N$回收装备数量 <$STR(N$盾牌3)>
+MUL N$盾牌3元宝 <$STR(N$盾牌3)>
+INC N$回收装备元宝 <$STR(N$盾牌3元宝)>
+
+#IF   
+CHECK [217] 1
+#act
+TakeBagItem 盾牌+4 100 N$盾牌4 0
+INC N$回收装备数量 <$STR(N$盾牌4)>
+MUL N$盾牌4碎片 <$STR(N$盾牌4)>
+INC N$回收盾牌碎片 <$STR(N$盾牌4碎片)>
+
+TakeBagItem 盾牌+5 100 N$盾牌5 0
+INC N$回收装备数量 <$STR(N$盾牌5)>
+MUL N$盾牌5碎片 <$STR(N$盾牌5)>
+INC N$回收盾牌碎片 <$STR(N$盾牌5碎片)>
+
+TakeBagItem 盾牌+6 100 N$盾牌6 0
+INC N$回收装备数量 <$STR(N$盾牌6)>
+MUL N$盾牌6碎片 <$STR(N$盾牌6)>
+INC N$回收盾牌碎片 <$STR(N$盾牌6碎片)>
+
+TakeBagItem 盾牌+7 100 N$盾牌7 0
+INC N$回收装备数量 <$STR(N$盾牌7)>
+MUL N$盾牌7碎片 <$STR(N$盾牌7)>
+INC N$回收盾牌碎片 <$STR(N$盾牌7碎片)>
+
+#IF   
+CHECK [218] 1
+#act
+
+
+TakeBagItem 盾牌+8 100 N$盾牌8 0
+INC N$回收装备数量 <$STR(N$盾牌8)>
+MUL N$盾牌8碎片 <$STR(N$盾牌8)>
+INC N$回收盾牌碎片 <$STR(N$盾牌8碎片)>
+
+TakeBagItem 盾牌+9 100 N$盾牌9 0
+INC N$回收装备数量 <$STR(N$盾牌9)>
+MUL N$盾牌9碎片 <$STR(N$盾牌9)>
+INC N$回收盾牌碎片 <$STR(N$盾牌9碎片)>
+
+#IF   
+CHECK [219] 1
+#act
+TakeBagItem 玉佩+1 100 N$玉佩1 0
+INC N$回收装备数量 <$STR(N$玉佩1)>
+MUL N$玉佩1元宝 <$STR(N$玉佩1)>
+INC N$回收装备元宝 <$STR(N$玉佩1元宝)>
+
+TakeBagItem 玉佩+2 100 N$玉佩2 0
+INC N$回收装备数量 <$STR(N$玉佩2)>
+MUL N$玉佩2元宝 <$STR(N$玉佩2)>
+INC N$回收装备元宝 <$STR(N$玉佩2元宝)>
+
+TakeBagItem 玉佩+3 100 N$玉佩3 0
+INC N$回收装备数量 <$STR(N$玉佩3)>
+MUL N$玉佩3元宝 <$STR(N$玉佩3)>
+INC N$回收装备元宝 <$STR(N$玉佩3元宝)>
+
+
+
+#IF   
+CHECK [224] 1
+#act
+TakeBagItem 炽焰标 100 N$炽焰标数量 0
+
+INC N$回收装备数量 <$STR(N$炽焰标数量)>
+MUL N$炽焰标回收点卡 <$STR(N$炽焰标数量)>
+INC N$回收装备点卡 <$STR(N$炽焰标回收点卡)>
+
+#IF   
+CHECK [225] 1
+#act
+TakeBagItem 捆仙绳 100 N$捆仙绳数量 0
+
+INC N$回收装备数量 <$STR(N$捆仙绳数量)>
+MUL N$捆仙绳回收点卡 <$STR(N$捆仙绳数量)>
+INC N$回收装备点卡 <$STR(N$捆仙绳回收点卡)>
+
+#IF   
+CHECK [226] 1
+#act
+TakeBagItem 秀发簪 100 N$秀发簪数量 0
+
+INC N$回收装备数量 <$STR(N$秀发簪数量)>
+MUL N$秀发簪回收点卡 <$STR(N$秀发簪数量)>
+INC N$回收装备点卡 <$STR(N$秀发簪回收点卡)>
+
+#IF   
+CHECK [227] 1
+#act
+TakeBagItem 毒物袋 100 N$毒物袋数量 0
+
+INC N$回收装备数量 <$STR(N$毒物袋数量)>
+MUL N$毒物袋回收点卡 <$STR(N$毒物袋数量)>
+INC N$回收装备点卡 <$STR(N$毒物袋回收点卡)>
+
+#IF   
+CHECK [228] 1
+#act
+TakeBagItem 圣物令 100 N$圣物令数量 0
+
+INC N$回收装备数量 <$STR(N$圣物令数量)>
+MUL N$圣物令回收点卡 <$STR(N$圣物令数量)>
+INC N$回收装备点卡 <$STR(N$圣物令回收点卡)>
+
+#IF   
+CHECK [229] 1
+#act
+TakeBagItem 仙人书 100 N$仙人书数量 0
+
+INC N$回收装备数量 <$STR(N$仙人书数量)>
+MUL N$仙人书回收点卡 <$STR(N$仙人书数量)>
+INC N$回收装备点卡 <$STR(N$仙人书回收点卡)>
+
+#IF   
+CHECK [230] 1
+#act
+TakeBagItem 玉净瓶 100 N$玉净瓶数量 0
+
+INC N$回收装备数量 <$STR(N$玉净瓶数量)>
+MUL N$玉净瓶回收点卡 <$STR(N$玉净瓶数量)>
+INC N$回收装备点卡 <$STR(N$玉净瓶回收点卡)>
+
+#IF   
+CHECK [231] 1
+#act
+TakeBagItem 金刚钵 100 N$金刚钵数量 0
+
+INC N$回收装备数量 <$STR(N$金刚钵数量)>
+MUL N$金刚钵回收点卡 <$STR(N$金刚钵数量)>
+INC N$回收装备点卡 <$STR(N$金刚钵回收点卡)>
+
+#IF   
+CHECK [232] 1
+#act
+TakeBagItem 牛魔角 100 N$牛魔角数量 0
+
+INC N$回收装备数量 <$STR(N$牛魔角数量)>
+MUL N$牛魔角回收点卡 <$STR(N$牛魔角数量)>
+INC N$回收装备点卡 <$STR(N$牛魔角回收点卡)>
+
+#IF   
+CHECK [233] 1
+#act
+TakeBagItem 圣火炬 100 N$圣火炬数量 0
+
+INC N$回收装备数量 <$STR(N$圣火炬数量)>
+MUL N$圣火炬回收点卡 <$STR(N$圣火炬数量)>
+INC N$回收装备点卡 <$STR(N$圣火炬回收点卡)>
+
+#IF   
+CHECK [234] 1
+#act
+TakeBagItem 金铜鼎 100 N$金铜鼎数量 0
+
+INC N$回收装备数量 <$STR(N$金铜鼎数量)>
+MUL N$金铜鼎回收点卡 <$STR(N$金铜鼎数量)>
+INC N$回收装备点卡 <$STR(N$金铜鼎回收点卡)>
+
+#IF   
+CHECK [235] 1
+#act
+TakeBagItem 骷髅头 100 N$骷髅头数量 0
+
+INC N$回收装备数量 <$STR(N$骷髅头数量)>
+MUL N$骷髅头回收点卡 <$STR(N$骷髅头数量)>
+INC N$回收装备点卡 <$STR(N$骷髅头回收点卡)>
+
+
+#IF   
+CHECK [220] 1
+#act
+TakeBagItem 玉佩+4 100 N$玉佩4 0
+INC N$回收装备数量 <$STR(N$玉佩4)>
+MUL N$玉佩4碎片 <$STR(N$玉佩4)>
+INC N$回收玉佩碎片 <$STR(N$玉佩4碎片)>
+
+TakeBagItem 玉佩+5 100 N$玉佩5 0
+INC N$回收装备数量 <$STR(N$玉佩5)>
+MUL N$玉佩5碎片 <$STR(N$玉佩5)>
+INC N$回收玉佩碎片 <$STR(N$玉佩5碎片)>
+
+TakeBagItem 玉佩+6 100 N$玉佩6 0
+INC N$回收装备数量 <$STR(N$玉佩6)>
+MUL N$玉佩6碎片 <$STR(N$玉佩6)>
+INC N$回收玉佩碎片 <$STR(N$玉佩6碎片)>
+
+TakeBagItem 玉佩+7 100 N$玉佩7 0
+INC N$回收装备数量 <$STR(N$玉佩7)>
+MUL N$玉佩7碎片 <$STR(N$玉佩7)>
+INC N$回收玉佩碎片 <$STR(N$玉佩7碎片)>
+
+#IF   
+CHECK [221] 1
+#act
+
+
+TakeBagItem 玉佩+8 100 N$玉佩8 0
+INC N$回收装备数量 <$STR(N$玉佩8)>
+MUL N$玉佩8碎片 <$STR(N$玉佩8)>
+INC N$回收玉佩碎片 <$STR(N$玉佩8碎片)>
+
+TakeBagItem 玉佩+9 100 N$玉佩9 0
+INC N$回收装备数量 <$STR(N$玉佩9)>
+MUL N$玉佩9碎片 <$STR(N$玉佩9)>
+INC N$回收玉佩碎片 <$STR(N$玉佩9碎片)>
+
+
+
+
+#if
+large N$回收装备点卡 0
+equal U50 0
+#act
+money 绑定点卡 + <$STR(N$回收装备点卡)>
+SENDMSG 6 本次分解<$STR(N$回收装备数量)>件装备获得：【<$STR(N$回收装备点卡)>】绑定点卡
+REFRESHBAG
+
+
+#if
+large N$回收装备点卡 0
+equal U50 1
+#act
+money 绑定点卡 + <$STR(N$回收装备点卡)>
+SENDMSG 6 本次分解<$STR(N$回收装备数量)>件装备获得：【<$STR(N$回收装备点卡)>】点卡
+REFRESHBAG
+
+
+#if
+LARGE N$回收装备数量 0
+large N$回收斗笠碎片 0
+equal U50 0
+#ACT
+money 绑定元宝 + <$STR(N$回收装备元宝)>
+giveS 斗笠碎片#<$STR(N$回收斗笠碎片)>#19
+SENDMSG 6 本次分解<$STR(N$回收装备数量)>件装备获得：【<$STR(N$回收装备元宝)>】绑定元宝，和【<$STR(N$回收斗笠碎片)>】个斗笠碎片
+REFRESHBAG
+
+
+#if
+LARGE N$回收装备数量 0
+large N$回收斗笠碎片 0
+equal U50 1
+#ACT
+money 元宝 + <$STR(N$回收装备元宝)>
+give 斗笠碎片 <$STR(N$回收斗笠碎片)>
+SENDMSG 6 本次分解<$STR(N$回收装备数量)>件装备获得：【<$STR(N$回收装备元宝)>】元宝，和【<$STR(N$回收斗笠碎片)>】个斗笠碎片
+REFRESHBAG
+
+
+#if
+LARGE N$回收装备数量 0
+large N$回收鲜花碎片 0
+equal U50 0
+#ACT
+money 绑定元宝 + <$STR(N$回收装备元宝)>
+gives 鲜花碎片#<$STR(N$回收鲜花碎片)>#19
+SENDMSG 6 本次分解<$STR(N$回收装备数量)>件装备获得：【<$STR(N$回收装备元宝)>】绑定元宝，和【<$STR(N$回收鲜花碎片)>】个鲜花碎片
+REFRESHBAG
+
+
+#if
+LARGE N$回收装备数量 0
+large N$回收鲜花碎片 0
+equal U50 1
+#ACT
+money 元宝 + <$STR(N$回收装备元宝)>
+give 鲜花碎片 <$STR(N$回收鲜花碎片)>
+SENDMSG 6 本次分解<$STR(N$回收装备数量)>件装备获得：【<$STR(N$回收装备元宝)>】元宝，和【<$STR(N$回收鲜花碎片)>】个鲜花碎片
+REFRESHBAG
+
+
+#if
+LARGE N$回收装备数量 0
+large N$回收盾牌碎片 0
+equal U50 0
+#ACT
+money 绑定元宝 + <$STR(N$回收装备元宝)>
+gives 盾牌碎片#<$STR(N$回收盾牌碎片)>#19
+SENDMSG 6 本次分解<$STR(N$回收装备数量)>件装备获得：【<$STR(N$回收装备元宝)>】绑定元宝，和【<$STR(N$回收盾牌碎片)>】个盾牌碎片
+REFRESHBAG
+
+
+#if
+LARGE N$回收装备数量 0
+large N$回收盾牌碎片 0
+equal U50 1
+#ACT
+money 元宝 + <$STR(N$回收装备元宝)>
+give 盾牌碎片 <$STR(N$回收盾牌碎片)>
+SENDMSG 6 本次分解<$STR(N$回收装备数量)>件装备获得：【<$STR(N$回收装备元宝)>】元宝，和【<$STR(N$回收盾牌碎片)>】个盾牌碎片
+REFRESHBAG
+
+
+#if
+LARGE N$回收装备数量 0
+large N$回收玉佩碎片 0
+equal U50 0
+#ACT
+money 绑定元宝 + <$STR(N$回收装备元宝)>
+gives 佩饰碎片#<$STR(N$回收玉佩碎片)>#19
+SENDMSG 6 本次分解<$STR(N$回收装备数量)>件装备获得：【<$STR(N$回收装备元宝)>】绑定元宝，和【<$STR(N$回收玉佩碎片)>】个佩饰碎片
+REFRESHBAG
+
+
+#if
+LARGE N$回收装备数量 0
+large N$回收玉佩碎片 0
+equal U50 1
+#ACT
+money 元宝 + <$STR(N$回收装备元宝)>
+give 佩饰碎片 <$STR(N$回收玉佩碎片)>
+SENDMSG 6 本次分解<$STR(N$回收装备数量)>件装备获得：【<$STR(N$回收装备元宝)>】元宝，和【<$STR(N$回收玉佩碎片)>】个佩饰碎片
+REFRESHBAG
+
+
+#if
+equal U50 0
+LARGE N$回收装备数量 0
+#ACT
+money 绑定元宝 + <$STR(N$回收装备元宝)>
+SENDMSG 6 本次分解<$STR(N$回收装备数量)>件装备获得：【<$STR(N$回收装备元宝)>】绑定元宝
+REFRESHBAG
+
+
+#if
+equal U50 1
+LARGE N$回收装备数量 0
+#ACT
+money 元宝 + <$STR(N$回收装备元宝)>
+SENDMSG 6 本次分解<$STR(N$回收装备数量)>件装备获得：【<$STR(N$回收装备元宝)>】元宝
+REFRESHBAG
+
+
+[@回收价格申明]
+#if
+#act
+mov N$普通装备元宝系列 5
+mov N$一般装备元宝系列 6
+
+
+#if
+#ACT
+MOV N$沃玛首饰元宝系列 10
+MOV N$沃玛衣服元宝系列 15
+MOV N$沃玛武器元宝系列 20
+
+
+MOV N$祖玛首饰元宝系列 30
+MOV N$祖玛衣服元宝系列 50
+MOV N$祖玛武器元宝系列 100
+
+
+MOV N$赤月首饰元宝系列 50
+MOV N$赤月衣服元宝系列 100
+MOV N$赤月武器元宝系列 200
+
+
+MOV N$35衣服元宝系列 120
+MOV N$35首饰元宝系列 100
+MOV N$35武器元宝系列 150
+
+MOV N$40元宝系列 200
+MOV N$40武器元宝系列 400
+
+
+MOV N$一转首饰元宝系列 200
+MOV N$一转衣服元宝系列 250
+MOV N$一转武器元宝系列 500
+
+
+MOV N$二转首饰元宝系列 300
+MOV N$二转衣服元宝系列 500
+MOV N$二转武器元宝系列 1000
+
+
+MOV N$三转首饰元宝系列 600
+MOV N$三转衣服元宝系列 1000
+MOV N$三转武器元宝系列 2000
+
+
+
+MOV N$四转首饰元宝系列 1200
+MOV N$四转衣服元宝系列 2000
+MOV N$四转武器元宝系列 4000
+MOV N$四转首饰洗练石系列 5
+MOV N$四转武器洗练石系列 10
+MOV N$四转衣服洗练石系列 7
+
+MOV N$五转首饰元宝系列 2400
+MOV N$五转衣服元宝系列 4000
+MOV N$五转武器元宝系列 8000
+MOV N$五转首饰洗练石系列 7
+MOV N$五转武器洗练石系列 14
+MOV N$五转衣服洗练石系列 9
+
+MOV N$六转首饰元宝系列 4800
+MOV N$六转衣服元宝系列 0
+MOV N$六转武器元宝系列 0
+MOV N$六转首饰洗练石系列 9
+
+MOV N$七转首饰元宝系列 9600
+MOV N$七转衣服元宝系列 0
+MOV N$七转武器元宝系列 0
+MOV N$七转首饰洗练石系列 12
+
+MOV N$八转首饰系列 0
+MOV N$九转首饰系列 0
+MOV N$十转首饰系列 0
+
+
+MOV N$副装一点卡系列 500
+
+MOV N$副装一洗练石系列 20
+
+MOV N$副装二点卡系列 1000
+
+MOV N$副装二洗练石系列 30
+
+MOV N$副装三点卡系列 1500
+
+MOV N$副装三洗练石系列 40
+
+MOV N$副装四点卡系列 2000
+
+MOV N$副装四洗练石系列 50
+
+MOV N$副装五点卡系列 2500
+
+MOV N$副装五洗练石系列 60
+
+
+[@特殊材料价格申明]
+#if
+#act 
+mov N$斗笠1元宝 100
+mov N$斗笠2元宝 200
+mov N$斗笠3元宝 300
+
+mov N$斗笠4碎片 1
+mov N$斗笠5碎片 2
+mov N$斗笠6碎片 3
+mov N$斗笠7碎片 4
+mov N$斗笠8碎片 8
+mov N$斗笠9碎片 12
+
+mov N$鲜花1元宝 100
+mov N$鲜花2元宝 200
+mov N$鲜花3元宝 300
+
+mov N$鲜花4碎片 1
+mov N$鲜花5碎片 2
+mov N$鲜花6碎片 3
+mov N$鲜花7碎片 4
+mov N$鲜花8碎片 8
+mov N$鲜花9碎片 12
+
+mov N$盾牌1元宝 100
+mov N$盾牌2元宝 200
+mov N$盾牌3元宝 300
+
+mov N$盾牌4碎片 1
+mov N$盾牌5碎片 2
+mov N$盾牌6碎片 3
+mov N$盾牌7碎片 4
+mov N$盾牌8碎片 8
+mov N$盾牌9碎片 12
+
+mov N$玉佩1元宝 100
+mov N$玉佩2元宝 200
+mov N$玉佩3元宝 300
+
+mov N$玉佩4碎片 1
+mov N$玉佩5碎片 2
+mov N$玉佩6碎片 3
+mov N$玉佩7碎片 4
+mov N$玉佩8碎片 8
+mov N$玉佩9碎片 12
+
+mov N$炽焰标回收点卡 1000
+mov N$捆仙绳回收点卡 1000
+mov N$秀发簪回收点卡 1000
+mov N$毒物袋回收点卡 1000
+mov N$圣物令回收点卡 1000
+mov N$仙人书回收点卡 1000
+mov N$玉净瓶回收点卡 1000
+mov N$金刚钵回收点卡 1000
+mov N$牛魔角回收点卡 1000
+mov N$圣火炬回收点卡 1000
+mov N$金铜鼎回收点卡 1000
+mov N$骷髅头回收点卡 1000
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[@回收价格说明]
+#if
+#say
+<Img|children={1}|a=4|x=243.0|y=305.0|width=762|height=620|bg=1|reset=1|esc=1|move=1|img=custom/zbhs/bj.png|loadDelay=0|show=4>
+<Img|id=1|a=4|children={10,11,111,1111,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27}|x=383.0|y=308.0|width=762|height=620|reset=1|show=4|esc=1|move=0|img=custom/zbhs/gezi1.png|loadDelay=0>
+
+
+<Button|id=10|x=82.0|y=90.0|width=144|height=46|nimg=custom/zbhs/4341.png|mimg=custom/zbhs/4341.png|link=@装备回收主界面>
+<Button|id=11|x=230.0|y=90.0|width=144|height=46|nimg=custom/zbhs/434.png|mimg=custom/zbhs/434.png|link=@副装回收主界面>
+<Button|id=111|x=379.0|y=90.0|width=144|height=46|nimg=custom/zbhs/11.png|mimg=custom/zbhs/11.png|link=@回收价格说明>
+<Button|id=1111|x=528.0|y=90.0|width=144|height=46|nimg=custom/zbhs/xh2.png|mimg=custom/zbhs/xh2.png|link=@摧毁物品>
+<Button|x=543.0|y=31.0|nimg=public/close-2.png|mimg=public/close-2.png|link=@exit>
+
+<ListView|id=12|children={b}|x=89.0|y=180.0|width=580|height=380|rotate=0|direction=1|cantouch=1|bounce=1|margin=0>
+
+
+<Img|id=b|x=0|y=0|width=580|height=743|reset=1|show=4|esc=1|move=0|img=custom/zbhs/hs.png|loadDelay=0>
+
+<Img|a=4|x=241|y=150|width=580|height=29|reset=1|show=4|esc=1|move=0|img=custom/zbhs/bt.png|loadDelay=0>
+<Img|a=4|x=165|y=552|width=414|height=20|reset=1|show=4|esc=1|move=0|img=custom/zbhs/sm.png|loadDelay=0>
+
+
+
+[@摧毁物品]
+#if
+#say
+<Img|children={1}|a=4|x=243.0|y=305.0|width=762|height=620|esc=1|loadDelay=0|bg=1|img=custom/zbhs/bj.png|show=4|reset=1|move=1>
+<Img|id=1|children={10,11,111,1111}|a=4|x=383.0|y=308.0|width=762|height=620|esc=1|img=custom/zbhs/gezi1.png|show=4|reset=1|loadDelay=0|move=0>
+<Button|id=10|x=82.0|y=90.0|width=144|height=46|mimg=custom/zbhs/4341.png|nimg=custom/zbhs/4341.png|link=@装备回收主界面>
+<Button|id=11|x=230.0|y=90.0|width=144|height=46|mimg=custom/zbhs/434.png|nimg=custom/zbhs/434.png|link=@副装回收主界面>
+<Button|id=111|x=379.0|y=90.0|width=144|height=46|mimg=custom/zbhs/22.png|nimg=custom/zbhs/22.png|link=@回收价格说明>
+<Button|id=1111|x=528.0|y=90.0|width=144|height=46|mimg=custom/zbhs/xh.png|nimg=custom/zbhs/xh.png|link=@摧毁物品>
+<Button|x=543.0|y=31.0|mimg=public/close-2.png|nimg=public/close-2.png|link=@exit>
+<Text|x=229.0|y=155.0|color=251|size=20|text=销毁物品>
+<Text|x=232.0|y=203.0|color=243|size=18|text=说明>
+<Text|x=231.0|y=257.0|color=243|size=16|text=1、打开背包，拖动销毁的物品置左处>
+<Text|x=231.0|y=300.0|color=249|size=16|text=2、销毁的物品无法复原请确认好再销毁！>
+<Text|x=231.0|y=342.0|color=243|size=16|text=3、销毁后不产生任何其他材料和货币>
+<Text|x=231.0|y=388.0|color=243|size=16|text=4、只有指定的材料才可以销毁>
+<Text|x=231.0|y=436.0|color=243|size=16|text=5、指定材料如下>
+<Text|x=231.0|y=479.0|color=250|size=14|text=佛、邪、转生石系列、刷新卷>
+
+<ITEMBOX|x=-2.0|y=187.0|width=80|height=80|boxindex=1|stdmode=*|tips=<只能放入指定物品/FCOLOR=249>|tipsx=4|tipsy=100|esc=1|img=public/1900000651.png>
+<Text|x=-26.0|y=299.0|color=244|size=18|text=点击下方按钮销毁>
+<Button|x=-20.0|y=343.0|width=124|height=40|size=18|color=255|nimg=custom/zbhs/1111.png|img=custom/zbhs/1111.png|link=@摧毁执行>
+
+
+
+[@摧毁执行]
+#ACT
+setupgradeitem 1
+#OR
+equal <$BOXITEM[1].NAME> 佛
+equal <$BOXITEM[1].NAME> 邪
+equal <$BOXITEM[1].NAME> 刷新卷
+equal <$BOXITEM[1].NAME> 转生石Lv.1
+equal <$BOXITEM[1].NAME> 转生石Lv.2
+equal <$BOXITEM[1].NAME> 转生石Lv.3
+equal <$BOXITEM[1].NAME> 转生石Lv.4
+equal <$BOXITEM[1].NAME> 转生石Lv.5
+#elseact
+SENDMSG 9 请放入正确的物品！
+break
+
+#if
+checkboxitemcount 1 1
+#ACT
+mov S$被摧毁道具 <$BOXITEM[1].NAME>
+delboxitem 1
+SENDMSG 9 <$str(S$被摧毁道具)>已经被摧毁！
+}   
+   
+  
+  
+ 
+ 
+

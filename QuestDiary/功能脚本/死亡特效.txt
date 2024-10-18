@@ -1,0 +1,66 @@
+[@死亡特效]   
+{   
+   
+#ACT   
+GetPlayInfo Dir N555   
+   
+#IF   
+equal <$STR(N555)> 0   
+#ACT   
+PLAYEFFECT 32 3890 9 1 200 1   
+   
+#IF   
+equal <$STR(N555)> 1   
+#ACT   
+PLAYEFFECT 32 3900 9 1 200 1   
+   
+#IF   
+equal <$STR(N555)> 2   
+#ACT   
+PLAYEFFECT 32 3910 9 1 200 1   
+   
+#IF   
+equal <$STR(N555)> 3   
+#ACT   
+PLAYEFFECT 32 3920 9 1 200 1   
+   
+#IF   
+equal <$STR(N555)> 4   
+#ACT   
+PLAYEFFECT 32 3930 9 1 200 1   
+   
+#IF   
+equal <$STR(N555)> 5   
+#ACT   
+PLAYEFFECT 32 3940 9 1 200 1   
+   
+#IF   
+equal <$STR(N555)> 6   
+#ACT   
+PLAYEFFECT 32 3950 9 1 200 1   
+   
+#IF   
+equal <$STR(N555)> 7   
+#ACT   
+PLAYEFFECT 32 3960 9 1 200 1   
+   
+   
+;#IF   
+;#ACT   
+;OPENMERCHANTBIGDLG 32 3970 0 4 0 0 1 0 0 0   
+;#SAY   
+;<PlayImg:32:3971:16:200:-22:-10><ImgEx:32:3987:2988:2987:-93:50:点击复活/@复活>   
+   
+[@复活]   
+#IF   
+#ACT   
+REALIVE <$USERNAME>   
+mapmove 3 299 331   
+   
+   
+}   
+  
+  
+ 
+ 
+

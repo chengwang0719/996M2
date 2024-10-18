@@ -1,0 +1,733 @@
+[@main]
+;u251元宝,u250点卡,u252点卷
+
+#if
+#act
+
+NEWREADCSV ..\QuestDiary\功能表格\cfg_dlxh.csv
+goto @按钮显示逻辑
+goto @元宝页面
+
+
+[@元宝页面]
+#IF
+#say
+<Button|x=-2570.0|y=-1172.0|width=115120|height=112880|pimg=npc/zd.png|color=224|nimg=npc/zd.png|size=16|mimg=npc/zd.png|link=@exit>
+<Img|x=-6.0|y=-9.0|width=950|height=594|rotate=0|bg=1|img=npc/dlxh/ybbg.png|esc=1|reset=1|loadDelay=0|show=4|move=0>
+<Button|x=874.0|y=22.0|mimg=public/close-2.png|nimg=public/close-2.png|link=@exit>
+<Text|x=432.0|y=37.0|size=22|color=255|outline=2|text=大陆消耗>
+<Img|x=94.0|y=76.0|width=245|height=40|img=npc/dlxh/yb.png|loadDelay=0|show=4|reset=1|esc=1|move=0|link=@元宝页面>
+<Img|x=354.0|y=76.0|width=245|height=40|img=npc/dlxh/dk_1.png|loadDelay=0|show=4|reset=1|esc=1|move=0|link=@点卡页面>
+<Img|x=613.0|y=76.0|width=245|height=40|img=npc/dlxh/dq_1.png|loadDelay=0|show=4|reset=1|esc=1|move=0|link=@点券页面>
+<ItemShow|x=95.0|y=111.0|width=70|height=70|itemid=10568|itemcount=1|showtips=1|bgtype=0>
+<ItemShow|x=95.0|y=167.0|width=70|height=70|itemid=10569|itemcount=1|showtips=1|bgtype=0>
+<ItemShow|x=95.0|y=222.0|width=70|height=70|itemid=10570|itemcount=1|showtips=1|bgtype=0>
+<ItemShow|x=95.0|y=277.0|width=70|height=70|itemid=10571|itemcount=1|showtips=1|bgtype=0>
+<ItemShow|x=95.0|y=333.0|width=70|height=70|itemid=10572|itemcount=1|showtips=1|bgtype=0>
+<ItemShow|x=95.0|y=391.0|width=70|height=70|itemid=10573|itemcount=1|showtips=1|bgtype=0>
+<Text|x=300.0|y=134.0|size=16|color=254|outline=2|text=对怪减伤1%>
+<Text|x=300.0|y=190.0|size=16|color=254|outline=2|text=对怪减伤2%>
+<Text|x=299.0|y=246.0|size=16|color=254|outline=2|text=对怪减伤3%>
+<Text|x=298.0|y=299.0|size=16|color=254|outline=2|text=对怪减伤5%>
+<Text|x=298.0|y=357.0|size=16|color=254|outline=2|text=对怪减伤7%>
+<Text|x=297.0|y=414.0|size=16|color=254|outline=2|text=对怪减伤10%>
+
+<Button|x=711.0|y=126.0|width=160|height=40|mimg=npc/dlxh/<$STR(S$元宝按钮1)>.png|nimg=npc/dlxh/<$STR(S$元宝按钮1)>.png|link=@激活元宝#激活类型=初入江湖#元宝消耗=499999>
+<Button|x=711.0|y=182.0|width=160|height=40|mimg=npc/dlxh/<$STR(S$元宝按钮2)>.png|nimg=npc/dlxh/<$STR(S$元宝按钮2)>.png|link=@激活元宝#激活类型=从零开始#元宝消耗=999999>
+<Button|x=711.0|y=236.0|width=160|height=40|mimg=npc/dlxh/<$STR(S$元宝按钮3)>.png|nimg=npc/dlxh/<$STR(S$元宝按钮3)>.png|link=@激活元宝#激活类型=大杀四方#元宝消耗=2999999>
+<Button|x=711.0|y=293.0|width=160|height=40|mimg=npc/dlxh/<$STR(S$元宝按钮4)>.png|nimg=npc/dlxh/<$STR(S$元宝按钮4)>.png|link=@激活元宝#激活类型=剑走江湖#元宝消耗=4999999>
+<Button|x=711.0|y=349.0|width=160|height=40|mimg=npc/dlxh/<$STR(S$元宝按钮5)>.png|nimg=npc/dlxh/<$STR(S$元宝按钮5)>.png|link=@激活元宝#激活类型=霸气十足#元宝消耗=9999999>
+<Button|x=711.0|y=405.0|width=160|height=40|mimg=npc/dlxh/<$STR(S$元宝按钮6)>.png|nimg=npc/dlxh/<$STR(S$元宝按钮6)>.png|link=@激活元宝#激活类型=盛世至尊#元宝消耗=49999999>
+<Text|x=191.0|y=463.0|color=255|outline=1|size=16|text=<$STR(U251)>>
+<Text|x=475.0|y=463.0|color=255|outline=1|size=16|text=<$STR(U250)>>
+<Text|x=745.0|y=463.0|color=255|outline=1|size=16|text=<$STR(U252)>>
+<Text|x=136.0|y=503.0|size=16|color=22|outline=2|text=大陆必购消耗一定货币激活称号，只限大陆必购消耗，其他消耗不计数，激活判定当前最高值称号>
+
+
+
+
+[@点卡页面]
+#IF
+#say
+<Button|x=-2570.0|y=-1172.0|width=115120|height=112880|pimg=npc/zd.png|color=224|nimg=npc/zd.png|size=16|mimg=npc/zd.png|link=@exit>
+<Img|x=-6.0|y=-9.0|width=950|height=594|rotate=0|bg=1|img=npc/dlxh/dkbg.png|esc=1|reset=1|loadDelay=0|show=4|move=0>
+<Button|x=874.0|y=22.0|mimg=public/close-2.png|nimg=public/close-2.png|link=@exit>
+<Text|x=432.0|y=37.0|size=22|color=255|outline=2|text=大陆消耗>
+<Img|x=94.0|y=76.0|width=245|height=40|img=npc/dlxh/yb_1.png|loadDelay=0|show=4|reset=1|esc=1|move=0|link=@元宝页面>
+<Img|x=354.0|y=76.0|width=245|height=40|img=npc/dlxh/dk.png|loadDelay=0|show=4|reset=1|esc=1|move=0|link=@点卡页面>
+<Img|x=613.0|y=76.0|width=245|height=40|img=npc/dlxh/dq_1.png|loadDelay=0|show=4|reset=1|esc=1|move=0|link=@点券页面>
+<ItemShow|x=95.0|y=111.0|width=70|height=70|itemid=10574|itemcount=1|showtips=1|bgtype=0>
+<ItemShow|x=95.0|y=167.0|width=70|height=70|itemid=10575|itemcount=1|showtips=1|bgtype=0>
+<ItemShow|x=95.0|y=222.0|width=70|height=70|itemid=10576|itemcount=1|showtips=1|bgtype=0>
+<ItemShow|x=95.0|y=277.0|width=70|height=70|itemid=10577|itemcount=1|showtips=1|bgtype=0>
+<ItemShow|x=95.0|y=333.0|width=70|height=70|itemid=10578|itemcount=1|showtips=1|bgtype=0>
+<ItemShow|x=95.0|y=391.0|width=70|height=70|itemid=10579|itemcount=1|showtips=1|bgtype=0>
+<Text|x=300.0|y=134.0|size=16|color=251|outline=2|text=对怪增伤1%>
+<Text|x=300.0|y=190.0|size=16|color=251|outline=2|text=对怪增伤2%>
+<Text|x=299.0|y=246.0|size=16|color=251|outline=2|text=对怪增伤3%>
+<Text|x=298.0|y=299.0|size=16|color=251|outline=2|text=对怪增伤5%>
+<Text|x=298.0|y=357.0|size=16|color=251|outline=2|text=对怪增伤7%>
+<Text|x=297.0|y=414.0|size=16|color=251|outline=2|text=对怪增伤10%>
+
+<Button|x=711.0|y=126.0|width=160|height=40|mimg=npc/dlxh/<$STR(S$点卡按钮1)>.png|nimg=npc/dlxh/<$STR(S$点卡按钮1)>.png|link=@激活点卡#激活类型=初学子弟#点卡消耗=49999>
+<Button|x=711.0|y=182.0|width=160|height=40|mimg=npc/dlxh/<$STR(S$点卡按钮2)>.png|nimg=npc/dlxh/<$STR(S$点卡按钮2)>.png|link=@激活点卡#激活类型=初窥武学#点卡消耗=99999>
+<Button|x=711.0|y=236.0|width=160|height=40|mimg=npc/dlxh/<$STR(S$点卡按钮3)>.png|nimg=npc/dlxh/<$STR(S$点卡按钮3)>.png|link=@激活点卡#激活类型=天资过人#点卡消耗=299999>
+<Button|x=711.0|y=293.0|width=160|height=40|mimg=npc/dlxh/<$STR(S$点卡按钮4)>.png|nimg=npc/dlxh/<$STR(S$点卡按钮4)>.png|link=@激活点卡#激活类型=锋芒毕露#点卡消耗=499999>
+<Button|x=711.0|y=349.0|width=160|height=40|mimg=npc/dlxh/<$STR(S$点卡按钮5)>.png|nimg=npc/dlxh/<$STR(S$点卡按钮5)>.png|link=@激活点卡#激活类型=涉足江湖#点卡消耗=999999>
+<Button|x=711.0|y=405.0|width=160|height=40|mimg=npc/dlxh/<$STR(S$点卡按钮6)>.png|nimg=npc/dlxh/<$STR(S$点卡按钮6)>.png|link=@激活点卡#激活类型=开山力派#点卡消耗=4999999>
+<Text|x=191.0|y=463.0|color=255|outline=1|size=16|text=<$STR(U251)>>
+<Text|x=475.0|y=463.0|color=255|outline=1|size=16|text=<$STR(U250)>>
+<Text|x=745.0|y=463.0|color=255|outline=1|size=16|text=<$STR(U252)>>
+<Text|x=136.0|y=503.0|size=16|color=22|outline=2|text=大陆必购消耗一定货币激活称号，只限大陆必购消耗，其他消耗不计数，激活判定当前最高值称号>
+
+
+
+[@点券页面]
+
+
+
+#IF
+#say
+<Button|x=-2570.0|y=-1172.0|width=115120|height=112880|pimg=npc/zd.png|color=224|nimg=npc/zd.png|size=16|mimg=npc/zd.png|link=@exit>
+<Img|x=-6.0|y=-9.0|width=950|height=594|rotate=0|bg=1|img=npc/dlxh/dqbg.png|esc=1|reset=1|loadDelay=0|show=4|move=0>
+<Button|x=874.0|y=22.0|mimg=public/close-2.png|nimg=public/close-2.png|link=@exit>
+<Text|x=432.0|y=37.0|size=22|color=255|outline=2|text=大陆消耗>
+<Img|x=94.0|y=76.0|width=245|height=40|img=npc/dlxh/yb_1.png|loadDelay=0|show=4|reset=1|esc=1|move=0|link=@元宝页面>
+<Img|x=354.0|y=76.0|width=245|height=40|img=npc/dlxh/dk_1.png|loadDelay=0|show=4|reset=1|esc=1|move=0|link=@点卡页面>
+<Img|x=613.0|y=76.0|width=245|height=40|img=npc/dlxh/dq.png|loadDelay=0|show=4|reset=1|esc=1|move=0|link=@点券页面>
+<ItemShow|x=95.0|y=111.0|width=70|height=70|itemid=10580|itemcount=1|showtips=1|bgtype=0>
+<ItemShow|x=95.0|y=167.0|width=70|height=70|itemid=10581|itemcount=1|showtips=1|bgtype=0>
+<ItemShow|x=95.0|y=222.0|width=70|height=70|itemid=10582|itemcount=1|showtips=1|bgtype=0>
+<ItemShow|x=95.0|y=277.0|width=70|height=70|itemid=10583|itemcount=1|showtips=1|bgtype=0>
+<ItemShow|x=95.0|y=333.0|width=70|height=70|itemid=10584|itemcount=1|showtips=1|bgtype=0>
+<ItemShow|x=95.0|y=391.0|width=70|height=70|itemid=10585|itemcount=1|showtips=1|bgtype=0>
+<Text|x=300.0|y=134.0|size=16|color=253|outline=2|text=暴击几率增加1%>
+<Text|x=300.0|y=190.0|size=16|color=253|outline=2|text=暴击几率增加2%>
+<Text|x=299.0|y=246.0|size=16|color=253|outline=2|text=暴击几率增加3%>
+<Text|x=298.0|y=299.0|size=16|color=253|outline=2|text=暴击几率增加5%>
+<Text|x=298.0|y=357.0|size=16|color=253|outline=2|text=暴击几率增加7%>
+<Text|x=297.0|y=414.0|size=16|color=253|outline=2|text=暴击几率增加10%>
+
+
+<Button|x=711.0|y=126.0|width=160|height=40|mimg=npc/dlxh/<$STR(S$点卷按钮1)>.png|nimg=npc/dlxh/<$STR(S$点卷按钮1)>.png|link=@激活点券#激活类型=超级玩家#点卷消耗=4999>
+<Button|x=711.0|y=182.0|width=160|height=40|mimg=npc/dlxh/<$STR(S$点卷按钮2)>.png|nimg=npc/dlxh/<$STR(S$点卷按钮2)>.png|link=@激活点券#激活类型=百万富翁#点卷消耗=9999>
+<Button|x=711.0|y=236.0|width=160|height=40|mimg=npc/dlxh/<$STR(S$点卷按钮3)>.png|nimg=npc/dlxh/<$STR(S$点卷按钮3)>.png|link=@激活点券#激活类型=独霸一方#点卷消耗=29999>
+<Button|x=711.0|y=293.0|width=160|height=40|mimg=npc/dlxh/<$STR(S$点卷按钮4)>.png|nimg=npc/dlxh/<$STR(S$点卷按钮4)>.png|link=@激活点券#激活类型=富可敌国#点卷消耗=49999>
+<Button|x=711.0|y=349.0|width=160|height=40|mimg=npc/dlxh/<$STR(S$点卷按钮5)>.png|nimg=npc/dlxh/<$STR(S$点卷按钮5)>.png|link=@激活点券#激活类型=世纪富豪#点卷消耗=99999>
+<Button|x=711.0|y=405.0|width=160|height=40|mimg=npc/dlxh/<$STR(S$点卷按钮6)>.png|nimg=npc/dlxh/<$STR(S$点卷按钮6)>.png|link=@激活点券#激活类型=浩瀚灭天#点卷消耗=199999>
+
+<Text|x=191.0|y=463.0|color=255|outline=1|size=16|text=<$STR(U251)>>
+<Text|x=475.0|y=463.0|color=255|outline=1|size=16|text=<$STR(U250)>>
+<Text|x=745.0|y=463.0|color=255|outline=1|size=16|text=<$STR(U252)>>
+<Text|x=136.0|y=503.0|size=16|color=22|outline=2|text=大陆必购消耗一定货币激活称号，只限大陆必购消耗，其他消耗不计数，激活判定当前最高值称号>
+
+
+
+[@激活元宝]
+#if
+CHECKTITLE <$STR(S$激活类型)>
+#act
+sendmsg 9 【提示】你已经激活过了！
+break
+
+#if
+CHECKTITLE 盛世至尊
+not equal S$激活类型 盛世至尊
+#act
+sendmsg 9 【提示】已经拥有更高级的称号了,无需激活该称号
+break
+
+#if
+CHECKTITLE 霸气十足
+not equal S$激活类型 盛世至尊
+not equal S$激活类型 霸气十足
+#act
+sendmsg 9 【提示】已经拥有更高级的称号了,无需激活该称号
+break
+
+#if
+CHECKTITLE 剑走江湖
+not equal S$激活类型 盛世至尊
+not equal S$激活类型 霸气十足
+not equal S$激活类型 剑走江湖
+#act
+sendmsg 9 【提示】已经拥有更高级的称号了,无需激活该称号
+break
+
+#if
+CHECKTITLE 大杀四方
+not equal S$激活类型 盛世至尊
+not equal S$激活类型 霸气十足
+not equal S$激活类型 剑走江湖
+not equal S$激活类型 大杀四方
+#act
+sendmsg 9 【提示】已经拥有更高级的称号了,无需激活该称号
+break
+
+#if
+CHECKTITLE 从零开始
+not equal S$激活类型 盛世至尊
+not equal S$激活类型 霸气十足
+not equal S$激活类型 剑走江湖
+not equal S$激活类型 大杀四方
+not equal S$激活类型 从零开始
+#act
+sendmsg 9 【提示】已经拥有更高级的称号了,无需激活该称号
+break
+
+
+#if
+large U251 s$元宝消耗
+NOT CHECKTITLE <$STR(S$激活类型)>
+#act
+
+
+CONFERTITLE <$STR(S$激活类型)>
+goto @元宝称号删除逻辑
+goto @元宝页面
+sendmsg 9 【提示】激活成功
+#elseact
+sendmsg 9 【提示】消耗的货币不足
+
+
+
+
+
+[@元宝称号删除逻辑]
+#if
+equal S$激活类型 初入江湖
+#act
+mov S$元宝按钮1 yjh
+break
+
+#if
+equal S$激活类型 从零开始
+#act
+DEPRIVETITLE 初入江湖
+mov S$元宝按钮1 yjh
+mov S$元宝按钮2 yjh
+break
+
+#if
+equal S$激活类型 大杀四方
+#act
+DEPRIVETITLE 初入江湖,从零开始
+mov S$元宝按钮1 yjh
+mov S$元宝按钮2 yjh
+mov S$元宝按钮3 yjh
+break
+
+#if
+equal S$激活类型 剑走江湖
+#act
+DEPRIVETITLE 初入江湖,从零开始,大杀四方
+mov S$元宝按钮1 yjh
+mov S$元宝按钮2 yjh
+mov S$元宝按钮3 yjh
+mov S$元宝按钮4 yjh
+break
+
+#if
+equal S$激活类型 霸气十足
+#act
+DEPRIVETITLE 初入江湖,从零开始,大杀四方,剑走江湖
+mov S$元宝按钮1 yjh
+mov S$元宝按钮2 yjh
+mov S$元宝按钮3 yjh
+mov S$元宝按钮4 yjh
+mov S$元宝按钮5 yjh
+break
+
+#if
+equal S$激活类型 盛世至尊
+#act
+DEPRIVETITLE 初入江湖,从零开始,大杀四方,剑走江湖,霸气十足
+mov S$元宝按钮1 yjh
+mov S$元宝按钮2 yjh
+mov S$元宝按钮3 yjh
+mov S$元宝按钮4 yjh
+mov S$元宝按钮5 yjh
+mov S$元宝按钮6 yjh
+break
+
+;========================================================================================
+[@激活点卡]
+#if
+CHECKTITLE <$STR(S$激活类型)>
+#act
+sendmsg 9 【提示】你已经激活过了！
+break
+
+#if
+CHECKTITLE 开山力派
+not equal S$激活类型 开山力派
+#act
+sendmsg 9 【提示】已经拥有更高级的称号了,无需激活该称号
+break
+
+#if
+CHECKTITLE 涉足江湖
+not equal S$激活类型 开山力派
+not equal S$激活类型 涉足江湖
+#act
+sendmsg 9 【提示】已经拥有更高级的称号了,无需激活该称号
+break
+
+#if
+CHECKTITLE 锋芒毕露
+not equal S$激活类型 开山力派
+not equal S$激活类型 涉足江湖
+not equal S$激活类型 锋芒毕露
+#act
+sendmsg 9 【提示】已经拥有更高级的称号了,无需激活该称号
+break
+
+#if
+CHECKTITLE 天资过人
+not equal S$激活类型 开山力派
+not equal S$激活类型 涉足江湖
+not equal S$激活类型 锋芒毕露
+not equal S$激活类型 天资过人
+#act
+sendmsg 9 【提示】已经拥有更高级的称号了,无需激活该称号
+break
+
+#if
+CHECKTITLE 初窥武学
+not equal S$激活类型 开山力派
+not equal S$激活类型 涉足江湖
+not equal S$激活类型 锋芒毕露
+not equal S$激活类型 天资过人
+not equal S$激活类型 初窥武学
+#act
+sendmsg 9 【提示】已经拥有更高级的称号了,无需激活该称号
+break
+
+
+#if
+large U250 s$点卡消耗
+NOT CHECKTITLE <$STR(S$激活类型)>
+#act
+CONFERTITLE <$STR(S$激活类型)>
+goto @点卡称号删除逻辑
+goto @点卡页面
+sendmsg 9 【提示】激活成功
+#elseact
+sendmsg 9 【提示】消耗的货币不足
+
+
+
+
+
+[@点卡称号删除逻辑]
+#if
+equal S$激活类型 初学子弟
+#act
+mov S$点卡按钮1 yjh
+break
+
+#if
+equal S$激活类型 初窥武学
+#act
+DEPRIVETITLE 初学子弟
+mov S$点卡按钮1 yjh
+mov S$点卡按钮2 yjh
+break
+
+#if
+equal S$激活类型 天资过人
+#act
+DEPRIVETITLE 初学子弟,初窥武学
+mov S$点卡按钮1 yjh
+mov S$点卡按钮2 yjh
+mov S$点卡按钮3 yjh
+break
+
+#if
+equal S$激活类型 锋芒毕露
+#act
+DEPRIVETITLE 初学子弟,初窥武学,天资过人
+mov S$点卡按钮1 yjh
+mov S$点卡按钮2 yjh
+mov S$点卡按钮3 yjh
+mov S$点卡按钮4 yjh
+break
+
+#if
+equal S$激活类型 涉足江湖
+#act
+DEPRIVETITLE 初学子弟,初窥武学,天资过人,锋芒毕露
+mov S$点卡按钮1 yjh
+mov S$点卡按钮2 yjh
+mov S$点卡按钮3 yjh
+mov S$点卡按钮4 yjh
+mov S$点卡按钮5 yjh
+break
+
+#if
+equal S$激活类型 开山力派
+#act
+DEPRIVETITLE 出初学子弟,初窥武学,天资过人,锋芒毕露,涉足江湖
+mov S$点卡按钮1 yjh
+mov S$点卡按钮2 yjh
+mov S$点卡按钮3 yjh
+mov S$点卡按钮4 yjh
+mov S$点卡按钮5 yjh
+mov S$点卡按钮6 yjh
+break
+;========================================================================================
+[@激活点券]
+#if
+CHECKTITLE <$STR(S$激活类型)>
+#act
+sendmsg 9 【提示】你已经激活过了！
+break
+
+#if
+CHECKTITLE 浩瀚灭天
+not equal S$激活类型 浩瀚灭天
+#act
+sendmsg 9 【提示】已经拥有更高级的称号了,无需激活该称号
+break
+
+#if
+CHECKTITLE 世纪富豪
+not equal S$激活类型 浩瀚灭天
+not equal S$激活类型 世纪富豪
+#act
+sendmsg 9 【提示】已经拥有更高级的称号了,无需激活该称号
+break
+
+#if
+CHECKTITLE 富可敌国
+not equal S$激活类型 浩瀚灭天
+not equal S$激活类型 世纪富豪
+not equal S$激活类型 富可敌国
+#act
+sendmsg 9 【提示】已经拥有更高级的称号了,无需激活该称号
+break
+
+#if
+CHECKTITLE 独霸一方
+not equal S$激活类型 浩瀚灭天
+not equal S$激活类型 世纪富豪
+not equal S$激活类型 富可敌国
+not equal S$激活类型 独霸一方
+#act
+sendmsg 9 【提示】已经拥有更高级的称号了,无需激活该称号
+break
+
+#if
+CHECKTITLE 百万富翁
+not equal S$激活类型 浩瀚灭天
+not equal S$激活类型 世纪富豪
+not equal S$激活类型 富可敌国
+not equal S$激活类型 独霸一方
+not equal S$激活类型 百万富翁
+#act
+sendmsg 9 【提示】已经拥有更高级的称号了,无需激活该称号
+break
+
+
+#if
+large U252 s$点卷消耗
+NOT CHECKTITLE <$STR(S$激活类型)>
+#act
+CONFERTITLE <$STR(S$激活类型)>
+goto @点卷称号删除逻辑
+goto @点券页面
+sendmsg 9 【提示】激活成功
+#elseact
+sendmsg 9 【提示】消耗的货币不足
+
+
+
+
+
+[@点卷称号删除逻辑]
+#if
+equal S$激活类型 超级玩家
+#act
+mov S$点卷按钮1 yjh
+break
+
+#if
+equal S$激活类型 百万富翁
+#act
+DEPRIVETITLE 超级玩家
+mov S$点卷按钮1 yjh
+mov S$点卷按钮2 yjh
+break
+
+#if
+equal S$激活类型 独霸一方
+#act
+DEPRIVETITLE 百万富翁,超级玩家
+mov S$点卷按钮1 yjh
+mov S$点卷按钮2 yjh
+mov S$点卷按钮3 yjh
+break
+
+#if
+equal S$激活类型 富可敌国
+#act
+DEPRIVETITLE 超级玩家,百万富翁,独霸一方
+mov S$点卷按钮1 yjh
+mov S$点卷按钮2 yjh
+mov S$点卷按钮3 yjh
+mov S$点卷按钮4 yjh
+break
+
+#if
+equal S$激活类型 世纪富豪
+#act
+DEPRIVETITLE 超级玩家,百万富翁,独霸一方,富可敌国
+mov S$点卷按钮1 yjh
+mov S$点卷按钮2 yjh
+mov S$点卷按钮3 yjh
+mov S$点卷按钮4 yjh
+mov S$点卷按钮5 yjh
+break
+
+#if
+equal S$激活类型 浩瀚灭天
+#act
+DEPRIVETITLE 超级玩家,百万富翁,独霸一方,富可敌国,世纪富豪
+mov S$点卷按钮1 yjh
+mov S$点卷按钮2 yjh
+mov S$点卷按钮3 yjh
+mov S$点卷按钮4 yjh
+mov S$点卷按钮5 yjh
+mov S$点卷按钮6 yjh
+break
+
+;============================================
+[@按钮显示逻辑]
+#if
+not CHECKTITLE 初入江湖
+#act
+mov S$元宝按钮1 wjh
+mov S$元宝按钮2 wjh
+mov S$元宝按钮3 wjh
+mov S$元宝按钮4 wjh
+mov S$元宝按钮5 wjh
+mov S$元宝按钮6 wjh
+
+#if
+CHECKTITLE 初入江湖
+#act
+mov S$元宝按钮1 yjh
+mov S$元宝按钮2 wjh
+mov S$元宝按钮3 wjh
+mov S$元宝按钮4 wjh
+mov S$元宝按钮5 wjh
+mov S$元宝按钮6 wjh
+
+
+#if
+CHECKTITLE 从零开始
+#act
+mov S$元宝按钮1 yjh
+mov S$元宝按钮2 yjh
+mov S$元宝按钮3 wjh
+mov S$元宝按钮4 wjh
+mov S$元宝按钮5 wjh
+mov S$元宝按钮6 wjh
+
+
+#if
+CHECKTITLE 大杀四方
+#act
+mov S$元宝按钮1 yjh
+mov S$元宝按钮2 yjh
+mov S$元宝按钮3 yjh
+mov S$元宝按钮4 wjh
+mov S$元宝按钮5 wjh
+mov S$元宝按钮6 wjh
+
+
+#if
+CHECKTITLE 剑走江湖
+#act
+mov S$元宝按钮1 yjh
+mov S$元宝按钮2 yjh
+mov S$元宝按钮3 yjh
+mov S$元宝按钮4 yjh
+mov S$元宝按钮5 wjh
+mov S$元宝按钮6 wjh
+
+
+#if
+CHECKTITLE 霸气十足
+#act
+mov S$元宝按钮1 yjh
+mov S$元宝按钮2 yjh
+mov S$元宝按钮3 yjh
+mov S$元宝按钮4 yjh
+mov S$元宝按钮5 yjh
+mov S$元宝按钮6 wjh
+
+
+#if
+CHECKTITLE 盛世至尊
+#act
+mov S$元宝按钮1 yjh
+mov S$元宝按钮2 yjh
+mov S$元宝按钮3 yjh
+mov S$元宝按钮4 yjh
+mov S$元宝按钮5 yjh
+mov S$元宝按钮6 yjh
+
+
+;=========================================
+#if
+not CHECKTITLE 初学子弟
+#act
+mov S$点卡按钮1 wjh
+mov S$点卡按钮2 wjh
+mov S$点卡按钮3 wjh
+mov S$点卡按钮4 wjh
+mov S$点卡按钮5 wjh
+mov S$点卡按钮6 wjh
+
+#if
+CHECKTITLE 初学子弟
+#act
+mov S$点卡按钮1 yjh
+mov S$点卡按钮2 wjh
+mov S$点卡按钮3 wjh
+mov S$点卡按钮4 wjh
+mov S$点卡按钮5 wjh
+mov S$点卡按钮6 wjh
+
+
+#if
+CHECKTITLE 初窥武学
+#act
+mov S$点卡按钮1 yjh
+mov S$点卡按钮2 yjh
+mov S$点卡按钮3 wjh
+mov S$点卡按钮4 wjh
+mov S$点卡按钮5 wjh
+mov S$点卡按钮6 wjh
+
+
+#if
+CHECKTITLE 天资过人
+#act
+mov S$点卡按钮1 yjh
+mov S$点卡按钮2 yjh
+mov S$点卡按钮3 yjh
+mov S$点卡按钮4 wjh
+mov S$点卡按钮5 wjh
+mov S$点卡按钮6 wjh
+
+
+#if
+CHECKTITLE 锋芒毕露
+#act
+mov S$点卡按钮1 yjh
+mov S$点卡按钮2 yjh
+mov S$点卡按钮3 yjh
+mov S$点卡按钮4 yjh
+mov S$点卡按钮5 wjh
+mov S$点卡按钮6 wjh
+
+
+#if
+CHECKTITLE 涉足江湖
+#act
+mov S$点卡按钮1 yjh
+mov S$点卡按钮2 yjh
+mov S$点卡按钮3 yjh
+mov S$点卡按钮4 yjh
+mov S$点卡按钮5 yjh
+mov S$点卡按钮6 wjh
+
+
+#if
+CHECKTITLE 开山力派
+#act
+mov S$点卡按钮1 yjh
+mov S$点卡按钮2 yjh
+mov S$点卡按钮3 yjh
+mov S$点卡按钮4 yjh
+mov S$点卡按钮5 yjh
+mov S$点卡按钮6 yjh
+
+
+;===============================
+#if
+not CHECKTITLE 超级玩家
+#act
+mov S$点卷按钮1 wjh
+mov S$点卷按钮2 wjh
+mov S$点卷按钮3 wjh
+mov S$点卷按钮4 wjh
+mov S$点卷按钮5 wjh
+mov S$点卷按钮6 wjh
+
+
+#if
+CHECKTITLE 超级玩家
+#act
+mov S$点卷按钮1 yjh
+mov S$点卷按钮2 wjh
+mov S$点卷按钮3 wjh
+mov S$点卷按钮4 wjh
+mov S$点卷按钮5 wjh
+mov S$点卷按钮6 wjh
+
+
+#if
+CHECKTITLE 百万富翁
+#act
+mov S$点卷按钮1 yjh
+mov S$点卷按钮2 yjh
+mov S$点卷按钮3 wjh
+mov S$点卷按钮4 wjh
+mov S$点卷按钮5 wjh
+mov S$点卷按钮6 wjh
+
+
+#if
+CHECKTITLE 独霸一方
+#act
+mov S$点卷按钮1 yjh
+mov S$点卷按钮2 yjh
+mov S$点卷按钮3 yjh
+mov S$点卷按钮4 wjh
+mov S$点卷按钮5 wjh
+mov S$点卷按钮6 wjh
+
+
+#if
+CHECKTITLE 富可敌国
+#act
+mov S$点卷按钮1 yjh
+mov S$点卷按钮2 yjh
+mov S$点卷按钮3 yjh
+mov S$点卷按钮4 yjh
+mov S$点卷按钮5 wjh
+mov S$点卷按钮6 wjh
+
+
+#if
+CHECKTITLE 世纪富豪
+#act
+mov S$点卷按钮1 yjh
+mov S$点卷按钮2 yjh
+mov S$点卷按钮3 yjh
+mov S$点卷按钮4 yjh
+mov S$点卷按钮5 yjh
+mov S$点卷按钮6 wjh
+
+#if
+CHECKTITLE 浩瀚灭天
+#act
+mov S$点卷按钮1 yjh
+mov S$点卷按钮2 yjh
+mov S$点卷按钮3 yjh
+mov S$点卷按钮4 yjh
+mov S$点卷按钮5 yjh
+mov S$点卷按钮6 yjh

@@ -1,0 +1,104 @@
+;此脚为机器人专用脚本,用于机器人处理功能用的脚本.
+;SEC：按秒运行
+;MIN：按分运行
+;HOUR：按小时运行
+;DAY：按天运行
+;RunOnDay：按每天什么时候运行
+;RUNONWEEK：按星期几及时间运行
+;#AutoRun NPC RUNONWEEK 5:15:55 @SendRedMsg
+;星期五15点55分运行
+
+
+#AutoRun NPC RUNONDAY 23:50 @开区天数累计
+
+#AutoRun NPC  SEC  1    @新手地图刷怪
+#AutoRun NPC RUNONDAY 23:01 @随机开
+
+#AutoRun NPC RUNONDAY 08:01 @随机关
+
+;------------------------------------------------------------------------
+
+
+
+#AutoRun NPC RUNONDAY 18:30 @合区首次沙巴克攻城预热
+
+#AutoRun NPC RUNONDAY 19:30 @合区首次沙巴克攻城预热
+
+#AutoRun NPC RUNONDAY 19:50 @合区首次沙巴克攻城添加
+
+#AutoRun NPC RUNONDAY 20:00 @合区首次沙巴克攻城开始
+
+#AutoRun NPC RUNONDAY 21:00 @合区首次沙巴克攻城结束
+
+;======================================================
+
+#AutoRun NPC RUNONDAY 18:30 @合区后沙巴克攻城预热
+
+#AutoRun NPC RUNONDAY 19:30 @合区后沙巴克攻城预热
+
+#AutoRun NPC RUNONDAY 19:50 @合区后沙巴克攻城添加
+
+#AutoRun NPC RUNONDAY 20:00 @合区后沙巴克攻城开始
+
+#AutoRun NPC RUNONDAY 21:00 @合区后沙巴克攻城结束
+
+
+#AutoRun NPC RUNONDAY 21:11 @沙巴克攻城奖励
+
+
+
+
+
+#AutoRun NPC RunOnDay 23:00 @星辰次数满
+
+#AutoRun NPC RunOnDay 23:59 @星辰次数重启
+
+
+;====================================================
+#AutoRun NPC RUNONWEEK 2:21:20 @夺宝奇兵开启
+#AutoRun NPC RUNONWEEK 2:22:00 @夺宝奇兵不可进入
+#AutoRun NPC RUNONWEEK 2:22:10 @夺宝奇兵关闭
+
+#AutoRun NPC RUNONWEEK 3:21:20 @夺宝奇兵开启
+#AutoRun NPC RUNONWEEK 3:22:00 @夺宝奇兵不可进入
+#AutoRun NPC RUNONWEEK 3:22:10 @夺宝奇兵关闭
+
+#AutoRun NPC RUNONWEEK 5:21:20 @夺宝奇兵开启
+#AutoRun NPC RUNONWEEK 5:22:00 @夺宝奇兵不可进入
+#AutoRun NPC RUNONWEEK 5:22:10 @夺宝奇兵关闭
+
+#AutoRun NPC RUNONWEEK 6:21:20 @夺宝奇兵开启
+#AutoRun NPC RUNONWEEK 6:22:00 @夺宝奇兵不可进入
+#AutoRun NPC RUNONWEEK 6:22:10 @夺宝奇兵关闭
+
+;====================================================
+#AutoRun NPC RunOnDay 19:10 @限时BOSS开启
+
+
+
+
+#AutoRun NPC RunOnDay 19:41 @限时BOSS关闭
+
+
+;====================================================
+
+
+#AutoRun NPC RunOnDay 18:30 @限时押镖双倍开
+#AutoRun NPC RunOnDay 19:00 @限时押镖双倍关
+
+#AutoRun NPC RunOnDay 23:00 @限时押镖双倍开
+#AutoRun NPC RunOnDay 23:30 @限时押镖双倍关
+;=====================================================
+
+#AutoRun NPC RUNONWEEK 1:21:20 @幻境打开
+#AutoRun NPC RUNONWEEK 1:23:59 @幻境关闭
+
+#AutoRun NPC RUNONWEEK 4:21:20 @幻境打开
+#AutoRun NPC RUNONWEEK 4:23:59 @幻境关闭
+
+#AutoRun NPC RUNONWEEK 7:21:20 @幻境打开
+#AutoRun NPC RUNONWEEK 7:23:59 @幻境关闭
+;=====================================================
+#AutoRun NPC MIN 1 @散财活动30
+#AutoRun NPC MIN 1 @散财活动60
+

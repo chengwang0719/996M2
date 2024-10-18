@@ -1,0 +1,40 @@
+[@武士宝宝]
+{
+
+#if
+CHECKSLAVECOUNT > 0
+#act
+MOVESLAVE 0 <$map> <$x> <$y>
+break
+
+
+
+#if
+CHECKJOB WARRIOR
+CHECKLEVELEX > 48
+#act
+RECALLMOB 将军 7 99999 0 0
+ChangeSlaveAttackHumPowerRate 将军 80
+break
+
+
+#if
+CHECKJOB WARRIOR
+CHECKLEVELEX > 43
+#act
+RECALLMOB 护卫 7 99999 0 0
+ChangeSlaveAttackHumPowerRate 护卫 80
+break
+
+
+#if
+CHECKJOB WARRIOR
+CHECKLEVELEX > 30
+#act
+RECALLMOB 侍卫 7 99999 0 0
+ChangeSlaveAttackHumPowerRate 侍卫 80
+break
+
+
+
+}

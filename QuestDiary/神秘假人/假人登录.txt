@@ -1,0 +1,193 @@
+[@假人登录]   
+{   
+#IF   
+ISDUMMY   
+#ACT   
+movr n98 1 11   
+DELAYCALL 100 @职业分配   
+Break   
+   
+[@职业分配]   
+#or   
+equal N98 3   
+equal N98 4   
+equal N98 1   
+#ACT   
+;SETDUMMYCONFIGFILENAME ..\QuestDiary\神秘假人\假人男战士.txt   
+;LOADDUMMYCONFIGFILE   
+DELAYGOTO 8000 @假人新手村行动   
+Break   
+   
+#or   
+equal N98 2   
+equal N98 5   
+equal N98 6   
+#ACT   
+;SETDUMMYCONFIGFILENAME ..\QuestDiary\神秘假人\假人男法师.txt   
+;LOADDUMMYCONFIGFILE   
+DELAYGOTO 8000 @假人新手村行动   
+Break   
+   
+#or   
+equal N98 9   
+equal N98 10   
+equal N98 11   
+equal N98 7   
+equal N98 8   
+#ACT   
+;SETDUMMYCONFIGFILENAME ..\QuestDiary\神秘假人\假人男道士.txt   
+;LOADDUMMYCONFIGFILE   
+DELAYGOTO 8000 @假人新手村行动   
+Break   
+;━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   
+[@假人新手村行动]   
+#IF   
+ISDUMMY   
+IsOnMap 隐龙村   
+#ACT   
+;ExtBagPageCount + 1   
+ExtBagOpenItemCount + 30   
+ChangeHumAbilityEX 15 + 65535    
+GiveOnItem 1 乌木剑 1   
+GiveOnItem 0 轻型盔甲(男) 1   
+GiveOnItem 0 轻型盔甲(女) 1   
+take 轻型盔甲(男) 1   
+take 轻型盔甲(女) 1   
+DummyStart   
+GuildNoticeMsg 252 255 [系统]》热烈欢迎亲爱的玩家【<$USERNAME>】进入了【<$SERVERNAME>】！   
+GuildNoticeMsg 252 255 [系统]》热烈欢迎亲爱的玩家【<$USERNAME>】进入了【<$SERVERNAME>】！   
+GuildNoticeMsg 252 255 [系统]》热烈欢迎亲爱的玩家【<$USERNAME>】进入了【<$SERVERNAME>】！   
+   
+   
+#IF   
+RANDOM 2   
+#ACT   
+ChangeAttatckMode 6   
+BREAK   
+   
+#IF   
+RANDOM 4   
+#ACT   
+ChangeAttatckMode 1   
+BREAK   
+   
+#IF   
+RANDOM 16   
+#ACT   
+ChangeAttatckMode 0   
+BREAK   
+   
+#IF   
+#ACT   
+ChangeAttatckMode 6   
+BREAK   
+;━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   
+   
+[@新手假人土城行动]   
+#IF   
+ISDUMMY   
+#ACT   
+DummyStop   
+MOVR P2 317 336   
+MOVR P3 327 345   
+MAPMOVE 3 <$STR(P2)> <$STR(P3)>   
+MOVR N$随机时间01 2 10   
+DELAYGOTO <$STR(N$随机时间01)>000 @开启泡点   
+break   
+   
+   
+[@开启泡点]   
+#IF   
+RANDOM 2   
+ISDUMMY   
+ISONMAP 3   
+#act   
+MOVR P2 325 337   
+MOVR P3 338 345   
+GotoNow <$STR(P2)> <$STR(P3)>   
+SetOnTimer 5 2   
+MOVR N$随机时间03 10 40   
+DELAYGOTO <$STR(N$随机时间03)>000 @土城走动开始   
+   
+   
+;━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   
+[@土城走动开始]   
+#IF   
+#ACT   
+SetOnTimer 2 3   
+SetOnTimer 4 10   
+BREAK   
+   
+   
+   
+   
+;━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━   
+[@新手假人穿装备]   
+#or   
+equal N98 3   
+equal N98 4   
+#ACT   
+GMEXECUTE 清理 Self   
+give 中型盔甲(男) 1   
+give 修罗 1   
+give 蓝翡翠项链 1   
+give 幽灵手套 2   
+give 珊瑚戒指 2   
+AutoTakeOnItem 修罗 1   
+AutoTakeOnItem 中型盔甲(男) 0   
+AutoTakeOnItem 蓝翡翠项链 3   
+AutoTakeOnItem 幽灵手套 5   
+AutoTakeOnItem 幽灵手套 6   
+AutoTakeOnItem 珊瑚戒指 7   
+AutoTakeOnItem 珊瑚戒指 8   
+break   
+   
+#or   
+equal N98 5   
+equal N98 6   
+#ACT   
+GMEXECUTE 清理 Self   
+give 中型盔甲(男) 1   
+give 偃月 1   
+give 放大镜 1   
+give 黑檀手镯 2   
+give 魅力戒指 2   
+AutoTakeOnItem 偃月 1   
+AutoTakeOnItem 中型盔甲(男) 0   
+AutoTakeOnItem 放大镜 3   
+AutoTakeOnItem 黑檀手镯 5   
+AutoTakeOnItem 黑檀手镯 6   
+AutoTakeOnItem 魅力戒指 7   
+AutoTakeOnItem 魅力戒指 8   
+   
+#or   
+equal N98 1   
+equal N98 2   
+equal N98 9   
+equal N98 10   
+equal N98 11   
+equal N98 7   
+equal N98 8   
+#ACT   
+give 中型盔甲(男) 1   
+give 降魔 1   
+give 竹笛 1   
+give 道士手镯 2   
+give 道德戒指 2   
+AutoTakeOnItem 降魔 1   
+AutoTakeOnItem 中型盔甲(男) 0   
+AutoTakeOnItem 竹笛 3   
+AutoTakeOnItem 道士手镯 5   
+AutoTakeOnItem 道士手镯 6   
+AutoTakeOnItem 道德戒指 7   
+AutoTakeOnItem 道德戒指 8   
+   
+   
+;----------------------------------------------------------------------------------------------------------   
+}   
+   
+  
+  
+ 
+ 
+

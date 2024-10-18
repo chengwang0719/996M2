@@ -1,0 +1,420 @@
+[@main]
+#if
+#act
+
+
+#if
+equal <$USEITEMNAME[77]> 
+#act
+sendmsg 9 身上暂未穿戴“神胚”　请前往游戏攻略－打怪神器里查看激活条件！
+break
+
+
+
+#if
+EQUAL U11 0
+#act
+MOV N$下阶神胚展示 10113
+mov S$所需费用 10000
+mov S$所需材料数量 2
+mov S$原攻魔道 1
+mov S$原增伤 2%
+mov S$原怪爆率 1%
+mov S$原生命值值 10
+mov S$新攻魔道 2
+mov S$新增伤 3%
+mov S$新怪爆率 2%
+mov S$新生命值值 20
+goto @页面展示 
+break
+
+#if
+EQUAL U11 1
+#act
+MOV N$下阶神胚展示 10114
+mov S$所需费用 20000
+mov S$所需材料数量 4
+mov S$原攻魔道 2
+mov S$原增伤 3%
+mov S$原怪爆率 2%
+mov S$原生命值值 20
+
+mov S$新攻魔道 3
+mov S$新增伤 4%
+mov S$新怪爆率 3%
+mov S$新生命值值 30
+goto @页面展示 
+break
+
+#if
+EQUAL U11 2
+#act
+MOV N$下阶神胚展示 10115
+mov S$所需费用 30000
+mov S$所需材料数量 6
+mov S$原攻魔道 3
+mov S$原增伤 4%
+mov S$原怪爆率 3%
+mov S$原生命值值 30
+
+mov S$新攻魔道 4
+mov S$新增伤 5%
+mov S$新怪爆率 4%
+mov S$新生命值值 40
+goto @页面展示 
+break
+
+#if
+EQUAL U11 3
+#act
+MOV N$下阶神胚展示 10116
+mov S$所需费用 40000
+mov S$所需材料数量 8
+mov S$原攻魔道 4
+mov S$原增伤 5%
+mov S$原怪爆率 4%
+mov S$原生命值值 40
+
+
+mov S$新攻魔道 5
+mov S$新增伤 6%
+mov S$新怪爆率 5%
+mov S$新生命值值 50
+goto @页面展示 
+break
+
+#if
+EQUAL U11 4
+#act
+MOV N$下阶神胚展示 10117
+mov S$所需费用 50000
+mov S$所需材料数量 10
+mov S$原攻魔道 5
+mov S$原增伤 6%
+mov S$原怪爆率 5%
+mov S$原生命值值 50
+
+
+mov S$新攻魔道 6
+mov S$新增伤 7%
+mov S$新怪爆率 6%
+mov S$新生命值值 60
+goto @页面展示 
+break
+
+#if
+EQUAL U11 5
+#act
+MOV N$下阶神胚展示 10118
+mov S$所需费用 60000
+mov S$所需材料数量 12
+mov S$原攻魔道 6
+mov S$原增伤 7%
+mov S$原怪爆率 6%
+mov S$原生命值值 60
+
+mov S$新攻魔道 7
+mov S$新增伤 8%
+mov S$新怪爆率 7%
+mov S$新生命值值 70
+goto @页面展示 
+break
+
+#if
+EQUAL U11 6
+#act
+MOV N$下阶神胚展示 10119
+mov S$所需费用 70000
+mov S$所需材料数量 14
+mov S$原攻魔道 7
+mov S$原增伤 8%
+mov S$原怪爆率 7%
+mov S$原生命值值 70
+
+mov S$新攻魔道 8
+mov S$新增伤 9%
+mov S$新怪爆率 8%
+mov S$新生命值值 80
+goto @页面展示 
+break
+
+#if
+EQUAL U11 7
+#act
+MOV N$下阶神胚展示 10120
+mov S$所需费用 80000
+mov S$所需材料数量 16
+mov S$原攻魔道 8
+mov S$原增伤 9%
+mov S$原怪爆率 8%
+mov S$原生命值值 80
+
+mov S$新攻魔道 9
+mov S$新增伤 10%
+mov S$新怪爆率 9%
+mov S$新生命值值 90
+goto @页面展示 
+break
+
+#if
+EQUAL U11 8
+#act
+MOV N$下阶神胚展示 10121
+mov S$所需费用 90000
+mov S$所需材料数量 18
+mov S$原攻魔道 9
+mov S$原增伤 10%
+mov S$原怪爆率 9%
+mov S$原生命值值 90
+
+mov S$新攻魔道 10
+mov S$新增伤 11%
+mov S$新怪爆率 10%
+mov S$新生命值值 100
+goto @页面展示 
+break
+
+#if
+LARGE U11 8
+#ACT
+goto @升级完成页面
+
+[@页面展示]
+#IF
+#say
+<Img|a=4|x=450.0|y=273.0|width=950|height=593|loadDelay=0|move=1|show=4|esc=1|img=npc/cszl/bj.png|reset=1|bg=1>
+<Button|x=845.0|y=14.0|nimg=public/close-2.png|mimg=public/close-2.png|link=@exit>
+<Img|x=140.0|y=110.0|width=60|height=60|bg=0|loadDelay=0|reset=1|show=4|move=0|img=npc/hsqg/kuang.png|esc=1>
+<Img|x=355.0|y=110.0|width=60|height=60|bg=0|loadDelay=0|reset=1|show=4|move=0|img=npc/hsqg/kuang.png|esc=1>
+<Effect|x=538.0|y=86.0|scale=1|speed=2|act=0|effecttype=0|effectid=20328|dir=5>
+<Button|id=8|x=215.0|y=464.0|width=140|height=42|nimg=npc/hsqg/btn.png|mimg=npc/hsqg/btn.png|link=@升级>
+<Text|x=120.0|y=360.0|color=249|outline=1|size=14|text=升级条件>
+<Text|x=120.0|y=388.0|color=246|outline=1|size=14|text=1、请将需要升级的"神胚"佩戴在身上>
+<RText|x=119.0|y=416.0|color=246|outline=1|size=14|text=2、当前升级需要元宝<$str(S$所需费用)> +>
+<ItemShow|x=295.0|y=390.0|width=60|height=60|itemid=20222|itemcount=<$str(S$所需材料数量)>|bgtype=0|showtips=1|scale=0.8>
+<RText|x=215.0|y=191.0|color=250|outline=1|size=14|text=<$str(S$原攻魔道)>>
+<RText|x=216.0|y=220.0|color=250|outline=1|size=14|text=<$str(S$原增伤)>>
+<RText|x=217.0|y=250.0|color=250|outline=1|size=14|text=<$str(S$原怪爆率)>>
+<RText|x=217.0|y=280.0|color=250|outline=1|size=14|text=<$str(S$原生命值值)>>
+<RText|x=427.0|y=191.0|color=250|outline=1|size=14|text=<$str(S$新攻魔道)>>
+<RText|x=427.0|y=220.0|color=250|outline=1|size=14|text=<$str(S$新增伤)>>
+<RText|x=428.0|y=250.0|color=250|outline=1|size=14|text=<$str(S$新怪爆率)>>
+<RText|x=428.0|y=280.0|color=250|outline=1|size=14|text=<$str(S$新生命值值)>>
+<EquipShow|x=136.0|y=107.0|width=60|height=60|index=77|showtips=1|reload=1>
+<ItemShow|x=351.0|y=107.0|width=60|height=60|itemid=<$str(N$下阶神胚展示)>|itemcount=1|bgtype=0|showtips=1>
+
+[@升级完成页面]
+<Img|a=4|x=450.0|y=273.0|width=950|height=593|loadDelay=0|bg=1|esc=1|show=4|reset=1|img=npc/cszl/bj1.png|move=1>
+<Button|x=845.0|y=14.0|mimg=public/close-2.png|nimg=public/close-2.png|link=@exit>
+<Effect|x=499.0|y=28.0|scale=1|speed=1|dir=5|act=0|effectid=20330|effecttype=0>
+<RText|x=144.0|y=277.0|size=18|outline=2|color=255|text=本大陆的成神之路已经升级完成>
+
+[@升级]
+
+#if
+EQUAL U11 0
+#ACT
+goto @成升级1
+break
+
+#if
+EQUAL U11 1
+#ACT
+goto @成升级2
+break
+
+#if
+EQUAL U11 2
+#ACT
+goto @成升级3
+break
+
+#if
+EQUAL U11 3
+#ACT
+goto @成升级4
+break
+
+#if
+EQUAL U11 4
+#ACT
+goto @成升级5
+break
+
+#if
+EQUAL U11 5
+#ACT
+goto @成升级6
+break
+
+#if
+EQUAL U11 6
+#ACT
+goto @成升级7
+break
+
+#if
+EQUAL U11 7
+#ACT
+goto @成升级8
+break
+
+#if
+EQUAL U11 8
+#ACT
+goto @成升级9
+break
+
+#if
+EQUAL U11 9
+#ACT
+goto @成升级10
+break
+
+
+[@成升级1]
+
+
+#if
+CHECKITEMS 佛#<$STR(S$所需材料数量)> 0 0
+CHECKBINDMONEY 绑定元宝 ? 10000
+#act
+mov U11 1
+CHANGEBINDMONEY 绑定元宝 10000
+TAKES 佛#<$STR(S$所需材料数量)>
+takeW 神胚[一重Lv.1] 1
+give 神胚[一重Lv.2] 1
+TakeOn 神胚[一重Lv.2] 77
+goto @main
+;close
+#elseact
+sendmsg 9 抱歉，你的元宝或者所需材料不够！
+
+[@成升级2]
+#if
+CHECKITEMS 佛#<$STR(S$所需材料数量)> 0 0
+CHECKBINDMONEY 绑定元宝 ? 20000
+#act
+mov U11 2
+TAKES 佛#<$STR(S$所需材料数量)>
+CHANGEBINDMONEY 绑定元宝 20000
+takeW 神胚[一重Lv.2] 1
+give 神胚[一重Lv.3] 1
+TakeOn 神胚[一重Lv.3] 77
+goto @main
+#elseact
+sendmsg 9 抱歉，你的元宝或者所需材料不够！
+
+[@成升级3]
+#if
+CHECKITEMS 佛#<$STR(S$所需材料数量)> 0 0
+CHECKBINDMONEY 绑定元宝 ? 30000
+#act
+TAKES 佛#<$STR(S$所需材料数量)>
+mov U11 3
+CHANGEBINDMONEY 绑定元宝 30000
+takeW 神胚[一重Lv.3] 1
+give 神胚[一重Lv.4] 1
+TakeOn 神胚[一重Lv.4] 77
+goto @main
+#elseact
+sendmsg 9 抱歉，你的元宝或者所需材料不够！
+
+[@成升级4]
+#if
+CHECKITEMS 佛#<$STR(S$所需材料数量)> 0 0
+CHECKBINDMONEY 绑定元宝 ? 40000
+#act
+TAKES 佛#<$STR(S$所需材料数量)>
+mov U11 4
+CHANGEBINDMONEY 绑定元宝 40000
+takeW 神胚[一重Lv.4] 1
+give 神胚[一重Lv.5] 1
+TakeOn 神胚[一重Lv.5] 77
+goto @main
+#elseact
+sendmsg 9 抱歉，你的元宝或者所需材料不够！
+
+[@成升级5]
+#if
+CHECKITEMS 佛#<$STR(S$所需材料数量)> 0 0
+CHECKBINDMONEY 绑定元宝 ? 50000
+#act
+TAKES 佛#<$STR(S$所需材料数量)>
+mov U11 5
+CHANGEBINDMONEY 绑定元宝 50000
+takeW 神胚[一重Lv.5] 1
+give 神胚[一重Lv.6] 1
+TakeOn 神胚[一重Lv.6] 77
+goto @main
+#elseact
+sendmsg 9 抱歉，你的元宝或者所需材料不够！
+
+[@成升级6]
+#if
+CHECKITEMS 佛#<$STR(S$所需材料数量)> 0 0
+CHECKBINDMONEY 绑定元宝 ? 60000
+#act
+TAKES 佛#<$STR(S$所需材料数量)>
+mov U11 6
+CHANGEBINDMONEY 绑定元宝 60000
+takeW 神胚[一重Lv.6] 1
+give 神胚[一重Lv.7] 1
+TakeOn 神胚[一重Lv.7] 77
+goto @main
+#elseact
+sendmsg 9 抱歉，你的元宝或者所需材料不够！
+
+[@成升级7]
+#if
+CHECKITEMS 佛#<$STR(S$所需材料数量)> 0 0
+CHECKBINDMONEY 绑定元宝 ? 70000
+#act
+TAKES 佛#<$STR(S$所需材料数量)>
+mov U11 7
+CHANGEBINDMONEY 绑定元宝 70000
+takeW 神胚[一重Lv.7] 1
+give 神胚[一重Lv.8] 1
+TakeOn 神胚[一重Lv.8] 77
+goto @main
+#elseact
+sendmsg 9 抱歉，你的元宝或者所需材料不够！
+
+[@成升级8]
+#if
+CHECKITEMS 佛#<$STR(S$所需材料数量)> 0 0
+CHECKBINDMONEY 绑定元宝 ? 80000
+#act
+TAKES 佛#<$STR(S$所需材料数量)>
+mov U11 8
+CHANGEBINDMONEY 绑定元宝 80000
+takeW 神胚[一重Lv.8] 1
+give 神胚[一重Lv.9] 1
+TakeOn 神胚[一重Lv.9] 77
+goto @main
+#elseact
+sendmsg 9 抱歉，你的元宝或者所需材料不够！
+
+[@成升级9]
+#if
+CHECKITEMS 佛#<$STR(S$所需材料数量)> 0 0
+CHECKBINDMONEY 绑定元宝 ? 90000
+#act
+mov U11 9
+CHANGEBINDMONEY 绑定元宝 90000
+TAKES 佛#<$STR(S$所需材料数量)>
+takeW 神胚[一重Lv.9] 1
+give 神胚[二重Lv.1] 1
+TakeOn 神胚[二重Lv.1] 77
+
+set [49] 1
+goto @main
+#CALL [\任务系统\任务系统QF.txt] @任务系统QF
+
+CHANGECUSTOMITEMTEXT 77 神技:降龙，真实伤害500\被动技能，冷却时间60秒 0
+CHANGECUSTOMITEMTEXTCOLOR 77 255 0
+
+CHANGECUSTOMITEMTEXT 77 状态：未激活 1
+CHANGECUSTOMITEMTEXTCOLOR 77 10 1
+#elseact
+sendmsg 9 抱歉，你的元宝或者所需材料不够！

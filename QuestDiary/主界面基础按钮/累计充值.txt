@@ -1,0 +1,605 @@
+[@累计充值页面]
+{
+
+#if
+CHECKMONEY 充值点 > 1299
+#act
+mov S$该页面的高度 625
+#elseact
+mov S$该页面的高度 300
+
+
+#if
+checkjob Warrior
+#act
+mov N$500档位 10589
+mov N$1000档位 10224
+mov N$1500档位 10174
+mov S$戒指 耀金护戒
+mov S$项链 耀金项链
+mov S$武器 耀金破龍斩
+#if
+checkjob Wizard
+#act
+mov N$500档位 10587
+mov N$1000档位 10230
+mov N$1500档位 10177
+mov S$戒指 耀光护戒
+mov S$项链 耀光项链
+mov S$武器 耀光寒冰刃
+#if
+checkjob Taoist
+#act
+mov N$500档位 10591
+mov N$1000档位 10236
+mov N$1500档位 10180
+mov S$戒指 耀玉护戒
+mov S$项链 耀玉项链
+mov S$武器 耀玉青龙刀
+
+#if
+#act
+
+goto @累充按钮状态
+goto @累计充值展示
+
+
+
+
+
+[@累计充值展示]
+#if
+#say
+<Button|x=-2526.0|y=-1172.0|width=115120|height=112880|size=18|color=224|nimg=npc/zd.png|pimg=npc/zd.png|mimg=npc/zd.png|link=@exit>
+<Img|ay=1|x=10.0|y=-3.0|children={a}|width=988|height=590|esc=1|move=0|loadDelay=0|img=topbtn/ljcz/bj.png|reset=1|bg=1|show=4>
+<Button|x=907.0|y=12.0|nimg=public/close-2.png|mimg=public/close-2.png|link=@exit>
+<Img|ay=1|x=199.0|y=93.0|width=609|height=105|esc=1|move=0|loadDelay=0|img=topbtn/ljcz/00016.png|reset=1|show=4>
+<ListView|id=a|children={b}|x=189|y=201.0|width=609|height=320|margin=0|bounce=0|direction=1|cantouch=1>
+<Layout|id=b|children={1,2,3,4,5,6,7,8,9,10,11}|x=0.0|y=0|width=609|height=<$STR(S$该页面的高度)>|>
+<Img|ay=1|id=1|children={0a,1a,2a,3a,4a,44a,5a,6a,7a,8a,88a,9a}|x=0|y=0|width=609|height=59|esc=1|move=0|loadDelay=0|img=topbtn/ljcz/00036.png|reset=1|show=4>
+<Text|id=0a|x=98.0|y=16.0|color=255|outline=2|size=19|text=: 100>
+<ItemShow|id=1a|x=161.0|y=-4.0|width=70|height=70|itemid=20179|itemcount=70|showtips=1|bgtype=0>
+<ItemShow|id=2a|x=217.0|y=-4.0|width=70|height=70|itemid=20178|itemcount=50|showtips=1|bgtype=0>
+<ItemShow|id=3a|x=276.0|y=-4.0|width=70|height=70|itemid=20193|itemcount=10|showtips=1|bgtype=0>
+<ItemShow|id=4a|x=338.0|y=-4.0|width=70|height=70|itemid=20281|itemcount=18|showtips=1|bgtype=0>
+<ItemShow|id=44a|x=397.0|y=-4.0|width=70|height=70|itemid=20282|itemcount=18|showtips=1|bgtype=0>
+<Effect|id=5a|x=190.0|y=25.0|scale=1|speed=2|effectid=30061|act=0|dir=5|effecttype=0>
+<Effect|id=6a|x=252.0|y=25.0|scale=1|speed=2|effectid=30061|act=0|dir=5|effecttype=0>
+<Effect|id=7a|x=309.0|y=25.0|scale=1|speed=2|effectid=30061|act=0|dir=5|effecttype=0>
+<Effect|id=8a|x=369.0|y=25.0|scale=1|speed=2|effectid=30061|act=0|dir=5|effecttype=0>
+<Effect|id=88a|x=430.0|y=25.0|scale=1|speed=2|effectid=30061|act=0|dir=5|effecttype=0>
+
+<$STR(S$100累充状态)>
+
+
+<Img|ay=1|id=2|children={0b,1b,2b,3b,4b,44b,5b,6b,7b,8b,88b,9b}|x=0|y=59|width=609|height=59|esc=1|move=0|loadDelay=0|img=topbtn/ljcz/00036.png|reset=1|show=4>
+<Text|id=0b|x=98.0|y=16.0|color=255|outline=2|size=19|text=: 300>
+<ItemShow|id=1b|x=161.0|y=-4.0|width=70|height=70|itemid=20179|itemcount=80|bgtype=0|showtips=1>
+<ItemShow|id=2b|x=217.0|y=-4.0|width=70|height=70|itemid=<$str(N$500档位)>|itemcount=1|bgtype=0|showtips=1>
+<ItemShow|id=3b|x=276.0|y=-4.0|width=70|height=70|itemid=20192|itemcount=10|bgtype=0|showtips=1>
+<ItemShow|id=4b|x=338.0|y=-4.0|width=70|height=70|itemid=20232|itemcount=5|bgtype=0|showtips=1>
+<ItemShow|id=44b|x=397.0|y=-4.0|width=70|height=70|itemid=20175|itemcount=12|showtips=1|bgtype=0>
+<Effect|id=5b|x=190.0|y=25.0|scale=1|speed=2|effecttype=0|act=0|effectid=30061|dir=5>
+<Effect|id=6b|x=252.0|y=25.0|scale=1|speed=2|effecttype=0|act=0|effectid=30061|dir=5>
+<Effect|id=7b|x=309.0|y=25.0|scale=1|speed=2|effecttype=0|act=0|effectid=30061|dir=5>
+<Effect|id=8b|x=369.0|y=25.0|scale=1|speed=2|effecttype=0|act=0|effectid=30061|dir=5>
+<Effect|id=88b|x=430.0|y=25.0|scale=1|speed=2|effectid=30061|act=0|dir=5|effecttype=0>
+<$STR(S$300累充状态)>
+
+
+<Img|ay=1|id=3|children={0c,1c,2c,3c,4c,44c,5c,6c,7c,8c,88c,9c}|x=0|y=118|width=609|height=59|esc=1|move=0|loadDelay=0|img=topbtn/ljcz/00036.png|reset=1|show=4>
+<Text|id=0c|x=98.0|y=16.0|color=255|outline=2|size=19|text=: 500>
+<ItemShow|id=1c|x=161.0|y=-4.0|width=70|height=70|itemid=20179|itemcount=90|bgtype=0|showtips=1>
+<ItemShow|id=2c|x=217.0|y=-4.0|width=70|height=70|itemid=20178|itemcount=150|bgtype=0|showtips=1>
+<ItemShow|id=3c|x=276.0|y=-4.0|width=70|height=70|itemid=20192|itemcount=20|bgtype=0|showtips=1>
+<ItemShow|id=4c|x=338.0|y=-4.0|width=70|height=70|itemid=20281|itemcount=36|bgtype=0|showtips=1>
+<ItemShow|id=44c|x=397.0|y=-4.0|width=70|height=70|itemid=20282|itemcount=36|showtips=1|bgtype=0>
+<Effect|id=5c|x=190.0|y=25.0|scale=1|speed=2|effecttype=0|act=0|effectid=30061|dir=5>
+<Effect|id=6c|x=252.0|y=25.0|scale=1|speed=2|effecttype=0|act=0|effectid=30061|dir=5>
+<Effect|id=7c|x=309.0|y=25.0|scale=1|speed=2|effecttype=0|act=0|effectid=30061|dir=5>
+<Effect|id=8c|x=369.0|y=25.0|scale=1|speed=2|effecttype=0|act=0|effectid=30061|dir=5>
+<Effect|id=88c|x=430.0|y=25.0|scale=1|speed=2|effectid=30061|act=0|dir=5|effecttype=0>
+<$STR(S$500累充状态)>
+
+<Img|ay=1|id=4|children={0d,1d,2d,3d,4d,44d,5d,6d,7d,8d,88d,9d}|x=0|y=177|width=609|height=59|esc=1|move=0|loadDelay=0|img=topbtn/ljcz/00036.png|reset=1|show=4>
+<Text|id=0d|x=98.0|y=16.0|color=255|outline=2|size=19|text=: 700>
+<ItemShow|id=1d|x=161.0|y=-4.0|width=70|height=70|itemid=20179|itemcount=100|bgtype=0|showtips=1>
+<ItemShow|id=2d|x=217.0|y=-4.0|width=70|height=70|itemid=<$str(N$1000档位)>|itemcount=1|bgtype=0|showtips=1>
+<ItemShow|id=3d|x=276.0|y=-4.0|width=70|height=70|itemid=20192|itemcount=25|bgtype=0|showtips=1>
+<ItemShow|id=4d|x=338.0|y=-4.0|width=70|height=70|itemid=20232|itemcount=8|bgtype=0|showtips=1>
+<ItemShow|id=44d|x=397.0|y=-4.0|width=70|height=70|itemid=20175|itemcount=13|showtips=1|bgtype=0>
+<Effect|id=5d|x=190.0|y=25.0|scale=1|speed=2|effecttype=0|act=0|effectid=30061|dir=5>
+<Effect|id=6d|x=252.0|y=25.0|scale=1|speed=2|effecttype=0|act=0|effectid=30061|dir=5>
+<Effect|id=7d|x=309.0|y=25.0|scale=1|speed=2|effecttype=0|act=0|effectid=30061|dir=5>
+<Effect|id=8d|x=369.0|y=25.0|scale=1|speed=2|effecttype=0|act=0|effectid=30061|dir=5>
+<Effect|id=88d|x=430.0|y=25.0|scale=1|speed=2|effectid=30061|act=0|dir=5|effecttype=0>
+<$STR(S$700累充状态)>
+
+<Img|ay=1|id=5|children={0e,1e,2e,3e,4e,44e,5e,6e,7e,8e,88e,9e}|x=0|y=236|width=609|height=59|esc=1|move=0|loadDelay=0|img=topbtn/ljcz/00036.png|reset=1|show=4>
+<Text|id=0e|x=98.0|y=16.0|color=255|outline=2|size=19|text=: 1000>
+<ItemShow|id=1e|x=161.0|y=-4.0|width=70|height=70|itemid=20179|itemcount=120|bgtype=0|showtips=1>
+<ItemShow|id=2e|x=217.0|y=-4.0|width=70|height=70|itemid=<$str(N$1500档位)>|itemcount=1|bgtype=0|showtips=1>
+<ItemShow|id=3e|x=276.0|y=-4.0|width=70|height=70|itemid=20178|itemcount=300|bgtype=0|showtips=1>
+<ItemShow|id=4e|x=338.0|y=-4.0|width=70|height=70|itemid=20281|itemcount=72|bgtype=0|showtips=1>
+<ItemShow|id=44e|x=397.0|y=-4.0|width=70|height=70|itemid=20282|itemcount=72|showtips=1|bgtype=0>
+<Effect|id=5e|x=190.0|y=25.0|scale=1|speed=2|effecttype=0|act=0|effectid=30062|dir=5>
+<Effect|id=6e|x=252.0|y=25.0|scale=1|speed=2|effecttype=0|act=0|effectid=30062|dir=5>
+<Effect|id=7e|x=309.0|y=25.0|scale=1|speed=2|effecttype=0|act=0|effectid=30062|dir=5>
+<Effect|id=8e|x=369.0|y=25.0|scale=1|speed=2|effecttype=0|act=0|effectid=30062|dir=5>
+<Effect|id=88e|x=430.0|y=25.0|scale=1|speed=2|effectid=30062|act=0|dir=5|effecttype=0>
+<$STR(S$1000累充状态)>
+
+<Text|x=217|y=167|color=254|outline=2|size=16|outline=2|text=累计充值：>
+<Text|x=293|y=167|color=255|outline=2|size=16|outline=2|text=$STM(MONEY_充值点)元>
+
+<Text|x=242|y=541|color=255|outline=2|size=19|outline=2|text=说明：>
+<Text|x=301|y=542|color=255|outline=2|size=16|outline=2|text=开服累充活动所有累计充值都会计算在内，活动时间合服结束！！！>
+
+#if
+CHECKMONEY 充值点 > 1299
+#say
+
+<Img|ay=1|id=6|children={0f,1f,2f,3f,4f,44f,5f,6f,7f,8f,88f,9f}|x=0|y=295|width=609|height=59|esc=1|move=0|loadDelay=0|img=topbtn/ljcz/00036.png|reset=1|show=4>
+<Text|id=0f|x=98.0|y=16.0|color=255|outline=2|size=19|text=: 1300>
+<ItemShow|id=1f|x=161.0|y=-4.0|width=70|height=70|itemid=20179|itemcount=140|bgtype=0|showtips=1>
+<ItemShow|id=2f|x=217.0|y=-4.0|width=70|height=70|itemid=20193|itemcount=25|bgtype=0|showtips=1>
+<ItemShow|id=3f|x=276.0|y=-4.0|width=70|height=70|itemid=20232|itemcount=10|bgtype=0|showtips=1>
+<ItemShow|id=4f|x=338.0|y=-4.0|width=70|height=70|itemid=20176|itemcount=13|bgtype=0|showtips=1>
+<ItemShow|id=44f|x=397.0|y=-4.0|width=70|height=70|itemid=20178|itemcount=500|showtips=1|bgtype=0>
+<Effect|id=5f|x=190.0|y=25.0|scale=1|speed=2|effecttype=0|act=0|effectid=30062|dir=5>
+<Effect|id=6f|x=252.0|y=25.0|scale=1|speed=2|effecttype=0|act=0|effectid=30062|dir=5>
+<Effect|id=7f|x=309.0|y=25.0|scale=1|speed=2|effecttype=0|act=0|effectid=30062|dir=5>
+<Effect|id=8f|x=369.0|y=25.0|scale=1|speed=2|effecttype=0|act=0|effectid=30062|dir=5>
+<Effect|id=88f|x=430.0|y=25.0|scale=1|speed=2|effectid=30062|act=0|dir=5|effecttype=0>
+<$STR(S$1300累充状态)>
+
+
+
+<Img|ay=1|id=7|children={0g,1g,2g,3g,4g,44g,5g,6g,7g,8g,88g,9g}|x=0|y=354|width=609|height=59|esc=1|move=0|loadDelay=0|img=topbtn/ljcz/00036.png|reset=1|show=4>
+<Text|id=0g|x=98.0|y=16.0|color=255|outline=2|size=19|text=: 2000>
+<ItemShow|id=1g|x=161.0|y=-4.0|width=70|height=70|itemid=20179|itemcount=160|bgtype=0|showtips=1>
+<ItemShow|id=2g|x=217.0|y=-4.0|width=70|height=70|itemid=20194|itemcount=10|bgtype=0|showtips=1>
+<ItemShow|id=3g|x=276.0|y=-4.0|width=70|height=70|itemid=20232|itemcount=11|bgtype=0|showtips=1>
+<ItemShow|id=4g|x=338.0|y=-4.0|width=70|height=70|itemid=20176|itemcount=16|bgtype=0|showtips=1>
+<ItemShow|id=44g|x=397.0|y=-4.0|width=70|height=70|itemid=20178|itemcount=800|showtips=1|bgtype=0>
+<Effect|id=5g|x=190.0|y=25.0|scale=1|speed=2|effecttype=0|act=0|effectid=30060|dir=5>
+<Effect|id=6g|x=252.0|y=25.0|scale=1|speed=2|effecttype=0|act=0|effectid=30060|dir=5>
+<Effect|id=7g|x=309.0|y=25.0|scale=1|speed=2|effecttype=0|act=0|effectid=30060|dir=5>
+<Effect|id=8g|x=369.0|y=25.0|scale=1|speed=2|effecttype=0|act=0|effectid=30060|dir=5>
+<Effect|id=88g|x=430.0|y=25.0|scale=1|speed=2|effectid=30060|act=0|dir=5|effecttype=0>
+<$STR(S$2000累充状态)>
+
+
+
+<Img|ay=1|id=8|children={0h,1h,2h,3h,4h,44h,5h,6h,7h,8h,88h,9h}|x=0|y=413|width=609|height=59|esc=1|move=0|loadDelay=0|img=topbtn/ljcz/00036.png|reset=1|show=4>
+<Text|id=0h|x=98.0|y=16.0|color=255|outline=2|size=19|text=: 2500>
+<ItemShow|id=1h|x=161.0|y=-4.0|width=70|height=70|itemid=20179|itemcount=180|bgtype=0|showtips=1>
+<ItemShow|id=2h|x=217.0|y=-4.0|width=70|height=70|itemid=20194|itemcount=14|bgtype=0|showtips=1>
+<ItemShow|id=3h|x=276.0|y=-4.0|width=70|height=70|itemid=20232|itemcount=12|bgtype=0|showtips=1>
+<ItemShow|id=4h|x=338.0|y=-4.0|width=70|height=70|itemid=20176|itemcount=15|bgtype=0|showtips=1>
+<ItemShow|id=44h|x=397.0|y=-4.0|width=70|height=70|itemid=20178|itemcount=1100|showtips=1|bgtype=0>
+<Effect|id=5h|x=190.0|y=25.0|scale=1|speed=2|effecttype=0|act=0|effectid=30060|dir=5>
+<Effect|id=6h|x=252.0|y=25.0|scale=1|speed=2|effecttype=0|act=0|effectid=30060|dir=5>
+<Effect|id=7h|x=309.0|y=25.0|scale=1|speed=2|effecttype=0|act=0|effectid=30060|dir=5>
+<Effect|id=8h|x=369.0|y=25.0|scale=1|speed=2|effecttype=0|act=0|effectid=30060|dir=5>
+<Effect|id=88h|x=430.0|y=25.0|scale=1|speed=2|effectid=30060|act=0|dir=5|effecttype=0>
+<$STR(S$2500累充状态)>
+
+
+<Img|ay=1|id=9|children={0i,1i,2i,3i,4i,44i,5i,6i,7i,8i,88i,9i}|x=0|y=472|width=609|height=59|esc=1|move=0|loadDelay=0|img=topbtn/ljcz/00036.png|reset=1|show=4>
+<Text|id=0i|x=98.0|y=16.0|color=255|outline=2|size=19|text=: 3000>
+<ItemShow|id=1i|x=161.0|y=-4.0|width=70|height=70|itemid=20179|itemcount=200|bgtype=0|showtips=1>
+<ItemShow|id=2i|x=217.0|y=-4.0|width=70|height=70|itemid=20195|itemcount=8|bgtype=0|showtips=1>
+<ItemShow|id=3i|x=276.0|y=-4.0|width=70|height=70|itemid=20232|itemcount=13|bgtype=0|showtips=1>
+<ItemShow|id=4i|x=338.0|y=-4.0|width=70|height=70|itemid=20176|itemcount=16|bgtype=0|showtips=1>
+<ItemShow|id=44i|x=397.0|y=-4.0|width=70|height=70|itemid=20178|itemcount=1400|showtips=1|bgtype=0>
+<Effect|id=5i|x=190.0|y=25.0|scale=1|speed=2|effecttype=0|act=0|effectid=30060|dir=5>
+<Effect|id=6i|x=252.0|y=25.0|scale=1|speed=2|effecttype=0|act=0|effectid=30060|dir=5>
+<Effect|id=7i|x=309.0|y=25.0|scale=1|speed=2|effecttype=0|act=0|effectid=30060|dir=5>
+<Effect|id=8i|x=369.0|y=25.0|scale=1|speed=2|effecttype=0|act=0|effectid=30060|dir=5>
+<Effect|id=88i|x=430.0|y=25.0|scale=1|speed=2|effectid=30060|act=0|dir=5|effecttype=0>
+<$STR(S$3000累充状态)>
+
+<Img|ay=1|id=10|children={0j,1j,2j,3j,4j,44j,5j,6j,7j,8j,88j,9j}|x=0|y=531|width=609|height=59|esc=1|move=0|loadDelay=0|img=topbtn/ljcz/00036.png|reset=1|show=4>
+<Text|id=0j|x=98.0|y=16.0|color=255|outline=2|size=19|text=: 4000>
+<ItemShow|id=1j|x=161.0|y=-4.0|width=70|height=70|itemid=20179|itemcount=360|bgtype=0|showtips=1>
+<ItemShow|id=2j|x=217.0|y=-4.0|width=70|height=70|itemid=20195|itemcount=8|bgtype=0|showtips=1>
+<ItemShow|id=3j|x=276.0|y=-4.0|width=70|height=70|itemid=20232|itemcount=14|bgtype=0|showtips=1>
+<ItemShow|id=4j|x=338.0|y=-4.0|width=70|height=70|itemid=20176|itemcount=16|bgtype=0|showtips=1>
+<ItemShow|id=44j|x=397.0|y=-4.0|width=70|height=70|itemid=20178|itemcount=2000|showtips=1|bgtype=0>
+<Effect|id=5j|x=190.0|y=25.0|scale=1|speed=2|effecttype=0|act=0|effectid=30060|dir=5>
+<Effect|id=6j|x=252.0|y=25.0|scale=1|speed=2|effecttype=0|act=0|effectid=30060|dir=5>
+<Effect|id=7j|x=309.0|y=25.0|scale=1|speed=2|effecttype=0|act=0|effectid=30060|dir=5>
+<Effect|id=8j|x=369.0|y=25.0|scale=1|speed=2|effecttype=0|act=0|effectid=30060|dir=5>
+<Effect|id=88j|x=430.0|y=25.0|scale=1|speed=2|effectid=30060|act=0|dir=5|effecttype=0>
+<$STR(S$4000累充状态)>
+
+<Text|id=11|x=230|y=597|color=255|outline=2|size=16|outline=2|text=最高累计充值4000元>
+
+
+[@100累充领取]
+#if
+check [100] 1
+#act
+SENDMSG 9 [提示]你已经领取过了,无需重复点击！
+BREAK
+
+#if
+CHECKMONEY 充值点 < 100
+#act
+SENDMSG 9 [提示]未满足条件,暂时无法领取！
+BREAK
+
+#if
+check [100] 0
+#act
+set [100] 1
+
+
+#if
+CHECKMONEY 充值点 > 99
+#act
+GiveStateItem 符石碎片 70 1 0 0 0 0 1 0 1
+GiveStateItem 邪·の 18 1 0 0 0 0 1 0 1
+GiveStateItem 星辰石[小] 10 1 0 0 0 0 1 0 1
+GiveStateItem 书页 50 1 0 0 0 0 1 0 1
+GiveStateItem 佛·卍 18 1 0 0 0 0 1 0 1
+SENDMSG 9 [恭喜]领取成功！
+goto @累计充值页面
+
+
+[@300累充领取]
+#if
+check [101] 1
+#act
+SENDMSG 9 [提示]你已经领取过了,无需重复点击！
+BREAK
+
+#if
+CHECKMONEY 充值点 < 300
+#act
+SENDMSG 9 [提示]未满足条件,暂时无法领取！
+BREAK
+
+#if
+check [101] 0
+#act
+set [101] 1
+
+
+#if
+CHECKMONEY 充值点 > 299
+#act
+GiveStateItem 符石碎片 80 1 0 0 0 0 1 0 1
+GiveStateItem <$str(S$戒指)> 1 1 0 0 0 0 1 0 1
+GiveStateItem 转生石Lv.2 15 0 0 0 0 0 1 1 1
+GiveStateItem 藏器秘令 5 1 0 0 0 0 1 0 1
+GiveStateItem 元宝福袋 12 1 0 0 0 0 1 0 1
+SENDMSG 9 [恭喜]领取成功！
+goto @累计充值页面
+
+[@500累充领取]
+#if
+check [102] 1
+#act
+SENDMSG 9 [提示]你已经领取过了,无需重复点击！
+BREAK
+
+#if
+CHECKMONEY 充值点 < 500
+#act
+SENDMSG 9 [提示]未满足条件,暂时无法领取！
+BREAK
+
+#if
+check [102] 0
+#act
+set [102] 1
+
+
+
+#if
+CHECKMONEY 充值点 > 499
+#act
+GiveStateItem 符石碎片 90 1 0 0 0 0 1 0 1
+GiveStateItem 佛·卍 36 1 0 0 0 0 1 0 1
+GiveStateItem 转生石Lv.2 20 0 0 0 0 0 1 1 1
+GiveStateItem 书页 150 1 0 0 0 0 1 0 1
+GiveStateItem 邪·の 36 1 0 0 0 0 1 0 1
+SENDMSG 9 [恭喜]领取成功！
+goto @累计充值页面
+
+[@700累充领取]
+#if
+check [103] 1
+#act
+SENDMSG 9 [提示]你已经领取过了,无需重复点击！
+BREAK
+
+#if
+CHECKMONEY 充值点 < 700
+#act
+SENDMSG 9 [提示]未满足条件,暂时无法领取！
+BREAK
+
+#if
+check [103] 0
+#act
+set [103] 1
+
+
+#if
+CHECKMONEY 充值点 > 699
+#act
+GiveStateItem 符石碎片 100 1 0 0 0 0 1 0 1
+GiveStateItem <$str(S$项链)> 1 1 0 0 0 0 1 0 1
+GiveStateItem 转生石Lv.2 25 0 0 0 0 0 1 1 1
+GiveStateItem 藏器秘令 8 1 0 0 0 0 1 0 1
+GiveStateItem 元宝福袋 13 1 0 0 0 0 1 0 1
+SENDMSG 9 [恭喜]领取成功！
+goto @累计充值页面
+
+
+[@1000累充领取]
+#if
+check [104] 1
+#act
+SENDMSG 9 [提示]你已经领取过了,无需重复点击！
+BREAK
+
+#if
+CHECKMONEY 充值点 < 1000
+#act
+SENDMSG 9 [提示]未满足条件,暂时无法领取！
+BREAK
+
+#if
+check [104] 0
+#act
+set [104] 1
+
+
+#if
+CHECKMONEY 充值点 > 999
+#act
+GiveStateItem 符石碎片 120 1 0 0 0 0 1 0 1
+GiveStateItem <$str(S$武器)> 1 1 0 0 0 0 1 0 1
+GiveStateItem 佛·卍 72 1 0 0 0 0 1 0 1
+GiveStateItem 邪·の 72 1 0 0 0 0 1 0 1
+GiveStateItem 书页 300 1 0 0 0 0 1 0 1
+SENDMSG 9 [恭喜]领取成功！
+goto @累计充值页面
+
+
+[@1300累充领取]
+#if
+check [105] 1
+#act
+SENDMSG 9 [提示]你已经领取过了,无需重复点击！
+BREAK
+
+#if
+CHECKMONEY 充值点 < 1300
+#act
+SENDMSG 9 [提示]未满足条件,暂时无法领取！
+BREAK
+
+#if
+check [105] 0
+#act
+set [105] 1
+
+
+#if
+CHECKMONEY 充值点 > 1499
+#act
+GiveStateItem 符石碎片 140 1 0 0 0 0 1 0 1
+GiveStateItem 星辰石[小] 25 1 0 0 0 0 1 0 1
+GiveStateItem 藏器秘令 10 1 0 0 0 0 1 0 1
+GiveStateItem 书页 500 1 0 0 0 0 1 0 1
+GiveStateItem 点卡福袋 13 1 0 0 0 0 1 0 1
+SENDMSG 9 [恭喜]领取成功！
+goto @累计充值页面
+
+
+[@2000累充领取]
+#if
+check [106] 1
+#act
+SENDMSG 9 [提示]你已经领取过了,无需重复点击！
+BREAK
+
+#if
+CHECKMONEY 充值点 < 2000
+#act
+SENDMSG 9 [提示]未满足条件,暂时无法领取！
+BREAK
+
+#if
+check [106] 0
+#act
+set [106] 1
+
+
+#if
+CHECKMONEY 充值点 > 1999
+#act
+GiveStateItem 符石碎片 160 1 0 0 0 0 1 0 1
+GiveStateItem 星辰石[中] 10 1 0 0 0 0 1 0 1
+GiveStateItem 藏器秘令 11 1 0 0 0 0 1 0 1
+GiveStateItem 书页 800 1 0 0 0 0 1 0 1
+GiveStateItem 点卡福袋 14 1 0 0 0 0 1 0 1
+SENDMSG 9 [恭喜]领取成功！
+goto @累计充值页面
+
+[@2500累充领取]
+#if
+check [107] 1
+#act
+SENDMSG 9 [提示]你已经领取过了,无需重复点击！
+BREAK
+
+#if
+CHECKMONEY 充值点 < 2500
+#act
+SENDMSG 9 [提示]未满足条件,暂时无法领取！
+BREAK
+
+#if
+check [107] 0
+#act
+set [107] 1
+
+
+#if
+CHECKMONEY 充值点 > 2499
+#act
+GiveStateItem 符石碎片 180 1 0 0 0 0 1 0 1
+GiveStateItem 星辰石[中] 14 1 0 0 0 0 1 0 1
+GiveStateItem 藏器秘令 12 1 0 0 0 0 1 0 1
+GiveStateItem 书页 1100 1 0 0 0 0 1 0 1
+GiveStateItem 点卡福袋 15 1 0 0 0 0 1 0 1
+SENDMSG 9 [恭喜]领取成功！
+goto @累计充值页面
+
+
+
+[@3000累充领取]
+#if
+check [108] 1
+#act
+SENDMSG 9 [提示]你已经领取过了,无需重复点击！
+BREAK
+
+#if
+CHECKMONEY 充值点 < 3000
+#act
+SENDMSG 9 [提示]未满足条件,暂时无法领取！
+BREAK
+
+#if
+check [108] 0
+#act
+set [108] 1
+
+
+#if
+CHECKMONEY 充值点 > 2999
+#act
+GiveStateItem 符石碎片 200 1 0 0 0 0 1 0 1
+GiveStateItem 星辰石[大] 8 1 0 0 0 0 1 0 1
+GiveStateItem 藏器秘令 13 1 0 0 0 0 1 0 1
+GiveStateItem 书页 1400 1 0 0 0 0 1 0 1
+GiveStateItem 点卡福袋 16 1 0 0 0 0 1 0 1
+SENDMSG 9 [恭喜]领取成功！
+goto @累计充值页面
+
+
+[@4000累充领取]
+#if
+check [99] 1
+#act
+SENDMSG 9 [提示]你已经领取过了,无需重复点击！
+BREAK
+
+#if
+CHECKMONEY 充值点 < 4000
+#act
+SENDMSG 9 [提示]未满足条件,暂时无法领取！
+BREAK
+
+#if
+check [99] 0
+#act
+set [99] 1
+
+
+#if
+CHECKMONEY 充值点 > 3999
+#act
+GiveStateItem 符石碎片 360 1 0 0 0 0 1 0 1
+GiveStateItem 星辰石[大] 8 1 0 0 0 0 1 0 1
+GiveStateItem 藏器秘令 14 1 0 0 0 0 1 0 1
+GiveStateItem 书页 2000 1 0 0 0 0 1 0 1
+GiveStateItem 点卡福袋 20 1 0 0 0 0 1 0 1
+SENDMSG 9 [恭喜]领取成功！
+goto @累计充值页面
+;=================
+
+[@累充按钮状态]
+#if
+check [100] 0
+#act
+mov S$100累充状态 <Button|id=9a|x=485.0|y=12.0|mimg=topbtn/ljcz/1.png|nimg=topbtn/ljcz/1.png|link=@100累充领取>
+#elseact
+mov S$100累充状态 <Img|ay=1|id=9a|x=497|y=15|esc=1|move=0|loadDelay=0|img=topbtn/ljcz/2.png|reset=1|show=4>
+
+#if
+check [101] 0
+#act
+mov S$300累充状态 <Button|id=9b|x=485.0|y=12.0|mimg=topbtn/ljcz/1.png|nimg=topbtn/ljcz/1.png|link=@300累充领取>
+#elseact
+mov S$300累充状态 <Img|ay=1|id=9b|x=497|y=15|esc=1|move=0|loadDelay=0|img=topbtn/ljcz/2.png|reset=1|show=4>
+
+#if
+check [102] 0
+#act
+mov S$500累充状态 <Button|id=9c|x=485.0|y=12.0|mimg=topbtn/ljcz/1.png|nimg=topbtn/ljcz/1.png|link=@500累充领取>
+#elseact
+mov S$500累充状态 <Img|ay=1|id=9c|x=497|y=15|esc=1|move=0|loadDelay=0|img=topbtn/ljcz/2.png|reset=1|show=4>
+
+#if
+check [103] 0
+#act
+mov S$700累充状态 <Button|id=9d|x=485.0|y=12.0|mimg=topbtn/ljcz/1.png|nimg=topbtn/ljcz/1.png|link=@700累充领取>
+#elseact
+mov S$700累充状态 <Img|ay=1|id=9d|x=497|y=15|esc=1|move=0|loadDelay=0|img=topbtn/ljcz/2.png|reset=1|show=4>
+
+#if
+check [104] 0
+#act
+mov S$1000累充状态 <Button|id=9e|x=485.0|y=12.0|mimg=topbtn/ljcz/1.png|nimg=topbtn/ljcz/1.png|link=@1000累充领取>
+#elseact
+mov S$1000累充状态 <Img|ay=1|id=9e|x=497|y=15|esc=1|move=0|loadDelay=0|img=topbtn/ljcz/2.png|reset=1|show=4>
+
+#if
+check [105] 0
+#act
+mov S$1300累充状态 <Button|id=9f|x=485.0|y=12.0|mimg=topbtn/ljcz/1.png|nimg=topbtn/ljcz/1.png|link=@1300累充领取>
+#elseact
+mov S$1300累充状态 <Img|ay=1|id=9f|x=497|y=15|esc=1|move=0|loadDelay=0|img=topbtn/ljcz/2.png|reset=1|show=4>
+
+#if
+check [106] 0
+#act
+mov S$2000累充状态 <Button|id=9g|x=485.0|y=12.0|mimg=topbtn/ljcz/1.png|nimg=topbtn/ljcz/1.png|link=@2000累充领取>
+#elseact
+mov S$2000累充状态 <Img|ay=1|id=9g|x=497|y=15|esc=1|move=0|loadDelay=0|img=topbtn/ljcz/2.png|reset=1|show=4>
+
+#if
+check [107] 0
+#act
+mov S$2500累充状态 <Button|id=9h|x=485.0|y=12.0|mimg=topbtn/ljcz/1.png|nimg=topbtn/ljcz/1.png|link=@2500累充领取>
+#elseact
+mov S$2500累充状态 <Img|ay=1|id=9h|x=497|y=15|esc=1|move=0|loadDelay=0|img=topbtn/ljcz/2.png|reset=1|show=4>
+
+#if
+check [108] 0
+#act
+mov S$3000累充状态 <Button|id=9i|x=485.0|y=12.0|mimg=topbtn/ljcz/1.png|nimg=topbtn/ljcz/1.png|link=@3000累充领取>
+#elseact
+mov S$3000累充状态 <Img|ay=1|id=9i|x=497|y=15|esc=1|move=0|loadDelay=0|img=topbtn/ljcz/2.png|reset=1|show=4>
+
+#if
+check [99] 0
+#act
+mov S$4000累充状态 <Button|id=9j|x=485.0|y=12.0|mimg=topbtn/ljcz/1.png|nimg=topbtn/ljcz/1.png|link=@4000累充领取>
+#elseact
+mov S$4000累充状态 <Img|ay=1|id=9j|x=497|y=15|esc=1|move=0|loadDelay=0|img=topbtn/ljcz/2.png|reset=1|show=4>
+
+
+;GiveStateItemStateItem 点卡福袋 5 1 1 0 0 1 0 0 1
+;GiveStateItemStateItem 元宝福袋 10 1 1 0 0 1 0 0 1
+;GiveStateItemStateItem 符石碎片 30 1 1 0 0 1 0 0 1
+;GiveStateItemStateItem 星辰石[小] 3 1 1 0 0 1 0 0 1
+}

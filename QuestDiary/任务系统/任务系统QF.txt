@@ -1,0 +1,335 @@
+[@任务系统QF]
+{
+;U7=主线任务编号
+;U8=刷新任务状态显示数字
+;;---------------------------------------完成任务在这
+
+;=====新手任务
+#IF
+EQUAL U7 1
+EQUAL U8 1
+
+#ACT
+newcompletetask <$STR(U7)>
+Navigation 110 1 点击完成任务
+
+
+#IF
+EQUAL U7 2
+SMALL U8 100
+#ACT
+goto @主线任务打怪
+newchangetask <$STR(U7)>
+newchangetask <$STR(U7)> <$STR(U8)>
+
+#IF
+EQUAL U7 2
+equal U8 100
+#ACT
+newcompletetask <$STR(U7)>
+
+#IF
+EQUAL U7 3
+check [18] 1
+check [19] 1
+#ACT
+newcompletetask <$STR(U7)>
+
+#IF
+EQUAL U7 4
+check [28] 1
+#ACT
+newcompletetask <$STR(U7)>
+
+#IF
+EQUAL U7 5
+check [40] 1
+check [49] 1
+#ACT
+newcompletetask <$STR(U7)>
+
+#IF
+EQUAL U7 6
+CHECKRENEWLEVEL = 2
+#ACT
+newcompletetask <$STR(U7)>
+
+
+#IF
+EQUAL U7 7
+check [20] 1
+#ACT
+newcompletetask <$STR(U7)>
+
+
+#if
+EQUAL U7 8
+small U48 50
+#act
+goto @主线任务打BOSS
+newchangetask <$STR(U7)>
+newchangetask <$STR(U7)> <$STR(U48)>
+
+#IF
+EQUAL U7 8
+large U48 49
+#ACT
+newcompletetask <$STR(U7)>
+
+#IF
+EQUAL U7 9
+check [74] 1
+check [75] 1
+#ACT
+newcompletetask <$STR(U7)>
+
+#IF
+EQUAL U7 10
+check [76] 1
+CHECKRENEWLEVEL = 4
+CHECKLEVELEX > 51
+#ACT
+newcompletetask <$STR(U7)>
+;===================================================================
+
+
+
+#IF
+EQUAL U19 100
+check [17] 1
+#ACT
+newcompletetask <$STR(U19)>
+
+#IF
+EQUAL U19 101
+SMALL U9 5
+#ACT
+newchangetask <$STR(U19)>
+newchangetask <$STR(U19)> <$STR(U9)>
+
+#IF
+EQUAL U19 101
+large U9 4
+#ACT
+newcompletetask <$STR(U19)>
+
+#IF
+EQUAL U19 102
+check [29] 1
+#ACT
+newcompletetask <$STR(U19)>
+
+#IF
+EQUAL U19 103
+check [60] 1
+#ACT
+newcompletetask <$STR(U19)>
+
+#IF
+EQUAL U19 104
+check [61] 1
+#ACT
+newcompletetask <$STR(U19)>
+
+#IF
+EQUAL U19 105
+check [62] 1
+#ACT
+newcompletetask <$STR(U19)>
+
+#IF
+EQUAL U19 106
+check [69] 1
+#ACT
+newcompletetask <$STR(U19)>
+
+#IF
+EQUAL U19 107
+check [63] 1
+#ACT
+newcompletetask <$STR(U19)>
+
+#IF
+EQUAL U19 108
+check [64] 1
+#ACT
+newcompletetask <$STR(U19)>
+
+#IF
+EQUAL U19 109
+check [65] 1
+#ACT
+newcompletetask <$STR(U19)>
+
+#IF
+EQUAL U19 110
+check [66] 1
+#ACT
+newcompletetask <$STR(U19)>
+
+#IF
+EQUAL U19 111
+check [67] 1
+#ACT
+newcompletetask <$STR(U19)>
+
+#IF
+EQUAL U19 112
+check [68] 1
+#ACT
+
+newcompletetask <$STR(U19)>
+
+#IF
+EQUAL U19 113
+check [77] 1
+#ACT
+
+newcompletetask <$STR(U19)>
+
+#IF
+EQUAL U19 114
+check [78] 1
+#ACT
+newcompletetask <$STR(U19)>
+
+#IF
+EQUAL U19 115
+check [79] 0
+#ACT
+goto @支线打BOSS
+newchangetask <$STR(U19)>
+
+#if
+equal U19 116
+check [159] 1
+#act
+newcompletetask <$STR(U19)>
+
+#IF
+EQUAL U19 115
+check [79] 1
+#ACT
+newcompletetask <$STR(U19)>
+
+#IF
+EQUAL U49 200
+check [80] 1
+#ACT
+newcompletetask <$STR(U49)>
+
+#IF
+EQUAL U49 201
+check [81] 1
+#ACT
+newcompletetask <$STR(U49)>
+
+#IF
+EQUAL U49 202
+check [82] 1
+#ACT
+newcompletetask <$STR(U49)>
+
+#IF
+EQUAL U84 300
+check [83] 1
+#ACT
+newcompletetask <$STR(U84)>
+
+
+[@主线任务打怪]
+#OR
+ISONMAP khpy
+ISONMAP yzsl
+ISONMAP jqzd
+ISONMAP xsts
+ISONMAP dbzl
+ISONMAP wxly
+#ACT
+INC U8 1
+
+[@主线任务打BOSS]
+#or
+CheckKillMonName 骷髅精灵
+CheckKillMonName 兽人恶魔
+CheckKillMonName 半兽统领
+CheckKillMonName 蛮荒教主
+CheckKillMonName 山贼统领
+
+CheckKillMonName 古藤树精
+CheckKillMonName 蚁后
+CheckKillMonName 蚁王
+CheckKillMonName 幽灵船长
+CheckKillMonName 东海龙王
+CheckKillMonName 血色巨兽
+CheckKillMonName 炽焰邪龙
+CheckKillMonName 暗牛魔主
+CheckKillMonName 镇寺神像
+CheckKillMonName 尸王杀戮者
+CheckKillMonName 黄泉域主
+CheckKillMonName 镇墓尊主
+CheckKillMonName 天尊邪神
+CheckKillMonName 虹魔之主
+CheckKillMonName 暗之双头血魔
+CheckKillMonName 暗之双头金刚
+CheckKillMonName 暗之骷髅精灵
+CheckKillMonName 暗之虹魔教主
+CheckKillMonName 暗之黄泉教主
+CheckKillMonName 暗之沃玛教主
+CheckKillMonName ★散财龙龟★
+CheckKillMonName 牛魔王
+CheckKillMonName 沃玛教主
+CheckKillMonName 尸王[精英]
+CheckKillMonName 虹魔教主[精英]
+CheckKillMonName 黄泉教主
+CheckKillMonName 祖玛教主[精英]
+CheckKillMonName 虹魔之主
+CheckKillMonName 天尊邪神
+CheckKillMonName 触龙神皇
+CheckKillMonName 幽焰巫使
+CheckKillMonName 焰灵火巫
+CheckKillMonName 镰裁使者
+CheckKillMonName 锐仞主宰
+CheckKillMonName 炎镰魔煞
+CheckKillMonName 幽晶咒灵
+CheckKillMonName 魔轮煞兽
+CheckKillMonName 影武幽仞
+CheckKillMonName 凛冬之怒
+CheckKillMonName 魔魂仞影
+CheckKillMonName 腐毒扇魔
+CheckKillMonName 怨灵发傀
+CheckKillMonName ★幽焰巫使★
+CheckKillMonName ★焰灵火巫★
+CheckKillMonName ★镰裁使者★
+CheckKillMonName ★锐仞主宰★
+CheckKillMonName ★炎镰魔煞★
+CheckKillMonName ★幽晶咒灵★
+CheckKillMonName ★魔轮煞兽★
+CheckKillMonName ★影武幽仞★
+CheckKillMonName ★凛冬之怒★
+CheckKillMonName ★魔魂仞影★
+CheckKillMonName ★腐毒扇魔★
+CheckKillMonName ★怨灵发傀★
+CheckKillMonName ★★幽焰巫使★★
+CheckKillMonName ★★焰灵火巫★★
+CheckKillMonName ★★镰裁使者★★
+CheckKillMonName ★★锐仞主宰★★
+CheckKillMonName ★★炎镰魔煞★★
+CheckKillMonName ★★幽晶咒灵★★
+CheckKillMonName ★★魔轮煞兽★★
+CheckKillMonName ★★影武幽仞★★
+CheckKillMonName ★★凛冬之怒★★
+CheckKillMonName ★★魔魂仞影★★
+CheckKillMonName ★★腐毒扇魔★★
+CheckKillMonName ★★怨灵发傀★★
+
+#act
+inc U48 1
+
+
+[@支线打BOSS]
+#if
+CheckKillMonName ★散财龙龟★
+#act
+set [79] 1
+}

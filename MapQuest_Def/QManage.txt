@@ -1,0 +1,2079 @@
+[@Startup]
+#IF
+#ACT
+#CALL [\游戏登陆\地图光圈.txt] @地图光圈
+#CALL [\限时奖励\全局首爆初始化.txt] @全局首爆初始
+VAR STRING GLOBAL 直充玩家
+VAR INTEGER GLOBAL 直充数量
+
+[@Login]
+
+
+
+#OR
+EQUAL J19 0 
+#ACT
+DEPRIVETITLE 星辰之光,星辰之梦,星辰之涌,星辰耀眼,星辰辉煌
+goto @凌晨清除星辰攻魔道属性
+
+
+
+;MOV N$随机掉落装备切割 0
+
+
+
+
+#IF
+#ACT
+ 
+#CALL [\游戏登陆\登陆功能.txt] @登陆功能
+#CALL [\游戏登陆\经验爆率.txt] @登陆经验爆率
+#CALL [\主界面基础按钮\主界面基础按钮QM.txt] @基础按钮QM
+#CALL [\主界面基础按钮\福利大厅红点检测.txt] @福利大厅按钮
+#CALL [\主界面基础按钮\主界面游戏按钮.txt] @界面游戏按钮
+
+#CALL [\排行榜\排行榜按钮QM.txt] @排行榜按钮QM
+
+#CALL [\任务系统\任务系统QM.txt] @任务系统QM
+#CALL [\任务系统\支线任务系统QM.txt] @支线任务系统QM
+#CALL [\任务系统\支线任务系统二大陆QM.txt] @二大陆支线任务系统QM
+
+#CALL [\任务系统\支线任务系统行会QM.txt] @行会支线任务系统QM
+#CALL [\主界面基础按钮\主界面基础按钮QF.txt] @副装页面
+
+
+
+SetOnTimer 0 60
+SetOnTimer 1 1
+SetOnTimer 2 1
+SetOnTimer 3 1
+SetOnTimer 5 1
+SetOnTimer 6 1
+
+
+
+#IF
+CHECK [11] 0
+#ACT
+SET [11] 1
+#CALL [\主界面基础按钮\主界面游戏按钮.txt] @界面游戏按钮
+
+
+#OR
+;equal <$useraccount> 22856281
+;equal <$useraccount> 1055049308
+
+#act
+MOV S$工具 <Button|x=4.7|y=480.5|nimg=Topwear/14.png|size=18|mimg=Topwear/14.png|color=255|link=@工具>
+addbutton 101 4 <$STR(S$工具)>
+
+
+;法道不吸血
+#OR
+CHECKJOB Taoist
+CHECKJOB Wizard
+#ACT
+SETSUCKHP 0
+
+
+
+
+
+#IF
+#ACT
+SetOnTimer 50 1 
+SetOnTimer 51 1 
+SetOnTimer 52 1 
+SetOnTimer 53 1
+
+
+
+#if
+equal U50 1
+#act
+break
+
+#if
+#act
+SETALLITEMSBIND 1362
+
+[@OnTimer25]
+#if
+#act
+DEC U112 1
+sendmsg 7 还剩<$STR(U112)>秒，自动回到盟重城..
+
+
+#if
+equal U112 0
+#act
+mapmove 3 333 333 
+SetOffTimer 25
+
+[@OnTimer20]
+#if
+large U67 0
+#act
+dec U67 1
+
+
+#if
+equal U101 0
+equal U67 0
+EQUAL U68 1
+#act
+AutoTakeOffItem 55
+take 攻击上限 1
+SetOffTimer 20
+
+#if
+equal U101 1
+equal U67 0
+EQUAL U68 1
+#act
+AutoTakeOffItem 55
+take 攻击上限 1
+SetOffTimer 20
+
+#if
+equal U101 2
+equal U67 0
+EQUAL U68 1
+#act
+AutoTakeOffItem 55
+take 攻击上限 1
+SetOffTimer 20
+
+#if
+equal U101 3
+equal U67 0
+EQUAL U68 1
+#act
+AutoTakeOffItem 55
+take 攻击上限 1
+SetOffTimer 20
+
+#if
+equal U101 4
+equal U67 0
+EQUAL U68 1
+#act
+AutoTakeOffItem 55
+take 攻击上限 1
+SetOffTimer 20
+
+;-----------------------------------------
+
+#if
+equal U101 0
+equal U67 0
+EQUAL U68 2
+#act
+AutoTakeOffItem 55
+take 魔法上限 1
+SetOffTimer 20
+
+#if
+equal U101 1
+equal U67 0
+EQUAL U68 2
+#act
+AutoTakeOffItem 55
+take 魔法上限 1
+SetOffTimer 20
+
+#if
+equal U101 2
+equal U67 0
+EQUAL U68 2
+#act
+AutoTakeOffItem 55
+take 魔法上限 1
+SetOffTimer 20
+
+#if
+equal U101 3
+equal U67 0
+EQUAL U68 2
+#act
+AutoTakeOffItem 55
+take 魔法上限 1
+SetOffTimer 20
+
+#if
+equal U101 4
+equal U67 0
+EQUAL U68 2
+#act
+AutoTakeOffItem 55
+take 魔法上限 1
+SetOffTimer 20
+
+;--------------------------------
+
+#if
+equal U101 0
+equal U67 0
+EQUAL U68 3
+#act
+AutoTakeOffItem 55
+take 道术上限 1
+SetOffTimer 20
+
+#if
+equal U101 1
+equal U67 0
+EQUAL U68 3
+#act
+AutoTakeOffItem 55
+take 道术上限 1
+SetOffTimer 20
+
+#if
+equal U101 2
+equal U67 0
+EQUAL U68 3
+#act
+AutoTakeOffItem 55
+take 道术上限 1
+SetOffTimer 20
+
+#if
+equal U101 3
+equal U67 0
+EQUAL U68 3
+#act
+AutoTakeOffItem 55
+take 道术上限 1
+SetOffTimer 20
+
+#if
+equal U101 4
+equal U67 0
+EQUAL U68 3
+#act
+AutoTakeOffItem 55
+take 道术上限 1
+SetOffTimer 20
+
+;-------------------------------------------------
+[@OnTimer21]
+#if
+large U72 0
+#act
+dec U72 1
+
+
+#if
+equal U102 0
+equal U72 0
+EQUAL U71 1
+#act
+AutoTakeOffItem 42
+take 生命值上限 1
+SetOffTimer 21
+
+#if
+equal U102 1
+equal U72 0
+EQUAL U71 1
+#act
+AutoTakeOffItem 42
+take 生命值上限 1
+SetOffTimer 21
+
+#if
+equal U102 2
+equal U72 0
+EQUAL U71 1
+#act
+AutoTakeOffItem 42
+take 生命值上限 1
+SetOffTimer 21
+
+#if
+equal U102 3
+equal U72 0
+EQUAL U71 1
+#act
+AutoTakeOffItem 42
+take 生命值上限 1
+SetOffTimer 21
+
+#if
+equal U102 4
+equal U72 0
+EQUAL U71 1
+#act
+AutoTakeOffItem 42
+take 生命值上限 1
+SetOffTimer 21
+
+;-----------------------------------------
+
+#if
+equal U102 0
+equal U72 0
+EQUAL U71 2
+#act
+AutoTakeOffItem 42
+take 魔防上限 1
+SetOffTimer 21
+
+#if
+equal U102 1
+equal U72 0
+EQUAL U71 2
+#act
+AutoTakeOffItem 42
+take 魔防上限 1
+SetOffTimer 21
+
+#if
+equal U102 2
+equal U72 0
+EQUAL U71 2
+#act
+AutoTakeOffItem 42
+take 魔防上限 1
+SetOffTimer 21
+
+#if
+equal U102 3
+equal U72 0
+EQUAL U71 2
+#act
+AutoTakeOffItem 42
+take 魔防上限 1
+SetOffTimer 21
+
+#if
+equal U102 4
+equal U72 0
+EQUAL U71 2
+#act
+AutoTakeOffItem 42
+take 魔防上限 1
+SetOffTimer 21
+
+;--------------------------------
+
+#if
+equal U102 0
+equal U72 0
+EQUAL U71 3
+#act
+AutoTakeOffItem 42
+take 物防上限 1
+SetOffTimer 21
+
+#if
+equal U102 1
+equal U72 0
+EQUAL U71 3
+#act
+AutoTakeOffItem 42
+take 物防上限 1
+SetOffTimer 21
+
+#if
+equal U102 2
+equal U72 0
+EQUAL U71 3
+#act
+AutoTakeOffItem 42
+take 物防上限 1
+SetOffTimer 21
+
+#if
+equal U102 3
+equal U72 0
+EQUAL U71 3
+#act
+AutoTakeOffItem 42
+take 物防上限 1
+SetOffTimer 21
+
+#if
+equal U102 4
+equal U72 0
+EQUAL U71 3
+#act
+AutoTakeOffItem 42
+take 物防上限 1
+SetOffTimer 21
+
+;-------------------------------------------------
+[@OnTimer22]
+#if
+large U74 0
+#act
+dec U74 1
+
+
+#if
+equal U103 0
+equal U74 0
+EQUAL U73 1
+#act
+AutoTakeOffItem 43
+take 降低暴装概率 1
+SetOffTimer 22
+
+#if
+equal U103 1
+equal U74 0
+EQUAL U73 1
+#act
+AutoTakeOffItem 43
+take 降低暴装概率 1
+SetOffTimer 22
+
+#if
+equal U103 2
+equal U74 0
+EQUAL U73 1
+#act
+AutoTakeOffItem 43
+take 降低暴装概率 1
+SetOffTimer 22
+
+#if
+equal U103 3
+equal U74 0
+EQUAL U73 1
+#act
+AutoTakeOffItem 43
+take 降低暴装概率 1
+SetOffTimer 22
+
+#if
+equal U103 4
+equal U74 0
+EQUAL U73 1
+#act
+AutoTakeOffItem 43
+take 降低暴装概率 1
+SetOffTimer 22
+
+;-----------------------------------------
+
+#if
+equal U103 0
+equal U74 0
+EQUAL U73 2
+#act
+AutoTakeOffItem 43
+take 人物爆率 1
+SetOffTimer 22
+
+#if
+equal U103 1
+equal U74 0
+EQUAL U73 2
+#act
+AutoTakeOffItem 43
+take 人物爆率 1
+SetOffTimer 22
+
+#if
+equal U103 2
+equal U74 0
+EQUAL U73 2
+#act
+AutoTakeOffItem 43
+take 人物爆率 1
+SetOffTimer 22
+
+#if
+equal U103 3
+equal U74 0
+EQUAL U73 2
+#act
+AutoTakeOffItem 43
+take 人物爆率 1
+SetOffTimer 22
+
+#if
+equal U103 4
+equal U74 0
+EQUAL U73 2
+#act
+AutoTakeOffItem 43
+take 人物爆率 1
+SetOffTimer 22
+
+;--------------------------------
+
+#if
+equal U103 0
+equal U74 0
+EQUAL U73 3
+#act
+AutoTakeOffItem 43
+take 怪物爆率 1
+SetOffTimer 22
+
+#if
+equal U103 1
+equal U74 0
+EQUAL U73 3
+#act
+AutoTakeOffItem 43
+take 怪物爆率 1
+SetOffTimer 22
+
+#if
+equal U103 2
+equal U74 0
+EQUAL U73 3
+#act
+AutoTakeOffItem 43
+take 怪物爆率 1
+SetOffTimer 22
+
+#if
+equal U103 3
+equal U74 0
+EQUAL U73 3
+#act
+AutoTakeOffItem 43
+take 怪物爆率 1
+SetOffTimer 22
+
+#if
+equal U103 4
+equal U74 0
+EQUAL U73 3
+#act
+AutoTakeOffItem 43
+take 怪物爆率 1
+SetOffTimer 22
+
+
+;-------------------------------------------------
+[@OnTimer23]
+#if
+large U77 0
+#act
+dec U77 1
+
+
+#if
+equal U107 0
+equal U77 0
+EQUAL U76 1
+#act
+AutoTakeOffItem 44
+take 韧性 1
+SetOffTimer 23
+
+#if
+equal U107 1
+equal U77 0
+EQUAL U76 1
+#act
+AutoTakeOffItem 44
+take 韧性 1
+SetOffTimer 23
+
+#if
+equal U107 2
+equal U77 0
+EQUAL U76 1
+#act
+AutoTakeOffItem 44
+take 韧性 1
+SetOffTimer 23
+
+#if
+equal U107 3
+equal U77 0
+EQUAL U76 1
+#act
+AutoTakeOffItem 44
+take 韧性 1
+SetOffTimer 23
+
+#if
+equal U107 4
+equal U77 0
+EQUAL U76 1
+#act
+AutoTakeOffItem 44
+take 韧性 1
+SetOffTimer 23
+
+;-----------------------------------------
+
+#if
+equal U107 0
+equal U77 0
+EQUAL U76 2
+#act
+AutoTakeOffItem 44
+take 伤害减免 1
+SetOffTimer 23
+
+#if
+equal U107 1
+equal U77 0
+EQUAL U76 2
+#act
+AutoTakeOffItem 44
+take 伤害减免 1
+SetOffTimer 23
+
+#if
+equal U107 2
+equal U77 0
+EQUAL U76 2
+#act
+AutoTakeOffItem 44
+take 伤害减免 1
+SetOffTimer 23
+
+#if
+equal U107 3
+equal U77 0
+EQUAL U76 2
+#act
+AutoTakeOffItem 44
+take 伤害减免 1
+SetOffTimer 23
+
+#if
+equal U107 4
+equal U77 0
+EQUAL U76 2
+#act
+AutoTakeOffItem 44
+take 伤害减免 1
+SetOffTimer 23
+
+;--------------------------------
+
+#if
+equal U107 0
+equal U77 0
+EQUAL U76 3
+#act
+AutoTakeOffItem 44
+take 暴击抵抗 1
+SetOffTimer 23
+
+#if
+equal U107 1
+equal U77 0
+EQUAL U76 3
+#act
+AutoTakeOffItem 44
+take 暴击抵抗 1
+SetOffTimer 23
+
+#if
+equal U107 2
+equal U77 0
+EQUAL U76 3
+#act
+AutoTakeOffItem 44
+take 暴击抵抗 1
+SetOffTimer 23
+
+#if
+equal U107 3
+equal U77 0
+EQUAL U76 3
+#act
+AutoTakeOffItem 44
+take 暴击抵抗 1
+SetOffTimer 23
+
+#if
+equal U107 4
+equal U77 0
+EQUAL U76 3
+#act
+AutoTakeOffItem 44
+take 暴击抵抗 1
+SetOffTimer 23
+
+;-------------------------------------------------
+[@OnTimer24]
+#if
+large U80 0
+#act
+dec U80 1
+
+
+#if
+equal U110 0
+equal U80 0
+EQUAL U79 1
+#act
+AutoTakeOffItem 45
+take 增加暴击率 1
+SetOffTimer 24
+
+#if
+equal U110 1
+equal U80 0
+EQUAL U79 1
+#act
+AutoTakeOffItem 45
+take 增加暴击率 1
+SetOffTimer 24
+
+#if
+equal U110 2
+equal U80 0
+EQUAL U79 1
+#act
+AutoTakeOffItem 45
+take 增加暴击率 1
+SetOffTimer 24
+
+#if
+equal U110 3
+equal U80 0
+EQUAL U79 1
+#act
+AutoTakeOffItem 45
+take 增加暴击率 1
+SetOffTimer 24
+
+#if
+equal U110 4
+equal U80 0
+EQUAL U79 1
+#act
+AutoTakeOffItem 45
+take 增加暴击率 1
+SetOffTimer 24
+
+;-----------------------------------------
+
+#if
+equal U110 0
+equal U80 0
+EQUAL U79 2
+#act
+AutoTakeOffItem 45
+take 增加暴击伤害 1
+SetOffTimer 24
+
+#if
+equal U110 1
+equal U80 0
+EQUAL U79 2
+#act
+AutoTakeOffItem 45
+take 增加暴击伤害 1
+SetOffTimer 24
+
+#if
+equal U110 2
+equal U80 0
+EQUAL U79 2
+#act
+AutoTakeOffItem 45
+take 增加暴击伤害 1
+SetOffTimer 24
+
+#if
+equal U110 3
+equal U80 0
+EQUAL U79 2
+#act
+AutoTakeOffItem 45
+take 增加暴击伤害 1
+SetOffTimer 24
+
+#if
+equal U110 4
+equal U80 0
+EQUAL U79 2
+#act
+AutoTakeOffItem 45
+take 增加暴击伤害 1
+SetOffTimer 24
+
+;--------------------------------
+
+#if
+equal U110 0
+equal U80 0
+EQUAL U79 3
+#act
+AutoTakeOffItem 45
+take 攻击增伤 1
+SetOffTimer 24
+
+#if
+equal U110 1
+equal U80 0
+EQUAL U79 3
+#act
+AutoTakeOffItem 45
+take 攻击增伤 1
+SetOffTimer 24
+
+#if
+equal U110 2
+equal U80 0
+EQUAL U79 3
+#act
+AutoTakeOffItem 45
+take 攻击增伤 1
+SetOffTimer 24
+
+#if
+equal U110 3
+equal U80 0
+EQUAL U79 3
+#act
+AutoTakeOffItem 45
+take 攻击增伤 1
+SetOffTimer 24
+
+#if
+equal U110 4
+equal U80 0
+EQUAL U79 3
+#act
+AutoTakeOffItem 45
+take 攻击增伤 1
+SetOffTimer 24
+
+
+[@OnTimer6]
+#if
+large N$六十秒CD 0
+#act
+dec  N$六十秒CD  1
+
+
+#if
+large U11 17
+equal N$六十秒CD 0
+#act
+mov N$六十秒CD 0
+
+sendmsg 6 【提示】降龙技能已开启
+SetOffTimer 6
+
+[@OnTimer53]
+#IF
+LARGE N$无敌CD 0
+#ACT
+DEC N$无敌CD 1
+
+#if
+EQUAL U58 1
+equal N$无敌CD 0
+check [505] 0
+#act
+sendmsg 6 绝处逢生充能完毕
+set [505] 1
+
+[@OnTimer10]
+#if
+#act
+inc N$计时器 1
+
+#if
+equal N$计时器 1
+#act
+mov N$祈愿唯一标识 0
+#CALL [\功能脚本\祈愿脚本.txt] @给装备
+SetOffTimer 10
+
+[@OnTimer11]
+#if
+#act
+inc N$转移计时器 1
+
+#if
+equal N$转移计时器 2
+#act
+mov S$特效启动 关
+#CALL [\功能脚本\转移脚本.txt] @确定转移1
+#CALL [\功能脚本\转移脚本.txt] @转移洗练页面
+mov N$转移计时器 0
+Screffects 100 36000 349 300 5 1 0
+SetOffTimer 11
+
+[@OnTimer50]
+#IF
+LARGE N$四级技能每秒攻速 1
+#ACT
+DEC N$四级技能每秒攻速 2
+
+[@OnTimer51]
+#IF
+LARGE N$四级魔法每秒攻速 1
+#ACT
+DEC N$四级魔法每秒攻速 1
+
+[@OnTimer52]
+#IF
+LARGE N$四级火符每秒攻速 1
+#ACT
+DEC N$四级火符每秒攻速 1
+
+
+
+[@OnTimer3]
+
+
+#if
+;large N$捡取触发最终经验属性 0
+;large U150 0
+#act
+CHANGEEXP + <$STR(U150)>
+;sendmsg 9 <$STR(U150)>
+;CHANGEEXP + <$STR(N$捡取触发最终经验属性)>
+
+
+
+
+[@OnTimer0]
+#if
+small J201 360
+#act
+INC J201 1
+#CALL [\主界面基础按钮\福利大厅红点检测.txt] @福利大厅按钮
+#CALL [\主界面基础按钮\主界面游戏按钮.txt] @界面游戏按钮
+
+#IF
+large J201 360
+#ACT
+SetOffTimer 0
+
+
+[@OnTimer5]
+#IF
+LARGE N$无敌CD 0
+#ACT
+DEC N$无敌CD 1
+
+
+
+#if
+EQUAL U47 1
+equal N$无敌CD 0
+check [207] 0
+#act
+sendmsg 6 【提示】极限防御充能完毕
+set [207] 1
+
+
+
+[@OnTimer1]
+#IF
+LARGE N$传送CD 0
+#ACT
+DEC N$传送CD 1
+
+#IF
+LARGE U4 0
+#ACT
+DEC U4 1
+
+#IF
+check [124] 1 
+NOT CHECKBAGSIZE 40
+#ACT
+#CALL [\功能脚本\回收脚本.txt] @一键回收1
+#CALL [\功能脚本\回收脚本.txt] @副装回收
+
+
+#if
+large U217 0
+#act
+dec U217 1
+
+
+#if
+equal U217 0
+#act
+mov U217 0
+
+
+
+
+#if
+#act
+GETABILVALUE 75 U231
+GETABILVALUE 44 U232
+DIV U232 100 
+
+#CALL [\功能脚本\复活戒指管理.txt] @复活状态
+#CALL [\主界面基础按钮\主界面游戏按钮.txt] @界面游戏按钮
+
+
+[@OnTimer2]
+#if
+ISONMAP 3
+CHECKLEVELEX > 34
+#act
+SetOffTimerEx 2
+break
+
+
+#if
+ISONMAP 3
+CHECKLEVELEX < 35
+#ACT
+CHANGEEXP + 400
+break
+
+
+[@OnTimer16]
+#if
+large N$退出地图倒计时 0
+#act
+dec N$退出地图倒计时 1
+
+
+#if
+equal N$退出地图倒计时 1
+#act
+set [258] 0
+mapmove 3 333 333 3
+SetOffTimer 16
+
+[@OnTimer4]
+#if
+#act
+Movr N$星辰随机元宝1 5000 12000 
+Movr N$星辰随机点卡1 1000 2000 
+
+Movr N$星辰随机元宝2 8000 15000 
+Movr N$星辰随机点卡2 2000 4000 
+
+Movr N$星辰随机元宝3 10000 20000 
+Movr N$星辰随机点卡3 3000 5000 
+mov S$星辰特效 
+
+#if
+equal S$星辰抽奖识别 小
+#act
+goto @小星辰给予
+
+#if
+equal S$星辰抽奖识别 中
+#act
+goto @中星辰给予
+
+#if
+equal S$星辰抽奖识别 大
+#act
+goto @大星辰给予
+
+
+[@小星辰给予]
+
+#if
+RANDOMEX 25 100
+#act
+money 点卡 + N$星辰随机点卡1
+SetOffTimer 4
+#CALL [\星辰抽奖\星辰抽奖.txt] @页面
+set [222] 0
+mov N$星辰随机点卡1 0
+break
+
+#if
+RANDOMEX 10 100
+#act
+give 书页 1
+SetOffTimer 4
+#CALL [\星辰抽奖\星辰抽奖.txt] @页面
+set [222] 0
+break
+
+#if
+RANDOMEX 10 100
+#act
+give 刷新卷 1
+SetOffTimer 4
+#CALL [\星辰抽奖\星辰抽奖.txt] @页面
+set [222] 0
+break
+
+#if
+RANDOMEX 10 100
+#act
+give 神秘宝箱☆ 1
+SetOffTimer 4
+#CALL [\星辰抽奖\星辰抽奖.txt] @页面
+set [222] 0
+break
+
+#if
+#act
+money 元宝 + N$星辰随机元宝1
+SetOffTimer 4
+#CALL [\星辰抽奖\星辰抽奖.txt] @页面
+set [222] 0
+mov N$星辰随机元宝1 0
+break
+
+[@中星辰给予]
+
+
+#if
+RANDOMEX 20 100
+#act
+money 点卡 + N$星辰随机点卡2
+SetOffTimer 4
+#CALL [\星辰抽奖\星辰抽奖.txt] @页面
+set [222] 0
+mov N$星辰随机点卡2 0
+break
+
+#if
+RANDOMEX 10 100
+#act
+give 神秘宝箱☆ 1
+SetOffTimer 4
+#CALL [\星辰抽奖\星辰抽奖.txt] @页面
+set [222] 0
+break
+
+#if
+RANDOMEX 10 100
+#act
+give 神秘钥匙☆ 1
+SetOffTimer 4
+#CALL [\星辰抽奖\星辰抽奖.txt] @页面
+set [222] 0
+break
+
+#if
+RANDOMEX 10 100
+#act
+give 书页 2
+SetOffTimer 4
+#CALL [\星辰抽奖\星辰抽奖.txt] @页面
+set [222] 0
+break
+
+#if
+RANDOMEX 10 100
+#act
+give 符石碎片 1
+SetOffTimer 4
+#CALL [\星辰抽奖\星辰抽奖.txt] @页面
+set [222] 0
+break
+
+#if
+RANDOMEX 10 100
+#act
+give 刷新卷 1
+SetOffTimer 4
+#CALL [\星辰抽奖\星辰抽奖.txt] @页面
+set [222] 0
+break
+
+#if
+#act
+money 元宝 + N$星辰随机元宝2
+SetOffTimer 4
+#CALL [\星辰抽奖\星辰抽奖.txt] @页面
+set [222] 0
+mov N$星辰随机元宝2 0
+break
+
+[@大星辰给予]
+
+#if
+RANDOMEX 10 100
+#act
+money 点卡 + N$星辰随机点卡3
+SetOffTimer 4
+#CALL [\星辰抽奖\星辰抽奖.txt] @页面
+set [222] 0
+mov N$星辰随机点卡3 0
+break
+
+
+#if
+RANDOMEX 10 100
+#act
+GIVE 刷新卷 1
+SetOffTimer 4
+#CALL [\星辰抽奖\星辰抽奖.txt] @页面
+set [222] 0
+break
+
+#if
+RANDOMEX 10 100
+#act
+GIVE 神秘宝箱★ 1
+SetOffTimer 4
+#CALL [\星辰抽奖\星辰抽奖.txt] @页面
+set [222] 0
+break
+
+#if
+RANDOMEX 10 100
+#act
+GIVE 神秘宝箱☆ 1
+SetOffTimer 4
+#CALL [\星辰抽奖\星辰抽奖.txt] @页面
+set [222] 0
+break
+
+#if
+RANDOMEX 10 100
+#act
+GIVE 神秘钥匙☆ 1
+SetOffTimer 4
+#CALL [\星辰抽奖\星辰抽奖.txt] @页面
+set [222] 0
+break
+
+#if
+RANDOMEX 10 100
+#act
+GIVE 书页 3
+SetOffTimer 4
+#CALL [\星辰抽奖\星辰抽奖.txt] @页面
+set [222] 0
+break
+
+#if
+RANDOMEX 10 100
+#act
+GIVE 符石碎片 3
+SetOffTimer 4
+#CALL [\星辰抽奖\星辰抽奖.txt] @页面
+set [222] 0
+break
+
+#if
+RANDOMEX 4 100
+#act
+USEBONUSPOINT 6 + 30
+inc U5 1
+SetOffTimer 4
+#CALL [\星辰抽奖\星辰抽奖.txt] @页面
+set [222] 0
+break
+
+#if
+CHECKJOB Warrior
+RANDOMEX 1 100
+#act
+USEBONUSPOINT 1 + 2
+inc U6 1
+SetOffTimer 4
+#CALL [\星辰抽奖\星辰抽奖.txt] @页面
+set [222] 0
+break
+
+#if
+CHECKJOB Wizard
+RANDOMEX 1 100
+#act
+USEBONUSPOINT 2 + 2
+inc U6 1
+SetOffTimer 4
+#CALL [\星辰抽奖\星辰抽奖.txt] @页面
+set [222] 0
+break
+
+#if
+CHECKJOB Taoist
+RANDOMEX 1 100
+#act
+USEBONUSPOINT 3 + 2
+inc U6 1
+SetOffTimer 4
+#CALL [\星辰抽奖\星辰抽奖.txt] @页面
+set [222] 0
+break
+
+#if
+#act
+money 元宝 + N$星辰随机元宝3
+SetOffTimer 4
+#CALL [\星辰抽奖\星辰抽奖.txt] @页面
+set [222] 0
+mov  N$星辰随机元宝3 0
+break
+
+;============================================================================
+[@沙城奖励发放]
+#IF
+;ISONMAP SLF
+;EQUAL <$HFDAYS> 0
+#act
+;MailGIVE 点卷 <$STR(G1)>
+;MailGIVE 元宝 <$STR(G2)>
+;SendMail 2 沙城颁奖 本次攻沙您获得胜利方奖励,请点击提取! 
+;MAPMOVE 3 327 334 8
+;BREAK
+
+#IF
+;ISONMAP SBF
+;EQUAL <$HFDAYS> 0
+#act
+;MailGIVE 点卷 <$STR(G3)>
+;MailGIVE 元宝 <$STR(G4)>
+;SendMail 2 沙城颁奖 本次攻沙您获得失败方奖励,请点击提取! 
+;MAPMOVE 3 327 334 8
+;BREAK
+
+
+#IF
+ISONMAP SLF
+EQUAL <$HFDAYS> 1
+#act
+MailGIVE 点卷 <$STR(G1)>
+MailGIVE 元宝 <$STR(G2)>
+SendMail 2 沙城颁奖 本次攻沙您获得胜利方奖励,请点击提取! 
+MAPMOVE 3 327 334 8
+BREAK
+
+#IF
+ISONMAP SBF
+EQUAL <$HFDAYS> 1
+#act
+MailGIVE 点卷 <$STR(G3)>
+MailGIVE 元宝 <$STR(G4)>
+SendMail 2 沙城颁奖 本次攻沙您获得失败方奖励,请点击提取! 
+MAPMOVE 3 327 334 8
+BREAK
+
+#IF
+ISONMAP SLF
+large <$HFDAYS> 1
+#act
+MailGIVE 点卡 <$STR(G1)>
+MailGIVE 元宝 <$STR(G2)>
+SendMail 2 沙城颁奖 本次攻沙您获得胜利方奖励,请点击提取! 
+MAPMOVE 3 327 334 8
+BREAK
+
+#IF
+ISONMAP SBF
+large <$HFDAYS> 1
+#act
+MailGIVE 点卡 <$STR(G3)>
+MailGIVE 元宝 <$STR(G4)>
+SendMail 2 沙城颁奖 本次攻沙您获得失败方奖励,请点击提取! 
+MAPMOVE 3 327 334 8
+BREAK
+
+[@清除玩家货币]
+#if
+EQUAL <$USERNAME> <$global(直充玩家)>
+#act
+money 元宝 = 0
+money 点卡 = 0
+money 点卷 = 0
+
+
+
+[@充值增加]
+#if
+<$global(直充玩家)>.CHECKJOB Warrior
+#act
+mov S$技能书 十步一杀
+
+#if
+<$global(直充玩家)>.CHECKJOB Wizard
+#act
+mov S$技能书 冰霜群雨
+
+#if
+<$global(直充玩家)>.CHECKJOB Taoist
+#act
+mov S$技能书 死亡之眼
+
+#if
+EQUAL <$USERNAME> <$global(直充玩家)>
+#act
+MOV N$元宝数量  <$global(直充数量)>
+MOV N$点卷 <$global(直充数量)>
+mov N$充值积分 <$global(直充数量)>
+mul N$元宝数量 5000
+mul N$点卷 10
+mul N$充值积分 1
+money 元宝 + <$str(N$元宝数量)>
+money 点卷 + <$str(N$点卷)>
+money 充值点 + <$str(N$充值积分)>
+inc J100 <$str(N$充值积分)>
+SENDMSG 1 ★[%s]:恭喜玩家<$USERNAME>成功充值大量金币，如果您也想获得，请赶快充值吧。
+#elseact
+break
+
+
+#IF
+equal <$str(N$充值积分)> 10
+CHECK [150] 0
+EQUAL <$USERNAME> <$global(直充玩家)>
+#ACT
+SET [150] 1
+MailGIVE 点卡福袋 2 #0#1#4#6#8
+MailGIVE 点卡 1000 
+MailGIVE 元宝 100000 
+SendMail 1 充值首赠送 您本次充值10元，奖励你[首赠礼包]请点提取! 
+
+
+#IF
+CHECK [151] 0
+equal <$str(N$充值积分)> 28
+EQUAL <$USERNAME> <$global(直充玩家)>
+#ACT
+SET [151] 1
+MailGIVE 传送功能 1 #0#1#4#6#8
+
+MailGIVE 宝宝施毒 1 #0#1#4#6#8
+MailGIVE 元宝 300000 
+SendMail 1 充值首赠送 您本次充值28元，奖励你[首赠礼包]请点提取!  
+
+
+
+#IF
+CHECK [152] 0
+equal <$str(N$充值积分)> 88
+EQUAL <$USERNAME> <$global(直充玩家)>
+#ACT
+SET [152] 1
+CONFERTITLE 切割500
+#CALL [\功能脚本\切割管理.txt] @称号切割伤害
+MailGIVE 点卡 8800
+MailGIVE 元宝 980000 
+SendMail 1 充值首赠送 您本次充值88元，奖励你[首赠礼包]请点提取! 
+
+
+
+
+
+#IF
+CHECK [153] 0
+EQUAL <$USERNAME> <$global(直充玩家)>
+equal <$str(N$充值积分)> 198
+#ACT
+SET [153] 1
+MailGIVE <$str(S$技能书)> 1 #0#1#4#6#8
+MailGIVE 点卡 19800 
+MailGIVE 元宝 2000000
+SendMail 1 充值首赠送 您本次充值198元，奖励你[首赠礼包]请点提取! 
+
+
+#IF
+CHECK [154] 0
+equal <$str(N$充值积分)> 328
+EQUAL <$USERNAME> <$global(直充玩家)>
+#ACT
+SET [154] 1
+MailGIVE 黄极·玺 1 #0#1#4#5#6#8
+MailGIVE 点卡 32800
+MailGIVE 元宝 3300000 
+SendMail 1 充值首赠送 您本次充值328元，奖励你[首赠礼包]请点提取! 
+
+
+
+#IF
+CHECK [155] 0
+equal <$str(N$充值积分)> 648
+EQUAL <$USERNAME> <$global(直充玩家)>
+#ACT
+SET [155] 1
+MailGIVE 符石自选(小)礼盒 3 #0#1#4#6#8
+MailGIVE 点卡 64800
+MailGIVE 元宝 6500000 
+SendMail 1 充值首赠送 您本次充值648元，奖励你[首赠礼包]请点提取!   
+
+
+#IF
+equal <$str(N$充值积分)> 1000
+CHECK [157] 0
+EQUAL <$USERNAME> <$global(直充玩家)>
+#ACT
+SET [157] 1
+MailGIVE 随机大符石 1 #0#1#4#6#8
+MailGIVE 点卡 100000
+MailGIVE 元宝 10000000 
+SendMail 1 充值首赠送 您本次充值1000元，奖励你[首赠礼包]请点提取!  
+
+
+#IF
+CHECK [158] 0
+equal <$str(N$充值积分)> 1998
+EQUAL <$USERNAME> <$global(直充玩家)>
+#ACT
+SET [158] 1
+MailGIVE 符石自选(大)礼盒 2 #0#1#4#6#8
+MailGIVE 点卡 200000
+MailGIVE 元宝 20000000
+SendMail 1 充值首赠送 您本次充值1998元，奖励你[首赠礼包]请点提取! 
+
+
+
+
+
+#if
+equal S$选择了技能 1
+check [73] 0
+EQUAL <$USERNAME> <$global(直充玩家)>
+EQUAL <$str(N$充值积分)> 6
+#act
+set [73] 1
+MailGIVE 开天斩 1 0#1#4#5#8
+SendMail 1 开天斩已发送,请点击提取
+#CALL [\主界面基础按钮\主界面基础按钮QM.txt] @基础按钮QM
+#CALL [\主界面基础按钮\主界面游戏按钮.txt] @界面游戏按钮 
+
+#if
+equal S$选择了技能 2
+check [73] 0
+EQUAL <$USERNAME> <$global(直充玩家)>
+EQUAL <$str(N$充值积分)> 6
+#act
+set [73] 1
+MailGIVE 流星火雨 1 0#1#4#5#8
+SendMail 1 流星火雨已发送,请点击提取
+#CALL [\主界面基础按钮\主界面基础按钮QM.txt] @基础按钮QM
+#CALL [\主界面基础按钮\主界面游戏按钮.txt] @界面游戏按钮 
+
+#if
+equal S$选择了技能 3
+check [73] 0
+EQUAL <$USERNAME> <$global(直充玩家)>
+EQUAL <$str(N$充值积分)> 6
+#act
+set [73] 1
+MailGIVE 飓风破 1 0#1#4#5#8
+SendMail 1 飓风破已发送,请点击提取
+#CALL [\主界面基础按钮\主界面基础按钮QM.txt] @基础按钮QM
+#CALL [\主界面基础按钮\主界面游戏按钮.txt] @界面游戏按钮 
+
+[@增加10]
+#IF
+CHECK [150] 0
+EQUAL <$USERNAME> <$global(直充玩家)>
+#ACT
+SET [150] 1
+MailGIVE 点卡福袋 2 #0#1#4#6#8
+MailGIVE 点卡 1000 
+MailGIVE 元宝 100000 
+SendMail 1 充值首赠送 您本次充值10元，奖励你[首赠礼包]请点提取! 
+
+[@增加28]
+#IF
+CHECK [151] 0
+EQUAL <$USERNAME> <$global(直充玩家)>
+#ACT
+SET [151] 1
+MailGIVE 传送功能 1 #0#1#4#6#8
+MailGIVE 宝宝施毒 1 #0#1#4#6#8
+MailGIVE 元宝 300000 
+SendMail 1 充值首赠送 您本次充值28元，奖励你[首赠礼包]请点提取!  
+
+
+[@增加88]
+#IF
+CHECK [152] 0
+EQUAL <$USERNAME> <$global(直充玩家)>
+#ACT
+SET [152] 1
+CONFERTITLE 切割500
+#CALL [\功能脚本\切割管理.txt] @称号切割伤害
+MailGIVE 点卡 9800
+MailGIVE 元宝 1000000 
+SendMail 1 充值首赠送 您本次充值88元，奖励你[首赠礼包]请点提取! 
+
+
+
+
+[@增加198]
+#if
+<$global(直充玩家)>.CHECKJOB Warrior
+#act
+mov S$技能书 十步一杀
+
+#if
+<$global(直充玩家)>.CHECKJOB Wizard
+#act
+mov S$技能书 冰霜群雨
+
+#if
+<$global(直充玩家)>.CHECKJOB Taoist
+#act
+mov S$技能书 死亡之眼
+
+#IF
+CHECK [153] 0
+EQUAL <$USERNAME> <$global(直充玩家)>
+#ACT
+SET [153] 1
+MailGIVE <$str(S$技能书)> 1 #0#1#4#6#8
+MailGIVE 点卡 19800 
+MailGIVE 元宝 2000000
+SendMail 1 充值首赠送 您本次充值198元，奖励你[首赠礼包]请点提取! 
+
+
+[@增加328]
+#IF
+CHECK [154] 0
+EQUAL <$USERNAME> <$global(直充玩家)>
+#ACT
+SET [154] 1
+MailGIVE 黄极·玺 1 #0#1#4#5#6#8
+MailGIVE 点卡 32800
+MailGIVE 元宝 3300000 
+SendMail 1 充值首赠送 您本次充值328元，奖励你[首赠礼包]请点提取! 
+
+
+[@增加648]
+#IF
+CHECK [155] 0
+EQUAL <$USERNAME> <$global(直充玩家)>
+#ACT
+SET [155] 1
+MailGIVE 符石自选(小)礼盒 3 #0#1#4#6#8
+MailGIVE 点卡 64800
+MailGIVE 元宝 6500000 
+SendMail 1 充值首赠送 您本次充值648元，奖励你[首赠礼包]请点提取!   
+
+[@增加1000]
+#IF
+CHECK [157] 0
+EQUAL <$USERNAME> <$global(直充玩家)>
+#ACT
+SET [157] 1
+MailGIVE 随机大符石 1 #0#1#4#6#8
+MailGIVE 点卡 100000
+MailGIVE 元宝 10000000 
+SendMail 1 充值首赠送 您本次充值1000元，奖励你[首赠礼包]请点提取!  
+
+[@增加1998]
+#IF
+CHECK [158] 0
+EQUAL <$USERNAME> <$global(直充玩家)>
+#ACT
+SET [158] 1
+MailGIVE 符石自选(大)礼盒 2 #0#1#4#6#8
+MailGIVE 点卡 200000
+MailGIVE 元宝 20000000
+SendMail 1 充值首赠送 您本次充值1998元，奖励你[首赠礼包]请点提取! 
+
+
+[@增加98转生]
+#IF
+CHECK [190] 0
+EQUAL <$USERNAME> <$global(直充玩家)>
+#ACT
+set [190] 1
+MailGIVE 藏器宝令 10 0#1#4#5#8
+MailGIVE 转生石Lv.3 21 0#1#4#5#8
+MailGIVE 点卡福袋 20 0#1#4#5#8
+MailGIVE 元宝福袋 40 0#1#4#5#8
+SendMail 1 98转生礼包已发送,请点击提取
+;MONEY 充值点 + 98
+#CALL [\主界面基础按钮\主界面基础按钮QM.txt] @基础按钮QM
+#CALL [\主界面基础按钮\主界面游戏按钮.txt] @界面游戏按钮
+
+[@增加128转生]
+#IF
+CHECK [191] 0
+EQUAL <$USERNAME> <$global(直充玩家)>
+#ACT
+set [191] 1
+MailGIVE 藏器宝令 15 0#1#4#5#8
+MailGIVE 转生石Lv.3 30 0#1#4#5#8
+MailGIVE 点卡福袋 25 0#1#4#5#8
+MailGIVE 元宝福袋 50 0#1#4#5#8
+;MONEY 充值点 + 128
+SendMail 1 128转生礼包已发送,请点击提取
+#CALL [\主界面基础按钮\主界面基础按钮QM.txt] @基础按钮QM
+#CALL [\主界面基础按钮\主界面游戏按钮.txt] @界面游戏按钮
+
+[@增加288转生]
+#IF
+CHECK [192] 0
+EQUAL <$USERNAME> <$global(直充玩家)>
+#ACT
+set [192] 1
+MailGIVE 藏器圣令 10 0#1#4#5#8
+MailGIVE 转生石Lv.4 38 0#1#4#5#8
+MailGIVE 点卡福袋 30 0#1#4#5#8
+MailGIVE 元宝福袋 60 0#1#4#5#8
+;MONEY 充值点 + 288
+SendMail 1 288转生礼包已发送,请点击提取
+#CALL [\主界面基础按钮\主界面基础按钮QM.txt] @基础按钮QM
+#CALL [\主界面基础按钮\主界面游戏按钮.txt] @界面游戏按钮
+
+[@增加328转生]
+#IF
+CHECK [193] 0
+EQUAL <$USERNAME> <$global(直充玩家)>
+#ACT
+set [193] 1
+MailGIVE 藏器圣令 15 0#1#4#5#8
+MailGIVE 转生石Lv.4 50 0#1#4#5#8
+MailGIVE 点卡福袋 35 0#1#4#5#8
+MailGIVE 元宝福袋 70 0#1#4#5#8
+SendMail 1 328转生礼包已发送,请点击提取
+;MONEY 充值点 + 328
+#CALL [\主界面基础按钮\主界面基础按钮QM.txt] @基础按钮QM
+#CALL [\主界面基础按钮\主界面游戏按钮.txt] @界面游戏按钮
+
+[@增加788转生]
+#if
+CHECK [194] 0
+EQUAL <$USERNAME> <$global(直充玩家)>
+#act
+set [194] 1
+MailGIVE 藏器圣令 20 0#1#4#5#8
+MailGIVE 转生石Lv.5 50 0#1#4#5#8
+MailGIVE 点卡福袋 40 0#1#4#5#8
+MailGIVE 元宝福袋 80 0#1#4#5#8
+SendMail 1 788转生礼包已发送,请点击提取
+;MONEY 充值点 + 788
+#CALL [\主界面基础按钮\主界面基础按钮QM.txt] @基础按钮QM
+#CALL [\主界面基础按钮\主界面游戏按钮.txt] @界面游戏按钮
+
+[@增加999转生]
+#if
+CHECK [195] 0
+EQUAL <$USERNAME> <$global(直充玩家)>
+#act
+set [195] 1
+MailGIVE 藏器圣令 27 0#1#4#5#8
+MailGIVE 转生石Lv.5 62 0#1#4#5#8
+MailGIVE 点卡福袋 50 0#1#4#5#8
+MailGIVE 元宝福袋 120 0#1#4#5#8
+SendMail 1 999转生礼包已发送,请点击提取
+;MONEY 充值点 + 999
+#CALL [\主界面基础按钮\主界面基础按钮QM.txt] @基础按钮QM
+#CALL [\主界面基础按钮\主界面游戏按钮.txt] @界面游戏按钮
+
+[@30合服礼包发送]
+#if
+EQUAL <$USERNAME> <$global(直充玩家)>
+SMALL U92 6
+#act
+MailGIVE 转生礼包30元 1 0#1#4#5#8
+SendMail 1 转生礼包30元已发送,请点击提取
+INC U92 1
+
+[@68合服礼包发送]
+#if
+SMALL U93 6
+EQUAL <$USERNAME> <$global(直充玩家)>
+#act
+MailGIVE 藏器礼包68元 1 0#1#4#5#8
+SendMail 1 藏器礼包68元已发送,请点击提取
+INC U93 1
+
+[@98合服礼包发送]
+
+#if
+EQUAL <$USERNAME> <$global(直充玩家)>
+SMALL U94 6
+#act
+MailGIVE 藏器礼包98元 1 0#1#4#5#8
+SendMail 1 藏器礼包98元已发送,请点击提取
+INC U94 1
+
+[@198合服礼包发送]
+#if
+SMALL U95 7
+EQUAL <$USERNAME> <$global(直充玩家)>
+#act
+MailGIVE 洗练礼包198元 1 0#1#4#5#8
+SendMail 1 洗练礼包198元已发送,请点击提取
+INC U95 1
+
+
+[@328合服礼包发送]
+#if
+SMALL U96 7
+EQUAL <$USERNAME> <$global(直充玩家)>
+#act
+MailGIVE 材料礼包328元 1 0#1#4#5#8
+SendMail 1 材料礼包328元已发送,请点击提取
+INC U96 1
+
+[@648合服礼包发送]
+#if
+SMALL U97 11
+EQUAL <$USERNAME> <$global(直充玩家)>
+#act
+MailGIVE 洗练礼包648元 1 0#1#4#5#8
+SendMail 1 洗练礼包648元已发送,请点击提取
+INC U97 1
+
+
+[@出现按钮]
+#if
+#act
+mov G20 1
+#CALL [\主界面基础按钮\主界面游戏按钮.txt] @界面游戏按钮
+
+[@消失按钮]
+#if
+#act
+mov G20 0
+#CALL [\主界面基础按钮\主界面游戏按钮.txt] @界面游戏按钮
+
+[@凌晨清除星辰生命值属性]
+#if
+equal U5 1 
+#ACT
+USEBONUSPOINT 6 - 30
+mov U5 0
+BREAK
+
+#if
+equal U5 2 
+#ACT
+USEBONUSPOINT 6 - 60
+mov U5 0
+BREAK
+
+#if
+equal U5 3 
+#ACT
+USEBONUSPOINT 6 - 90
+mov U5 0
+BREAK
+
+#if
+equal U5 4 
+#ACT
+USEBONUSPOINT 6 - 120
+mov U5 0
+BREAK
+
+#if
+equal U5 5 
+#ACT
+USEBONUSPOINT 6 - 150
+mov U5 0
+BREAK
+
+#if
+equal U5 6 
+#ACT
+USEBONUSPOINT 6 - 180
+mov U5 0
+BREAK
+
+#if
+equal U5 7
+#ACT
+USEBONUSPOINT 6 - 210
+mov U5 0
+BREAK
+
+#if
+equal U5 8
+#ACT
+USEBONUSPOINT 6 - 240
+mov U5 0
+BREAK
+
+#if
+equal U5 9 
+#ACT
+USEBONUSPOINT 6 - 270
+mov U5 0
+BREAK
+
+#if
+equal U5 10
+#ACT
+USEBONUSPOINT 6 - 300
+mov U5 0
+BREAK
+
+[@凌晨清除星辰攻魔道属性]
+#if
+CHECKJOB Warrior
+equal U6 1 
+#ACT
+USEBONUSPOINT 1 - 2
+mov U6 0
+BREAK
+
+#if
+CHECKJOB Warrior
+equal U6 2 
+#ACT
+USEBONUSPOINT 1 - 4
+mov U6 0
+BREAK
+
+#if
+CHECKJOB Warrior
+equal U6 3 
+#ACT
+USEBONUSPOINT 1 - 6
+mov U6 0
+BREAK
+
+#if
+CHECKJOB Warrior
+equal U6 4 
+#ACT
+USEBONUSPOINT 1 - 8
+mov U6 0
+BREAK
+
+#if
+CHECKJOB Warrior
+equal U6 5 
+#ACT
+USEBONUSPOINT 1 - 10
+mov U6 0
+BREAK
+
+#if
+CHECKJOB Warrior
+equal U6 6
+#ACT
+USEBONUSPOINT 1 - 12
+mov U6 0
+BREAK
+
+;=====================
+#if
+CHECKJOB Taoist
+equal U6 1 
+#ACT
+USEBONUSPOINT 3 - 2
+mov U6 0
+BREAK
+
+#if
+CHECKJOB Taoist
+equal U6 2 
+#ACT
+mov U6 0
+USEBONUSPOINT 3 - 4
+BREAK
+
+#if
+CHECKJOB Taoist
+equal U6 3 
+#ACT
+USEBONUSPOINT 3 - 6
+mov U6 0
+BREAK
+
+#if
+CHECKJOB Taoist
+equal U6 4 
+#ACT
+USEBONUSPOINT 3 - 8
+mov U6 0
+BREAK
+
+#if
+CHECKJOB Taoist
+equal U6 5 
+#ACT
+USEBONUSPOINT 3 - 10
+mov U6 0
+BREAK
+
+#if
+CHECKJOB Taoist
+equal U6 6
+#ACT
+USEBONUSPOINT 3 - 12
+mov U6 0
+BREAK
+
+;=====================
+#if
+CHECKJOB Wizard
+equal U6 1 
+#ACT
+USEBONUSPOINT 2 - 2
+mov U6 0
+BREAK
+
+#if
+CHECKJOB Wizard
+equal U6 2 
+#ACT
+USEBONUSPOINT 2 - 4
+mov U6 0
+BREAK
+
+#if
+CHECKJOB Wizard
+equal U6 3 
+#ACT
+USEBONUSPOINT 2 - 6
+mov U6 0
+BREAK
+
+#if
+CHECKJOB Wizard
+equal U6 4 
+#ACT
+mov U6 0
+USEBONUSPOINT 2 - 8
+BREAK
+
+#if
+CHECKJOB Wizard
+equal U6 5 
+#ACT
+USEBONUSPOINT 2 - 10
+mov U6 0
+BREAK
+
+#if
+CHECKJOB Wizard
+equal U6 6
+#ACT
+USEBONUSPOINT 2 - 12
+mov U6 0
+BREAK
+
+
+[@行会召唤]
+#IF
+NOT EQUAL A404 <$USERNAME>
+HaveGuild
+CheckOfGuild <$STR(A403)>
+#SAY
+<Img|ay=1|x=0|y=0|width=500|height=200|scale9t=10|scale9l=10|scale9r=10|scale9b=10|reset=1|bg=1|show=4|img=public/bg_hhzy_01.png|esc=1|move=0>
+<Img|ay=1|x=0|y=0|width=500|height=200|scale9t=10|scale9l=10|scale9r=10|scale9b=10|reset=1|bg=1|show=4|img=public/bg_hhzy_01.png|esc=1|move=0>
+<Layout|x=427.0|y=-28.0|width=80|height=80|link=@exit>
+<Button|x=445.0|y=5.0|nimg=public/an_cha_5.png|link=@exit>
+<Img|x=18.0|y=53.0|rotate=0|img=public/bj_tiaozhan.png>
+<Text|x=203.0|y=8.0|outlinecolor=0|outline=1|color=249|size=20|text=行会召唤>
+<RText|x=46.0|y=53.0|size=18|outline=2|text=<行会兄弟/FCOLOR=159><【<$STR(A404)>】/FCOLOR=250><在/FCOLOR=159><【<$STR(A405)>】/FCOLOR=254>\<遇险，需要你的支援！/FCOLOR=159>>
+<Text|x=45.0|y=108.0|color=159|outline=2|size=18|text=你是否愿意前往，助他一臂之力呢？>
+<Button|x=70.0|y=130.0|outline=1|nimg=public/btn_sifud_03.png|size=18|color=161|text=前去帮忙|link=@召唤前去帮忙>
+<Button|x=331.0|y=130.0|outline=1|nimg=public/btn_sifud_03.png|size=18|color=161|text=老子不去|link=@exit>
+
+[@召唤前去帮忙]
+#IF
+CHECKLEVELEX < 43
+#ACT
+sendmsg 9 你等级太低了，请到43级再去帮忙！
+BREAK
+
+
+#IF
+HaveGuild
+CheckOfGuild <$STR(A403)>
+#ACT
+MAPMOVE <$STR(A406)> <$STR(A407)> <$STR(A408)> 3
+BREAK
+
+

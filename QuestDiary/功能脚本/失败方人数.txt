@@ -1,0 +1,1017 @@
+[@失败方人数统计]
+{
+#IF
+CheckMapHumanCount SBF = 0
+#ACT
+MOV G44 0
+
+#IF
+CheckMapHumanCount SBF = 1
+#ACT
+MOV G44 1
+
+#IF
+CheckMapHumanCount SBF = 2
+#ACT
+MOV G44 2
+
+#IF
+CheckMapHumanCount SBF = 3
+#ACT
+MOV G44 3
+
+#IF
+CheckMapHumanCount SBF = 4
+#ACT
+MOV G44 4
+
+#IF
+CheckMapHumanCount SBF = 5
+#ACT
+MOV G44 5
+
+#IF
+CheckMapHumanCount SBF = 6
+#ACT
+MOV G44 6
+
+#IF
+CheckMapHumanCount SBF = 7
+#ACT
+MOV G44 7
+
+#IF
+CheckMapHumanCount SBF = 8
+#ACT
+MOV G44 8
+
+#IF
+CheckMapHumanCount SBF = 9
+#ACT
+MOV G44 9
+
+#IF
+CheckMapHumanCount SBF = 10
+#ACT
+MOV G44 10
+
+#IF
+CheckMapHumanCount SBF = 11
+#ACT
+MOV G44 11
+
+#IF
+CheckMapHumanCount SBF = 12
+#ACT
+MOV G44 12
+
+#IF
+CheckMapHumanCount SBF = 13
+#ACT
+MOV G44 13
+
+#IF
+CheckMapHumanCount SBF = 14
+#ACT
+MOV G44 14
+
+#IF
+CheckMapHumanCount SBF = 15
+#ACT
+MOV G44 15
+
+#IF
+CheckMapHumanCount SBF = 16
+#ACT
+MOV G44 16
+
+#IF
+CheckMapHumanCount SBF = 17
+#ACT
+MOV G44 17
+
+#IF
+CheckMapHumanCount SBF = 18
+#ACT
+MOV G44 18
+
+#IF
+CheckMapHumanCount SBF = 19
+#ACT
+MOV G44 19
+
+#IF
+CheckMapHumanCount SBF = 20
+#ACT
+MOV G44 20
+
+#IF
+CheckMapHumanCount SBF = 21
+#ACT
+MOV G44 21
+
+#IF
+CheckMapHumanCount SBF = 22
+#ACT
+MOV G44 22
+
+#IF
+CheckMapHumanCount SBF = 23
+#ACT
+MOV G44 23
+
+#IF
+CheckMapHumanCount SBF = 24
+#ACT
+MOV G44 24
+
+#IF
+CheckMapHumanCount SBF = 25
+#ACT
+MOV G44 25
+
+#IF
+CheckMapHumanCount SBF = 26
+#ACT
+MOV G44 26
+
+#IF
+CheckMapHumanCount SBF = 27
+#ACT
+MOV G44 27
+
+#IF
+CheckMapHumanCount SBF = 28
+#ACT
+MOV G44 28
+
+#IF
+CheckMapHumanCount SBF = 29
+#ACT
+MOV G44 29
+
+#IF
+CheckMapHumanCount SBF = 30
+#ACT
+MOV G44 30
+
+#IF
+CheckMapHumanCount SBF = 31
+#ACT
+MOV G44 31
+
+#IF
+CheckMapHumanCount SBF = 32
+#ACT
+MOV G44 32
+
+#IF
+CheckMapHumanCount SBF = 33
+#ACT
+MOV G44 33
+
+#IF
+CheckMapHumanCount SBF = 34
+#ACT
+MOV G44 34
+
+#IF
+CheckMapHumanCount SBF = 35
+#ACT
+MOV G44 35
+
+#IF
+CheckMapHumanCount SBF = 36
+#ACT
+MOV G44 36
+
+#IF
+CheckMapHumanCount SBF = 37
+#ACT
+MOV G44 37
+
+#IF
+CheckMapHumanCount SBF = 38
+#ACT
+MOV G44 38
+
+#IF
+CheckMapHumanCount SBF = 39
+#ACT
+MOV G44 39
+
+#IF
+CheckMapHumanCount SBF = 40
+#ACT
+MOV G44 40
+
+#IF
+CheckMapHumanCount SBF = 41
+#ACT
+MOV G44 41
+
+#IF
+CheckMapHumanCount SBF = 42
+#ACT
+MOV G44 42
+
+#IF
+CheckMapHumanCount SBF = 43
+#ACT
+MOV G44 43
+
+#IF
+CheckMapHumanCount SBF = 44
+#ACT
+MOV G44 44
+
+#IF
+CheckMapHumanCount SBF = 45
+#ACT
+MOV G44 45
+
+#IF
+CheckMapHumanCount SBF = 46
+#ACT
+MOV G44 46
+
+#IF
+CheckMapHumanCount SBF = 47
+#ACT
+MOV G44 47
+
+#IF
+CheckMapHumanCount SBF = 48
+#ACT
+MOV G44 48
+
+#IF
+CheckMapHumanCount SBF = 49
+#ACT
+MOV G44 49
+
+#IF
+CheckMapHumanCount SBF = 50
+#ACT
+MOV G44 50
+
+#IF
+CheckMapHumanCount SBF = 51
+#ACT
+MOV G44 51
+
+#IF
+CheckMapHumanCount SBF = 52
+#ACT
+MOV G44 52
+
+#IF
+CheckMapHumanCount SBF = 53
+#ACT
+MOV G44 53
+
+#IF
+CheckMapHumanCount SBF = 54
+#ACT
+MOV G44 54
+
+#IF
+CheckMapHumanCount SBF = 55
+#ACT
+MOV G44 55
+
+#IF
+CheckMapHumanCount SBF = 56
+#ACT
+MOV G44 56
+
+#IF
+CheckMapHumanCount SBF = 57
+#ACT
+MOV G44 57
+
+#IF
+CheckMapHumanCount SBF = 58
+#ACT
+MOV G44 58
+
+#IF
+CheckMapHumanCount SBF = 59
+#ACT
+MOV G44 59
+
+#IF
+CheckMapHumanCount SBF = 60
+#ACT
+MOV G44 60
+
+#IF
+CheckMapHumanCount SBF = 61
+#ACT
+MOV G44 61
+
+#IF
+CheckMapHumanCount SBF = 62
+#ACT
+MOV G44 62
+
+#IF
+CheckMapHumanCount SBF = 63
+#ACT
+MOV G44 63
+
+#IF
+CheckMapHumanCount SBF = 64
+#ACT
+MOV G44 64
+
+#IF
+CheckMapHumanCount SBF = 65
+#ACT
+MOV G44 65
+
+#IF
+CheckMapHumanCount SBF = 66
+#ACT
+MOV G44 66
+
+#IF
+CheckMapHumanCount SBF = 67
+#ACT
+MOV G44 67
+
+#IF
+CheckMapHumanCount SBF = 68
+#ACT
+MOV G44 68
+
+#IF
+CheckMapHumanCount SBF = 69
+#ACT
+MOV G44 69
+
+#IF
+CheckMapHumanCount SBF = 70
+#ACT
+MOV G44 70
+
+#IF
+CheckMapHumanCount SBF = 71
+#ACT
+MOV G44 71
+
+#IF
+CheckMapHumanCount SBF = 72
+#ACT
+MOV G44 72
+
+#IF
+CheckMapHumanCount SBF = 73
+#ACT
+MOV G44 73
+
+#IF
+CheckMapHumanCount SBF = 74
+#ACT
+MOV G44 74
+
+#IF
+CheckMapHumanCount SBF = 75
+#ACT
+MOV G44 75
+
+#IF
+CheckMapHumanCount SBF = 76
+#ACT
+MOV G44 76
+
+#IF
+CheckMapHumanCount SBF = 77
+#ACT
+MOV G44 77
+
+#IF
+CheckMapHumanCount SBF = 78
+#ACT
+MOV G44 78
+
+#IF
+CheckMapHumanCount SBF = 79
+#ACT
+MOV G44 79
+
+#IF
+CheckMapHumanCount SBF = 80
+#ACT
+MOV G44 80
+
+#IF
+CheckMapHumanCount SBF = 81
+#ACT
+MOV G44 81
+
+#IF
+CheckMapHumanCount SBF = 81
+#ACT
+MOV G44 81
+
+#IF
+CheckMapHumanCount SBF = 82
+#ACT
+MOV G44 82
+
+#IF
+CheckMapHumanCount SBF = 83
+#ACT
+MOV G44 83
+
+#IF
+CheckMapHumanCount SBF = 84
+#ACT
+MOV G44 84
+
+#IF
+CheckMapHumanCount SBF = 85
+#ACT
+MOV G44 85
+
+#IF
+CheckMapHumanCount SBF = 86
+#ACT
+MOV G44 86
+
+#IF
+CheckMapHumanCount SBF = 87
+#ACT
+MOV G44 87
+
+#IF
+CheckMapHumanCount SBF = 88
+#ACT
+MOV G44 88
+
+#IF
+CheckMapHumanCount SBF = 89
+#ACT
+MOV G44 89
+
+#IF
+CheckMapHumanCount SBF = 90
+#ACT
+MOV G44 90
+
+#IF
+CheckMapHumanCount SBF = 91
+#ACT
+MOV G44 91
+
+#IF
+CheckMapHumanCount SBF = 92
+#ACT
+MOV G44 92
+
+#IF
+CheckMapHumanCount SBF = 93
+#ACT
+MOV G44 93
+
+#IF
+CheckMapHumanCount SBF = 94
+#ACT
+MOV G44 94
+
+#IF
+CheckMapHumanCount SBF = 95
+#ACT
+MOV G44 95
+
+#IF
+CheckMapHumanCount SBF = 96
+#ACT
+MOV G44 96
+
+#IF
+CheckMapHumanCount SBF = 97
+#ACT
+MOV G44 97
+
+#IF
+CheckMapHumanCount SBF = 98
+#ACT
+MOV G44 98
+
+#IF
+CheckMapHumanCount SBF = 99
+#ACT
+MOV G44 99
+
+#IF
+CheckMapHumanCount SBF = 100
+#ACT
+MOV G44 100
+
+#IF
+CheckMapHumanCount SBF = 101
+#ACT
+MOV G44 101
+
+#IF
+CheckMapHumanCount SBF = 102
+#ACT
+MOV G44 102
+
+#IF
+CheckMapHumanCount SBF = 103
+#ACT
+MOV G44 103
+
+#IF
+CheckMapHumanCount SBF = 104
+#ACT
+MOV G44 104
+
+#IF
+CheckMapHumanCount SBF = 105
+#ACT
+MOV G44 105
+
+#IF
+CheckMapHumanCount SBF = 106
+#ACT
+MOV G44 106
+
+#IF
+CheckMapHumanCount SBF = 107
+#ACT
+MOV G44 107
+
+#IF
+CheckMapHumanCount SBF = 108
+#ACT
+MOV G44 108
+
+#IF
+CheckMapHumanCount SBF = 109
+#ACT
+MOV G44 109
+
+#IF
+CheckMapHumanCount SBF = 110
+#ACT
+MOV G44 110
+
+#IF
+CheckMapHumanCount SBF = 111
+#ACT
+MOV G44 111
+
+#IF
+CheckMapHumanCount SBF = 112
+#ACT
+MOV G44 112
+
+#IF
+CheckMapHumanCount SBF = 113
+#ACT
+MOV G44 113
+
+#IF
+CheckMapHumanCount SBF = 114
+#ACT
+MOV G44 114
+
+#IF
+CheckMapHumanCount SBF = 115
+#ACT
+MOV G44 115
+
+#IF
+CheckMapHumanCount SBF = 116
+#ACT
+MOV G44 116
+
+#IF
+CheckMapHumanCount SBF = 117
+#ACT
+MOV G44 117
+
+#IF
+CheckMapHumanCount SBF = 118
+#ACT
+MOV G44 118
+
+#IF
+CheckMapHumanCount SBF = 119
+#ACT
+MOV G44 119
+
+#IF
+CheckMapHumanCount SBF = 120
+#ACT
+MOV G44 120
+
+#IF
+CheckMapHumanCount SBF = 121
+#ACT
+MOV G44 121
+
+#IF
+CheckMapHumanCount SBF = 122
+#ACT
+MOV G44 122
+
+#IF
+CheckMapHumanCount SBF = 123
+#ACT
+MOV G44 123
+
+#IF
+CheckMapHumanCount SBF = 124
+#ACT
+MOV G44 124
+
+#IF
+CheckMapHumanCount SBF = 125
+#ACT
+MOV G44 125
+
+#IF
+CheckMapHumanCount SBF = 126
+#ACT
+MOV G44 126
+
+#IF
+CheckMapHumanCount SBF = 127
+#ACT
+MOV G44 127
+
+#IF
+CheckMapHumanCount SBF = 128
+#ACT
+MOV G44 128
+
+#IF
+CheckMapHumanCount SBF = 129
+#ACT
+MOV G44 129
+
+#IF
+CheckMapHumanCount SBF = 130
+#ACT
+MOV G44 130
+
+#IF
+CheckMapHumanCount SBF = 131
+#ACT
+MOV G44 131
+
+#IF
+CheckMapHumanCount SBF = 132
+#ACT
+MOV G44 132
+
+#IF
+CheckMapHumanCount SBF = 133
+#ACT
+MOV G44 133
+
+#IF
+CheckMapHumanCount SBF = 134
+#ACT
+MOV G44 134
+
+#IF
+CheckMapHumanCount SBF = 135
+#ACT
+MOV G44 135
+
+#IF
+CheckMapHumanCount SBF = 136
+#ACT
+MOV G44 136
+
+#IF
+CheckMapHumanCount SBF = 137
+#ACT
+MOV G44 137
+
+#IF
+CheckMapHumanCount SBF = 138
+#ACT
+MOV G44 138
+
+#IF
+CheckMapHumanCount SBF = 139
+#ACT
+MOV G44 139
+
+#IF
+CheckMapHumanCount SBF = 140
+#ACT
+MOV G44 140
+
+#IF
+CheckMapHumanCount SBF = 141
+#ACT
+MOV G44 141
+
+#IF
+CheckMapHumanCount SBF = 142
+#ACT
+MOV G44 142
+
+#IF
+CheckMapHumanCount SBF = 143
+#ACT
+MOV G44 143
+
+#IF
+CheckMapHumanCount SBF = 144
+#ACT
+MOV G44 144
+
+#IF
+CheckMapHumanCount SBF = 145
+#ACT
+MOV G44 145
+
+#IF
+CheckMapHumanCount SBF = 146
+#ACT
+MOV G44 146
+
+#IF
+CheckMapHumanCount SBF = 147
+#ACT
+MOV G44 147
+
+#IF
+CheckMapHumanCount SBF = 148
+#ACT
+MOV G44 148
+
+#IF
+CheckMapHumanCount SBF = 149
+#ACT
+MOV G44 149
+
+#IF
+CheckMapHumanCount SBF = 150
+#ACT
+MOV G44 150
+
+#IF
+CheckMapHumanCount SBF = 151
+#ACT
+MOV G44 151
+
+#IF
+CheckMapHumanCount SBF = 152
+#ACT
+MOV G44 152
+
+#IF
+CheckMapHumanCount SBF = 153
+#ACT
+MOV G44 153
+
+#IF
+CheckMapHumanCount SBF = 154
+#ACT
+MOV G44 154
+
+#IF
+CheckMapHumanCount SBF = 155
+#ACT
+MOV G44 155
+
+#IF
+CheckMapHumanCount SBF = 156
+#ACT
+MOV G44 156
+
+#IF
+CheckMapHumanCount SBF = 157
+#ACT
+MOV G44 157
+
+#IF
+CheckMapHumanCount SBF = 158
+#ACT
+MOV G44 158
+
+#IF
+CheckMapHumanCount SBF = 159
+#ACT
+MOV G44 159
+
+#IF
+CheckMapHumanCount SBF = 160
+#ACT
+MOV G44 160
+
+#IF
+CheckMapHumanCount SBF = 161
+#ACT
+MOV G44 161
+
+#IF
+CheckMapHumanCount SBF = 162
+#ACT
+MOV G44 162
+
+#IF
+CheckMapHumanCount SBF = 163
+#ACT
+MOV G44 163
+
+#IF
+CheckMapHumanCount SBF = 164
+#ACT
+MOV G44 164
+
+#IF
+CheckMapHumanCount SBF = 165
+#ACT
+MOV G44 165
+
+#IF
+CheckMapHumanCount SBF = 166
+#ACT
+MOV G44 166
+
+#IF
+CheckMapHumanCount SBF = 167
+#ACT
+MOV G44 167
+
+#IF
+CheckMapHumanCount SBF = 168
+#ACT
+MOV G44 168
+
+#IF
+CheckMapHumanCount SBF = 169
+#ACT
+MOV G44 169
+
+#IF
+CheckMapHumanCount SBF = 170
+#ACT
+MOV G44 170
+
+#IF
+CheckMapHumanCount SBF = 171
+#ACT
+MOV G44 171
+
+#IF
+CheckMapHumanCount SBF = 172
+#ACT
+MOV G44 172
+
+#IF
+CheckMapHumanCount SBF = 173
+#ACT
+MOV G44 173
+
+#IF
+CheckMapHumanCount SBF = 174
+#ACT
+MOV G44 174
+
+#IF
+CheckMapHumanCount SBF = 175
+#ACT
+MOV G44 175
+
+#IF
+CheckMapHumanCount SBF = 176
+#ACT
+MOV G44 176
+
+#IF
+CheckMapHumanCount SBF = 177
+#ACT
+MOV G44 177
+
+#IF
+CheckMapHumanCount SBF = 178
+#ACT
+MOV G44 178
+
+#IF
+CheckMapHumanCount SBF = 179
+#ACT
+MOV G44 179
+
+#IF
+CheckMapHumanCount SBF = 180
+#ACT
+MOV G44 180
+
+#IF
+CheckMapHumanCount SBF = 181
+#ACT
+MOV G44 181
+
+#IF
+CheckMapHumanCount SBF = 182
+#ACT
+MOV G44 182
+
+#IF
+CheckMapHumanCount SBF = 183
+#ACT
+MOV G44 183
+
+#IF
+CheckMapHumanCount SBF = 184
+#ACT
+MOV G44 184
+
+#IF
+CheckMapHumanCount SBF = 185
+#ACT
+MOV G44 185
+
+#IF
+CheckMapHumanCount SBF = 186
+#ACT
+MOV G44 186
+
+#IF
+CheckMapHumanCount SBF = 187
+#ACT
+MOV G44 187
+
+#IF
+CheckMapHumanCount SBF = 188
+#ACT
+MOV G44 188
+
+#IF
+CheckMapHumanCount SBF = 189
+#ACT
+MOV G44 189
+
+#IF
+CheckMapHumanCount SBF = 190
+#ACT
+MOV G44 190
+
+#IF
+CheckMapHumanCount SBF = 191
+#ACT
+MOV G44 191
+
+#IF
+CheckMapHumanCount SBF = 192
+#ACT
+MOV G44 192
+
+#IF
+CheckMapHumanCount SBF = 193
+#ACT
+MOV G44 193
+
+#IF
+CheckMapHumanCount SBF = 194
+#ACT
+MOV G44 194
+
+#IF
+CheckMapHumanCount SBF = 195
+#ACT
+MOV G44 195
+
+#IF
+CheckMapHumanCount SBF = 196
+#ACT
+MOV G44 196
+
+#IF
+CheckMapHumanCount SBF = 197
+#ACT
+MOV G44 197
+
+#IF
+CheckMapHumanCount SBF = 198
+#ACT
+MOV G44 198
+
+#IF
+CheckMapHumanCount SBF = 199
+#ACT
+MOV G44 199
+
+#IF
+CheckMapHumanCount SBF = 200
+#ACT
+MOV G44 200
+
+
+
+
+
+}

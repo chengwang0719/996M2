@@ -1,0 +1,113 @@
+[@main]
+#IF
+#say
+<Button|x=-2526.0|y=-1172.0|width=115120|height=112880|mimg=npc/zd.png|color=224|nimg=npc/zd.png|pimg=npc/zd.png|size=18|link=@exit>
+<Img|a=4|x=441.0|y=235.5|width=875|height=553|loadDelay=0|move=0|bg=1|show=4|esc=1|reset=1|img=npc/zzsz/bj.png>
+<Text|x=411.0|y=142.0|size=16|outline=2|color=116|text=500点卷>
+<Text|x=341.0|y=345.0|size=16|outline=2|color=116|text=1000点卷>
+<Button|x=199.0|y=171.0|mimg=npc/zzsz/btn1.png|nimg=npc/zzsz/btn1.png|link=@变性>
+<Button|x=199.0|y=367.0|mimg=npc/zzsz/btn2.png|nimg=npc/zzsz/btn2.png|link=@转职战士>
+<Button|x=490.0|y=367.0|mimg=npc/zzsz/btn4.png|nimg=npc/zzsz/btn4.png|link=@转职法师>
+<Button|x=343.0|y=367.0|mimg=npc/zzsz/btn3.png|nimg=npc/zzsz/btn3.png|link=@转职道士>
+<Button|x=717.0|y=49.0|mimg=public/close-t.png|nimg=public/close-t.png|link=@exit>
+
+
+[@变性]
+#if   
+CHECKMONEY 点卷 ? 500  
+#act   
+MONEY 点卷 - 500
+#elseact
+sendmsg 9 [提示]: 你没有足够的点卷,暂时无法使用该功能
+break
+
+#IF   
+gender man   
+#ACT   
+CHANGEGENDER 1   
+OPENHYPERLINK 34  
+#ELSEACT   
+CHANGEGENDER 0   
+OPENHYPERLINK 34 
+
+[@转职战士]
+#IF
+CHECKJOB Warrior
+#ACT
+SENDMSG 9 [提示]: 你已经是战士了！
+BREAK
+
+#IF   
+CHECKMONEY 点卷 ? 1000
+#ACT   
+MONEY 点卷 - 1000
+CLEARSKILL   
+CHANGEJOB Warrior   
+ADDSKILL 基本剑术 3   
+ADDSKILL 攻杀剑术 3   
+ADDSKILL 刺杀剑术 3   
+ADDSKILL 半月弯刀 3   
+ADDSKILL 野蛮冲撞 3   
+ADDSKILL 烈火剑法 3 
+OPENHYPERLINK 34
+#ELSEACT
+SENDMSG 9 [提示]: 你没有足够的点卷,暂时无法转职！
+BREAK
+
+[@转职法师]
+#IF
+CHECKJOB Wizard
+#ACT
+SENDMSG 9 [提示]: 你已经是法师了！
+BREAK
+  
+#IF   
+CHECKMONEY 点卷 ? 1000
+#ACT   
+MONEY 点卷 - 1000
+CLEARSKILL   
+CHANGEJOB Wizard   
+ADDSKILL 火球术 3   
+ADDSKILL 雷电术 3   
+ADDSKILL 抗拒火环 3   
+ADDSKILL 疾光电影 3   
+ADDSKILL 爆裂火焰 3   
+ADDSKILL 地狱雷光 3   
+ADDSKILL 火墙 3   
+ADDSKILL 魔法盾 3   
+ADDSKILL 冰咆哮 3 
+OPENHYPERLINK 34
+#ELSEACT
+SENDMSG 9 [提示]: 你没有足够的点卷,暂时无法转职！
+BREAK  
+
+[@转职道士] 
+#IF
+CHECKJOB Taoist
+#ACT
+SENDMSG 9 [提示]: 你已经是道士了！
+BREAK
+  
+#IF   
+CHECKMONEY 点卷 ? 1000
+#ACT   
+MONEY 点卷 - 1000
+CLEARSKILL   
+CHANGEJOB Taoist   
+ADDSKILL 治愈术 3   
+ADDSKILL 施毒术 3   
+ADDSKILL 精神力战法 3   
+ADDSKILL 灵魂火符 3   
+ADDSKILL 幽灵盾 3   
+ADDSKILL 神圣战甲术 3   
+ADDSKILL 困魔咒 3   
+ADDSKILL 隐身术 3   
+ADDSKILL 集体隐身术 3   
+ADDSKILL 心灵启示 3   
+ADDSKILL 召唤神兽 3   
+ADDSKILL 群体治疗术 3 
+OPENHYPERLINK 34
+#ELSEACT
+SENDMSG 9 [提示]: 你没有足够的点卷,暂时无法转职！
+BREAK 
+

@@ -1,0 +1,6 @@
+[@main]
+#if
+#say
+<Button|x=-2526.0|y=-1172.0|width=115120|height=112880|nimg=npc/zd.png|mimg=npc/zd.png|pimg=npc/zd.png|color=224|size=18|link=@exit>
+<Img|a=4|x=439.0|y=292.0|width=910|height=590|move=1|esc=1|img=npc/zq/bj2.png|loadDelay=0|reset=1|show=4|bg=1>
+<Button|x=833.0|y=35.0|nimg=public/close-2.png|mimg=public/close-2.png|link=@exit>

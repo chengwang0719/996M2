@@ -1,0 +1,241 @@
+[@main]
+#if
+#act
+
+;CLEARSKILL
+
+
+#if
+CHECKJOB Warrior
+#act
+goto @战士页面
+goto @战士学习条件
+
+
+#if
+CHECKJOB Wizard
+#act
+goto @法师页面
+goto @法师学习条件
+
+
+#if
+CHECKJOB Taoist
+#act
+goto @道士页面
+goto @道士学习条件
+
+
+
+
+[@战士页面]
+#if
+#say
+<Img|x=190|y=45|width=800|height=526|img=custom/zjjn/ym.png|bg=1>
+<Button|x=940|y=50|width=45|height=45|nimg=custom/zjjn/111.png|link=@exit>
+<Button|x=776|y=470|width=155|height=51|nimg=custom/zjjn/1.png|link=@开启战士神技>
+<Effect|x=550|y=403|scale=1|speed=1|effecttype=0|count=9999999999|dir=0|effectid=70110|act=0|speed=0.5>
+
+<RText|x=790.0|y=357.0|color=255|size=17|outlinecolor=0|outline=2|text=点卷>
+
+<ItemShow|x=815.0|y=336.0|itemid=2|scale=0.75|showtips=1>
+<RText|x=870.0|y=357.0|color=255|size=17|outlinecolor=0|outline=2|text=X <$STR(S$需要点卷)>>
+<ItemShow|x=763.0|y=409.0|itemid=20117|scale=0.9|showtips=1>
+<ItemShow|x=827.0|y=409.0|itemid=20097|scale=0.9|showtips=1>
+<ItemShow|x=889.0|y=409.0|itemid=20112|scale=0.9|showtips=1>
+<RText|x=789.0|y=390.0|size=17|color=255|outline=2|outlinecolor=0|text=所需要技能书>
+<Img|x=656|y=138|width=92|height=150|img=custom/zjjn/b.png>
+<RText|x=764.0|y=199.0|color=251|outlinecolor=0|outline=2|size=22|text=收集所需材料货币>
+<RText|x=763.0|y=239.0|color=251|outlinecolor=0|outline=2|size=22|text=提交学习“擒龙手”>
+<RText|x=307.0|y=529.0|color=245|outlinecolor=0|outline=2|size=16|text=单体控制技能，范围6格内敌人拉入身边，需比目标等级高一级，否则无效>
+
+
+
+[@法师页面]
+#if
+#say
+<Img|x=190|y=45|width=800|height=526|img=custom/zjjn/ym.png|bg=1>
+<Button|x=940|y=50|width=45|height=45|nimg=custom/zjjn/111.png|link=@exit>
+<Button|x=776|y=470|width=155|height=51|nimg=custom/zjjn/1.png|link=@开启法师神技>
+<Effect|x=550|y=403|effectid=70108|effecttype=0|count=9999999999|act=0|speed=0.9|scale=1>
+
+<RText|x=790.0|y=357.0|color=255|size=17|outlinecolor=0|outline=2|text=点卷>
+
+<ItemShow|x=815.0|y=336.0|itemid=2|scale=0.75|showtips=1>
+<RText|x=870.0|y=357.0|color=255|size=17|outlinecolor=0|outline=2|text=X <$STR(S$需要点卷)>>
+<ItemShow|x=763.0|y=409.0|itemid=20117|scale=0.9|showtips=1>
+<ItemShow|x=827.0|y=409.0|itemid=20097|scale=0.9|showtips=1>
+<ItemShow|x=889.0|y=409.0|itemid=20112|scale=0.9|showtips=1>
+<RText|x=789.0|y=390.0|size=17|color=255|outline=2|outlinecolor=0|text=所需要技能书>
+
+<Img|x=656|y=138|width=92|height=150|img=custom/zjjn/a.png>
+<RText|x=764.0|y=199.0|color=251|outlinecolor=0|outline=2|size=22|text=收集所需材料货币>
+<RText|x=763.0|y=239.0|color=251|outlinecolor=0|outline=2|size=20|text=提交学习“冰霜雪雨”>
+<RText|x=370.0|y=529.0|color=245|outlinecolor=0|outline=2|size=16|text=群体高爆发伤害技能，对释放区域进行两段技能伤害范围8*2>
+
+[@道士页面]
+#if
+#say
+<Img|x=190|y=45|width=800|height=526|img=custom/zjjn/ym.png|bg=1>
+<Button|x=940|y=50|width=45|height=45|nimg=custom/zjjn/111.png|link=@exit>
+<Button|x=776|y=470|width=155|height=51|nimg=custom/zjjn/1.png|link=@开启道士神技>
+<Effect|x=550|y=420|effectid=70106|effecttype=0|count=9999999999|act=0|speed=1|scale=0.8>
+
+<RText|x=790.0|y=357.0|color=255|size=17|outlinecolor=0|outline=2|text=点卷>
+
+<ItemShow|x=815.0|y=336.0|itemid=2|scale=0.75|showtips=1>
+<RText|x=870.0|y=357.0|color=255|size=17|outlinecolor=0|outline=2|text=X <$STR(S$需要点卷)>>
+<ItemShow|x=763.0|y=409.0|itemid=20117|scale=0.9|showtips=1>
+<ItemShow|x=827.0|y=409.0|itemid=20097|scale=0.9|showtips=1>
+<ItemShow|x=889.0|y=409.0|itemid=20112|scale=0.9|showtips=1>
+<RText|x=789.0|y=390.0|size=17|color=255|outline=2|outlinecolor=0|text=所需要技能书>
+
+<Img|x=656|y=138|width=92|height=150|img=custom/zjjn/c.png>
+
+<RText|x=764.0|y=199.0|color=251|outlinecolor=0|outline=2|size=22|text=收集所需材料货币>
+<RText|x=763.0|y=239.0|color=251|outlinecolor=0|outline=2|size=20|text=提交学习“万剑归宗”>
+<RText|x=370.0|y=529.0|color=245|outlinecolor=0|outline=2|size=16|text=群体高爆发伤害技能，对释放区域进行剑意斩击技能范围8*2>
+
+;==================================================战士
+
+
+[@战士学习条件]
+#if
+checkmoney 点卷 ? 5000 
+#act
+mov S$需要点卷 <5000/FCOLOR=250>
+goto @战士页面
+#elseact
+mov S$需要点卷 <5000/FCOLOR=249>
+goto @战士页面
+
+
+
+
+
+[@开启战士神技]
+#if
+not checkitem 死亡之眼 1 
+not checkitem 十步一杀 1
+not checkitem 冰霜群雨 1
+#act
+sendmsg 9 [提示]您背包里缺少技能书，无法学习！
+break
+
+
+#if
+checkmoney 点卷 ? 5000
+not CheckMagicName  擒龙手
+#act
+ADDSKILL 擒龙手 3
+take 死亡之眼 1 
+take 十步一杀 1
+take 冰霜群雨 1
+MONEY 点卷 - 5000
+sendmsg 9 [恭喜]您已成功学习神技：擒龙手！
+goto @战士页面
+goto @战士学习条件
+#elseact
+sendmsg 9 [提示] 你还未满足要求,或者已经学习过了！
+goto @战士页面
+goto @战士学习条件
+break
+
+
+
+;==================================================法师
+
+
+[@法师学习条件]
+
+#if
+checkmoney 点卷 ? 5000 
+#act
+mov S$需要点卷 <5000/FCOLOR=250>
+goto @法师页面
+#elseact
+mov S$需要点卷 <5000/FCOLOR=249>
+goto @法师页面
+
+
+
+
+[@开启法师神技]
+#if
+not checkitem 死亡之眼 1 
+not checkitem 十步一杀 1
+not checkitem 冰霜群雨 1
+#act
+sendmsg 9 [提示]您背包里缺少技能书，无法学习！
+break
+
+
+#if
+checkmoney 点卷 ? 5000
+not CheckMagicName  冰霜雪雨
+#act
+ADDSKILL 冰霜雪雨 3
+take 死亡之眼 1 
+take 十步一杀 1
+take 冰霜群雨 1
+MONEY 点卷 - 5000
+sendmsg 9 [恭喜]您已成功学习神技：冰霜雪雨！
+goto @法师页面
+goto @法师学习条件
+#elseact
+sendmsg 9 [提示] 你还未满足要求,或者已经学习过了！
+goto @法师页面
+goto @法师学习条件
+BREAK
+
+
+
+;==================================================道士
+
+
+[@道士学习条件]
+#if
+checkmoney 点卷 ? 5000 
+#act
+mov S$需要点卷 <5000/FCOLOR=250>
+goto @道士页面
+#elseact
+mov S$需要点卷 <5000/FCOLOR=249>
+goto @道士页面
+
+
+
+
+
+
+
+[@开启道士神技]
+#if
+not checkitem 死亡之眼 1 
+not checkitem 十步一杀 1
+not checkitem 冰霜群雨 1
+#act
+sendmsg 9 [提示]您背包里缺少技能书，无法学习！
+break
+
+#if
+checkmoney 点卷 ? 5000
+not CheckMagicName  幽冥火符
+#act
+MONEY 点卷 - 5000
+take 死亡之眼 1 
+take 十步一杀 1
+take 冰霜群雨 1
+ADDSKILL 幽冥火符 3
+sendmsg 9 [恭喜]您已成功学习神技：万剑归宗！
+goto @道士页面
+goto @道士学习条件
+#elseact
+sendmsg 9 [提示] 你还未满足要求,或者已经学习过了！
+goto @道士页面
+goto @道士学习条件
+
+
+
+
+

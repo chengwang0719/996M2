@@ -1,0 +1,368 @@
+[@main]
+
+#IF
+#act 
+MOV S$兑换物品 
+goto @生命符石
+
+
+
+[@页面展示]
+#IF
+#say
+
+<Img|children={aa,bb}|a=4|x=450.0|y=316.0|width=950|height=650|esc=1|move=1|img=npc/fsdh/bg.png|show=4|reset=1|loadDelay=0|bg=1>
+<Button|x=862.0|y=37.0|mimg=public/close-2.png|nimg=public/close-2.png|link=@exit>
+<ListView|id=aa|children={a,b,c,d}|x=76.0|y=87.0|width=810|height=60|direction=2|bounce=0|margin=5>
+<Button|id=a|x=0|y=0|width=199|height=60|nimg=npc/fsdh/btn1.png|mimg=npc/fsdh/btn1.png|link=@生命符石>
+<Button|id=b|x=0|y=0|width=199|height=60|nimg=npc/fsdh/btn2.png|mimg=npc/fsdh/btn2.png|link=@经验符石>
+<Button|id=c|x=0|y=0|width=199|height=60|nimg=npc/fsdh/btn3.png|mimg=npc/fsdh/btn3.png|link=@增伤符石>
+<Button|id=d|x=0|y=0|width=199|height=60|nimg=npc/fsdh/btn4.png|mimg=npc/fsdh/btn4.png|link=@技能符石>
+<ListView|id=bb|children={1a,2a,3a,4a,5a,6a,7a,8a,9a,10a,11a,12a,13a,14a,15a,16a,17a,18a,19a,20a,21a,22a,23a,24a}|x=81.0|y=143.0|width=800.0|height=460.0|rotate=0|direction=2|margin=0|reload=0|bounce=1>
+
+
+
+#IF
+equal S$切换页面 生命符石
+#say
+<Img|id=1a|children={1b,2b,3b,4b,5b,6b,7b,8b}|x=140.0|y=110.0|width=250|height=465|move=0|loadDelay=0|show=4|esc=1|img=npc/fsdh/2-2.png|reset=1>
+<Button|id=1b|x=50.0|y=386.0|width=150|height=65|nimg=npc/fsdh/2.png|mimg=npc/fsdh/2.png|link=@确定兑换#符石类型=1#兑换物品=极限防御>
+<ItemShow|id=2b|x=94|y=94|width=70|height=70|itemid=10195|itemcount=1|showtips=1|bgtype=0>
+<Text|id=3b|x=71.0|y=320.0|size=16|outline=2|color=255|text=符石碎片800个>
+<Text|id=6b|x=87.0|y=340.0|size=16|outline=2|color=255|text=元宝200万>
+<Text|id=7b|x=91.0|y=361.0|size=16|outline=2|color=255|text=点卡20万>
+<Img|id=4b|x=20.0|y=224.0|reset=1|move=0|img=npc/fsdh/22.png|show=4|loadDelay=0|esc=1>
+<Text|id=5b|x=49.0|y=227.0|size=16|outline=1|color=58|text=生命值低于50%无敌2秒>
+<Text|id=8b|a=4|percentx=50.0|percenty=6.7|size=16|outline=2|color=251|text=极限防御符石>
+
+
+<Img|id=2a|children={1c,2c,3c,4c,5c,6c,7c,8c}|x=300.0|y=110.0|width=250|height=465|move=0|reset=1|esc=1|img=npc/fsdh/2-2.png|show=4|loadDelay=0>
+<Button|id=1c|x=50.0|y=386.0|width=150|height=65|nimg=npc/fsdh/2.png|mimg=npc/fsdh/2.png|link=@确定兑换#符石类型=1#兑换物品=生命源泉>
+<ItemShow|id=2c|x=94|y=94|width=70|height=70|itemid=10196|itemcount=1|showtips=1|bgtype=0>
+<Text|id=3c|x=71.0|y=320.0|size=16|outline=2|color=255|text=符石碎片800个>
+<Text|id=6c|x=87.0|y=340.0|size=16|outline=2|color=255|text=元宝200万>
+<Text|id=7c|x=91.0|y=361.0|size=16|outline=2|color=255|text=点卡20万>
+<Img|id=4c|x=20.0|y=224.0|reset=1|move=0|img=npc/fsdh/22.png|show=4|loadDelay=0|esc=1>
+<Text|id=5c|x=82.0|y=227.0|size=16|outline=1|color=58|text=生命加成5%>
+<Text|id=8c|a=4|percentx=50.0|percenty=6.7|size=16|outline=2|color=251|text=生命源泉符石>
+
+
+<Img|id=3a|children={1d,2d,3d,4d,5d,6d,7d,8d}|x=550.0|y=62.0|width=250|height=465|move=0|loadDelay=0|show=4|esc=1|img=npc/fsdh/2-2.png|reset=1>
+<Button|id=1d|x=50.0|y=386.0|width=150|height=65|nimg=npc/fsdh/2.png|mimg=npc/fsdh/2.png|link=@确定兑换#符石类型=1#兑换物品=极限亢奋>
+<ItemShow|id=2d|x=94|y=94|width=70|height=70|itemid=10197|itemcount=1|showtips=1|bgtype=0>
+<Text|id=3d|x=71.0|y=320.0|size=16|outline=2|color=255|text=符石碎片800个>
+<Text|id=6d|x=87.0|y=340.0|size=16|outline=2|color=255|text=元宝200万>
+<Text|id=7d|x=91.0|y=361.0|size=16|outline=2|color=255|text=点卡20万>
+<Img|id=4d|x=20.0|y=224.0|reset=1|move=0|img=npc/fsdh/22.png|show=4|loadDelay=0|esc=1>
+<Text|id=5d|x=93.0|y=227.0|size=16|outline=1|color=58|text=双抗+5%>
+<Text|id=8d|a=4|percentx=50.0|percenty=6.7|size=16|outline=2|color=251|text=极限亢奋符石>
+
+<Img|id=4a|children={1e,2e,3e,4e,5e,6e,7e,8e}|x=550.0|y=62.0|width=250|height=465|move=0|loadDelay=0|show=4|esc=1|img=npc/fsdh/2-2.png|reset=1>
+<Button|id=1e|x=50.0|y=386.0|width=150|height=65|nimg=npc/fsdh/2.png|mimg=npc/fsdh/2.png|link=@确定兑换#符石类型=0#兑换物品=物抗>
+<ItemShow|id=2e|x=94|y=94|width=70|height=70|itemid=10198|itemcount=1|showtips=1|bgtype=0>
+<Text|id=3e|x=71.0|y=320.0|size=16|outline=2|color=255|text=符石碎片200个>
+<Text|id=6e|x=87.0|y=340.0|size=16|outline=2|color=255|text=元宝50万>
+<Text|id=7e|x=91.0|y=361.0|size=16|outline=2|color=255|text=点卡5万>
+<Img|id=4e|x=20.0|y=224.0|reset=1|move=0|img=npc/fsdh/22.png|show=4|loadDelay=0|esc=1>
+<Text|id=5e|x=93.0|y=227.0|size=16|outline=1|color=58|text=物理防御+10>
+<Text|id=8e|a=4|percentx=50.0|percenty=6.7|size=16|outline=2|color=251|text=物抗符石>
+
+<Img|id=5a|children={1f,2f,3f,4f,5f,6f,7f,8f}|x=550.0|y=62.0|width=250|height=465|move=0|loadDelay=0|show=4|esc=1|img=npc/fsdh/2-2.png|reset=1>
+<Button|id=1f|x=50.0|y=386.0|width=150|height=65|nimg=npc/fsdh/2.png|mimg=npc/fsdh/2.png|link=@确定兑换#符石类型=0#兑换物品=魔抗>
+<ItemShow|id=2f|x=94|y=94|width=70|height=70|itemid=10199|itemcount=1|showtips=1|bgtype=0>
+<Text|id=3f|x=71.0|y=320.0|size=16|outline=2|color=255|text=符石碎片200个>
+<Text|id=6f|x=87.0|y=340.0|size=16|outline=2|color=255|text=元宝50万>
+<Text|id=7f|x=91.0|y=361.0|size=16|outline=2|color=255|text=点卡5万>
+<Img|id=4f|x=20.0|y=224.0|reset=1|move=0|img=npc/fsdh/22.png|show=4|loadDelay=0|esc=1>
+<Text|id=5f|x=93.0|y=227.0|size=16|outline=1|color=58|text=魔法防御+10>
+<Text|id=8f|a=4|percentx=50.0|percenty=6.7|size=16|outline=2|color=251|text=魔抗符石>
+
+<Img|id=6a|children={1g,2g,3g,4g,5g,6g,7g,8g}|x=550.0|y=62.0|width=250|height=465|move=0|loadDelay=0|show=4|esc=1|img=npc/fsdh/2-2.png|reset=1>
+<Button|id=1g|x=50.0|y=386.0|width=150|height=65|nimg=npc/fsdh/2.png|mimg=npc/fsdh/2.png|link=@确定兑换#符石类型=0#兑换物品=生命>
+<ItemShow|id=2g|x=94|y=94|width=70|height=70|itemid=10200|itemcount=1|showtips=1|bgtype=0>
+<Text|id=3g|x=71.0|y=320.0|size=16|outline=2|color=255|text=符石碎片200个>
+<Text|id=6g|x=87.0|y=340.0|size=16|outline=2|color=255|text=元宝50万>
+<Text|id=7g|x=91.0|y=361.0|size=16|outline=2|color=255|text=点卡5万>
+<Img|id=4g|x=20.0|y=224.0|reset=1|move=0|img=npc/fsdh/22.png|show=4|loadDelay=0|esc=1>
+<Text|id=5g|x=85.0|y=227.0|size=16|outline=1|color=58|text=生命值+200>
+<Text|id=8g|a=4|percentx=50.0|percenty=6.7|size=16|outline=2|color=251|text=生命符石>
+
+#IF
+equal S$切换页面 经验符石
+#say
+
+<Img|id=7a|children={1h,2h,3h,4h,5h,6h,7h,8h}|x=550.0|y=62.0|width=250|height=465|move=0|loadDelay=0|show=4|esc=1|img=npc/fsdh/4-4.png|reset=1>
+<Button|id=1h|x=50.0|y=386.0|width=150|height=65|nimg=npc/fsdh/4.png|mimg=npc/fsdh/4.png|link=@确定兑换#符石类型=1#兑换物品=经验源泉>
+<ItemShow|id=2h|x=94|y=94|width=70|height=70|itemid=10201|itemcount=1|showtips=1|bgtype=0>
+<Text|id=3h|x=71.0|y=320.0|size=16|outline=2|color=255|text=符石碎片800个>
+<Text|id=6h|x=87.0|y=340.0|size=16|outline=2|color=255|text=元宝200万>
+<Text|id=7h|x=91.0|y=361.0|size=16|outline=2|color=255|text=点卡20万>
+<Img|id=4h|x=20.0|y=224.0|reset=1|move=0|img=npc/fsdh/44.png|show=4|loadDelay=0|esc=1>
+<Text|id=5h|x=68.0|y=227.0|size=16|outline=1|color=254|text=每秒增加500经验>
+<Text|id=8h|a=4|percentx=50.0|percenty=6.7|size=16|outline=2|color=251|text=经验源泉符石>
+
+;<Img|id=8a|children={1i,2i,3i,4i,5i,6i,7i,8i}|x=550.0|y=62.0|width=250|height=465|move=0|loadDelay=0|show=4|esc=1|img=npc/fsdh/4-4.png|reset=1>
+;<Button|id=1i|x=50.0|y=386.0|width=150|height=65|nimg=npc/fsdh/4.png|mimg=npc/fsdh/4.png|link=@确定兑换#符石类型=1#兑换物品=生财有道>
+;<ItemShow|id=2i|x=94|y=94|width=70|height=70|itemid=10202|itemcount=1|showtips=1|bgtype=0>
+;<Text|id=3i|x=71.0|y=320.0|size=16|outline=2|color=255|text=符石碎片800个>
+;<Text|id=6i|x=87.0|y=340.0|size=16|outline=2|color=255|text=元宝200万>
+;<Text|id=7i|x=91.0|y=361.0|size=16|outline=2|color=255|text=点卡20万>
+;<Img|id=4i|x=20.0|y=224.0|reset=1|move=0|img=npc/fsdh/44.png|show=4|loadDelay=0|esc=1>
+;<Text|id=5i|x=54.0|y=227.0|size=16|outline=1|color=254|text=回收装备经验加成5%>
+;<Text|id=8i|a=4|percentx=50.0|percenty=6.7|size=16|outline=2|color=251|text=生财有道符石>
+
+<Img|id=9a|children={1j,2j,3j,4j,5j,6j,7j,8j}|x=550.0|y=62.0|width=250|height=465|move=0|loadDelay=0|show=4|esc=1|img=npc/fsdh/4-4.png|reset=1>
+<Button|id=1j|x=50.0|y=386.0|width=150|height=65|nimg=npc/fsdh/4.png|mimg=npc/fsdh/4.png|link=@确定兑换#符石类型=1#兑换物品=略有所得>
+<ItemShow|id=2j|x=94|y=94|width=70|height=70|itemid=10203|itemcount=1|showtips=1|bgtype=0>
+<Text|id=3j|x=71.0|y=320.0|size=16|outline=2|color=255|text=符石碎片800个>
+<Text|id=6j|x=87.0|y=340.0|size=16|outline=2|color=255|text=元宝200万>
+<Text|id=7j|x=91.0|y=361.0|size=16|outline=2|color=255|text=点卡20万>
+<Img|id=4j|x=20.0|y=224.0|reset=1|move=0|img=npc/fsdh/44.png|show=4|loadDelay=0|esc=1>
+<Text|id=5j|x=48.0|y=227.0|size=16|outline=1|color=254|text=击杀携带狂暴者经验+1w>
+<Text|id=8j|a=4|percentx=50.0|percenty=6.7|size=16|outline=2|color=251|text=略有所得符石>
+
+<Img|id=10a|children={1k,2k,3k,4k,5k,6k,7k,8k}|x=550.0|y=62.0|width=250|height=465|move=0|loadDelay=0|show=4|esc=1|img=npc/fsdh/4-4.png|reset=1>
+<Button|id=1k|x=50.0|y=386.0|width=150|height=65|nimg=npc/fsdh/4.png|mimg=npc/fsdh/4.png|link=@确定兑换#符石类型=0#兑换物品=天>
+<ItemShow|id=2k|x=94|y=94|width=70|height=70|itemid=10204|itemcount=1|showtips=1|bgtype=0>
+<Text|id=3k|x=71.0|y=320.0|size=16|outline=2|color=255|text=符石碎片200个>
+<Text|id=6k|x=87.0|y=340.0|size=16|outline=2|color=255|text=元宝50万>
+<Text|id=7k|x=91.0|y=361.0|size=16|outline=2|color=255|text=点卡5万>
+<Img|id=4k|x=20.0|y=224.0|reset=1|move=0|img=npc/fsdh/44.png|show=4|loadDelay=0|esc=1>
+<Text|id=5k|x=69.0|y=227.0|size=16|outline=1|color=254|text=每秒增加经验50>
+<Text|id=8k|a=4|percentx=50.0|percenty=6.7|size=16|outline=2|color=251|text=天符石>
+
+<Img|id=11a|children={1l,2l,3l,4l,5l,6l,7l,8l}|x=550.0|y=62.0|width=250|height=465|move=0|loadDelay=0|show=4|esc=1|img=npc/fsdh/4-4.png|reset=1>
+<Button|id=1l|x=50.0|y=386.0|width=150|height=65|nimg=npc/fsdh/4.png|mimg=npc/fsdh/4.png|link=@确定兑换#符石类型=0#兑换物品=地>
+<ItemShow|id=2l|x=94|y=94|width=70|height=70|itemid=10205|itemcount=1|showtips=1|bgtype=0>
+<Text|id=3l|x=71.0|y=320.0|size=16|outline=2|color=255|text=符石碎片200个>
+<Text|id=6l|x=87.0|y=340.0|size=16|outline=2|color=255|text=元宝50万>
+<Text|id=7l|x=91.0|y=361.0|size=16|outline=2|color=255|text=点卡5万>
+<Img|id=4l|x=20.0|y=224.0|reset=1|move=0|img=npc/fsdh/44.png|show=4|loadDelay=0|esc=1>
+<Text|id=5l|x=69.0|y=227.0|size=16|outline=1|color=254|text=每秒增加经验50>
+<Text|id=8l|a=4|percentx=50.0|percenty=6.7|size=16|outline=2|color=251|text=地符石>
+
+<Img|id=12a|children={1m,2m,3m,4m,5m,6m,7m,8m}|x=550.0|y=62.0|width=250|height=465|move=0|loadDelay=0|show=4|esc=1|img=npc/fsdh/4-4.png|reset=1>
+<Button|id=1m|x=50.0|y=386.0|width=150|height=65|nimg=npc/fsdh/4.png|mimg=npc/fsdh/4.png|link=@确定兑换#符石类型=0#兑换物品=离>
+<ItemShow|id=2m|x=94|y=94|width=70|height=70|itemid=10206|itemcount=1|showtips=1|bgtype=0>
+<Text|id=3m|x=71.0|y=320.0|size=16|outline=2|color=255|text=符石碎片200个>
+<Text|id=6m|x=87.0|y=340.0|size=16|outline=2|color=255|text=元宝50万>
+<Text|id=7m|x=91.0|y=361.0|size=16|outline=2|color=255|text=点卡5万>
+<Img|id=4m|x=20.0|y=224.0|reset=1|move=0|img=npc/fsdh/44.png|show=4|loadDelay=0|esc=1>
+<Text|id=5m|x=69.0|y=227.0|size=16|outline=1|color=254|text=每秒增加经验50>
+<Text|id=8m|a=4|percentx=50.0|percenty=6.7|size=16|outline=2|color=251|text=离符石>
+
+#IF
+equal S$切换页面 增伤符石
+#say
+<Img|id=13a|children={1n,2n,3n,4n,5n,6n,7n,8n}|x=550.0|y=62.0|width=250|height=465|move=0|loadDelay=0|show=4|esc=1|img=npc/fsdh/3-3.png|reset=1>
+<Button|id=1n|x=50.0|y=386.0|width=150|height=65|nimg=npc/fsdh/3.png|mimg=npc/fsdh/3.png|link=@确定兑换#符石类型=1#兑换物品=战之哀伤>
+<ItemShow|id=2n|x=94|y=94|width=70|height=70|itemid=10207|itemcount=1|showtips=1|bgtype=0>
+<Text|id=3n|x=71.0|y=320.0|size=16|outline=2|color=255|text=符石碎片800个>
+<Text|id=6n|x=87.0|y=340.0|size=16|outline=2|color=255|text=元宝200万>
+<Text|id=7n|x=91.0|y=361.0|size=16|outline=2|color=255|text=点卡20万>
+<Img|id=4n|x=20.0|y=224.0|reset=1|move=0|img=npc/fsdh/33.png|show=4|loadDelay=0|esc=1>
+<Text|id=5n|x=81.0|y=227.0|size=16|outline=1|color=151|text=对战增伤5%>
+<Text|id=8n|a=4|percentx=50.0|percenty=6.7|size=16|outline=2|color=251|text=战之哀伤符石>
+
+<Img|id=14a|children={1o,2o,3o,4o,5o,6o,7o,8o}|x=550.0|y=62.0|width=250|height=465|move=0|loadDelay=0|show=4|esc=1|img=npc/fsdh/3-3.png|reset=1>
+<Button|id=1o|x=50.0|y=386.0|width=150|height=65|nimg=npc/fsdh/3.png|mimg=npc/fsdh/3.png|link=@确定兑换#符石类型=1#兑换物品=法之哀伤>
+<ItemShow|id=2o|x=94|y=94|width=70|height=70|itemid=10208|itemcount=1|showtips=1|bgtype=0>
+<Text|id=3o|x=71.0|y=320.0|size=16|outline=2|color=255|text=符石碎片800个>
+<Text|id=6o|x=87.0|y=340.0|size=16|outline=2|color=255|text=元宝200万>
+<Text|id=7o|x=91.0|y=361.0|size=16|outline=2|color=255|text=点卡20万>
+<Img|id=4o|x=20.0|y=224.0|reset=1|move=0|img=npc/fsdh/33.png|show=4|loadDelay=0|esc=1>
+<Text|id=5o|x=81.0|y=227.0|size=16|outline=1|color=151|text=对法增伤5%>
+<Text|id=8o|a=4|percentx=50.0|percenty=6.7|size=16|outline=2|color=251|text=法之哀伤符石>
+
+<Img|id=15a|children={1p,2p,3p,4p,5p,6p,7p,8p}|x=550.0|y=62.0|width=250|height=465|move=0|loadDelay=0|show=4|esc=1|img=npc/fsdh/3-3.png|reset=1>
+<Button|id=1p|x=50.0|y=386.0|width=150|height=65|nimg=npc/fsdh/3.png|mimg=npc/fsdh/3.png|link=@确定兑换#符石类型=1#兑换物品=道之哀伤>
+<ItemShow|id=2p|x=94|y=94|width=70|height=70|itemid=10209|itemcount=1|showtips=1|bgtype=0>
+<Text|id=3p|x=71.0|y=320.0|size=16|outline=2|color=255|text=符石碎片800个>
+<Text|id=6p|x=87.0|y=340.0|size=16|outline=2|color=255|text=元宝200万>
+<Text|id=7p|x=91.0|y=361.0|size=16|outline=2|color=255|text=点卡20万>
+<Img|id=4p|x=20.0|y=224.0|reset=1|move=0|img=npc/fsdh/33.png|show=4|loadDelay=0|esc=1>
+<Text|id=5p|x=81.0|y=227.0|size=16|outline=1|color=151|text=对道增伤5%>
+<Text|id=8p|a=4|percentx=50.0|percenty=6.7|size=16|outline=2|color=251|text=道之哀伤符石>
+
+<Img|id=16a|children={1q,2q,3q,4q,5q,6q,7q,8q}|x=550.0|y=62.0|width=250|height=465|move=0|loadDelay=0|show=4|esc=1|img=npc/fsdh/3-3.png|reset=1>
+<Button|id=1q|x=50.0|y=386.0|width=150|height=65|nimg=npc/fsdh/3.png|mimg=npc/fsdh/3.png|link=@确定兑换#符石类型=0#兑换物品=暴击伤害>
+<ItemShow|id=2q|x=94|y=94|width=70|height=70|itemid=10210|itemcount=1|showtips=1|bgtype=0>
+<Text|id=3q|x=71.0|y=320.0|size=16|outline=2|color=255|text=符石碎片200个>
+<Text|id=6q|x=87.0|y=340.0|size=16|outline=2|color=255|text=元宝50万>
+<Text|id=7q|x=91.0|y=361.0|size=16|outline=2|color=255|text=点卡5万>
+<Img|id=4q|x=20.0|y=224.0|reset=1|move=0|img=npc/fsdh/33.png|show=4|loadDelay=0|esc=1>
+<Text|id=5q|x=93.0|y=227.0|size=16|outline=1|color=151|text=暴击伤害+3%>
+<Text|id=8q|a=4|percentx=50.0|percenty=6.7|size=16|outline=2|color=251|text=暴击伤害符石>
+
+<Img|id=17a|children={1r,2r,3r,4r,5r,6r,7r,8r}|x=550.0|y=62.0|width=250|height=465|move=0|loadDelay=0|show=4|esc=1|img=npc/fsdh/3-3.png|reset=1>
+<Button|id=1r|x=50.0|y=386.0|width=150|height=65|nimg=npc/fsdh/3.png|mimg=npc/fsdh/3.png|link=@确定兑换#符石类型=0#兑换物品=暴击率>
+<ItemShow|id=2r|x=94|y=94|width=70|height=70|itemid=10211|itemcount=1|showtips=1|bgtype=0>
+<Text|id=3r|x=71.0|y=320.0|size=16|outline=2|color=255|text=符石碎片200个>
+<Text|id=6r|x=87.0|y=340.0|size=16|outline=2|color=255|text=元宝50万>
+<Text|id=7r|x=91.0|y=361.0|size=16|outline=2|color=255|text=点卡5万>
+<Img|id=4r|x=20.0|y=224.0|reset=1|move=0|img=npc/fsdh/33.png|show=4|loadDelay=0|esc=1>
+<Text|id=5r|x=93.0|y=227.0|size=16|outline=1|color=151|text=暴击率+3%>
+<Text|id=8r|a=4|percentx=50.0|percenty=6.7|size=16|outline=2|color=251|text=暴击率符石>
+
+<Img|id=18a|children={1s,2s,3s,4s,5s,6s,7s,8s}|x=550.0|y=62.0|width=250|height=465|move=0|loadDelay=0|show=4|esc=1|img=npc/fsdh/3-3.png|reset=1>
+<Button|id=1s|x=50.0|y=386.0|width=150|height=65|nimg=npc/fsdh/3.png|mimg=npc/fsdh/3.png|link=@确定兑换#符石类型=0#兑换物品=攻击伤害>
+<ItemShow|id=2s|x=94|y=94|width=70|height=70|itemid=10212|itemcount=1|showtips=1|bgtype=0>
+<Text|id=3s|x=71.0|y=320.0|size=16|outline=2|color=255|text=符石碎片200个>
+<Text|id=6s|x=87.0|y=340.0|size=16|outline=2|color=255|text=元宝50万>
+<Text|id=7s|x=91.0|y=361.0|size=16|outline=2|color=255|text=点卡5万>
+<Img|id=4s|x=20.0|y=224.0|reset=1|move=0|img=npc/fsdh/33.png|show=4|loadDelay=0|esc=1>
+<Text|id=5s|x=93.0|y=227.0|size=16|outline=1|color=151|text=攻击伤害+3%>
+<Text|id=8s|a=4|percentx=50.0|percenty=6.7|size=16|outline=2|color=251|text=攻击伤害符石>
+
+#IF
+equal S$切换页面 技能符石
+#say
+<Img|id=19a|children={1t,2t,3t,4t,5t,6t,7t,8t}|x=550.0|y=62.0|width=250|height=465|move=0|loadDelay=0|show=4|esc=1|img=npc/fsdh/1-1.png|reset=1>
+<Button|id=1t|x=50.0|y=386.0|width=150|height=65|nimg=npc/fsdh/1.png|mimg=npc/fsdh/1.png|link=@确定兑换#符石类型=1#兑换物品=虎符沉默>
+<ItemShow|id=2t|x=94|y=94|width=70|height=70|itemid=10213|itemcount=1|showtips=1|bgtype=0>
+<Text|id=3t|x=71.0|y=320.0|size=16|outline=2|color=255|text=符石碎片800个>
+<Text|id=6t|x=87.0|y=340.0|size=16|outline=2|color=255|text=元宝200万>
+<Text|id=7t|x=91.0|y=361.0|size=16|outline=2|color=255|text=点卡20万>
+<Img|id=4t|x=20.0|y=224.0|reset=1|move=0|img=npc/fsdh/11.png|show=4|loadDelay=0|esc=1>
+<Text|id=5t|x=49.0|y=208.0|size=16|outline=1|color=242|text=技能以及攻击5%的概率\使目标2秒无法攻击、\施法、可以跑动、走动>
+<Text|id=8t|a=4|percentx=50.0|percenty=6.7|size=16|outline=2|color=251|text=虎符沉默符石>
+
+<Img|id=20a|children={1u,2u,3u,4u,5u,6u,7u,8u}|x=550.0|y=62.0|width=250|height=465|move=0|loadDelay=0|show=4|esc=1|img=npc/fsdh/1-1.png|reset=1>
+<Button|id=1u|x=50.0|y=386.0|width=150|height=65|nimg=npc/fsdh/1.png|mimg=npc/fsdh/1.png|link=@确定兑换#符石类型=1#兑换物品=顺手牵羊>
+<ItemShow|id=2u|x=94|y=94|width=70|height=70|itemid=10214|itemcount=1|showtips=1|bgtype=0>
+<Text|id=3u|x=71.0|y=320.0|size=16|outline=2|color=255|text=符石碎片800个>
+<Text|id=6u|x=87.0|y=340.0|size=16|outline=2|color=255|text=元宝200万>
+<Text|id=7u|x=91.0|y=361.0|size=16|outline=2|color=255|text=点卡20万>
+<Img|id=4u|x=20.0|y=224.0|reset=1|move=0|img=npc/fsdh/11.png|show=4|loadDelay=0|esc=1>
+<Text|id=5u|x=49.0|y=208.0|size=16|outline=1|color=242|text=技能以及攻击5%的概率\使目标背包内回城随机\掉落>
+<Text|id=8u|a=4|percentx=50.0|percenty=6.7|size=16|outline=2|color=251|text=顺手牵羊符石>
+
+<Img|id=21a|children={1v,2v,3v,4v,5v,6v,7v,8v}|x=550.0|y=62.0|width=250|height=465|move=0|loadDelay=0|show=4|esc=1|img=npc/fsdh/1-1.png|reset=1>
+<Button|id=1v|x=50.0|y=386.0|width=150|height=65|nimg=npc/fsdh/1.png|mimg=npc/fsdh/1.png|link=@确定兑换#符石类型=1#兑换物品=蛛网束缚>
+<ItemShow|id=2v|x=94|y=94|width=70|height=70|itemid=10215|itemcount=1|showtips=1|bgtype=0>
+<Text|id=3v|x=71.0|y=320.0|size=16|outline=2|color=255|text=符石碎片800个>
+<Text|id=6v|x=87.0|y=340.0|size=16|outline=2|color=255|text=元宝200万>
+<Text|id=7v|x=91.0|y=361.0|size=16|outline=2|color=255|text=点卡20万>
+<Img|id=4v|x=20.0|y=224.0|reset=1|move=0|img=npc/fsdh/11.png|show=4|loadDelay=0|esc=1>
+<Text|id=5v|x=49.0|y=219.0|size=16|outline=1|color=242|text=技能以及攻击5%的概率\使目标移动速度减速2秒>
+<Text|id=8v|a=4|percentx=50.0|percenty=6.7|size=16|outline=2|color=251|text=蛛网束缚符石>
+
+<Img|id=22a|children={1w,2w,3w,4w,5w,6w,7w,8w}|x=550.0|y=62.0|width=250|height=465|move=0|loadDelay=0|show=4|esc=1|img=npc/fsdh/1-1.png|reset=1>
+<Button|id=1w|x=50.0|y=386.0|width=150|height=65|nimg=npc/fsdh/1.png|mimg=npc/fsdh/1.png|link=@确定兑换#符石类型=0#兑换物品=掠夺>
+<ItemShow|id=2w|x=94|y=94|width=70|height=70|itemid=10216|itemcount=1|showtips=1|bgtype=0>
+<Text|id=3w|x=71.0|y=320.0|size=16|outline=2|color=255|text=符石碎片200个>
+<Text|id=6w|x=87.0|y=340.0|size=16|outline=2|color=255|text=元宝50万>
+<Text|id=7w|x=91.0|y=361.0|size=16|outline=2|color=255|text=点卡5万>
+<Img|id=4w|x=20.0|y=224.0|reset=1|move=0|img=npc/fsdh/11.png|show=4|loadDelay=0|esc=1>
+<Text|id=5w|x=67.0|y=227.0|size=16|outline=1|color=242|text=增加目标爆率2%>
+<Text|id=8w|a=4|percentx=50.0|percenty=6.7|size=16|outline=2|color=251|text=掠夺符石>
+
+<Img|id=23a|children={1x,2x,3x,4x,5x,6x,7x,8x}|x=550.0|y=62.0|width=250|height=465|move=0|loadDelay=0|show=4|esc=1|img=npc/fsdh/1-1.png|reset=1>
+<Button|id=1x|x=50.0|y=386.0|width=150|height=65|nimg=npc/fsdh/1.png|mimg=npc/fsdh/1.png|link=@确定兑换#符石类型=0#兑换物品=梦魇>
+<ItemShow|id=2x|x=94|y=94|width=70|height=70|itemid=10217|itemcount=1|showtips=1|bgtype=0>
+<Text|id=3x|x=71.0|y=320.0|size=16|outline=2|color=255|text=符石碎片200个>
+<Text|id=6x|x=87.0|y=340.0|size=16|outline=2|color=255|text=元宝50万>
+<Text|id=7x|x=91.0|y=361.0|size=16|outline=2|color=255|text=点卡5万>
+<Img|id=4x|x=20.0|y=224.0|reset=1|move=0|img=npc/fsdh/11.png|show=4|loadDelay=0|esc=1>
+<Text|id=5x|x=67.0|y=227.0|size=16|outline=1|color=242|text=对怪暴击率加2%>
+<Text|id=8x|a=4|percentx=50.0|percenty=6.7|size=16|outline=2|color=251|text=梦魇符石>
+
+<Img|id=24a|children={1y,2y,3y,4y,5y,6y,7y,8y}|x=550.0|y=62.0|width=250|height=465|move=0|loadDelay=0|show=4|esc=1|img=npc/fsdh/1-1.png|reset=1>
+<Button|id=1y|x=50.0|y=386.0|width=150|height=65|nimg=npc/fsdh/1.png|mimg=npc/fsdh/1.png|link=@确定兑换#符石类型=0#兑换物品=暗殇>
+<ItemShow|id=2y|x=94|y=94|width=70|height=70|itemid=10218|itemcount=1|showtips=1|bgtype=0>
+<Text|id=3y|x=71.0|y=320.0|size=16|outline=2|color=255|text=符石碎片200个>
+<Text|id=6y|x=87.0|y=340.0|size=16|outline=2|color=255|text=元宝50万>
+<Text|id=7y|x=91.0|y=361.0|size=16|outline=2|color=255|text=点卡5万>
+<Img|id=4y|x=20.0|y=224.0|reset=1|move=0|img=npc/fsdh/11.png|show=4|loadDelay=0|esc=1>
+<Text|id=5y|x=84.0|y=227.0|size=16|outline=1|color=242|text=对怪增伤2%>
+<Text|id=8y|a=4|percentx=50.0|percenty=6.7|size=16|outline=2|color=251|text=暗殇符石>
+
+
+[@确定兑换]
+
+
+#IF
+equal S$符石类型 1
+#ACT
+goto @大符石兑换
+#elseact
+goto @小符石兑换
+
+
+[@大符石兑换]
+#if
+not CHECKITEM 符石碎片 800
+#act
+sendmsg 9 你的符石碎片不足800,暂不能兑换！
+break
+
+#if
+CheckBindMoney 绑定元宝 < 2000000
+#act
+sendmsg 9 你的元宝不足200万,暂不能兑换！
+break
+
+#if
+CheckBindMoney 绑定点卡 < 200000
+#act
+sendmsg 9 你的点卡不足20万,暂不能兑换！
+break
+
+#if
+#act
+TAKE 符石碎片 800
+ChangeBindMoney 绑定元宝 2000000
+ChangeBindMoney 绑定点卡 200000
+give <$STR(S$兑换物品)> 1
+break
+
+[@小符石兑换]
+#if
+not CHECKITEM 符石碎片 200
+#act
+sendmsg 9 你的符石碎片不足200,暂不能兑换！
+break
+
+#if
+CheckBindMoney 绑定元宝 < 500000
+#act
+sendmsg 9 你的元宝不足50万,暂不能兑换！
+break
+
+#if
+CheckBindMoney 绑定点卡 < 50000
+#act
+sendmsg 9 你的点卡不足5万,暂不能兑换！
+break
+
+#if
+#act
+TAKE 符石碎片 200
+ChangeBindMoney 绑定元宝 500000
+ChangeBindMoney 绑定点卡 50000
+give <$STR(S$兑换物品)> 1
+break
+
+[@生命符石]
+#IF
+#ACT
+MOV S$切换页面 生命符石
+goto @页面展示
+
+[@经验符石]
+#IF
+#ACT
+MOV S$切换页面 经验符石
+goto @页面展示
+
+[@增伤符石]
+#IF
+#ACT
+MOV S$切换页面 增伤符石
+goto @页面展示
+
+[@技能符石]
+#IF
+#ACT
+MOV S$切换页面 技能符石
+goto @页面展示

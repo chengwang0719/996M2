@@ -1,0 +1,201 @@
+[@福利大厅按钮]
+{
+
+
+#if
+EQUAL J10 0
+#act
+MOV S$七日签到红点 <Effect|x=101.0|y=45.0|scale=1|speed=1|dir=5|effectid=8417|act=0|effecttype=0>
+set [130] 1
+#elseact
+MOV S$七日签到红点
+set [130] 0
+
+#if
+#act
+MOV S$杀怪奖励
+set [131] 0
+
+
+#if
+equal J36 0
+LARGE J200 9
+#act
+MOV S$杀怪奖励 <Effect|x=101.0|y=101.0|scale=1|speed=1|dir=5|effectid=8417|act=0|effecttype=0>
+set [131] 1
+
+
+#if
+equal J37 0
+LARGE J200 19
+#act
+MOV S$杀怪奖励 <Effect|x=101.0|y=101.0|scale=1|speed=1|dir=5|effectid=8417|act=0|effecttype=0>
+set [131] 1
+
+#if
+equal J38 0
+LARGE J200 29
+#act
+MOV S$杀怪奖励 <Effect|x=101.0|y=101.0|scale=1|speed=1|dir=5|effectid=8417|act=0|effecttype=0>
+set [131] 1
+
+#if
+equal J39 0
+LARGE J200 39
+#act
+MOV S$杀怪奖励 <Effect|x=101.0|y=101.0|scale=1|speed=1|dir=5|effectid=8417|act=0|effecttype=0>
+set [131] 1
+
+#if
+equal J40 0
+LARGE J200 49
+#act
+MOV S$杀怪奖励 <Effect|x=101.0|y=101.0|scale=1|speed=1|dir=5|effectid=8417|act=0|effecttype=0>
+set [131] 1
+
+#if
+equal J41 0
+LARGE J200 99
+#act
+MOV S$杀怪奖励 <Effect|x=101.0|y=101.0|scale=1|speed=1|dir=5|effectid=8417|act=0|effecttype=0>
+set [131] 1
+
+#if
+equal J42 0
+LARGE J200 199
+#act
+MOV S$杀怪奖励 <Effect|x=101.0|y=101.0|scale=1|speed=1|dir=5|effectid=8417|act=0|effecttype=0>
+set [131] 1
+
+#if
+equal J43 0
+LARGE J200 499
+#act
+MOV S$杀怪奖励 <Effect|x=101.0|y=101.0|scale=1|speed=1|dir=5|effectid=8417|act=0|effecttype=0>
+set [131] 1
+
+#if
+equal J44 0
+LARGE J200 999
+#act
+MOV S$杀怪奖励 <Effect|x=101.0|y=101.0|scale=1|speed=1|dir=5|effectid=8417|act=0|effecttype=0>
+set [131] 1
+
+#IF
+#ACT
+MOV S$在线奖励
+set [132] 0
+
+#if
+equal J301 0
+LARGE J201 4
+#act
+MOV S$在线奖励 <Effect|x=101.0|y=158.0|scale=1|speed=1|dir=5|effectid=8417|act=0|effecttype=0>
+set [132] 1
+
+#if
+equal J302 0
+LARGE J201 9
+#act
+MOV S$在线奖励 <Effect|x=101.0|y=158.0|scale=1|speed=1|dir=5|effectid=8417|act=0|effecttype=0>
+set [132] 1
+
+#if
+equal J303 0
+LARGE J201 19
+#act
+MOV S$在线奖励 <Effect|x=101.0|y=158.0|scale=1|speed=1|dir=5|effectid=8417|act=0|effecttype=0>
+set [132] 1
+
+#if
+equal J304 0
+LARGE J201 29
+#act
+MOV S$在线奖励 <Effect|x=101.0|y=158.0|scale=1|speed=1|dir=5|effectid=8417|act=0|effecttype=0>
+set [132] 1
+
+#if
+equal J305 0
+LARGE J201 59
+#act
+MOV S$在线奖励 <Effect|x=101.0|y=158.0|scale=1|speed=1|dir=5|effectid=8417|act=0|effecttype=0>
+set [132] 1
+
+#if
+equal J306 0
+LARGE J201 119
+#act
+MOV S$在线奖励 <Effect|x=101.0|y=158.0|scale=1|speed=1|dir=5|effectid=8417|act=0|effecttype=0>
+set [132] 1
+
+#if
+equal J307 0
+LARGE J201 179
+#act
+MOV S$在线奖励 <Effect|x=101.0|y=158.0|scale=1|speed=1|dir=5|effectid=8417|act=0|effecttype=0>
+set [132] 1
+
+#if
+equal J308 0
+LARGE J201 359
+#act
+MOV S$在线奖励 <Effect|x=101.0|y=158.0|scale=1|speed=1|dir=5|effectid=8417|act=0|effecttype=0>
+set [132] 1
+
+
+#if
+#act
+MOV S$等级奖励
+set [133] 0
+
+#if
+CHECKLEVELEX ? 30
+check [30] 0 
+#act
+MOV S$等级奖励 <Effect|x=101.0|y=213.0|scale=1|speed=1|dir=5|effectid=8417|act=0|effecttype=0>
+set [133] 1
+
+#if
+CHECKLEVELEX ? 35
+check [31] 0 
+#act
+MOV S$等级奖励 <Effect|x=101.0|y=213.0|scale=1|speed=1|dir=5|effectid=8417|act=0|effecttype=0>
+set [133] 1
+
+#if
+CHECKLEVELEX ? 40
+check [32] 0 
+#act
+MOV S$等级奖励 <Effect|x=101.0|y=213.0|scale=1|speed=1|dir=5|effectid=8417|act=0|effecttype=0>
+set [133] 1
+
+#if
+CHECKLEVELEX ? 45
+check [33] 0 
+#act
+MOV S$等级奖励 <Effect|x=101.0|y=213.0|scale=1|speed=1|dir=5|effectid=8417|act=0|effecttype=0>
+set [133] 1
+
+#if
+CHECKLEVELEX ? 50
+check [34] 0 
+#act
+MOV S$等级奖励 <Effect|x=101.0|y=213.0|scale=1|speed=1|dir=5|effectid=8417|act=0|effecttype=0>
+set [133] 1
+
+#if
+CHECKLEVELEX ? 55
+check [35] 0 
+#act
+MOV S$等级奖励 <Effect|x=101.0|y=213.0|scale=1|speed=1|dir=5|effectid=8417|act=0|effecttype=0>
+set [133] 1
+
+#if
+CHECKLEVELEX ? 60
+check [36] 0 
+#act
+MOV S$等级奖励 <Effect|x=101.0|y=213.0|scale=1|speed=1|dir=5|effectid=8417|act=0|effecttype=0>
+set [133] 1
+
+
+}

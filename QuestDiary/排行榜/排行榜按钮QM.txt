@@ -1,0 +1,23 @@
+[@排行榜按钮QM]
+{
+#IF
+Equal <$CLIENTFLAG> 1
+#ACT
+MOV S$排行榜 <Button|a=0|x=45.0|y=70.0|tipsx=10|tipsy=110|nimg=private/rank_ui/rank_ui_win32/dj-1.png|outlinecolor=0|outline=1|color=254|size=18|link=@排行榜_全部等级>
+INC S$排行榜 <Button|a=0|x=45.0|y=160.0|tipsx=10|tipsy=110|nimg=private/rank_ui/rank_ui_win32/zs-1.png|outlinecolor=0|outline=1|color=250|size=18|link=@排行榜_战士等级>
+INC S$排行榜 <Button|a=0|x=45.0|y=250.0|tipsx=10|tipsy=110|nimg=private/rank_ui/rank_ui_win32/fs-1.png|outlinecolor=0|outline=1|color=250|size=18|link=@排行榜_法师等级>
+INC S$排行榜 <Button|a=0|x=45.0|y=340.0|tipsx=10|tipsy=110|nimg=private/rank_ui/rank_ui_win32/ds-1.png|outlinecolor=0|outline=1|color=250|size=18|link=@排行榜_道士等级>
+ADDBUTTON 45 999 <$STR(S$排行榜)>
+
+
+#IF
+Equal <$CLIENTFLAG> 2
+#ACT
+MOV S$排行榜 <Button|a=0|width=45|height=115|x=-3.0|y=52.0|tipsx=10|tipsy=110|nimg=private/rank_ui/rank_ui_mobile/dj-1.png|outlinecolor=0|outline=1|color=254|size=18|link=@排行榜_全部等级>
+INC S$排行榜 <Button|a=0|width=45|height=115|x=-3.0|y=166.0|tipsx=10|tipsy=110|nimg=private/rank_ui/rank_ui_mobile/zs-1.png|outlinecolor=0|outline=1|color=250|size=18|link=@排行榜_战士等级>
+INC S$排行榜 <Button|a=0|width=45|height=115|x=-3.0|y=281.0|tipsx=10|tipsy=110|nimg=private/rank_ui/rank_ui_mobile/fs-1.png|outlinecolor=0|outline=1|color=250|size=18|link=@排行榜_法师等级>
+INC S$排行榜 <Button|a=0|width=45|height=115|x=-3.0|y=395.0|tipsx=10|tipsy=110|nimg=private/rank_ui/rank_ui_mobile/ds-1.png|outlinecolor=0|outline=1|color=250|size=18|link=@排行榜_道士等级>
+ADDBUTTON 45 999 <$STR(S$排行榜)>
+
+
+}

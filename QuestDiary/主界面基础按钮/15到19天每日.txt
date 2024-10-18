@@ -1,0 +1,227 @@
+[@15到19界面]
+{
+;#if
+;EQUAL G0 14
+;#act
+;mov S$开启状态 活动剩余五天
+
+;#if
+;EQUAL G0 15
+;#act
+;mov S$开启状态 活动剩余四天
+
+;#if
+;EQUAL G0 16
+;#act
+;mov S$开启状态 活动剩余三天
+
+;#if
+;EQUAL G0 17
+;#act
+;mov S$开启状态 活动剩余两天
+
+;#if
+;EQUAL G0 18
+;#act
+;mov S$开启状态 活动剩余一天
+
+;#if
+;EQUAL G0 19
+;#act
+;mov S$开启状态 活动已结束
+
+#if
+large G65 0
+#act
+mov S$开启状态 活动剩余<$str(G65)>天
+
+#if
+EQUAL G65 0
+#act
+mov S$开启状态 活动已结束
+
+#if
+#act
+#say
+<Img|x=302.8|y=130.7|width=546|height=379|img=public/bg_npc_01.png|loadDelay=1|esc=1|move=0|show=0|reset=1|bg=1>
+<Layout|x=96.0|y=-307.0|width=80|height=80|link=@exit>
+<Button|x=819.0|y=125.0|pimg=public/1900000511.png|nimg=public/1900000510.png|link=@exit>
+;<Text|x=341.0|y=158.0|color=222|size=18|text=特惠限时五天活动:当天累充达到即可领取[凌晨准时刷新活动]>
+<Text|x=341.0|y=158.0|color=222|size=18|text=当天累充达到即可领取[隔天充值不叠加]>
+<Text|x=337.0|y=201.0|color=253|size=18|text=今日充值\达到 100>
+<ItemShow|x=412.0|y=183.0|width=70|height=70|itemid=20154|itemcount=20|bgtype=1|showtips=1>
+<ItemShow|x=477.0|y=183.0|width=70|height=70|itemid=20157|itemcount=20|bgtype=1|showtips=1>
+<ItemShow|x=539.4|y=183.0|width=70|height=70|itemid=20129|itemcount=2|bgtype=1|showtips=1>
+<ItemShow|x=603.6|y=183.0|width=70|height=70|itemid=20040|itemcount=2|bgtype=1|showtips=1>
+<ItemShow|x=668.6|y=183.0|width=70|height=70|itemid=20042|itemcount=1|bgtype=1|showtips=1>
+<Img|x=312.0|y=246.0|width=530|esc=0|img=public/1900000667.png>
+<Text|x=338.0|y=258.0|color=253|size=18|text=今日充值\达到 300>
+<ItemShow|x=412.0|y=246.0|width=70|height=70|itemid=20176|itemcount=1|bgtype=1|showtips=1>
+<ItemShow|x=477.0|y=246.0|width=70|height=70|itemid=20124|itemcount=6|bgtype=1|showtips=1>
+<ItemShow|x=541.2|y=246.0|width=70|height=70|itemid=20040|itemcount=4|bgtype=1|showtips=1>
+<ItemShow|x=606.0|y=246.0|width=70|height=70|itemid=20130|itemcount=2|bgtype=1|showtips=1>
+<ItemShow|x=668.0|y=246.0|width=70|height=70|itemid=20166|itemcount=10|bgtype=1|showtips=1>
+
+<Img|x=311.0|y=306.0|width=530|esc=0|img=public/1900000667.png>
+<Text|x=336.0|y=319.0|color=253|size=18|text=今日充值\达到 500>
+<ItemShow|x=413.0|y=304.0|width=70|height=70|itemid=20176|itemcount=3|bgtype=1|showtips=1>
+<ItemShow|x=476.0|y=304.0|width=70|height=70|itemid=20124|itemcount=12|bgtype=1|showtips=1>
+<ItemShow|x=541.0|y=304.0|width=70|height=70|itemid=20042|itemcount=1|bgtype=1|showtips=1>
+<ItemShow|x=606.6|y=304.0|width=70|height=70|itemid=20161|itemcount=1|bgtype=1|showtips=1>
+<ItemShow|x=668.0|y=304.0|width=70|height=70|itemid=20167|itemcount=20|bgtype=1|showtips=1>
+<Img|x=317.0|y=367.0|width=530|esc=0|img=public/1900000667.png>
+<Text|x=335.0|y=380.0|color=253|size=18|text=今日充值\达到1000>
+<ItemShow|x=412.0|y=367.0|width=70|height=70|itemid=20176|itemcount=5|bgtype=1|showtips=1>
+<ItemShow|x=476.6|y=367.6|width=70|height=70|itemid=20124|itemcount=24|bgtype=1|showtips=1>
+<ItemShow|x=541.6|y=367.4|width=70|height=70|itemid=20042|itemcount=3|bgtype=1|showtips=1>
+<ItemShow|x=606.0|y=367.0|width=70|height=70|itemid=20161|itemcount=2|bgtype=1|showtips=1>
+<ItemShow|x=668.0|y=367.0|width=70|height=70|itemid=20167|itemcount=30|bgtype=1|showtips=1>
+
+<Img|x=309.0|y=431.0|width=530|esc=0|img=public/1900000667.png>
+<Text|x=330.0|y=450.0|color=221|size=16|text=您今日充值数额为:<$STR(J100)>>
+;<Text|x=352.0|y=435.0|color=249|size=19|text=特惠限时活动5天>
+<Button|x=732.0|y=196.4|mimg=npc/flzx/2/lq-3.png|pimg=npc/flzx/2/lq-2.png|nimg=npc/flzx/2/lq-1.png|color=255|size=18|link=@十五领1>
+<Button|x=732.0|y=258.0|mimg=npc/flzx/2/lq-3.png|pimg=npc/flzx/2/lq-2.png|nimg=npc/flzx/2/lq-1.png|color=255|size=18|link=@十五领2>
+<Button|x=732.0|y=322.0|mimg=npc/flzx/2/lq-3.png|pimg=npc/flzx/2/lq-2.png|nimg=npc/flzx/2/lq-1.png|color=255|size=18|link=@十五领3>
+<Button|x=734.0|y=384.0|mimg=npc/flzx/2/lq-3.png|pimg=npc/flzx/2/lq-2.png|nimg=npc/flzx/2/lq-1.png|color=255|size=18|link=@十五领4>
+<Text|x=550.0|y=450.0|color=251|size=18|text=活动状态:>
+<Text|x=637.0|y=450.0|color=249|size=18|text=<$STR(S$开启状态)>>
+<ItemShow|x=666.0|y=183.0|width=70|height=70|itemid=20042|itemcount=1|bgtype=1|showtips=1>
+
+
+
+
+[@十五领1]
+#IF
+;large G0 18
+equal G65 0
+#ACT
+MESSAGEBOX 活动已经结束,无法领取了。
+break
+
+
+#if
+small J100 100
+#act
+MESSAGEBOX 您今日充值未达标无法领取
+break 
+
+#IF
+large J100 99
+equal J105 0
+#act
+GiveStateItem 湘宝残片 20 1 1 0 0 1 1 1 1
+GiveStateItem 逢宝残片 20 1 1 0 0 1 1 1 1
+GiveStateItem 晚霞庄园凭证 2 1 1 0 0 1 1 1 1
+GiveStateItem 金条 2 1 1 0 0 1 1 1 1
+GiveStateItem 金盒 1 1 1 0 0 1 1 1 1
+SENDMSG 9 恭喜您领取成功
+mov J105 1
+#ELSEACT   
+MESSAGEBOX 您今日已经领取过了
+break 
+
+
+
+[@十五领2]
+#IF
+;large G0 18
+equal G65 0
+#ACT
+MESSAGEBOX 活动已经结束,无法领取了。
+break
+
+#if
+small J100 300
+#act
+MESSAGEBOX 您今日充值未达标无法领取
+break 
+
+#IF
+large J100 299
+equal J106 0
+#act
+GiveStateItem 聚灵珠(超) 1 1 1 0 0 1 1 1 1
+GiveStateItem 神魂水晶 6 1 1 0 0 1 1 1 1
+GiveStateItem 浮空阁凭证 2 1 1 0 0 1 1 1 1
+GiveStateItem 金条 4 1 1 0 0 1 1 1 1
+GiveStateItem 经验材料 10 1 1 0 0 1 1 1 1
+SENDMSG 9 恭喜您领取成功
+mov J106 1
+#ELSEACT   
+MESSAGEBOX 您今日已经领取过了
+break 
+
+
+[@十五领3]
+#IF
+;large G0 18
+equal G65 0
+#ACT
+MESSAGEBOX 活动已经结束,无法领取了。
+break
+
+#if
+small J100 500
+#act
+MESSAGEBOX 您今日充值未达标无法领取
+break 
+
+#IF
+large J100 499
+equal J107 0
+#act
+GiveStateItem 聚灵珠(超) 3 1 1 0 0 1 1 1 1
+GiveStateItem 神魂水晶 12 1 1 0 0 1 1 1 1
+GiveStateItem 雪域凭证 1 1 1 0 0 1 1 1 1
+GiveStateItem 金盒 1 1 1 0 0 1 1 1 1
+GiveStateItem 爆率材料 20 1 1 0 0 1 1 1 1
+SENDMSG 9 恭喜您领取成功
+mov J107 1
+#ELSEACT   
+MESSAGEBOX 您今日已经领取过了
+break 
+
+[@十五领4]
+#IF
+equal G65 0
+;large G0 18
+#ACT
+MESSAGEBOX 活动已经结束,无法领取了。
+break
+
+
+#if
+small J100 1000
+#act
+MESSAGEBOX 您今日充值未达标无法领取
+break 
+
+#IF
+large J100 999
+equal J108 0
+#act
+GiveStateItem 聚灵珠(超) 5 1 1 0 0 1 1 1 1
+GiveStateItem 神魂水晶 24 1 1 0 0 1 1 1 1
+GiveStateItem 雪域凭证 2 1 1 0 0 1 1 1 1
+GiveStateItem 金盒 3 1 1 0 0 1 1 1 1
+GiveStateItem 爆率材料 30 1 1 0 0 1 1 1 1
+SENDMSG 9 恭喜您领取成功
+mov J108 1
+#ELSEACT   
+MESSAGEBOX 您今日已经领取过了
+break 
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

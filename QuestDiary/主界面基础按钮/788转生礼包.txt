@@ -1,0 +1,32 @@
+[@788转生礼包页面]
+{
+
+#if
+#say
+<Button|x=-2526.0|y=-1172.0|width=115120|height=112880|color=224|size=18|pimg=npc/zd.png|mimg=npc/zd.png|nimg=npc/zd.png|link=@exit>
+<Img|x=324.0|y=154.0|img=custom/xslb/bj.png|bg=1>
+<Button|x=678.0|y=166.0|width=50|height=48|nimg=custom/xslb/gb.png|link=@exit>
+<Button|x=470.0|y=330.0|width=120|height=43|nimg=custom/xslb/788.png|link=@购买788>
+<Img|x=393.0|y=200.0|img=custom/xslb/fzlb.png>
+
+<Layout|children={1a,1b,1c,1d}|x=0.0|y=-3.0>
+<Img|id=1a|x=371.0|y=258.0|img=custom/xslb/gou.png>
+<Img|id=1b|x=458.0|y=259.0|img=custom/xslb/gou.png>
+<Img|id=1c|x=545.0|y=258.0|img=custom/xslb/gou.png>
+<Img|id=1d|x=629.0|y=258.0|img=custom/xslb/gou.png>
+
+<Layout|children={1e,1f,1g,1h}|x=0.0|y=-4.0>
+<ItemShow|id=1e|x=364.0|y=253.0|width=70|height=70|itemid=20234|itemcount=20|scale=1|bgtype=0|showtips=1>
+<ItemShow|id=1f|x=451.0|y=252.0|width=70|height=70|itemid=20231|itemcount=50|scale=1|bgtype=0|showtips=1>
+<ItemShow|id=1g|x=538.0|y=253.0|width=70|height=70|itemid=20176|itemcount=40|scale=1|bgtype=0|showtips=1>
+<ItemShow|id=1h|x=623.0|y=253.0|width=70|height=70|itemid=20175|itemcount=80|scale=1|bgtype=0|showtips=1>
+
+
+
+[@购买788]
+#if
+check [194] 0
+#act
+Pullpay 788 3 2
+
+}

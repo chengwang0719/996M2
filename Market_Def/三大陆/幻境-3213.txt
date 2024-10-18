@@ -1,0 +1,104 @@
+[@main]
+#if
+#act
+NEWREADCSV ..\QuestDiary\功能表格\cfg_yidaluditu.csv
+goto @地图装备展示2
+
+
+;#if
+;CHECKRENEWLEVEL ? 3
+;#act
+;mov s$转生等级 <3/FCOLOR=250>
+;goto @主页
+;#elseact
+;mov s$转生等级 <3/FCOLOR=249>
+;goto @主页
+
+
+;#if
+;CHECKLEVELEX ? 45
+;#act
+;mov s$人物等级 <45/FCOLOR=250>
+;goto @主页
+;#ELSEACT
+;mov s$人物等级 <45/FCOLOR=249>
+;goto @主页
+
+
+
+#if
+CheckBindMoney 绑定点卡 > 1999
+#act
+mov s$点卡 <2000/FCOLOR=250>
+goto @主页
+#ELSEACT
+mov s$点卡 <2000/FCOLOR=249>
+goto @主页
+
+
+
+[@主页]
+#if
+#say
+<Button|x=-2526.0|y=-1172.0|width=115120|height=112880|nimg=npc/zd.png|size=18|mimg=npc/zd.png|pimg=npc/zd.png|color=224|link=@exit>
+<Img|x=|y=|width=|height=|children={a,b,c,d,e,f,g,h}|show=4|reset=1|img=custom/hjzm/hjzm.png|move=0|loadDelay=0|bg=1>
+<Button|id=a|x=827|y=12|width=|height=|show=4|reset=1|nimg=public/close-t.png|move=0|loadDelay=0|link=@exit>
+<Img|id=b|x=484|y=48|width=|height=|show=4|reset=1|img=custom/hjzm/2.png|move=0|loadDelay=0>
+
+<Button|id=c|x=590|y=355|width=|height=|show=4|reset=1|nimg=custom/hjzm/jrhj.png|move=0|loadDelay=0|link=@进入幻境>
+
+<RText|id=f|x=502|y=171|size=18|color=255|outline=1|outlinecolor=0|text=进入消耗点卡: <$STR(s$点卡)>>
+<RText|x=502|y=105|size=18|color=255|outline=1|outlinecolor=0|text=每周一、四、日开启>
+<RText|x=502|y=136|size=18|color=255|outline=1|outlinecolor=0|text=进入时间：21:20-23：59>
+<RText|x=502|y=203|size=18|color=255|outline=1|outlinecolor=0|text=必须开启 “狂暴之力”>
+<Img|id=h|x=484|y=220|width=|height=|show=4|reset=1|img=custom/hjzm/1.png|move=0|loadDelay=0>
+<Effect|x=530.0|y=350.0|scale=1|speed=0.9|dir=5|effecttype=0|effectid=5111|act=0>
+<Effect|x=615.0|y=350.0|scale=1|speed=0.9|dir=5|effecttype=0|effectid=5111|act=0>
+<Effect|x=702.0|y=350.0|scale=1|speed=0.9|dir=5|effecttype=0|effectid=5111|act=0>
+<Effect|x=787.0|y=350.0|scale=1|speed=0.9|dir=5|effecttype=0|effectid=5111|act=0>
+
+<ListView|id=g|children={1a,1b,1c,1d}|x=500.0|y=295.0|width=350|height=70|rotate=0|direction=2|margin=20|bounce=0|reload=0>
+<ItemShow|id=1a|x=0|y=0|width=70|height=70|itemid=<$STR(S$地图物品名称1一)>|itemcount=1|showtips=1|bgtype=0>
+<ItemShow|id=1b|x=0|y=0|width=70|height=70|itemid=<$STR(S$地图物品名称1二)>|itemcount=1|showtips=1|bgtype=0>
+<ItemShow|id=1c|x=0|y=0|width=70|height=70|itemid=<$STR(S$地图物品名称1三)>|itemcount=1|showtips=1|bgtype=0>
+<ItemShow|id=1d|x=0|y=0|width=70|height=70|itemid=<$STR(S$地图物品名称1四)>|itemcount=1|showtips=1|bgtype=0>
+
+[@地图装备展示2]
+#if
+#act
+movr n$随机地图物品名称一 1 4
+movr n$随机地图物品名称二 4 9
+movr n$随机地图物品名称三 9 14
+movr n$随机地图物品名称四 14 19
+
+
+GetDBItemFieldValue <$cfg_yidaluditu(<$STR(n$随机地图物品名称一)>_1)> idx S$地图物品名称1一
+GetDBItemFieldValue <$cfg_yidaluditu(<$STR(n$随机地图物品名称二)>_1)> idx S$地图物品名称1二
+GetDBItemFieldValue <$cfg_yidaluditu(<$STR(n$随机地图物品名称三)>_1)> idx S$地图物品名称1三
+GetDBItemFieldValue <$cfg_yidaluditu(<$STR(n$随机地图物品名称四)>_1)> idx S$地图物品名称1四
+
+
+[@进入幻境]
+#if
+not equal G9 1
+#act
+sendmsg 9 幻境未到达开放时间，不允许进入！
+break
+
+#if
+NOT CHECKTITLE 狂暴之力
+#act
+sendmsg 9 进入幻境需要开启狂暴之力才能进入！
+break
+
+#if
+;CHECKRENEWLEVEL ? 3
+;CHECKLEVELEX ? 45
+CheckBindMoney 绑定点卡 > 1999
+equal G9 1
+#act
+ChangeBindMoney 点卡 2000
+sendmsg 1 玩家【<$USERNAME>】进入了幻境一层
+mapmove hjylc3 59 65 8
+#elseact
+sendmsg 9 [提示]点卡不足！或者幻境未打开！

@@ -1,0 +1,24 @@
+[@main]
+#if
+#act
+goto @地图页面展示
+
+
+[@地图页面展示]
+#IF
+#say
+<Button|x=-2526.0|y=-1172.0|width=115120|height=112880|pimg=npc/zd.png|size=18|color=224|nimg=npc/zd.png|mimg=npc/zd.png|link=@exit>
+<Img|a=4|x=443.0|y=280.0|width=976|height=550|reset=1|img=npc/mj/bj.png|bg=1|show=4|esc=1|move=0|loadDelay=0>
+<Button|x=473.0|y=390.0|mimg=npc/mj/2.png|nimg=npc/mj/2.png|link=@前往秘境>
+<Button|x=833.0|y=125.0|mimg=public/close-t.png|nimg=public/close-t.png|link=@exit>
+
+
+
+[@前往秘境]
+#if
+equal G10 1
+#act
+MAPMOVE jjc01 13 16 2
+#elseact
+sendmsg 9 【提示】未到开放时间
+

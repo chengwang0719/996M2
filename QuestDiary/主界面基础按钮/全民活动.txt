@@ -1,0 +1,303 @@
+[@全民活动界面]
+{
+
+
+
+#if
+equal G38 0
+#act
+goto @全民活动1
+#elseact
+goto @全民活动2
+
+
+[@全民活动1]
+
+
+#if
+#act
+mov S$活动特效展示
+
+#if
+equal G10 1
+#act
+mov S$活动特效展示1 <Frames|a=4|id=3888|percentx=48.6|percenty=49.2|width=220|height=530|speed=20|prefix=custom/jz_ui/sfx_|count=10|suffix=.png|loop=-1>
+#elseact
+mov S$活动特效展示1 
+
+#if
+equal G5 1
+#act
+mov S$活动特效展示2 <Frames|a=4|id=2888|percentx=48.6|percenty=49.2|width=220|height=530|speed=20|prefix=custom/jz_ui/sfx_|count=10|suffix=.png|loop=-1>
+#elseact
+mov S$活动特效展示2 
+
+#if
+equal G16 1
+#act
+mov S$活动特效展示3 <Frames|a=4|id=1888|percentx=48.6|percenty=49.2|width=220|height=530|speed=20|prefix=custom/jz_ui/sfx_|count=10|suffix=.png|loop=-1>
+#elseact
+mov S$活动特效展示3 
+
+#if
+equal A1 沙巴克开启
+#act
+mov S$活动特效展示4 <Frames|a=4|id=5888|percentx=48.6|percenty=49.2|width=220|height=530|speed=20|prefix=custom/jz_ui/sfx_|count=10|suffix=.png|loop=-1>
+#elseact
+mov S$活动特效展示4
+
+
+#if
+equal G9 1
+#act
+mov S$活动特效展示5 <Frames|a=4|id=4888|percentx=48.6|percenty=49.2|width=220|height=530|speed=20|prefix=custom/jz_ui/sfx_|count=10|suffix=.png|loop=-1>
+#elseact
+mov S$活动特效展示5
+
+#or
+large G8 29
+large G18 59
+#act
+mov S$活动特效展示6 <Frames|a=4|id=888|percentx=48.6|percenty=49.2|width=220|height=530|speed=20|prefix=custom/jz_ui/sfx_|count=10|suffix=.png|loop=-1>
+#elseact
+mov S$活动特效展示6
+
+#if
+#say
+
+
+
+
+<Button|x=-2526.0|y=-1172.0|width=115120|height=112880|nimg=npc/zd.png|size=18|color=224|mimg=npc/zd.png|pimg=npc/zd.png|link=@exit>
+<Img|x=-31.0|y=-16.0|width=992|height=620|rotate=0|move=0|img=topbtn/qmhd/bg.png|esc=1|show=4|bg=1|loadDelay=0|reset=1>
+<Button|x=897.0|y=18.0|mimg=public/close-2.png|nimg=public/close-2.png|link=@exit>
+
+<ListView|children={b}|x=49|y=69.0|width=844|height=488|margin=0|bounce=0|direction=2|cantouch=1|reload=1>
+
+<Layout|id=b|children={6,1,2,3,5,4}|x=0|y=0|width=1270|height=488>
+
+<Img|id=6|children={600,601,888}|x=0.0|y=3|width=208|height=488|rotate=0|img=topbtn/qmhd/6.png|reset=1|move=0|esc=1|bg=0|show=4|loadDelay=0>
+<Text|id=600|x=10|y=400.0|outline=2|color=161|size=16|text=开区30分钟后以及开区\60分钟后共开启两次,\活动持续时间为15分钟>
+<Button|id=601|x=41|y=324.0|width=137|height=54|mimg=topbtn/qmhd/cy.png|nimg=topbtn/qmhd/cy.png|link=@怪物送财>
+<$STR(S$活动特效展示6)>
+
+
+<Img|id=1|x=204|y=0|children={100,101,1888}|width=208|height=488|rotate=0|img=topbtn/qmhd/1.png|reset=1|move=0|esc=1|bg=0|show=4|loadDelay=0>
+<Text|id=100|x=10|y=400.0|outline=2|color=161|size=16|text=合服后开启活动\18:30-19:00和23:00-23:30\开启双倍押镖奖励活动>
+<Button|id=101|x=41|y=324.0|width=137|height=54|mimg=topbtn/qmhd/cy.png|nimg=topbtn/qmhd/cy.png|link=@限时押镖>
+<$STR(S$活动特效展示3)>
+
+
+
+<Img|id=2|children={200,201,2888}|x=411.0|y=0.0|width=208|height=488|rotate=0|img=topbtn/qmhd/2.png|reset=1|move=0|esc=1|bg=0|show=4|loadDelay=0>
+<Text|id=200|x=10|y=400.0|outline=2|color=161|size=16|text=每周二、三、五、六\21:20开启，22:00将不能\进入地图,22:10领奖结束>
+<Button|id=201|x=41|y=324.0|width=137|height=54|mimg=topbtn/qmhd/cy.png|nimg=topbtn/qmhd/cy.png|link=@夺宝奇兵>
+
+<$STR(S$活动特效展示2)>
+
+<Img|id=3|children={300,301,3888}|x=627.0|y=0.0|width=208|height=488|rotate=0|img=topbtn/qmhd/3.png|reset=1|move=0|esc=1|bg=0|show=4|loadDelay=0>
+<Text|id=300|x=10|y=400.0|outline=2|color=161|size=16|text=每日19:10刷新BOSS\19:40结束>
+<Button|id=301|x=41|y=324.0|width=137|height=54|mimg=topbtn/qmhd/cy.png|nimg=topbtn/qmhd/cy.png|link=@限时BOSS>
+<$STR(S$活动特效展示1)>
+
+
+<Img|id=5|children={500,501,4888}|x=844.0|y=0.0|width=208|height=488|rotate=0|img=topbtn/qmhd/5.png|reset=1|move=0|esc=1|bg=0|show=4|loadDelay=0>
+<Text|id=500|x=10|y=400.0|outline=2|color=161|size=16|text=每周一、四、日开启\活动时间:21:20-23:59\需人物等级49级和4转>
+<Button|id=501|x=41|y=324.0|width=137|height=54|mimg=topbtn/qmhd/cy.png|nimg=topbtn/qmhd/cy.png|link=@幻境活动>
+<$STR(S$活动特效展示5)>
+
+<Img|id=4|children={400,401,5888}|x=1059.0|y=0.0|width=208|height=488|rotate=0|img=topbtn/qmhd/4.png|reset=1|move=0|esc=1|bg=0|show=4|loadDelay=0>
+<Text|id=400|x=10|y=400.0|outline=2|color=161|size=16|text=合区当天晚上20:00-21:00\开启合区沙巴克皇宫争霸\ 老区每天晚上20:00-21:00\开启（需报名参与）>
+<Button|id=401|x=41|y=324.0|width=137|height=54|mimg=topbtn/qmhd/cy.png|nimg=topbtn/qmhd/cy.png|link=@沙巴克争霸>
+<$STR(S$活动特效展示4)>
+
+
+
+
+
+
+
+[@全民活动2]
+#if
+#act
+mov S$活动特效展示
+
+#if
+equal G10 1
+#act
+mov S$活动特效展示1 <Frames|a=4|id=3888|percentx=48.6|percenty=49.2|width=220|height=530|speed=20|prefix=custom/jz_ui/sfx_|count=10|suffix=.png|loop=-1>
+#elseact
+mov S$活动特效展示1 
+
+#if
+equal G5 1
+#act
+mov S$活动特效展示2 <Frames|a=4|id=2888|percentx=48.6|percenty=49.2|width=220|height=530|speed=20|prefix=custom/jz_ui/sfx_|count=10|suffix=.png|loop=-1>
+#elseact
+mov S$活动特效展示2 
+
+#if
+equal G16 1
+#say
+
+mov S$活动特效展示3 <Frames|a=4|id=1888|percentx=48.6|percenty=49.2|width=220|height=530|speed=20|prefix=custom/jz_ui/sfx_|count=10|suffix=.png|loop=-1>
+#elseact
+mov S$活动特效展示3 
+
+#if
+equal A1 沙巴克开启
+#act
+mov S$活动特效展示4 <Frames|a=4|id=5888|percentx=48.6|percenty=49.2|width=220|height=530|speed=20|prefix=custom/jz_ui/sfx_|count=10|suffix=.png|loop=-1>
+#elseact
+mov S$活动特效展示4
+
+
+#if
+equal G9 1
+#act
+mov S$活动特效展示5 <Frames|a=4|id=4888|percentx=48.6|percenty=49.2|width=220|height=530|speed=20|prefix=custom/jz_ui/sfx_|count=10|suffix=.png|loop=-1>
+#elseact
+mov S$活动特效展示5
+
+#or
+large G8 29
+large G18 59
+#act
+mov S$活动特效展示6 <Frames|a=4|id=888|percentx=48.6|percenty=49.2|width=220|height=530|speed=20|prefix=custom/jz_ui/sfx_|count=10|suffix=.png|loop=-1>
+#elseact
+mov S$活动特效展示
+
+#if
+#say
+
+<Button|x=-2526.0|y=-1172.0|width=115120|height=112880|nimg=npc/zd.png|size=18|color=224|mimg=npc/zd.png|pimg=npc/zd.png|link=@exit>
+<Img|x=-31.0|y=-16.0|width=992|height=620|rotate=0|move=0|img=topbtn/qmhd/bg.png|esc=1|show=4|bg=1|loadDelay=0|reset=1>
+<Button|x=897.0|y=18.0|mimg=public/close-2.png|nimg=public/close-2.png|link=@exit>
+
+<ListView|children={b}|x=49|y=69.0|width=844|height=488|margin=0|bounce=0|direction=2|cantouch=1|reload=1>
+
+<Layout|id=b|children={6,1,2,3,5,4}|x=0|y=0|width=1070|height=488>
+
+<Img|id=1|x=0|y=0|children={100,101,1888}|width=208|height=488|rotate=0|img=topbtn/qmhd/1.png|reset=1|move=0|esc=1|bg=0|show=4|loadDelay=0>
+<Text|id=100|x=10|y=400.0|outline=2|color=161|size=16|text=合服后开启活动\18:30-19:00和23:00-23:30\开启双倍押镖奖励活动>
+<Button|id=101|x=41|y=324.0|width=137|height=54|mimg=topbtn/qmhd/cy.png|nimg=topbtn/qmhd/cy.png|link=@限时押镖>
+<$STR(S$活动特效展示3)>
+
+
+<Img|id=2|children={200,201,2888}|x=204.0|y=0.0|width=208|height=488|rotate=0|img=topbtn/qmhd/2.png|reset=1|move=0|esc=1|bg=0|show=4|loadDelay=0>
+<Text|id=200|x=10|y=400.0|outline=2|color=161|size=16|text=每周二、三、五、六\21:20开启，22:00将不能\进入地图,22:10领奖结束>
+<Button|id=201|x=41|y=324.0|width=137|height=54|mimg=topbtn/qmhd/cy.png|nimg=topbtn/qmhd/cy.png|link=@夺宝奇兵>
+<$STR(S$活动特效展示2)>
+
+<Img|id=3|children={300,301,3888}|x=411.0|y=0.0|width=208|height=488|rotate=0|img=topbtn/qmhd/3.png|reset=1|move=0|esc=1|bg=0|show=4|loadDelay=0>
+<Text|id=300|x=10|y=400.0|outline=2|color=161|size=16|text=每日19:10刷新BOSS\19:40结束>
+<Button|id=301|x=41|y=324.0|width=137|height=54|mimg=topbtn/qmhd/cy.png|nimg=topbtn/qmhd/cy.png|link=@限时BOSS>
+<$STR(S$活动特效展示1)>
+
+<Img|id=5|children={500,501,4888}|x=627.0|y=0.0|width=208|height=488|rotate=0|img=topbtn/qmhd/5.png|reset=1|move=0|esc=1|bg=0|show=4|loadDelay=0>
+<Text|id=500|x=10|y=400.0|outline=2|color=161|size=16|text=每周一、四、日开启\活动时间:21:20-23:59\需人物等级49级和4转>
+<Button|id=501|x=41|y=324.0|width=137|height=54|mimg=topbtn/qmhd/cy.png|nimg=topbtn/qmhd/cy.png|link=@幻境活动>
+<$STR(S$活动特效展示5)>
+
+<Img|id=4|children={400,401,5888}|x=844.0|y=0.0|width=208|height=488|rotate=0|img=topbtn/qmhd/4.png|reset=1|move=0|esc=1|bg=0|show=4|loadDelay=0>
+<Text|id=400|x=10|y=400.0|outline=2|color=161|size=16|text=合区当天晚上20:00-21:00\开启合区沙巴克皇宫争霸\ 老区每天晚上20:00-21:00\开启（需报名参与）>
+<Button|id=401|x=41|y=324.0|width=137|height=54|mimg=topbtn/qmhd/cy.png|nimg=topbtn/qmhd/cy.png|link=@沙巴克争霸>
+<$STR(S$活动特效展示4)>
+
+
+
+
+
+
+[@幻境活动]
+#if
+equal G9 1
+CHECKRENEWLEVEL > 3
+CHECKLEVELEX > 48
+#act
+mapmove 3213 345 320 2
+#elseact
+sendmsg 9 【提示】条件不允许！不能进入
+
+[@怪物送财]
+#or
+large G8 29
+large G18 59
+#act
+mapmove D5071 39 41 3
+#elseact
+sendmsg 9 【提示】条件不允许！不能进入
+
+
+
+
+[@限时BOSS]
+#if
+equal G10 0
+#act
+sendmsg 9 【提示】未到开放时间
+break
+
+#if
+CHECKRENEWLEVEL > 1
+#act
+MAPMOVE jjc01 13 16 2
+#elseact
+sendmsg 9 你没有二重转生,还需要变强
+
+
+
+[@夺宝奇兵]
+#if
+equal G5 0
+#act
+sendmsg 9 活动暂未开放
+break
+
+#if
+equal G14 1
+#act
+sendmsg 9 [提示]已经错过了地图进入的时间
+break
+
+
+#if
+equal G5 1
+IsOnMap 3
+#act
+mapmove ev002 18 39 5
+#elseact
+sendmsg 9 请先回到盟重城,再参与！
+
+[@限时押镖]
+;#if
+;small <$HFDAYS> 0
+;#act
+;sendmsg 9 【提示】未到开放时间
+;break
+
+
+#if
+IsOnMap 3
+#act
+goto @寻路镖师系统
+close
+#elseact
+mapmove 3 333 333 3
+goto @寻路镖师系统
+
+
+[@沙巴克争霸]
+#if
+#act
+MAPMOVE 3 333 333 1
+OPENNPCSHOWEX 64
+
+[@寻路镖师系统]
+#if
+#act
+GotoNow 350 327
+;#CALL [\主界面基础按钮\押镖使者.txt] @押镖使者界面
+
+
+}

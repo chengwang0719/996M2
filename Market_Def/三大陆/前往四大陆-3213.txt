@@ -1,0 +1,78 @@
+[@main]
+
+
+#if
+#act
+NEWREADCSV ..\QuestDiary\功能表格\cfg_yidaluditu.csv
+goto @地图装备展示2
+
+#IF
+#say
+<Img|width=3000|height=3000|hideMain=1|img=public/1900000651_1.png|bg=1|layerid=0|show=4|reset=1|move=0|link=@exi>
+<Layout|children={1,2,3,4,5,6,a1,a2,a3,a4,a5,a6,a7,a8}|a=4|percentx=50|percenty=50|width=876|height=482|color=x>
+<Frames|id=1|a=4|percentx=50|percenty=50|width=<$SCREENWIDTH>|height=<$SCREENHEIGHT>|speed=5|prefix=custom/jc_ui/sxf_|count=20|suffix=.png|loop=-1>
+<Button|id=2|a=4|percentx=109.5|percenty=-6.4|nimg=public/close-t.png|mimg=public/close-t.png|link=@exit>
+<Img|id=3|a=4|x=462.0|y=293.0|img=npc/1.png|show=4|loadDelay=0|esc=1|move=0|reset=1>
+<Text|id=5|a=4|x=445.0|y=417.0|color=161|size=16|outline=1|text=进入条件:人物转生等级达到6转以及等级54级>
+<Button|id=4|a=4|percentx=51.3|percenty=98.5|mimg=npc/csbtn.png|nimg=npc/csbtn.png|link=@传送>
+<ListView|id=6|children={a,b,c,d,e,f,g,h}|percentx=14.6|percenty=66.7|width=680|height=70|rotate=0|reload=0|direction=2|margin=20|bounce=0>
+<ItemShow|id=a|x=0|y=0|width=70|height=70|itemid=<$STR(S$地图物品名称一)>|itemcount=1|bgtype=0|showtips=1>
+<ItemShow|id=b|x=0|y=0|width=70|height=70|itemid=<$STR(S$地图物品名称二)>|itemcount=1|bgtype=0|showtips=1>
+<ItemShow|id=c|x=0|y=0|width=70|height=70|itemid=<$STR(S$地图物品名称三)>|itemcount=1|bgtype=0|showtips=1>
+<ItemShow|id=d|x=0|y=0|width=70|height=70|itemid=<$STR(S$地图物品名称四)>|itemcount=1|bgtype=0|showtips=1>
+<ItemShow|id=e|x=0|y=0|width=70|height=70|itemid=<$STR(S$地图物品名称五)>|itemcount=1|bgtype=0|showtips=1>
+<ItemShow|id=f|x=0|y=0|width=70|height=70|itemid=<$STR(S$地图物品名称六)>|itemcount=1|bgtype=0|showtips=1>
+<ItemShow|id=g|x=0|y=0|width=70|height=70|itemid=<$STR(S$地图物品名称七)>|itemcount=1|bgtype=0|showtips=1>
+<ItemShow|id=h|x=0|y=0|width=70|height=70|itemid=<$STR(S$地图物品名称八)>|itemcount=1|bgtype=0|showtips=1>
+<Effect|id=a1|x=158.0|y=381.0|scale=1|speed=0.9|effectid=5111|effecttype=0|dir=5|act=0>
+<Effect|id=a2|x=247.0|y=381.0|scale=1|speed=0.9|effectid=5111|effecttype=0|dir=5|act=0>
+<Effect|id=a3|x=331.0|y=381.0|scale=1|speed=0.9|effectid=5111|effecttype=0|dir=5|act=0>
+<Effect|id=a4|x=417.0|y=381.0|scale=1|speed=0.9|effectid=5111|effecttype=0|dir=5|act=0>
+<Effect|id=a5|x=503.0|y=381.0|scale=1|speed=0.9|effectid=5111|effecttype=0|dir=5|act=0>
+<Effect|id=a6|x=589.0|y=381.0|scale=1|speed=0.9|effectid=5111|effecttype=0|dir=5|act=0>
+<Effect|id=a7|x=676.0|y=381.0|scale=1|speed=0.9|effectid=5111|effecttype=0|dir=5|act=0>
+<Effect|id=a8|x=761.0|y=381.0|scale=1|speed=0.9|effectid=5111|effecttype=0|dir=5|act=0>
+
+
+
+[@地图装备展示2]
+#if
+#act
+movr n$随机地图物品名称一 1 7
+movr n$随机地图物品名称二 8 15
+movr n$随机地图物品名称三 16 22
+movr n$随机地图物品名称四 23 28
+movr n$随机地图物品名称五 29 36
+movr n$随机地图物品名称六 37 45
+movr n$随机地图物品名称七 46 53
+movr n$随机地图物品名称八 54 60
+
+
+
+
+GetDBItemFieldValue <$cfg_yidaluditu(<$STR(n$随机地图物品名称一)>_10)> idx S$地图物品名称一
+GetDBItemFieldValue <$cfg_yidaluditu(<$STR(n$随机地图物品名称二)>_10)> idx S$地图物品名称二
+GetDBItemFieldValue <$cfg_yidaluditu(<$STR(n$随机地图物品名称三)>_10)> idx S$地图物品名称三
+GetDBItemFieldValue <$cfg_yidaluditu(<$STR(n$随机地图物品名称四)>_10)> idx S$地图物品名称四
+GetDBItemFieldValue <$cfg_yidaluditu(<$STR(n$随机地图物品名称五)>_10)> idx S$地图物品名称五
+GetDBItemFieldValue <$cfg_yidaluditu(<$STR(n$随机地图物品名称六)>_10)> idx S$地图物品名称六
+GetDBItemFieldValue <$cfg_yidaluditu(<$STR(n$随机地图物品名称七)>_10)> idx S$地图物品名称七
+GetDBItemFieldValue <$cfg_yidaluditu(<$STR(n$随机地图物品名称八)>_10)> idx S$地图物品名称八
+
+
+
+[@传送]
+#if
+check [223] 0
+#ACT
+set [223] 1
+#CALL [\任务系统\任务系统QF.txt] @任务系统QF
+
+#if
+CHECKLEVELEX > 53
+CHECKRENEWLEVEL ? 6
+#act
+MAPMOVE bxzj2  447 233 2
+
+#elseact
+sendmsg 9 【提示】您的条件还不足达到前往四大陆！

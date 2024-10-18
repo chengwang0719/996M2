@@ -1,0 +1,19 @@
+[@main]
+#if
+#say
+<Button|x=-2526.0|y=-1172.0|width=115120|height=112880|color=224|mimg=npc/zd.png|pimg=npc/zd.png|nimg=npc/zd.png|size=18|link=@exit>
+<Img|x=-57.0|y=-44.0|width=882|height=500|rotate=0|show=4|loadDelay=0|reset=1|move=0|bg=1|esc=1|img=npc/jnsz/yh_bj.png>
+<Button|x=381.0|y=283.0|width=125|height=40|nimg=npc/jnsz/1.png|mimg=npc/jnsz/1.png|link=@技能修炼>
+<Button|x=543.0|y=284.0|width=125|height=40|nimg=npc/jnsz/2.png|mimg=npc/jnsz/2.png|link=@技能升级>
+<Button|x=699.0|y=58.0|mimg=public/close-t.png|nimg=public/close-t.png|link=@exit>
+
+
+[@技能升级]
+#if
+#act
+#call [\功能脚本\技能强化.txt] @技能升级页面
+
+[@技能修炼]
+#if
+#act
+#call [\功能脚本\技能修炼.txt] @技能修炼页面

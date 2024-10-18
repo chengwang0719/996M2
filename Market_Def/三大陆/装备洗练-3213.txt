@@ -1,0 +1,1193 @@
+[@main]
+#if
+#act
+mov S$极品属性
+
+#IF
+#ACT
+mov S$属性文字展示 <RText|x=346.0|y=283.0|size=16|color=255|outline=1|text=洗练属性为空>
+MOV S$装备1 4
+MOV S$坐标X 18
+MOV S$坐标Y 14
+MOV S$装备名字 <$HELMET>
+GOTO @随机洗练选择
+
+
+[@装备洗炼面板]
+#if
+CHECK [500] 0
+CHECK [501] 0
+CHECK [502] 0
+CHECK [503] 0
+#act
+mov S$洗练石数量 10
+mov S$洗炼元宝数量 50000
+
+#if
+CHECK [500] 1
+#act
+mov S$洗练石数量 20
+mov S$洗炼元宝数量 100000
+
+#if
+CHECK [501] 1
+#act
+mov S$洗练石数量 20
+mov S$洗炼元宝数量 100000
+
+#if
+CHECK [502] 1
+#act
+mov S$洗练石数量 20
+mov S$洗炼元宝数量 100000
+
+#if
+CHECK [503] 1
+#act
+mov S$洗练石数量 20
+mov S$洗炼元宝数量 100000
+
+#if
+CHECK [500] 1
+CHECK [501] 1
+#act
+mov S$洗练石数量 40
+mov S$洗炼元宝数量 200000
+
+#if
+CHECK [500] 1
+CHECK [502] 1
+#act
+mov S$洗练石数量 40
+mov S$洗炼元宝数量 200000
+
+#if
+CHECK [500] 1
+CHECK [503] 1
+#act
+mov S$洗练石数量 40
+mov S$洗炼元宝数量 200000
+
+#if
+CHECK [501] 1
+CHECK [502] 1
+#act
+mov S$洗练石数量 40
+mov S$洗炼元宝数量 200000
+
+#if
+CHECK [501] 1
+CHECK [503] 1
+#act
+mov S$洗练石数量 40
+mov S$洗炼元宝数量 200000
+
+#if
+CHECK [502] 1
+CHECK [503] 1
+#act
+mov S$洗练石数量 40
+mov S$洗炼元宝数量 200000
+
+#if
+CHECK [500] 1
+CHECK [501] 1
+CHECK [502] 1
+#act
+mov S$洗练石数量 80
+mov S$洗炼元宝数量 400000
+
+#if
+CHECK [500] 1
+CHECK [502] 1
+CHECK [503] 1
+#act
+mov S$洗练石数量 80
+mov S$洗炼元宝数量 400000
+
+#if
+CHECK [501] 1
+CHECK [502] 1
+CHECK [503] 1
+#act
+mov S$洗练石数量 80
+mov S$洗炼元宝数量 400000
+
+#if
+CHECK [502] 1
+CHECK [503] 1
+CHECK [504] 1
+#act
+mov S$洗练石数量 80
+mov S$洗炼元宝数量 400000
+
+#if
+CHECK [500] 1
+CHECK [501] 1
+CHECK [502] 1
+CHECK [503] 1
+#act
+mov S$洗练石数量 160
+mov S$洗炼元宝数量 800000
+
+#if
+CHECK [500] 1
+CHECK [502] 1
+CHECK [503] 1
+CHECK [504] 1
+#act
+mov S$洗练石数量 160
+mov S$洗炼元宝数量 800000
+
+#if
+CHECK [501] 1
+CHECK [502] 1
+CHECK [503] 1
+CHECK [504] 1
+#act
+mov S$洗练石数量 160
+mov S$洗炼元宝数量 800000
+
+#if
+CHECK [500] 1
+CHECK [501] 1
+CHECK [502] 1
+CHECK [504] 1
+#act
+mov S$洗练石数量 160
+mov S$洗炼元宝数量 800000
+
+#if
+CHECK [500] 1
+CHECK [501] 1
+CHECK [503] 1
+CHECK [504] 1
+#act
+mov S$洗练石数量 160
+mov S$洗炼元宝数量 800000
+
+
+
+#IF
+#say
+<Img|children={a}|a=4|x=500.0|y=271.5|width=1000|height=625|show=4|move=1|esc=1|reset=1|img=npc/zbxl/bj.png|bg=1|loadDelay=0>
+<Button|x=933.0|y=-5|mimg=public/close-2.png|nimg=public/close-2.png|link=@exit>
+
+
+<Layout|id=a|children={1,2,3,4,5,6,7,8,1a,2a,3a,4a,5a,6a,7a,8a,9}|a=4|percentx=17.5|percenty=78.4|width=185|height=482>
+<Img|id=1|x=13.0|y=9.0|move=0|img=npc/zbxl/555.png|show=4|loadDelay=0|esc=1|reset=1>
+<Img|id=2|x=98.0|y=9.0|move=0|img=npc/zbxl/555.png|show=4|loadDelay=0|esc=1|reset=1>
+<Img|id=3|x=13.0|y=88.0|move=0|img=npc/zbxl/555.png|show=4|loadDelay=0|esc=1|reset=1>
+<Img|id=4|x=98.0|y=88.0|move=0|img=npc/zbxl/555.png|show=4|loadDelay=0|esc=1|reset=1>
+<Img|id=5|x=13.0|y=167.0|move=0|img=npc/zbxl/555.png|show=4|loadDelay=0|esc=1|reset=1>
+<Img|id=6|x=98.0|y=167.0|move=0|img=npc/zbxl/555.png|show=4|loadDelay=0|esc=1|reset=1>
+<Img|id=7|x=13.0|y=246.0|move=0|img=npc/zbxl/555.png|show=4|loadDelay=0|esc=1|reset=1>
+<Img|id=8|x=98.0|y=246.0|move=0|img=npc/zbxl/555.png|show=4|loadDelay=0|esc=1|reset=1>
+<EquipShow|id=1a|x=18.0|y=14|width=70|height=70|reload=1|showtips=1|index=4|bgtype=0|link=@随机洗练选择#装备1=4#坐标X=18#坐标Y=14#装备名字=<$HELMET>>
+<EquipShow|id=2a|x=103.0|y=14.0|width=70|height=70|reload=1|showtips=1|index=3|bgtype=0|link=@随机洗练选择#装备1=3#坐标X=103#坐标Y=14#装备名字=<$NECKLACE>>
+<EquipShow|id=3a|x=18.0|y=92.0|width=70|height=70|reload=1|showtips=1|index=6|bgtype=0|link=@随机洗练选择#装备1=6#坐标X=18#坐标Y=93#装备名字=<$ARMRING_L>>
+<EquipShow|id=4a|x=103.0|y=92.0|width=70|height=70|reload=1|showtips=1|index=5|bgtype=0|link=@随机洗练选择#装备1=5#坐标X=103#坐标Y=93#装备名字=<$ARMRING_R>>
+<EquipShow|id=5a|x=18.0|y=172.0|width=70|height=70|reload=1|showtips=1|index=8|bgtype=0|link=@随机洗练选择#装备1=8#坐标X=18#坐标Y=172#装备名字=<$RING_L>>
+<EquipShow|id=6a|x=103.0|y=172.0|width=70|height=70|reload=1|showtips=1|index=7|bgtype=0|link=@随机洗练选择#装备1=7#坐标X=103#坐标Y=172#装备名字=<$RING_R>>
+<EquipShow|id=7a|x=18.0|y=251.0|width=70|height=70|reload=1|showtips=1|index=10|bgtype=0|link=@随机洗练选择#装备1=10#坐标X=18#坐标Y=251#装备名字=<$BELT>>
+<EquipShow|id=8a|x=103.0|y=251.0|width=70|height=70|reload=1|showtips=1|index=11|bgtype=0|link=@随机洗练选择#装备1=11#坐标X=103#坐标Y=251#装备名字=<$BOOTS>>
+<Img|id=9|x=<$STR(N$洗练特效位置X)>|y=<$STR(N$洗练特效位置Y)>|esc=0|img=public/1900000678_2.png>
+<Frames|a=4|percentx=15.9|percenty=18.1|width=240|height=240|speed=10|loop=-1|prefix=npc/zbxl/tt/sfx_|suffix=.png|count=15>
+<Img|x=480.0|y=96.0|move=0|show=4|esc=1|loadDelay=0|img=npc/zbxl/555.png|reset=1>
+<EquipShow|x=486.0|y=102.0|width=70|height=70|reload=1|showtips=1|bgtype=0|index=<$STR(N$洗练装备展示)>>
+
+
+;原来的属性-------------------------------------------------------------------------------------------------------------------------------
+<$STR(S$属性文字展示)>
+
+;新属性-------------------------------------------------------------------------------------------------------------------------------
+<$STR(S$新属性展示)>
+
+;属性锁展示-------------------------------------------------------------------------------------------------------------------------------
+<$STR(S$属性锁01)>
+<$STR(S$属性锁02)>
+<$STR(S$属性锁03)>
+<$STR(S$属性锁04)>
+<$STR(S$属性锁05)>
+
+
+
+
+<Button|x=324.0|y=405.0|width=137|height=44|mimg=npc/zbxl/1.png|nimg=npc/zbxl/1.png|link=@装备1洗炼>
+<Button|x=567.0|y=406.0|width=137|height=44|mimg=npc/zbxl/2.png|nimg=npc/zbxl/2.png|link=@替换属性>
+<Text|a=4|percentx=49.3|percenty=82.2|size=14|color=249|outline=2|text=说明:属性展示中的属性随机洗练，1-5%的属性值随机>
+<Text|a=4|percentx=40.6|percenty=77.7|size=14|color=251|outline=2|text=费用:元宝<$STR(S$洗炼元宝数量)>和洗练石>
+<ItemShow|percentx=48.4|percenty=71|scale=0.9|width=70|height=70|itemid=20199|itemcount=<$STR(S$洗练石数量)>|bgtype=0|showtips=1>
+
+;<Button|x=287.0|y=429.0|nimg=public/001.png|mimg=public/001.png|link=@选择元宝>
+;<Button|x=527.0|y=429.0|nimg=public/001.png|mimg=public/001.png|link=@选择点卡>
+
+
+
+
+[@替换属性]
+#if
+#act
+mov S$极品属性
+
+#IF
+EQUAL S$新属性展示
+#ACT
+SENDMSG 9 请点击洗练按钮，获得新属性才能替换！
+#ELSEACT
+SetNewItemValue <$STR(N$洗练装备展示)> 0 = 0
+SetNewItemValue <$STR(N$洗练装备展示)> 1 = 0
+SetNewItemValue <$STR(N$洗练装备展示)> 2 = 0
+SetNewItemValue <$STR(N$洗练装备展示)> 3 = 0
+SetNewItemValue <$STR(N$洗练装备展示)> 4 = 0
+SetNewItemValue <$STR(N$洗练装备展示)> 5 = 0
+SetNewItemValue <$STR(N$洗练装备展示)> 6 = 0
+SetNewItemValue <$STR(N$洗练装备展示)> 7 = 0
+SetNewItemValue <$STR(N$洗练装备展示)> 8 = 0
+SetNewItemValue <$STR(N$洗练装备展示)> 11 = 0
+
+SetNewItemValue <$STR(N$洗练装备展示)> <$STR(N$洗练的属性位置1)> = <$STR(N$随机加属性1)>
+SetNewItemValue <$STR(N$洗练装备展示)> <$STR(N$洗练的属性位置2)> = <$STR(N$随机加属性2)>
+SetNewItemValue <$STR(N$洗练装备展示)> <$STR(N$洗练的属性位置3)> = <$STR(N$随机加属性3)>
+SetNewItemValue <$STR(N$洗练装备展示)> <$STR(N$洗练的属性位置4)> = <$STR(N$随机加属性4)>
+SetNewItemValue <$STR(N$洗练装备展示)> <$STR(N$洗练的属性位置5)> = <$STR(N$随机加属性5)>
+
+;SENDMSG 9 恭喜替换属性成功！
+Screffects 100 36000 600 285 5 1 0
+
+GOTO @随机洗练选择
+
+
+
+
+
+
+[@装备1洗炼]
+#if
+equal S$装备名字 
+#act
+break
+
+
+#or
+CheckContainsText <$STR(S$装备名字)> 耀金
+CheckContainsText <$STR(S$装备名字)> 耀光
+CheckContainsText <$STR(S$装备名字)> 耀玉
+CheckContainsText <$STR(S$装备名字)> 海妖
+CheckContainsText <$STR(S$装备名字)> 斩龙
+CheckContainsText <$STR(S$装备名字)> 无形
+CheckContainsText <$STR(S$装备名字)> の
+CheckContainsText <$STR(S$装备名字)> 麒麟
+CheckContainsText <$STR(S$装备名字)> 朱雀
+CheckContainsText <$STR(S$装备名字)> 玄武
+
+CheckContainsText <$STR(S$装备名字)> 冰霜
+CheckContainsText <$STR(S$装备名字)> 雪寂
+CheckContainsText <$STR(S$装备名字)> 凛冬
+
+CheckContainsText <$STR(S$装备名字)> 寂灭
+CheckContainsText <$STR(S$装备名字)> 业火
+CheckContainsText <$STR(S$装备名字)> 冥天
+
+CheckContainsText <$STR(S$装备名字)> 神罚
+CheckContainsText <$STR(S$装备名字)> 圣裁
+CheckContainsText <$STR(S$装备名字)> 仙戮
+
+#act
+goto @装备1洗炼逻辑
+
+#elseact
+sendmsg 9 只有4转及4转以上的装备才可以洗练
+
+[@装备1洗炼逻辑]
+#if
+equal S$极品属性 有
+#act
+MESSAGEBOX 洗炼到了极品+5%属性，暂未保存，是否无视继续洗炼  @对的无视  @取消
+#elseact
+goto @对的无视
+
+[@对的无视]
+#if
+#act
+mov S$极品属性 
+;收费货币---------------------------------------
+#IF
+CHECKBINDMONEY 绑定元宝 ? <$STR(S$洗炼元宝数量)>
+checkitem 洗练石 <$STR(S$洗练石数量)>
+#ACT
+CHANGEBINDMONEY 绑定元宝 <$STR(S$洗炼元宝数量)>
+take 洗练石 <$STR(S$洗练石数量)>
+#ELSEACT
+SENDMSG 9 您的材料或者货币不足！
+BREAK
+
+#IF
+EQUAL N$属性锁定次数 5
+#ACT
+SENDMSG 9 都锁定你就不要洗练了！
+BREAK
+
+#IF
+#ACT
+MOV S$取出属性1
+MOV S$取出属性2
+MOV S$取出属性3
+MOV S$取出属性4
+MOV S$取出属性5
+MOV N$随机加属性1 0
+MOV N$随机加属性2 0
+MOV N$随机加属性3 0
+MOV N$随机加属性4 0
+MOV N$随机加属性5 0
+MOV N$洗练的属性位置1 50
+MOV N$洗练的属性位置2 50
+MOV N$洗练的属性位置3 50
+MOV N$洗练的属性位置4 50
+MOV N$洗练的属性位置5 50
+MOV N$随机洗练属性条数5控制 50
+MOV N$随机洗练属性条数4控制 50
+MOV N$随机洗练属性条数3控制 50
+MOV N$随机洗练属性条数2控制 50
+CLEARNAMELIST ..\QuestDiary\装备洗练.txt
+AddTextListEx ..\QuestDiary\装备洗练.txt 暴击几率:0 0
+AddTextListEx ..\QuestDiary\装备洗练.txt 攻击伤害:1 1
+AddTextListEx ..\QuestDiary\装备洗练.txt 物理伤害减少:2 2
+AddTextListEx ..\QuestDiary\装备洗练.txt 魔法伤害减少:3 3
+AddTextListEx ..\QuestDiary\装备洗练.txt 忽视目标防御:4 4
+AddTextListEx ..\QuestDiary\装备洗练.txt 所有伤害反弹:5 5
+AddTextListEx ..\QuestDiary\装备洗练.txt 人物爆率:6 6
+AddTextListEx ..\QuestDiary\装备洗练.txt 人物体力增加:7 7
+AddTextListEx ..\QuestDiary\装备洗练.txt 人物魔力增加:8 8
+AddTextListEx ..\QuestDiary\装备洗练.txt 暴击伤害:11 9
+
+
+
+
+;极品属性几率---------------------------------------
+#IF
+#ACT
+MOVR N$随机加属性1 1 3
+MOVR N$随机加属性2 1 3
+MOVR N$随机加属性3 1 3
+MOVR N$随机加属性4 1 3
+MOVR N$随机加属性5 1 3
+
+#IF
+RANDOM 5
+#ACT
+MOVR N$随机加属性1 1 4
+MOVR N$随机加属性2 1 4
+MOVR N$随机加属性3 1 4
+MOVR N$随机加属性4 1 4
+MOVR N$随机加属性5 1 4
+
+#IF
+RANDOM 10
+#ACT
+MOVR N$随机加属性1 1 6
+MOVR N$随机加属性2 1 6
+MOVR N$随机加属性3 1 6
+MOVR N$随机加属性4 1 6
+MOVR N$随机加属性5 1 6
+
+#IF
+EQUAL <$STR(N$属性锁定次数)> 0
+#ACT
+GOTO @属性随机逻辑
+#ELSEACT
+GOTO @锁定属性随机逻辑
+
+
+[@锁定属性随机逻辑]
+#IF
+#ACT
+MOV S$新属性展示
+
+#IF
+CHECK [500] 1
+#ACT
+MOV N$洗练的属性位置1 <$STR(S$原属取位置1)>
+MOV N$随机加属性1 <$STR(S$原属取值1)>
+INC S$新属性展示 <Text|x=551.0|y=236|color=250|size=16|text=<$STR(S$原属性文字1)>>
+INC S$新属性展示 <Text|x=668.0|y=236|color=253|size=16|text=+<$STR(N$随机加属性1)>%>
+DelTextList ..\QuestDiary\装备洗练.txt <$STR(S$原属性文字1)>:<$STR(S$原属取位置1)>
+
+
+#IF
+CHECK [501] 1
+#ACT
+MOV N$洗练的属性位置2 <$STR(S$原属取位置2)>
+MOV N$随机加属性2 <$STR(S$原属取值2)>
+INC S$新属性展示 <Text|x=551.0|y=260|color=250|size=16|text=<$STR(S$原属性文字2)>>
+INC S$新属性展示 <Text|x=668.0|y=260|color=253|size=16|text=+<$STR(N$随机加属性2)>%>
+DelTextList ..\QuestDiary\装备洗练.txt <$STR(S$原属性文字2)>:<$STR(S$原属取位置2)>
+
+
+#IF
+CHECK [502] 1
+#ACT
+MOV N$洗练的属性位置3 <$STR(S$原属取位置3)>
+MOV N$随机加属性3 <$STR(S$原属取值3)>
+INC S$新属性展示 <Text|x=551.0|y=285|color=250|size=16|text=<$STR(S$原属性文字3)>>
+INC S$新属性展示 <Text|x=668.0|y=285|color=253|size=16|text=+<$STR(N$随机加属性3)>%>
+DelTextList ..\QuestDiary\装备洗练.txt <$STR(S$原属性文字3)>:<$STR(S$原属取位置3)>
+
+
+#IF
+CHECK [503] 1
+#ACT
+MOV N$洗练的属性位置4 <$STR(S$原属取位置4)>
+MOV N$随机加属性4 <$STR(S$原属取值4)>
+INC S$新属性展示 <Text|x=551.0|y=309|color=250|size=16|text=<$STR(S$原属性文字4)>>
+INC S$新属性展示 <Text|x=668.0|y=309|color=253|size=16|text=+<$STR(N$随机加属性4)>%>
+DelTextList ..\QuestDiary\装备洗练.txt <$STR(S$原属性文字4)>:<$STR(S$原属取位置4)>
+
+#IF
+CHECK [504] 1
+#ACT
+MOV N$洗练的属性位置5 <$STR(S$原属取位置5)>
+MOV N$随机加属性5 <$STR(S$原属取值5)>
+INC S$新属性展示 <Text|x=551.0|y=333|color=250|size=16|text=<$STR(S$原属性文字5)>>
+INC S$新属性展示 <Text|x=668.0|y=333|color=253|size=16|text=+<$STR(N$随机加属性5)>%>
+DelTextList ..\QuestDiary\装备洗练.txt <$STR(S$原属性文字5)>:<$STR(S$原属取位置5)>
+
+
+
+;在锁定的时候，出多少条属性------------------------------
+#IF
+EQUAL N$属性锁定次数 4
+#ACT
+MOV N$随机洗练属性条数5控制 1
+MOV N$随机洗练属性条数4控制 1
+MOV N$随机洗练属性条数3控制 1
+MOV N$随机洗练属性条数2控制 1
+GOTO @四条固定属性
+
+#IF
+EQUAL N$属性锁定次数 3
+#ACT
+MOV N$随机洗练属性条数5控制 20
+MOV N$随机洗练属性条数4控制 1
+MOV N$随机洗练属性条数3控制 1
+MOV N$随机洗练属性条数2控制 1
+GOTO @四条固定属性
+
+#IF
+EQUAL N$属性锁定次数 2
+#ACT
+MOV N$随机洗练属性条数5控制 25
+MOV N$随机洗练属性条数4控制 5
+MOV N$随机洗练属性条数3控制 1
+MOV N$随机洗练属性条数2控制 1
+GOTO @四条固定属性
+
+#IF
+EQUAL N$属性锁定次数 1
+#ACT
+MOV N$随机洗练属性条数5控制 30
+MOV N$随机洗练属性条数4控制 10
+MOV N$随机洗练属性条数3控制 5
+MOV N$随机洗练属性条数2控制 1
+GOTO @四条固定属性
+
+
+
+
+[@四条固定属性]
+#IF
+#ACT
+GetRandomText ..\QuestDiary\装备洗练.txt S$取出属性1
+DelTextList ..\QuestDiary\装备洗练.txt <$STR(S$取出属性1)>
+GetRandomText ..\QuestDiary\装备洗练.txt S$取出属性2
+DelTextList ..\QuestDiary\装备洗练.txt <$STR(S$取出属性2)>
+GetRandomText ..\QuestDiary\装备洗练.txt S$取出属性3
+DelTextList ..\QuestDiary\装备洗练.txt <$STR(S$取出属性3)>
+GetRandomText ..\QuestDiary\装备洗练.txt S$取出属性4
+DelTextList ..\QuestDiary\装备洗练.txt <$STR(S$取出属性4)>
+GetRandomText ..\QuestDiary\装备洗练.txt S$取出属性5
+DelTextList ..\QuestDiary\装备洗练.txt <$STR(S$取出属性5)>
+
+GetValidstr <$STR(S$取出属性1)> : S$显示1 S$位置1
+GetValidstr <$STR(S$取出属性2)> : S$显示2 S$位置2
+GetValidstr <$STR(S$取出属性3)> : S$显示3 S$位置3
+GetValidstr <$STR(S$取出属性4)> : S$显示4 S$位置4
+GetValidstr <$STR(S$取出属性5)> : S$显示5 S$位置5
+
+
+#IF
+CHECK [0500] 1
+CHECK [0504] 1
+#ACT
+
+GOTO @中间随机属性
+BREAK
+
+#OR
+CHECK [0503] 1
+CHECK [0504] 1
+#ACT
+
+GOTO @倒装随机属性
+#ELSEACT
+
+GOTO @正序随机属性
+
+
+[@中间随机属性]
+#IF
+CHECK [500] 0
+RANDOM <$STR(N$随机洗练属性条数2控制)>
+#ACT
+INC S$新属性展示 <Text|x=551.0|y=236|color=250|size=16|text=<$STR(S$显示1)>>
+INC S$新属性展示 <Text|x=668.0|y=236|color=253|size=16|text=+<$STR(N$随机加属性1)>%>
+MOV N$洗练的属性位置1 <$STR(S$位置1)>
+goto @锁定极品属性1
+#IF
+CHECK [501] 0
+RANDOM <$STR(N$随机洗练属性条数4控制)>
+#ACT
+INC S$新属性展示 <Text|x=551.0|y=260|color=250|size=16|text=<$STR(S$显示2)>>
+INC S$新属性展示 <Text|x=668.0|y=260|color=253|size=16|text=+<$STR(N$随机加属性2)>%>
+MOV N$洗练的属性位置2 <$STR(S$位置2)>
+goto @锁定极品属性2
+
+#IF
+CHECK [502] 0
+RANDOM <$STR(N$随机洗练属性条数3控制)>
+#ACT
+INC S$新属性展示 <Text|x=551.0|y=285|color=250|size=16|text=<$STR(S$显示3)>>
+INC S$新属性展示 <Text|x=668.0|y=285|color=253|size=16|text=+<$STR(N$随机加属性3)>%>
+MOV N$洗练的属性位置3 <$STR(S$位置3)>
+goto @锁定极品属性3
+#IF
+CHECK [503] 0
+RANDOM <$STR(N$随机洗练属性条数5控制)>
+#ACT
+INC S$新属性展示 <Text|x=551.0|y=309|color=250|size=16|text=<$STR(S$显示4)>>
+INC S$新属性展示 <Text|x=668.0|y=309|color=253|size=16|text=+<$STR(N$随机加属性4)>%>
+MOV N$洗练的属性位置4 <$STR(S$位置4)>
+goto @锁定极品属性4
+#IF
+CHECK [504] 0
+#ACT
+INC S$新属性展示 <Text|x=551.0|y=333|color=250|size=16|text=<$STR(S$显示5)>>
+INC S$新属性展示 <Text|x=668.0|y=333|color=253|size=16|text=+<$STR(N$随机加属性5)>%>
+MOV N$洗练的属性位置5 <$STR(S$位置5)>
+goto @锁定极品属性5
+#IF
+#ACT
+GOTO @装备洗炼面板
+
+
+
+
+[@倒装随机属性]
+#IF
+CHECK [500] 0
+RANDOM <$STR(N$随机洗练属性条数5控制)>
+#ACT
+INC S$新属性展示 <Text|x=551.0|y=236|color=250|size=16|text=<$STR(S$显示1)>>
+INC S$新属性展示 <Text|x=668.0|y=236|color=253|size=16|text=+<$STR(N$随机加属性1)>%>
+MOV N$洗练的属性位置1 <$STR(S$位置1)>
+goto @锁定极品属性1
+#IF
+CHECK [501] 0
+RANDOM <$STR(N$随机洗练属性条数4控制)>
+#ACT
+INC S$新属性展示 <Text|x=551.0|y=260|color=250|size=16|text=<$STR(S$显示2)>>
+INC S$新属性展示 <Text|x=668.0|y=260|color=253|size=16|text=+<$STR(N$随机加属性2)>%>
+MOV N$洗练的属性位置2 <$STR(S$位置2)>
+goto @锁定极品属性2
+#IF
+CHECK [502] 0
+RANDOM <$STR(N$随机洗练属性条数3控制)>
+#ACT
+INC S$新属性展示 <Text|x=551.0|y=285|color=250|size=16|text=<$STR(S$显示3)>>
+INC S$新属性展示 <Text|x=668.0|y=285|color=253|size=16|text=+<$STR(N$随机加属性3)>%>
+MOV N$洗练的属性位置3 <$STR(S$位置3)>
+goto @锁定极品属性3
+#IF
+CHECK [503] 0
+RANDOM <$STR(N$随机洗练属性条数2控制)>
+#ACT
+INC S$新属性展示 <Text|x=551.0|y=309|color=250|size=16|text=<$STR(S$显示4)>>
+INC S$新属性展示 <Text|x=668.0|y=309|color=253|size=16|text=+<$STR(N$随机加属性4)>%>
+MOV N$洗练的属性位置4 <$STR(S$位置4)>
+goto @锁定极品属性4
+#IF
+CHECK [504] 0
+#ACT
+INC S$新属性展示 <Text|x=551.0|y=333|color=250|size=16|text=<$STR(S$显示5)>>
+INC S$新属性展示 <Text|x=668.0|y=333|color=253|size=16|text=+<$STR(N$随机加属性5)>%>
+MOV N$洗练的属性位置5 <$STR(S$位置5)>
+goto @锁定极品属性5
+#IF
+#ACT
+GOTO @装备洗炼面板
+
+
+[@正序随机属性]
+#IF
+CHECK [500] 0
+#ACT
+INC S$新属性展示 <Text|x=551.0|y=236|color=250|size=16|text=<$STR(S$显示1)>>
+INC S$新属性展示 <Text|x=668.0|y=236|color=253|size=16|text=+<$STR(N$随机加属性1)>%>
+MOV N$洗练的属性位置1 <$STR(S$位置1)>
+goto @锁定极品属性1
+
+#IF
+CHECK [501] 0
+RANDOM <$STR(N$随机洗练属性条数2控制)>
+#ACT
+INC S$新属性展示 <Text|x=551.0|y=260|color=250|size=16|text=<$STR(S$显示2)>>
+INC S$新属性展示 <Text|x=668.0|y=260|color=253|size=16|text=+<$STR(N$随机加属性2)>%>
+MOV N$洗练的属性位置2 <$STR(S$位置2)>
+goto @锁定极品属性2
+#IF
+CHECK [502] 0
+RANDOM <$STR(N$随机洗练属性条数3控制)>
+#ACT
+INC S$新属性展示 <Text|x=551.0|y=285|color=250|size=16|text=<$STR(S$显示3)>>
+INC S$新属性展示 <Text|x=668.0|y=285|color=253|size=16|text=+<$STR(N$随机加属性3)>%>
+MOV N$洗练的属性位置3 <$STR(S$位置3)>
+goto @锁定极品属性3
+
+#IF
+CHECK [503] 0
+RANDOM <$STR(N$随机洗练属性条数4控制)>
+#ACT
+INC S$新属性展示 <Text|x=551.0|y=309|color=250|size=16|text=<$STR(S$显示4)>>
+INC S$新属性展示 <Text|x=668.0|y=309|color=253|size=16|text=+<$STR(N$随机加属性4)>%>
+MOV N$洗练的属性位置4 <$STR(S$位置4)>
+goto @锁定极品属性4
+#IF
+CHECK [504] 0
+RANDOM <$STR(N$随机洗练属性条数5控制)>
+#ACT
+INC S$新属性展示 <Text|x=551.0|y=333|color=250|size=16|text=<$STR(S$显示5)>>
+INC S$新属性展示 <Text|x=668.0|y=333|color=253|size=16|text=+<$STR(N$随机加属性5)>%>
+MOV N$洗练的属性位置5 <$STR(S$位置5)>
+goto @锁定极品属性5
+#IF
+#ACT
+GOTO @装备洗炼面板
+
+
+[@锁定极品属性1]
+#if
+not equal N$随机加属性1 <$STR(S$原属取值1)>
+equal N$随机加属性1 5
+#act
+mov S$极品属性 有
+
+[@锁定极品属性2]
+#if
+not equal N$随机加属性2 <$STR(S$原属取值2)>
+equal N$随机加属性2 5
+#act
+mov S$极品属性 有
+
+[@锁定极品属性3]
+#if
+not equal N$随机加属性3 <$STR(S$原属取值3)>
+equal N$随机加属性3 5
+#act
+mov S$极品属性 有
+
+[@锁定极品属性4]
+#if
+not equal N$随机加属性4 <$STR(S$原属取值4)>
+equal N$随机加属性4 5
+#act
+mov S$极品属性 有
+
+[@锁定极品属性5]
+#if
+not equal N$随机加属性5 <$STR(S$原属取值5)>
+equal N$随机加属性5 5
+#act
+mov S$极品属性 有
+
+
+;不锁情况下，随机属性------------------------------------------------------
+
+[@属性随机逻辑]
+#IF
+RANDOM 30
+#ACT
+GetRandomText ..\QuestDiary\装备洗练.txt S$取出属性1
+DelTextList ..\QuestDiary\装备洗练.txt <$STR(S$取出属性1)>
+GetRandomText ..\QuestDiary\装备洗练.txt S$取出属性2
+DelTextList ..\QuestDiary\装备洗练.txt <$STR(S$取出属性2)>
+GetRandomText ..\QuestDiary\装备洗练.txt S$取出属性3
+DelTextList ..\QuestDiary\装备洗练.txt <$STR(S$取出属性3)>
+GetRandomText ..\QuestDiary\装备洗练.txt S$取出属性4
+DelTextList ..\QuestDiary\装备洗练.txt <$STR(S$取出属性4)>
+GetRandomText ..\QuestDiary\装备洗练.txt S$取出属性5
+DelTextList ..\QuestDiary\装备洗练.txt <$STR(S$取出属性5)>
+
+GetValidstr <$STR(S$取出属性1)> : S$显示1 S$位置1
+GetValidstr <$STR(S$取出属性2)> : S$显示2 S$位置2
+GetValidstr <$STR(S$取出属性3)> : S$显示3 S$位置3
+GetValidstr <$STR(S$取出属性4)> : S$显示4 S$位置4
+GetValidstr <$STR(S$取出属性5)> : S$显示5 S$位置5
+
+MOV N$洗练的属性位置1 <$STR(S$位置1)>
+MOV N$洗练的属性位置2 <$STR(S$位置2)>
+MOV N$洗练的属性位置3 <$STR(S$位置3)>
+MOV N$洗练的属性位置4 <$STR(S$位置4)>
+MOV N$洗练的属性位置5 <$STR(S$位置5)>
+
+MOV S$新属性展示 <Text|x=551.0|y=236|color=250|size=16|text=<$STR(S$显示1)>>
+INC S$新属性展示 <Text|x=668.0|y=236|color=253|size=16|text=+<$STR(N$随机加属性1)>%>
+
+INC S$新属性展示 <Text|x=551.0|y=260|color=250|size=16|text=<$STR(S$显示2)>>
+INC S$新属性展示 <Text|x=668.0|y=260|color=253|size=16|text=+<$STR(N$随机加属性2)>%>
+
+INC S$新属性展示 <Text|x=551.0|y=285|color=250|size=16|text=<$STR(S$显示3)>>
+INC S$新属性展示 <Text|x=668.0|y=285|color=253|size=16|text=+<$STR(N$随机加属性3)>%>
+
+INC S$新属性展示 <Text|x=551.0|y=309|color=250|size=16|text=<$STR(S$显示4)>>
+INC S$新属性展示 <Text|x=668.0|y=309|color=253|size=16|text=+<$STR(N$随机加属性4)>%>
+
+INC S$新属性展示 <Text|x=551.0|y=333|color=250|size=16|text=<$STR(S$显示5)>>
+INC S$新属性展示 <Text|x=668.0|y=333|color=253|size=16|text=+<$STR(N$随机加属性5)>%>
+goto @洗到了极品属性5
+GOTO @装备洗炼面板
+BREAK
+
+#IF
+RANDOM 20
+#ACT
+GetRandomText ..\QuestDiary\装备洗练.txt S$取出属性1
+DelTextList ..\QuestDiary\装备洗练.txt <$STR(S$取出属性1)>
+GetRandomText ..\QuestDiary\装备洗练.txt S$取出属性2
+DelTextList ..\QuestDiary\装备洗练.txt <$STR(S$取出属性2)>
+GetRandomText ..\QuestDiary\装备洗练.txt S$取出属性3
+DelTextList ..\QuestDiary\装备洗练.txt <$STR(S$取出属性3)>
+GetRandomText ..\QuestDiary\装备洗练.txt S$取出属性4
+DelTextList ..\QuestDiary\装备洗练.txt <$STR(S$取出属性4)>
+
+GetValidstr <$STR(S$取出属性1)> : S$显示1 S$位置1
+GetValidstr <$STR(S$取出属性2)> : S$显示2 S$位置2
+GetValidstr <$STR(S$取出属性3)> : S$显示3 S$位置3
+GetValidstr <$STR(S$取出属性4)> : S$显示4 S$位置4
+
+MOV N$洗练的属性位置1 <$STR(S$位置1)>
+MOV N$洗练的属性位置2 <$STR(S$位置2)>
+MOV N$洗练的属性位置3 <$STR(S$位置3)>
+MOV N$洗练的属性位置4 <$STR(S$位置4)>
+
+MOV S$新属性展示 <Text|x=551.0|y=236|color=250|size=16|text=<$STR(S$显示1)>>
+INC S$新属性展示 <Text|x=668.0|y=236|color=253|size=16|text=+<$STR(N$随机加属性1)>%>
+
+INC S$新属性展示 <Text|x=551.0|y=260|color=250|size=16|text=<$STR(S$显示2)>>
+INC S$新属性展示 <Text|x=668.0|y=260|color=253|size=16|text=+<$STR(N$随机加属性2)>%>
+
+INC S$新属性展示 <Text|x=551.0|y=285|color=250|size=16|text=<$STR(S$显示3)>>
+INC S$新属性展示 <Text|x=668.0|y=285|color=253|size=16|text=+<$STR(N$随机加属性3)>%>
+
+INC S$新属性展示 <Text|x=551.0|y=309|color=250|size=16|text=<$STR(S$显示4)>>
+INC S$新属性展示 <Text|x=668.0|y=309|color=253|size=16|text=+<$STR(N$随机加属性4)>%>
+goto @洗到了极品属性4
+GOTO @装备洗炼面板
+BREAK
+
+#IF
+RANDOM 10
+#ACT
+GetRandomText ..\QuestDiary\装备洗练.txt S$取出属性1
+DelTextList ..\QuestDiary\装备洗练.txt <$STR(S$取出属性1)>
+GetRandomText ..\QuestDiary\装备洗练.txt S$取出属性2
+DelTextList ..\QuestDiary\装备洗练.txt <$STR(S$取出属性2)>
+GetRandomText ..\QuestDiary\装备洗练.txt S$取出属性3
+DelTextList ..\QuestDiary\装备洗练.txt <$STR(S$取出属性3)>
+
+GetValidstr <$STR(S$取出属性1)> : S$显示1 S$位置1
+GetValidstr <$STR(S$取出属性2)> : S$显示2 S$位置2
+GetValidstr <$STR(S$取出属性3)> : S$显示3 S$位置3
+
+MOV N$洗练的属性位置1 <$STR(S$位置1)>
+MOV N$洗练的属性位置2 <$STR(S$位置2)>
+MOV N$洗练的属性位置3 <$STR(S$位置3)>
+
+MOV S$新属性展示 <Text|x=551.0|y=236|color=250|size=16|text=<$STR(S$显示1)>>
+INC S$新属性展示 <Text|x=668.0|y=236|color=253|size=16|text=+<$STR(N$随机加属性1)>%>
+
+INC S$新属性展示 <Text|x=551.0|y=260|color=250|size=16|text=<$STR(S$显示2)>>
+INC S$新属性展示 <Text|x=668.0|y=260|color=253|size=16|text=+<$STR(N$随机加属性2)>%>
+
+INC S$新属性展示 <Text|x=551.0|y=285|color=250|size=16|text=<$STR(S$显示3)>>
+INC S$新属性展示 <Text|x=668.0|y=285|color=253|size=16|text=+<$STR(N$随机加属性3)>%>
+goto @洗到了极品属性3
+GOTO @装备洗炼面板
+BREAK
+
+#IF
+RANDOM 5
+#ACT
+GetRandomText ..\QuestDiary\装备洗练.txt S$取出属性1
+DelTextList ..\QuestDiary\装备洗练.txt <$STR(S$取出属性1)>
+GetRandomText ..\QuestDiary\装备洗练.txt S$取出属性2
+DelTextList ..\QuestDiary\装备洗练.txt <$STR(S$取出属性2)>
+
+GetValidstr <$STR(S$取出属性1)> : S$显示1 S$位置1
+GetValidstr <$STR(S$取出属性2)> : S$显示2 S$位置2
+
+MOV N$洗练的属性位置1 <$STR(S$位置1)>
+MOV N$洗练的属性位置2 <$STR(S$位置2)>
+
+MOV S$新属性展示 <Text|x=551.0|y=236|color=250|size=16|text=<$STR(S$显示1)>>
+INC S$新属性展示 <Text|x=668.0|y=236|color=253|size=16|text=+<$STR(N$随机加属性1)>%>
+
+INC S$新属性展示 <Text|x=551.0|y=260|color=250|size=16|text=<$STR(S$显示2)>>
+INC S$新属性展示 <Text|x=668.0|y=260|color=253|size=16|text=+<$STR(N$随机加属性2)>%>
+goto @洗到了极品属性2
+GOTO @装备洗炼面板
+BREAK
+
+
+
+
+
+#IF
+#ACT
+MOV S$新属性展示
+GetRandomText ..\QuestDiary\装备洗练.txt S$取出属性1
+DelTextList ..\QuestDiary\装备洗练.txt <$STR(S$取出属性1)>
+GetValidstr <$STR(S$取出属性1)> : S$显示1 S$位置1
+
+MOV N$洗练的属性位置1 <$STR(S$位置1)>
+
+MOV S$新属性展示 <Text|x=551.0|y=236|color=250|size=16|text=<$STR(S$显示1)>>
+INC S$新属性展示 <Text|x=668.0|y=236|color=253|size=16|text=+<$STR(N$随机加属性1)>%>
+
+
+goto @洗到了极品属性1
+GOTO @装备洗炼面板
+BREAK
+
+[@洗到了极品属性1]
+#if
+equal N$随机加属性1 5
+#act
+mov S$极品属性 有
+
+[@洗到了极品属性2]
+#or
+equal N$随机加属性1 5
+equal N$随机加属性2 5
+#act
+mov S$极品属性 有
+
+[@洗到了极品属性3]
+#or
+equal N$随机加属性1 5
+equal N$随机加属性2 5
+equal N$随机加属性3 5
+#act
+mov S$极品属性 有
+
+[@洗到了极品属性4]
+#or
+equal N$随机加属性1 5
+equal N$随机加属性2 5
+equal N$随机加属性3 5
+equal N$随机加属性4 5
+#act
+mov S$极品属性 有
+
+[@洗到了极品属性5]
+#or
+equal N$随机加属性1 5
+equal N$随机加属性2 5
+equal N$随机加属性3 5
+equal N$随机加属性4 5
+equal N$随机加属性5 5
+#act
+mov S$极品属性 有
+
+[@属性锁1]
+#IF
+CHECK [500] 0 
+#ACT
+MOV S$属性锁01 <Button|x=465.0|y=220.0|pimg=npc/zbxl/guan.png|nimg=npc/zbxl/guan.png|size=18|mimg=npc/zbxl/guan.png|link=@属性锁1>
+INC N$属性锁定次数 1
+SET [500] 1 
+
+#ELSEACT
+MOV S$属性锁01 <Button|x=465.0|y=220.0|pimg=npc/zbxl/kai.png|nimg=npc/zbxl/kai.png|size=18|mimg=npc/zbxl/kai.png|link=@属性锁1>
+SET [500] 0 
+DEC N$属性锁定次数 1
+
+#IF
+#ACT
+GOTO @装备洗炼面板
+
+
+[@属性锁2]
+#IF
+CHECK [501] 0 
+#ACT
+SET [501] 1
+MOV S$属性锁02 <Button|x=465.0|y=249.0|pimg=npc/zbxl/guan.png|nimg=npc/zbxl/guan.png|size=18|mimg=npc/zbxl/guan.png|link=@属性锁2>
+INC N$属性锁定次数 1
+#ELSEACT
+SET [501] 0
+MOV S$属性锁02 <Button|x=465.0|y=249.0|pimg=npc/zbxl/kai.png|nimg=npc/zbxl/kai.png|size=18|mimg=npc/zbxl/kai.png|link=@属性锁2>
+DEC N$属性锁定次数 1
+#IF
+#ACT
+GOTO @装备洗炼面板
+
+
+[@属性锁3]
+#IF
+CHECK [502] 0 
+#ACT
+SET [502] 1
+MOV S$属性锁03 <Button|x=465.0|y=278.0|pimg=npc/zbxl/guan.png|nimg=npc/zbxl/guan.png|size=18|mimg=npc/zbxl/guan.png|link=@属性锁3>
+INC N$属性锁定次数 1
+#ELSEACT
+SET [502] 0 
+MOV S$属性锁03 <Button|x=465.0|y=278.0|pimg=npc/zbxl/kai.png|nimg=npc/zbxl/kai.png|size=18|mimg=npc/zbxl/kai.png|link=@属性锁3>
+DEC N$属性锁定次数 1
+#IF
+#ACT
+GOTO @装备洗炼面板
+
+
+[@属性锁4]
+#IF
+CHECK [503] 0 
+#ACT
+SET [503] 1 
+MOV S$属性锁04 <Button|x=465.0|y=307.0|pimg=npc/zbxl/guan.png|nimg=npc/zbxl/guan.png|size=18|mimg=npc/zbxl/guan.png|link=@属性锁4>
+INC N$属性锁定次数 1
+#ELSEACT
+SET [503] 0 
+MOV S$属性锁04 <Button|x=465.0|y=307.0|pimg=npc/zbxl/kai.png|nimg=npc/zbxl/kai.png|size=18|mimg=npc/zbxl/kai.png|link=@属性锁4>
+DEC N$属性锁定次数 1
+
+#IF
+#ACT
+GOTO @装备洗炼面板
+
+[@属性锁5]
+#IF
+CHECK [504] 0 
+#ACT
+SET [504] 1 
+MOV S$属性锁05 <Button|x=465.0|y=334.0|pimg=npc/zbxl/guan.png|nimg=npc/zbxl/guan.png|size=18|mimg=npc/zbxl/guan.png|link=@属性锁5>
+INC N$属性锁定次数 1
+#ELSEACT
+SET [504] 0 
+MOV S$属性锁05 <Button|x=465.0|y=334.0|pimg=npc/zbxl/kai.png|nimg=npc/zbxl/kai.png|size=18|mimg=npc/zbxl/kai.png|link=@属性锁5>
+DEC N$属性锁定次数 1
+#IF
+#ACT
+GOTO @装备洗炼面板
+
+
+
+
+
+
+
+
+
+[@随机洗练选择]
+#if
+equal S$极品属性 有
+#act
+MESSAGEBOX 洗炼到了极品+5%属性，暂未保存，是否无视切换装备？  @对的切换  @取消
+#elseact
+goto @对的切换
+[@对的切换]
+#IF
+#ACT
+MOV S$极品属性
+MOV N$属性锁定次数 0
+MOV S$新属性展示
+MOV S$属性锁01 
+MOV S$属性锁02 
+MOV S$属性锁03 
+MOV S$属性锁04 
+MOV S$属性锁05
+SET [500] 0
+SET [501] 0
+SET [502] 0
+SET [503] 0
+SET [504] 0
+MOV N$洗练装备展示 <$STR(S$装备1)>
+MOV N$洗练特效位置X <$STR(S$坐标X)>
+MOV N$洗练特效位置Y <$STR(S$坐标Y)>
+mov S$属性文字展示 <RText|x=346.0|y=283.0|size=16|color=255|outline=1|text=洗练属性为空>
+
+GetNewItemAddValue <$STR(N$洗练装备展示)> 0 N$暴击几率
+GetNewItemAddValue <$STR(N$洗练装备展示)> 1 N$攻击伤害
+GetNewItemAddValue <$STR(N$洗练装备展示)> 2 N$物理伤害减少
+GetNewItemAddValue <$STR(N$洗练装备展示)> 3 N$魔法伤害减少
+GetNewItemAddValue <$STR(N$洗练装备展示)> 4 N$忽视目标防御
+GetNewItemAddValue <$STR(N$洗练装备展示)> 5 N$所有伤害反弹
+GetNewItemAddValue <$STR(N$洗练装备展示)> 6 N$目标爆率
+GetNewItemAddValue <$STR(N$洗练装备展示)> 7 N$人物体力增加
+GetNewItemAddValue <$STR(N$洗练装备展示)> 8 N$人物魔力增加
+GetNewItemAddValue <$STR(N$洗练装备展示)> 11 N$暴击伤害
+
+#IF
+#ACT
+mov N$原属装入次数 0
+
+#IF
+LARGE N$暴击几率 0
+#ACT
+mov S$原属性展示文字 暴击几率+<$STR(N$暴击几率)>%
+MOV S$原属性展位置参数拼接 0:<$STR(N$暴击几率)>
+GOTO @原属性记录
+
+#IF
+LARGE N$攻击伤害 0
+#ACT
+mov S$原属性展示文字 攻击伤害+<$STR(N$攻击伤害)>% 
+MOV S$原属性展位置参数拼接 1:<$STR(N$攻击伤害)>
+GOTO @原属性记录
+
+#IF
+LARGE N$物理伤害减少 0
+#ACT
+mov S$原属性展示文字 物理伤害减少+<$STR(N$物理伤害减少)>% 
+MOV S$原属性展位置参数拼接 2:<$STR(N$物理伤害减少)>
+GOTO @原属性记录
+
+#IF
+LARGE N$魔法伤害减少 0
+#ACT
+mov S$原属性展示文字 魔法伤害减少+<$STR(N$魔法伤害减少)>% 
+MOV S$原属性展位置参数拼接 3:<$STR(N$魔法伤害减少)>
+GOTO @原属性记录
+
+#IF
+LARGE N$忽视目标防御 0
+#ACT
+mov S$原属性展示文字 忽视目标防御+<$STR(N$忽视目标防御)>% 
+MOV S$原属性展位置参数拼接 4:<$STR(N$忽视目标防御)>
+GOTO @原属性记录
+
+#IF
+LARGE N$所有伤害反弹 0
+#ACT
+mov S$原属性展示文字 所有伤害反弹+<$STR(N$所有伤害反弹)>% 
+MOV S$原属性展位置参数拼接 5:<$STR(N$所有伤害反弹)>
+GOTO @原属性记录
+
+#IF
+LARGE N$目标爆率 0
+#ACT
+mov S$原属性展示文字 目标爆率+<$STR(N$目标爆率)>% 
+MOV S$原属性展位置参数拼接 6:<$STR(N$目标爆率)>
+GOTO @原属性记录
+ 
+#IF
+LARGE N$人物体力增加 0
+#ACT
+mov S$原属性展示文字 人物体力增加+<$STR(N$人物体力增加)>% 
+MOV S$原属性展位置参数拼接 7:<$STR(N$人物体力增加)>
+GOTO @原属性记录
+ 
+#IF
+LARGE N$人物魔力增加 0
+#ACT
+mov S$原属性展示文字 人物魔力增加+<$STR(N$人物魔力增加)>% 
+MOV S$原属性展位置参数拼接 8:<$STR(N$人物魔力增加)>
+GOTO @原属性记录
+ 
+#IF
+LARGE N$暴击伤害 0
+#ACT
+mov S$原属性展示文字 暴击伤害+<$STR(N$暴击伤害)>% 
+MOV S$原属性展位置参数拼接 11:<$STR(N$暴击伤害)>
+GOTO @原属性记录
+
+#IF
+#ACT
+GOTO @装备洗炼面板
+
+
+
+[@原属性记录]
+#IF
+#ACT
+INC N$原属装入次数 1
+
+#IF
+EQUAL N$原属装入次数 1
+#ACT
+MOV S$属性文字展示 <Text|x=304.0|y=230|size=16|color=254|text=<$STR(S$原属性展示文字)>>
+MOV S$属性锁 <$STR(S$属性锁01)>
+
+GetValidstr <$STR(S$原属性展位置参数拼接)> : S$原属取位置1 S$原属取值1
+GetValidstr <$STR(S$原属性展示文字)> + S$原属性文字1
+
+#IF
+EQUAL N$原属装入次数 2
+#ACT
+INC S$属性文字展示 <Text|x=304.0|y=259|size=16|color=254|text=<$STR(S$原属性展示文字)>>
+INC S$属性锁 <$STR(S$属性锁02)>
+
+GetValidstr <$STR(S$原属性展位置参数拼接)> : S$原属取位置2 S$原属取值2
+GetValidstr <$STR(S$原属性展示文字)> + S$原属性文字2
+
+#IF
+EQUAL N$原属装入次数 3
+#ACT
+INC S$属性文字展示 <Text|x=304.0|y=287|size=16|color=254|text=<$STR(S$原属性展示文字)>>
+INC S$属性锁 <$STR(S$属性锁03)>
+
+GetValidstr <$STR(S$原属性展位置参数拼接)> : S$原属取位置3 S$原属取值3
+GetValidstr <$STR(S$原属性展示文字)> + S$原属性文字3
+
+#IF
+EQUAL N$原属装入次数 4
+#ACT
+INC S$属性文字展示 <Text|x=304.0|y=314|size=16|color=254|text=<$STR(S$原属性展示文字)>>
+INC S$属性锁 <$STR(S$属性锁04)>
+
+GetValidstr <$STR(S$原属性展位置参数拼接)> : S$原属取位置4 S$原属取值4
+GetValidstr <$STR(S$原属性展示文字)> + S$原属性文字4
+
+#IF
+EQUAL N$原属装入次数 5
+#ACT
+INC S$属性文字展示 <Text|x=304.0|y=343|size=16|color=254|text=<$STR(S$原属性展示文字)>>
+
+GetValidstr <$STR(S$原属性展位置参数拼接)> : S$原属取位置5 S$原属取值5
+GetValidstr <$STR(S$原属性展示文字)> + S$原属性文字5
+
+
+#IF
+LARGE N$原属装入次数 0
+#ACT
+MOV S$属性锁01 <Button|x=465.0|y=220.0|pimg=npc/zbxl/kai.png|nimg=npc/zbxl/kai.png|size=18|mimg=npc/zbxl/kai.png|link=@属性锁1>
+#IF
+LARGE N$原属装入次数 1
+#ACT
+MOV S$属性锁02 <Button|x=465.0|y=249.0|pimg=npc/zbxl/kai.png|nimg=npc/zbxl/kai.png|size=18|mimg=npc/zbxl/kai.png|link=@属性锁2>
+#IF
+LARGE N$原属装入次数 2
+#ACT
+MOV S$属性锁03 <Button|x=465.0|y=278.0|pimg=npc/zbxl/kai.png|nimg=npc/zbxl/kai.png|size=18|mimg=npc/zbxl/kai.png|link=@属性锁3>
+#IF
+LARGE N$原属装入次数 3
+#ACT
+MOV S$属性锁04 <Button|x=465.0|y=307.0|pimg=npc/zbxl/kai.png|nimg=npc/zbxl/kai.png|size=18|mimg=npc/zbxl/kai.png|link=@属性锁4>
+#IF
+LARGE N$原属装入次数 4
+#ACT
+MOV S$属性锁05 <Button|x=465.0|y=334|pimg=npc/zbxl/kai.png|nimg=npc/zbxl/kai.png|size=18|mimg=npc/zbxl/kai.png|link=@属性锁5>
+
+#IF
+#ACT
+GOTO @装备洗炼面板
+

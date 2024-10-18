@@ -1,0 +1,282 @@
+[@支线任务系统QM]
+{
+;U7=主线任务编号
+;U8=刷新任务状态显示数字
+;U19=支线任务编号
+;-----------------------------------开始任务在这
+;主线任务登陆
+;-----------------------------------
+
+;========================================支线
+#IF
+EQUAL U19 100
+check [17] 1
+#ACT
+newcompletetask <$STR(U19)>
+BREAK
+
+#IF
+equal U19 100
+check [17] 0
+#ACT
+newpicktask <$STR(U19)>
+newchangetask <$STR(U19)>
+BREAK
+;=========================================
+#IF
+equal U19 101
+large U9 4
+#ACT
+newcompletetask <$STR(U19)>
+BREAK
+
+#IF
+equal U19 101
+#ACT
+newpicktask <$STR(U19)>
+newchangetask <$STR(U19)> <$STR(U9)>
+BREAK
+;=========================================
+#IF
+equal U19 102
+CHECK [29] 1
+#ACT
+newcompletetask <$STR(U19)>
+BREAK
+
+#IF
+equal U19 101
+CHECK [29] 0
+#ACT
+newpicktask <$STR(U19)>
+newchangetask <$STR(U19)>
+BREAK
+;=========================================
+#IF
+equal U19 102
+CHECK [29] 1
+#ACT
+newcompletetask <$STR(U19)>
+BREAK
+
+#IF
+equal U19 102
+CHECK [29] 0
+#ACT
+newpicktask <$STR(U19)>
+newchangetask <$STR(U19)>
+BREAK
+
+;=========================================
+#IF
+equal U19 103
+check [60] 1
+#ACT
+newcompletetask <$STR(U19)>
+BREAK
+
+#IF
+equal U19 103
+check [60] 0
+#ACT
+newpicktask <$STR(U19)>
+newchangetask <$STR(U19)>
+BREAK
+;=========================================
+#IF
+equal U19 104
+check [61] 1
+#ACT
+newcompletetask <$STR(U19)>
+BREAK
+
+#IF
+equal U19 104
+check [61] 0
+#ACT
+newpicktask <$STR(U19)>
+newchangetask <$STR(U19)>
+BREAK
+
+;=========================================
+#IF
+equal U19 105
+check [62] 1
+#ACT
+newcompletetask <$STR(U19)>
+BREAK
+
+#IF
+equal U19 105
+check [62] 0
+#ACT
+newpicktask <$STR(U19)>
+newchangetask <$STR(U19)>
+BREAK
+;=========================================
+#IF
+equal U19 106
+check [69] 0
+#ACT
+newcompletetask <$STR(U19)>
+BREAK
+
+#IF
+equal U19 106
+check [69] 1
+#ACT
+newpicktask <$STR(U19)>
+newchangetask <$STR(U19)>
+BREAK
+;=========================================
+#IF
+equal U19 107
+check [63] 1
+#ACT
+newcompletetask <$STR(U19)>
+BREAK
+
+#IF
+equal U19 107
+check [63] 0
+#ACT
+newpicktask <$STR(U19)>
+newchangetask <$STR(U19)>
+BREAK
+
+;=========================================
+#IF
+equal U19 108
+check [64] 1
+#ACT
+newcompletetask <$STR(U19)>
+BREAK
+
+#IF
+equal U19 108
+check [64] 0
+#ACT
+newpicktask <$STR(U19)>
+newchangetask <$STR(U19)>
+BREAK
+
+;=========================================
+#IF
+equal U19 109
+check [65] 1
+#ACT
+newcompletetask <$STR(U19)>
+BREAK
+
+#IF
+equal U19 109
+check [65] 0
+#ACT
+newpicktask <$STR(U19)>
+newchangetask <$STR(U19)>
+BREAK
+
+;=========================================
+#IF
+equal U19 110
+check [66] 1
+#ACT
+newcompletetask <$STR(U19)>
+BREAK
+
+#IF
+equal U19 110
+check [66] 0
+#ACT
+newpicktask <$STR(U19)>
+newchangetask <$STR(U19)>
+BREAK
+
+;=========================================
+#IF
+equal U19 111
+check [67] 1
+#ACT
+newcompletetask <$STR(U19)>
+BREAK
+
+#IF
+equal U19 111
+check [67] 0
+#ACT
+newpicktask <$STR(U19)>
+newchangetask <$STR(U19)>
+BREAK
+
+;=========================================
+#IF
+equal U19 112
+check [68] 1
+#ACT
+newcompletetask <$STR(U19)>
+BREAK
+
+#IF
+equal U19 112
+check [68] 0
+#ACT
+newpicktask <$STR(U19)>
+newchangetask <$STR(U19)>
+BREAK
+
+;=========================================
+#IF
+equal U19 113
+check [77] 1
+#ACT
+newcompletetask <$STR(U19)>
+BREAK
+
+#IF
+equal U19 113
+check [77] 0
+#ACT
+newpicktask <$STR(U19)>
+newchangetask <$STR(U19)>
+BREAK
+
+;===============================
+#IF
+equal U19 114
+check [78] 0
+#ACT
+newpicktask <$STR(U19)>
+newchangetask <$STR(U19)>
+BREAK
+
+#IF
+equal U19 114
+check [78] 1
+#ACT
+newcompletetask <$STR(U19)>
+BREAK
+
+;===============================
+#IF
+equal U19 115
+check [79] 1
+#ACT
+newcompletetask <$STR(U19)>
+BREAK
+
+#IF
+equal U19 116
+check [159] 0
+#ACT
+newpicktask <$STR(U19)>
+newchangetask <$STR(U19)>
+BREAK
+
+
+#IF
+EQUAL U19 116
+check [159] 1
+#ACT
+newcompletetask <$STR(U19)>
+BREAK
+}

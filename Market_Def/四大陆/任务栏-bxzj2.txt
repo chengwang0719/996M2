@@ -1,0 +1,66 @@
+[@main]
+#if
+check [236] 0
+#act
+mov S$任务一颜色 249
+mov S$任务一名字 未完成
+#elseact
+mov S$任务一颜色 250
+mov S$任务一名字 已完成
+
+#if
+check [237] 0
+#act
+mov S$任务二颜色 249
+mov S$任务二名字 未完成
+#elseact
+mov S$任务二颜色 250
+mov S$任务二名字 已完成
+
+#if
+check [238] 0
+#act
+mov S$任务三颜色 249
+mov S$任务三名字 未完成
+#elseact
+mov S$任务三颜色 250
+mov S$任务三名字 已完成
+
+#if
+check [239] 0
+#act
+mov S$任务四颜色 249
+mov S$任务四名字 未完成
+#elseact
+mov S$任务四颜色 250
+mov S$任务四名字 已完成
+
+#if
+#act
+goto @任务栏页面
+
+
+
+[@任务栏页面]
+#if
+#say
+<Img|a=4|x=442.0|y=272.5|width=904|height=565|move=1|reset=1|img=npc/ycrw/bj.png|bg=1|show=4|loadDelay=0|esc=1>
+<Button|x=817.0|y=29.0|nimg=public/close-2.png|mimg=public/close-2.png|link=@exit>
+<Text|x=129.0|y=79.0|color=243|size=18|outline=1|outlinecolor=0|text=传闻比奇省出过一群大陆顶尖强者，后不知什么原因隐退江湖，从此销声匿迹>
+<Text|x=201.0|y=108.0|color=243|size=18|outline=1|outlinecolor=0|text=据可靠消息曾有人在冰雪之地见过，不知此消息是否可靠。>
+<Layout|children={1,2,3}|x=67.0|y=143.0|width=750|height=80|rotate=0>
+<Text|id=1|x=25.0|y=10.0|outline=1|color=161|size=16|outlinecolor=0|text=任务：冰雪之地寻找到武器店，找到武器锻造师>
+<Text|id=2|x=384.0|y=10.0|outline=1|color=161|size=16|outlinecolor=0|text=奖励：100w绑定元宝 - 30个锻造神石绑定>
+<RText|id=3|x=603.0|y=44.0|outline=1|color=161|size=16|outlinecolor=0|text=完成状态：<<$STR(S$任务一名字)>/FCOLOR=<$STR(S$任务一颜色)>>>
+<Layout|children={4,5,6}|x=67.0|y=236.0|width=750|height=80|rotate=0>
+<Text|id=4|x=25.0|y=10.0|outline=1|color=161|size=16|outlinecolor=0|text=任务：冰雪之地寻找道具店，找到符石合成>
+<Text|id=5|x=384.0|y=10.0|outline=1|color=161|size=16|outlinecolor=0|text=奖励：100w绑定元宝 - 100符石碎片绑定>
+<RText|id=6|x=603.0|y=44.0|outline=1|color=161|size=16|outlinecolor=0|text=完成状态：<<$STR(S$任务二名字)>/FCOLOR=<$STR(S$任务二颜色)>>>
+<Layout|children={7,8,9}|x=67.0|y=323.0|width=750|height=80|rotate=0>
+<Text|id=7|x=25.0|y=10.0|outline=1|color=161|size=16|outlinecolor=0|text=任务：冰雪之地寻找灵枢药炉激活紫阳花>
+<Text|id=8|x=384.0|y=10.0|outline=1|color=161|size=16|outlinecolor=0|text=奖励：100个药魂石 - 5万绑定点卡>
+<RText|id=9|x=603.0|y=44.0|outline=1|color=161|size=16|outlinecolor=0|text=完成状态：<<$STR(S$任务三名字)>/FCOLOR=<$STR(S$任务三颜色)>>>
+<Layout|children={10,11,12}|x=67.0|y=414.0|width=750|height=80|rotate=0>
+<Text|id=10|x=25.0|y=10.0|outline=1|color=161|size=16|outlinecolor=0|text=任务：寻找神秘使者>
+<Text|id=11|x=384.0|y=10.0|outline=1|color=161|size=16|outlinecolor=0|text=奖励：5000万经验 - 50万绑定元宝>
+<RText|id=12|x=603.0|y=44.0|outline=1|color=161|size=16|outlinecolor=0|text=完成状态：<<$STR(S$任务四名字)>/FCOLOR=<$STR(S$任务四颜色)>>>

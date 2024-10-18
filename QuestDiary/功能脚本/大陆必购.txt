@@ -1,0 +1,462 @@
+[@大陆必购]
+{
+
+#if
+#act
+NEWREADCSV ..\QuestDiary\功能表格\cfg_dalubigou.csv
+
+
+
+
+#if
+equal J8 0
+#act
+inc J8 1
+goto @随机商品展示
+goto @必购页面
+
+#if
+LARGE J8 0 
+#ACT
+goto @必购页面
+
+[@必购页面]
+#IF
+#say
+<Button|x=-2526.0|y=-1172.0|width=115120|height=112880|mimg=npc/zd.png|pimg=npc/zd.png|size=18|color=224|nimg=npc/zd.png|link=@exit>
+<Img|children={1,2,a8}|a=4|x=510.0|y=293.5|width=950|height=593|move=0|reset=1|loadDelay=0|show=4|bg=1|esc=1|img=npc/dlbg/bj.png>
+
+<ListView|id=1|children={11,12}|x=90|y=129|width=770|height=335|cantouch=1|margin=10|direction=1|bounce=0>
+<Layout|id=11|children={1a,2a,3a,4a}|x=0|y=0|width=770|height=200>
+<Img|id=1a|children={100,101,102,103,104,105}|x=0|y=0|width=180|height=200|reset=1|esc=1|loadDelay=0|show=4|img=npc/dlbg/kuang.png>
+<Img|id=100|a=4|children={99,1000}|percentx=50.0|percenty=29.5|width=70|height=70|reset=1|img=npc/dlbg/gou.png|show=4|loadDelay=0|esc=1>
+
+<ItemShow|id=99|x=0|y=0|width=60|height=60|itemid=<$str(U209)>|itemcount=<$cfg_dalubigou(<$STR(U201)>_1)>|bgtype=0|showtips=1>
+<Effect|id=1000|x=-7|y=-8|scale=1.5|speed=1.2|dir=5|effectid=34000|act=0|effecttype=0>
+<Img|id=101|a=4|percentx=20.0|percenty=59|width=44|height=22|reset=1|img=npc/dlbg/jiage.png|show=4|loadDelay=0|esc=1>
+<Img|id=102|a=4|percentx=50.0|percenty=70|width=176|height=2|reset=1|img=npc/dlbg/heitiao.png|show=4|loadDelay=0|esc=1>
+
+<$STR(T201)>
+<Text|id=104|x=64|y=108|size=16|outline=1|color=251|text=<$cfg_dalubigou(<$STR(U201)>_2)>>
+
+
+<Img|id=2a|children={200,201,202,203,204}|x=195.0|y=0.0|width=180|height=200|reset=1|esc=1|loadDelay=0|show=4|img=npc/dlbg/kuang.png>
+<Img|id=200|a=4|children={199,2000}|percentx=50.0|percenty=29.5|width=70|height=70|reset=1|img=npc/dlbg/gou.png|show=4|loadDelay=0|esc=1>
+<ItemShow|id=199|x=0|y=0|width=60|height=60|itemid=<$str(U210)>|itemcount=<$cfg_dalubigou(<$STR(U202)>_1)>|bgtype=0|showtips=1>
+<Effect|id=2000|x=-7|y=-8|scale=1.5|speed=1.2|dir=5|effectid=34000|act=0|effecttype=0>
+<Img|id=201|a=4|percentx=20.0|percenty=59|width=44|height=22|reset=1|img=npc/dlbg/jiage.png|show=4|loadDelay=0|esc=1>
+<Img|id=202|a=4|percentx=50.0|percenty=70|width=176|height=2|reset=1|img=npc/dlbg/heitiao.png|show=4|loadDelay=0|esc=1>
+<$STR(T202)>
+<Text|id=204|x=64|y=108|size=16|outline=1|color=251|text=<$cfg_dalubigou(<$STR(U202)>_2)>>
+
+<Img|id=3a|x=391.0|y=0.0|children={300,301,302,303,304}|width=180|height=200|reset=1|esc=1|loadDelay=0|show=4|img=npc/dlbg/kuang.png>
+<Img|id=300|a=4|children={299,3000}|percentx=50.0|percenty=29.5|width=70|height=70|reset=1|img=npc/dlbg/gou.png|show=4|loadDelay=0|esc=1>
+<ItemShow|id=299|x=0|y=0|width=60|height=60|itemid=<$str(U211)>|itemcount=<$cfg_dalubigou(<$STR(U203)>_1)>|bgtype=0|showtips=1>
+<Effect|id=3000|x=-7|y=-8|scale=1.5|speed=1.2|dir=5|effectid=34000|act=0|effecttype=0>
+<Img|id=301|a=4|percentx=20.0|percenty=59|width=44|height=22|reset=1|img=npc/dlbg/jiage.png|show=4|loadDelay=0|esc=1>
+<Img|id=302|a=4|percentx=50.0|percenty=70|width=176|height=2|reset=1|img=npc/dlbg/heitiao.png|show=4|loadDelay=0|esc=1>
+<$STR(T203)>
+<Text|id=304|x=64|y=108|size=16|outline=1|color=251|text=<$cfg_dalubigou(<$STR(U203)>_2)>>
+
+
+
+
+
+<Img|id=4a|x=587.0|y=0.0|children={400,401,402,403,404}|width=180|height=200|reset=1|esc=1|loadDelay=0|show=4|img=npc/dlbg/kuang.png >
+<Img|id=400|a=4|children={399,4000}|percentx=50.0|percenty=29.5|width=70|height=70|reset=1|img=npc/dlbg/gou.png|show=4|loadDelay=0|esc=1>
+<ItemShow|id=399|x=0|y=0|width=60|height=60|itemid=<$str(U212)>|itemcount=<$cfg_dalubigou(<$STR(U204)>_1)>|bgtype=0|showtips=1>
+<Effect|id=4000|x=-7|y=-8|scale=1.5|speed=1.2|dir=5|effectid=34000|act=0|effecttype=0>
+<Img|id=401|a=4|percentx=20.0|percenty=59|width=44|height=22|reset=1|img=npc/dlbg/jiage.png|show=4|loadDelay=0|esc=1>
+<Img|id=402|a=4|percentx=50.0|percenty=70|width=176|height=2|reset=1|img=npc/dlbg/heitiao.png|show=4|loadDelay=0|esc=1>
+<$STR(T204)>
+<Text|id=404|x=64|y=108|size=16|outline=1|color=251|text=<$cfg_dalubigou(<$STR(U204)>_2)>>
+
+
+
+
+<Layout|id=12|children={5a,6a,7a,8a}|x=0|y=0|width=770|height=200>
+<Img|id=5a|x=0|y=0|children={500,501,502,503,504}|width=180|height=200|reset=1|esc=1|loadDelay=0|show=4|img=npc/dlbg/kuang.png >
+<Img|id=500|children={499,5000}|a=4|percentx=50.0|percenty=29.5|width=70|height=70|reset=1|img=npc/dlbg/gou.png|show=4|loadDelay=0|esc=1>
+<ItemShow|id=499|x=0|y=0|width=60|height=60|itemid=<$str(U213)>|itemcount=<$cfg_dalubigou(<$STR(U205)>_1)>|bgtype=0|showtips=1>
+<Effect|id=5000|x=-7|y=-8|scale=1.5|speed=1.2|dir=5|effectid=34000|act=0|effecttype=0>
+<Img|id=501|a=4|percentx=20.0|percenty=59|width=44|height=22|reset=1|img=npc/dlbg/jiage.png|show=4|loadDelay=0|esc=1>
+<Img|id=502|a=4|percentx=50.0|percenty=70|width=176|height=2|reset=1|img=npc/dlbg/heitiao.png|show=4|loadDelay=0|esc=1>
+<$STR(T205)>
+<Text|id=504|x=64|y=108|size=16|outline=1|color=251|text=<$cfg_dalubigou(<$STR(U205)>_2)>>
+
+
+
+
+<Img|id=6a|x=195.0|y=0.0|children={600,601,602,603,604}|width=180|height=200|reset=1|esc=1|loadDelay=0|show=4|img=npc/dlbg/kuang.png >
+
+<Img|id=600|a=4|children={599,6000}|percentx=50.0|percenty=29.5|width=70|height=70|reset=1|img=npc/dlbg/gou.png|show=4|loadDelay=0|esc=1>
+<ItemShow|id=599|x=0|y=0|width=60|height=60|itemid=<$str(U214)>|itemcount=<$cfg_dalubigou(<$STR(U206)>_1)>|bgtype=0|showtips=1>
+<Effect|id=6000|x=-7|y=-8|scale=1.5|speed=1.2|dir=5|effectid=34000|act=0|effecttype=0>
+<Img|id=601|a=4|percentx=20.0|percenty=59|width=44|height=22|reset=1|img=npc/dlbg/jiage.png|show=4|loadDelay=0|esc=1>
+<Img|id=602|a=4|percentx=50.0|percenty=70|width=176|height=2|reset=1|img=npc/dlbg/heitiao.png|show=4|loadDelay=0|esc=1>
+<$STR(T206)>
+<Text|id=604|x=64|y=108|size=16|outline=1|color=251|text=<$cfg_dalubigou(<$STR(U206)>_2)>>
+
+
+
+
+<Img|id=7a|x=391.0|y=0.0|children={700,701,702,703,704}|width=180|height=200|reset=1|esc=1|loadDelay=0|show=4|img=npc/dlbg/kuang.png >
+<Img|id=700|a=4|children={699,7000}|percentx=50.0|percenty=29.5|width=70|height=70|reset=1|img=npc/dlbg/gou.png|show=4|loadDelay=0|esc=1>
+<ItemShow|id=699|x=0|y=0|width=60|height=60|itemid=<$str(U215)>|itemcount=<$cfg_dalubigou(<$STR(U207)>_1)>|bgtype=0|showtips=1>
+<Effect|id=7000|x=-7|y=-8|scale=1.5|speed=1.2|dir=5|effectid=34000|act=0|effecttype=0>
+<Img|id=701|a=4|percentx=20.0|percenty=59|width=44|height=22|reset=1|img=npc/dlbg/jiage.png|show=4|loadDelay=0|esc=1>
+<Img|id=702|a=4|percentx=50.0|percenty=70|width=176|height=2|reset=1|img=npc/dlbg/heitiao.png|show=4|loadDelay=0|esc=1>
+<$STR(T207)>
+<Text|id=704|x=64|y=108|size=16|outline=1|color=251|text=<$cfg_dalubigou(<$STR(U207)>_2)>>
+
+
+
+
+<Img|id=8a|x=587.0|y=0.0|children={800,801,802,803,804}|width=180|height=200|reset=1|esc=1|loadDelay=0|show=4|img=npc/dlbg/kuang.png >
+<Img|id=800|children={799,8000}|a=4|percentx=50.0|percenty=29.5|width=70|height=70|reset=1|img=npc/dlbg/gou.png|show=4|loadDelay=0|esc=1>
+<ItemShow|id=799|x=0|y=0|width=60|height=60|itemid=<$str(U216)>|itemcount=<$cfg_dalubigou(<$STR(U208)>_1)>|bgtype=0|showtips=1>
+<Effect|id=8000|x=-7|y=-8|scale=1.5|speed=1.2|dir=5|effectid=34000|act=0|effecttype=0>
+<Img|id=801|a=4|percentx=20.0|percenty=59|width=44|height=22|reset=1|img=npc/dlbg/jiage.png|show=4|loadDelay=0|esc=1>
+<Img|id=802|a=4|percentx=50.0|percenty=70|width=176|height=2|reset=1|img=npc/dlbg/heitiao.png|show=4|loadDelay=0|esc=1>
+<$STR(T208)>
+<Text|id=804|x=64|y=108|size=16|outline=1|color=251|text=<$cfg_dalubigou(<$STR(U208)>_2)>>
+
+
+
+
+
+
+
+
+<Img|a=4|percentx=53.5|percenty=78.9|width=790|height=2|reset=1|img=npc/dlbg/heitiao.png|show=4|loadDelay=0|esc=1>
+
+<Img|percentx=12.7|percenty=83.3|width=50.4|height=30|reset=1|img=npc/dlbg/1.png|loadDelay=0|show=4|esc=1>
+<Img|percentx=18.2|percenty=82.8|loadDelay=0|show=4|esc=1|img=npc/dlbg/kuang1.png|reset=1>
+<Text|outline=2|outlinecolor=0|text=$STM(MONEY_元宝)|percentx=19.3|percenty=84.1|size=16|color=255>
+
+
+
+
+<Img|percentx=35.4|percenty=83.3|width=50.4|height=30|reset=1|img=npc/dlbg/2.png|loadDelay=0|show=4|esc=1>
+<Img|percentx=40.7|percenty=82.8|loadDelay=0|show=4|esc=1|img=npc/dlbg/kuang1.png|reset=1>
+<Text|outline=2|outlinecolor=0|text=$STM(MONEY_点卷)|percentx=42.1|percenty=84.1|size=16|color=255>
+
+
+
+<Img|percentx=57.9|percenty=83.3|width=50.4|height=30|reset=1|img=npc/dlbg/3.png|loadDelay=0|show=4|esc=1>
+<Img|percentx=63.3|percenty=82.8|loadDelay=0|show=4|esc=1|img=npc/dlbg/kuang1.png|reset=1>
+<Text|outline=2|outlinecolor=0|text=$STM(MONEY_点卡)|percentx=64.3|percenty=84.1|size=16|color=255>
+
+
+<Button|x=775.0|y=491.0|width=120|height=36|mimg=npc/dlbg/sx.png|nimg=npc/dlbg/sx.png|link=@刷新>
+<Button|id=2|x=870.0|y=31.0|mimg=public/close-2.png|nimg=public/close-2.png|link=@exit>
+<Text|id=a8|x=223|y=90|size=16|outline=1|color=255|text=商店每日0点自动刷新,手动刷新商店商品需背包有刷新卷,商城每个商品只能限购一次>
+
+[@刷新]
+#if
+checkitem 刷新卷 1
+#act
+take 刷新卷 1
+goto @随机商品展示
+goto @main
+#elseact
+sendmsg 9 【提示】您的背包里没有刷新卷，不能刷新商店
+
+
+[@随机商品展示]
+#if
+#act
+movr U201 1 12
+movr U202 12 29
+movr U203 29 38
+movr U204 38 50
+movr U205 50 70
+movr U206 40 80
+movr U207 80 102
+movr U208 1 102
+
+
+
+
+
+
+
+GetDBItemFieldValue <$cfg_dalubigou(<$STR(U201)>_0)> idx U209
+GetDBItemFieldValue <$cfg_dalubigou(<$STR(U202)>_0)> idx U210
+GetDBItemFieldValue <$cfg_dalubigou(<$STR(U203)>_0)> idx U211
+GetDBItemFieldValue <$cfg_dalubigou(<$STR(U204)>_0)> idx U212
+GetDBItemFieldValue <$cfg_dalubigou(<$STR(U205)>_0)> idx U213
+GetDBItemFieldValue <$cfg_dalubigou(<$STR(U206)>_0)> idx U214
+GetDBItemFieldValue <$cfg_dalubigou(<$STR(U207)>_0)> idx U215
+GetDBItemFieldValue <$cfg_dalubigou(<$STR(U208)>_0)> idx U216
+
+mov T201 <Button|id=103|percentx=18.3|percenty=76|width=120|height=36|nimg=npc/dlbg/btn.png|mimg=npc/dlbg/btn.png|link=@购买1>
+mov T202 <Button|id=203|percentx=18.3|percenty=76|width=120|height=36|nimg=npc/dlbg/btn.png|mimg=npc/dlbg/btn.png|link=@购买2>
+mov T203 <Button|id=303|percentx=18.3|percenty=76|width=120|height=36|nimg=npc/dlbg/btn.png|mimg=npc/dlbg/btn.png|link=@购买3>
+mov T204 <Button|id=403|percentx=18.3|percenty=76|width=120|height=36|nimg=npc/dlbg/btn.png|mimg=npc/dlbg/btn.png|link=@购买4>
+mov T205 <Button|id=503|percentx=18.3|percenty=76|width=120|height=36|nimg=npc/dlbg/btn.png|mimg=npc/dlbg/btn.png|link=@购买5>
+mov T206 <Button|id=603|percentx=18.3|percenty=76|width=120|height=36|nimg=npc/dlbg/btn.png|mimg=npc/dlbg/btn.png|link=@购买6>
+mov T207 <Button|id=703|percentx=18.3|percenty=76|width=120|height=36|nimg=npc/dlbg/btn.png|mimg=npc/dlbg/btn.png|link=@购买7>
+mov T208 <Button|id=803|percentx=18.3|percenty=76|width=120|height=36|nimg=npc/dlbg/btn.png|mimg=npc/dlbg/btn.png|link=@购买8>
+
+[@购买1]
+
+#if
+CheckBindMoney  <$cfg_dalubigou(<$STR(U201)>_3)> > <$cfg_dalubigou(<$STR(U201)>_5)>
+#act
+ChangeBindMoney <$cfg_dalubigou(<$STR(U201)>_3)>  <$cfg_dalubigou(<$STR(U201)>_4)>
+goto @购买1加货币
+give <$cfg_dalubigou(<$STR(U201)>_0)> <$cfg_dalubigou(<$STR(U201)>_1)>
+mov T201 <Img|id=103|a=4|percentx=50.6|percenty=83.5|width=72|height=36|reset=1|img=npc/dlbg/3_5.png|show=4|loadDelay=0|esc=1>
+GOTO @大陆必购
+
+#elseact
+sendmsg 9 货币不足！
+
+[@购买2]
+
+
+#if
+CheckBindMoney  <$cfg_dalubigou(<$STR(U202)>_3)> > <$cfg_dalubigou(<$STR(U202)>_5)>
+#act
+ChangeBindMoney <$cfg_dalubigou(<$STR(U202)>_3)>  <$cfg_dalubigou(<$STR(U202)>_4)>
+goto @购买2加货币
+give <$cfg_dalubigou(<$STR(U202)>_0)> <$cfg_dalubigou(<$STR(U202)>_1)>
+mov T202 <Img|id=203|a=4|percentx=50.6|percenty=83.5|width=72|height=36|reset=1|img=npc/dlbg/3_5.png|show=4|loadDelay=0|esc=1>
+GOTO @大陆必购
+
+#elseact
+sendmsg 9 货币不足！
+
+[@购买3]
+
+
+#if
+CheckBindMoney  <$cfg_dalubigou(<$STR(U203)>_3)> > <$cfg_dalubigou(<$STR(U203)>_5)>
+#act
+ChangeBindMoney <$cfg_dalubigou(<$STR(U203)>_3)>  <$cfg_dalubigou(<$STR(U203)>_4)>
+goto @购买3加货币
+give <$cfg_dalubigou(<$STR(U203)>_0)> <$cfg_dalubigou(<$STR(U203)>_1)>
+mov T203 <Img|id=303|a=4|percentx=50.6|percenty=83.5|width=72|height=36|reset=1|img=npc/dlbg/3_5.png|show=4|loadDelay=0|esc=1>
+GOTO @大陆必购
+
+#elseact
+sendmsg 9 货币不足！
+
+[@购买4]
+
+
+#if
+CheckBindMoney  <$cfg_dalubigou(<$STR(U204)>_3)> > <$cfg_dalubigou(<$STR(U204)>_5)>
+#act
+ChangeBindMoney <$cfg_dalubigou(<$STR(U204)>_3)> <$cfg_dalubigou(<$STR(U204)>_4)>
+goto @购买4加货币
+give <$cfg_dalubigou(<$STR(U204)>_0)> <$cfg_dalubigou(<$STR(U204)>_1)>
+mov T204 <Img|id=403|a=4|percentx=50.6|percenty=83.5|width=72|height=36|reset=1|img=npc/dlbg/3_5.png|show=4|loadDelay=0|esc=1>
+GOTO @大陆必购
+
+#elseact
+sendmsg 9 货币不足！
+
+[@购买5]
+
+
+#if
+CheckBindMoney  <$cfg_dalubigou(<$STR(U205)>_3)> > <$cfg_dalubigou(<$STR(U205)>_5)>
+#act
+ChangeBindMoney <$cfg_dalubigou(<$STR(U205)>_3)>  <$cfg_dalubigou(<$STR(U205)>_4)>
+goto @购买5加货币
+give <$cfg_dalubigou(<$STR(U205)>_0)> <$cfg_dalubigou(<$STR(U205)>_1)>
+mov T205 <Img|id=503|a=4|percentx=50.6|percenty=83.5|width=72|height=36|reset=1|img=npc/dlbg/3_5.png|show=4|loadDelay=0|esc=1>
+GOTO @大陆必购
+
+#elseact
+sendmsg 9 货币不足！
+
+[@购买6]
+
+
+#if
+CheckBindMoney  <$cfg_dalubigou(<$STR(U206)>_3)> > <$cfg_dalubigou(<$STR(U206)>_5)>
+#act
+ChangeBindMoney <$cfg_dalubigou(<$STR(U206)>_3)> <$cfg_dalubigou(<$STR(U206)>_4)>
+goto @购买6加货币
+give <$cfg_dalubigou(<$STR(U206)>_0)> <$cfg_dalubigou(<$STR(U206)>_1)>
+mov T206 <Img|id=603|a=4|percentx=50.6|percenty=83.5|width=72|height=36|reset=1|img=npc/dlbg/3_5.png|show=4|loadDelay=0|esc=1>
+GOTO @大陆必购
+
+#elseact
+sendmsg 9 货币不足！
+
+[@购买7]
+
+
+#if
+CheckBindMoney  <$cfg_dalubigou(<$STR(U207)>_3)> > <$cfg_dalubigou(<$STR(U207)>_5)>
+#act
+ChangeBindMoney <$cfg_dalubigou(<$STR(U207)>_3)>  <$cfg_dalubigou(<$STR(U207)>_4)>
+goto @购买7加货币
+give <$cfg_dalubigou(<$STR(U207)>_0)> <$cfg_dalubigou(<$STR(U207)>_1)>
+mov T207 <Img|id=703|a=4|percentx=50.6|percenty=83.5|width=72|height=36|reset=1|img=npc/dlbg/3_5.png|show=4|loadDelay=0|esc=1>
+GOTO @大陆必购
+
+#elseact
+sendmsg 9 货币不足！
+
+[@购买8]
+
+#if
+CheckBindMoney  <$cfg_dalubigou(<$STR(U208)>_3)> > <$cfg_dalubigou(<$STR(U208)>_4)>
+#act
+ChangeBindMoney <$cfg_dalubigou(<$STR(U208)>_3)>  <$cfg_dalubigou(<$STR(U208)>_4)>
+goto @购买8加货币
+give <$cfg_dalubigou(<$STR(U208)>_0)> <$cfg_dalubigou(<$STR(U208)>_1)>
+mov T208 <Img|id=803|a=4|percentx=50.6|percenty=83.5|width=72|height=36|reset=1|img=npc/dlbg/3_5.png|show=4|loadDelay=0|esc=1>
+GOTO @大陆必购
+
+#elseact
+sendmsg 9 货币不足！
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[@购买1加货币]
+#if
+equal <$cfg_dalubigou(<$STR(U201)>_3)> 绑定点卡
+#act
+inc U250 <$cfg_dalubigou(<$STR(U201)>_4)>
+
+#if
+equal <$cfg_dalubigou(<$STR(U201)>_3)> 绑定元宝
+#act
+inc U251 <$cfg_dalubigou(<$STR(U201)>_4)>
+
+#if
+equal <$cfg_dalubigou(<$STR(U201)>_3)> 绑定点卷
+#act
+inc U252 <$cfg_dalubigou(<$STR(U201)>_4)>
+
+[@购买2加货币]
+#if
+equal <$cfg_dalubigou(<$STR(U202)>_3)> 绑定点卡
+#act
+inc U250 <$cfg_dalubigou(<$STR(U202)>_4)>
+
+#if
+equal <$cfg_dalubigou(<$STR(U202)>_3)> 绑定元宝
+#act
+inc U251 <$cfg_dalubigou(<$STR(U202)>_4)>
+
+#if
+equal <$cfg_dalubigou(<$STR(U202)>_3)> 绑定点卷
+#act
+inc U252 <$cfg_dalubigou(<$STR(U202)>_4)>
+
+[@购买3加货币]
+#if
+equal <$cfg_dalubigou(<$STR(U203)>_3)> 绑定点卡
+#act
+inc U250 <$cfg_dalubigou(<$STR(U203)>_4)>
+
+#if
+equal <$cfg_dalubigou(<$STR(U203)>_3)> 绑定元宝
+#act
+inc U251 <$cfg_dalubigou(<$STR(U203)>_4)>
+
+#if
+equal <$cfg_dalubigou(<$STR(U203)>_3)> 绑定点卷
+#act
+inc U252 <$cfg_dalubigou(<$STR(U203)>_4)>
+
+[@购买4加货币]
+#if
+equal <$cfg_dalubigou(<$STR(U204)>_3)> 绑定点卡
+#act
+inc U250 <$cfg_dalubigou(<$STR(U204)>_4)>
+
+#if
+equal <$cfg_dalubigou(<$STR(U204)>_3)> 绑定元宝
+#act
+inc U251 <$cfg_dalubigou(<$STR(U204)>_4)>
+
+#if
+equal <$cfg_dalubigou(<$STR(U204)>_3)> 绑定点卷
+#act
+inc U252 <$cfg_dalubigou(<$STR(U204)>_4)>
+
+[@购买5加货币]
+#if
+equal <$cfg_dalubigou(<$STR(U205)>_3)> 绑定点卡
+#act
+inc U250 <$cfg_dalubigou(<$STR(U205)>_4)>
+
+#if
+equal <$cfg_dalubigou(<$STR(U205)>_3)> 绑定元宝
+#act
+inc U251 <$cfg_dalubigou(<$STR(U205)>_4)>
+
+#if
+equal <$cfg_dalubigou(<$STR(U205)>_3)> 绑定点卷
+#act
+inc U252 <$cfg_dalubigou(<$STR(U205)>_4)>
+
+[@购买6加货币]
+#if
+equal <$cfg_dalubigou(<$STR(U206)>_3)> 绑定点卡
+#act
+inc U250 <$cfg_dalubigou(<$STR(U206)>_4)>
+
+#if
+equal <$cfg_dalubigou(<$STR(U206)>_3)> 绑定元宝
+#act
+inc U251 <$cfg_dalubigou(<$STR(U206)>_4)>
+
+#if
+equal <$cfg_dalubigou(<$STR(U206)>_3)> 绑定点卷
+#act
+inc U252 <$cfg_dalubigou(<$STR(U206)>_4)>
+
+[@购买7加货币]
+#if
+equal <$cfg_dalubigou(<$STR(U207)>_3)> 绑定点卡
+#act
+inc U250 <$cfg_dalubigou(<$STR(U207)>_4)>
+
+#if
+equal <$cfg_dalubigou(<$STR(U207)>_3)> 绑定元宝
+#act
+inc U251 <$cfg_dalubigou(<$STR(U207)>_4)>
+
+#if
+equal <$cfg_dalubigou(<$STR(U207)>_3)> 绑定点卷
+#act
+inc U252 <$cfg_dalubigou(<$STR(U207)>_4)>
+
+[@购买8加货币]
+#if
+equal <$cfg_dalubigou(<$STR(U208)>_3)> 绑定点卡
+#act
+inc U250 <$cfg_dalubigou(<$STR(U208)>_4)>
+
+#if
+equal <$cfg_dalubigou(<$STR(U208)>_3)> 绑定元宝
+#act
+inc U251 <$cfg_dalubigou(<$STR(U208)>_4)>
+
+#if
+equal <$cfg_dalubigou(<$STR(U208)>_3)> 绑定点卷
+#act
+inc U252 <$cfg_dalubigou(<$STR(U208)>_4)>
+}

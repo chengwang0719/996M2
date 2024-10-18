@@ -1,0 +1,45 @@
+[@·¨Ê¦±¦±¦]
+{
+
+#if
+CHECKSLAVECOUNT > 1
+#act
+MOVESLAVE 0 <$map> <$x> <$y>
+break
+
+
+
+#if
+CHECKJOB wizard
+CHECKLEVELEX > 48
+CHECKSLAVECOUNT < 2
+#act
+RECALLMOB µØÓü¶ñÄ§ 7 99999 0 0
+ChangeSlaveAttackHumPowerRate µØÓü¶ñÄ§ 75
+break
+
+
+#if
+CHECKJOB wizard
+CHECKLEVELEX > 43
+CHECKSLAVECOUNT < 2
+#act
+RECALLMOB ´ó¶ñÄ§ 7 99999 0 0
+ChangeSlaveAttackHumPowerRate ´ó¶ñÄ§ 75
+break
+
+
+#if
+CHECKJOB wizard
+CHECKLEVELEX > 30
+CHECKSLAVECOUNT < 2
+#act
+RECALLMOB Ð¡¶ñÄ§ 7 99999 0 0
+ChangeSlaveAttackHumPowerRate Ð¡¶ñÄ§ 75
+break
+
+
+
+
+
+}

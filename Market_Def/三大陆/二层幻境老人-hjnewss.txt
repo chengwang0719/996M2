@@ -1,0 +1,20 @@
+[@main]
+#if
+#say
+<Img|x=|y=|width=|height=|show=4|reset=1|img=custom/hjzm/hjlr.png|move=0|loadDelay=0|bg=1>
+<Button|x=445|y=15|width=35|height=40|show=4|reset=1|nimg=public/close-t.png|move=0|loadDelay=0|link=@exit>
+<Button|x=335|y=190|width=|height=|reset=1|nimg=custom/hjzm/434.png|move=0|link=@进入幻境>
+
+<RText|id=d|x=107|y=118|size=18|color=255|outline=1|outlinecolor=0|text=元宝20000>
+
+
+
+[@进入幻境]
+#if
+CheckBindMoney 绑定元宝 > 19999
+#act
+ChangeBindMoney 绑定元宝 20000
+mapmove hjwmsm 50 50 8
+sendmsg 1 玩家【<$USERNAME>】进入了幻境三层
+#elseact
+sendmsg 9 [提示]您还未满足条件！！！！

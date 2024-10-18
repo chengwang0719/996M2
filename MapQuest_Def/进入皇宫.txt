@@ -1,0 +1,13 @@
+[@main]   
+#if   
+NOT CHECKJOB taoist   
+CHECKSLAVECOUNT > 0   
+#act   
+KILLSLAVE 1   
+break   
+   
+  
+  
+ 
+ 
+

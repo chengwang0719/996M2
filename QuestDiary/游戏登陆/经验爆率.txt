@@ -1,0 +1,37 @@
+[@登陆经验爆率]   
+{ 
+
+#IF
+#ACT
+MOV N$打怪经验 100
+MOV N$打怪爆率 100
+MOV N$假打怪爆率 100
+MOV N$除二爆率 <$STR(U3)>
+
+
+#IF
+LARGE U2 0
+#ACT
+INC N$打怪经验 <$STR(U2)>
+KILLMONEXPRATE <$STR(N$打怪经验)> 99999999
+
+
+
+#IF
+LARGE U3 0
+#ACT
+INC N$假打怪爆率 <$STR(U3)>
+DIV N$除二爆率 2
+INC N$打怪爆率 <$STR(N$除二爆率)>
+
+
+#IF
+#ACT
+KILLMONBURSTRATE <$STR(N$打怪爆率)> 99999999
+ChangeHumNewValue 43 <$STR(N$假打怪爆率)> 99999999
+
+
+
+
+}   
+   

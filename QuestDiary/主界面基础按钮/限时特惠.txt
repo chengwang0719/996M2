@@ -1,0 +1,114 @@
+[@限时特惠界面]
+{
+#if
+#act
+set [70] 0
+set [71] 0
+set [72] 0
+mov S$选择技能图标1 001
+mov S$选择技能图标2 001
+mov S$选择技能图标3 001
+mov S$选择了技能 0
+goto @限时特惠的页面
+
+
+[@限时特惠的页面]
+#if
+#SAY
+<Button|x=-2526.0|y=-1172.0|width=115120|height=112880|size=18|mimg=npc/zd.png|pimg=npc/zd.png|nimg=npc/zd.png|color=224|link=@exit>
+<Img|x=-36.0|y=-31.0|esc=1|img=topbtn/xsth/bj.png|show=4|loadDelay=1|reset=1|bg=1|move=0>
+<Button|x=935.0|y=73.0|nimg=public/close-t.png|mimg=public/close-t.png|link=@exit>
+
+
+<Frames|a=4|percentx=58.6|percenty=45.8|speed=20|prefix=custom/jz_ui/sfx_|count=10|suffix=.png|loop=-1>
+
+<Img|x=518.0|y=203.0|children={z}|img=npc/zbxl/555.png|show=4|esc=1|move=0|loadDelay=1|reset=1>
+<Img|x=48.0|y=48.0|width=18|height=18|id=z|img=topbtn/hflb/1.png|show=4|esc=1|move=0|loadDelay=1|reset=1>
+<ItemShow|x=523.0|y=207.0|width=70|height=70|itemid=20088|itemcount=1|showtips=1|bgtype=0>
+
+<Img|x=631.0|y=202.0|children={f}|img=npc/zbxl/555.png|show=4|esc=1|move=0|loadDelay=1|reset=1>
+<Img|x=48.0|y=48.0|width=18|height=18|id=f|img=topbtn/hflb/2.png|show=4|esc=1|move=0|loadDelay=1|reset=1>
+
+<ItemShow|x=636.0|y=207.0|width=70|height=70|itemid=20094|itemcount=1|showtips=1|bgtype=0>
+
+<Img|x=740.0|y=202.0|children={d}|img=npc/zbxl/555.png|show=4|esc=1|move=0|loadDelay=1|reset=1>
+<Img|x=48.0|y=48.0|width=18|height=18|id=d|img=topbtn/hflb/3.png|show=4|esc=1|move=0|loadDelay=1|reset=1>
+
+
+
+<ItemShow|x=746.0|y=207.0|width=70|height=70|itemid=20102|itemcount=1|showtips=1|bgtype=0>
+<Text|x=535.0|y=285.0|outline=1|color=251|size=14|text=开天斩>
+<Text|x=642.0|y=285.0|outline=1|color=251|size=14|text=流星火雨>
+<Text|x=758.0|y=285.0|outline=1|color=251|size=14|text=飓风破>
+<Button|x=541.0|y=309.0|nimg=public/<$STR(S$选择技能图标1)>.png|mimg=public/<$STR(S$选择技能图标1)>.png|link=@选择一个>
+<Button|x=656.0|y=309.0|nimg=public/<$STR(S$选择技能图标2)>.png|mimg=public/<$STR(S$选择技能图标2)>.png|link=@选择二个>
+<Button|x=765.0|y=309.0|nimg=public/<$STR(S$选择技能图标3)>.png|mimg=public/<$STR(S$选择技能图标3)>.png|link=@选择三个>
+
+<Button|x=615.0|y=351.0|nimg=public/00016.png|mimg=public/00016.png|link=@6元购买>
+
+<Text|x=487.0|y=442.0|color=255|size=16|outline=2|text=凤凰涅槃,浴火重生,如王者崛起,崭新技能从此开启。>
+[@选择一个]
+#if
+check [70] 0
+#act
+set [70] 1 
+mov S$选择技能图标1 002
+mov S$选择技能图标2 001
+mov S$选择技能图标3 001
+mov S$选择了技能 1
+goto @限时特惠的页面
+#elseact
+mov S$选择技能图标1 001
+mov S$选择了技能 0
+set [70] 0
+goto @限时特惠的页面
+
+[@选择二个]
+#if
+check [71] 0
+#act
+set [71] 1 
+mov S$选择技能图标1 001
+mov S$选择技能图标2 002
+mov S$选择技能图标3 001
+mov S$选择了技能 2
+goto @限时特惠的页面
+#elseact
+mov S$选择技能图标2 001
+mov S$选择了技能 0
+set [71] 0
+goto @限时特惠的页面
+
+[@选择三个]
+#if
+check [72] 0
+#act
+set [72] 1 
+mov S$选择技能图标1 001
+mov S$选择技能图标2 001
+mov S$选择技能图标3 002
+mov S$选择了技能 3
+goto @限时特惠的页面
+#elseact
+mov S$选择技能图标3 001
+mov S$选择了技能 0
+set [72] 0
+goto @限时特惠的页面
+
+
+[@6元购买]
+#if
+check [72] 0
+check [71] 0
+check [70] 0
+#act
+sendmsg 9 请先选择再购买
+break
+
+#IF
+check [73] 0
+#ACT
+Pullpay 6 3 2
+#ELSEACT
+SENDMSG 9 您已经购买过了
+}

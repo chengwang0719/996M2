@@ -1,0 +1,243 @@
+[@七日签到主页面]
+{
+
+#if
+equal U7 1
+#act
+Navigation 0 2 点击联系客服
+
+
+
+#if
+check [21] 0 
+#act
+mov S$签到领取图片1 btnlq
+#elseact
+mov S$签到领取图片1 ylq7
+
+#if
+check [22] 0  
+#act
+mov S$签到领取图片2 btnlq
+#elseact
+mov S$签到领取图片2 ylq7
+
+#if
+check [23] 0 
+#act
+mov S$签到领取图片3 btnlq
+#elseact
+mov S$签到领取图片3 ylq7
+
+#if
+check [24] 0 
+#act
+mov S$签到领取图片4 btnlq
+#elseact
+mov S$签到领取图片4 ylq7
+
+#if
+check [25] 0 
+#act
+mov S$签到领取图片5 btnlq
+#elseact
+mov S$签到领取图片5 ylq7
+
+#if
+check [26] 0 
+#act
+mov S$签到领取图片6 btnlq
+#elseact
+mov S$签到领取图片6 ylq7
+
+#if
+check [27] 0 
+#act
+mov S$签到领取图片7 btnlq
+#elseact
+mov S$签到领取图片7 ylq7
+
+#if
+#act
+#CALL [\主界面基础按钮\福利大厅红点检测.txt] @福利大厅按钮
+
+#if
+#say
+<Button|x=-2526.0|y=-1172.0|width=115120|height=112880|mimg=npc/zd.png|color=224|pimg=npc/zd.png|size=18|nimg=npc/zd.png|link=@exit>
+<Img|children={1a,2a}|x=38.0|y=-9.0|width=890|height=510|rotate=0|bg=1|loadDelay=0|reset=1|show=4|esc=1|move=0|img=topbtn/fldt/bj.png>
+<ListView|id=1a|children={a,b,c,d,e,f,2}|x=75.0|y=66.0|width=183|height=400|margin=1|direction=1|bounce=0>
+<Button|id=a|x=0|y=0|width=183|height=55|nimg=topbtn/fldt/4.png|mimg=topbtn/fldt/4.png|link=@七日签到>
+<Button|id=b|x=0|y=0|width=183|height=55|nimg=topbtn/fldt/6.png|mimg=topbtn/fldt/6.png|link=@击杀奖励>
+<Button|id=c|x=0|y=0|width=183|height=55|nimg=topbtn/fldt/7.png|mimg=topbtn/fldt/7.png|link=@在线奖励>
+<Button|id=d|x=0|y=0|width=183|height=55|nimg=topbtn/fldt/1.png|mimg=topbtn/fldt/1.png|link=@等级福利>
+<Button|id=e|x=0|y=0|width=183|height=55|nimg=topbtn/fldt/2.png|mimg=topbtn/fldt/2.png|link=@个人首爆>
+<Button|id=f|x=0|y=0|width=183|height=55|nimg=topbtn/fldt/5.png|mimg=topbtn/fldt/5.png|link=@全服首爆>
+<Button|id=2|x=0|y=0|width=183|height=55|nimg=topbtn/fldt/3.png|mimg=topbtn/fldt/3.png|link=@联系客服>
+
+<$str(S$七日签到红点)>
+<$str(S$杀怪奖励)>
+<$str(S$在线奖励)>
+<$str(S$等级奖励)>
+<Layout|id=2a|children={7a,7b,7bb,77,7d,7dd,7e,7f,7ff,7g,7h,7hh,7i,7j,7jj,7k,7l,7ll,7m,7n,7nn,7o}|x=-29.0|y=-25.0|width=560|height=417|bounce=0|margin=0>
+<Img|id=7a|x=283|y=86|width=560|height=417|loadDelay=0|img=topbtn/fldt/bj-3.png|move=0|reset=1|esc=1|show=4>
+<ItemShow|id=7b|x=289.0|y=198.0|width=70|height=70|itemid=4|itemcount=150000|showtips=1|bgtype=0>
+<ItemShow|id=7bb|x=343.0|y=198.0|width=70|height=70|itemid=5|itemcount=15000|showtips=1|bgtype=0>
+<Button|id=77|x=317.0|y=289.0|width=70|height=30|nimg=topbtn/fldt/<$str(S$签到领取图片1)>.png|mimg=topbtn/fldt/<$str(S$签到领取图片1)>.png|link=@领取1>
+<ItemShow|id=7d|x=428.0|y=199.0|width=70|height=70|itemid=4|itemcount=2000|showtips=1|bgtype=0>
+<ItemShow|id=7dd|x=484.0|y=198.0|width=70|height=70|itemid=5|itemcount=2000|showtips=1|bgtype=0>
+<Button|id=7e|x=453.0|y=289.0|width=70|height=30|nimg=topbtn/fldt/<$str(S$签到领取图片2)>.png|mimg=topbtn/fldt/<$str(S$签到领取图片2)>.png|link=@领取2>
+<ItemShow|id=7f|x=568.0|y=198.0|width=70|height=70|itemid=4|itemcount=5000|showtips=1|bgtype=0>
+<ItemShow|id=7ff|x=623.0|y=197.0|width=70|height=70|itemid=5|itemcount=5000|showtips=1|bgtype=0>
+<Button|id=7g|x=597.0|y=289.0|width=70|height=30|nimg=topbtn/fldt/<$str(S$签到领取图片3)>.png|mimg=topbtn/fldt/<$str(S$签到领取图片3)>.png|link=@领取3>
+<ItemShow|id=7h|x=710.0|y=197.0|width=70|height=70|itemid=4|itemcount=10000|showtips=1|bgtype=0>
+<ItemShow|id=7hh|x=764.0|y=196.0|width=70|height=70|itemid=5|itemcount=10000|showtips=1|bgtype=0>
+<Button|id=7i|x=739.0|y=289.0|width=70|height=30|nimg=topbtn/fldt/<$str(S$签到领取图片4)>.png|mimg=topbtn/fldt/<$str(S$签到领取图片4)>.png|link=@领取4>
+<ItemShow|id=7j|x=357.0|y=356.0|width=70|height=70|itemid=4|itemcount=15000|showtips=1|bgtype=0>
+<ItemShow|id=7jj|x=412.0|y=355.0|width=70|height=70|itemid=5|itemcount=15000|showtips=1|bgtype=0>
+<Button|id=7k|x=384.0|y=447.0|width=70|height=30|nimg=topbtn/fldt/<$str(S$签到领取图片5)>.png|mimg=topbtn/fldt/<$str(S$签到领取图片5)>.png|link=@领取5>
+<ItemShow|id=7l|x=497.0|y=355.0|width=70|height=70|itemid=4|itemcount=20000|showtips=1|bgtype=0>
+<ItemShow|id=7ll|x=552.0|y=355.0|width=70|height=70|itemid=5|itemcount=20000|showtips=1|bgtype=0>
+<Button|id=7m|x=524.0|y=447.0|width=70|height=30|nimg=topbtn/fldt/<$str(S$签到领取图片6)>.png|mimg=topbtn/fldt/<$str(S$签到领取图片6)>.png|link=@领取6>
+<ItemShow|id=7n|x=639.0|y=355.0|width=70|height=70|itemid=4|itemcount=25000|showtips=1|bgtype=0>
+<ItemShow|id=7nn|x=693.0|y=354.0|width=70|height=70|itemid=5|itemcount=25000|showtips=1|bgtype=0>
+<Button|id=7o|x=668.0|y=447.0|width=70|height=30|nimg=topbtn/fldt/<$str(S$签到领取图片7)>.png|mimg=topbtn/fldt/<$str(S$签到领取图片7)>.png|link=@领取7>
+<Layout|x=826.0|y=-17.0|width=80|height=80|link=@exit>
+<Button|x=852.0|y=29.0|nimg=public/close-2.png|mimg=public/close-2.png|link=@exit>
+<Img|x=382.0|y=-6.0|width=200|height=67|show=4|loadDelay=0|reset=1|move=0|esc=1|img=topbtn/fldt/title.png>
+
+
+
+
+
+
+
+
+[@领取1]
+
+
+
+#if 
+EQUAL J10 0 
+check [21] 0 
+#act
+MONEY 绑定元宝 + 150000
+MONEY 绑定点卡 + 15000
+SENDMSG 9 恭喜！签到成功
+INC J10 1
+set [21] 1
+goto @七日签到主页面
+set [29] 1
+#CALL [\任务系统\任务系统QF.txt] @任务系统QF
+#elseact
+SENDMSG 9 还未到时间或你已经签到领取过该奖励,勿再次点击
+
+[@领取2]
+#if 
+check [21] 1
+check [22] 0 
+EQUAL J10 0 
+#act
+MONEY 绑定元宝 + 2000
+MONEY 绑定点卡 + 2000
+SENDMSG 9 恭喜！签到成功
+set [22] 1
+INC J10 1
+goto @七日签到主页面
+#elseact
+SENDMSG 9 还未到时间或你已经签到领取过该奖励,勿再次点击
+
+
+[@领取3]
+#if 
+check [21] 1
+check [22] 1 
+check [23] 0
+EQUAL J10 0 
+#act
+MONEY 绑定元宝 + 5000
+MONEY 绑定点卡 + 5000
+SENDMSG 9 恭喜！签到成功
+set [23] 1
+INC J10 1
+goto @七日签到主页面
+#elseact
+SENDMSG 9 还未到时间或你已经签到领取过该奖励,勿再次点击
+
+
+[@领取4]
+#if 
+check [21] 1
+check [22] 1 
+check [23] 1
+check [24] 0 
+EQUAL J10 0
+#act
+MONEY 绑定元宝 + 10000
+MONEY 绑定点卡 + 10000
+SENDMSG 9 恭喜！签到成功
+set [24] 1
+INC J10 1
+goto @七日签到主页面
+#elseact
+SENDMSG 9 还未到时间或你已经签到领取过该奖励,勿再次点击
+
+[@领取5]
+#if 
+check [21] 1
+check [22] 1 
+check [23] 1
+check [24] 1 
+check [25] 0 
+EQUAL J10 0
+#act
+MONEY 绑定元宝 + 15000
+MONEY 绑定点卡 + 15000
+SENDMSG 9 恭喜！签到成功
+set [25] 1
+INC J10 1
+goto @七日签到主页面
+#elseact
+SENDMSG 9 还未到时间或你已经签到领取过该奖励,勿再次点击
+
+[@领取6]
+#if 
+check [21] 1
+check [22] 1 
+check [23] 1
+check [24] 1 
+check [25] 1 
+check [26] 0 
+EQUAL J10 0
+#act
+MONEY 绑定元宝 + 20000
+MONEY 绑定点卡 + 20000
+SENDMSG 9 恭喜！签到成功
+set [26] 1
+INC J10 1
+goto @七日签到主页面
+#elseact
+SENDMSG 9 还未到时间或你已经签到领取过该奖励,勿再次点击
+
+[@领取7]
+#if 
+check [21] 1
+check [22] 1 
+check [23] 1
+check [24] 1 
+check [25] 1 
+check [26] 1
+check [27] 0 
+EQUAL J10 0
+#act
+MONEY 绑定元宝 + 30000
+MONEY 绑定点卡 + 30000
+SENDMSG 9 恭喜！签到成功
+set [27] 1
+INC J10 1
+goto @七日签到主页面
+#elseact
+SENDMSG 9 还未到时间或你已经签到领取过该奖励,勿再次点击
+
+
+
+}

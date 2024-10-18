@@ -1,0 +1,211 @@
+[@合服特惠界面]
+{
+#if
+#act
+MOV S$微信 <Img|x=329|y=8|img=private/powerful_secret/bg_czzya_04_1.png|esc=0>
+MOV S$支付宝 
+MOV S$花呗
+MOV N$充值渠道 1
+SET [299] 1
+goto @合服特惠的界面
+
+
+[@合服特惠的界面]
+#if
+#SAY
+<Button|x=-2526.0|y=-1172.0|width=115120|height=112880|size=18|pimg=npc/zd.png|mimg=npc/zd.png|color=224|nimg=npc/zd.png|link=@exit>
+<Img|x=2.0|y=18.0|width=1259|height=600|esc=1|loadDelay=1|bg=1|move=0|img=topbtn/hflb/bj.png|reset=1|show=4>
+<Button|x=1094.0|y=49.0|mimg=public/close-t.png|nimg=public/close-t.png|link=@exit>
+
+
+<ListView|children={1,2,3}|x=399.0|y=152.0|width=760|height=160|reload=0|direction=2|margin=4>
+
+<Img|id=1|children={10,11,12,13,14}|x=0|y=0|width=250|height=154|img=topbtn/hflb/thbj.png|esc=1|reset=1|move=0|loadDelay=1|show=4>
+<Text|id=10|x=110.0|y=6.0|outline=1|color=254|size=16|text=转生礼包>
+<Text|id=11|x=121.0|y=38.0|outline=1|color=250|size=16|text=价格：30元>
+<Img|id=12|children={a1}|x=18.0|y=54.0|width=66|height=64|img=topbtn/zxcz/kuang1.png|reset=1|loadDelay=1|move=0|esc=1|show=4>
+<ItemShow|id=a1|a=4|x=32.0|y=31.0|itemid=20268|itemcount=1|showtips=1|bgtype=0>
+<Img|id=13|children={a2}|x=94.0|y=64.0|show=4|img=topbtn/hflb/HD.png|loadDelay=1|move=0|esc=1|reset=1>
+<Text|id=a2|x=42.0|y=4.0|color=255|size=16|outline=1|text=限量<$str(U92)>/5>
+<Button|id=14|x=112.0|y=102.0|width=98|height=37|nimg=topbtn/hflb/gm.png|mimg=ptopbtn/hflb/gm.png|link=@选择支付方式#价格是=30>
+
+
+
+<Img|id=2|children={20,21,22,23,24}|x=0|y=0|width=250|height=154|reset=1|move=0|esc=1|img=topbtn/hflb/thbj.png|loadDelay=1|show=4>
+<Text|id=20|x=110.0|y=6.0|outline=1|color=254|size=16|text=藏器礼包>
+<Text|id=21|x=121.0|y=38.0|outline=1|color=250|size=16|text=价格：68元>
+<Img|id=22|children={b1}|x=18.0|y=54.0|width=66|height=64|img=topbtn/zxcz/kuang1.png|reset=1|loadDelay=1|move=0|esc=1|show=4>
+<ItemShow|id=b1|a=4|x=32.0|y=31.0|itemid=20269|itemcount=1|showtips=1|bgtype=0>
+<Img|id=23|children={b2}|x=94.0|y=64.0|show=4|img=topbtn/hflb/HD.png|loadDelay=1|move=0|esc=1|reset=1>
+<Text|id=b2|x=42.0|y=4.0|color=255|size=16|outline=1|text=限量<$str(U93)>/5>
+<Button|id=24|x=112.0|y=102.0|width=98|height=37|nimg=topbtn/hflb/gm.png|mimg=ptopbtn/hflb/gm.png|link=@选择支付方式#价格是=68>
+
+
+
+
+
+<Img|id=3|x=0|y=0|children={30,31,32,33,34}|width=250|height=154|reset=1|move=0|esc=1|img=topbtn/hflb/thbj.png|loadDelay=1|show=4>
+<Text|id=30|x=110.0|y=6.0|outline=1|color=254|size=16|text=藏器礼包>
+<Text|id=31|x=121.0|y=38.0|outline=1|color=250|size=16|text=价格：98元>
+<Img|id=32|children={c1}|x=18.0|y=54.0|width=66|height=64|img=topbtn/zxcz/kuang1.png|reset=1|loadDelay=1|move=0|esc=1|show=4>
+<ItemShow|id=c1|a=4|x=32.0|y=31.0|itemid=20270|itemcount=1|showtips=1|bgtype=0>
+<Img|id=33|children={c2}|x=94.0|y=64.0|show=4|img=topbtn/hflb/HD.png|loadDelay=1|move=0|esc=1|reset=1>
+<Text|id=c2|x=42.0|y=4.0|color=255|size=16|outline=1|text=限量<$str(U94)>/5>
+<Button|id=34|x=112.0|y=102.0|width=98|height=37|nimg=topbtn/hflb/gm.png|mimg=ptopbtn/hflb/gm.png|link=@选择支付方式#价格是=98>
+
+
+
+<ListView|children={4,5,6}|x=399.0|y=313.0|width=760|height=160|reload=1|direction=2|margin=4>
+
+<Img|id=4|children={40,41,42,43,44}|x=0|y=0|width=250|height=154|reset=1|move=0|esc=1|img=topbtn/hflb/thbj.png|loadDelay=1|show=4>
+<Text|id=40|x=110.0|y=6.0|outline=1|color=249|size=16|text=洗练礼包>
+<Text|id=41|x=121.0|y=38.0|outline=1|color=250|size=16|text=价格：198元>
+<Img|id=42|children={d1}|x=18.0|y=54.0|width=66|height=64|img=topbtn/zxcz/kuang1.png|reset=1|loadDelay=1|move=0|esc=1|show=4>
+<ItemShow|id=d1|a=4|x=32.0|y=31.0|itemid=20271|itemcount=1|showtips=1|bgtype=0>
+<Img|id=43|children={d2}|x=94.0|y=64.0|show=4|img=topbtn/hflb/HD.png|loadDelay=1|move=0|esc=1|reset=1>
+<Text|id=d2|x=42.0|y=4.0|color=255|size=16|outline=1|text=限量<$str(U95)>/6>
+<Button|id=44|x=112.0|y=102.0|width=98|height=37|nimg=topbtn/hflb/gm.png|mimg=ptopbtn/hflb/gm.png|link=@选择支付方式#价格是=198>
+
+
+
+
+<Img|id=5|children={50,51,52,53,54}|x=0|y=0|width=250|height=154|reset=1|move=0|esc=1|img=topbtn/hflb/thbj.png|loadDelay=1|show=4>
+<Text|id=50|x=110.0|y=6.0|outline=1|color=249|size=16|text=材料礼包>
+<Text|id=51|x=121.0|y=38.0|outline=1|color=250|size=16|text=价格：328元>
+<Img|id=52|children={e1}|x=18.0|y=54.0|width=66|height=64|img=topbtn/zxcz/kuang1.png|reset=1|loadDelay=1|move=0|esc=1|show=4>
+<ItemShow|id=e1|a=4|x=32.0|y=31.0|itemid=20272|itemcount=1|showtips=1|bgtype=0>
+<Img|id=53|children={e2}|x=94.0|y=64.0|show=4|img=topbtn/hflb/HD.png|loadDelay=1|move=0|esc=1|reset=1>
+<Text|id=e2|x=42.0|y=4.0|color=255|size=16|outline=1|text=限量<$str(U96)>/6>
+<Button|id=54|x=112.0|y=102.0|width=98|height=37|nimg=topbtn/hflb/gm.png|mimg=ptopbtn/hflb/gm.png|link=@选择支付方式#价格是=328>
+
+<Img|id=6|children={60,61,62,63,64}|x=0|y=0|width=250|height=154|reset=1|move=0|esc=1|img=topbtn/hflb/thbj.png|loadDelay=1|show=4>
+<Text|id=60|x=110.0|y=6.0|outline=1|color=249|size=16|text=洗练礼包>
+<Text|id=61|x=121.0|y=38.0|outline=1|color=250|size=16|text=价格：648元>
+<Img|id=62|children={f1}|x=18.0|y=54.0|width=66|height=64|img=topbtn/zxcz/kuang1.png|reset=1|loadDelay=1|move=0|esc=1|show=4>
+<ItemShow|id=f1|a=4|x=32.0|y=31.0|itemid=20273|itemcount=1|showtips=1|bgtype=0>
+<Img|id=63|children={f2}|x=94.0|y=64.0|show=4|img=topbtn/hflb/HD.png|loadDelay=1|move=0|esc=1|reset=1>
+<Text|id=f2|x=42.0|y=4.0|color=255|size=16|outline=1|text=限量<$str(U97)>/10>
+<Button|id=64|x=112.0|y=102.0|width=98|height=37|nimg=topbtn/hflb/gm.png|mimg=ptopbtn/hflb/gm.png|link=@选择支付方式#价格是=648>
+
+
+[@选择支付方式]
+#if
+#say
+<Button|x=-2526.0|y=-1172.0|width=115120|height=112880|nimg=npc/zd.png|pimg=npc/zd.png|mimg=npc/zd.png|color=224|size=18|link=@合服特惠的界面>
+<Img|x=1.0|y=-91.0|move=0|show=4|img=topbtn/hflb/bg.png|loadDelay=1|esc=1|reset=1|bg=1>
+<Button|x=368.0|y=-77.0|mimg=public/close-2.png|nimg=public/close-2.png|link=@合服特惠的界面>
+<Button|x=261.0|y=7.0|nimg=private/powerful_secret/bg_czzya_04.png|color=255|pimg=private/powerful_secret/bg_czzya_04.png|mimg=private/powerful_secret/bg_czzya_04.png|size=18|link=@微信>
+<Button|x=48.0|y=7.0|nimg=private/powerful_secret/bg_czzya_05.png|color=255|pimg=private/powerful_secret/bg_czzya_05.png|mimg=private/powerful_secret/bg_czzya_05.png|size=18|link=@支付宝>
+<Button|x=156.0|y=7.0|nimg=private/powerful_secret/bg_czzya_06.png|color=255|pimg=private/powerful_secret/bg_czzya_06.png|mimg=private/powerful_secret/bg_czzya_06.png|size=18|link=@花呗>
+<$STR(S$微信)>
+<$STR(S$支付宝)>
+<$STR(S$花呗)>
+
+#if
+EQUAL S$价格是 30 
+#say
+<Button|id=64|x=153.0|y=80.0|width=98|height=37|nimg=topbtn/hflb/qr.png|mimg=ptopbtn/hflb/qr.png|link=@购买30元>
+
+#if
+EQUAL S$价格是 68
+#say
+<Button|id=64|x=153.0|y=80.0|width=98|height=37|nimg=topbtn/hflb/qr.png|mimg=ptopbtn/hflb/qr.png|link=@购买68元>
+
+#if
+EQUAL S$价格是 98
+#say
+<Button|id=64|x=153.0|y=80.0|width=98|height=37|nimg=topbtn/hflb/qr.png|mimg=ptopbtn/hflb/qr.png|link=@购买98元>
+
+#if
+EQUAL S$价格是 198
+#say
+<Button|id=64|x=153.0|y=80.0|width=98|height=37|nimg=topbtn/hflb/qr.png|mimg=ptopbtn/hflb/qr.png|link=@购买198元>
+
+#if
+EQUAL S$价格是 328
+#say
+<Button|id=64|x=153.0|y=80.0|width=98|height=37|nimg=topbtn/hflb/qr.png|mimg=ptopbtn/hflb/qr.png|link=@购买328元>
+
+#if
+EQUAL S$价格是 648
+#say
+<Button|id=64|x=153.0|y=80.0|width=98|height=37|nimg=topbtn/hflb/qr.png|mimg=ptopbtn/hflb/qr.png|link=@购买648元>
+
+[@微信]
+#if
+#act
+MOV S$微信 <Img|x=329|y=8|img=private/powerful_secret/bg_czzya_04_1.png|esc=0>
+MOV S$支付宝
+MOV S$花呗
+MOV N$充值渠道 3
+goto @选择支付方式
+
+[@支付宝]
+#if
+#act
+mov S$支付宝 <Img|x=115|y=8|img=private/powerful_secret/bg_czzya_05_1.png|esc=0>
+MOV S$微信
+MOV S$花呗
+MOV N$充值渠道 1
+goto @选择支付方式
+
+[@花呗]
+#if
+#act
+mov S$花呗 <Img|x=227|y=8|img=private/powerful_secret/bg_czzya_06_1.png|esc=0>
+MOV S$微信
+MOV S$支付宝
+MOV N$充值渠道 2
+goto @选择支付方式
+
+
+
+[@购买30元]
+#if
+small U92 6
+#act
+
+Pullpay 30 <$STR(N$充值渠道)> 2
+#elseact
+sendmsg 9 超出最大购买数量
+
+[@购买68元]
+#if
+small U93 6
+#act
+Pullpay 68 <$STR(N$充值渠道)> 2
+#elseact
+sendmsg 9 超出最大购买数量
+
+[@购买98元]
+#if
+small U94 6
+#act
+Pullpay 98 <$STR(N$充值渠道)> 2
+#elseact
+sendmsg 9 超出最大购买数量
+
+[@购买198元]
+#if
+small U95 7
+#act
+Pullpay 198 <$STR(N$充值渠道)> 2
+#elseact
+sendmsg 9 超出最大购买数量
+
+[@购买328元]
+#if
+small U96 7
+#act
+Pullpay 328 <$STR(N$充值渠道)> 2
+#elseact
+sendmsg 9 超出最大购买数量
+
+[@购买648元]
+#if
+small U97 11
+#act
+Pullpay 648 <$STR(N$充值渠道)> 2
+#elseact
+sendmsg 9 超出最大购买数量
+}

@@ -1,0 +1,449 @@
+[@main]
+#if
+CHECKRENEWLEVEL < 8
+#act
+sendmsg 9 当你达到八转再来找寻找我吧，到时我可帮你解除限制突破上限。
+break
+
+#if
+CHECKRENEWLEVEL > 9
+#act
+goto @页面2
+break
+
+
+
+
+#if
+CHECKRENEWLEVEL = 8
+#act
+goto @龙珠显示
+goto @七转页面
+
+#if
+CHECKRENEWLEVEL = 9
+#act
+goto @龙珠显示
+goto @八转页面
+
+[@龙珠显示]
+#if
+equal U65 0
+#act
+mov s$龙珠一图片 1-1
+mov s$龙珠二图片 2-2
+mov s$龙珠三图片 3-3
+mov s$龙珠四图片 4-4
+mov s$龙珠五图片 5-5
+mov s$龙珠六图片 6-6
+mov s$龙珠七图片 7-7
+mov N$转生石Lv.5数量 9
+mov N$点卡数量 1000
+mov S$转生按钮 <Button|x=644.0|y=444.0|mimg=npc/rwzs/btn.png|nimg=npc/rwzs/btn.png|link=@七转转生#转生石数量=5#点卡数量=1000>
+break
+
+#if
+equal U65 1
+#act
+mov s$龙珠一图片 a
+mov s$龙珠二图片 2-2
+mov s$龙珠三图片 3-3
+mov s$龙珠四图片 4-4
+mov s$龙珠五图片 5-5
+mov s$龙珠六图片 6-6
+mov s$龙珠七图片 7-7
+mov N$转生石Lv.5数量 10
+mov N$点卡数量 2000
+mov S$转生按钮 <Button|x=644.0|y=444.0|mimg=npc/rwzs/btn.png|nimg=npc/rwzs/btn.png|link=@七转转生#转生石数量=6#点卡数量=2000>
+break
+
+
+#if
+equal U65 2
+#act
+mov s$龙珠一图片 a
+mov s$龙珠二图片 b
+mov s$龙珠三图片 3-3
+mov s$龙珠四图片 4-4
+mov s$龙珠五图片 5-5
+mov s$龙珠六图片 6-6
+mov s$龙珠七图片 7-7
+mov N$转生石Lv.5数量 11
+mov N$点卡数量 3000
+mov S$转生按钮 <Button|x=644.0|y=444.0|mimg=npc/rwzs/btn.png|nimg=npc/rwzs/btn.png|link=@七转转生#转生石数量=7#点卡数量=3000>
+break
+
+#if
+equal U65 3
+#act
+mov s$龙珠一图片 a
+mov s$龙珠二图片 b
+mov s$龙珠三图片 c
+mov s$龙珠四图片 4-4
+mov s$龙珠五图片 5-5
+mov s$龙珠六图片 6-6
+mov s$龙珠七图片 7-7
+mov N$转生石Lv.5数量 12
+mov N$点卡数量 4000
+mov S$转生按钮 <Button|x=644.0|y=444.0|mimg=npc/rwzs/btn.png|nimg=npc/rwzs/btn.png|link=@七转转生#转生石数量=8#点卡数量=4000>
+break
+
+#if
+equal U65 4
+#act
+mov s$龙珠一图片 a
+mov s$龙珠二图片 b
+mov s$龙珠三图片 c
+mov s$龙珠四图片 d
+mov s$龙珠五图片 5-5
+mov s$龙珠六图片 6-6
+mov s$龙珠七图片 7-7
+mov N$转生石Lv.5数量 13
+mov N$点卡数量 5000
+mov S$转生按钮 <Button|x=644.0|y=444.0|mimg=npc/rwzs/btn.png|nimg=npc/rwzs/btn.png|link=@七转转生#转生石数量=9#点卡数量=5000>
+break
+
+#if
+equal U65 5
+#act
+mov s$龙珠一图片 a
+mov s$龙珠二图片 b
+mov s$龙珠三图片 c
+mov s$龙珠四图片 d
+mov s$龙珠五图片 e
+mov s$龙珠六图片 6-6
+mov s$龙珠七图片 7-7
+mov N$转生石Lv.5数量 14
+mov N$点卡数量 6000
+mov S$转生按钮 <Button|x=644.0|y=444.0|mimg=npc/rwzs/btn.png|nimg=npc/rwzs/btn.png|link=@七转转生#转生石数量=10#点卡数量=6000>
+break
+
+#if
+equal U65 6
+#act
+mov s$龙珠一图片 a
+mov s$龙珠二图片 b
+mov s$龙珠三图片 c
+mov s$龙珠四图片 d
+mov s$龙珠五图片 e
+mov s$龙珠六图片 f
+mov s$龙珠七图片 7-7
+mov N$转生石Lv.5数量 15
+mov N$点卡数量 7000
+mov S$转生按钮 <Button|x=644.0|y=444.0|mimg=npc/rwzs/btn.png|nimg=npc/rwzs/btn.png|link=@七转转生#转生石数量=11#点卡数量=7000>
+break
+
+#if
+equal U65 7
+#act
+mov s$龙珠一图片 a
+mov s$龙珠二图片 b
+mov s$龙珠三图片 c
+mov s$龙珠四图片 d
+mov s$龙珠五图片 e
+mov s$龙珠六图片 f
+mov s$龙珠七图片 g
+mov N$转生石Lv.5数量 0
+mov N$点卡数量 0
+mov S$转生按钮 <Button|x=644.0|y=444.0|mimg=npc/rwzs/btn.png|nimg=npc/rwzs/btn.png|link=@七转转生#转生石数量=0#点卡数量=0>
+break
+;===================================================================================================================================
+#if
+equal U65 8
+#act
+mov s$龙珠一图片 1-1
+mov s$龙珠二图片 2-2
+mov s$龙珠三图片 3-3
+mov s$龙珠四图片 4-4
+mov s$龙珠五图片 5-5
+mov s$龙珠六图片 6-6
+mov s$龙珠七图片 7-7
+mov N$转生石Lv.5数量 10
+mov N$点卡数量 1000
+mov S$转生按钮 <Button|x=644.0|y=444.0|mimg=npc/rwzs/btn.png|nimg=npc/rwzs/btn.png|link=@七转转生#转生石数量=6#点卡数量=1000>
+break
+
+#if
+equal U65 9
+#act
+mov s$龙珠一图片 a
+mov s$龙珠二图片 2-2
+mov s$龙珠三图片 3-3
+mov s$龙珠四图片 4-4
+mov s$龙珠五图片 5-5
+mov s$龙珠六图片 6-6
+mov s$龙珠七图片 7-7
+mov N$转生石Lv.5数量 11
+mov N$点卡数量 2000
+mov S$转生按钮 <Button|x=644.0|y=444.0|mimg=npc/rwzs/btn.png|nimg=npc/rwzs/btn.png|link=@七转转生#转生石数量=7#点卡数量=2000>
+break
+
+
+#if
+equal U65 10
+#act
+mov s$龙珠一图片 a
+mov s$龙珠二图片 b
+mov s$龙珠三图片 3-3
+mov s$龙珠四图片 4-4
+mov s$龙珠五图片 5-5
+mov s$龙珠六图片 6-6
+mov s$龙珠七图片 7-7
+mov N$转生石Lv.5数量 12
+mov N$点卡数量 3000
+mov S$转生按钮 <Button|x=644.0|y=444.0|mimg=npc/rwzs/btn.png|nimg=npc/rwzs/btn.png|link=@七转转生#转生石数量=8#点卡数量=3000>
+break
+
+#if
+equal U65 11
+#act
+mov s$龙珠一图片 a
+mov s$龙珠二图片 b
+mov s$龙珠三图片 c
+mov s$龙珠四图片 4-4
+mov s$龙珠五图片 5-5
+mov s$龙珠六图片 6-6
+mov s$龙珠七图片 7-7
+mov N$转生石Lv.5数量 13
+mov N$点卡数量 4000
+mov S$转生按钮 <Button|x=644.0|y=444.0|mimg=npc/rwzs/btn.png|nimg=npc/rwzs/btn.png|link=@七转转生#转生石数量=9#点卡数量=4000>
+break
+
+#if
+equal U65 12
+#act
+mov s$龙珠一图片 a
+mov s$龙珠二图片 b
+mov s$龙珠三图片 c
+mov s$龙珠四图片 d
+mov s$龙珠五图片 5-5
+mov s$龙珠六图片 6-6
+mov s$龙珠七图片 7-7
+mov N$转生石Lv.5数量 14
+mov N$点卡数量 5000
+mov S$转生按钮 <Button|x=644.0|y=444.0|mimg=npc/rwzs/btn.png|nimg=npc/rwzs/btn.png|link=@七转转生#转生石数量=10#点卡数量=5000>
+break
+
+#if
+equal U65 13
+#act
+mov s$龙珠一图片 a
+mov s$龙珠二图片 b
+mov s$龙珠三图片 c
+mov s$龙珠四图片 d
+mov s$龙珠五图片 e
+mov s$龙珠六图片 6-6
+mov s$龙珠七图片 7-7
+mov N$转生石Lv.5数量 15
+mov N$点卡数量 6000
+mov S$转生按钮 <Button|x=644.0|y=444.0|mimg=npc/rwzs/btn.png|nimg=npc/rwzs/btn.png|link=@七转转生#转生石数量=11#点卡数量=6000>
+break
+
+#if
+equal U65 14
+#act
+mov s$龙珠一图片 a
+mov s$龙珠二图片 b
+mov s$龙珠三图片 c
+mov s$龙珠四图片 d
+mov s$龙珠五图片 e
+mov s$龙珠六图片 f
+mov s$龙珠七图片 7-7
+mov N$转生石Lv.5数量 16
+mov N$点卡数量 7000
+mov S$转生按钮 <Button|x=644.0|y=444.0|mimg=npc/rwzs/btn.png|nimg=npc/rwzs/btn.png|link=@七转转生#转生石数量=12#点卡数量=7000>
+break
+
+#if
+equal U65 15
+#act
+mov s$龙珠一图片 a
+mov s$龙珠二图片 b
+mov s$龙珠三图片 c
+mov s$龙珠四图片 d
+mov s$龙珠五图片 e
+mov s$龙珠六图片 f
+mov s$龙珠七图片 g
+mov N$转生石Lv.5数量 0
+mov N$点卡数量 0
+mov S$转生按钮 <Button|x=644.0|y=444.0|mimg=npc/rwzs/btn.png|nimg=npc/rwzs/btn.png|link=@七转转生#转生石数量=0#点卡数量=0>
+break
+
+
+
+
+
+
+
+[@七转页面]
+#if
+SMALL U65 7
+#ACT
+MOV S$转生一转的条件 <ItemShow|id=3b|x=57.0|y=245.0|width=70|height=70|itemid=20231|itemcount=<$str(N$转生石Lv.5数量)>|showtips=1|bgtype=0>
+inc S$转生一转的条件 <Effect|id=4b|x=-2.0|y=190.0|scale=1|speed=1.4|dir=5|act=0|effectid=34001|effecttype=0>
+inc S$转生一转的条件 <Img|id=1000|a=4|percentx=50.0|percenty=44.9|reset=1|move=0|img=npc/rwzs/3.png|esc=1|loadDelay=0|show=4>
+inc S$转生一转的条件 <ItemShow|id=1001|x=149.0|y=245.0|width=70|height=70|itemid=3|itemcount=<$str(N$点卡数量)>|showtips=1|bgtype=0>
+inc S$转生一转的条件 <Effect|id=1002|x=90.0|y=190.0|scale=1|speed=1.4|dir=5|act=0|effectid=34001|effecttype=0>
+#elseact
+MOV S$转生一转的条件 <Text|x=581|y=377|color=254|outline=2|size=14|text=你已点亮龙珠,点击按钮即可完成转生>
+
+#IF
+#say
+<Button|x=-2526.0|y=-1172.0|width=115120|height=112880|size=18|nimg=npc/zd.png|mimg=npc/zd.png|color=224|pimg=npc/zd.png|link=@exit>
+<Img|children={1,2}|a=4|x=454.5|y=287.0|width=933|height=600|move=0|reset=1|img=npc/rwzs/bj.png|show=4|loadDelay=0|esc=1|bg=1>
+<Layout|id=1|children={1a,2a,3a,qa1,qa2,qa3,qa4,qa5,qa6,qa7}|x=108|y=101|width=458|height=440>
+<Img|id=qa1|a=4|percentx=7.5|percenty=65.8|width=45|height=45|move=0|reset=1|img=npc/rwzs/<$str(s$龙珠一图片)>.png|loadDelay=0|show=4|esc=1>
+<Img|id=qa2|a=4|percentx=14.7|percenty=43.8|width=45|height=45|move=0|reset=1|img=npc/rwzs/<$str(s$龙珠二图片)>.png|loadDelay=0|show=4|esc=1>
+<Img|id=qa3|a=4|percentx=30.0|percenty=28.1|width=45|height=45|move=0|reset=1|img=npc/rwzs/<$str(s$龙珠三图片)>.png|loadDelay=0|show=4|esc=1>
+<Img|id=qa4|a=4|percentx=48.4|percenty=15.6|width=45|height=45|move=0|reset=1|img=npc/rwzs/<$str(s$龙珠四图片)>.png|loadDelay=0|show=4|esc=1>
+<Img|id=qa5|a=4|percentx=66.7|percenty=28.1|width=45|height=45|move=0|reset=1|img=npc/rwzs/<$str(s$龙珠五图片)>.png|loadDelay=0|show=4|esc=1>
+<Img|id=qa6|a=4|percentx=83.1|percenty=43.8|width=45|height=45|move=0|reset=1|img=npc/rwzs/<$str(s$龙珠六图片)>.png|loadDelay=0|show=4|esc=1>
+<Img|id=qa7|a=4|percentx=91.8|percenty=65.8|width=45|height=45|move=0|reset=1|img=npc/rwzs/<$str(s$龙珠七图片)>.png|loadDelay=0|show=4|esc=1>
+
+<Frames|id=1a|a=4|x=228|y=317|width=200|height=200|speed=8|count=12|loop=-1|suffix=.png|prefix=npc/rwzs/tx/tx_>
+<Img|id=2a|a=4|percentx=50|percenty=4.5|reset=1|esc=1|show=4|loadDelay=0|img=npc/rwzs/0.png|move=0>
+<Text|id=3a|x=249|y=16|color=224|outline=2|size=16|text=<$RELEVEL>>
+<Layout|id=2|children={1b,2b,3b,4b,1000,1001,1002,5b,8b,6b,7b}|x=576|y=108|width=260|height=440>
+<Img|id=1b|a=4|percentx=50|y=8|reset=1|loadDelay=0|show=4|img=npc/rwzs/1.png|esc=1|move=0>
+
+<Img|id=2b|a=4|percentx=50.0|percenty=44.9|reset=1|esc=1|show=4|loadDelay=0|img=npc/rwzs/3.png|move=0>
+
+
+<$str(S$转生一转的条件)>
+
+
+
+<Text|id=5b|x=21|y=46|color=255|outline=2|size=16|text=只有转生才能成为顶尖强者，才>
+<Text|id=8b|x=21.0|y=72.0|color=255|outline=2|size=16|text=能无畏的探索玛法大陆!>
+<Text|id=6b|x=21.0|y=98.0|color=251|outline=2|size=16|text=将七龙珠点亮即可完成转生>
+<Text|id=7b|x=21.0|y=123.0|color=251|outline=2|size=16|text=每次点亮一颗消耗不同材料>
+
+<Button|x=843.0|y=29.0|mimg=public/close-2.png|nimg=public/close-2.png|link=@exit>
+<$str(S$转生按钮)>
+
+
+
+
+[@八转页面]
+#if
+SMALL U65 15
+#ACT
+MOV S$转生一转的条件 <ItemShow|id=3b|x=57.0|y=245.0|width=70|height=70|itemid=20231|itemcount=<$str(N$转生石Lv.5数量)>|showtips=1|bgtype=0>
+inc S$转生一转的条件 <Effect|id=4b|x=-2.0|y=190.0|scale=1|speed=1.4|dir=5|act=0|effectid=34001|effecttype=0>
+inc S$转生一转的条件 <Img|id=1000|a=4|percentx=50.0|percenty=44.9|reset=1|move=0|img=npc/rwzs/3.png|esc=1|loadDelay=0|show=4>
+inc S$转生一转的条件 <ItemShow|id=1001|x=149.0|y=245.0|width=70|height=70|itemid=3|itemcount=<$str(N$点卡数量)>|showtips=1|bgtype=0>
+inc S$转生一转的条件 <Effect|id=1002|x=90.0|y=190.0|scale=1|speed=1.4|dir=5|act=0|effectid=34001|effecttype=0>
+#elseact
+MOV S$转生一转的条件 <Text|x=581|y=377|color=254|outline=2|size=14|text=你已点亮龙珠,点击按钮即可完成转生>
+
+#IF
+#say
+<Button|x=-2526.0|y=-1172.0|width=115120|height=112880|size=18|nimg=npc/zd.png|mimg=npc/zd.png|color=224|pimg=npc/zd.png|link=@exit>
+<Img|children={1,2}|a=4|x=454.5|y=287.0|width=933|height=600|move=0|reset=1|img=npc/rwzs/bj.png|show=4|loadDelay=0|esc=1|bg=1>
+<Layout|id=1|children={1a,2a,3a,qa1,qa2,qa3,qa4,qa5,qa6,qa7}|x=108|y=101|width=458|height=440>
+<Img|id=qa1|a=4|percentx=7.5|percenty=65.8|width=45|height=45|move=0|reset=1|img=npc/rwzs/<$str(s$龙珠一图片)>.png|loadDelay=0|show=4|esc=1>
+<Img|id=qa2|a=4|percentx=14.7|percenty=43.8|width=45|height=45|move=0|reset=1|img=npc/rwzs/<$str(s$龙珠二图片)>.png|loadDelay=0|show=4|esc=1>
+<Img|id=qa3|a=4|percentx=30.0|percenty=28.1|width=45|height=45|move=0|reset=1|img=npc/rwzs/<$str(s$龙珠三图片)>.png|loadDelay=0|show=4|esc=1>
+<Img|id=qa4|a=4|percentx=48.4|percenty=15.6|width=45|height=45|move=0|reset=1|img=npc/rwzs/<$str(s$龙珠四图片)>.png|loadDelay=0|show=4|esc=1>
+<Img|id=qa5|a=4|percentx=66.7|percenty=28.1|width=45|height=45|move=0|reset=1|img=npc/rwzs/<$str(s$龙珠五图片)>.png|loadDelay=0|show=4|esc=1>
+<Img|id=qa6|a=4|percentx=83.1|percenty=43.8|width=45|height=45|move=0|reset=1|img=npc/rwzs/<$str(s$龙珠六图片)>.png|loadDelay=0|show=4|esc=1>
+<Img|id=qa7|a=4|percentx=91.8|percenty=65.8|width=45|height=45|move=0|reset=1|img=npc/rwzs/<$str(s$龙珠七图片)>.png|loadDelay=0|show=4|esc=1>
+
+<Frames|id=1a|a=4|x=228|y=317|width=200|height=200|speed=8|count=12|loop=-1|suffix=.png|prefix=npc/rwzs/tx/tx_>
+<Img|id=2a|a=4|percentx=50|percenty=4.5|reset=1|esc=1|show=4|loadDelay=0|img=npc/rwzs/0.png|move=0>
+<Text|id=3a|x=249|y=16|color=224|outline=2|size=16|text=<$RELEVEL>>
+<Layout|id=2|children={1b,2b,3b,4b,1000,1001,1002,5b,8b,6b,7b}|x=576|y=108|width=260|height=440>
+<Img|id=1b|a=4|percentx=50|y=8|reset=1|loadDelay=0|show=4|img=npc/rwzs/1.png|esc=1|move=0>
+
+<Img|id=2b|a=4|percentx=50.0|percenty=44.9|reset=1|esc=1|show=4|loadDelay=0|img=npc/rwzs/3.png|move=0>
+
+
+<$str(S$转生一转的条件)>
+
+
+
+<Text|id=5b|x=21|y=46|color=255|outline=2|size=16|text=只有转生才能成为顶尖强者，才>
+<Text|id=8b|x=21.0|y=72.0|color=255|outline=2|size=16|text=能无畏的探索玛法大陆!>
+<Text|id=6b|x=21.0|y=98.0|color=251|outline=2|size=16|text=将七龙珠点亮即可完成转生>
+<Text|id=7b|x=21.0|y=123.0|color=251|outline=2|size=16|text=每次点亮一颗消耗不同材料>
+
+<Button|x=843.0|y=29.0|mimg=public/close-2.png|nimg=public/close-2.png|link=@exit>
+<$str(S$转生按钮)>
+
+
+
+
+
+[@页面2]
+#IF
+#say
+<Button|x=-2526.0|y=-1172.0|width=115120|height=112880|pimg=npc/zd.png|nimg=npc/zd.png|mimg=npc/zd.png|color=224|size=18|link=@exit>
+<Img|a=4|children={1,2}|x=454.5|y=287.0|width=933|height=600|move=0|bg=1|img=npc/rwzs/bj.png|reset=1|show=4|esc=1|loadDelay=0>
+<Button|x=843.0|y=29.0|nimg=public/close-2.png|mimg=public/close-2.png|link=@exit>
+<Layout|id=1|children={1a,2a,3a}|x=108|y=101|width=458|height=440>
+<Frames|id=1a|a=4|x=228|y=317|width=200|height=200|speed=8|loop=-1|prefix=npc/rwzs/tx/tx_|suffix=.png|count=12>
+<Img|id=2a|a=4|percentx=50|percenty=4.5|esc=1|move=0|loadDelay=0|reset=1|show=4|img=npc/rwzs/0.png>
+<Text|id=3a|x=249|y=16|size=16|outline=2|color=224|text=<$RELEVEL>>
+<Layout|id=2|children={1b,2b,3b,4b}|x=576|y=108|width=260|height=440>
+<Img|id=1b|a=4|y=199.0|percentx=50.0|width=260|height=98|reset=1|loadDelay=0|show=4|img=npc/rwzs/5.png|esc=1|move=0>
+
+
+
+
+[@七转转生]
+#if
+equal U65 7
+#act
+RENEWLEVEL 1 0 0 
+Screffects 100 36002 590 290 5 1 0
+inc U65 1
+goto @main
+#CALL [\主界面基础按钮\主界面基础按钮QM.txt] @基础按钮QM
+#CALL [\主界面基础按钮\主界面游戏按钮.txt] @界面游戏按钮
+break
+
+#if
+equal U65 15
+#act
+RENEWLEVEL 1 0 0 
+Screffects 100 36002 590 290 5 1 0
+inc U65 1
+goto @main
+#CALL [\主界面基础按钮\主界面基础按钮QM.txt] @基础按钮QM
+#CALL [\主界面基础按钮\主界面游戏按钮.txt] @界面游戏按钮
+break
+
+#if
+CHECKBINDMONEY 绑定点卡 < <$str(S$点卡数量)>
+#act
+SENDMSG 9 【提示】点卡不足，尚不能点击
+break
+
+
+#if
+not checkitem 转生石Lv.5 <$str(S$转生石数量)>
+#act
+SENDMSG 9 【提示】背包转生石Lv.5不足
+break
+
+
+
+#if
+SMALL U65 15
+checkitem 转生石Lv.5 <$str(S$转生石数量)>
+CHECKBINDMONEY 绑定点卡 ? <$str(S$点卡数量)>
+#act
+CHANGEBINDMONEY 绑定点卡 <$str(S$点卡数量)>
+take 转生石Lv.5 <$str(S$转生石数量)>
+inc U65 1
+SENDMSG 9 【提示】成功点亮转生七魄一星！
+goto @main
+
+;=============================================
+
+
+
+
+
+
+

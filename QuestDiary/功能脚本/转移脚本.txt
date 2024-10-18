@@ -1,0 +1,4348 @@
+[@转移脚本]
+{
+#if
+#act
+
+mov S$转移的规则
+mov S$转移石数量 0
+goto @转移洗练页面
+
+
+
+
+[@转移洗练页面]
+
+
+#if
+equal S$特效启动 开
+#act
+mov S$转移特效 <Effect|id=3|x=154.0|y=130.0|scale=1|speed=3|dir=5|act=0|effectid=42001|effecttype=0>
+#elseact
+mov S$转移特效
+
+#IF
+#say
+<Img|a=4|x=160.5|y=289.0|width=737|height=600|show=4|bg=1|img=npc/zbzy/bj.png|move=0|reset=1|loadDelay=0|esc=1>
+<Button|x=450.0|y=26.0|mimg=public/close-2.png|nimg=public/close-2.png|link=@exit>
+<Img|a=4|children={3,4}|x=156.5|y=242.0|reset=1|show=4|img=npc/zbzy/0001.png|loadDelay=0|move=0|esc=1>
+<ITEMBOX|x=3.0|y=217.0|width=50|height=50|boxindex=1|stdmode=*|tipsx=4|tipsy=100|esc=1>
+<ITEMBOX|x=254.0|y=217.0|width=50|height=50|boxindex=2|stdmode=*|tipsx=4|tipsy=100|esc=1>
+<Button|x=92.0|y=437.0|width=125|height=40|mimg=npc/zbzy/434.png|nimg=npc/zbzy/434.png|link=@点击转移>
+<Button|x=-131|y=68.0|width=53|height=52|mimg=npc/xyxc/5.png|nimg=npc/xyxc/5.png|link=@转移规则>
+
+<Text|x=79|y=395|color=161|outline=2|size=16|text=费用:所需转移石>
+<ItemShow|x=189|y=367|width=70|height=70|itemid=20157|itemcount=<$STR(S$转移石数量)>|bgtype=0|showtips=1>
+<Img|x=-73|y=154.0|width=42|height=180|show=4|bg=1|img=npc/zbzy/1.png|move=0|reset=1|loadDelay=0|esc=1>
+<Img|x=333|y=154.0|width=42|height=180|show=4|bg=1|img=npc/zbzy/2.png|move=0|reset=1|loadDelay=0|esc=1>
+
+
+
+<$STR(S$转移的规则)>
+
+
+<$STR(S$转移特效)>
+
+
+
+[@转移规则]
+#if
+#act
+mov S$转移的规则 <Img|a=4|id=4|width=465|height=90|children={1}|x=183|y=14|reset=1|show=4|img=npc/zbzy/bj1.png|loadDelay=0|move=0|esc=1>
+inc S$转移的规则 <Button|id=1|x=437|y=-1|mimg=public/close-2.png|nimg=public/close-2.png|link=@关闭转移规则>
+goto @转移洗练页面
+
+[@关闭转移规则]
+#if
+#act
+mov S$转移的规则
+goto @转移洗练页面
+
+[@ItemIntoBox1]
+;4-5转
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀金
+CheckContainsText <$BOXITEM[2].NAME> 耀光
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀金
+CheckContainsText <$BOXITEM[2].NAME> 耀玉
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀光
+CheckContainsText <$BOXITEM[2].NAME> 耀金
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀光
+CheckContainsText <$BOXITEM[2].NAME> 耀玉
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀玉
+CheckContainsText <$BOXITEM[2].NAME> 耀金
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀玉
+CheckContainsText <$BOXITEM[2].NAME> 耀光
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀金
+CheckContainsText <$BOXITEM[2].NAME> 海妖
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀金
+CheckContainsText <$BOXITEM[2].NAME> 斩龙
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀金
+CheckContainsText <$BOXITEM[2].NAME> 无形
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀光
+CheckContainsText <$BOXITEM[2].NAME> 海妖
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀光
+CheckContainsText <$BOXITEM[2].NAME> 斩龙
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀光
+CheckContainsText <$BOXITEM[2].NAME> 无形
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀玉
+CheckContainsText <$BOXITEM[2].NAME> 海妖
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀玉
+CheckContainsText <$BOXITEM[2].NAME> 斩龙
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀玉
+CheckContainsText <$BOXITEM[2].NAME> 无形
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+;4-6转
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀金
+CheckContainsText <$BOXITEM[2].NAME> の
+#act
+mov S$转移石数量 2
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀光
+CheckContainsText <$BOXITEM[2].NAME> の
+#act
+mov S$转移石数量 2
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀玉
+CheckContainsText <$BOXITEM[2].NAME> の
+#act
+mov S$转移石数量 2
+goto @转移洗练页面
+
+;4-7转
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀金
+CheckContainsText <$BOXITEM[2].NAME> 麒麟
+#act
+mov S$转移石数量 3
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀金
+CheckContainsText <$BOXITEM[2].NAME> 朱雀
+#act
+mov S$转移石数量 3
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀金
+CheckContainsText <$BOXITEM[2].NAME> 玄武
+#act
+mov S$转移石数量 3
+goto @转移洗练页面
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀光
+CheckContainsText <$BOXITEM[2].NAME> 麒麟
+#act
+mov S$转移石数量 3
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀光
+CheckContainsText <$BOXITEM[2].NAME> 朱雀
+#act
+mov S$转移石数量 3
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀光
+CheckContainsText <$BOXITEM[2].NAME> 玄武
+#act
+mov S$转移石数量 3
+goto @转移洗练页面
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀玉
+CheckContainsText <$BOXITEM[2].NAME> 麒麟
+#act
+mov S$转移石数量 3
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀玉
+CheckContainsText <$BOXITEM[2].NAME> 朱雀
+#act
+mov S$转移石数量 3
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀玉
+CheckContainsText <$BOXITEM[2].NAME> 玄武
+#act
+mov S$转移石数量 3
+goto @转移洗练页面
+
+;4-8转
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀金
+CheckContainsText <$BOXITEM[2].NAME> 冰霜
+#act
+mov S$转移石数量 4
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀金
+CheckContainsText <$BOXITEM[2].NAME> 雪寂
+#act
+mov S$转移石数量 4
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀金
+CheckContainsText <$BOXITEM[2].NAME> 凛冬
+#act
+mov S$转移石数量 4
+goto @转移洗练页面
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀光
+CheckContainsText <$BOXITEM[2].NAME> 冰霜
+#act
+mov S$转移石数量 4
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀光
+CheckContainsText <$BOXITEM[2].NAME> 雪寂
+#act
+mov S$转移石数量 4
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀光
+CheckContainsText <$BOXITEM[2].NAME> 凛冬
+#act
+mov S$转移石数量 4
+goto @转移洗练页面
+
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀玉
+CheckContainsText <$BOXITEM[2].NAME> 冰霜
+#act
+mov S$转移石数量 4
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀玉
+CheckContainsText <$BOXITEM[2].NAME> 雪寂
+#act
+mov S$转移石数量 4
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀玉
+CheckContainsText <$BOXITEM[2].NAME> 凛冬
+#act
+mov S$转移石数量 4
+goto @转移洗练页面
+
+;4-9转
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀金
+CheckContainsText <$BOXITEM[2].NAME> 寂灭
+#act
+mov S$转移石数量 5
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀金
+CheckContainsText <$BOXITEM[2].NAME> 业火
+#act
+mov S$转移石数量 5
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀金
+CheckContainsText <$BOXITEM[2].NAME> 冥天
+#act
+mov S$转移石数量 5
+goto @转移洗练页面
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀光
+CheckContainsText <$BOXITEM[2].NAME> 寂灭
+#act
+mov S$转移石数量 5
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀光
+CheckContainsText <$BOXITEM[2].NAME> 业火
+#act
+mov S$转移石数量 5
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀光
+CheckContainsText <$BOXITEM[2].NAME> 冥天
+#act
+mov S$转移石数量 5
+goto @转移洗练页面
+;=============================================
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀玉
+CheckContainsText <$BOXITEM[2].NAME> 冥天
+#act
+mov S$转移石数量 5
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀玉
+CheckContainsText <$BOXITEM[2].NAME> 业火
+#act
+mov S$转移石数量 5
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀玉
+CheckContainsText <$BOXITEM[2].NAME> 冥天
+#act
+mov S$转移石数量 5
+goto @转移洗练页面
+
+;4-10转
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀金
+CheckContainsText <$BOXITEM[2].NAME> 神罚
+#act
+mov S$转移石数量 6
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀金
+CheckContainsText <$BOXITEM[2].NAME> 圣裁
+#act
+mov S$转移石数量 6
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀金
+CheckContainsText <$BOXITEM[2].NAME> 仙戮
+#act
+mov S$转移石数量 6
+goto @转移洗练页面
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀光
+CheckContainsText <$BOXITEM[2].NAME> 神罚
+#act
+mov S$转移石数量 6
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀光
+CheckContainsText <$BOXITEM[2].NAME> 圣裁
+#act
+mov S$转移石数量 6
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀光
+CheckContainsText <$BOXITEM[2].NAME> 仙戮
+#act
+mov S$转移石数量 6
+goto @转移洗练页面
+
+
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀玉
+CheckContainsText <$BOXITEM[2].NAME> 仙戮
+#act
+mov S$转移石数量 6
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀玉
+CheckContainsText <$BOXITEM[2].NAME> 圣裁
+#act
+mov S$转移石数量 6
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀玉
+CheckContainsText <$BOXITEM[2].NAME> 仙戮
+#act
+mov S$转移石数量 6
+goto @转移洗练页面
+
+
+;--------------------------------------------------------------------------------------------------------------------------------------------------
+;5-6转
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> 海妖
+CheckContainsText <$BOXITEM[2].NAME> 斩龙
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 海妖
+CheckContainsText <$BOXITEM[2].NAME> 无形
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 斩龙
+CheckContainsText <$BOXITEM[2].NAME> 斩龙
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 斩龙
+CheckContainsText <$BOXITEM[2].NAME> 无形
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 无形
+CheckContainsText <$BOXITEM[2].NAME> 斩龙
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 无形
+CheckContainsText <$BOXITEM[2].NAME> 海妖
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 海妖
+CheckContainsText <$BOXITEM[2].NAME> の
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 斩龙
+CheckContainsText <$BOXITEM[2].NAME> の
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 无形
+CheckContainsText <$BOXITEM[2].NAME> の
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+;5-7转
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> 海妖
+CheckContainsText <$BOXITEM[2].NAME> 麒麟
+#act
+mov S$转移石数量 2
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 海妖
+CheckContainsText <$BOXITEM[2].NAME> 朱雀
+#act
+mov S$转移石数量 2
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 海妖
+CheckContainsText <$BOXITEM[2].NAME> 玄武
+#act
+mov S$转移石数量 2
+goto @转移洗练页面
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> 斩龙
+CheckContainsText <$BOXITEM[2].NAME> 麒麟
+#act
+mov S$转移石数量 2
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 斩龙
+CheckContainsText <$BOXITEM[2].NAME> 朱雀
+#act
+mov S$转移石数量 2
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 斩龙
+CheckContainsText <$BOXITEM[2].NAME> 玄武
+#act
+mov S$转移石数量 2
+goto @转移洗练页面
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> 无形
+CheckContainsText <$BOXITEM[2].NAME> 麒麟
+#act
+mov S$转移石数量 2
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 无形
+CheckContainsText <$BOXITEM[2].NAME> 朱雀
+#act
+mov S$转移石数量 2
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 无形
+CheckContainsText <$BOXITEM[2].NAME> 玄武
+#act
+mov S$转移石数量 2
+goto @转移洗练页面
+
+;5-8
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> 海妖
+CheckContainsText <$BOXITEM[2].NAME> 冰霜
+#act
+mov S$转移石数量 3
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 海妖
+CheckContainsText <$BOXITEM[2].NAME> 雪寂
+#act
+mov S$转移石数量 3
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 海妖
+CheckContainsText <$BOXITEM[2].NAME> 凛冬
+#act
+mov S$转移石数量 3
+goto @转移洗练页面
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> 斩龙
+CheckContainsText <$BOXITEM[2].NAME> 冰霜
+#act
+mov S$转移石数量 3
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 斩龙
+CheckContainsText <$BOXITEM[2].NAME> 雪寂
+#act
+mov S$转移石数量 3
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 斩龙
+CheckContainsText <$BOXITEM[2].NAME> 凛冬
+#act
+mov S$转移石数量 3
+goto @转移洗练页面
+;=============================================
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 无形
+CheckContainsText <$BOXITEM[2].NAME> 冰霜
+#act
+mov S$转移石数量 4
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 无形
+CheckContainsText <$BOXITEM[2].NAME> 雪寂
+#act
+mov S$转移石数量 4
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 无形
+CheckContainsText <$BOXITEM[2].NAME> 凛冬
+#act
+mov S$转移石数量 4
+goto @转移洗练页面
+
+
+;5-9
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> 海妖
+CheckContainsText <$BOXITEM[2].NAME> 寂灭
+#act
+mov S$转移石数量 4
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 海妖
+CheckContainsText <$BOXITEM[2].NAME> 业火
+#act
+mov S$转移石数量 4
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 海妖
+CheckContainsText <$BOXITEM[2].NAME> 冥天
+#act
+mov S$转移石数量 4
+goto @转移洗练页面
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> 斩龙
+CheckContainsText <$BOXITEM[2].NAME> 寂灭
+#act
+mov S$转移石数量 4
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 斩龙
+CheckContainsText <$BOXITEM[2].NAME> 业火
+#act
+mov S$转移石数量 4
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 斩龙
+CheckContainsText <$BOXITEM[2].NAME> 冥天
+#act
+mov S$转移石数量 4
+goto @转移洗练页面
+;=============================================
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 无形
+CheckContainsText <$BOXITEM[2].NAME> 冥天
+#act
+mov S$转移石数量 4
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 无形
+CheckContainsText <$BOXITEM[2].NAME> 业火
+#act
+mov S$转移石数量 4
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 无形
+CheckContainsText <$BOXITEM[2].NAME> 冥天
+#act
+mov S$转移石数量 4
+goto @转移洗练页面
+
+;5-10
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> 海妖
+CheckContainsText <$BOXITEM[2].NAME> 神罚
+#act
+mov S$转移石数量 5
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 海妖
+CheckContainsText <$BOXITEM[2].NAME> 圣裁
+#act
+mov S$转移石数量 5
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 海妖
+CheckContainsText <$BOXITEM[2].NAME> 仙戮
+#act
+mov S$转移石数量 5
+goto @转移洗练页面
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> 斩龙
+CheckContainsText <$BOXITEM[2].NAME> 神罚
+#act
+mov S$转移石数量 5
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 斩龙
+CheckContainsText <$BOXITEM[2].NAME> 圣裁
+#act
+mov S$转移石数量 5
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 斩龙
+CheckContainsText <$BOXITEM[2].NAME> 仙戮
+#act
+mov S$转移石数量 5
+goto @转移洗练页面
+;=============================================
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 无形
+CheckContainsText <$BOXITEM[2].NAME> 仙戮
+#act
+mov S$转移石数量 5
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 无形
+CheckContainsText <$BOXITEM[2].NAME> 圣裁
+#act
+mov S$转移石数量 5
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 无形
+CheckContainsText <$BOXITEM[2].NAME> 仙戮
+#act
+mov S$转移石数量 5
+goto @转移洗练页面
+
+;6-7
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> の
+CheckContainsText <$BOXITEM[2].NAME> の
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> の
+CheckContainsText <$BOXITEM[2].NAME> 麒麟
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> の
+CheckContainsText <$BOXITEM[2].NAME> 朱雀
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> の
+CheckContainsText <$BOXITEM[2].NAME> 玄武
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+;6-8
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> の
+CheckContainsText <$BOXITEM[2].NAME> 冰霜
+#act
+mov S$转移石数量 2
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> の
+CheckContainsText <$BOXITEM[2].NAME> 雪寂
+#act
+mov S$转移石数量 2
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> の
+CheckContainsText <$BOXITEM[2].NAME> 凛冬
+#act
+mov S$转移石数量 2
+goto @转移洗练页面
+
+;6-9
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> の
+CheckContainsText <$BOXITEM[2].NAME> 寂灭
+#act
+mov S$转移石数量 3
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> の
+CheckContainsText <$BOXITEM[2].NAME> 业火
+#act
+mov S$转移石数量 3
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> の
+CheckContainsText <$BOXITEM[2].NAME> 冥天
+#act
+mov S$转移石数量 3
+goto @转移洗练页面
+
+;6-10
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> の
+CheckContainsText <$BOXITEM[2].NAME> 神罚
+#act
+mov S$转移石数量 4
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> の
+CheckContainsText <$BOXITEM[2].NAME> 圣裁
+#act
+mov S$转移石数量 4
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> の
+CheckContainsText <$BOXITEM[2].NAME> 仙戮
+#act
+mov S$转移石数量 4
+goto @转移洗练页面
+
+;7-8
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> 朱雀
+CheckContainsText <$BOXITEM[2].NAME> 麒麟
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 朱雀
+CheckContainsText <$BOXITEM[2].NAME> 玄武
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 麒麟
+CheckContainsText <$BOXITEM[2].NAME> 朱雀
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 麒麟
+CheckContainsText <$BOXITEM[2].NAME> 玄武
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 玄武
+CheckContainsText <$BOXITEM[2].NAME> 朱雀
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 玄武
+CheckContainsText <$BOXITEM[2].NAME> 麒麟
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 朱雀
+CheckContainsText <$BOXITEM[2].NAME> 冰霜
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 朱雀
+CheckContainsText <$BOXITEM[2].NAME> 雪寂
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 朱雀
+CheckContainsText <$BOXITEM[2].NAME> 凛冬
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> 麒麟
+CheckContainsText <$BOXITEM[2].NAME> 冰霜
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 麒麟
+CheckContainsText <$BOXITEM[2].NAME> 雪寂
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 麒麟
+CheckContainsText <$BOXITEM[2].NAME> 凛冬
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+;=============================================
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 玄武
+CheckContainsText <$BOXITEM[2].NAME> 冰霜
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 玄武
+CheckContainsText <$BOXITEM[2].NAME> 雪寂
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 玄武
+CheckContainsText <$BOXITEM[2].NAME> 凛冬
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+;7-9
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> 麒麟
+CheckContainsText <$BOXITEM[2].NAME> 寂灭
+#act
+mov S$转移石数量 2
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 麒麟
+CheckContainsText <$BOXITEM[2].NAME> 业火
+#act
+mov S$转移石数量 2
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 麒麟
+CheckContainsText <$BOXITEM[2].NAME> 冥天
+#act
+mov S$转移石数量 2
+goto @转移洗练页面
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> 朱雀
+CheckContainsText <$BOXITEM[2].NAME> 寂灭
+#act
+mov S$转移石数量 2
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 朱雀
+CheckContainsText <$BOXITEM[2].NAME> 业火
+#act
+mov S$转移石数量 2
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 朱雀
+CheckContainsText <$BOXITEM[2].NAME> 冥天
+#act
+mov S$转移石数量 2
+goto @转移洗练页面
+;=============================================
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 玄武
+CheckContainsText <$BOXITEM[2].NAME> 冥天
+#act
+mov S$转移石数量 2
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 玄武
+CheckContainsText <$BOXITEM[2].NAME> 业火
+#act
+mov S$转移石数量 2
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 玄武
+CheckContainsText <$BOXITEM[2].NAME> 冥天
+#act
+mov S$转移石数量 2
+goto @转移洗练页面
+
+;7-10
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> 麒麟
+CheckContainsText <$BOXITEM[2].NAME> 神罚
+#act
+mov S$转移石数量 3
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 麒麟
+CheckContainsText <$BOXITEM[2].NAME> 圣裁
+#act
+mov S$转移石数量 3
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 麒麟
+CheckContainsText <$BOXITEM[2].NAME> 仙戮
+#act
+mov S$转移石数量 3
+goto @转移洗练页面
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> 朱雀
+CheckContainsText <$BOXITEM[2].NAME> 神罚
+#act
+mov S$转移石数量 3
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 朱雀
+CheckContainsText <$BOXITEM[2].NAME> 圣裁
+#act
+mov S$转移石数量 3
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 朱雀
+CheckContainsText <$BOXITEM[2].NAME> 仙戮
+#act
+mov S$转移石数量 3
+goto @转移洗练页面
+;=============================================
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 玄武
+CheckContainsText <$BOXITEM[2].NAME> 仙戮
+#act
+mov S$转移石数量 3
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 玄武
+CheckContainsText <$BOXITEM[2].NAME> 圣裁
+#act
+mov S$转移石数量 3
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 玄武
+CheckContainsText <$BOXITEM[2].NAME> 仙戮
+#act
+mov S$转移石数量 3
+goto @转移洗练页面
+
+;8-9
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> 冰霜
+CheckContainsText <$BOXITEM[2].NAME> 雪寂
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 冰霜
+CheckContainsText <$BOXITEM[2].NAME> 凛冬
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 雪寂
+CheckContainsText <$BOXITEM[2].NAME> 凛冬
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 雪寂
+CheckContainsText <$BOXITEM[2].NAME> 冰霜
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 凛冬
+CheckContainsText <$BOXITEM[2].NAME> 雪寂
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 凛冬
+CheckContainsText <$BOXITEM[2].NAME> 冰霜
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 冰霜
+CheckContainsText <$BOXITEM[2].NAME> 寂灭
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 冰霜
+CheckContainsText <$BOXITEM[2].NAME> 业火
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 冰霜
+CheckContainsText <$BOXITEM[2].NAME> 冥天
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> 雪寂
+CheckContainsText <$BOXITEM[2].NAME> 寂灭
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 雪寂
+CheckContainsText <$BOXITEM[2].NAME> 业火
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 雪寂
+CheckContainsText <$BOXITEM[2].NAME> 冥天
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+;=============================================
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 凛冬
+CheckContainsText <$BOXITEM[2].NAME> 冥天
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 凛冬
+CheckContainsText <$BOXITEM[2].NAME> 业火
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 凛冬
+CheckContainsText <$BOXITEM[2].NAME> 冥天
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+;8-10
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> 冰霜
+CheckContainsText <$BOXITEM[2].NAME> 神罚
+#act
+mov S$转移石数量 2
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 冰霜
+CheckContainsText <$BOXITEM[2].NAME> 圣裁
+#act
+mov S$转移石数量 2
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 冰霜
+CheckContainsText <$BOXITEM[2].NAME> 仙戮
+#act
+mov S$转移石数量 2
+goto @转移洗练页面
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> 雪寂
+CheckContainsText <$BOXITEM[2].NAME> 神罚
+#act
+mov S$转移石数量 2
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 雪寂
+CheckContainsText <$BOXITEM[2].NAME> 圣裁
+#act
+mov S$转移石数量 2
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 雪寂
+CheckContainsText <$BOXITEM[2].NAME> 仙戮
+#act
+mov S$转移石数量 2
+goto @转移洗练页面
+;=============================================
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 凛冬
+CheckContainsText <$BOXITEM[2].NAME> 仙戮
+#act
+mov S$转移石数量 2
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 凛冬
+CheckContainsText <$BOXITEM[2].NAME> 圣裁
+#act
+mov S$转移石数量 2
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 凛冬
+CheckContainsText <$BOXITEM[2].NAME> 仙戮
+#act
+mov S$转移石数量 2
+goto @转移洗练页面
+
+
+;9-10
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> 寂灭
+CheckContainsText <$BOXITEM[2].NAME> 业火
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 寂灭
+CheckContainsText <$BOXITEM[2].NAME> 冥天
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 业火
+CheckContainsText <$BOXITEM[2].NAME> 寂灭
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 业火
+CheckContainsText <$BOXITEM[2].NAME> 冥天
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 冥天
+CheckContainsText <$BOXITEM[2].NAME> 寂灭
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 冥天
+CheckContainsText <$BOXITEM[2].NAME> 业火
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 寂灭
+CheckContainsText <$BOXITEM[2].NAME> 神罚
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 寂灭
+CheckContainsText <$BOXITEM[2].NAME> 圣裁
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 寂灭
+CheckContainsText <$BOXITEM[2].NAME> 仙戮
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> 业火
+CheckContainsText <$BOXITEM[2].NAME> 神罚
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 业火
+CheckContainsText <$BOXITEM[2].NAME> 圣裁
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 业火
+CheckContainsText <$BOXITEM[2].NAME> 仙戮
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+;=============================================
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 冥天
+CheckContainsText <$BOXITEM[2].NAME> 仙戮
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 冥天
+CheckContainsText <$BOXITEM[2].NAME> 圣裁
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 冥天
+CheckContainsText <$BOXITEM[2].NAME> 仙戮
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+
+
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 神罚
+CheckContainsText <$BOXITEM[2].NAME> 圣裁
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 神罚
+CheckContainsText <$BOXITEM[2].NAME> 仙戮
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 圣裁
+CheckContainsText <$BOXITEM[2].NAME> 神罚
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 圣裁
+CheckContainsText <$BOXITEM[2].NAME> 仙戮
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 仙戮
+CheckContainsText <$BOXITEM[2].NAME> 神罚
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 仙戮
+CheckContainsText <$BOXITEM[2].NAME> 圣裁
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+
+
+
+
+[@ItemIntoBox2]
+
+
+;4-5转
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀金
+CheckContainsText <$BOXITEM[2].NAME> 耀光
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀金
+CheckContainsText <$BOXITEM[2].NAME> 耀玉
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀光
+CheckContainsText <$BOXITEM[2].NAME> 耀金
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀光
+CheckContainsText <$BOXITEM[2].NAME> 耀玉
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀玉
+CheckContainsText <$BOXITEM[2].NAME> 耀金
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀玉
+CheckContainsText <$BOXITEM[2].NAME> 耀光
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀金
+CheckContainsText <$BOXITEM[2].NAME> 海妖
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀金
+CheckContainsText <$BOXITEM[2].NAME> 斩龙
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀金
+CheckContainsText <$BOXITEM[2].NAME> 无形
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀光
+CheckContainsText <$BOXITEM[2].NAME> 海妖
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀光
+CheckContainsText <$BOXITEM[2].NAME> 斩龙
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀光
+CheckContainsText <$BOXITEM[2].NAME> 无形
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀玉
+CheckContainsText <$BOXITEM[2].NAME> 海妖
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀玉
+CheckContainsText <$BOXITEM[2].NAME> 斩龙
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀玉
+CheckContainsText <$BOXITEM[2].NAME> 无形
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+;4-6转
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀金
+CheckContainsText <$BOXITEM[2].NAME> の
+#act
+mov S$转移石数量 2
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀光
+CheckContainsText <$BOXITEM[2].NAME> の
+#act
+mov S$转移石数量 2
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀玉
+CheckContainsText <$BOXITEM[2].NAME> の
+#act
+mov S$转移石数量 2
+goto @转移洗练页面
+
+;4-7转
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀金
+CheckContainsText <$BOXITEM[2].NAME> 麒麟
+#act
+mov S$转移石数量 3
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀金
+CheckContainsText <$BOXITEM[2].NAME> 朱雀
+#act
+mov S$转移石数量 3
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀金
+CheckContainsText <$BOXITEM[2].NAME> 玄武
+#act
+mov S$转移石数量 3
+goto @转移洗练页面
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀光
+CheckContainsText <$BOXITEM[2].NAME> 麒麟
+#act
+mov S$转移石数量 3
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀光
+CheckContainsText <$BOXITEM[2].NAME> 朱雀
+#act
+mov S$转移石数量 3
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀光
+CheckContainsText <$BOXITEM[2].NAME> 玄武
+#act
+mov S$转移石数量 3
+goto @转移洗练页面
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀玉
+CheckContainsText <$BOXITEM[2].NAME> 麒麟
+#act
+mov S$转移石数量 3
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀玉
+CheckContainsText <$BOXITEM[2].NAME> 朱雀
+#act
+mov S$转移石数量 3
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀玉
+CheckContainsText <$BOXITEM[2].NAME> 玄武
+#act
+mov S$转移石数量 3
+goto @转移洗练页面
+
+;4-8转
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀金
+CheckContainsText <$BOXITEM[2].NAME> 冰霜
+#act
+mov S$转移石数量 4
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀金
+CheckContainsText <$BOXITEM[2].NAME> 雪寂
+#act
+mov S$转移石数量 4
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀金
+CheckContainsText <$BOXITEM[2].NAME> 凛冬
+#act
+mov S$转移石数量 4
+goto @转移洗练页面
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀光
+CheckContainsText <$BOXITEM[2].NAME> 冰霜
+#act
+mov S$转移石数量 4
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀光
+CheckContainsText <$BOXITEM[2].NAME> 雪寂
+#act
+mov S$转移石数量 4
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀光
+CheckContainsText <$BOXITEM[2].NAME> 凛冬
+#act
+mov S$转移石数量 4
+goto @转移洗练页面
+
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀玉
+CheckContainsText <$BOXITEM[2].NAME> 冰霜
+#act
+mov S$转移石数量 4
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀玉
+CheckContainsText <$BOXITEM[2].NAME> 雪寂
+#act
+mov S$转移石数量 4
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀玉
+CheckContainsText <$BOXITEM[2].NAME> 凛冬
+#act
+mov S$转移石数量 4
+goto @转移洗练页面
+
+;4-9转
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀金
+CheckContainsText <$BOXITEM[2].NAME> 寂灭
+#act
+mov S$转移石数量 5
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀金
+CheckContainsText <$BOXITEM[2].NAME> 业火
+#act
+mov S$转移石数量 5
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀金
+CheckContainsText <$BOXITEM[2].NAME> 冥天
+#act
+mov S$转移石数量 5
+goto @转移洗练页面
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀光
+CheckContainsText <$BOXITEM[2].NAME> 寂灭
+#act
+mov S$转移石数量 5
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀光
+CheckContainsText <$BOXITEM[2].NAME> 业火
+#act
+mov S$转移石数量 5
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀光
+CheckContainsText <$BOXITEM[2].NAME> 冥天
+#act
+mov S$转移石数量 5
+goto @转移洗练页面
+;=============================================
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀玉
+CheckContainsText <$BOXITEM[2].NAME> 冥天
+#act
+mov S$转移石数量 5
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀玉
+CheckContainsText <$BOXITEM[2].NAME> 业火
+#act
+mov S$转移石数量 5
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀玉
+CheckContainsText <$BOXITEM[2].NAME> 冥天
+#act
+mov S$转移石数量 5
+goto @转移洗练页面
+
+;4-10转
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀金
+CheckContainsText <$BOXITEM[2].NAME> 神罚
+#act
+mov S$转移石数量 6
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀金
+CheckContainsText <$BOXITEM[2].NAME> 圣裁
+#act
+mov S$转移石数量 6
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀金
+CheckContainsText <$BOXITEM[2].NAME> 仙戮
+#act
+mov S$转移石数量 6
+goto @转移洗练页面
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀光
+CheckContainsText <$BOXITEM[2].NAME> 神罚
+#act
+mov S$转移石数量 6
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀光
+CheckContainsText <$BOXITEM[2].NAME> 圣裁
+#act
+mov S$转移石数量 6
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀光
+CheckContainsText <$BOXITEM[2].NAME> 仙戮
+#act
+mov S$转移石数量 6
+goto @转移洗练页面
+
+
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀玉
+CheckContainsText <$BOXITEM[2].NAME> 仙戮
+#act
+mov S$转移石数量 6
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀玉
+CheckContainsText <$BOXITEM[2].NAME> 圣裁
+#act
+mov S$转移石数量 6
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀玉
+CheckContainsText <$BOXITEM[2].NAME> 仙戮
+#act
+mov S$转移石数量 6
+goto @转移洗练页面
+
+
+;--------------------------------------------------------------------------------------------------------------------------------------------------
+;5-6转
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> 海妖
+CheckContainsText <$BOXITEM[2].NAME> 斩龙
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 海妖
+CheckContainsText <$BOXITEM[2].NAME> 无形
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 斩龙
+CheckContainsText <$BOXITEM[2].NAME> 斩龙
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 斩龙
+CheckContainsText <$BOXITEM[2].NAME> 无形
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 无形
+CheckContainsText <$BOXITEM[2].NAME> 斩龙
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 无形
+CheckContainsText <$BOXITEM[2].NAME> 海妖
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 海妖
+CheckContainsText <$BOXITEM[2].NAME> の
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 斩龙
+CheckContainsText <$BOXITEM[2].NAME> の
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 无形
+CheckContainsText <$BOXITEM[2].NAME> の
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+;5-7转
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> 海妖
+CheckContainsText <$BOXITEM[2].NAME> 麒麟
+#act
+mov S$转移石数量 2
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 海妖
+CheckContainsText <$BOXITEM[2].NAME> 朱雀
+#act
+mov S$转移石数量 2
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 海妖
+CheckContainsText <$BOXITEM[2].NAME> 玄武
+#act
+mov S$转移石数量 2
+goto @转移洗练页面
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> 斩龙
+CheckContainsText <$BOXITEM[2].NAME> 麒麟
+#act
+mov S$转移石数量 2
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 斩龙
+CheckContainsText <$BOXITEM[2].NAME> 朱雀
+#act
+mov S$转移石数量 2
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 斩龙
+CheckContainsText <$BOXITEM[2].NAME> 玄武
+#act
+mov S$转移石数量 2
+goto @转移洗练页面
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> 无形
+CheckContainsText <$BOXITEM[2].NAME> 麒麟
+#act
+mov S$转移石数量 2
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 无形
+CheckContainsText <$BOXITEM[2].NAME> 朱雀
+#act
+mov S$转移石数量 2
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 无形
+CheckContainsText <$BOXITEM[2].NAME> 玄武
+#act
+mov S$转移石数量 2
+goto @转移洗练页面
+
+;5-8
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> 海妖
+CheckContainsText <$BOXITEM[2].NAME> 冰霜
+#act
+mov S$转移石数量 3
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 海妖
+CheckContainsText <$BOXITEM[2].NAME> 雪寂
+#act
+mov S$转移石数量 3
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 海妖
+CheckContainsText <$BOXITEM[2].NAME> 凛冬
+#act
+mov S$转移石数量 3
+goto @转移洗练页面
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> 斩龙
+CheckContainsText <$BOXITEM[2].NAME> 冰霜
+#act
+mov S$转移石数量 3
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 斩龙
+CheckContainsText <$BOXITEM[2].NAME> 雪寂
+#act
+mov S$转移石数量 3
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 斩龙
+CheckContainsText <$BOXITEM[2].NAME> 凛冬
+#act
+mov S$转移石数量 3
+goto @转移洗练页面
+;=============================================
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 无形
+CheckContainsText <$BOXITEM[2].NAME> 冰霜
+#act
+mov S$转移石数量 4
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 无形
+CheckContainsText <$BOXITEM[2].NAME> 雪寂
+#act
+mov S$转移石数量 4
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 无形
+CheckContainsText <$BOXITEM[2].NAME> 凛冬
+#act
+mov S$转移石数量 4
+goto @转移洗练页面
+
+
+;5-9
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> 海妖
+CheckContainsText <$BOXITEM[2].NAME> 寂灭
+#act
+mov S$转移石数量 4
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 海妖
+CheckContainsText <$BOXITEM[2].NAME> 业火
+#act
+mov S$转移石数量 4
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 海妖
+CheckContainsText <$BOXITEM[2].NAME> 冥天
+#act
+mov S$转移石数量 4
+goto @转移洗练页面
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> 斩龙
+CheckContainsText <$BOXITEM[2].NAME> 寂灭
+#act
+mov S$转移石数量 4
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 斩龙
+CheckContainsText <$BOXITEM[2].NAME> 业火
+#act
+mov S$转移石数量 4
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 斩龙
+CheckContainsText <$BOXITEM[2].NAME> 冥天
+#act
+mov S$转移石数量 4
+goto @转移洗练页面
+;=============================================
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 无形
+CheckContainsText <$BOXITEM[2].NAME> 冥天
+#act
+mov S$转移石数量 4
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 无形
+CheckContainsText <$BOXITEM[2].NAME> 业火
+#act
+mov S$转移石数量 4
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 无形
+CheckContainsText <$BOXITEM[2].NAME> 冥天
+#act
+mov S$转移石数量 4
+goto @转移洗练页面
+
+;5-10
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> 海妖
+CheckContainsText <$BOXITEM[2].NAME> 神罚
+#act
+mov S$转移石数量 5
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 海妖
+CheckContainsText <$BOXITEM[2].NAME> 圣裁
+#act
+mov S$转移石数量 5
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 海妖
+CheckContainsText <$BOXITEM[2].NAME> 仙戮
+#act
+mov S$转移石数量 5
+goto @转移洗练页面
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> 斩龙
+CheckContainsText <$BOXITEM[2].NAME> 神罚
+#act
+mov S$转移石数量 5
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 斩龙
+CheckContainsText <$BOXITEM[2].NAME> 圣裁
+#act
+mov S$转移石数量 5
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 斩龙
+CheckContainsText <$BOXITEM[2].NAME> 仙戮
+#act
+mov S$转移石数量 5
+goto @转移洗练页面
+;=============================================
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 无形
+CheckContainsText <$BOXITEM[2].NAME> 仙戮
+#act
+mov S$转移石数量 5
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 无形
+CheckContainsText <$BOXITEM[2].NAME> 圣裁
+#act
+mov S$转移石数量 5
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 无形
+CheckContainsText <$BOXITEM[2].NAME> 仙戮
+#act
+mov S$转移石数量 5
+goto @转移洗练页面
+
+;6-7
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> の
+CheckContainsText <$BOXITEM[2].NAME> の
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> の
+CheckContainsText <$BOXITEM[2].NAME> 麒麟
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> の
+CheckContainsText <$BOXITEM[2].NAME> 朱雀
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> の
+CheckContainsText <$BOXITEM[2].NAME> 玄武
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+;6-8
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> の
+CheckContainsText <$BOXITEM[2].NAME> 冰霜
+#act
+mov S$转移石数量 2
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> の
+CheckContainsText <$BOXITEM[2].NAME> 雪寂
+#act
+mov S$转移石数量 2
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> の
+CheckContainsText <$BOXITEM[2].NAME> 凛冬
+#act
+mov S$转移石数量 2
+goto @转移洗练页面
+
+;6-9
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> の
+CheckContainsText <$BOXITEM[2].NAME> 寂灭
+#act
+mov S$转移石数量 3
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> の
+CheckContainsText <$BOXITEM[2].NAME> 业火
+#act
+mov S$转移石数量 3
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> の
+CheckContainsText <$BOXITEM[2].NAME> 冥天
+#act
+mov S$转移石数量 3
+goto @转移洗练页面
+
+;6-10
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> の
+CheckContainsText <$BOXITEM[2].NAME> 神罚
+#act
+mov S$转移石数量 4
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> の
+CheckContainsText <$BOXITEM[2].NAME> 圣裁
+#act
+mov S$转移石数量 4
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> の
+CheckContainsText <$BOXITEM[2].NAME> 仙戮
+#act
+mov S$转移石数量 4
+goto @转移洗练页面
+
+;7-8
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> 朱雀
+CheckContainsText <$BOXITEM[2].NAME> 麒麟
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 朱雀
+CheckContainsText <$BOXITEM[2].NAME> 玄武
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 麒麟
+CheckContainsText <$BOXITEM[2].NAME> 朱雀
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 麒麟
+CheckContainsText <$BOXITEM[2].NAME> 玄武
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 玄武
+CheckContainsText <$BOXITEM[2].NAME> 朱雀
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 玄武
+CheckContainsText <$BOXITEM[2].NAME> 麒麟
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 朱雀
+CheckContainsText <$BOXITEM[2].NAME> 冰霜
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 朱雀
+CheckContainsText <$BOXITEM[2].NAME> 雪寂
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 朱雀
+CheckContainsText <$BOXITEM[2].NAME> 凛冬
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> 麒麟
+CheckContainsText <$BOXITEM[2].NAME> 冰霜
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 麒麟
+CheckContainsText <$BOXITEM[2].NAME> 雪寂
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 麒麟
+CheckContainsText <$BOXITEM[2].NAME> 凛冬
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+;=============================================
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 玄武
+CheckContainsText <$BOXITEM[2].NAME> 冰霜
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 玄武
+CheckContainsText <$BOXITEM[2].NAME> 雪寂
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 玄武
+CheckContainsText <$BOXITEM[2].NAME> 凛冬
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+;7-9
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> 麒麟
+CheckContainsText <$BOXITEM[2].NAME> 寂灭
+#act
+mov S$转移石数量 2
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 麒麟
+CheckContainsText <$BOXITEM[2].NAME> 业火
+#act
+mov S$转移石数量 2
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 麒麟
+CheckContainsText <$BOXITEM[2].NAME> 冥天
+#act
+mov S$转移石数量 2
+goto @转移洗练页面
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> 朱雀
+CheckContainsText <$BOXITEM[2].NAME> 寂灭
+#act
+mov S$转移石数量 2
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 朱雀
+CheckContainsText <$BOXITEM[2].NAME> 业火
+#act
+mov S$转移石数量 2
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 朱雀
+CheckContainsText <$BOXITEM[2].NAME> 冥天
+#act
+mov S$转移石数量 2
+goto @转移洗练页面
+;=============================================
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 玄武
+CheckContainsText <$BOXITEM[2].NAME> 冥天
+#act
+mov S$转移石数量 2
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 玄武
+CheckContainsText <$BOXITEM[2].NAME> 业火
+#act
+mov S$转移石数量 2
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 玄武
+CheckContainsText <$BOXITEM[2].NAME> 冥天
+#act
+mov S$转移石数量 2
+goto @转移洗练页面
+
+;7-10
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> 麒麟
+CheckContainsText <$BOXITEM[2].NAME> 神罚
+#act
+mov S$转移石数量 3
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 麒麟
+CheckContainsText <$BOXITEM[2].NAME> 圣裁
+#act
+mov S$转移石数量 3
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 麒麟
+CheckContainsText <$BOXITEM[2].NAME> 仙戮
+#act
+mov S$转移石数量 3
+goto @转移洗练页面
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> 朱雀
+CheckContainsText <$BOXITEM[2].NAME> 神罚
+#act
+mov S$转移石数量 3
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 朱雀
+CheckContainsText <$BOXITEM[2].NAME> 圣裁
+#act
+mov S$转移石数量 3
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 朱雀
+CheckContainsText <$BOXITEM[2].NAME> 仙戮
+#act
+mov S$转移石数量 3
+goto @转移洗练页面
+;=============================================
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 玄武
+CheckContainsText <$BOXITEM[2].NAME> 仙戮
+#act
+mov S$转移石数量 3
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 玄武
+CheckContainsText <$BOXITEM[2].NAME> 圣裁
+#act
+mov S$转移石数量 3
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 玄武
+CheckContainsText <$BOXITEM[2].NAME> 仙戮
+#act
+mov S$转移石数量 3
+goto @转移洗练页面
+
+;8-9
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> 冰霜
+CheckContainsText <$BOXITEM[2].NAME> 雪寂
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 冰霜
+CheckContainsText <$BOXITEM[2].NAME> 凛冬
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 雪寂
+CheckContainsText <$BOXITEM[2].NAME> 凛冬
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 雪寂
+CheckContainsText <$BOXITEM[2].NAME> 冰霜
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 凛冬
+CheckContainsText <$BOXITEM[2].NAME> 雪寂
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 凛冬
+CheckContainsText <$BOXITEM[2].NAME> 冰霜
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 冰霜
+CheckContainsText <$BOXITEM[2].NAME> 寂灭
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 冰霜
+CheckContainsText <$BOXITEM[2].NAME> 业火
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 冰霜
+CheckContainsText <$BOXITEM[2].NAME> 冥天
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> 雪寂
+CheckContainsText <$BOXITEM[2].NAME> 寂灭
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 雪寂
+CheckContainsText <$BOXITEM[2].NAME> 业火
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 雪寂
+CheckContainsText <$BOXITEM[2].NAME> 冥天
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+;=============================================
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 凛冬
+CheckContainsText <$BOXITEM[2].NAME> 冥天
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 凛冬
+CheckContainsText <$BOXITEM[2].NAME> 业火
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 凛冬
+CheckContainsText <$BOXITEM[2].NAME> 冥天
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+;8-10
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> 冰霜
+CheckContainsText <$BOXITEM[2].NAME> 神罚
+#act
+mov S$转移石数量 2
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 冰霜
+CheckContainsText <$BOXITEM[2].NAME> 圣裁
+#act
+mov S$转移石数量 2
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 冰霜
+CheckContainsText <$BOXITEM[2].NAME> 仙戮
+#act
+mov S$转移石数量 2
+goto @转移洗练页面
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> 雪寂
+CheckContainsText <$BOXITEM[2].NAME> 神罚
+#act
+mov S$转移石数量 2
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 雪寂
+CheckContainsText <$BOXITEM[2].NAME> 圣裁
+#act
+mov S$转移石数量 2
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 雪寂
+CheckContainsText <$BOXITEM[2].NAME> 仙戮
+#act
+mov S$转移石数量 2
+goto @转移洗练页面
+;=============================================
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 凛冬
+CheckContainsText <$BOXITEM[2].NAME> 仙戮
+#act
+mov S$转移石数量 2
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 凛冬
+CheckContainsText <$BOXITEM[2].NAME> 圣裁
+#act
+mov S$转移石数量 2
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 凛冬
+CheckContainsText <$BOXITEM[2].NAME> 仙戮
+#act
+mov S$转移石数量 2
+goto @转移洗练页面
+
+
+;9-10
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> 寂灭
+CheckContainsText <$BOXITEM[2].NAME> 业火
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 寂灭
+CheckContainsText <$BOXITEM[2].NAME> 冥天
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 业火
+CheckContainsText <$BOXITEM[2].NAME> 寂灭
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 业火
+CheckContainsText <$BOXITEM[2].NAME> 冥天
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 冥天
+CheckContainsText <$BOXITEM[2].NAME> 寂灭
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 冥天
+CheckContainsText <$BOXITEM[2].NAME> 业火
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 寂灭
+CheckContainsText <$BOXITEM[2].NAME> 神罚
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 寂灭
+CheckContainsText <$BOXITEM[2].NAME> 圣裁
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 寂灭
+CheckContainsText <$BOXITEM[2].NAME> 仙戮
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> 业火
+CheckContainsText <$BOXITEM[2].NAME> 神罚
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 业火
+CheckContainsText <$BOXITEM[2].NAME> 圣裁
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 业火
+CheckContainsText <$BOXITEM[2].NAME> 仙戮
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+;=============================================
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 冥天
+CheckContainsText <$BOXITEM[2].NAME> 仙戮
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 冥天
+CheckContainsText <$BOXITEM[2].NAME> 圣裁
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 冥天
+CheckContainsText <$BOXITEM[2].NAME> 仙戮
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+
+
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 神罚
+CheckContainsText <$BOXITEM[2].NAME> 圣裁
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 神罚
+CheckContainsText <$BOXITEM[2].NAME> 仙戮
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 圣裁
+CheckContainsText <$BOXITEM[2].NAME> 神罚
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 圣裁
+CheckContainsText <$BOXITEM[2].NAME> 仙戮
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 仙戮
+CheckContainsText <$BOXITEM[2].NAME> 神罚
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 仙戮
+CheckContainsText <$BOXITEM[2].NAME> 圣裁
+#act
+mov S$转移石数量 1
+goto @转移洗练页面
+
+
+
+
+[@点击转移]
+#or
+not checkboxitemcount 1 1
+not checkboxitemcount 2 1
+#act
+sendmsg 9 请放入物品再来转移
+break
+
+;四转5战士
+;4-5转
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀金
+CheckContainsText <$BOXITEM[2].NAME> 耀光
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀金
+CheckContainsText <$BOXITEM[2].NAME> 耀玉
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀光
+CheckContainsText <$BOXITEM[2].NAME> 耀金
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀光
+CheckContainsText <$BOXITEM[2].NAME> 耀玉
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀玉
+CheckContainsText <$BOXITEM[2].NAME> 耀金
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀玉
+CheckContainsText <$BOXITEM[2].NAME> 耀光
+#act
+
+goto @转移逻辑
+
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀金
+CheckContainsText <$BOXITEM[2].NAME> 海妖
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀金
+CheckContainsText <$BOXITEM[2].NAME> 斩龙
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀金
+CheckContainsText <$BOXITEM[2].NAME> 无形
+#act
+
+goto @转移逻辑
+
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀光
+CheckContainsText <$BOXITEM[2].NAME> 海妖
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀光
+CheckContainsText <$BOXITEM[2].NAME> 斩龙
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀光
+CheckContainsText <$BOXITEM[2].NAME> 无形
+#act
+
+goto @转移逻辑
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀玉
+CheckContainsText <$BOXITEM[2].NAME> 海妖
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀玉
+CheckContainsText <$BOXITEM[2].NAME> 斩龙
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀玉
+CheckContainsText <$BOXITEM[2].NAME> 无形
+#act
+
+goto @转移逻辑
+
+;4-6转
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀金
+CheckContainsText <$BOXITEM[2].NAME> の
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀光
+CheckContainsText <$BOXITEM[2].NAME> の
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀玉
+CheckContainsText <$BOXITEM[2].NAME> の
+#act
+
+goto @转移逻辑
+
+;4-7转
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀金
+CheckContainsText <$BOXITEM[2].NAME> 麒麟
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀金
+CheckContainsText <$BOXITEM[2].NAME> 朱雀
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀金
+CheckContainsText <$BOXITEM[2].NAME> 玄武
+#act
+
+goto @转移逻辑
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀光
+CheckContainsText <$BOXITEM[2].NAME> 麒麟
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀光
+CheckContainsText <$BOXITEM[2].NAME> 朱雀
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀光
+CheckContainsText <$BOXITEM[2].NAME> 玄武
+#act
+
+goto @转移逻辑
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀玉
+CheckContainsText <$BOXITEM[2].NAME> 麒麟
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀玉
+CheckContainsText <$BOXITEM[2].NAME> 朱雀
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀玉
+CheckContainsText <$BOXITEM[2].NAME> 玄武
+#act
+
+goto @转移逻辑
+
+;4-8转
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀金
+CheckContainsText <$BOXITEM[2].NAME> 冰霜
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀金
+CheckContainsText <$BOXITEM[2].NAME> 雪寂
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀金
+CheckContainsText <$BOXITEM[2].NAME> 凛冬
+#act
+
+goto @转移逻辑
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀光
+CheckContainsText <$BOXITEM[2].NAME> 冰霜
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀光
+CheckContainsText <$BOXITEM[2].NAME> 雪寂
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀光
+CheckContainsText <$BOXITEM[2].NAME> 凛冬
+#act
+
+goto @转移逻辑
+
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀玉
+CheckContainsText <$BOXITEM[2].NAME> 冰霜
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀玉
+CheckContainsText <$BOXITEM[2].NAME> 雪寂
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀玉
+CheckContainsText <$BOXITEM[2].NAME> 凛冬
+#act
+
+goto @转移逻辑
+
+;4-9转
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀金
+CheckContainsText <$BOXITEM[2].NAME> 寂灭
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀金
+CheckContainsText <$BOXITEM[2].NAME> 业火
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀金
+CheckContainsText <$BOXITEM[2].NAME> 冥天
+#act
+
+goto @转移逻辑
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀光
+CheckContainsText <$BOXITEM[2].NAME> 寂灭
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀光
+CheckContainsText <$BOXITEM[2].NAME> 业火
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀光
+CheckContainsText <$BOXITEM[2].NAME> 冥天
+#act
+
+goto @转移逻辑
+;=============================================
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀玉
+CheckContainsText <$BOXITEM[2].NAME> 冥天
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀玉
+CheckContainsText <$BOXITEM[2].NAME> 业火
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀玉
+CheckContainsText <$BOXITEM[2].NAME> 冥天
+#act
+
+goto @转移逻辑
+
+;4-10转
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀金
+CheckContainsText <$BOXITEM[2].NAME> 神罚
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀金
+CheckContainsText <$BOXITEM[2].NAME> 圣裁
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀金
+CheckContainsText <$BOXITEM[2].NAME> 仙戮
+#act
+
+goto @转移逻辑
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀光
+CheckContainsText <$BOXITEM[2].NAME> 神罚
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀光
+CheckContainsText <$BOXITEM[2].NAME> 圣裁
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀光
+CheckContainsText <$BOXITEM[2].NAME> 仙戮
+#act
+
+goto @转移逻辑
+
+
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀玉
+CheckContainsText <$BOXITEM[2].NAME> 仙戮
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀玉
+CheckContainsText <$BOXITEM[2].NAME> 圣裁
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 耀玉
+CheckContainsText <$BOXITEM[2].NAME> 仙戮
+#act
+
+goto @转移逻辑
+
+
+;--------------------------------------------------------------------------------------------------------------------------------------------------
+;5-6转
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> 海妖
+CheckContainsText <$BOXITEM[2].NAME> 斩龙
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 海妖
+CheckContainsText <$BOXITEM[2].NAME> 无形
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 斩龙
+CheckContainsText <$BOXITEM[2].NAME> 斩龙
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 斩龙
+CheckContainsText <$BOXITEM[2].NAME> 无形
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 无形
+CheckContainsText <$BOXITEM[2].NAME> 斩龙
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 无形
+CheckContainsText <$BOXITEM[2].NAME> 海妖
+#act
+
+goto @转移逻辑
+
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 海妖
+CheckContainsText <$BOXITEM[2].NAME> の
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 斩龙
+CheckContainsText <$BOXITEM[2].NAME> の
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 无形
+CheckContainsText <$BOXITEM[2].NAME> の
+#act
+
+goto @转移逻辑
+
+;5-7转
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> 海妖
+CheckContainsText <$BOXITEM[2].NAME> 麒麟
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 海妖
+CheckContainsText <$BOXITEM[2].NAME> 朱雀
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 海妖
+CheckContainsText <$BOXITEM[2].NAME> 玄武
+#act
+
+goto @转移逻辑
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> 斩龙
+CheckContainsText <$BOXITEM[2].NAME> 麒麟
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 斩龙
+CheckContainsText <$BOXITEM[2].NAME> 朱雀
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 斩龙
+CheckContainsText <$BOXITEM[2].NAME> 玄武
+#act
+
+goto @转移逻辑
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> 无形
+CheckContainsText <$BOXITEM[2].NAME> 麒麟
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 无形
+CheckContainsText <$BOXITEM[2].NAME> 朱雀
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 无形
+CheckContainsText <$BOXITEM[2].NAME> 玄武
+#act
+
+goto @转移逻辑
+
+;5-8
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> 海妖
+CheckContainsText <$BOXITEM[2].NAME> 冰霜
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 海妖
+CheckContainsText <$BOXITEM[2].NAME> 雪寂
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 海妖
+CheckContainsText <$BOXITEM[2].NAME> 凛冬
+#act
+
+goto @转移逻辑
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> 斩龙
+CheckContainsText <$BOXITEM[2].NAME> 冰霜
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 斩龙
+CheckContainsText <$BOXITEM[2].NAME> 雪寂
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 斩龙
+CheckContainsText <$BOXITEM[2].NAME> 凛冬
+#act
+
+goto @转移逻辑
+;=============================================
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 无形
+CheckContainsText <$BOXITEM[2].NAME> 冰霜
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 无形
+CheckContainsText <$BOXITEM[2].NAME> 雪寂
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 无形
+CheckContainsText <$BOXITEM[2].NAME> 凛冬
+#act
+
+goto @转移逻辑
+
+
+;5-9
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> 海妖
+CheckContainsText <$BOXITEM[2].NAME> 寂灭
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 海妖
+CheckContainsText <$BOXITEM[2].NAME> 业火
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 海妖
+CheckContainsText <$BOXITEM[2].NAME> 冥天
+#act
+
+goto @转移逻辑
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> 斩龙
+CheckContainsText <$BOXITEM[2].NAME> 寂灭
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 斩龙
+CheckContainsText <$BOXITEM[2].NAME> 业火
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 斩龙
+CheckContainsText <$BOXITEM[2].NAME> 冥天
+#act
+
+goto @转移逻辑
+;=============================================
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 无形
+CheckContainsText <$BOXITEM[2].NAME> 冥天
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 无形
+CheckContainsText <$BOXITEM[2].NAME> 业火
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 无形
+CheckContainsText <$BOXITEM[2].NAME> 冥天
+#act
+
+goto @转移逻辑
+
+;5-10
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> 海妖
+CheckContainsText <$BOXITEM[2].NAME> 神罚
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 海妖
+CheckContainsText <$BOXITEM[2].NAME> 圣裁
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 海妖
+CheckContainsText <$BOXITEM[2].NAME> 仙戮
+#act
+
+goto @转移逻辑
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> 斩龙
+CheckContainsText <$BOXITEM[2].NAME> 神罚
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 斩龙
+CheckContainsText <$BOXITEM[2].NAME> 圣裁
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 斩龙
+CheckContainsText <$BOXITEM[2].NAME> 仙戮
+#act
+
+goto @转移逻辑
+;=============================================
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 无形
+CheckContainsText <$BOXITEM[2].NAME> 仙戮
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 无形
+CheckContainsText <$BOXITEM[2].NAME> 圣裁
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 无形
+CheckContainsText <$BOXITEM[2].NAME> 仙戮
+#act
+
+goto @转移逻辑
+
+;6-7
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> の
+CheckContainsText <$BOXITEM[2].NAME> の
+#act
+
+goto @转移逻辑
+
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> の
+CheckContainsText <$BOXITEM[2].NAME> 麒麟
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> の
+CheckContainsText <$BOXITEM[2].NAME> 朱雀
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> の
+CheckContainsText <$BOXITEM[2].NAME> 玄武
+#act
+
+goto @转移逻辑
+
+;6-8
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> の
+CheckContainsText <$BOXITEM[2].NAME> 冰霜
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> の
+CheckContainsText <$BOXITEM[2].NAME> 雪寂
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> の
+CheckContainsText <$BOXITEM[2].NAME> 凛冬
+#act
+
+goto @转移逻辑
+
+;6-9
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> の
+CheckContainsText <$BOXITEM[2].NAME> 寂灭
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> の
+CheckContainsText <$BOXITEM[2].NAME> 业火
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> の
+CheckContainsText <$BOXITEM[2].NAME> 冥天
+#act
+
+goto @转移逻辑
+
+;6-10
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> の
+CheckContainsText <$BOXITEM[2].NAME> 神罚
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> の
+CheckContainsText <$BOXITEM[2].NAME> 圣裁
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> の
+CheckContainsText <$BOXITEM[2].NAME> 仙戮
+#act
+
+goto @转移逻辑
+
+;7-8
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> 朱雀
+CheckContainsText <$BOXITEM[2].NAME> 麒麟
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 朱雀
+CheckContainsText <$BOXITEM[2].NAME> 玄武
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 麒麟
+CheckContainsText <$BOXITEM[2].NAME> 朱雀
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 麒麟
+CheckContainsText <$BOXITEM[2].NAME> 玄武
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 玄武
+CheckContainsText <$BOXITEM[2].NAME> 朱雀
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 玄武
+CheckContainsText <$BOXITEM[2].NAME> 麒麟
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 朱雀
+CheckContainsText <$BOXITEM[2].NAME> 冰霜
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 朱雀
+CheckContainsText <$BOXITEM[2].NAME> 雪寂
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 朱雀
+CheckContainsText <$BOXITEM[2].NAME> 凛冬
+#act
+
+goto @转移逻辑
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> 麒麟
+CheckContainsText <$BOXITEM[2].NAME> 冰霜
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 麒麟
+CheckContainsText <$BOXITEM[2].NAME> 雪寂
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 麒麟
+CheckContainsText <$BOXITEM[2].NAME> 凛冬
+#act
+
+goto @转移逻辑
+;=============================================
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 玄武
+CheckContainsText <$BOXITEM[2].NAME> 冰霜
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 玄武
+CheckContainsText <$BOXITEM[2].NAME> 雪寂
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 玄武
+CheckContainsText <$BOXITEM[2].NAME> 凛冬
+#act
+
+goto @转移逻辑
+
+;7-9
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> 麒麟
+CheckContainsText <$BOXITEM[2].NAME> 寂灭
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 麒麟
+CheckContainsText <$BOXITEM[2].NAME> 业火
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 麒麟
+CheckContainsText <$BOXITEM[2].NAME> 冥天
+#act
+
+goto @转移逻辑
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> 朱雀
+CheckContainsText <$BOXITEM[2].NAME> 寂灭
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 朱雀
+CheckContainsText <$BOXITEM[2].NAME> 业火
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 朱雀
+CheckContainsText <$BOXITEM[2].NAME> 冥天
+#act
+
+goto @转移逻辑
+;=============================================
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 玄武
+CheckContainsText <$BOXITEM[2].NAME> 冥天
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 玄武
+CheckContainsText <$BOXITEM[2].NAME> 业火
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 玄武
+CheckContainsText <$BOXITEM[2].NAME> 冥天
+#act
+
+goto @转移逻辑
+
+;7-10
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> 麒麟
+CheckContainsText <$BOXITEM[2].NAME> 神罚
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 麒麟
+CheckContainsText <$BOXITEM[2].NAME> 圣裁
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 麒麟
+CheckContainsText <$BOXITEM[2].NAME> 仙戮
+#act
+
+goto @转移逻辑
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> 朱雀
+CheckContainsText <$BOXITEM[2].NAME> 神罚
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 朱雀
+CheckContainsText <$BOXITEM[2].NAME> 圣裁
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 朱雀
+CheckContainsText <$BOXITEM[2].NAME> 仙戮
+#act
+
+goto @转移逻辑
+;=============================================
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 玄武
+CheckContainsText <$BOXITEM[2].NAME> 仙戮
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 玄武
+CheckContainsText <$BOXITEM[2].NAME> 圣裁
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 玄武
+CheckContainsText <$BOXITEM[2].NAME> 仙戮
+#act
+
+goto @转移逻辑
+
+;8-9
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> 冰霜
+CheckContainsText <$BOXITEM[2].NAME> 雪寂
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 冰霜
+CheckContainsText <$BOXITEM[2].NAME> 凛冬
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 雪寂
+CheckContainsText <$BOXITEM[2].NAME> 凛冬
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 雪寂
+CheckContainsText <$BOXITEM[2].NAME> 冰霜
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 凛冬
+CheckContainsText <$BOXITEM[2].NAME> 雪寂
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 凛冬
+CheckContainsText <$BOXITEM[2].NAME> 冰霜
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 冰霜
+CheckContainsText <$BOXITEM[2].NAME> 寂灭
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 冰霜
+CheckContainsText <$BOXITEM[2].NAME> 业火
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 冰霜
+CheckContainsText <$BOXITEM[2].NAME> 冥天
+#act
+
+goto @转移逻辑
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> 雪寂
+CheckContainsText <$BOXITEM[2].NAME> 寂灭
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 雪寂
+CheckContainsText <$BOXITEM[2].NAME> 业火
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 雪寂
+CheckContainsText <$BOXITEM[2].NAME> 冥天
+#act
+
+goto @转移逻辑
+;=============================================
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 凛冬
+CheckContainsText <$BOXITEM[2].NAME> 冥天
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 凛冬
+CheckContainsText <$BOXITEM[2].NAME> 业火
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 凛冬
+CheckContainsText <$BOXITEM[2].NAME> 冥天
+#act
+
+goto @转移逻辑
+
+;8-10
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> 冰霜
+CheckContainsText <$BOXITEM[2].NAME> 神罚
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 冰霜
+CheckContainsText <$BOXITEM[2].NAME> 圣裁
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 冰霜
+CheckContainsText <$BOXITEM[2].NAME> 仙戮
+#act
+
+goto @转移逻辑
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> 雪寂
+CheckContainsText <$BOXITEM[2].NAME> 神罚
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 雪寂
+CheckContainsText <$BOXITEM[2].NAME> 圣裁
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 雪寂
+CheckContainsText <$BOXITEM[2].NAME> 仙戮
+#act
+
+goto @转移逻辑
+;=============================================
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 凛冬
+CheckContainsText <$BOXITEM[2].NAME> 仙戮
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 凛冬
+CheckContainsText <$BOXITEM[2].NAME> 圣裁
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 凛冬
+CheckContainsText <$BOXITEM[2].NAME> 仙戮
+#act
+
+goto @转移逻辑
+
+
+;9-10
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> 寂灭
+CheckContainsText <$BOXITEM[2].NAME> 业火
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 寂灭
+CheckContainsText <$BOXITEM[2].NAME> 冥天
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 业火
+CheckContainsText <$BOXITEM[2].NAME> 寂灭
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 业火
+CheckContainsText <$BOXITEM[2].NAME> 冥天
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 冥天
+CheckContainsText <$BOXITEM[2].NAME> 寂灭
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 冥天
+CheckContainsText <$BOXITEM[2].NAME> 业火
+#act
+
+goto @转移逻辑
+
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 寂灭
+CheckContainsText <$BOXITEM[2].NAME> 神罚
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 寂灭
+CheckContainsText <$BOXITEM[2].NAME> 圣裁
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 寂灭
+CheckContainsText <$BOXITEM[2].NAME> 仙戮
+#act
+
+goto @转移逻辑
+;=============================================
+#if
+CheckContainsText <$BOXITEM[1].NAME> 业火
+CheckContainsText <$BOXITEM[2].NAME> 神罚
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 业火
+CheckContainsText <$BOXITEM[2].NAME> 圣裁
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 业火
+CheckContainsText <$BOXITEM[2].NAME> 仙戮
+#act
+
+goto @转移逻辑
+;=============================================
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 冥天
+CheckContainsText <$BOXITEM[2].NAME> 仙戮
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 冥天
+CheckContainsText <$BOXITEM[2].NAME> 圣裁
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 冥天
+CheckContainsText <$BOXITEM[2].NAME> 仙戮
+#act
+
+goto @转移逻辑
+
+
+
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 神罚
+CheckContainsText <$BOXITEM[2].NAME> 圣裁
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 神罚
+CheckContainsText <$BOXITEM[2].NAME> 仙戮
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 圣裁
+CheckContainsText <$BOXITEM[2].NAME> 神罚
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 圣裁
+CheckContainsText <$BOXITEM[2].NAME> 仙戮
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 仙戮
+CheckContainsText <$BOXITEM[2].NAME> 神罚
+#act
+
+goto @转移逻辑
+
+#if
+CheckContainsText <$BOXITEM[1].NAME> 仙戮
+CheckContainsText <$BOXITEM[2].NAME> 圣裁
+#act
+
+goto @转移逻辑
+
+[@转移逻辑]
+
+
+#if
+not checkitem 转移石 <$STR(S$转移石数量)>
+#act
+sendmsg 9 背包材料不足
+break
+
+
+#if
+checkboxitemcount 1 1
+checkboxitemcount 2 1
+#ACT
+goto @物品转移逻辑
+
+
+
+
+[@物品转移逻辑]
+
+
+#if
+#act
+MESSAGEBOX 您所需要转移的装备若已有洗练属性，是否覆盖原有属性进行转移，转移后原装备属性清空  @是否转移 @取消
+
+
+[@是否转移]
+#if
+#act
+mov S$特效启动 开
+TAKE 转移石 <$STR(S$转移石数量)>
+SetOnTimer 11 1
+goto @转移洗练页面
+
+
+[@确定转移1]
+#if
+#act
+setUpgradeItem 1
+GetNewItemAddValue -1 0 N$获取到的暴击几率
+GetNewItemAddValue -1 1 N$获取到的攻击伤害
+GetNewItemAddValue -1 2 N$获取到的物理伤害减少
+GetNewItemAddValue -1 3 N$获取到的魔法伤害减少
+GetNewItemAddValue -1 4 N$获取到的忽视目标防御
+GetNewItemAddValue -1 5 N$获取到的所有伤害反弹
+GetNewItemAddValue -1 6 N$获取到的增加目标暴率
+GetNewItemAddValue -1 7 N$获取到的人物体力增加
+GetNewItemAddValue -1 8 N$获取到的人物魔力增加
+GetNewItemAddValue -1 11 N$获取到的暴击伤害增加
+
+SetNewItemValue -1 0 = 0
+SetNewItemValue -1 1 = 0
+SetNewItemValue -1 2 = 0
+SetNewItemValue -1 3 = 0
+SetNewItemValue -1 4 = 0
+SetNewItemValue -1 5 = 0
+SetNewItemValue -1 6 = 0
+SetNewItemValue -1 7 = 0
+SetNewItemValue -1 8 = 0
+SetNewItemValue -1 11 = 0
+UpDateBoxItem 1
+
+
+SetUpgradeItem 2
+SetNewItemValue -1 0 = <$STR(N$获取到的暴击几率)>
+SetNewItemValue -1 1 = <$STR(N$获取到的攻击伤害)>
+SetNewItemValue -1 2 = <$STR(N$获取到的物理伤害减少)>
+SetNewItemValue -1 3 = <$STR(N$获取到的魔法伤害减少)>
+SetNewItemValue -1 4 = <$STR(N$获取到的忽视目标防御)>
+SetNewItemValue -1 5 = <$STR(N$获取到的所有伤害反弹)>
+SetNewItemValue -1 6 = <$STR(N$获取到的增加目标暴率)>
+SetNewItemValue -1 7 = <$STR(N$获取到的人物体力增加)>
+SetNewItemValue -1 8 = <$STR(N$获取到的人物魔力增加)>
+SetNewItemValue -1 11 = <$STR(N$获取到的暴击伤害增加)>
+UpDateBoxItem 2
+
+
+
+
+}

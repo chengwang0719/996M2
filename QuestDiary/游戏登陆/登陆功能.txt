@@ -1,0 +1,157 @@
+[@登陆功能]   
+{
+#if
+#act
+
+
+MOV N$捡取触发最终切割属性
+MOV N$捡取触发最终经验属性
+GETHUMCUSTOMITEMVALUE 79 93 N$捡取触发切割变量1 N$百分比变量 0
+GETHUMCUSTOMITEMVALUE 80 93 N$捡取触发切割变量2 N$百分比变量 0
+GETHUMCUSTOMITEMVALUE 81 93 N$捡取触发切割变量3 N$百分比变量 0
+GETHUMCUSTOMITEMVALUE 82 93 N$捡取触发切割变量4 N$百分比变量 0
+GETHUMCUSTOMITEMVALUE 83 93 N$捡取触发切割变量5 N$百分比变量 0
+GETHUMCUSTOMITEMVALUE 84 93 N$捡取触发切割变量6 N$百分比变量 0
+GETHUMCUSTOMITEMVALUE 85 93 N$捡取触发切割变量7 N$百分比变量 0
+GETHUMCUSTOMITEMVALUE 86 93 N$捡取触发切割变量8 N$百分比变量 0
+INC N$捡取触发最终切割属性 <$STR(N$捡取触发切割变量1)>
+INC N$捡取触发最终切割属性 <$STR(N$捡取触发切割变量2)>
+INC N$捡取触发最终切割属性 <$STR(N$捡取触发切割变量3)>
+INC N$捡取触发最终切割属性 <$STR(N$捡取触发切割变量4)>
+INC N$捡取触发最终切割属性 <$STR(N$捡取触发切割变量5)>
+INC N$捡取触发最终切割属性 <$STR(N$捡取触发切割变量6)>
+INC N$捡取触发最终切割属性 <$STR(N$捡取触发切割变量7)>
+INC N$捡取触发最终切割属性 <$STR(N$捡取触发切割变量8)>
+
+GETHUMCUSTOMITEMVALUE 79 92 N$捡取触发经验变量1 N$百分比变量 0
+GETHUMCUSTOMITEMVALUE 80 92 N$捡取触发经验变量2 N$百分比变量 0
+GETHUMCUSTOMITEMVALUE 81 92 N$捡取触发经验变量3 N$百分比变量 0
+GETHUMCUSTOMITEMVALUE 82 92 N$捡取触发经验变量4 N$百分比变量 0
+GETHUMCUSTOMITEMVALUE 83 92 N$捡取触发经验变量5 N$百分比变量 0
+GETHUMCUSTOMITEMVALUE 84 92 N$捡取触发经验变量6 N$百分比变量 0
+GETHUMCUSTOMITEMVALUE 85 92 N$捡取触发经验变量7 N$百分比变量 0
+GETHUMCUSTOMITEMVALUE 86 92 N$捡取触发经验变量8 N$百分比变量 0
+INC N$捡取触发最终经验属性 <$STR(N$捡取触发经验变量1)>
+INC N$捡取触发最终经验属性 <$STR(N$捡取触发经验变量2)>
+INC N$捡取触发最终经验属性 <$STR(N$捡取触发经验变量3)>
+INC N$捡取触发最终经验属性 <$STR(N$捡取触发经验变量4)>
+INC N$捡取触发最终经验属性 <$STR(N$捡取触发经验变量5)>
+INC N$捡取触发最终经验属性 <$STR(N$捡取触发经验变量6)>
+INC N$捡取触发最终经验属性 <$STR(N$捡取触发经验变量7)>
+INC N$捡取触发最终经验属性 <$STR(N$捡取触发经验变量8)>
+
+;======================================
+#if
+not equal <$USEITEMNAME[14]> 附加属性红
+#act
+give 附加属性红
+TakeOnItem 附加属性红 14
+
+#if
+not equal <$USEITEMNAME[15]> 附加属性蓝
+#act
+give 附加属性蓝
+TakeOnItem 附加属性蓝 15
+;=======================================
+
+#IF
+CHECKTITLE 狂暴之力
+#ACT
+SetIcon 2 1 20320 -40 25 0 0
+
+
+
+
+;删除宝箱标识
+#if
+checkitem 宝箱 1
+#act
+SetIcon 5 -1
+take 宝箱 1
+
+
+
+;新手刚进游戏===================================
+
+#IF   
+ISNEWHUMAN
+checkjob warrior   
+CHECK [1] 0  
+#ACT
+SET [1] 1
+#CALL [\限时奖励\个人首爆初始化.txt] @个人首爆初始
+EXTBAGOPENITEMCOUNT 126
+GiveOnItem 1 乌木剑 1   
+GiveOnItem 0 轻型盔甲(男) 1   
+GiveOnItem 0 轻型盔甲(女) 1   
+take 轻型盔甲(男) 1   
+take 轻型盔甲(女) 1   
+Give 幻魔石 1 
+TakeOnItem 幻魔石 25
+
+GuildNoticeMsg 252 255 [系统]》热烈欢迎亲爱的玩家【<$USERNAME>】进入了【<$SERVERNAME>】！   
+GuildNoticeMsg 252 255 [系统]》热烈欢迎亲爱的玩家【<$USERNAME>】进入了【<$SERVERNAME>】！   
+GuildNoticeMsg 252 255 [系统]》热烈欢迎亲爱的玩家【<$USERNAME>】进入了【<$SERVERNAME>】！   
+ChangeAttatckMode 4 
+MAPMOVE 3 333 333 2 
+ 
+#IF   
+ISNEWHUMAN   
+checkjob wizard   
+CHECK [1] 0  
+#ACT
+SET [1] 1 
+#CALL [\限时奖励\个人首爆初始化.txt] @个人首爆初始
+EXTBAGOPENITEMCOUNT 126
+GiveOnItem 1 乌木剑 1   
+GiveOnItem 0 轻型盔甲(男) 1   
+GiveOnItem 0 轻型盔甲(女) 1   
+take 轻型盔甲(男) 1   
+take 轻型盔甲(女) 1   
+GiveOnItem 1 幻魔石 1 
+TakeOnItem 幻魔石 25
+GuildNoticeMsg 252 255 [系统]》热烈欢迎亲爱的玩家【<$USERNAME>】进入了【<$SERVERNAME>】！   
+GuildNoticeMsg 252 255 [系统]》热烈欢迎亲爱的玩家【<$USERNAME>】进入了【<$SERVERNAME>】！   
+GuildNoticeMsg 252 255 [系统]》热烈欢迎亲爱的玩家【<$USERNAME>】进入了【<$SERVERNAME>】！   
+ChangeAttatckMode 4
+MAPMOVE 3 333 333 2 
+   
+#IF   
+ISNEWHUMAN   
+checkjob taoist   
+CHECK [1] 0  
+#ACT
+SET [1] 1
+#CALL [\限时奖励\个人首爆初始化.txt] @个人首爆初始   
+EXTBAGOPENITEMCOUNT 126
+GiveOnItem 1 乌木剑 1   
+GiveOnItem 0 轻型盔甲(男) 1   
+GiveOnItem 0 轻型盔甲(女) 1   
+take 轻型盔甲(男) 1   
+take 轻型盔甲(女) 1   
+GiveOnItem 1 幻魔石 1 
+TakeOnItem 幻魔石 25
+GuildNoticeMsg 252 255 [系统]》热烈欢迎亲爱的玩家【<$USERNAME>】进入了【<$SERVERNAME>】！   
+GuildNoticeMsg 252 255 [系统]》热烈欢迎亲爱的玩家【<$USERNAME>】进入了【<$SERVERNAME>】！   
+GuildNoticeMsg 252 255 [系统]》热烈欢迎亲爱的玩家【<$USERNAME>】进入了【<$SERVERNAME>】！   
+ChangeAttatckMode 4
+MAPMOVE 3 333 333 2 
+
+
+
+#if
+check [88] 0
+#act
+PICKUPITEMS 0 8 1800
+#elseact
+SETSPRITEMODE 2
+
+
+
+}   
+   
+  
+  
+ 
+ 
+

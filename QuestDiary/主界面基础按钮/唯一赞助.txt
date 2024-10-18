@@ -1,0 +1,147 @@
+[@唯一赞助页面]
+{
+
+
+
+#if
+check [12] 0 
+#act
+mov s$激活按钮1 <Button|id=5|x=157.0|y=401.0|nimg=topbtn/wyzz/btn.png|mimg=topbtn/wyzz/btn.png|link=@激活1>
+goto @页面
+#elseact
+mov s$激活按钮1 <Img|width=76|height=38|x=176|y=401|rotate=0|show=4|reset=1|img=topbtn/wyzz/ylq.png|move=0|loadDelay=0>
+goto @页面
+
+#if
+check [13] 0 
+#act
+mov s$激活按钮2 <Button|x=343.0|y=401.0|nimg=topbtn/wyzz/btn.png|mimg=topbtn/wyzz/btn.png|link=@激活2>
+goto @页面
+#elseact
+mov s$激活按钮2 <Img|width=76|height=38|x=362|y=401|rotate=0|show=4|reset=1|img=topbtn/wyzz/ylq.png|move=0|loadDelay=0>
+goto @页面
+
+#if
+check [14] 0 
+#act
+mov s$激活按钮3 <Button|x=521.0|y=401.0|nimg=topbtn/wyzz/btn.png|mimg=topbtn/wyzz/btn.png|link=@激活3>
+goto @页面
+#elseact
+mov s$激活按钮3 <Img|width=76|height=38|x=540|y=401|rotate=0|show=4|reset=1|img=topbtn/wyzz/ylq.png|move=0|loadDelay=0>
+goto @页面
+
+#if
+check [15] 0 
+#act
+mov s$激活按钮4 <Button|x=702.0|y=401.0|nimg=topbtn/wyzz/btn.png|mimg=topbtn/wyzz/btn.png|link=@激活4>
+goto @页面
+#elseact
+mov s$激活按钮4 <Img|width=76|height=38|x=721|y=401|rotate=0|show=4|reset=1|img=topbtn/wyzz/ylq.png|move=0|loadDelay=0>
+goto @页面
+
+[@页面]
+#if
+#say
+<Button|x=-2526.0|y=-1172.0|width=115120|height=112880|size=18|nimg=npc/zd.png|color=224|mimg=npc/zd.png|pimg=npc/zd.png|link=@exit>
+<Img|x=41.0|y=-21.0|width=890|height=556|rotate=0|show=4|reset=1|img=topbtn/wyzz/bj.png|move=0|loadDelay=0|esc=1|bg=1>
+<Button|x=857.0|y=11.0|nimg=public/close-2.png|mimg=public/close-2.png|link=@exit>
+<Text|x=198.0|y=315.0|outline=1|color=251|size=14|text=免费>
+<Text|x=356.0|y=315.0|outline=1|color=251|size=14|text=元宝50000>
+<Text|x=537.0|y=315.0|outline=1|color=251|size=14|text=元宝100000>
+<Text|x=716.0|y=315.0|outline=1|color=251|size=14|text=元宝200000>
+
+<$str(S$激活按钮1)>
+<$str(S$激活按钮2)>
+<$str(S$激活按钮3)>
+<$str(S$激活按钮4)>
+
+
+
+
+
+[@激活1]
+
+#if
+NOT CHECKTITLE 英勇黄金
+#act
+set [12] 1
+set [17] 1
+CONFERTITLE 英勇黄金
+goto @唯一赞助页面
+#CALL [\功能脚本\切割管理.txt] @称号切割伤害
+#CALL [\任务系统\任务系统QF.txt] @任务系统QF
+;close
+#elseact
+sendmsg 9 你已经激活过了
+
+
+
+[@激活2]
+#if
+NOT CHECKTITLE 英勇黄金
+#act
+sendmsg 9 请先激活【英勇黄金】
+break
+
+#if
+NOT CHECKTITLE 耀光铂金
+CHECKBINDMONEY 绑定元宝 ? 50000
+#act
+set [13] 1
+DEPRIVETITLE 英勇黄金
+CONFERTITLE 耀光铂金
+CHANGEBINDMONEY 绑定元宝 50000
+goto @唯一赞助页面
+#CALL [\功能脚本\切割管理.txt] @称号切割伤害
+#elseact
+sendmsg 9 你的绑定元宝不足
+
+[@激活3]
+#if
+NOT CHECKTITLE 耀光铂金
+#act
+sendmsg 9 请先激活【耀光铂金】
+break
+
+
+#if
+NOT CHECKTITLE 闪耀钻石
+CHECKBINDMONEY 绑定元宝 ? 100000
+#act
+set [14] 1
+DEPRIVETITLE 耀光铂金
+CHANGEBINDMONEY 绑定元宝 100000
+CONFERTITLE 闪耀钻石
+goto @唯一赞助页面
+#CALL [\功能脚本\切割管理.txt] @称号切割伤害
+#elseact
+sendmsg 9 你的绑定元宝不足
+
+[@激活4]
+
+
+#if
+NOT CHECKTITLE 闪耀钻石
+#act
+sendmsg 9 请先激活【闪耀钻石】
+break
+
+#if
+NOT CHECKTITLE 最强王者
+CHECKBINDMONEY 绑定元宝 ? 200000
+
+#act
+set [15] 1
+DEPRIVETITLE 闪耀钻石
+CHANGEBINDMONEY 绑定元宝 200000
+CONFERTITLE 最强王者
+goto @唯一赞助页面
+set [28] 1
+set [199] 1
+#CALL [\任务系统\任务系统QF.txt] @任务系统QF
+#CALL [\功能脚本\切割管理.txt] @称号切割伤害
+#CALL [\主界面基础按钮\主界面基础按钮QM.txt] @基础按钮QM
+#CALL [\主界面基础按钮\主界面游戏按钮.txt] @界面游戏按钮
+#elseact
+sendmsg 9 你的绑定元宝不足
+}

@@ -1,0 +1,22 @@
+[@main]
+
+
+
+#IF
+EQUAL N$满血回城 0
+INSAFEZONE
+#ACT
+AddhpPer = 100
+AddMpPer = 100
+sendmsg 9 【%s】在盟重城`一键满血NPC处`已瞬间满血，继续战斗吧骚年!
+
+break
+#IF
+EQUAL N$满血回城 1
+#ACT
+AddhpPer = 100
+AddMpPer = 100
+mov N$满血回城 0
+sendmsg 9 【%s】在盟重城`一键满血NPC处`已瞬间满血，继续战斗吧骚年!
+gohome
+close

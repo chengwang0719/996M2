@@ -1,0 +1,317 @@
+[@特惠界面]
+{
+
+#if
+check [312] 0
+EQUAL J68 0
+#act
+goto @特惠2天
+break
+
+#if
+check [313] 0
+EQUAL J68 0
+#act
+goto @特惠3天
+break
+
+#if
+check [314] 0
+EQUAL J68 0
+#act
+goto @特惠4天
+break
+
+#if
+check [315] 0
+EQUAL J68 0
+#act
+goto @特惠5天
+break
+
+#if
+check [316] 0
+EQUAL J68 0
+#act
+goto @特惠6天
+break
+
+#if
+check [317] 0
+EQUAL J68 0
+#act
+goto @特惠7天
+break
+
+#if
+check [318] 0
+EQUAL J68 0
+#act
+goto @特惠8天
+break
+
+#if
+check [319] 0
+EQUAL J68 0
+#act
+goto @特惠9天
+break
+
+#if
+check [320] 0
+EQUAL J68 0
+#act
+goto @特惠10天
+break
+
+
+
+[@特惠2天]
+#if
+#act
+#say
+<Img|x=280.0|y=204.0|img=public/bg_npc_01.png|loadDelay=1|move=0|bg=1|show=0|reset=1>
+<Layout|x=217.0|y=-125.0|width=80|height=80|link=@exit>
+<Button|x=792.0|y=207.0|pimg=public/1900000511.png|nimg=public/1900000510.png|link=@exit>
+<Text|x=498.0|y=217.0|size=25|color=253|text=特惠福利>
+<Text|x=305.0|y=304.0|size=20|color=250|text=特惠福利:总价值113元。综合折扣5.5折>
+<Text|x=305.0|y=244.0|size=20|color=250|text=特惠福利:额外赠送5000000金币+超级祝福油*2:(绑定)>
+<Text|x=305.0|y=273.0|size=20|color=250|text=特惠福利:额外赠送湘宝碎片*10+逢宝碎片*10:[绑定]>
+<Text|x=311.0|y=334.0|color=249|size=23|text=充值63元=63元货币+以上特惠赠送>
+<Button|x=676.0|y=315.0|mimg=public/00000363.png|pimg=public/00000362.png|color=255|size=18|nimg=public/00000361.png|link=@特惠63礼包>
+<Text|x=294.0|y=386.0|color=253|size=26|text=重磅特惠福利:本界面点击确定按钮充值有效>
+
+
+
+
+
+[@特惠63礼包]
+#IF
+check [312] 0
+EQUAL J68 0
+#ACT
+Pullpay 63 3 2
+#ELSEACT
+SENDMSG 9 您已经购买过了,
+
+
+
+[@特惠3天]
+#if
+#act
+#say
+<Img|x=280.0|y=204.0|img=public/bg_npc_01.png|bg=1|move=0|reset=1|loadDelay=1|show=0>
+<Layout|x=217.0|y=-125.0|width=80|height=80|link=@exit>
+<Button|x=792.0|y=207.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|x=498.0|y=217.0|size=25|color=253|text=特惠福利>
+<Text|x=305.0|y=304.0|size=20|color=250|text=特惠福利:总价值153元。综合折扣5.4折>
+<Text|x=305.0|y=244.0|size=20|color=250|text=特惠福利:额外赠送7000000金币+超级祝福油*3:(绑定)>
+<Text|x=305.0|y=273.0|size=20|color=250|text=特惠福利:额外赠送湘宝碎片*20+逢宝碎片*20:[绑定]>
+<Text|x=311.0|y=334.0|color=249|size=23|text=充值83元=83元货币+以上特惠赠送>
+<Button|x=676.0|y=315.0|color=255|pimg=public/00000362.png|size=18|nimg=public/00000361.png|mimg=public/00000363.png|link=@特惠83礼包>
+<Text|x=294.0|y=386.0|color=253|size=26|text=重磅特惠福利:本界面点击确定按钮充值有效>
+
+[@特惠83礼包]
+#IF
+check [313] 0
+EQUAL J68 0
+#ACT
+Pullpay 83 3 2
+#ELSEACT
+SENDMSG 9 您已经购买过了,
+
+
+
+[@特惠4天]
+#if
+#act
+#say
+<Img|x=280.0|y=204.0|img=public/bg_npc_01.png|loadDelay=1|move=0|bg=1|show=0|reset=1>
+<Layout|x=217.0|y=-125.0|width=80|height=80|link=@exit>
+<Button|x=792.0|y=207.0|pimg=public/1900000511.png|nimg=public/1900000510.png|link=@exit>
+<Text|x=498.0|y=217.0|size=25|color=253|text=特惠福利>
+<Text|x=305.0|y=304.0|size=20|color=250|text=特惠福利:总价值228元。综合折扣5.3折>
+<Text|x=305.0|y=244.0|size=20|color=250|text=特惠福利:额外赠送1050W金币+超级祝福油*4:(绑定)>
+<Text|x=305.0|y=273.0|size=20|color=250|text=特惠福利:额外赠送湘宝碎片*30+逢宝碎片*30:[绑定]>
+<Text|x=295.0|y=335.0|size=23|color=249|text=充值123元=123元货币+以上特惠赠送>
+<Button|x=676.0|y=315.0|mimg=public/00000363.png|pimg=public/00000362.png|color=255|size=18|nimg=public/00000361.png|link=@特惠123礼包>
+<Text|x=294.0|y=386.0|color=253|size=26|text=重磅特惠福利:本界面点击确定按钮充值有效>
+
+
+[@特惠123礼包]
+#IF
+check [314] 0
+EQUAL J68 0
+#ACT
+Pullpay 123 3 2
+#ELSEACT
+SENDMSG 9 您已经购买过了,
+
+
+
+[@特惠5天]
+#if
+#act
+#say
+<Img|x=280.0|y=204.0|img=public/bg_npc_01.png|bg=1|move=0|reset=1|loadDelay=1|show=0>
+<Layout|x=217.0|y=-125.0|width=80|height=80|link=@exit>
+<Button|x=792.0|y=207.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|x=498.0|y=217.0|size=25|color=253|text=特惠福利>
+<Text|x=305.0|y=304.0|size=20|color=250|text=特惠福利:总价值293元。综合折扣5.2折>
+<Text|x=305.0|y=244.0|size=20|color=250|text=特惠福利:额外赠送1400W金币+超级祝福油*5:(绑定)>
+<Text|x=305.0|y=273.0|size=20|color=250|text=特惠福利:额外赠送湘宝碎片*40+逢宝碎片*40:[绑定]>
+<Text|x=295.0|y=335.0|size=23|color=249|text=充值153元=153元货币+以上特惠赠送>
+<Button|x=676.0|y=315.0|color=255|pimg=public/00000362.png|size=18|nimg=public/00000361.png|mimg=public/00000363.png|link=@特惠153礼包>
+<Text|x=294.0|y=386.0|color=253|size=26|text=重磅特惠福利:本界面点击确定按钮充值有效>
+
+
+[@特惠153礼包]
+#IF
+check [315] 0
+EQUAL J68 0
+#ACT
+Pullpay 153 3 2
+#ELSEACT
+SENDMSG 9 您已经购买过了,
+
+[@特惠6天]
+#if
+#act
+#say
+<Img|x=280.0|y=204.0|img=public/bg_npc_01.png|bg=1|move=0|reset=1|loadDelay=1|show=0>
+<Layout|x=217.0|y=-125.0|width=80|height=80|link=@exit>
+<Button|x=792.0|y=207.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|x=498.0|y=217.0|size=25|color=253|text=特惠福利>
+<Text|x=305.0|y=304.0|size=20|color=250|text=特惠福利:总价值363元。综合折扣5.0折>
+<Text|x=305.0|y=244.0|size=20|color=250|text=特惠福利:额外赠送1800W金币+超级祝福油*6:(绑定)>
+<Text|x=305.0|y=273.0|size=20|color=250|text=特惠福利:额外赠送湘宝碎片*50+逢宝碎片*50:[绑定]>
+<Text|x=295.0|y=335.0|size=23|color=249|text=充值183元=183元货币+以上特惠赠送>
+<Button|x=676.0|y=315.0|color=255|pimg=public/00000362.png|size=18|nimg=public/00000361.png|mimg=public/00000363.png|link=@特惠183礼包>
+<Text|x=294.0|y=386.0|color=253|size=26|text=重磅特惠福利:本界面点击确定按钮充值有效>
+
+
+[@特惠183礼包]
+#IF
+check [316] 0
+EQUAL J68 0
+#ACT
+Pullpay 183 3 2
+#ELSEACT
+SENDMSG 9 您已经购买过了,
+
+[@特惠7天]
+#if
+#act
+#say
+<Img|x=280.0|y=204.0|img=public/bg_npc_01.png|bg=1|move=0|reset=1|loadDelay=1|show=0>
+<Layout|x=217.0|y=-125.0|width=80|height=80|link=@exit>
+<Button|x=792.0|y=207.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|x=498.0|y=217.0|size=25|color=253|text=特惠福利>
+<Text|x=305.0|y=304.0|size=20|color=250|text=特惠福利:总价值443元。综合折扣4.8折>
+<Text|x=305.0|y=244.0|size=20|color=250|text=特惠福利:额外赠送2300W金币+超级祝福油*7:(绑定)>
+<Text|x=305.0|y=273.0|size=20|color=250|text=特惠福利:额外赠送湘宝碎片*60+逢宝碎片*60:[绑定]>
+<Text|x=295.0|y=335.0|size=23|color=249|text=充值213元=213元货币+以上特惠赠送>
+<Button|x=676.0|y=315.0|color=255|pimg=public/00000362.png|size=18|nimg=public/00000361.png|mimg=public/00000363.png|link=@特惠213礼包>
+<Text|x=294.0|y=386.0|color=253|size=26|text=重磅特惠福利:本界面点击确定按钮充值有效>
+
+[@特惠213礼包]
+#IF
+check [317] 0
+EQUAL J68 0
+#ACT
+Pullpay 213 3 1
+#ELSEACT
+SENDMSG 9 您已经购买过了,
+
+
+
+[@特惠8天]
+#if
+#act
+#say
+<Img|x=280.0|y=204.0|img=public/bg_npc_01.png|bg=1|move=0|reset=1|loadDelay=1|show=0>
+<Layout|x=217.0|y=-125.0|width=80|height=80|link=@exit>
+<Button|x=792.0|y=207.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|x=498.0|y=217.0|size=25|color=253|text=特惠福利>
+<Text|x=305.0|y=304.0|size=20|color=250|text=特惠福利:总价值513元。综合折扣4.7折>
+<Text|x=305.0|y=244.0|size=20|color=250|text=特惠福利:额外赠送2700W金币+超级祝福油*8:(绑定)>
+<Text|x=305.0|y=273.0|size=20|color=250|text=特惠福利:额外赠送湘宝碎片*70+逢宝碎片*70:[绑定]>
+<Text|x=295.0|y=335.0|size=23|color=249|text=充值243元=243元货币+以上特惠赠送>
+<Button|x=676.0|y=315.0|color=255|pimg=public/00000362.png|size=18|nimg=public/00000361.png|mimg=public/00000363.png|link=@特惠243礼包>
+<Text|x=294.0|y=386.0|color=253|size=26|text=重磅特惠福利:本界面点击确定按钮充值有效>
+
+
+[@特惠243礼包]
+#IF
+check [318] 0
+EQUAL J68 0
+#ACT
+Pullpay 243 3 1
+#ELSEACT
+SENDMSG 9 您已经购买过了,
+
+[@特惠9天]
+#if
+#act
+#say
+<Img|x=280.0|y=204.0|img=public/bg_npc_01.png|bg=1|move=0|reset=1|loadDelay=1|show=0>
+<Layout|x=217.0|y=-125.0|width=80|height=80|link=@exit>
+<Button|x=792.0|y=207.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|x=498.0|y=217.0|size=25|color=253|text=特惠福利>
+<Text|x=305.0|y=304.0|size=20|color=250|text=特惠福利:总价值593元。综合折扣4.6折>
+<Text|x=305.0|y=244.0|size=20|color=250|text=特惠福利:额外赠送3200W金币+超级祝福油*9:(绑定)>
+<Text|x=305.0|y=273.0|size=20|color=250|text=特惠福利:额外赠送湘宝碎片*80+逢宝碎片*80:[绑定]>
+<Text|x=295.0|y=335.0|size=23|color=249|text=充值273元=273元货币+以上特惠赠送>
+<Button|x=676.0|y=315.0|color=255|pimg=public/00000362.png|size=18|nimg=public/00000361.png|mimg=public/00000363.png|link=@特惠273礼包>
+<Text|x=294.0|y=386.0|color=253|size=26|text=重磅特惠福利:本界面点击确定按钮充值有效>
+
+
+[@特惠273礼包]
+#IF
+check [319] 0
+EQUAL J68 0
+#ACT
+Pullpay 273 3 1
+#ELSEACT
+SENDMSG 9 您已经购买过了,
+
+
+
+[@特惠10天]
+#if
+#act
+#say
+<Img|x=280.0|y=204.0|img=public/bg_npc_01.png|bg=1|move=0|reset=1|loadDelay=1|show=0>
+<Layout|x=217.0|y=-125.0|width=80|height=80|link=@exit>
+<Button|x=792.0|y=207.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|x=498.0|y=217.0|size=25|color=253|text=特惠福利>
+<Text|x=305.0|y=304.0|size=20|color=250|text=特惠福利:总价值683元。综合折扣4.4折>
+<Text|x=305.0|y=244.0|size=20|color=250|text=特惠福利:额外赠送3800W金币+超级祝福油*10:(绑定)>
+<Text|x=305.0|y=273.0|size=20|color=250|text=特惠福利:额外赠送湘宝碎片*90+逢宝碎片*90:[绑定]>
+<Text|x=295.0|y=335.0|size=23|color=249|text=充值303元=303元货币+以上特惠赠送>
+<Button|x=676.0|y=315.0|color=255|pimg=public/00000362.png|size=18|nimg=public/00000361.png|mimg=public/00000363.png|link=@特惠303礼包>
+<Text|x=294.0|y=386.0|color=253|size=26|text=重磅特惠福利:本界面点击确定按钮充值有效>
+
+
+[@特惠303礼包]
+#IF
+check [320] 0
+EQUAL J68 0
+#ACT
+Pullpay 303 3 1
+#ELSEACT
+SENDMSG 9 您已经购买过了,
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

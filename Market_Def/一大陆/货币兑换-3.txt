@@ -1,0 +1,68 @@
+[@main]
+#IF
+#say
+<Img|a=4|x=178.0|y=116.0|width=500|height=250|loadDelay=0|bg=1|show=4|move=1|esc=1|img=npc/hbdh/bj.png|reset=1>
+<Button|x=389.0|y=2.0|nimg=public/close-2.png|mimg=public/close-2.png|link=@exit>
+<Button|x=279.0|y=52.0|nimg=npc/hbdh/btn.png|mimg=npc/hbdh/bt.png|link=@兑换1>
+<Button|x=279.0|y=97.0|nimg=npc/hbdh/btn.png|mimg=npc/hbdh/bt.png|link=@兑换2>
+<Button|x=279.0|y=141.0|nimg=npc/hbdh/btn.png|mimg=npc/hbdh/bt.png|link=@兑换3>
+<Button|x=279.0|y=185.0|nimg=npc/hbdh/btn.png|mimg=npc/hbdh/bt.png|link=@兑换4>
+<Text|x=-5.0|y=58.0|color=116|outline=2|size=16|text=点卷：1000>
+<Text|x=175.0|y=58.0|color=223|outline=2|size=16|text=100万元宝>
+<Text|x=-5.0|y=103.0|color=116|outline=2|size=16|text=点卷：5000>
+<Text|x=175.0|y=103.0|color=223|outline=2|size=16|text=500万元宝>
+<Text|x=-5.0|y=148.0|color=116|outline=2|size=16|text=点卷：1000>
+<Text|x=182.0|y=148.0|color=223|outline=2|size=16|text=5万点卡>
+<Text|x=-5.0|y=189.0|color=116|outline=2|size=16|text=点卷：5000>
+<Text|x=183.0|y=189.0|color=223|outline=2|size=16|text=25万点卡>
+
+<Img|a=4|x=128.0|y=68.0|show=4|esc=1|loadDelay=0|img=npc/hbdh/1.png|move=1|reset=1>
+<Img|a=4|x=128.0|y=113.0|show=4|esc=1|loadDelay=0|img=npc/hbdh/1.png|move=1|reset=1>
+<Img|a=4|x=128.0|y=159.0|show=4|esc=1|loadDelay=0|img=npc/hbdh/1.png|move=1|reset=1>
+<Img|a=4|x=128.0|y=200.0|show=4|esc=1|loadDelay=0|img=npc/hbdh/1.png|move=1|reset=1>
+
+
+
+
+[@兑换1]
+#IF
+CHECKBINDMONEY 绑定点卷 ? 1000
+#ACT
+CHANGEBINDMONEY 绑定点卷 1000
+MONEY 元宝 + 1000000
+SENDMSG 9 购买100万元宝成功
+#ELSEACT
+SENDMSG 9 点卷数量不足
+
+
+
+[@兑换2]
+#IF
+CHECKBINDMONEY 绑定点卷 ? 5000
+#ACT
+CHANGEBINDMONEY 绑定点卷 5000
+MONEY 元宝 + 5000000
+SENDMSG 9 购买500万元宝成功
+#ELSEACT
+SENDMSG 9 点卷数量不足
+
+[@兑换3]
+#IF
+CHECKBINDMONEY 绑定点卷 ? 1000
+#ACT
+CHANGEBINDMONEY 绑定点卷 1000
+MONEY 点卡 + 50000
+SENDMSG 9 购买5万点卡成功
+#ELSEACT
+SENDMSG 9 点卷数量不足
+
+
+[@兑换4]
+#IF
+CHECKBINDMONEY 绑定点卷 ? 5000
+#ACT
+CHANGEBINDMONEY 绑定点卷 5000
+MONEY 点卡 + 250000
+SENDMSG 9 购买25万点卡成功
+#ELSEACT
+SENDMSG 9 点卷数量不足

@@ -1,0 +1,4 @@
+[Ïæ·ê¶·óÒ(µÖ¿¹)]
+Defense26=20
+Defense56=20
+Defense66=20

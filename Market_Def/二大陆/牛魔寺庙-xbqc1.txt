@@ -1,0 +1,55 @@
+[@main]
+#if
+#act
+NEWREADCSV ..\QuestDiary\功能表格\cfg_yidaluditu.csv
+goto @地图装备展示2
+goto @地图页面展示
+
+
+[@地图页面展示]
+#IF
+#say
+<Button|x=-2526.0|y=-1172.0|width=115120|height=112880|nimg=npc/zd.png|size=18|mimg=npc/zd.png|pimg=npc/zd.png|color=224|link=@exit>
+<Img|children={0,1,2,3,4}|a=4|x=437.5|y=256.0|width=879|height=550|esc=1|show=4|reset=1|img=npc/dt1/bg.png|move=0|loadDelay=0|bg=1>
+<Img|id=1|x=491.0|y=2.0|width=228|height=84|rotate=0|esc=1|show=4|move=0|img=npc/dt1/nmsm.png|loadDelay=0|reset=1>
+<Button|id=2|x=554.0|y=421.0|mimg=npc/dt1/qwtx.png|nimg=npc/dt1/qwtx.png|link=@确定前往地图>
+<ListView|id=3|children={a,b}|x=485.0|y=333.0|width=150|height=70|rotate=0|direction=2|margin=20|bounce=0|reload=0>
+<ItemShow|id=a|x=0|y=0|width=70|height=70|itemid=<$STR(S$地图物品名称1一)>|itemcount=1|showtips=1|bgtype=0>
+<ItemShow|id=b|x=0|y=0|width=70|height=70|itemid=<$STR(S$地图物品名称1二)>|itemcount=1|showtips=1|bgtype=0>
+<ListView|id=4|children={c,d}|x=652.0|y=335.0|width=150|height=70|rotate=0|direction=2|margin=20|bounce=0|reload=0>
+<ItemShow|id=c|x=0|y=0|width=70|height=70|itemid=<$STR(S$地图物品名称1三)>|itemcount=1|showtips=1|bgtype=0>
+<ItemShow|id=d|x=0|y=0|width=70|height=70|itemid=<$STR(S$地图物品名称1四)>|itemcount=1|showtips=1|bgtype=0>
+<Effect|x=515.0|y=372.0|scale=1|speed=0.9|dir=5|effecttype=0|effectid=5111|act=0>
+<Effect|x=599.0|y=372.0|scale=1|speed=0.9|dir=5|effecttype=0|effectid=5111|act=0>
+<Effect|x=683.0|y=372.0|scale=1|speed=0.9|dir=5|effecttype=0|effectid=5111|act=0>
+<Effect|x=767.0|y=372.0|scale=1|speed=0.9|dir=5|effecttype=0|effectid=5111|act=0>
+<Button|x=802.0|y=12.0|mimg=public/close-t.png|nimg=public/close-t.png|link=@exit>
+<Text|x=469.0|y=115.0|color=250|outline=2|size=18|text=本区所有累计击杀怪物总数达到9000只>
+<Text|x=471.0|y=150.0|color=251|outline=2|size=18|text=(当前击杀怪物<$STR(G19)>/9000)>
+<Img|x=468.0|y=255.0|width=153|height=40|rotate=0|reset=1|move=0|show=4|img=npc/dt1/1.png|esc=1|loadDelay=0>
+<Img|x=453.0|y=62.0|width=153|height=40|rotate=0|reset=1|move=0|show=4|img=npc/dt1/2.png|esc=1|loadDelay=0>
+
+[@地图装备展示2]
+
+#if
+#act
+movr n$随机地图物品名称一 1 3
+movr n$随机地图物品名称二 3 5
+movr n$随机地图物品名称三 5 7
+movr n$随机地图物品名称四 7 9
+
+
+
+GetDBItemFieldValue <$cfg_yidaluditu(<$STR(n$随机地图物品名称一)>_8)> idx S$地图物品名称1一
+GetDBItemFieldValue <$cfg_yidaluditu(<$STR(n$随机地图物品名称二)>_8)> idx S$地图物品名称1二
+GetDBItemFieldValue <$cfg_yidaluditu(<$STR(n$随机地图物品名称三)>_8)> idx S$地图物品名称1三
+GetDBItemFieldValue <$cfg_yidaluditu(<$STR(n$随机地图物品名称四)>_8)> idx S$地图物品名称1四
+
+
+[@确定前往地图]
+#if
+LARGE G19 8999
+#act
+MAPMOVE nmsmrk  44 49 
+#ELSEACT
+sendmsg 9 未达到进入地图条件

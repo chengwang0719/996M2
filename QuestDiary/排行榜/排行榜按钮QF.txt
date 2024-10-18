@@ -1,0 +1,39 @@
+[@排行榜按钮QF]
+{
+[@排行榜_全部等级]
+#act
+OPENHYPERLINK 32 2
+OPENHYPERLINK 32 1 1
+
+
+[@排行榜_战士等级]
+#act
+OPENHYPERLINK 32 2
+OPENHYPERLINK 32 1 2
+
+
+
+[@排行榜_法师等级]
+#act
+OPENHYPERLINK 32 2
+OPENHYPERLINK 32 1 3
+
+
+[@排行榜_道士等级]
+#act
+OPENHYPERLINK 32 2
+OPENHYPERLINK 32 1 4
+
+
+[@排行榜_全部转生]
+#act
+OPENHYPERLINK 32 2
+OPENHYPERLINK 32 1 5
+
+
+[@排行榜_全部变量]
+#act
+OPENHYPERLINK 32 2
+OPENHYPERLINK 32 1 11
+
+}

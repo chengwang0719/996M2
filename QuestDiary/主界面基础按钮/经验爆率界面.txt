@@ -1,0 +1,301 @@
+[@经验爆率页面]
+{
+#IF
+CHECK [206] 0
+#ACT
+SET [206] 1
+
+#IF
+#ACT
+#CALL [\主界面基础按钮\主界面游戏按钮.txt] @界面游戏按钮
+#CALL [\主界面基础按钮\福利大厅红点检测.txt] @福利大厅按钮
+
+#IF
+#ACT
+GetDBItemFieldValue 昔缘 idx N$展示IDX1
+GOTO @经验加成检测
+GOTO @爆率加成检测
+GOTO @锻造材料检测
+#SAY
+;<Button|x=-2526.0|y=-1172.0|width=115120|height=112880|nimg=npc/zd.png|mimg=npc/zd.png|color=224|size=18|pimg=npc/zd.png|link=@exit>
+<Img|show=0|bg=1|loadDelay=0|move=0|esc=1|img=npc/flzx/6/bj.png|reset=1>
+<Layout|x=724.0|y=0.0|width=80|height=80|link=@exit>
+<Button|x=751.0|y=14.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+
+
+<ListView|children={1,2,3,4,5,6}|x=37.0|y=169.0|width=205|height=362|direction=1|bounce=0|margin=1|default=8|reload=1>
+
+<Button|id=1|children={1a}|x=485.0|y=366.0|pimg=npc/flzx/1-2.png|color=255|size=18|mimg=npc/flzx/1-3.png|nimg=npc/flzx/1-1.png|link=@七日签到>
+
+<Button|id=2|children={2a}|x=485.0|y=366.0|pimg=npc/flzx/2-2.png|color=255|size=18|mimg=npc/flzx/2-3.png|nimg=npc/flzx/2-1.png|link=@在线奖励>
+
+<Button|id=3|children={3a}|x=485.0|y=366.0|pimg=npc/flzx/3-2.png|color=255|size=18|mimg=npc/flzx/3-3.png|nimg=npc/flzx/3-1.png|link=@首爆奖励>
+
+<Button|id=4|children={4a}|x=485.0|y=366.0|pimg=npc/flzx/4-2.png|color=255|size=18|mimg=npc/flzx/4-3.png|nimg=npc/flzx/4-1.png|link=@微信礼包>
+
+<Button|id=5|children={5a}|x=485.0|y=366.0|pimg=npc/flzx/5-2.png|color=255|size=18|mimg=npc/flzx/5-3.png|nimg=npc/flzx/5-1.png|link=@至尊年卡>
+
+<Button|id=6|children={6a}|x=485.0|y=366.0|pimg=npc/flzx/6-2.png|color=255|size=18|mimg=npc/flzx/6-3.png|nimg=npc/flzx/6-3.png|link=@经验爆率>
+
+<$STR(S$七日签到)>
+<$STR(S$在线奖励)>
+<$STR(S$首爆奖励)>
+<$STR(S$微信礼包)>
+<$STR(S$至尊年卡)>
+<$STR(S$经验爆率)>
+
+
+
+<Text|a=4|x=398.0|y=162.0|size=18|color=254|outlinecolor=0|outline=1|text=<$STR(N$会员经验加成)>>
+<Text|a=4|x=496.0|y=162.0|size=18|color=254|outlinecolor=0|outline=1|text=<$STR(N$龍魂经验加成)>>
+<Text|a=4|x=594.0|y=162.0|size=18|color=254|outlinecolor=0|outline=1|text=<$STR(N$材料经验加成)>>
+<Text|a=4|x=692.0|y=162.0|size=18|color=251|outlinecolor=0|outline=1|text=<$STR(N$综合经验加成)>>
+
+<Text|a=4|x=655.0|y=258.0|size=16|color=251|outlinecolor=0|outline=1|text=经验材料 X <$STR(N$所需经验数量)>>
+
+
+<Text|a=4|x=398.0|y=401.0|size=18|color=254|outlinecolor=0|outline=1|text=<$STR(N$年卡爆率加成)>>
+<Text|a=4|x=496.0|y=401.0|size=18|color=254|outlinecolor=0|outline=1|text=<$STR(N$装备爆率加成)>>
+<Text|a=4|x=594.0|y=401.0|size=18|color=254|outlinecolor=0|outline=1|text=<$STR(N$材料爆率加成)>>
+<Text|a=4|x=692.0|y=401.0|size=18|color=251|outlinecolor=0|outline=1|text=<$STR(N$综合爆率加成)>>
+
+<Text|a=4|x=655.0|y=498.0|size=16|color=251|outlinecolor=0|outline=1|text=爆率材料 X <$STR(N$所需爆率数量)>>
+
+<Button|x=270.0|y=225.0|color=255|size=18|pimg=npc/flzx/6/jy-2.png|nimg=npc/flzx/6/jy-1.png|mimg=npc/flzx/6/jy-3.png|link=@锻造经验加成>
+<Button|x=270.0|y=455.0|color=255|size=18|pimg=npc/flzx/6/bl-2.png|nimg=npc/flzx/6/bl-1.png|mimg=npc/flzx/6/bl-3.png|link=@锻造爆率加成>
+
+
+;=============================================================================================================================
+[@锻造经验加成]
+#IF
+EQUAL U2 50
+#ACT
+SENDMSG 9 锻造经验加成已为上限
+BREAK
+
+#IF
+CHECKITEM 经验材料 <$STR(N$所需经验数量)>
+#ACT
+TAKE 经验材料 <$STR(N$所需经验数量)>
+INC U2 1
+MOV N$打怪经验 100
+INC N$打怪经验 <$STR(U2)>
+KILLMONEXPRATE <$STR(N$打怪经验)> 99999999
+GOTO @经验爆率页面
+SENDMSG 9 锻造经验加成成功
+#ELSEACT
+SENDMSG 9 锻造失败，材料数量不足
+
+[@锻造爆率加成]
+#IF
+EQUAL U3 50
+#ACT
+SENDMSG 9 锻造爆率加成已为上限
+BREAK
+
+#IF
+CHECKITEM 爆率材料 <$STR(N$所需爆率数量)>
+#ACT
+TAKE 爆率材料 <$STR(N$所需爆率数量)>
+INC U3 1
+#CALL [\游戏登陆\经验爆率.txt] @登陆经验爆率
+GOTO @经验爆率页面
+SENDMSG 9 锻造爆率加成成功
+#ELSEACT
+SENDMSG 9 锻造失败，材料数量不足
+
+
+
+
+;=============================================================================================================================
+
+[@锻造材料检测]
+#IF
+SMALL U2 10
+#ACT
+MOV N$所需经验数量 10
+
+#IF
+LARGE U2 9
+SMALL U2 20
+#ACT
+MOV N$所需经验数量 20
+
+#IF
+LARGE U2 19
+SMALL U2 30
+#ACT
+MOV N$所需经验数量 40
+
+#IF
+LARGE U2 29
+SMALL U2 40
+#ACT
+MOV N$所需经验数量 80
+
+#IF
+LARGE U2 39
+#ACT
+MOV N$所需经验数量 160
+
+
+#IF
+SMALL U3 10
+#ACT
+MOV N$所需爆率数量 10
+
+#IF
+LARGE U3 9
+SMALL U3 20
+#ACT
+MOV N$所需爆率数量 20
+
+#IF
+LARGE U3 19
+SMALL U3 30
+#ACT
+MOV N$所需爆率数量 40
+
+#IF
+LARGE U3 29
+SMALL U3 40
+#ACT
+MOV N$所需爆率数量 80
+
+#IF
+LARGE U3 39
+#ACT
+MOV N$所需爆率数量 160
+
+
+
+[@经验加成检测]
+#IF
+#ACT
+MOV N$会员经验加成 0
+MOV N$龍魂经验加成 0
+MOV N$材料经验加成 0
+MOV N$综合经验加成 0
+
+#IF
+CHECKTITLE 湘逢会员
+#ACT
+INC N$会员经验加成 50
+
+
+#IF
+CHECKUSEITEM 9
+#ACT
+GETHUMCUSTOMITEMVALUE 9 66 N$龍魂经验倍率2 N$龍魂经验倍率1
+MOV N$龍魂经验加成 <$STR(N$龍魂经验倍率1)>
+DIV N$龍魂经验加成 100
+
+#IF
+LARGE U2 0
+#ACT
+INC N$材料经验加成 <$STR(U2)>
+
+#IF
+#ACT
+INC N$综合经验加成 <$STR(N$会员经验加成)>
+INC N$综合经验加成 <$STR(N$龍魂经验加成)>
+INC N$综合经验加成 <$STR(N$材料经验加成)>
+
+
+
+[@爆率加成检测]
+#IF
+#ACT
+MOV N$年卡爆率加成 0
+MOV N$装备爆率加成 0
+MOV N$材料爆率加成 0
+MOV N$综合爆率加成 0
+
+#IF
+CHECKTITLE 至尊年卡
+#ACT
+MOV N$年卡爆率加成 50
+
+#IF
+CHECKTITLE 湘逢王者
+#ACT
+INC N$装备爆率加成 30
+
+#IF
+CHECKITEMW 铂金龍魂
+#ACT
+INC N$装备爆率加成 20
+
+#IF
+CHECKITEMW 钻石龍魂
+#ACT
+INC N$装备爆率加成 40
+
+#IF
+CHECKITEMW 王者龍魂
+#ACT
+INC N$装备爆率加成 60
+
+#IF
+CHECKITEMW 至尊龍魂
+#ACT
+INC N$装备爆率加成 85
+
+#IF
+CHECKITEMW 绿玉屠龙[武魂]
+#ACT
+INC N$装备爆率加成 10
+
+#IF
+CHECKITEMW 生★肖[狗]
+#ACT
+INC N$装备爆率加成 6
+
+#IF
+CHECKITEMW 生★肖[猪]
+#ACT
+INC N$装备爆率加成 6
+
+#IF
+CHECKITEMW 生☆肖[狗]
+#ACT
+INC N$装备爆率加成 4
+
+#IF
+CHECKITEMW 生☆肖[猪]
+#ACT
+INC N$装备爆率加成 4
+
+#IF
+CHECKITEMW 生肖[狗]
+#ACT
+INC N$装备爆率加成 2
+
+#IF
+CHECKITEMW 生肖[猪]
+#ACT
+INC N$装备爆率加成 2
+
+#IF
+CheckContainsText <$ARMRING_R> 残暴之力
+#ACT
+INC N$装备爆率加成 3
+
+#IF
+CheckContainsText <$ARMRING_L> 残暴之力
+#ACT
+INC N$装备爆率加成 3
+
+#IF
+LARGE U3 0
+#ACT
+INC N$材料爆率加成 <$STR(U3)>
+
+#IF
+#ACT
+INC N$综合爆率加成 <$STR(N$年卡爆率加成)>
+INC N$综合爆率加成 <$STR(N$装备爆率加成)>
+INC N$综合爆率加成 <$STR(N$材料爆率加成)>
+
+
+}

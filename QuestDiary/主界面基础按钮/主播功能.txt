@@ -1,0 +1,124 @@
+[@主播top]
+{
+#IF
+small u108 2
+#ACT
+mov u108 20
+
+#if
+#act
+goto @主播专属界面
+
+
+[@主播专属界面]
+#IF
+#ACT
+#SAY
+<Img|x=-10.0|y=33.0|width=386|height=280|rotate=0|scale9t=10|scale9r=10|scale9l=10|bg=1|scale9b=10|loadDelay=1|show=0|reset=1|img=npc/xy/zhul.png|esc=1|move=0>
+<Layout|x=727.0|y=169.0|width=80|height=80|link=@exit>
+<Button|x=332.0|y=36.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|a=0|x=90.0|y=130.0|tipsx=10|tipsy=80|color=251|size=17|outline=2|text=热血点将：<$STR(A99)>|link=@@InPutString20>
+<Button|x=122.0|y=171.0|pimg=npc/xy/zhu3.png|size=18|color=255|mimg=npc/xy/zhu2.png|nimg=npc/xy/zhu1.png|link=@主播补发充值卡>
+<Text|x=232.0|y=181.0|color=250|size=18|text=名额:<$STR(U108)>/20>
+<ItemShow|x=14.0|y=217.0|width=70|height=70|itemid=10443|itemcount=1|showtips=1|bgtype=1>
+<ItemShow|x=81.0|y=217.0|width=70|height=70|itemid=20109|itemcount=1|showtips=1|bgtype=1>
+<ItemShow|x=149.0|y=217.0|width=70|height=70|itemid=20015|itemcount=1|showtips=1|bgtype=1>
+<ItemShow|x=218.0|y=217.0|width=70|height=70|itemid=3|itemcount=500000|showtips=1|bgtype=1>
+<ItemShow|x=287.0|y=217.0|width=70|height=70|itemid=10483|itemcount=1|showtips=1|bgtype=1>
+
+
+
+
+
+
+
+
+
+
+
+
+[@InPutString20]
+
+#IF
+EQUAL S20
+#ACT
+messagebox 请输入名字!!
+break
+
+#IF
+NOT EQUAL S20
+#ACT
+MOV A99 <$STR(S20)>
+GOTO @主播top
+Sendmsg 9 <font color='#FFFF00'>当前名字是:<$STR(A99)></font>
+break
+
+[@主播补发充值卡]
+#IF
+small u108 1
+#ACT
+messagebox 已经没有助力名额了.
+break
+
+
+#IF
+EQUAL A99
+#ACT
+MESSAGEBOX 请先输入正确的玩家名字
+BREAK
+
+#IF
+A99.check [8] 1
+#ACT
+MESSAGEBOX 失败，【<$STR(A99)>】已经领过一次福利了。
+BREAK
+
+#IF
+A99.checkonline
+#ACT
+MESSAGEBOX 确定给【<$STR(A99)>】邮寄补发1个福利吗？\\取消是不操作（请慎重操作）  @XX主播补发充值卡 @取消
+#ELSEACT
+MESSAGEBOX 当前人物【<$STR(A99)>】不在线，无法发送！
+BREAK
+
+
+
+[@XX主播补发充值卡]
+#IF
+A99.check [8] 1
+#ACT
+MESSAGEBOX 失败，【<$STR(A99)>】已经领过一次福利了。
+BREAK
+
+#or
+A99.CHECKTITLE 切割BUFF(1小时)
+A99.CHECKTITLE 切割BUFF(12小时)
+#ACT
+DEC U108 1
+A99.MailGIVE 昔缘 1 0#1#2#4#5#6#7#8
+A99.MailGIVE 聚灵珠(大) 1 0#1#2#3#4#5#6#7#8
+A99.MailGIVE 高级召唤术 1 0#1#2#3#4#5#6#7#8
+A99.MailGIVE 绑定金币 500000 0#1#2#3#4#5#6#7#8
+A99.SendMail 1 主播奖励 你好<$USERNAME>奖励你的主播福利请提取！
+A99.set [8] 1
+MESSAGEBOX 成功给【<$STR(A99)>】邮寄补发1个主播福利！
+GOTO @主播专属界面
+#elseact
+DEC U108 1
+A99.MailGIVE 昔缘 1 0#1#2#4#5#6#7#8
+A99.MailGIVE 聚灵珠(大) 1 0#1#2#3#4#5#6#7#8
+A99.MailGIVE 高级召唤术 1 0#1#2#3#4#5#6#7#8
+A99.MailGIVE 绑定金币 500000 0#1#2#3#4#5#6#7#8
+A99.CONFERTITLE 切割BUFF(1小时) 
+A99.SendMail 1 主播奖励 你好<$USERNAME>奖励你的主播福利请提取！
+A99.set [8] 1
+MESSAGEBOX 成功给【<$STR(A99)>】邮寄补发1个主播福利！
+GOTO @主播专属界面
+
+
+
+
+
+
+
+}

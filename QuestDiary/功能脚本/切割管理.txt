@@ -1,0 +1,446 @@
+[@称号切割伤害]
+{
+#if
+#act
+mov U230 0
+MOV N$称号切割1 0
+MOV N$称号切割2 0
+MOV N$称号切割3 0
+MOV N$称号切割4 0
+MOV N$称号切割5 0
+MOV N$装备切割1 0
+MOV N$装备切割2 0
+MOV N$装备切割3 0
+MOV N$装备切割4 0
+MOV N$装备切割5 0
+MOV N$装备切割6 0
+MOV N$装备切割7 0
+MOV N$装备切割8 0
+MOV N$装备切割9 0
+MOV N$装备切割10 0
+MOV N$装备切割11 0
+MOV N$装备切割12 0
+MOV N$装备切割13 0
+MOV N$装备切割14 0
+MOV N$装备切割15 0
+MOV N$装备切割16 0
+MOV N$装备切割17 0
+MOV N$装备切割18 0
+MOV N$装备切割19 0
+MOV N$七宗罪切割1 0
+MOV N$七宗罪切割2 0
+MOV N$装备切割20 0
+MOV N$装备切割21 0
+MOV N$装备切割22 0
+MOV N$装备切割23 0
+MOV N$装备切割24 0
+MOV N$装备切割25 0
+MOV N$装备切割26 0
+MOV N$装备切割27 0
+MOV N$装备切割28 0
+MOV N$装备切割29 0
+MOV N$装备切割30 0
+MOV N$装备切割31 0
+MOV N$装备切割32 0
+MOV N$装备切割33 0
+MOV N$装备切割34 0
+MOV N$装备切割35 0
+MOV N$装备切割36 0
+MOV N$装备切割37 0
+MOV N$装备切割38 0
+MOV N$装备切割39 0
+MOV N$装备切割40 0
+MOV N$装备切割41 0
+MOV N$装备切割42 0
+MOV N$装备切割43 0
+MOV N$装备切割44 0
+MOV N$装备切割45 0
+MOV N$装备切割46 0
+MOV N$装备切割47 0
+
+#if
+equal N$称号切割1 0
+CHECKTITLE 英勇黄金
+#act
+mov N$称号切割1 1
+inc U230 50
+
+
+#if
+equal N$称号切割2 0
+CHECKTITLE 耀光铂金
+#act
+mov N$称号切割2 1
+inc U230 100
+
+
+#if
+equal N$称号切割3 0
+CHECKTITLE 闪耀钻石
+#act
+mov N$称号切割3 1
+inc U230 200
+
+
+#if
+equal N$称号切割4 0
+CHECKTITLE 最强王者
+#act
+mov N$称号切割4 1
+inc U230 300
+
+
+#if
+equal N$称号切割5 0
+CHECKTITLE 切割500
+#act
+mov N$称号切割5 1
+inc U230 500
+
+#if
+equal N$七宗罪切割1 0
+CHECKTITLE 暴怒
+#act
+mov N$七宗罪切割1 1
+inc U230 100
+
+#if
+equal N$七宗罪切割2 0
+CHECKTITLE 暴·怒
+#act
+mov N$七宗罪切割2 1
+inc U230 100
+
+#if
+equal N$装备切割1 0
+equal <$USEITEMNAME[78]> 黑色切割[一重Lv.1]
+#act
+mov N$装备切割1 1
+inc U230 10
+
+#if
+equal N$装备切割2 0
+equal <$USEITEMNAME[78]> 黑色切割[一重Lv.2]
+#act
+mov N$装备切割2 1
+inc U230 20
+
+#if
+equal N$装备切割3 0
+equal <$USEITEMNAME[78]> 黑色切割[一重Lv.3]
+#act
+mov N$装备切割3 1
+inc U230 30
+
+#if
+equal N$装备切割4 0
+equal <$USEITEMNAME[78]> 黑色切割[一重Lv.4]
+#act
+mov N$装备切割4 1
+inc U230 40
+
+#if
+equal N$装备切割5 0
+equal <$USEITEMNAME[78]> 黑色切割[一重Lv.5]
+#act
+mov N$装备切割5 1
+inc U230 50
+
+#if
+equal N$装备切割6 0
+equal <$USEITEMNAME[78]> 黑色切割[一重Lv.6]
+#act
+mov N$装备切割6 1
+inc U230 60
+
+#if
+equal N$装备切割7 0
+equal <$USEITEMNAME[78]> 黑色切割[一重Lv.7]
+#act
+mov N$装备切割7 1
+inc U230 70
+
+#if
+equal N$装备切割8 0
+equal <$USEITEMNAME[78]> 黑色切割[一重Lv.8]
+#act
+mov N$装备切割8 1
+inc U230 80
+
+#if
+equal N$装备切割9 0
+equal <$USEITEMNAME[78]> 黑色切割[一重Lv.9]
+#act
+mov N$装备切割9 1
+inc U230 90
+
+
+
+#if
+equal N$装备切割11 0
+equal <$USEITEMNAME[78]>  黑色切割[二重Lv.1]
+#act
+mov N$装备切割11 1
+inc U230 150
+
+#if
+equal N$装备切割12 0
+equal <$USEITEMNAME[78]>  黑色切割[二重Lv.2]
+#act
+mov N$装备切割12 1
+inc U230 160
+
+#if
+equal N$装备切割13 0
+equal <$USEITEMNAME[78]>  黑色切割[二重Lv.3]
+#act
+mov N$装备切割13 1
+inc U230 170
+
+#if
+equal N$装备切割14 0
+equal <$USEITEMNAME[78]>  黑色切割[二重Lv.4]
+#act
+mov N$装备切割14 1
+inc U230 180
+
+#if
+equal N$装备切割15 0
+equal <$USEITEMNAME[78]>  黑色切割[二重Lv.5]
+#act
+mov N$装备切割15 1
+inc U230 190
+
+#if
+equal N$装备切割15 0
+equal <$USEITEMNAME[78]>  黑色切割[二重Lv.6]
+#act
+mov N$装备切割15 1
+inc U230 200
+
+#if
+equal N$装备切割16 0
+equal <$USEITEMNAME[78]>  黑色切割[二重Lv.7]
+#act
+mov N$装备切割16 1
+inc U230 210
+
+#if
+equal N$装备切割17 0
+equal <$USEITEMNAME[78]>  黑色切割[二重Lv.8]
+#act
+mov N$装备切割17 1
+inc U230 220
+
+#if
+equal N$装备切割18 0
+equal <$USEITEMNAME[78]>  黑色切割[二重Lv.9]
+#act
+mov N$装备切割18 1
+inc U230 230
+
+#if
+equal N$装备切割19 0
+equal <$USEITEMNAME[78]>  黑色切割[三重Lv.1]
+#act
+mov N$装备切割19 1
+inc U230 290
+
+#if
+equal N$装备切割19 0
+equal <$USEITEMNAME[78]>  黑色切割[三重Lv.2]
+#act
+mov N$装备切割19 1
+inc U230 300
+
+#if
+equal N$装备切割19 0
+equal <$USEITEMNAME[78]>  黑色切割[三重Lv.3]
+#act
+mov N$装备切割19 1
+inc U230 310
+
+#if
+equal N$装备切割19 0
+equal <$USEITEMNAME[78]>  黑色切割[三重Lv.4]
+#act
+mov N$装备切割19 1
+inc U230 320
+
+#if
+equal N$装备切割19 0
+equal <$USEITEMNAME[78]>  黑色切割[三重Lv.5]
+#act
+mov N$装备切割19 1
+inc U230 330
+
+#if
+equal N$装备切割19 0
+equal <$USEITEMNAME[78]>  黑色切割[三重Lv.6]
+#act
+mov N$装备切割19 1
+inc U230 340
+
+#if
+equal N$装备切割19 0
+equal <$USEITEMNAME[78]>  黑色切割[三重Lv.7]
+#act
+mov N$装备切割19 1
+inc U230 350
+
+#if
+equal N$装备切割19 0
+equal <$USEITEMNAME[78]>  黑色切割[三重Lv.8]
+#act
+mov N$装备切割19 1
+inc U230 360
+
+#if
+equal N$装备切割19 0
+equal <$USEITEMNAME[78]>  黑色切割[三重Lv.9]
+#act
+mov N$装备切割19 1
+inc U230 370
+
+
+#if
+equal N$装备切割19 0
+equal <$USEITEMNAME[78]>  黑色切割[四重Lv.1]
+#act
+mov N$装备切割19 1
+inc U230 430
+
+
+#if
+equal N$装备切割29 0
+equal <$USEITEMNAME[78]>  黑色切割[四重Lv.2]
+#act
+mov N$装备切割29 1
+inc U230 440
+
+#if
+equal N$装备切割30 0
+equal <$USEITEMNAME[78]>  黑色切割[四重Lv.3]
+#act
+mov N$装备切割30 1
+inc U230 450
+
+#if
+equal N$装备切割31 0
+equal <$USEITEMNAME[78]>  黑色切割[四重Lv.4]
+#act
+mov N$装备切割31 1
+inc U230 460
+
+#if
+equal N$装备切割32 0
+equal <$USEITEMNAME[78]>  黑色切割[四重Lv.5]
+#act
+mov N$装备切割32 1
+inc U230 470
+
+#if
+equal N$装备切割33 0
+equal <$USEITEMNAME[78]>  黑色切割[四重Lv.6]
+#act
+mov N$装备切割33 1
+inc U230 480
+
+#if
+equal N$装备切割34 0
+equal <$USEITEMNAME[78]>  黑色切割[四重Lv.7]
+#act
+mov N$装备切割34 1
+inc U230 490
+
+#if
+equal N$装备切割35 0
+equal <$USEITEMNAME[78]>  黑色切割[四重Lv.8]
+#act
+mov N$装备切割35 1
+inc U230 500
+
+#if
+equal N$装备切割36 0
+equal <$USEITEMNAME[78]>  黑色切割[四重Lv.9]
+#act
+mov N$装备切割36 1
+inc U230 510
+
+#if
+equal N$装备切割37 0
+equal <$USEITEMNAME[78]>  黑色切割[五重Lv.1]
+#act
+mov N$装备切割37 1
+inc U230 570
+
+#if
+equal N$装备切割38 0
+equal <$USEITEMNAME[78]>  黑色切割[五重Lv.2]
+#act
+mov N$装备切割38 1
+inc U230 580
+
+#if
+equal N$装备切割39 0
+equal <$USEITEMNAME[78]>  黑色切割[五重Lv.3]
+#act
+mov N$装备切割39 1
+inc U230 590
+
+#if
+equal N$装备切割40 0
+equal <$USEITEMNAME[78]>  黑色切割[五重Lv.4]
+#act
+mov N$装备切割40 1
+inc U230 600
+
+
+#if
+equal N$装备切割41 0
+equal <$USEITEMNAME[78]>  黑色切割[五重Lv.5]
+#act
+mov N$装备切割41 1
+inc U230 610
+
+#if
+equal N$装备切割42 0
+equal <$USEITEMNAME[78]>  黑色切割[五重Lv.6]
+#act
+mov N$装备切割42 1
+inc U230 620
+
+#if
+equal N$装备切割43 0
+equal <$USEITEMNAME[78]>  黑色切割[五重Lv.7]
+#act
+mov N$装备切割43 1
+inc U230 630
+
+
+#if
+equal N$装备切割44 0
+equal <$USEITEMNAME[78]>  黑色切割[五重Lv.8]
+#act
+mov N$装备切割44 1
+inc U230 640
+
+#if
+equal N$装备切割45 0
+equal <$USEITEMNAME[78]>  黑色切割[五重Lv.9]
+#act
+mov N$装备切割45 1
+inc U230 650
+
+#if
+equal N$装备切割46 0
+equal <$USEITEMNAME[78]>  黑色切割[六重Lv.1]
+#act
+mov N$装备切割46 1
+inc U230 710
+
+#if
+#act
+inc U230 N$捡取触发最终切割属性
+
+}

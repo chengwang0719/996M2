@@ -1,0 +1,6 @@
+[@MAIN]
+#IF
+NOT CHECKJOB taoist
+#act
+KILLSLAVE 1
+break

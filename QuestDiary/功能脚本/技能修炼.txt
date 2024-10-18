@@ -1,0 +1,241 @@
+[@技能修炼页面]   
+{
+#IF
+checkjob  Warrior
+#act
+goto @战士页面
+
+#IF
+checkjob  Wizard
+#act
+goto @法师页面
+
+#IF
+checkjob  Taoist
+#act
+
+goto @道士页面
+
+[@战士页面]
+#if
+#say
+<Img|children={aa,bb,cc}|a=4|x=450.0|y=273.0|width=950|height=593|esc=1|move=1|img=npc/jnxl/bg.png|show=4|reset=1|loadDelay=0|bg=1>
+<Button|x=845.0|y=14.0|nimg=public/close-2.png|mimg=public/close-2.png|link=@exit>
+<ListView|id=aa|children={a,b,c,d,e,f,g,h,i,j,k,l,m}|x=111.0|y=89.0|width=470|height=446|margin=1|direction=1|bounce=1>
+<Img|id=a|children={1a,2a,3a,4a}|x=150.0|y=110.0|width=469|height=75|move=0|esc=1|show=4|loadDelay=0|reset=1|img=npc/jnxl/kuang.png>
+<Img|id=1a|x=15.0|y=5.0|width=65|height=65|move=0|esc=1|show=4|loadDelay=0|reset=1|img=npc/jnxl/jbjs.png>
+<RText|id=2a|x=90.0|y=12.0|size=16|color=255|outline=2|text=技能名称：<[基本剑术]/FCOLOR=251>>
+<RText|id=3a|x=90.0|y=40.0|size=16|color=255|outline=2|text=修炼所需：书页×500>
+<Button|id=4a|a=4|percentx=80.2|percenty=50.7|width=132|height=40|mimg=npc/jnxl/an.png|nimg=npc/jnxl/an.png|link=@点击技能#修炼技能=基本剑术>
+
+
+;<Img|id=c|children={1c,2c,3c,4c}|x=150.0|y=110.0|width=469|height=75|move=0|esc=1|show=4|loadDelay=0|reset=1|img=npc/jnxl/kuang.png>
+;<Img|id=1c|x=15.0|y=5.0|width=65|height=65|move=0|esc=1|show=4|loadDelay=0|reset=1|img=npc/jnxl/ymcz.png>
+;<RText|id=2c|x=90.0|y=12.0|size=16|color=255|outline=2|text=技能名称：<[野蛮冲撞]/FCOLOR=251>>
+;<RText|id=3c|x=90.0|y=40.0|size=16|color=255|outline=2|text=修炼所需：书页×500>
+;<Button|id=4c|a=4|percentx=80.2|percenty=50.7|width=132|height=40|mimg=npc/jnxl/an.png|nimg=npc/jnxl/an.png|link=@点击技能#修炼技能=野蛮冲撞>
+
+
+<Img|id=f|children={1f,2f,3f,4f}|x=150.0|y=110.0|width=469|height=75|move=0|esc=1|show=4|loadDelay=0|reset=1|img=npc/jnxl/kuang.png>
+<Img|id=1f|x=15.0|y=5.0|width=65|height=65|move=0|esc=1|show=4|loadDelay=0|reset=1|img=npc/jnxl/lhjf.png>
+<RText|id=2f|x=90.0|y=12.0|size=16|color=255|outline=2|text=技能名称：<[烈火剑法]/FCOLOR=251>>
+<RText|id=3f|x=90.0|y=40.0|size=16|color=255|outline=2|text=修炼所需：书页×600>
+<Button|id=4f|a=4|percentx=80.2|percenty=50.7|width=132|height=40|mimg=npc/jnxl/an.png|nimg=npc/jnxl/an.png|link=@点击技能#修炼技能=烈火剑法>
+
+<Img|id=g|children={1g,2g,3g,4g}|x=150.0|y=110.0|width=469|height=75|move=0|esc=1|show=4|loadDelay=0|reset=1|img=npc/jnxl/kuang.png>
+<Img|id=1g|x=15.0|y=5.0|width=65|height=65|move=0|esc=1|show=4|loadDelay=0|reset=1|img=npc/jnxl/zrjf.png>
+<RText|id=2g|x=90.0|y=12.0|size=16|color=255|outline=2|text=技能名称：<[逐日剑法]/FCOLOR=251>>
+<RText|id=3g|x=90.0|y=40.0|size=16|color=255|outline=2|text=修炼所需：书页×700>
+<Button|id=4g|a=4|percentx=80.2|percenty=50.7|width=132|height=40|mimg=npc/jnxl/an.png|nimg=npc/jnxl/an.png|link=@点击技能#修炼技能=逐日剑法>
+
+<Img|id=h|children={1h,2h,3h,4h}|x=150.0|y=110.0|width=469|height=75|move=0|esc=1|show=4|loadDelay=0|reset=1|img=npc/jnxl/kuang.png>
+<Img|id=1h|x=15.0|y=5.0|width=65|height=65|move=0|esc=1|show=4|loadDelay=0|reset=1|img=npc/jnxl/ktz.png>
+<RText|id=2h|x=90.0|y=12.0|size=16|color=255|outline=2|text=技能名称：<[开天斩]/FCOLOR=251>>
+<RText|id=3h|x=90.0|y=40.0|size=16|color=255|outline=2|text=修炼所需：书页×1000>
+<Button|id=4h|a=4|percentx=80.2|percenty=50.7|width=132|height=40|mimg=npc/jnxl/an.png|nimg=npc/jnxl/an.png|link=@点击技能#修炼技能=开天斩>
+
+<Img|id=i|children={1i,2i,3i,4i}|x=150.0|y=110.0|width=469|height=75|move=0|esc=1|show=4|loadDelay=0|reset=1|img=npc/jnxl/kuang.png>
+<Img|id=1i|x=15.0|y=5.0|width=65|height=65|move=0|esc=1|show=4|loadDelay=0|reset=1|img=npc/jnxl/sbys.png>
+<RText|id=2i|x=90.0|y=12.0|size=16|color=255|outline=2|text=技能名称：<[十步一杀]/FCOLOR=251>>
+<RText|id=3i|x=90.0|y=40.0|size=16|color=255|outline=2|text=修炼所需：书页×1500>
+<Button|id=4i|a=4|percentx=80.2|percenty=50.7|width=132|height=40|mimg=npc/jnxl/an.png|nimg=npc/jnxl/an.png|link=@点击技能#修炼技能=十步一杀>
+
+
+<ListView|id=bb|children={1bb}|x=583.0|y=354.0|width=252|height=181|direction=1|bounce=1|margin=1>
+<Frames|id=1bb|x=0|y=210|width=252|height=181|speed=5|loop=-1|count=20|prefix=npc/jnxl/0_|suffix=.png>
+<Img|id=cc|x=591|y=81|width=252|height=220|move=0|esc=1|show=4|loadDelay=0|reset=1|img=npc/jnxl/xiulian.png>
+[@法师页面]
+#if
+#say
+<Img|children={aa,bb,cc}|a=4|x=450.0|y=273.0|width=950|height=593|esc=1|move=1|img=npc/jnxl/bg.png|show=4|reset=1|loadDelay=0|bg=1>
+<Button|x=845.0|y=14.0|nimg=public/close-2.png|mimg=public/close-2.png|link=@exit>
+<ListView|id=aa|children={i,j,k,l,m,n}|x=111.0|y=89.0|width=470|height=350|margin=1|direction=1|bounce=1>
+
+
+
+
+
+
+<Img|id=k|children={1k,2k,3k,4k}|x=150.0|y=110.0|width=469|height=75|move=0|esc=1|show=4|loadDelay=0|reset=1|img=npc/jnxl/kuang.png>
+<Img|id=1k|x=15.0|y=5.0|width=65|height=65|move=0|esc=1|show=4|loadDelay=0|reset=1|img=npc/jnxl/mfd.png>
+<RText|id=2k|x=90.0|y=12.0|size=16|color=255|outline=2|text=技能名称：<[魔法盾]/FCOLOR=251>>
+<RText|id=3k|x=90.0|y=40.0|size=16|color=255|outline=2|text=修炼所需：书页×500>
+<Button|id=4k|a=4|percentx=80.2|percenty=50.7|width=132|height=40|mimg=npc/jnxl/an.png|nimg=npc/jnxl/an.png|link=@点击技能#修炼技能=魔法盾>
+
+<Img|id=l|children={1l,2l,3l,4l}|x=150.0|y=110.0|width=469|height=75|move=0|esc=1|show=4|loadDelay=0|reset=1|img=npc/jnxl/kuang.png>
+<Img|id=1l|x=15.0|y=5.0|width=65|height=65|move=0|esc=1|show=4|loadDelay=0|reset=1|img=npc/jnxl/bpx.png>
+<RText|id=2l|x=90.0|y=12.0|size=16|color=255|outline=2|text=技能名称：<[冰咆哮]/FCOLOR=251>>
+<RText|id=3l|x=90.0|y=40.0|size=16|color=255|outline=2|text=修炼所需：书页×700>
+<Button|id=4l|a=4|percentx=80.2|percenty=50.7|width=132|height=40|mimg=npc/jnxl/an.png|nimg=npc/jnxl/an.png|link=@点击技能#修炼技能=冰咆哮>
+
+<Img|id=m|children={1m,2m,3m,4m}|x=150.0|y=110.0|width=469|height=75|move=0|esc=1|show=4|loadDelay=0|reset=1|img=npc/jnxl/kuang.png>
+<Img|id=1m|x=15.0|y=5.0|width=65|height=65|move=0|esc=1|show=4|loadDelay=0|reset=1|img=npc/jnxl/bshy.png>
+<RText|id=2m|x=90.0|y=12.0|size=16|color=255|outline=2|text=技能名称：<[流星火雨]/FCOLOR=251>>
+<RText|id=3m|x=90.0|y=40.0|size=16|color=255|outline=2|text=修炼所需：书页×1000>
+<Button|id=4m|a=4|percentx=80.2|percenty=50.7|width=132|height=40|mimg=npc/jnxl/an.png|nimg=npc/jnxl/an.png|link=@点击技能#修炼技能=流星火雨>
+
+<Img|id=n|children={1n,2n,3n,4n}|x=150.0|y=110.0|width=469|height=75|move=0|esc=1|show=4|loadDelay=0|reset=1|img=npc/jnxl/kuang.png>
+<Img|id=1n|x=15.0|y=5.0|width=65|height=65|move=0|esc=1|show=4|loadDelay=0|reset=1|img=npc/jnxl/bsqy.png>
+<RText|id=2n|x=90.0|y=12.0|size=16|color=255|outline=2|text=技能名称：<[冰霜群雨]/FCOLOR=251>>
+<RText|id=3n|x=90.0|y=40.0|size=16|color=255|outline=2|text=修炼所需：书页×1500>
+<Button|id=4n|a=4|percentx=80.2|percenty=50.7|width=132|height=40|mimg=npc/jnxl/an.png|nimg=npc/jnxl/an.png|link=@点击技能#修炼技能=冰霜群雨>
+
+<ListView|id=bb|children={1bb}|x=583.0|y=354.0|width=252|height=181|direction=1|bounce=1|margin=1>
+<Frames|id=1bb|x=0|y=210|width=252|height=181|speed=5|loop=-1|count=20|prefix=npc/jnxl/0_|suffix=.png>
+<Img|id=cc|x=591|y=81|width=252|height=220|move=0|esc=1|show=4|loadDelay=0|reset=1|img=npc/jnxl/xiulian.png>
+
+[@道士页面]
+#if
+#say
+<Img|children={aa,bb,cc}|a=4|x=450.0|y=273.0|width=950|height=593|esc=1|move=1|img=npc/jnxl/bg.png|show=4|reset=1|loadDelay=0|bg=1>
+<Button|x=845.0|y=14.0|nimg=public/close-2.png|mimg=public/close-2.png|link=@exit>
+<ListView|id=aa|children={m,a,b,c,d,e,f,g,h,i,j,k,l}|x=111.0|y=89.0|width=470|height=446|margin=1|direction=1|bounce=1>
+
+<Img|id=m|children={1m,2m,3m,4m}|x=150.0|y=110.0|width=469|height=75|move=0|esc=1|show=4|loadDelay=0|reset=1|img=npc/jnxl/kuang.png>
+<Img|id=1m|x=15.0|y=5.0|width=65|height=65|move=0|esc=1|show=4|loadDelay=0|reset=1|img=npc/jnxl/qtsd.png>
+<RText|id=2m|x=90.0|y=12.0|size=16|color=255|outline=2|text=技能名称：<[群体施毒术]/FCOLOR=251>>
+<RText|id=3m|x=90.0|y=40.0|size=16|color=255|outline=2|text=修炼所需：书页×500>
+<Button|id=4m|a=4|percentx=80.2|percenty=50.7|width=132|height=40|mimg=npc/jnxl/an.png|nimg=npc/jnxl/an.png|link=@点击技能#修炼技能=群体施毒术>
+
+<Img|id=c|children={1d,2d,3d,4d}|x=150.0|y=110.0|width=469|height=75|move=0|esc=1|show=4|loadDelay=0|reset=1|img=npc/jnxl/kuang.png>
+<Img|id=1d|x=15.0|y=5.0|width=65|height=65|move=0|esc=1|show=4|loadDelay=0|reset=1|img=npc/jnxl/yld.png>
+<RText|id=2d|x=90.0|y=12.0|size=16|color=255|outline=2|text=技能名称：<[幽灵盾]/FCOLOR=251>>
+<RText|id=3d|x=90.0|y=40.0|size=16|color=255|outline=2|text=修炼所需：书页×600>
+<Button|id=4d|a=4|percentx=80.2|percenty=50.7|width=132|height=40|mimg=npc/jnxl/an.png|nimg=npc/jnxl/an.png|link=@点击技能#修炼技能=幽灵盾>
+
+<Img|id=d|children={1c,2c,3c,4c}|x=150.0|y=110.0|width=469|height=75|move=0|esc=1|show=4|loadDelay=0|reset=1|img=npc/jnxl/kuang.png>
+<Img|id=1c|x=15.0|y=5.0|width=65|height=65|move=0|esc=1|show=4|loadDelay=0|reset=1|img=npc/jnxl/zjs.png>
+<RText|id=2c|x=90.0|y=12.0|size=16|color=255|outline=2|text=技能名称：<[神圣战甲术]/FCOLOR=251>>
+<RText|id=3c|x=90.0|y=40.0|size=16|color=255|outline=2|text=修炼所需：书页×600>
+<Button|id=4c|a=4|percentx=80.2|percenty=50.7|width=132|height=40|mimg=npc/jnxl/an.png|nimg=npc/jnxl/an.png|link=@点击技能#修炼技能=神圣战甲术>
+
+
+<Img|id=k|children={1k,2k,3k,4k}|x=150.0|y=110.0|width=469|height=75|move=0|esc=1|show=4|loadDelay=0|reset=1|img=npc/jnxl/kuang.png>
+<Img|id=1k|x=15.0|y=5.0|width=65|height=65|move=0|esc=1|show=4|loadDelay=0|reset=1|img=npc/jnxl/jfp.png>
+<RText|id=2k|x=90.0|y=12.0|size=16|color=255|outline=2|text=技能名称：<[飓风破]/FCOLOR=251>>
+<RText|id=3k|x=90.0|y=40.0|size=16|color=255|outline=2|text=修炼所需：书页×1000>
+<Button|id=4k|a=4|percentx=80.2|percenty=50.7|width=132|height=40|mimg=npc/jnxl/an.png|nimg=npc/jnxl/an.png|link=@点击技能#修炼技能=飓风破>
+
+<Img|id=l|children={1l,2l,3l,4l}|x=150.0|y=110.0|width=469|height=75|move=0|esc=1|show=4|loadDelay=0|reset=1|img=npc/jnxl/kuang.png>
+<Img|id=1l|x=15.0|y=5.0|width=65|height=65|move=0|esc=1|show=4|loadDelay=0|reset=1|img=npc/jnxl/swzy.png>
+<RText|id=2l|x=90.0|y=12.0|size=16|color=255|outline=2|text=技能名称：<[死亡之眼]/FCOLOR=251>>
+<RText|id=3l|x=90.0|y=40.0|size=16|color=255|outline=2|text=修炼所需：书页×1500>
+<Button|id=4l|a=4|percentx=80.2|percenty=50.7|width=132|height=40|mimg=npc/jnxl/an.png|nimg=npc/jnxl/an.png|link=@点击技能#修炼技能=死亡之眼>
+
+
+
+
+<ListView|id=bb|children={1bb}|x=583.0|y=354.0|width=252|height=181|direction=1|bounce=1|margin=1>
+<Frames|id=1bb|x=0|y=210|width=252|height=181|speed=5|loop=-1|count=20|prefix=npc/jnxl/0_|suffix=.png>
+<Img|id=cc|x=591|y=81|width=252|height=220|move=0|esc=1|show=4|loadDelay=0|reset=1|img=npc/jnxl/xiulian.png>
+[@点击技能]
+#if
+equal S$修炼技能 基本剑术
+#act
+mov S$书页 500
+
+#if
+equal S$修炼技能 烈火剑法
+#act
+mov S$书页 600
+
+#if
+equal S$修炼技能 逐日剑法
+#act
+mov S$书页 700
+
+
+#if
+equal S$修炼技能 十步一杀
+#act
+mov S$书页 1500
+
+#if
+equal S$修炼技能 开天斩
+#act
+mov S$书页 1000
+
+;-----------
+
+#if
+equal S$修炼技能 魔法盾
+#act
+mov S$书页 500
+
+#if
+equal S$修炼技能 冰咆哮
+#act
+mov S$书页 600
+
+#if
+equal S$修炼技能 流星火雨
+#act
+mov S$书页 700
+
+#if
+equal S$修炼技能 冰霜群雨
+#act
+mov S$书页 1500
+
+
+;-----------------------------------------
+#if
+equal S$修炼技能 群体施毒术
+#act
+mov S$书页 500
+
+#if
+equal S$修炼技能 幽灵盾
+#act
+mov S$书页 600
+
+#if
+equal S$修炼技能 神圣战甲术
+#act
+mov S$书页 600
+
+#if
+equal S$修炼技能 飓风破
+#act
+mov S$书页 1000
+
+
+#if
+equal S$修炼技能 死亡之眼
+#act
+mov S$书页 1500
+
+
+
+
+#IF
+checkitem 书页 <$STR(S$书页)>
+#ACT
+give S$修炼技能 1
+take 书页 <$STR(S$书页)>
+SENDMSG 9 兑换<$STR(S$修炼技能)>成功！
+#ELSEACT
+SENDMSG 9 你的书页不足！
+
+
+}

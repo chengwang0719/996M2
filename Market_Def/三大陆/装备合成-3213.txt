@@ -1,0 +1,31 @@
+[@main]
+#if
+#say
+<Button|x=-2526.0|y=-1172.0|width=115120|height=112880|mimg=npc/zd.png|pimg=npc/zd.png|color=224|nimg=npc/zd.png|size=18>
+<Img|x=-69.0|y=-34.0|rotate=0|img=npc/zbhc/smlr_bj.png|show=4|bg=1|reset=1|loadDelay=0|move=0|esc=1>
+<Button|x=749.0|y=85.0|mimg=public/close-t.png|nimg=public/close-t.png|link=@exit>
+<Button|x=356.0|y=256.0|width=125|height=40|mimg=npc/zbhc/323.png|nimg=npc/zbhc/323.png|link=@鲜花打开>
+<Button|x=551.0|y=256.0|width=125|height=40|mimg=npc/zbhc/342.png|nimg=npc/zbhc/342.png|link=@盾牌打开>
+<Button|x=356.0|y=330.0|width=125|height=40|mimg=npc/zbhc/434.png|nimg=npc/zbhc/434.png|link=@玉佩打开>
+<Button|x=551.0|y=330.0|width=125|height=40|mimg=npc/zbhc/4234.png|nimg=npc/zbhc/4234.png|link=@斗笠打开>
+
+
+[@鲜花打开]
+#if
+#act
+#call [\合成脚本\鲜花合成.txt] @鲜花合成
+
+[@盾牌打开]
+#if
+#act
+#call [\合成脚本\盾牌合成.txt] @盾牌合成
+
+[@玉佩打开]
+#if
+#act
+#call [\合成脚本\玉佩合成.txt] @玉佩合成
+
+[@斗笠打开]
+#if
+#act
+#call [\合成脚本\斗笠合成.txt] @斗笠合成

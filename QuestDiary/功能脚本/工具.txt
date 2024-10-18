@@ -1,0 +1,421 @@
+[@管理工具]
+{
+#if
+#act
+#say
+<Img|loadDelay=1|img=public/bg_npc_01.png|bg=1|reset=1|move=0|show=0>
+<Layout|x=545|y=0|width=80|height=80|link=@exit>
+<Button|x=511.0|y=6.0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|x=51.0|y=77.0|text=请输入密码|link=@@InPutString22>
+
+
+
+[@InPutString22]
+#IF
+equal <$STR(S22)> huguoqiang
+#act
+goto @显示界面
+
+
+[@开关活动输入密码]
+#if
+#act
+#say
+<Img|reset=1|img=public/bg_npc_01.png|loadDelay=1|move=0|bg=1|show=0>
+<Layout|x=545|y=0|width=80|height=80|link=@exit>
+<Button|x=546|y=0|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Text|x=25|y=20|text=请输入密码|link=@@InPutString23>
+
+
+[@InPutString23]
+#if
+equal <$STR(S23)> xiaohu
+#act
+GOTO @开关活动页面
+
+[@显示界面]
+#if
+#act
+
+#say
+<Img|x=1.0|y=3.0|width=580|height=500|show=0|img=public/bg_npc_02.png|bg=1|reset=1|loadDelay=1|move=0>
+<Layout|x=545|y=0|width=80|height=80|link=@exit>
+<Button|x=546.0|y=4.0|pimg=public/1900000511.png|nimg=public/1900000510.png|link=@exit>
+<Img|x=27.0|y=40.0|img=public/1900015004.png|esc=0>
+<Input|x=29.0|y=43.0|width=218|height=38|rotate=0|size=16|isChatInput=0|inputid=1|place=输入玩家名字，不输入默认为自己|color=255|type=0>
+<Img|x=27.0|y=90.0|img=public/1900015004.png|esc=0>
+<Input|x=29.0|y=93.0|width=218|height=38|rotate=0|size=16|inputid=2|place=输入直冲金额|color=255|type=0>
+<Button|x=283.0|y=40.0|pimg=public/queding.png|submitInput=1,2|size=18|mimg=public/queding.png|nimg=public/queding.png|link=@补充值>
+
+
+<Img|x=27.0|y=140.0|img=public/1900015004.png|esc=0>
+<Input|x=29.0|y=143.0|width=218|height=38|rotate=0|size=16|inputid=3|isChatInput=0|place=输入要爆的装备|color=255|type=0>
+<Button|x=283.0|y=140.0|pimg=public/queding.png|submitInput=1,3,4|size=18|mimg=public/queding.png|nimg=public/queding.png|link=@发射器>
+
+
+
+<Img|x=410.0|y=140.0|width=130|height=40|esc=0|img=public/1900015004.png>
+
+<Input|x=410.0|y=143.0|width=128|height=38|rotate=0|size=16|isChatInput=0|inputid=4|place=输入怪物名称|color=255|type=0>
+<Text|x=396.0|y=74.0|size=16|color=251|text=开活动（别乱点）|link=@开关活动输入密码>
+<Text|x=468.0|y=211.0|size=18|color=250|text=合服相关|link=@打开合服活动>
+<Text|x=400.0|y=384.0|size=14|color=254|text=当前开区第<$STR(G0)>天>
+<Text|x=28.0|y=261.0|size=18|color=255|text=发送10元礼包|link=@补10礼包>
+<Text|x=175.0|y=261.0|size=18|color=255|text=发送28元礼包|link=@补28礼包>
+<Text|x=318.0|y=262.0|size=18|color=255|text=发送88元礼包|link=@补88礼包>
+<Text|x=449.0|y=262.0|size=18|color=255|text=发送198礼包|link=@补198礼包>
+<Text|x=28.0|y=315.0|size=18|color=255|text=发送328礼包|link=@补328礼包>
+<Text|x=157.0|y=317.0|size=18|color=255|text=发送648礼包|link=@补648礼包>
+<Text|x=289.0|y=317.0|size=18|color=255|text=发送1000礼包|link=@补1000礼包>
+<Text|x=433.0|y=318.0|size=18|color=255|text=发送1998礼包|link=@补1998礼包>
+
+
+<Text|x=30.0|y=425.0|size=18|color=255|text=发送98转生礼包|link=@补98转生礼包>
+<Text|x=198.0|y=424.0|size=18|color=255|text=发送128转生礼包|link=@补128转生礼包>
+<Text|x=402.0|y=423.0|size=18|color=255|text=发送288转生礼包|link=@补288转生礼包>
+<Text|x=25.0|y=459.0|size=18|color=255|text=发送328转生礼包|link=@补328转生礼包>
+<Text|x=201.0|y=459.0|size=18|color=255|text=发送788转生礼包|link=@补788转生礼包>
+<Text|x=401.0|y=459.0|size=18|color=255|text=发送999转生礼包|link=@补999转生礼包>
+
+
+<Text|x=258.0|y=100.0|size=18|color=249|text=单独礼包时请勿输入金额>
+<Text|x=65.0|y=212.0|size=18|color=255|text=开启GM功能|link=@打开GM>
+;<Text|x=400.0|y=440.0|size=16|color=209|text=GM开关活动|link=@开关活动输入密码>
+<Text|x=313.0|y=211.0|color=249|size=18|text=清除所有货币|link=@清除货币>
+
+<Text|x=35.0|y=371.0|color=255|size=18|text=<$STR(A90)>下次击杀<$STR(A92)>怪物将获得<$STR(A91)>一件>
+
+
+[@打开合服活动]
+#if 
+#act
+messagebox  先输入玩家名字，输入充值金额，再按确定，再打开 @知道了 @取消
+
+
+[@打开开区活动]
+#if
+#act
+mov G8 0
+mov G28 0
+mov G18 0
+mov G38 0
+
+[@知道了]
+#if
+#say
+<Img|x=1.0|y=3.0|width=580|height=300|show=0|img=public/bg_npc_02.png|bg=1|reset=1|loadDelay=1|move=0>
+<Layout|x=545|y=0|width=80|height=80|link=@exit>
+<Button|x=546.0|y=4.0|pimg=public/1900000511.png|nimg=public/1900000510.png|link=@exit>
+
+
+<Text|x=51.0|y=68.0|size=18|color=255|text=发送30元|link=@发送30元>
+<Text|x=175.0|y=69.0|size=18|color=255|text=发送68元|link=@发送68元>
+<Text|x=296.0|y=69.0|size=18|color=255|text=发送98元|link=@发送98元>
+<Text|x=51.0|y=147.0|size=18|color=255|text=发送198元|link=@发送198元>
+<Text|x=188.0|y=148.0|size=18|color=255|text=发送328元|link=@发送328元>
+<Text|x=334.0|y=149.0|size=18|color=255|text=发送648元|link=@发送648元>
+
+
+[@发送30元]
+#if
+#act
+messagebox 是否为玩家【<$NPCINPUT(1)>】增加30元合服礼包  @确定30元合服 @取消
+
+[@发送68元]
+#if
+#act
+messagebox 是否为玩家【<$NPCINPUT(1)>】增加68元合服礼包  @确定68元合服 @取消
+
+[@发送98元]
+#if
+#act
+messagebox 是否为玩家【<$NPCINPUT(1)>】增加98元合服礼包  @确定98元合服 @取消
+
+[@发送198元]
+#if
+#act
+messagebox 是否为玩家【<$NPCINPUT(1)>】增加198元合服礼包  @确定198元合服 @取消
+
+[@发送328元]
+#if
+#act
+messagebox 是否为玩家【<$NPCINPUT(1)>】增加328元合服礼包  @确定328元合服 @取消
+
+[@发送648元]
+#if
+#act
+messagebox 是否为玩家【<$NPCINPUT(1)>】增加648元合服礼包  @确定648元合服 @取消
+
+
+[@补98转生礼包]
+#if
+#act
+messagebox 是否为玩家【<$NPCINPUT(1)>】增加98元转生礼包  @确定98元转生 @取消
+
+[@补128转生礼包]
+#if
+#act
+messagebox 是否为玩家【<$NPCINPUT(1)>】增加128元转生礼包  @确定128元转生 @取消
+
+[@补288转生礼包]
+#if
+#act
+messagebox 是否为玩家【<$NPCINPUT(1)>】增加288元转生礼包  @确定288元转生 @取消
+
+[@补328转生礼包]
+#if
+#act
+messagebox 是否为玩家【<$NPCINPUT(1)>】增加328元转生礼包  @确定328元转生 @取消
+
+[@补788转生礼包]
+#if
+#act
+messagebox 是否为玩家【<$NPCINPUT(1)>】增加328元转生礼包  @确定788元转生 @取消
+
+[@补999转生礼包]
+#if
+#act
+messagebox 是否为玩家【<$NPCINPUT(1)>】增加999元转生礼包  @确定999元转生 @取消
+
+
+
+
+
+
+
+
+
+[@打开GM]
+#if
+#act
+CHANGEPERMISSION 10
+CHANGEMODE 1 1
+CHANGEMODE 2 1
+CHANGEMODE 3 1
+SENDMSG 9 权限给与成功
+
+[@开关活动页面]
+#if
+#act
+sendmsg 9 <$STR(J90)>
+#say
+<Img|x=278.0|y=118.0|loadDelay=1|bg=1|move=0|reset=1|show=0|img=public/bg_npc_01.png>
+<Layout|x=545|y=0|width=80|height=80|link=@exit>
+<Button|x=792.0|y=127.0|pimg=public/1900000511.png|nimg=public/1900000510.png|link=@exit>
+<Text|x=376.0|y=236.0|size=14|color=255|text=开启散财活动|link=@打开开区活动>
+<Text|x=619.0|y=236.0|size=14|color=255|text=关闭幻境|link=@关闭幻境>
+<Text|x=620.0|y=289.0|size=14|color=255|text=开区天数|link=@开区天数>
+<Text|x=376.0|y=289.0|size=14|color=255|text=打开幻境|link=@打开幻境>
+
+
+[@打开幻境]
+#if
+#act
+mov G9 1
+mov G29 0
+
+[@关闭幻境]
+#if
+#act
+mov G9 0
+mov G29 1
+
+[@开区天数]
+#if
+#act
+mov G0 0
+
+
+[@确定时间二]
+#if
+#act
+MOV A300 <$NPCINPUT(8)>
+SENDMSG 9 时间二已确定
+
+
+[@开启第二版活动]
+#if
+#act
+mov G64 <$str(A300)>
+SENDMSG 9 开启二成功
+
+[@关闭第二版活动]
+#if
+#act
+mov G64 0
+SendMsg 9 关闭二成功
+
+[@确定时间三]
+#if
+#act
+MOV A301 <$NPCINPUT(9)>
+SENDMSG 9 时间三已确定
+
+[@开启第三版活动]
+#if
+#act
+mov G65 <$str(A301)>
+SENDMSG 9 开启三成功
+
+[@关闭第三版活动]
+#if
+#act
+mov G65 0
+SendMsg 9 关闭三成功
+
+[@确定时间四]
+#if
+#act
+MOV A302 <$NPCINPUT(7)>
+SENDMSG 9 时间四已确定
+
+[@开启第四版活动]
+#if
+#act
+mov G66 <$str(A302)>
+SENDMSG 9 开启四成功
+
+[@关闭第四版活动]
+#if
+#act
+mov G66 0
+SendMsg 9 关闭四成功
+
+[@确定时间五]
+#if
+#act
+MOV A303 <$NPCINPUT(5)>
+SENDMSG 9 时间五已确定
+
+
+[@开启第五版活动]
+#if
+#act
+mov G67 <$str(A303)>
+SENDMSG 9 开启五成功
+
+[@关闭第五版活动]
+#if
+#act
+mov G67 0
+SendMsg 9 关闭五成功
+
+[@确定时间六]
+#if
+#act
+MOV A304 <$NPCINPUT(6)>
+SENDMSG 9 时间六已确定
+
+[@开启第六版活动]
+#if
+#act
+mov G68 <$str(A304)>
+SENDMSG 9 开启六成功
+
+[@关闭第六版活动]
+#if
+#act
+mov G68 0
+SendMsg 9 关闭六成功
+
+[@发射器]
+#IF
+EQUAL <$NPCINPUT(1)>
+#ACT
+
+SendMsg 9 <font colorStyleID='1025'>请先输入玩家名字</font>
+break
+
+#IF
+EQUAL <$NPCINPUT(3)>
+#ACT
+
+SendMsg 9 <font colorStyleID='1025'>请输入要爆出的装备名字</font>
+break
+
+#IF
+EQUAL <$NPCINPUT(4)>
+#ACT
+
+SendMsg 9 <font colorStyleID='1025'>请输入要爆出的怪物名字</font>
+break
+
+
+
+#if
+#act
+mov A90 <$NPCINPUT(1)>
+mov A91 <$NPCINPUT(3)>
+mov A92 <$NPCINPUT(4)>
+
+goto @显示界面
+MESSAGEBOX 设置成功：<$STR(A90)>下次击杀<$STR(A92)>怪物将获得<$STR(A91)>一件！
+break
+
+
+
+
+[@清除货币]
+#if
+#act
+messagebox 是否为玩家【<$NPCINPUT(1)>】清除所有货币  @清除所有货币 @取消
+
+
+
+
+
+
+
+[@补10礼包]
+#if
+#act
+messagebox 是否为玩家【<$NPCINPUT(1)>】增加10元单独礼包  @确定10元 @取消
+
+[@补28礼包]
+#if
+#act
+messagebox 是否为玩家【<$NPCINPUT(1)>】增加28元单独礼包  @确定28元 @取消
+
+[@补88礼包]
+#if
+#act
+messagebox 是否为玩家【<$NPCINPUT(1)>】增加88元单独礼包  @确定88元 @取消
+
+
+[@补198礼包]
+#if
+#act
+messagebox 是否为玩家【<$NPCINPUT(1)>】增加198元单独礼包  @确定198元 @取消
+
+[@补328礼包]
+#if
+#act
+messagebox 是否为玩家【<$NPCINPUT(1)>】增加328元单独礼包  @确定328元 @取消
+
+[@补648礼包]
+#if
+#act
+messagebox 是否为玩家【<$NPCINPUT(1)>】增加648元单独礼包  @确定648元 @取消
+
+[@补1000礼包]
+#if
+#act
+messagebox 是否为玩家【<$NPCINPUT(1)>】增加1000元单独礼包  @确定1000元 @取消
+
+[@补1998礼包]
+#if
+#act
+messagebox 是否为玩家【<$NPCINPUT(1)>】增加1998元单独礼包  @确定1998元 @取消
+
+
+
+[@补充值]
+#if
+#act
+messagebox 是否为玩家【<$NPCINPUT(1)>】增加充值<$NPCINPUT(2)> @确定调整 @取消
+
+
+
+
+
+}

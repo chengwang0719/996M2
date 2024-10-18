@@ -1,0 +1,105 @@
+[@触发拾取属性三套]
+{
+
+#IF
+#ACT
+MOVR N$属性编号 1 8
+
+#OR
+EQUAL <$STR(N$属性编号)> 1
+EQUAL <$STR(N$属性编号)> 2
+EQUAL <$STR(N$属性编号)> 3
+EQUAL <$STR(N$属性编号)> 4
+EQUAL <$STR(N$属性编号)> 6
+#ACT
+MOV N$是否百分比 0
+GOTO @固定属性随机三套
+#ELSEACT
+MOV N$是否百分比 1
+GOTO @一般属性随机三套
+
+[@固定属性随机三套]
+#IF
+EQUAL <$STR(N$属性编号)> 1
+#ACT
+GETRANDOMTEXT ..\QuestDiary\拾取属性\经验属性三套.txt N$一般属性加成
+MOV N$随机属性真实 92
+GOTO @随机属性成功三套
+BREAK
+
+#IF
+EQUAL <$STR(N$属性编号)> 6
+#ACT
+GETRANDOMTEXT ..\QuestDiary\拾取属性\切割属性三套.txt N$一般属性加成
+MOV N$随机属性真实 93
+GOTO @随机属性成功三套
+BREAK
+
+#IF
+EQUAL <$STR(N$属性编号)> 2
+#ACT
+GETRANDOMTEXT ..\QuestDiary\拾取属性\攻魔道属性三套.txt N$一般属性加成
+MOV N$随机属性真实 4
+GOTO @随机属性成功三套
+break
+
+#IF
+EQUAL <$STR(N$属性编号)> 3
+#ACT
+GETRANDOMTEXT ..\QuestDiary\拾取属性\攻魔道属性三套.txt N$一般属性加成
+MOV N$随机属性真实 6
+GOTO @随机属性成功三套
+break
+
+#IF
+EQUAL <$STR(N$属性编号)> 4
+#ACT
+GETRANDOMTEXT ..\QuestDiary\拾取属性\攻魔道属性三套.txt N$一般属性加成
+MOV N$随机属性真实 8
+GOTO @随机属性成功三套
+break
+
+[@一般属性随机三套]
+
+#IF
+EQUAL <$STR(N$属性编号)> 5
+#ACT
+MOVR N$一般属性加成 2 5
+MOV N$随机属性真实 25
+
+#IF
+EQUAL <$STR(N$属性编号)> 7
+#ACT
+MOVR N$一般属性加成 2 5
+MOV N$随机属性真实 75
+
+#IF
+#ACT
+
+GOTO @随机属性成功三套
+
+
+[@随机属性成功三套]
+#IF
+#ACT
+LINKPICKUPITEM
+
+#IF
+NOT CHECKCUSTOMITEMVALUE -1 0 > 0
+#ACT
+CHANGECUSTOMITEMTEXT -1 [幸运随机属性]:
+CHANGECUSTOMITEMTEXTCOLOR -1 253 0
+CHANGECUSTOMITEMABIL  -1 0 0 146 0 
+
+CHANGECUSTOMITEMABIL  -1 0 1 <$STR(N$随机属性真实)> 0
+CHANGECUSTOMITEMABIL  -1 0 2 <$STR(N$属性编号)> 0
+
+CHANGECUSTOMITEMABIL  -1 0 3 <$STR(N$是否百分比)> 0
+CHANGECUSTOMITEMABIL  -1 0 4 0 0
+CHANGECUSTOMITEMVALUE -1 0 = <$STR(N$一般属性加成)> 0
+
+SENDMSG 6 随机属性触发！
+BREAK
+}
+
+

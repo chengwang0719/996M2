@@ -1,0 +1,1001 @@
+[@基础按钮QF]
+{
+
+[@开启盒子]
+#IF
+#ACT
+OPENHYPERLINK 111
+
+
+[@主播模式触发]
+#IF
+#ACT
+#CALL [\主界面基础按钮\主播功能.txt] @主播top
+
+
+[@交易行]
+#IF
+#ACT
+OPENHYPERLINK 35
+
+[@怪物探查]
+#CALL [\主界面基础按钮\怪物探查.txt] @怪物探查主界面
+
+
+
+
+
+
+
+[@会员服务]
+#CALL [\主界面基础按钮\会员界面.txt] @会员主页面
+
+
+
+
+[@全服首爆]
+#CALL [\主界面基础按钮\全局首爆奖励界面.txt] @全局首爆奖励页面
+
+[@个人首爆]
+#CALL [\主界面基础按钮\个人首爆奖励界面.txt] @个人首爆奖励页面
+
+
+
+[@至尊年卡]
+#CALL [\主界面基础按钮\至尊年卡界面.txt] @至尊年卡页面
+
+[@经验爆率]
+#CALL [\主界面基础按钮\经验爆率界面.txt] @经验爆率页面
+
+
+[@打开六艺盒]
+#CALL [\主界面基础按钮\六艺盒界面.txt] @六艺盒
+
+[@查看六艺盒]
+#CALL [\主界面基础按钮\六艺盒界面.txt] @查看他人
+
+
+[@回收]
+#if
+#act
+OPENHYPERLINK 7 2
+#CALL [\功能脚本\回收脚本.txt] @回收脚本
+
+[@工具]
+#if
+#act
+#CALL [\功能脚本\工具.txt] @管理工具
+
+[@游戏礼包]
+#if
+#act
+#CALL [\主界面基础按钮\游戏礼包.txt] @礼包界面
+
+;==========================================================
+[@游戏攻略]
+#if
+#act
+#CALL [\主界面基础按钮\游戏介绍.txt] @介绍页面
+
+[@累计充值]
+#if
+#act
+#CALL [\主界面基础按钮\累计充值.txt] @累计充值页面
+
+[@全民活动]
+#if
+#act
+#CALL [\主界面基础按钮\全民活动.txt] @全民活动界面
+
+[@十二器详情]
+#if
+#act
+#CALL [\主界面基础按钮\十二器介绍.txt] @十二器页面
+
+[@大陆玩法]
+#if
+#act
+#CALL [\主界面基础按钮\大陆玩法介绍.txt] @大陆玩法页面
+
+[@打怪神器]
+#if
+#act
+#CALL [\主界面基础按钮\打怪神器.txt] @打怪神器页面
+
+
+[@地图跑法]
+#if
+#act
+#CALL [\主界面基础按钮\地图跑法.txt] @地图跑法页面
+
+[@副装详情]
+#if
+#act
+#CALL [\主界面基础按钮\副装详情.txt] @副装详情页面
+
+[@虎符详情]
+#if
+#act
+#CALL [\主界面基础按钮\虎符详情.txt] @虎符详情页面
+
+
+
+
+
+
+
+
+;===========================================================
+[@每日充值]
+#if
+#act
+#CALL [\主界面基础按钮\每日充值.txt] @每日界面
+
+[@7到12天每日]
+#if
+#act
+#CALL [\主界面基础按钮\7到12天每日.txt] @7到12界面
+
+[@高级每日充值]
+#if
+#act
+#CALL [\主界面基础按钮\高级每日充值.txt] @高级每日界面
+
+[@15到19天每日]
+#if
+#act
+#CALL [\主界面基础按钮\15到19天每日.txt] @15到19界面
+
+
+
+[@第四版活动]
+#IF
+#ACT
+#CALL [\主界面基础按钮\第四版活动.txt] @四版活动页面
+
+[@第五版活动]
+#IF
+#ACT
+#CALL [\主界面基础按钮\第五版活动.txt] @五版活动页面
+
+[@第六版活动]
+#IF
+#ACT
+#CALL [\主界面基础按钮\第六版活动.txt] @六版活动页面
+
+[@自动战斗]
+#IF
+CHECKTEXTLIST ..\QuestDiary\主界面基础按钮\禁止挂机地图.txt <$MAP>
+#ACT
+SENDMSG 9 该地图禁止挂机
+BREAK
+
+#IF
+NOT CHECKTITLE 至尊年卡
+CHECKTEXTLIST ..\QuestDiary\主界面基础按钮\年卡挂机地图.txt <$MAP>
+#ACT
+SENDMSG 9 该地图办理《至尊年卡》方可进行挂机
+BREAK
+
+#IF
+#ACT
+StartAutoPlayGame
+
+
+
+[@停止战斗]
+#IF
+#ACT
+StopAutoPlayGame
+
+
+
+[@回城]
+#IF
+CHECKITEM 盟重传送石
+#ACT
+EatItem 盟重传送石 1
+CLOSE
+MAPMOVE 3 327 335 8
+#ELSEACT
+SENDMSG 9 背包已没回城石
+   
+
+[@随机]
+#if
+equal G11 1
+not CHECKTEXTLIST ..\QuestDiary\功能脚本\随机地图.txt <$MAP>
+CheckRangeHumCount <$map> <$X> <$Y> 15 > 1
+#act
+SENDMSG 5 8点至晚上11点此地图附近有玩家时禁止使用传送！
+break
+
+#IF
+CHECKITEM 随机传送石
+#ACT
+EatItem 随机传送石 1
+CLOSE   
+MAP <$MAP>   
+#ELSEACT
+SENDMSG 9 背包已没随机石
+
+
+[@传送]
+#if
+check [9] 1
+#act
+goto @传送触发
+#ELSEACT
+SENDMSG 9 你没有传送功能！
+
+
+
+
+[@传送触发]
+#if
+equal G11 1
+not CHECKTEXTLIST ..\QuestDiary\功能脚本\随机地图.txt <$MAP>
+CheckRangeHumCount <$map> <$X> <$Y> 15 > 1
+#act
+SENDMSG 5 8点至晚上11点此地图附近有玩家时禁止使用传送！
+break
+
+#IF
+LARGE N$传送CD 0
+#ACT
+SENDMSG 9 传送冷却中:剩余<$STR(N$传送CD)>秒
+BREAK
+
+#IF
+#ACT
+
+MOV N$传送CD 10
+MAPMOVE <$MAP> <$ToPointX> <$ToPointY>
+
+[@联系客服的按钮]
+#if
+#act
+OPENHYPERLINK 701
+
+[@过滤]
+#IF
+EQUAL N$过滤消息 0
+#ACT
+MOV N$过滤消息 1
+FILTERGLOBALMSG 1
+SENDMSG 9 过滤消息已开启
+#ELSEACT
+MOV N$过滤消息 0
+FILTERGLOBALMSG 0
+SENDMSG 9 过滤消息已关闭
+
+[@兑换]
+#if
+#act
+OPENHYPERLINK 7 2
+#CALL [\主界面基础按钮\货币兑换.txt] @货币兑换
+
+[@打开符石]
+#if
+#act
+#CALL [\主界面基础按钮\符石.txt] @符石页面
+
+[@打开器]
+#if
+#act
+#CALL [\主界面基础按钮\器.txt] @器页面
+
+[@打开他人器]
+#if
+#act
+#CALL [\主界面基础按钮\他人器.txt] @他人器页面
+
+
+[@角色]
+#IF
+#ACT
+OPENHYPERLINK 1
+
+
+
+[@脱下1178]
+#IF
+#ACT
+TakeOffItem 78
+GOTO @角色 
+
+[@脱下1177]
+#IF
+#ACT
+TakeOffItem 77
+GOTO @角色 
+
+[@脱下1179]
+#IF
+#ACT
+TakeOffItem 79
+
+goto @副装页面
+
+[@脱下1180]
+#IF
+#ACT
+TakeOffItem 80
+goto @副装页面
+
+
+[@脱下1181]
+#IF
+#ACT
+TakeOffItem 81
+goto @副装页面
+
+[@脱下1182]
+#IF
+#ACT
+TakeOffItem 82
+goto @副装页面
+
+[@脱下1183]
+#IF
+#ACT
+TakeOffItem 83
+goto @副装页面
+
+[@脱下1184]
+#IF
+#ACT
+TakeOffItem 84
+goto @副装页面
+
+[@脱下1185]
+#IF
+#ACT
+TakeOffItem 85
+goto @副装页面
+
+[@脱下1186]
+#IF
+#ACT
+TakeOffItem 86
+goto @副装页面
+
+[@脱下1187]
+#IF
+#ACT
+TakeOffItem 100
+goto @打开符石
+
+
+
+[@脱下1188]
+#IF
+#ACT
+TakeOffItem 87
+goto @打开符石
+
+[@脱下1189]
+#IF
+#ACT
+TakeOffItem 88
+goto @打开符石
+
+[@脱下1190]
+#IF
+#ACT
+TakeOffItem 89
+goto @打开符石
+
+[@脱下1191]
+#IF
+#ACT
+TakeOffItem 96
+goto @打开符石
+
+[@脱下1193]
+#IF
+#ACT
+TakeOffItem 97
+goto @打开符石
+
+[@脱下1194]
+#IF
+#ACT
+TakeOffItem 98
+goto @打开符石
+
+[@脱下1192]
+#IF
+#ACT
+TakeOffItem 103
+goto @打开符石
+
+[@脱下1195]
+#IF
+#ACT
+TakeOffItem 101
+goto @打开符石
+
+[@脱下1196]
+#IF
+#ACT
+TakeOffItem 90
+goto @打开符石
+
+[@脱下1197]
+#IF
+#ACT
+TakeOffItem 91
+goto @打开符石
+
+[@脱下1198]
+#IF
+#ACT
+TakeOffItem 92
+goto @打开符石
+
+[@脱下1199]
+#IF
+#ACT
+TakeOffItem 102
+goto @打开符石
+
+[@脱下1200]
+#IF
+#ACT
+TakeOffItem 93
+goto @打开符石
+
+[@脱下1201]
+#IF
+#ACT
+TakeOffItem 94
+goto @打开符石
+
+[@脱下1202]
+#IF
+#ACT
+TakeOffItem 95
+goto @打开符石
+
+
+[@脱下1203]
+#IF
+#ACT
+TakeOffItem 105
+goto @打开器
+
+[@脱下1204]
+#IF
+#ACT
+TakeOffItem 106
+goto @打开器
+
+[@脱下1205]
+#IF
+#ACT
+TakeOffItem 107
+goto @打开器
+
+[@脱下1206]
+#IF
+#ACT
+TakeOffItem 108
+goto @打开器
+
+
+[@脱下1207]
+#IF
+#ACT
+TakeOffItem 109
+goto @打开器
+
+
+[@脱下1208]
+#IF
+#ACT
+TakeOffItem 110
+goto @打开器
+
+
+[@脱下1209]
+#IF
+#ACT
+TakeOffItem 111
+goto @打开器
+
+
+[@脱下1210]
+#IF
+#ACT
+TakeOffItem 112
+goto @打开器
+
+
+[@脱下1211]
+#IF
+#ACT
+TakeOffItem 113
+goto @打开器
+
+
+[@脱下1212]
+#IF
+#ACT
+TakeOffItem 114
+goto @打开器
+
+
+[@脱下1213]
+#IF
+#ACT
+TakeOffItem 115
+goto @打开器
+
+[@脱下1214]
+#IF
+#ACT
+TakeOffItem 117
+goto @打开器
+
+
+
+[@背包]
+#IF
+#ACT
+OPENHYPERLINK 7
+
+[@整理]
+#IF
+#ACT
+REFRESHBAG
+
+[@技能]
+#IF
+Equal <$CLIENTFLAG> 2
+#ACT
+OPENHYPERLINK 25
+#ELSEACT
+OPENHYPERLINK 4
+
+[@药剂]
+#if
+#act
+#CALL [\主界面基础按钮\药剂详情.txt] @药剂详情页面
+
+[@组队]
+#IF
+#ACT
+OPENHYPERLINK 17
+
+[@行会]
+#IF
+#ACT
+OPENHYPERLINK 31
+
+[@拍卖行]
+#OR
+#ACT
+OPENHYPERLINK 27
+
+
+
+[@排行榜]
+#IF
+CHECKLEVELEX > 39
+#ACT
+OPENHYPERLINK 32
+#ELSEACT
+MESSAGEBOX 达到40级才可用查看
+BREAK
+
+[@自动勾选拾取]
+#if
+check [88] 0
+#act
+set [88] 1
+#CALL [\主界面基础按钮\主界面基础按钮QM.txt] @基础按钮QM
+#CALL [\游戏登陆\登陆功能.txt] @登陆功能
+#elseact
+set [88] 0
+#CALL [\主界面基础按钮\主界面基础按钮QM.txt] @基础按钮QM
+#CALL [\游戏登陆\登陆功能.txt] @登陆功能
+
+[@设置]
+#IF
+#ACT
+OPENHYPERLINK 23
+
+[@退出]
+#IF
+#ACT
+OPENHYPERLINK 29
+
+[@商城]
+#IF
+#ACT
+OPENHYPERLINK 9
+
+
+[@仓库]
+#IF
+#ACT
+OPENSTORAGE
+
+
+
+[@伸缩按钮]
+#IF
+CHECK [11] 0
+#ACT
+SET [11] 1
+#CALL [\主界面基础按钮\主界面游戏按钮.txt] @界面游戏按钮
+BREAK
+
+#IF
+CHECK [11] 1
+#ACT
+SET [11] 0
+#CALL [\主界面基础按钮\主界面游戏按钮.txt] @界面游戏按钮
+BREAK
+
+[@属性展示]
+
+#IF
+CHECK [16] 0
+#ACT
+SET [16] 1
+#CALL [\主界面基础按钮\主界面游戏按钮.txt] @属性列表展开
+#CALL [\主界面基础按钮\主界面游戏按钮.txt] @界面游戏按钮
+BREAK
+
+#IF
+CHECK [16] 1
+#ACT
+SET [16] 0
+#CALL [\主界面基础按钮\主界面游戏按钮.txt] @属性列表展开
+#CALL [\主界面基础按钮\主界面游戏按钮.txt] @界面游戏按钮
+BREAK
+
+[@邮件]
+#IF
+#ACT
+OPENHYPERLINK 16
+
+
+
+[@七日签到]
+#CALL [\主界面基础按钮\福利大厅.txt] @七日签到主页面
+
+[@击杀奖励]
+#CALL [\主界面基础按钮\击杀奖励.txt] @击杀奖励主页面
+
+[@在线奖励]
+#CALL [\主界面基础按钮\在线奖励.txt] @在线奖励主页面
+
+[@等级福利]
+#CALL [\主界面基础按钮\等级福利.txt] @等级福利主页面
+
+[@联系客服]
+#CALL [\主界面基础按钮\联系客服.txt] @微信礼包页面
+
+[@首充礼包]
+#CALL [\主界面基础按钮\首充界面.txt] @首充主页面
+
+[@打金特权]
+#CALL [\主界面基础按钮\打金特权.txt] @打金特权主页面
+
+[@日卡特权]
+#CALL [\主界面基础按钮\日卡特权.txt] @日卡特权主页面
+
+[@唯一赞助]
+#ACT
+#CALL [\主界面基础按钮\唯一赞助.txt] @唯一赞助页面
+
+[@限时特惠]
+#IF
+#ACT
+#CALL [\主界面基础按钮\限时特惠.txt] @限时特惠界面
+
+[@合服特惠]
+#IF
+#ACT
+#CALL [\主界面基础按钮\合服特惠.txt] @合服特惠界面
+
+[@合服每日充值]
+#CALL [\主界面基础按钮\合服累充.txt] @合服累充页面
+
+[@在线充值]
+#IF
+#ACT
+#CALL [\主界面基础按钮\在线充值.txt] @在线充值界面
+
+[@副装页面]
+#IF
+equal <$CLIENTFLAG> 2
+#act
+MOV s$副装头 <Img|children={1,2}|width=55|height=55|x=278|y=62|img=private/player_main_layer_ui/player_main_layer_ui_mobile/icon_chenghd_03.png|reload=1|esc=0>
+INC s$副装头 <EquipShow|id=1|x=-8|y=-6|width=58|height=58|index=79|showtips=1|reload=1|dblink=@脱下1179>
+
+ADDBUTTON 3902 102 <$STR(s$副装头)>
+
+#IF
+equal <$CLIENTFLAG> 2
+#act
+MOV s$副装链 <Img|children={1,2}|width=55|height=55|x=278|y=122|img=private/player_main_layer_ui/player_main_layer_ui_mobile/icon_chenghd_03.png|reload=1|esc=0>
+INC s$副装链 <EquipShow|id=1|x=-8|y=-8|width=58|height=58|index=80|showtips=1|reload=1|dblink=@脱下1180>
+
+ADDBUTTON 3902 103 <$STR(s$副装链)>
+
+#IF
+equal <$CLIENTFLAG> 2
+#act
+MOV s$副装手 <Img|children={1,2}|width=55|height=55|x=278|y=182|img=private/player_main_layer_ui/player_main_layer_ui_mobile/icon_chenghd_03.png|reload=1|esc=0>
+INC s$副装手 <EquipShow|id=1|x=-8|y=-8|width=58|height=58|index=81|showtips=1|reload=1|dblink=@脱下1181>
+
+ADDBUTTON 3902 104 <$STR(s$副装手)>
+
+#IF
+equal <$CLIENTFLAG> 2
+#act
+MOV s$副装镯 <Img|children={1,2}|width=55|height=55|x=278|y=242|img=private/player_main_layer_ui/player_main_layer_ui_mobile/icon_chenghd_03.png|reload=1|esc=0>
+INC s$副装镯 <EquipShow|id=1|x=-8|y=-8|width=58|height=58|index=82|showtips=1|reload=1|dblink=@脱下1182>
+
+ADDBUTTON 3902 105 <$STR(s$副装镯)>
+
+#IF
+equal <$CLIENTFLAG> 2
+#act
+MOV s$副装戒 <Img|children={1,2}|width=55|height=55|x=8|y=182|img=private/player_main_layer_ui/player_main_layer_ui_mobile/icon_chenghd_03.png|reload=1|esc=0>
+INC s$副装戒 <EquipShow|id=1|x=-8|y=-8|width=58|height=58|index=83|showtips=1|reload=1|dblink=@脱下1183>
+
+ADDBUTTON 3902 106 <$STR(s$副装戒)>
+
+#IF
+equal <$CLIENTFLAG> 2
+#act
+MOV s$副装指 <Img|children={1,2}|width=55|height=55|x=8|y=242|img=private/player_main_layer_ui/player_main_layer_ui_mobile/icon_chenghd_03.png|reload=1|esc=0>
+INC s$副装指 <EquipShow|id=1|x=-8|y=-8|width=58|height=58|index=84|showtips=1|reload=1|dblink=@脱下1184>
+
+ADDBUTTON 3902 107 <$STR(s$副装指)>
+
+#IF
+equal <$CLIENTFLAG> 2
+#act
+MOV s$副装带 <Img|children={1,2}|width=55|height=55|x=60|y=310|img=private/player_main_layer_ui/player_main_layer_ui_mobile/icon_chenghd_03.png|reload=1|esc=0>
+INC s$副装带 <EquipShow|id=1|x=-8|y=-8|width=58|height=58|index=85|showtips=1|reload=1|dblink=@脱下1185>
+
+ADDBUTTON 3902 108 <$STR(s$副装带)>
+
+#IF
+equal <$CLIENTFLAG> 2
+#act
+MOV s$副装靴 <Img|children={1,2}|width=55|height=55|x=220|y=310|img=private/player_main_layer_ui/player_main_layer_ui_mobile/icon_chenghd_03.png|reload=1|esc=0>
+INC s$副装靴 <EquipShow|id=1|x=-8|y=-8|width=58|height=58|index=86|showtips=1|reload=1|dblink=@脱下1186>
+
+ADDBUTTON 3902 109 <$STR(s$副装靴)>
+
+
+
+;-------------------------------------------------------------------------------------------------
+#IF
+equal <$CLIENTFLAG> 1
+#act
+MOV s$副装头 <Img|children={1,2}|width=55|height=55|x=234|y=62|img=private/player_main_layer_ui/player_main_layer_ui_mobile/icon_chenghd_03.png|reload=1|esc=0>
+INC s$副装头 <EquipShow|id=1|x=-8|y=-6|width=58|height=58|index=79|showtips=1|reload=1|dblink=@脱下1179>
+
+ADDBUTTON 3902 302 <$STR(s$副装头)>
+
+#IF
+equal <$CLIENTFLAG> 1
+#act
+MOV s$副装链 <Img|children={1,2}|width=55|height=55|x=234|y=122|img=private/player_main_layer_ui/player_main_layer_ui_mobile/icon_chenghd_03.png|reload=1|esc=0>
+INC s$副装链 <EquipShow|id=1|x=-8|y=-8|width=58|height=58|index=80|showtips=1|reload=1|dblink=@脱下1180>
+
+ADDBUTTON 3902 303 <$STR(s$副装链)>
+
+#IF
+equal <$CLIENTFLAG> 1
+#act
+MOV s$副装手 <Img|children={1,2}|width=55|height=55|x=234|y=182|img=private/player_main_layer_ui/player_main_layer_ui_mobile/icon_chenghd_03.png|reload=1|esc=0>
+INC s$副装手 <EquipShow|id=1|x=-8|y=-8|width=58|height=58|index=81|showtips=1|reload=1|dblink=@脱下1181>
+
+ADDBUTTON 3902 304 <$STR(s$副装手)>
+
+#IF
+equal <$CLIENTFLAG> 1
+#act
+MOV s$副装镯 <Img|children={1,2}|width=55|height=55|x=234|y=242|img=private/player_main_layer_ui/player_main_layer_ui_mobile/icon_chenghd_03.png|reload=1|esc=0>
+INC s$副装镯 <EquipShow|id=1|x=-8|y=-8|width=58|height=58|index=82|showtips=1|reload=1|dblink=@脱下1182>
+
+ADDBUTTON 3902 305 <$STR(s$副装镯)>
+
+#IF
+equal <$CLIENTFLAG> 1
+#act
+MOV s$副装戒 <Img|children={1,2}|width=55|height=55|x=8|y=182|img=private/player_main_layer_ui/player_main_layer_ui_mobile/icon_chenghd_03.png|reload=1|esc=0>
+INC s$副装戒 <EquipShow|id=1|x=-8|y=-8|width=58|height=58|index=83|showtips=1|reload=1|dblink=@脱下1183>
+
+ADDBUTTON 3902 306 <$STR(s$副装戒)>
+
+#IF
+equal <$CLIENTFLAG> 1
+#act
+MOV s$副装指 <Img|children={1,2}|width=55|height=55|x=8|y=242|img=private/player_main_layer_ui/player_main_layer_ui_mobile/icon_chenghd_03.png|reload=1|esc=0>
+INC s$副装指 <EquipShow|id=1|x=-8|y=-8|width=58|height=58|index=84|showtips=1|reload=1|dblink=@脱下1184>
+
+ADDBUTTON 3902 307 <$STR(s$副装指)>
+
+#IF
+equal <$CLIENTFLAG> 1
+#act
+MOV s$副装带 <Img|children={1,2}|width=55|height=55|x=69|y=296|img=private/player_main_layer_ui/player_main_layer_ui_mobile/icon_chenghd_03.png|reload=1|esc=0>
+INC s$副装带 <EquipShow|id=1|x=-8|y=-8|width=58|height=58|index=85|showtips=1|reload=1|dblink=@脱下1185>
+
+ADDBUTTON 3902 308 <$STR(s$副装带)>
+
+#IF
+equal <$CLIENTFLAG> 1
+#act
+MOV s$副装靴 <Img|children={1,2}|width=55|height=55|x=175|y=296|img=private/player_main_layer_ui/player_main_layer_ui_mobile/icon_chenghd_03.png|reload=1|esc=0>
+INC s$副装靴 <EquipShow|id=1|x=-8|y=-8|width=58|height=58|index=86|showtips=1|reload=1|dblink=@脱下1186>
+
+ADDBUTTON 3902 309 <$STR(s$副装靴)>
+;七宗罪展示特效-------------------------------------------------------------------------------------
+#if
+check [250] 1
+equal <$CLIENTFLAG> 2
+#act
+mov S$色欲佩戴 <Effect|x=150|y=110|effectid=70271|effecttype=0|scale=0.85|count=999999999999|act=0|speed=1>
+addbutton 3902 200 <$STR(s$色欲佩戴)>
+
+#if
+check [251] 1
+equal <$CLIENTFLAG> 2
+#act
+mov S$饕餮佩戴 <Effect|x=150|y=110|effectid=70276|effecttype=0|scale=0.85|count=999999999999|act=0|speed=1>
+addbutton 3902 201 <$STR(s$饕餮佩戴)>
+
+#if
+check [252] 1
+equal <$CLIENTFLAG> 2
+#act
+mov S$嫉妒佩戴 <Effect|x=150|y=110|effectid=70280|effecttype=0|scale=0.85|count=999999999999|act=0|speed=1>
+addbutton 3902 202 <$STR(s$嫉妒佩戴)>
+
+#if
+check [253] 1
+equal <$CLIENTFLAG> 2
+#act
+mov S$懒惰佩戴 <Effect|x=150|y=110|effectid=70281|effecttype=0|scale=0.85|count=999999999999|act=0|speed=1>
+addbutton 3902 203 <$STR(s$懒惰佩戴)>
+
+#if
+check [254] 1
+equal <$CLIENTFLAG> 2
+#act
+mov S$贪婪佩戴 <Effect|x=150|y=110|effectid=70279|effecttype=0|scale=0.85|count=999999999999|act=0|speed=1>
+addbutton 3902 204 <$STR(s$贪婪佩戴)>
+
+#if
+check [255] 1
+equal <$CLIENTFLAG> 2
+#act
+mov S$傲慢佩戴 <Effect|x=150|y=110|effectid=70282|effecttype=0|scale=0.85|count=999999999999|act=0|speed=1>
+addbutton 3902 205 <$STR(s$傲慢佩戴)>
+
+#if
+check [256] 1
+equal <$CLIENTFLAG> 2
+#act
+mov S$暴怒佩戴 <Effect|x=150|y=110|effectid=70277|effecttype=0|scale=0.85|count=999999999999|act=0|speed=1>
+addbutton 3902 206 <$STR(s$暴怒佩戴)>
+
+;------------------------------------------------------------------------
+
+#if
+check [250] 1
+equal <$CLIENTFLAG> 1
+#act
+mov S$色欲佩戴 <Effect|x=130|y=110|effectid=70271|effecttype=0|scale=0.7|count=999999999999|act=0|speed=1>
+addbutton 3902 200 <$STR(s$色欲佩戴)>
+
+#if
+check [251] 1
+equal <$CLIENTFLAG> 1
+#act
+mov S$饕餮佩戴 <Effect|x=130|y=110|effectid=70276|effecttype=0|scale=0.7|count=999999999999|act=0|speed=1>
+addbutton 3902 201 <$STR(s$饕餮佩戴)>
+
+#if
+check [252] 1
+equal <$CLIENTFLAG> 1
+#act
+mov S$嫉妒佩戴 <Effect|x=130|y=110|effectid=70280|effecttype=0|scale=0.7|count=999999999999|act=0|speed=1>
+addbutton 3902 202 <$STR(s$嫉妒佩戴)>
+
+#if
+check [253] 1
+equal <$CLIENTFLAG> 1
+#act
+mov S$懒惰佩戴 <Effect|x=130|y=110|effectid=70281|effecttype=0|scale=0.7|count=999999999999|act=0|speed=1>
+addbutton 3902 203 <$STR(s$懒惰佩戴)>
+
+#if
+check [254] 1
+equal <$CLIENTFLAG> 1
+#act
+mov S$贪婪佩戴 <Effect|x=130|y=110|effectid=70279|effecttype=0|scale=0.7|count=999999999999|act=0|speed=1>
+addbutton 3902 204 <$STR(s$贪婪佩戴)>
+
+#if
+check [255] 1
+equal <$CLIENTFLAG> 1
+#act
+mov S$傲慢佩戴 <Effect|x=130|y=110|effectid=70282|effecttype=0|scale=0.7|count=999999999999|act=0|speed=1>
+addbutton 3902 205 <$STR(s$傲慢佩戴)>
+
+#if
+check [256] 1
+equal <$CLIENTFLAG> 1
+#act
+mov S$暴怒佩戴 <Effect|x=130|y=110|effectid=70277|effecttype=0|scale=0.7|count=999999999999|act=0|speed=1>
+addbutton 3902 206 <$STR(s$暴怒佩戴)>
+
+[@打开副装]
+#if
+#act
+OPENHYPERLINK 37
+
+
+
+
+
+
+[@打开他人符石]
+#if
+#act
+#CALL [\主界面基础按钮\他人符石.txt] @他人符石页面
+
+
+[@打开主装]
+#if
+#act
+OPENHYPERLINK 1
+
+[@打开大陆传送]
+#IF
+#ACT
+#CALL [\主界面基础按钮\大陆传送.txt] @大陆传送页面
+
+
+[@388转生礼包]
+#IF
+#ACT
+#CALL [\主界面基础按钮\388转生礼包.txt] @388转生礼包页面
+
+[@488转生礼包]
+#IF
+#ACT
+#CALL [\主界面基础按钮\488转生礼包.txt] @488转生礼包页面
+
+[@588转生礼包]
+#IF
+#ACT
+#CALL [\主界面基础按钮\588转生礼包.txt] @588转生礼包页面
+
+[@688转生礼包]
+#IF
+#ACT
+#CALL [\主界面基础按钮\688转生礼包.txt] @688转生礼包页面
+
+[@788转生礼包]
+#IF
+#ACT
+#CALL [\主界面基础按钮\788转生礼包.txt] @788转生礼包页面
+
+[@888转生礼包]
+#IF
+#ACT
+#CALL [\主界面基础按钮\888转生礼包.txt] @888转生礼包页面
+}

@@ -1,0 +1,410 @@
+[@界面游戏按钮]
+{
+#IF
+#ACT
+
+#CALL [\主界面基础按钮\主界面游戏按钮.txt] @顶部红点检测
+#CALL [\主界面基础按钮\主界面游戏按钮.txt] @属性列表展开
+;==================顶部按钮=========================
+
+#IF
+CHECK [11] 0
+Equal <$CLIENTFLAG> 1
+#ACT
+
+MOV S$界面图标 <ListView|children={3000,3001,3002,3003,3004}|x=580.0|y=34.0|width=665|height=100|rotate=0|margin=14|direction=2|bounce=0|reload=0>
+
+INC S$界面图标 <Button|id=3001|children={8888}|width=67|height=69|x=16.0|y=115.0|color=255|size=18|mimg=custom/TOP/4.png|nimg=custom/TOP/4.png|link=@全民活动>
+INC S$界面图标 <Button|id=3002|children={3100}|width=67|height=69|x=16.0|y=115.0|color=255|size=18|mimg=custom/TOP/2.png|nimg=custom/TOP/2.png|link=@七日签到>
+INC S$界面图标 <Button|id=3003|width=67|height=69|x=16|y=115|color=255|size=18|mimg=custom/TOP/10.png|nimg=custom/TOP/10.png|link=@游戏攻略>
+INC S$界面图标 <Button|id=3004|width=67|height=69|x=16.0|y=115.0|color=255|size=18|mimg=custom/TOP/3.png|nimg=custom/TOP/3.png|link=@交易行>
+
+
+INC S$界面图标 <Button|x=912.0|y=34.0|color=255|size=18|mimg=custom/TOP/zuo.png|nimg=custom/TOP/zuo.png|link=@伸缩按钮>
+INC S$界面图标 <Button|width=67|height=69|x=744.0|y=115.0|color=255|size=18|mimg=custom/TOP/11.png|nimg=custom/TOP/11.png|link=@在线充值>
+
+
+INC S$界面图标 <Button|width=67|height=69|x=824|y=115.0|color=255|size=18|mimg=custom/TOP/7.png|nimg=custom/TOP/7.png|link=@开启盒子>
+
+#if
+equal U50 0
+#act
+INC S$界面图标 <Button|width=67|height=69|x=497.0|y=34.0|color=255|size=18|mimg=custom/TOP/1.png|nimg=custom/TOP/1.png|link=@打金特权>
+
+#if
+check [199] 0
+#act
+INC S$界面图标 <Button|width=67|height=69|x=414.0|y=34.0|color=255|size=18|mimg=custom/TOP/8.png|nimg=custom/TOP/8.png|link=@唯一赞助>
+
+
+#if
+equal <$HFDAYS> 0
+#act
+INC S$界面图标 <Button|width=67|height=69|x=581|y=115.0|children={6a}|color=255|size=18|mimg=custom/TOP/12.png|nimg=custom/TOP/12.png|link=@累计充值>
+
+
+#if
+large <$HFDAYS> 0
+#act
+INC S$界面图标 <Button|width=67|height=69|x=581|y=115.0|children={6a}|color=255|size=18|mimg=custom/TOP/12.png|nimg=custom/TOP/12.png|link=@合服每日充值>
+;INC S$界面图标 <Effect|width=67|height=69|id=6a|x=34|y=33|scale=0.7|speed=1|dir=5|effectid=4005|act=0|effecttype=0>
+
+
+#if    
+check [73] 0
+#act
+INC S$界面图标 <Button|width=67|height=69|x=495.0|y=115.0|color=255|size=18|mimg=custom/TOP/9.png|nimg=custom/TOP/9.png|link=@限时特惠>
+
+#if    
+check [54] 0
+#act
+INC S$界面图标 <Button|width=67|height=69|x=414.0|y=115.0|color=255|size=18|mimg=custom/TOP/6.png|nimg=custom/TOP/6.png|link=@首充礼包>
+
+#if    
+large <$HFDAYS> 0
+#act
+INC S$界面图标 <Button|width=67|height=69|x=495.0|y=115.0|color=255|size=18|mimg=custom/TOP/13.png|nimg=custom/TOP/13.png|link=@合服特惠>
+
+#if    
+CHECKRENEWLEVEL = 4
+check [190] 0
+#act
+INC S$界面图标 <Button|width=67|height=69|x=280.0|y=34.0|color=255|size=18|mimg=custom/TOP/14.png|nimg=custom/TOP/14.png|link=@388转生礼包>
+
+#if    
+CHECKRENEWLEVEL = 5
+check [191] 0
+#act
+INC S$界面图标 <Button|width=67|height=69|x=280.0|y=34.0|color=255|size=18|mimg=custom/TOP/14.png|nimg=custom/TOP/14.png|link=@488转生礼包>
+
+#if    
+CHECKRENEWLEVEL = 6
+check [192] 0
+#act
+INC S$界面图标 <Button|width=67|height=69|x=280.0|y=34.0|color=255|size=18|mimg=custom/TOP/14.png|nimg=custom/TOP/14.png|link=@588转生礼包>
+
+#if    
+CHECKRENEWLEVEL = 7
+check [193] 0
+#act
+INC S$界面图标 <Button|width=67|height=69|x=280.0|y=34.0|color=255|size=18|mimg=custom/TOP/14.png|nimg=custom/TOP/14.png|link=@688转生礼包>
+
+#if    
+CHECKRENEWLEVEL = 8
+check [194] 0
+#act
+INC S$界面图标 <Button|width=67|height=69|x=280.0|y=34.0|color=255|size=18|mimg=custom/TOP/14.png|nimg=custom/TOP/14.png|link=@788转生礼包>
+
+#if    
+CHECKRENEWLEVEL = 9
+check [195] 0
+#act
+INC S$界面图标 <Button|width=67|height=69|x=280.0|y=34.0|color=255|size=18|mimg=custom/TOP/14.png|nimg=custom/TOP/14.png|link=@888转生礼包>
+
+#if
+large G20 0
+#act
+INC S$界面图标  <Effect|id=8888|width=67|height=69|x=34|y=33|scale=0.7|speed=1|dir=5|effectid=4005|act=0|effecttype=0>
+
+
+
+#IF
+CHECK [11] 0
+Equal <$CLIENTFLAG> 2
+#ACT
+
+MOV S$界面图标 <ListView|children={3000,3001,3002,3003,3004}|x=580.0|y=34.0|width=665|height=100|rotate=0|margin=14|direction=2|bounce=0|reload=0>
+
+INC S$界面图标 <Button|id=3001|children={8888}|width=67|height=69|x=16.0|y=115.0|color=255|size=18|mimg=custom/TOP/4.png|nimg=custom/TOP/4.png|link=@全民活动>
+INC S$界面图标 <Button|id=3002|children={3100}|width=67|height=69|x=16.0|y=115.0|color=255|size=18|mimg=custom/TOP/2.png|nimg=custom/TOP/2.png|link=@七日签到>
+INC S$界面图标 <Button|id=3003|width=67|height=69|x=16|y=115|color=255|size=18|mimg=custom/TOP/10.png|nimg=custom/TOP/10.png|link=@游戏攻略>
+INC S$界面图标 <Button|id=3004|width=67|height=69|x=16.0|y=115.0|color=255|size=18|mimg=custom/TOP/3.png|nimg=custom/TOP/3.png|link=@交易行>
+
+
+INC S$界面图标 <Button|x=895.0|y=34.0|color=255|size=18|mimg=custom/TOP/zuo.png|nimg=custom/TOP/zuo.png|link=@伸缩按钮>
+INC S$界面图标 <Button|width=67|height=69|x=744.0|y=115.0|color=255|size=18|mimg=custom/TOP/11.png|nimg=custom/TOP/11.png|link=@在线充值>
+
+
+INC S$界面图标 <Button|width=67|height=69|x=824|y=115.0|color=255|size=18|mimg=custom/TOP/7.png|nimg=custom/TOP/7.png|link=@开启盒子>
+
+#if
+equal U50 0
+#act
+INC S$界面图标 <Button|width=67|height=69|x=497.0|y=34.0|color=255|size=18|mimg=custom/TOP/1.png|nimg=custom/TOP/1.png|link=@打金特权>
+
+#if
+check [199] 0
+#act
+INC S$界面图标 <Button|width=67|height=69|x=414.0|y=34.0|color=255|size=18|mimg=custom/TOP/8.png|nimg=custom/TOP/8.png|link=@唯一赞助>
+
+
+#if
+
+equal <$HFDAYS> 0
+#act
+INC S$界面图标 <Button|width=67|height=69|x=581|y=115.0|children={6a}|color=255|size=18|mimg=custom/TOP/12.png|nimg=custom/TOP/12.png|link=@累计充值>
+
+
+#if
+large <$HFDAYS> 0
+#act
+INC S$界面图标 <Button|width=67|height=69|x=581|y=115.0|children={6a}|color=255|size=18|mimg=custom/TOP/12.png|nimg=custom/TOP/12.png|link=@合服每日充值>
+
+
+#if    
+check [73] 0
+#act
+INC S$界面图标 <Button|width=67|height=69|x=495.0|y=115.0|color=255|size=18|mimg=custom/TOP/9.png|nimg=custom/TOP/9.png|link=@限时特惠>
+
+#if    
+check [54] 0
+#act
+INC S$界面图标 <Button|width=67|height=69|x=414.0|y=115.0|color=255|size=18|mimg=custom/TOP/6.png|nimg=custom/TOP/6.png|link=@首充礼包>
+
+#if    
+large <$HFDAYS> 0
+#act
+INC S$界面图标 <Button|width=67|height=69|x=495.0|y=115.0|color=255|size=18|mimg=custom/TOP/13.png|nimg=custom/TOP/13.png|link=@合服特惠>
+
+#if    
+CHECKRENEWLEVEL = 4
+check [190] 0
+#act
+INC S$界面图标 <Button|width=67|height=69|x=280.0|y=34.0|color=255|size=18|mimg=custom/TOP/14.png|nimg=custom/TOP/14.png|link=@388转生礼包>
+
+#if    
+CHECKRENEWLEVEL = 5
+check [191] 0
+#act
+INC S$界面图标 <Button|width=67|height=69|x=280.0|y=34.0|color=255|size=18|mimg=custom/TOP/14.png|nimg=custom/TOP/14.png|link=@488转生礼包>
+
+#if    
+CHECKRENEWLEVEL = 6
+check [192] 0
+#act
+INC S$界面图标 <Button|width=67|height=69|x=280.0|y=34.0|color=255|size=18|mimg=custom/TOP/14.png|nimg=custom/TOP/14.png|link=@588转生礼包>
+
+#if    
+CHECKRENEWLEVEL = 7
+check [193] 0
+#act
+INC S$界面图标 <Button|width=67|height=69|x=280.0|y=34.0|color=255|size=18|mimg=custom/TOP/14.png|nimg=custom/TOP/14.png|link=@688转生礼包>
+
+#if    
+CHECKRENEWLEVEL = 8
+check [194] 0
+#act
+INC S$界面图标 <Button|width=67|height=69|x=280.0|y=34.0|color=255|size=18|mimg=custom/TOP/14.png|nimg=custom/TOP/14.png|link=@788转生礼包>
+
+#if    
+CHECKRENEWLEVEL = 9
+check [195] 0
+#act
+INC S$界面图标 <Button|width=67|height=69|x=280.0|y=34.0|color=255|size=18|mimg=custom/TOP/14.png|nimg=custom/TOP/14.png|link=@888转生礼包>
+
+
+#if
+large G20 0
+#act
+INC S$界面图标 <Effect|id=8888|width=67|height=69|x=34|y=33|scale=0.7|speed=1|dir=5|effectid=4005|act=0|effecttype=0>
+
+
+#if
+CHECKJOB Warrior
+#act
+mov S$职业 8
+mov N$攻魔道展示 <$MAXDC>
+
+
+#if
+CHECKJOB Wizard
+#act
+mov S$职业 9
+mov N$攻魔道展示 <$MAXMC>
+
+
+#if
+CHECKJOB Taoist
+#act
+mov S$职业 7
+mov N$攻魔道展示 <$MAXSC>
+
+;<$STR(U232)> 打怪爆率---<$STR(U230)> 切割-----<$STR(T211)>复活状态；-----------<$STR(N$攻魔道展示)>
+
+#if
+#act
+;<Img|x=0|y=0|width=<$SCREENWIDTH>|height=30|reload=1|img=npc/zd.png|esc=0>
+;<Layout|x=0|y=0|width=<$SCREENWIDTH>|height=30>
+mov S$属性图标页面 <Img|x=0|y=0|width=<$SCREENWIDTH>|height=29|reload=1|img=npc/zd.png|esc=0>
+inc S$属性图标页面 <Img|x=0|y=3|children={200}|width=191|height=25|reload=1|img=topbtn/sx/1.png|esc=0>
+inc S$属性图标页面 <Text|id=200|outline=0|x=70|y=5|outlinecolor=0|text=$STM(MONEY_元宝)|size=14|color=255>
+inc S$属性图标页面 <Img|x=163|y=3|children={201}|width=191|height=25|reload=1|img=topbtn/sx/2.png|esc=0>
+inc S$属性图标页面 <Text|id=201|outline=0|x=70|y=5|outlinecolor=0|text=$STM(MONEY_点卡)|size=14|color=255>
+inc S$属性图标页面 <Img|x=326|y=3|children={202}|width=191|height=25|reload=1|img=topbtn/sx/3.png|esc=0>
+inc S$属性图标页面 <Text|id=202|outline=0|x=70|y=5|outlinecolor=0|text=$STM(MONEY_点卷)|size=14|color=255>
+inc S$属性图标页面 <Img|x=489|y=3|children={203}|width=191|height=25|reload=1|img=topbtn/sx/4.png|esc=0>
+inc S$属性图标页面 <Text|id=203|outline=0|x=99|y=5|outlinecolor=0|text=<$STR(U232)>%|size=14|color=255>
+inc S$属性图标页面 <Img|x=646|y=3|children={204}|width=191|height=25|reload=1|img=topbtn/sx/<$STR(S$职业)>.png|esc=0>
+inc S$属性图标页面 <Text|id=204|outline=0|x=99|y=5|outlinecolor=0|text=<$STR(N$攻魔道展示)>|size=14|color=255>
+inc S$属性图标页面 <Img|x=809|y=3|children={205}|width=191|height=25|reload=1|img=topbtn/sx/5.png|esc=0>
+inc S$属性图标页面 <Text|id=205|outline=0|x=99|y=5|outlinecolor=0|text=<$STR(U230)>|size=14|color=255>
+inc S$属性图标页面 <Img|x=972|y=3|children={206}|width=191|height=25|reload=1|img=topbtn/sx/6.png|esc=0>
+inc S$属性图标页面 <Text|id=206|outline=0|x=99|y=5|outlinecolor=0|text=<$STR(T211)>|size=14|color=255>
+addbutton 1101 50 <$STR(S$属性图标页面)>
+
+
+
+#IF
+NOT EQUAL S$福利中心
+#ACT
+INC S$界面图标 <$STR(S$福利中心)>
+
+
+#IF
+NOT EQUAL S$怪物探查
+#ACT
+INC S$界面图标 <$STR(S$怪物探查)>
+
+
+#IF
+NOT EQUAL S$游戏攻略
+#ACT
+INC S$界面图标 <$STR(S$游戏攻略)>
+
+#IF
+NOT EQUAL S$七日签到
+#ACT
+INC S$界面图标 <$STR(S$七日签到)>
+
+#IF
+NOT EQUAL S$首充礼包
+#ACT
+INC S$界面图标 <$STR(S$首充礼包)>
+
+#IF
+NOT EQUAL S$日卡特权
+#ACT
+INC S$界面图标 <$STR(S$日卡特权)>
+
+#IF
+NOT EQUAL S$打金特权
+#ACT
+INC S$界面图标 <$STR(S$打金特权)>
+
+
+#IF
+NOT EQUAL S$唯一赞助
+#ACT
+INC S$界面图标 <$STR(S$唯一赞助)>
+
+#IF
+NOT EQUAL S$相逢会员
+#ACT
+INC S$界面图标 <$STR(S$相逢会员)>
+
+#IF
+NOT EQUAL S$在线充值
+#ACT
+INC S$界面图标 <$STR(S$在线充值)>
+
+#IF
+NOT EQUAL S$游戏礼包
+#ACT
+INC S$界面图标 <$STR(S$游戏礼包)>
+
+#IF
+NOT EQUAL S$特惠礼包
+#ACT
+INC S$界面图标 <$STR(S$特惠礼包)>
+
+#IF
+NOT EQUAL S$每日充值
+#ACT
+INC S$界面图标 <$STR(S$每日充值)>
+
+#IF
+NOT EQUAL S$高级每日充值
+#ACT
+INC S$界面图标 <$STR(S$高级每日充值)>
+
+#IF
+NOT EQUAL S$7到12天每日
+#ACT
+INC S$界面图标 <$STR(S$7到12天每日)>
+
+#IF
+NOT EQUAL S$15到19天每日
+#ACT
+INC S$界面图标 <$STR(S$15到19天每日)>
+
+#IF
+NOT EQUAL S$第四版活动
+#ACT
+INC S$界面图标 <$STR(S$第四版活动)>
+
+#IF
+NOT EQUAL S$第五版活动
+#ACT
+INC S$界面图标 <$STR(S$第五版活动)>
+
+#IF
+NOT EQUAL S$第六版活动
+#ACT
+INC S$界面图标 <$STR(S$第六版活动)>
+
+
+#if
+Equal <$CLIENTFLAG> 2
+#act
+inc S$界面图标 <Button|width=67|height=69|x=664.0|y=115.0|mimg=custom/TOP/15.png|nimg=custom/TOP/15.png|size=14|color=255|outline=1|link=@联系客服的按钮>
+#elseact
+inc S$界面图标 <Button|width=67|height=69|x=664.0|y=115.0|mimg=custom/TOP/15.png|nimg=custom/TOP/15.png|size=14|color=255|link=@联系客服的按钮>
+
+#IF
+#ACT
+addbutton 101 1 <$STR(S$界面图标)>
+
+
+
+#IF
+CHECK [11] 1
+Equal <$CLIENTFLAG> 1
+#ACT
+MOV S$界面图标 <ListView|children={3007}|x=912.0|y=35.0|width=80|height=100|rotate=0|margin=10|direction=2|bounce=0|reload=0>
+INC S$界面图标 <Button|id=3007|x=16.0|y=115.0|color=255|size=18|mimg=custom/TOP/you.png|nimg=custom/TOP/you.png|link=@伸缩按钮>
+addbutton 101 1 <$STR(S$界面图标)>
+BREAK
+
+#IF
+CHECK [11] 1
+Equal <$CLIENTFLAG> 2
+#ACT
+MOV S$界面图标 <ListView|children={3007}|x=895.0|y=35.0|width=80|height=100|rotate=0|margin=10|direction=2|bounce=0|reload=0>
+INC S$界面图标 <Button|id=3007|x=16.0|y=115.0|color=255|size=18|mimg=custom/TOP/you.png|nimg=custom/TOP/you.png|link=@伸缩按钮>
+addbutton 101 1 <$STR(S$界面图标)>
+BREAK
+
+
+
+}
+
+[@属性列表展开]
+{
+
+}
+
+[@顶部红点检测]
+{
+#or
+check [130] 1
+check [131] 1
+check [132] 1
+check [133] 1
+#act
+MOV S$福利中心 <Effect|id=3100|x=35.0|y=-13.0|scale=1|speed=1|dir=5|effectid=8417|act=0|effecttype=0>
+#elseact
+MOV S$福利中心
+
+
+
+}

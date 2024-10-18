@@ -1,0 +1,2240 @@
+[@main]
+
+#if
+equal U86 0
+#act
+goto @初始化
+
+#if
+large U86 0
+#act
+goto @初始化武器
+
+#if
+equal U88 0
+#act
+goto @初始化
+
+#if
+large U88 0
+#act
+goto @初始化衣服
+
+[@初始化武器]
+#if
+#act
+SetItemFlag 1 <$str(U87)> 1
+mov S$选中框
+mov S$是否已选保护券 否
+mov S$强化职业
+mov S$加入增幅石
+goto @检测武器强化程度
+
+[@初始化衣服]
+#if
+#act
+SetItemFlag 1 <$str(U89)> 1
+mov S$选中框
+mov S$是否已选保护券 否
+mov S$强化职业
+mov S$加入增幅石
+goto @检测衣服强化程度
+
+[@初始化]
+#if
+#act
+mov N$成功率 90
+mov N$衣服成功率 90
+mov S$选中框
+mov N$选中展示
+mov S$装备名字 
+mov N$选中ID
+mov N$当前强化 0
+mov N$当前衣服强化 0
+mov S$强化职业 
+mov N$下阶强化 
+mov N$下阶衣服强化
+mov S$强化文字当前显示 
+mov S$强化文字下阶显示 
+mov N$强化属性位置
+mov S$加入增幅石
+mov S$加入保护券
+mov N$转生石四级数量 9
+;一级增幅石
+mov N$转生石二级数量 
+;二级增幅石
+mov N$转生石三级数量 
+;保护券数量
+mov N$保护券数量 
+mov S$是否已选保护券 否
+mov N$武器强化点卡
+mov N$武器强化元宝
+mov N$衣服强化点卡
+mov N$衣服强化元宝
+goto @检测武器强化程度
+
+
+[@检测武器强化程度]
+
+#if
+CheckItemFlag 1 1
+#act
+mov N$当前强化 1
+mov N$下阶强化 3
+MOV N$成功率 80
+mov N$转生石四级数量 18
+mov N$武器强化元宝 20000
+mov N$武器强化点卡 2000
+mov S$加入保护券 
+
+#if
+CheckItemFlag 1 2
+#act
+mov N$当前强化 3
+mov N$下阶强化 6
+MOV N$成功率 70
+mov N$武器强化元宝 30000
+mov N$武器强化点卡 3000
+mov N$转生石四级数量 27
+mov S$加入保护券
+
+#if
+CheckItemFlag 1 3
+#act
+sendmsg 9 强化3
+mov N$当前强化 6
+mov N$下阶强化 10
+MOV N$成功率 60
+mov N$转生石四级数量 36
+mov S$加入保护券
+mov N$武器强化元宝 40000
+mov N$武器强化点卡 4000
+
+#if
+CheckItemFlag 1 4
+#act
+mov N$当前强化 10
+mov N$下阶强化 15
+MOV N$成功率 50
+mov N$转生石四级数量 45
+mov S$加入保护券
+mov N$武器强化元宝 50000
+mov N$武器强化点卡 5000
+
+#if
+CheckItemFlag 1 5
+#act
+mov N$当前强化 15
+mov N$下阶强化 21
+MOV N$成功率 40
+mov N$转生石四级数量 54
+;显示保护券
+mov S$加入保护券 保护券
+mov N$保护券数量 1
+mov N$武器强化元宝 60000
+mov N$武器强化点卡 6000
+
+#if
+CheckItemFlag 1 6
+#act
+mov N$当前强化 21
+mov N$下阶强化 28
+MOV N$成功率 30
+mov N$转生石四级数量 63
+;显示保护券
+mov S$加入保护券 保护券
+mov N$保护券数量 3
+mov N$武器强化元宝 70000
+mov N$武器强化点卡 7000
+
+#if
+CheckItemFlag 1 7
+#act
+mov N$当前强化 28
+mov N$下阶强化 36
+MOV N$成功率 20
+mov N$转生石四级数量 72
+;显示保护券
+mov S$加入保护券 保护券
+mov N$保护券数量 6
+mov N$武器强化元宝 80000
+mov N$武器强化点卡 8000
+
+#if
+CheckItemFlag 1 8
+#act
+mov N$当前强化 36
+mov N$下阶强化 45
+MOV N$成功率 10
+mov N$转生石四级数量 81
+;显示保护券
+mov S$加入保护券 保护券
+mov N$保护券数量 9
+mov N$武器强化元宝 90000
+mov N$武器强化点卡 9000
+
+#if
+CheckItemFlag 1 9
+#act
+mov N$当前强化 45
+mov N$下阶强化 55
+mov N$转生石四级数量 90
+MOV N$成功率 1
+mov S$加入保护券
+mov N$保护券数量 12
+mov N$武器强化元宝 100000
+mov N$武器强化点卡 10000
+
+
+#if
+CheckItemFlag 1 10
+#act
+mov N$当前强化 55
+mov N$下阶强化 MAX
+mov N$转生石四级数量 100
+MOV N$成功率 999
+mov S$加入保护券
+
+#IF
+not equal S$选中框 
+#ACT
+GOTO @强化文字变化
+#elseact
+goto @装备强化页面
+
+[@检测衣服强化程度]
+#if
+CheckItemFlag 0 11
+#act
+mov N$当前衣服强化 30
+mov N$下阶衣服强化 60
+mov N$转生石四级数量 18
+MOV N$衣服成功率 80
+mov N$衣服强化元宝 20000
+mov N$衣服强化点卡 2000
+mov S$加入保护券 
+
+#if
+CheckItemFlag 0 12
+#act
+mov N$当前衣服强化 60
+mov N$下阶衣服强化 120
+mov N$转生石四级数量 27
+MOV N$衣服成功率 70
+mov N$衣服强化元宝 30000
+mov N$衣服强化点卡 3000
+mov S$加入保护券 
+
+#if
+CheckItemFlag 0 13
+#act
+mov N$当前衣服强化 120
+mov N$下阶衣服强化 200
+mov N$转生石四级数量 36
+MOV N$衣服成功率 60
+mov N$衣服强化元宝 40000
+mov N$衣服强化点卡 4000
+mov S$加入保护券 
+
+#if
+CheckItemFlag 0 14
+#act
+mov N$当前衣服强化 200
+mov N$下阶衣服强化 300
+mov N$转生石四级数量 45
+MOV N$衣服成功率 50
+mov N$衣服强化元宝 50000
+mov N$衣服强化点卡 5000
+mov S$加入保护券 
+
+#if
+CheckItemFlag 0 15
+#act
+mov N$当前衣服强化 300
+mov N$下阶衣服强化 420
+mov N$转生石四级数量 54
+MOV N$衣服成功率 40
+;显示保护券
+mov S$加入保护券 保护券
+mov N$保护券数量 1
+mov N$衣服强化元宝 60000
+mov N$衣服强化点卡 6000
+
+#if
+CheckItemFlag 0 16
+#act
+mov N$当前衣服强化 420
+mov N$下阶衣服强化 560
+mov N$转生石四级数量 63
+MOV N$衣服成功率 30
+;显示保护券
+mov S$加入保护券 保护券
+mov N$保护券数量 3
+mov N$衣服强化元宝 70000
+mov N$衣服强化点卡 7000
+
+#if
+CheckItemFlag 0 17
+#act
+mov N$当前衣服强化 560
+mov N$下阶衣服强化 720
+mov N$转生石四级数量 72
+MOV N$衣服成功率 20
+;显示保护券
+mov S$加入保护券 保护券
+mov N$保护券数量 6
+mov N$衣服强化元宝 80000
+mov N$衣服强化点卡 8000
+
+#if
+CheckItemFlag 0 18
+#act
+mov N$当前衣服强化 720
+mov N$下阶衣服强化 900
+mov N$转生石四级数量 81
+MOV N$衣服成功率 10
+;显示保护券
+mov S$加入保护券 保护券
+mov N$保护券数量 9
+mov N$衣服强化元宝 90000
+mov N$衣服强化点卡 9000
+
+#if
+CheckItemFlag 0 19
+#act
+mov N$当前衣服强化 900
+mov N$下阶衣服强化 1100
+mov N$转生石四级数量 90
+MOV N$衣服成功率 1
+;显示保护券
+mov S$加入保护券 保护券
+mov N$保护券数量 12
+mov N$衣服强化元宝 100000
+mov N$衣服强化点卡 10000
+
+#if
+CheckItemFlag 0 20
+#act
+mov N$当前衣服强化 1100
+mov N$下阶衣服强化 MAX
+mov N$转生石四级数量 100
+MOV N$衣服成功率 100
+mov S$加入保护券
+
+#IF
+not equal S$选中框 
+#ACT
+GOTO @强化衣服文字变化
+#elseact
+goto @装备强化页面
+
+[@强化文字变化]
+#if
+EQUAL N$当前强化 0
+#act
+MOV N$成功率 90
+mov N$武器强化元宝 10000
+mov N$武器强化点卡 1000
+mov N$转生石四级数量 9
+mov S$强化文字当前显示  <$str(S$强化职业)>+0
+mov S$强化文字下阶显示  <$str(S$强化职业)>+1
+
+#IF
+EQUAL N$当前强化 55
+#ACT
+mov S$强化文字当前显示  <$str(S$强化职业)>+<$str(N$当前强化)>
+mov S$强化文字下阶显示  MAX
+mov N$转生石四级数量 100
+
+#IF
+small N$当前强化 55
+not equal N$当前强化 0
+#ACT
+mov S$强化文字当前显示  <$str(S$强化职业)>+<$str(N$当前强化)>
+mov S$强化文字下阶显示  <$str(S$强化职业)>+<$str(N$下阶强化)>
+
+#if
+#act
+goto @装备强化页面
+
+[@强化衣服文字变化]
+#if
+EQUAL <$str(N$当前衣服强化)> 0
+#act
+MOV N$成功率 90
+mov N$衣服强化元宝 10000
+mov N$衣服强化点卡 1000
+mov S$强化文字当前显示  <$str(S$强化职业)>+0
+mov S$强化文字下阶显示  <$str(S$强化职业)>+30
+mov N$转生石四级数量 9
+
+#IF
+EQUAL N$当前衣服强化 1100
+#ACT
+mov S$强化文字当前显示  <$str(S$强化职业)>+<$str(N$当前衣服强化)>
+mov S$强化文字下阶显示  MAX
+mov N$转生石四级数量 100
+
+#IF
+small N$当前衣服强化 1100
+not equal N$当前衣服强化 0
+#ACT
+mov S$强化文字当前显示  <$str(S$强化职业)>+<$str(N$当前衣服强化)>
+mov S$强化文字下阶显示  <$str(S$强化职业)>+<$str(N$下阶衣服强化)>
+
+#if
+#act
+goto @装备强化页面
+
+[@装备强化页面]
+#if
+#say
+
+<Img|children={a,b,c,d,e,f,g,h,i,j,k,1i,2i,3i,4i,5i,6i,7i,8i,9i}|a=4|x=450.0|y=316.0|width=950|height=610|esc=1|move=1|img=npc/zbqh/bg.png|show=4|reset=1|loadDelay=0|bg=1>
+<Button|x=865.0|y=32.0|mimg=public/close-2.png|nimg=public/close-2.png|link=@exit>
+#if
+equal <$str(S$加入增幅石)>
+not equal <$str(S$选中框)> 
+#say
+<Button|id=7i|x=490.0|y=458.0|width=50|height=58|nimg=npc/fshc/1.png|move=0|show=4|esc=1|mimg=npc/fshc/1.png|loadDelay=0|reset=1|link=@添加增幅石>
+
+#if
+equal <$str(S$加入增幅石)> 一级增幅石
+#say
+<ItemShow|id=8i|x=490.0|y=450.0|width=70|height=70|itemid=20264|itemcount=1|bgtype=0|showtips=1|link=@添加增幅石>
+
+#if
+equal <$str(S$加入增幅石)> 二级增幅石
+#say
+<ItemShow|id=9i|x=490.0|y=450.0|width=70|height=70|itemid=20265|itemcount=1|bgtype=0|showtips=1|link=@添加增幅石>
+
+#if
+check [510] 1
+#say
+<Img|x=182.0|y=292.0|show=0|loadDelay=1|img=public/bg_npc_01.png|move=0|reset=1>
+<Button|x=692.0|y=296.0|mimg=public/close-2.png|nimg=public/close-2.png|link=@增幅关闭>
+<Text|x=296.0|y=355.0|size=18|color=255|text=是否消耗一个增幅券，提升强化成功率？>
+<ItemShow|x=366.0|y=402.0|width=70|height=70|itemid=20264|itemcount=1|showtips=1|bgtype=0|link=@一级增幅石>
+<ItemShow|x=470.0|y=402.0|width=70|height=70|itemid=20265|itemcount=1|showtips=1|bgtype=0|link=@二级增幅石>
+
+
+#if
+equal <$str(S$加入保护券)> 保护券
+equal <$str(S$是否已选保护券)> 否
+not equal <$str(S$选中框)> 
+#say
+<Button|id=5i|x=550.0|y=458.0|width=50|height=58|reset=1|nimg=npc/fshc/1.png|show=4|esc=1|mimg=npc/fshc/1.png|loadDelay=0|move=0|link=@添加保护券>
+
+#if
+equal <$str(S$加入保护券)> 保护券
+equal <$str(S$是否已选保护券)> 是
+#say
+<ItemShow|id=6i|children={222}|x=545.0|y=450.0|width=70|height=70|itemid=20266|itemcount=0|bgtype=0|showtips=1|link=@添加保护券>
+<Text|id=222|a=4|x=25|y=20|percentx=81.8|percenty=84.8|color=256|outline=1|size=14|text=<$str(N$保护券数量)>>
+
+#if
+check [512] 1
+#say
+<Img|x=182.0|y=292.0|reset=1|move=0|loadDelay=1|img=public/bg_npc_01.png|show=0>
+<Button|x=691.0|y=296.0|mimg=public/close-2.png|nimg=public/close-2.png|link=@保护关闭>
+<Text|x=227.0|y=358.0|color=255|size=18|text=是否消耗<$str(N$保护券数量)>保护券，保护本次不降强化等级？>
+<ItemShow|x=430.0|y=415.0|width=70|height=70|itemid=20266|itemcount=<$str(N$保护券数量)>|bgtype=0|showtips=1|link=@选择保护券>
+
+#if
+not equal <$USEITEMNAME[1]>
+#say
+<Img|id=a|children={aa,bb,ee}|x=83.0|y=136.0|width=200|height=80|img=npc/zbqh/1.png|show=4|esc=1|reset=1|loadDelay=0|move=0|link=@点击武器#装备名字=<$WEAPON>>
+<EquipShow|id=aa|x=18.0|y=8.0|width=70|height=70|reload=1|showtips=1|index=1|bgtype=0|link=@点击武器#装备名字=<$WEAPON>>
+<Effect|id=ee|x=-43.0|y=-49.0|scale=1|speed=1.4|effecttype=0|dir=5|effectid=34001|act=0>
+<Layout|id=bb|children={1}|x=86.0|y=10.0|width=110|height=62>
+<Text|id=1|a=4|x=25|y=20|percentx=47.3|percenty=46.8|color=250|outline=1|size=14|text=<$USEITEMNAME[1]>>
+
+#if
+not equal <$USEITEMNAME[0]>
+#say
+<Img|id=b|children={cc,dd,ff}|x=83.0|y=220.0|width=200|height=80|img=npc/zbqh/1.png|show=4|esc=1|reset=1|loadDelay=0|move=0|link=@点击衣服#装备名字=<$DRESS>>
+<EquipShow|id=cc|x=18.0|y=8.0|width=70|height=70|reload=1|showtips=1|index=0|bgtype=0|link=@点击衣服#装备名字=<$DRESS>>
+<Effect|id=ff|x=-43.0|y=-49.0|scale=1|speed=1.4|effecttype=0|dir=5|effectid=34001|act=0>
+<Layout|id=dd|children={2}|x=86.0|y=10.0|width=110|height=62>
+<Text|id=2|a=4|x=25|y=20|percentx=47.3|percenty=46.8|color=250|outline=1|size=14|text=<$USEITEMNAME[0]>>
+
+
+#if
+#say
+<Img|id=d|x=820.0|y=120.0|width=50|height=44|move=0|reset=1|esc=1|img=npc/zbqh/4.png|show=4|loadDelay=0>
+<Button|id=e|x=760.0|y=505.0|width=100|height=37|nimg=npc/zbqh/3.png|mimg=npc/zbqh/3.png|link=@开始强化>
+;强化石
+
+
+#if
+not equal <$str(S$选中框)> 
+#say
+;显示装备
+<Layout|id=c|children={1a}|x=530.0|y=304.0|width=130|height=31>
+<Text|id=1a|a=4|x=25|y=20|percentx=52.3|percenty=51.6|color=250|outline=1|size=14|text=<$STR(S$装备名字)>>
+;当前攻魔道
+<Layout|id=h|children={2a}|x=410.0|y=360.0|width=144|height=31>
+<Text|id=2a|a=4|x=25|y=20|percentx=49.3|percenty=48.4|color=250|outline=1|size=14|text=<$STR(S$强化文字当前显示)>>
+;强化攻魔道
+<Layout|id=i|children={3a}|x=642.0|y=360.0|width=144|height=31>
+<Text|id=3a|a=4|x=25|y=20|percentx=49.3|percenty=48.4|color=250|outline=1|size=14|text=<$STR(S$强化文字下阶显示)>>
+
+<$str(S$选中框)>
+
+<ItemShow|id=f|children={111}|x=426.0|y=454.0|width=70|height=70|itemid=20263|itemcount=0|bgtype=0|showtips=1>
+<Text|id=111|a=4|x=25|y=20|percentx=81.8|percenty=84.8|color=256|outline=1|size=14|text=<$str(N$转生石四级数量)>>
+<Effect|id=g|x=365.0|y=397.0|scale=1|speed=1.4|effecttype=0|dir=5|effectid=34001|act=0>
+
+
+
+#or
+equal <$str(S$强化职业)> 物理攻击
+equal <$str(S$强化职业)> 魔法攻击
+equal <$str(S$强化职业)> 道术攻击
+#say
+<Text|x=735.0|y=490.0|color=250|outline=1|size=14|text=成功率：<$str(N$成功率)>%>
+<ItemShow|id=1i|x=607.0|y=474.0|width=70|height=70|itemid=1|itemcount=0|scale=0.5|bgtype=0|showtips=1>
+<Text|id=2i|x=657.0|y=501.0|size=12|color=255|text=×<$str(N$武器强化元宝)>>
+<ItemShow|id=3i|x=607.0|y=498.0|width=70|height=70|itemid=3|itemcount=0|scale=0.5|bgtype=0|showtips=1>
+<Text|id=4i|x=657.0|y=525.0|size=12|color=255|text=×<$str(N$武器强化点卡)>>
+
+#if
+equal <$str(S$强化职业)> 生命值
+#say
+<Text|x=735.0|y=490.0|outline=1|size=14|color=250|text=成功率：<$str(N$衣服成功率)>%>
+<ItemShow|id=1i|x=607.0|y=474.0|width=70|height=70|itemid=1|itemcount=0|scale=0.5|bgtype=0|showtips=1>
+<Text|id=2i|x=657.0|y=501.0|size=12|color=255|text=×<$str(N$衣服强化元宝)>>
+<ItemShow|id=3i|x=607.0|y=498.0|width=70|height=70|itemid=3|itemcount=0|scale=0.5|bgtype=0|showtips=1>
+<Text|id=4i|x=657.0|y=525.0|size=12|color=255|text=×<$str(N$衣服强化点卡)>>
+
+
+
+
+
+
+[@添加增幅石]
+#if
+not equal <$str(S$强化职业)> 生命值
+#act
+goto @检测武器强化程度
+
+#if
+equal <$str(S$强化职业)> 生命值
+#act
+goto @检测衣服强化程度
+
+
+#if
+#act
+set [510] 1
+goto @装备强化页面
+
+[@增幅关闭]
+#if
+#act
+set [510] 0
+goto @装备强化页面
+
+[@保护关闭]
+#if
+#act
+set [512] 0
+goto @装备强化页面
+
+[@选择保护券]
+#if
+#act
+mov S$是否已选保护券 是
+
+#if
+not equal <$str(S$强化职业)> 生命值
+#act
+;本次不降级
+mov S$加入保护券 保护券
+goto @保护关闭
+
+goto @检测武器强化程度
+
+#if
+equal <$str(S$强化职业)> 生命值
+#act
+mov S$加入保护券 保护券
+goto @保护关闭
+goto @检测衣服强化程度
+
+
+[@一级增幅石]
+#if
+not equal <$str(S$强化职业)> 生命值
+#act
+;增加成功率3%
+inc N$成功率 3
+mov S$加入增幅石 一级增幅石
+mov N$转生石二级数量 1
+mov N$转生石三级数量 0
+goto @增幅关闭
+goto @装备强化页面
+
+#if
+equal <$str(S$强化职业)> 生命值
+#act
+mov S$加入增幅石 一级增幅石
+inc N$衣服成功率 3
+mov N$转生石二级数量 1
+mov N$转生石三级数量 0
+goto @增幅关闭
+goto @装备强化页面
+
+[@二级增幅石]
+#if
+not equal <$str(S$强化职业)> 生命值
+#act
+;增加成功率6%
+mov S$加入增幅石 二级增幅石
+mov N$转生石三级数量 1
+mov N$转生石二级数量 0
+inc N$成功率 6
+goto @增幅关闭
+goto @装备强化页面
+
+#if
+equal <$str(S$强化职业)> 生命值
+#act
+mov S$加入增幅石 二级增幅石
+inc N$衣服成功率 6
+mov N$转生石三级数量 1
+mov N$转生石二级数量 0
+goto @增幅关闭
+goto @装备强化页面
+
+[@添加保护券]
+#if
+not equal <$str(S$强化职业)> 生命值
+#act
+set [512] 1
+goto @检测武器强化程度
+
+#if
+equal <$str(S$强化职业)> 生命值
+#act
+set [512] 1
+goto @检测衣服强化程度
+
+
+[@开始强化]
+#if
+equal S$强化职业
+#act
+sendmsg 9 请选择需要强化的装备！
+Break
+
+#if
+not equal <$str(S$强化职业)> 生命值
+#act
+goto @武器强化选择
+
+#if
+equal <$str(S$强化职业)> 生命值
+#act
+goto @衣服强化选择
+
+
+
+[@武器强化选择]
+#or
+CheckContainsText <$USEITEMNAME[1]> 神罚之刃
+CheckContainsText <$USEITEMNAME[1]> 圣裁之杖
+CheckContainsText <$USEITEMNAME[1]> 仙戮之剑
+CheckContainsText <$USEITEMNAME[1]> 寂灭杀伐剑
+CheckContainsText <$USEITEMNAME[1]> 业火魔雷杖
+CheckContainsText <$USEITEMNAME[1]> 冥天玄魔刃
+CheckContainsText <$USEITEMNAME[1]> 冰霜破甲刃
+CheckContainsText <$USEITEMNAME[1]> 雪寂玄冰杖
+CheckContainsText <$USEITEMNAME[1]> 凛冬寒霜扇
+#act
+goto @武器强化
+#elseact
+sendmsg 9 只有8转及8转以上的武器才可以强化
+
+[@衣服强化选择]
+#or
+CheckContainsText <$USEITEMNAME[0]> ぅ甲
+CheckContainsText <$USEITEMNAME[0]> ぅ袍
+CheckContainsText <$USEITEMNAME[0]> え袍
+CheckContainsText <$USEITEMNAME[0]> え甲
+CheckContainsText <$USEITEMNAME[0]> 之甲
+CheckContainsText <$USEITEMNAME[0]> 之袍
+#act
+goto @衣服强化
+#elseact
+sendmsg 9 只有8转及8转以上的衣服才可以强化
+
+
+[@衣服强化]
+#if
+EQUAL N$当前衣服强化 0
+#act
+goto @衣服强化1
+break
+
+#if
+equal N$当前衣服强化 30
+#act
+goto @衣服强化2
+break
+
+#if
+equal N$当前衣服强化 60
+#act
+goto @衣服强化3
+break
+
+#if
+equal N$当前衣服强化 120
+#act
+goto @衣服强化4
+break
+
+#if
+equal N$当前衣服强化 200
+#act
+goto @衣服强化5
+break
+
+#if
+equal N$当前衣服强化 300
+#act
+goto @衣服强化6
+break
+
+#if
+equal N$当前衣服强化 420
+#act
+goto @衣服强化7
+break
+
+#if
+equal N$当前衣服强化 560
+#act
+goto @衣服强化8
+break
+
+#if
+equal N$当前衣服强化 720
+#act
+goto @衣服强化9
+break
+
+#if
+equal N$当前衣服强化 900
+#act
+goto @衣服强化10
+break
+
+#if
+equal N$当前衣服强化 1100
+#act
+sendmsg 9 已强化到最高！
+break
+
+[@衣服强化1]
+#if
+equal S$是否已选保护券 否
+#act
+mov N$保护券数量 0
+
+#if
+checkitems 强化石#<$str(N$转生石四级数量)>
+checkitems 一级增幅券#<$str(N$转生石二级数量)>
+checkitems 二级增幅券#<$str(N$转生石三级数量)>
+checkitems 保护券#<$str(N$保护券数量)>
+CHECKBINDMONEY 绑定点卡 ? 1000
+CHECKBINDMONEY 元宝 ? 10000
+#act
+#elseact
+sendmsg 9 材料或者点卡元宝不够
+break
+
+
+#if
+RANDOMEX <$str(N$衣服成功率)> 100
+#act
+CHANGEBINDMONEY 绑定点卡 1000
+CHANGEBINDMONEY 元宝 10000
+SETADDNEWABIL 0 + 3#1#30
+SetItemFlag 0 11 1
+mov U88 30
+mov U89 11
+
+take 强化石 <$str(N$转生石四级数量)>
+take 一级增幅券 <$str(N$转生石二级数量)>
+take 二级增幅券 <$str(N$转生石三级数量)>
+take 保护券 <$str(N$保护券数量)>
+sendmsg 9 强化成功！衣服<$str(S$强化职业)>+30
+mov S$是否已选保护券 否
+mov S$加入增幅石
+mov N$保护券数量
+mov N$转生石二级数量 
+mov N$转生石三级数量 
+mov S$加入保护券 
+goto @检测衣服强化程度
+#elseact
+CHANGEBINDMONEY 绑定点卡 1000
+CHANGEBINDMONEY 元宝 10000
+take 强化石 <$str(N$转生石四级数量)>
+take 一级增幅券 <$str(N$转生石二级数量)>
+take 二级增幅券 <$str(N$转生石三级数量)>
+take 保护券 <$str(N$保护券数量)>
+mov S$是否已选保护券 否
+mov S$加入增幅石
+mov N$保护券数量 
+mov N$转生石二级数量 
+mov N$转生石三级数量 
+mov S$加入保护券 
+sendmsg 9 强化失败！
+goto @检测衣服强化程度
+
+[@衣服强化2]
+#if
+equal S$是否已选保护券 否
+#act
+mov N$保护券数量 0
+
+
+#if
+checkitems 强化石#<$str(N$转生石四级数量)>
+checkitems 一级增幅券#<$str(N$转生石二级数量)>
+checkitems 二级增幅券#<$str(N$转生石三级数量)>
+checkitems 保护券#<$str(N$保护券数量)>
+CHECKBINDMONEY 绑定点卡 ? 2000
+CHECKBINDMONEY 元宝 ? 20000
+#act
+#elseact
+sendmsg 9 材料或者点卡元宝不够
+break
+
+#if
+RANDOMEX <$str(N$衣服成功率)> 100
+#act
+CHANGEBINDMONEY 绑定点卡 2000
+CHANGEBINDMONEY 元宝 20000
+take 强化石 <$str(N$转生石四级数量)>
+take 一级增幅券 <$str(N$转生石二级数量)>
+take 二级增幅券 <$str(N$转生石三级数量)>
+take 保护券 <$str(N$保护券数量)>
+SETADDNEWABIL 0 + 3#1#30
+SetItemFlag 0 11 0
+SetItemFlag 0 12 1
+mov U88 60
+mov U89 12
+mov S$是否已选保护券 否
+mov S$加入增幅石
+mov S$加入保护券
+mov N$转生石二级数量 
+mov N$转生石三级数量
+MOV N$保护券数量
+sendmsg 9 强化成功！衣服<$str(S$强化职业)>+60
+goto @检测衣服强化程度
+#elseact
+CHANGEBINDMONEY 绑定点卡 2000
+CHANGEBINDMONEY 元宝 20000
+take 强化石 <$str(N$转生石四级数量)>
+take 一级增幅券 <$str(N$转生石二级数量)>
+take 二级增幅券 <$str(N$转生石三级数量)>
+take 保护券 <$str(N$保护券数量)>
+mov S$是否已选保护券 否
+mov S$加入增幅石
+mov S$加入保护券
+mov N$转生石二级数量 
+mov N$转生石三级数量
+mov N$保护券数量
+sendmsg 9 强化失败！
+goto @检测衣服强化程度
+
+[@衣服强化3]
+#if
+equal S$是否已选保护券 否
+#act
+mov N$保护券数量 0
+
+#if
+checkitems 强化石#<$str(N$转生石四级数量)>
+checkitems 一级增幅券#<$str(N$转生石二级数量)>
+checkitems 二级增幅券#<$str(N$转生石三级数量)>
+checkitems 保护券#<$str(N$保护券数量)>
+CHECKBINDMONEY 绑定点卡 ? 3000
+CHECKBINDMONEY 元宝 ? 30000
+#act
+#elseact
+sendmsg 9 材料或者点卡元宝不够
+break
+
+#if
+RANDOMEX <$str(N$衣服成功率)> 100
+#act
+CHANGEBINDMONEY 绑定点卡 3000
+CHANGEBINDMONEY 元宝 30000
+take 强化石 <$str(N$转生石四级数量)>
+take 一级增幅券 <$str(N$转生石二级数量)>
+take 二级增幅券 <$str(N$转生石三级数量)>
+take 保护券 <$str(N$保护券数量)>
+mov S$是否已选保护券 否
+mov S$加入增幅石
+mov S$加入保护券
+mov N$转生石二级数量 
+mov N$转生石三级数量
+mov N$保护券数量
+SETADDNEWABIL 0 + 3#1#60
+SetItemFlag 0 12 0
+SetItemFlag 0 13 1
+mov U88 120
+mov U89 13
+sendmsg 9 强化成功！衣服<$str(S$强化职业)>+120
+goto @检测衣服强化程度
+#elseact
+CHANGEBINDMONEY 绑定点卡 3000
+CHANGEBINDMONEY 元宝 30000
+take 强化石 <$str(N$转生石四级数量)>
+take 一级增幅券 <$str(N$转生石二级数量)>
+take 二级增幅券 <$str(N$转生石三级数量)>
+take 保护券 <$str(N$保护券数量)>
+mov S$是否已选保护券 否
+mov S$加入增幅石
+mov S$加入保护券
+mov N$转生石二级数量 
+mov N$转生石三级数量
+mov N$保护券数量
+sendmsg 9 强化失败！
+goto @检测衣服强化程度
+
+[@衣服强化4]
+#if
+equal S$是否已选保护券 否
+#act
+mov N$保护券数量 0
+
+#if
+checkitems 强化石#<$str(N$转生石四级数量)>
+checkitems 一级增幅券#<$str(N$转生石二级数量)>
+checkitems 二级增幅券#<$str(N$转生石三级数量)>
+checkitems 保护券#<$str(N$保护券数量)>
+CHECKBINDMONEY 绑定点卡 ? 4000
+CHECKBINDMONEY 元宝 ? 40000
+#act
+#elseact
+sendmsg 9 材料或者点卡元宝不够
+break
+
+#if
+RANDOMEX <$str(N$衣服成功率)> 100
+#act
+CHANGEBINDMONEY 绑定点卡 4000
+CHANGEBINDMONEY 元宝 40000
+take 强化石 <$str(N$转生石四级数量)>
+take 一级增幅券 <$str(N$转生石二级数量)>
+take 二级增幅券 <$str(N$转生石三级数量)>
+take 保护券 <$str(N$保护券数量)>
+mov S$是否已选保护券 否
+mov S$加入增幅石
+mov S$加入保护券
+mov N$转生石二级数量 
+mov N$转生石三级数量
+mov N$保护券数量
+SETADDNEWABIL 0 + 3#1#80
+SetItemFlag 0 13 0
+SetItemFlag 0 14 1
+MOV U88 200
+MOV U89 14
+sendmsg 9 强化成功！衣服<$str(S$强化职业)>+200
+goto @检测衣服强化程度
+#elseact
+CHANGEBINDMONEY 绑定点卡 4000
+CHANGEBINDMONEY 元宝 40000
+take 强化石 <$str(N$转生石四级数量)>
+take 一级增幅券 <$str(N$转生石二级数量)>
+take 二级增幅券 <$str(N$转生石三级数量)>
+take 保护券 <$str(N$保护券数量)>
+mov S$是否已选保护券 否
+mov S$加入增幅石
+mov S$加入保护券
+mov N$转生石二级数量 
+mov N$转生石三级数量
+mov N$保护券数量
+sendmsg 9 强化失败！
+goto @检测衣服强化程度
+
+[@衣服强化5]
+#if
+equal S$是否已选保护券 否
+#act
+mov N$保护券数量 0
+
+
+#if
+checkitems 强化石#<$str(N$转生石四级数量)>
+checkitems 一级增幅券#<$str(N$转生石二级数量)>
+checkitems 二级增幅券#<$str(N$转生石三级数量)>
+checkitems 保护券#<$str(N$保护券数量)>
+CHECKBINDMONEY 绑定点卡 ? 5000
+CHECKBINDMONEY 元宝 ? 50000
+#act
+#elseact
+sendmsg 9 材料或者点卡元宝不够
+break
+
+#if
+RANDOMEX <$str(N$衣服成功率)> 100
+#act
+CHANGEBINDMONEY 绑定点卡 5000
+CHANGEBINDMONEY 元宝 50000
+take 强化石 <$str(N$转生石四级数量)>
+take 一级增幅券 <$str(N$转生石二级数量)>
+take 二级增幅券 <$str(N$转生石三级数量)>
+take 保护券 <$str(N$保护券数量)>
+mov S$是否已选保护券 否
+mov S$加入增幅石
+mov N$转生石二级数量 
+mov N$转生石三级数量
+mov S$加入保护券
+mov N$保护券数量
+SETADDNEWABIL 0 + 3#1#100
+SetItemFlag 0 14 0
+SetItemFlag 0 15 1
+mov U88 300
+mov U89 15
+;触发生命加成10% 
+CHANGECUSTOMITEMTEXT 0 [强化属性]:
+CHANGECUSTOMITEMTEXTCOLOR 0 253 0
+CHANGECUSTOMITEMABIL  0 0 0 146 0 
+
+CHANGECUSTOMITEMABIL  0 0 1 30 0
+
+CHANGECUSTOMITEMABIL  0 0 3 1 0
+CHANGECUSTOMITEMABIL  0 0 4 0 0
+CHANGECUSTOMITEMVALUE 0 0 + 10 0
+
+sendmsg 9 强化成功！衣服<$str(S$强化职业)>+300
+goto @检测衣服强化程度
+#elseact
+CHANGEBINDMONEY 绑定点卡 5000
+CHANGEBINDMONEY 元宝 50000
+take 强化石 <$str(N$转生石四级数量)>
+take 一级增幅券 <$str(N$转生石二级数量)>
+take 二级增幅券 <$str(N$转生石三级数量)>
+take 保护券 <$str(N$保护券数量)>
+mov S$是否已选保护券 否
+mov S$加入增幅石
+mov S$加入保护券
+mov N$保护券数量
+mov N$转生石二级数量 
+mov N$转生石三级数量
+SETADDNEWABIL 0 - 3#1#80
+SetItemFlag 0 14 0
+SetItemFlag 0 13 1
+mov U88 120
+mov U89 13
+sendmsg 9 强化失败！衣服<$str(S$强化职业)>-80
+goto @检测衣服强化程度
+
+[@衣服强化6]
+#if
+equal S$是否已选保护券 否
+#act
+mov N$保护券数量 0
+
+
+#if
+checkitems 强化石#<$str(N$转生石四级数量)>
+checkitems 一级增幅券#<$str(N$转生石二级数量)>
+checkitems 二级增幅券#<$str(N$转生石三级数量)>
+checkitems 保护券#<$str(N$保护券数量)>
+CHECKBINDMONEY 绑定点卡 ? 6000
+CHECKBINDMONEY 元宝 ? 60000
+#act
+#elseact
+sendmsg 9 材料或者点卡元宝不够
+break
+
+#if
+RANDOMEX <$str(N$衣服成功率)> 100
+#act
+CHANGEBINDMONEY 绑定点卡 6000
+CHANGEBINDMONEY 元宝 60000
+take 强化石 <$str(N$转生石四级数量)>
+take 一级增幅券 <$str(N$转生石二级数量)>
+take 二级增幅券 <$str(N$转生石三级数量)>
+take 保护券 <$str(N$保护券数量)>
+mov S$是否已选保护券 否
+mov S$加入增幅石
+mov S$加入保护券
+mov N$转生石二级数量 
+mov N$保护券数量
+mov N$转生石三级数量
+SETADDNEWABIL 0 + 3#1#120
+SetItemFlag 0 15 0
+SetItemFlag 0 16 1
+mov U88 420
+mov U89 16
+sendmsg 9 强化成功！衣服<$str(S$强化职业)>+420
+goto @检测衣服强化程度
+#elseact
+CHANGEBINDMONEY 绑定点卡 6000
+CHANGEBINDMONEY 元宝 60000
+take 强化石 <$str(N$转生石四级数量)>
+take 一级增幅券 <$str(N$转生石二级数量)>
+take 二级增幅券 <$str(N$转生石三级数量)>
+take 保护券 <$str(N$保护券数量)>
+mov S$加入增幅石
+mov S$加入保护券
+mov N$保护券数量 
+mov N$转生石二级数量 
+mov N$转生石三级数量
+goto @强化6是否保护
+mov S$是否已选保护券 否
+goto @检测衣服强化程度
+
+[@强化6是否保护]
+#if
+equal <$str(S$是否已选保护券)> 否
+#act
+SETADDNEWABIL 0 - 3#1#100
+SetItemFlag 0 15 0
+SetItemFlag 0 14 1
+;触发生命加成10% 
+CHANGECUSTOMITEMTEXT 0 [强化属性]:
+CHANGECUSTOMITEMTEXTCOLOR 0 253 0
+CHANGECUSTOMITEMABIL  0 0 0 146 0 
+
+CHANGECUSTOMITEMABIL  0 0 1 30 0
+
+CHANGECUSTOMITEMABIL  0 0 3 1 0
+CHANGECUSTOMITEMABIL  0 0 4 0 0
+CHANGECUSTOMITEMVALUE 0 0 - 10 0
+mov U88 200
+mov U89 14
+sendmsg 9 强化失败！衣服<$str(S$强化职业)>-100
+#elseact
+sendmsg 9 强化失败！本次强化不降级
+
+[@衣服强化7]
+#if
+equal S$是否已选保护券 否
+#act
+mov N$保护券数量 0
+
+
+#if
+checkitems 强化石#<$str(N$转生石四级数量)>
+checkitems 一级增幅券#<$str(N$转生石二级数量)>
+checkitems 二级增幅券#<$str(N$转生石三级数量)>
+checkitems 保护券#<$str(N$保护券数量)>
+CHECKBINDMONEY 绑定点卡 ? 7000
+CHECKBINDMONEY 元宝 ? 70000
+#act
+#elseact
+sendmsg 9 材料或者点卡元宝不够
+break
+
+#if
+RANDOMEX <$str(N$衣服成功率)> 100
+#act
+CHANGEBINDMONEY 绑定点卡 7000
+CHANGEBINDMONEY 元宝 70000
+take 强化石 <$str(N$转生石四级数量)>
+take 一级增幅券 <$str(N$转生石二级数量)>
+take 二级增幅券 <$str(N$转生石三级数量)>
+take 保护券 <$str(N$保护券数量)>
+mov S$是否已选保护券 否
+mov S$加入增幅石
+mov S$加入保护券
+mov N$保护券数量
+mov N$转生石二级数量 
+mov N$转生石三级数量
+SETADDNEWABIL 0 + 3#1#140
+SetItemFlag 0 16 0
+SetItemFlag 0 17 1
+mov U88 560
+mov U89 17
+sendmsg 9 强化成功！衣服<$str(S$强化职业)>+560
+goto @检测衣服强化程度
+#elseact
+CHANGEBINDMONEY 绑定点卡 7000
+CHANGEBINDMONEY 元宝 70000
+take 强化石 <$str(N$转生石四级数量)>
+take 一级增幅券 <$str(N$转生石二级数量)>
+take 二级增幅券 <$str(N$转生石三级数量)>
+take 保护券 <$str(N$保护券数量)>
+mov S$加入增幅石
+mov S$加入保护券
+mov N$保护券数量 
+mov N$转生石二级数量 
+mov N$转生石三级数量
+goto 强化7是否保护
+mov S$是否已选保护券 否
+goto @检测衣服强化程度
+
+[@强化7是否保护]
+#if
+equal <$str(S$是否已选保护券)> 否
+#act
+SETADDNEWABIL 0 - 3#1#120
+SetItemFlag 0 16 0
+SetItemFlag 0 15 1
+mov U88 300
+mov U89 15
+sendmsg 9 强化失败！衣服<$str(S$强化职业)>-120
+#elseact
+sendmsg 9 强化失败！本次强化不降级
+
+[@衣服强化8]
+#if
+equal S$是否已选保护券 否
+#act
+mov N$保护券数量 0
+
+
+#if
+checkitems 强化石#<$str(N$转生石四级数量)>
+checkitems 一级增幅券#<$str(N$转生石二级数量)>
+checkitems 二级增幅券#<$str(N$转生石三级数量)>
+checkitems 保护券#<$str(N$保护券数量)>
+CHECKBINDMONEY 绑定点卡 ? 8000
+CHECKBINDMONEY 元宝 ? 80000
+#act
+#elseact
+sendmsg 9 材料或者点卡元宝不够
+break
+
+
+#if
+RANDOMEX <$str(N$衣服成功率)> 100
+#act
+CHANGEBINDMONEY 绑定点卡 8000
+CHANGEBINDMONEY 元宝 80000
+take 强化石 <$str(N$转生石四级数量)>
+take 一级增幅券 <$str(N$转生石二级数量)>
+take 二级增幅券 <$str(N$转生石三级数量)>
+take 保护券 <$str(N$保护券数量)>
+mov S$是否已选保护券 否
+mov S$加入增幅石
+mov S$加入保护券
+mov N$转生石二级数量 
+mov N$转生石三级数量
+mov N$保护券数量
+SETADDNEWABIL 0 + 3#1#160
+SetItemFlag 0 17 0
+SetItemFlag 0 18 1
+mov U88 720
+mov U89 18
+sendmsg 9 强化成功！衣服<$str(S$强化职业)>+720
+goto @检测衣服强化程度
+#elseact
+CHANGEBINDMONEY 绑定点卡 8000
+CHANGEBINDMONEY 元宝 80000
+take 强化石 <$str(N$转生石四级数量)>
+take 一级增幅券 <$str(N$转生石二级数量)>
+take 二级增幅券 <$str(N$转生石三级数量)>
+take 保护券 <$str(N$保护券数量)>
+mov S$加入增幅石
+mov S$加入保护券
+mov N$转生石二级数量 
+mov N$保护券数量 
+mov N$转生石三级数量
+goto @强化8是否保护
+mov S$是否已选保护券 否
+goto @检测衣服强化程度
+
+[@强化8是否保护]
+#if
+equal <$str(S$是否已选保护券)> 否
+#act
+SETADDNEWABIL 0 - 3#1#140
+SetItemFlag 0 17 0
+SetItemFlag 0 16 1
+mov U88 420
+mov U89 16
+sendmsg 9 强化失败！衣服<$str(S$强化职业)>-140
+#elseact
+sendmsg 9 强化失败！本次强化不降级
+
+[@衣服强化9]
+#if
+equal S$是否已选保护券 否
+#act
+mov N$保护券数量 0
+
+
+#if
+checkitems 强化石#<$str(N$转生石四级数量)>
+checkitems 一级增幅券#<$str(N$转生石二级数量)>
+checkitems 二级增幅券#<$str(N$转生石三级数量)>
+checkitems 保护券#<$str(N$保护券数量)>
+CHECKBINDMONEY 绑定点卡 ? 9000
+CHECKBINDMONEY 元宝 ? 90000
+#act
+#elseact
+sendmsg 9 材料或者点卡元宝不够
+break
+
+
+#if
+RANDOMEX <$str(N$衣服成功率)> 100
+#act
+CHANGEBINDMONEY 绑定点卡 9000
+CHANGEBINDMONEY 元宝 90000
+take 强化石 <$str(N$转生石四级数量)>
+take 一级增幅券 <$str(N$转生石二级数量)>
+take 二级增幅券 <$str(N$转生石三级数量)>
+take 保护券 <$str(N$保护券数量)>
+mov S$是否已选保护券 否
+mov S$加入增幅石
+mov S$加入保护券
+mov N$转生石二级数量 
+mov N$转生石三级数量
+mov N$保护券数量
+SETADDNEWABIL 0 + 3#1#180
+SetItemFlag 0 18 0
+SetItemFlag 0 19 1
+mov U88 900
+mov U89 19
+sendmsg 9 强化成功！衣服<$str(S$强化职业)>+900
+goto @检测衣服强化程度
+#elseact
+CHANGEBINDMONEY 绑定点卡 8000
+CHANGEBINDMONEY 元宝 80000
+take 强化石 <$str(N$转生石四级数量)>
+take 一级增幅券 <$str(N$转生石二级数量)>
+take 二级增幅券 <$str(N$转生石三级数量)>
+take 保护券 <$str(N$保护券数量)>
+mov S$加入增幅石
+mov S$加入保护券
+mov N$转生石二级数量 
+mov N$转生石三级数量
+mov N$保护券数量 
+goto @强化9是否保护
+mov S$是否已选保护券 否
+goto @检测衣服强化程度
+
+[@强化9是否保护]
+#if
+equal <$str(S$是否已选保护券)> 否
+#act
+SETADDNEWABIL 0 - 3#1#160
+SetItemFlag 0 18 0
+SetItemFlag 0 17 1
+mov U88 420
+mov U89 17
+sendmsg 9 强化失败！衣服<$str(S$强化职业)>-160
+#elseact
+sendmsg 9 强化失败！本次强化不降级
+
+[@衣服强化10]
+#if
+equal S$是否已选保护券 否
+#act
+mov N$保护券数量 0
+
+#if
+checkitem 强化石 <$str(N$转生石四级数量)>
+checkitems 一级增幅券#<$str(N$转生石二级数量)>
+checkitems 二级增幅券#<$str(N$转生石三级数量)>
+checkitem 保护券 <$str(N$保护券数量)>
+CHECKBINDMONEY 绑定点卡 ? 10000
+CHECKBINDMONEY 元宝 ? 100000
+#act
+#elseact
+sendmsg 9 材料或者点卡元宝不够
+break
+
+#if
+RANDOMEX <$str(N$衣服成功率)> 100
+#act
+CHANGEBINDMONEY 绑定点卡 10000
+CHANGEBINDMONEY 元宝 100000
+take 强化石 <$str(N$转生石四级数量)>
+take 一级增幅券 <$str(N$转生石二级数量)>
+take 二级增幅券 <$str(N$转生石三级数量)>
+take 保护券 <$str(N$保护券数量)>
+mov S$是否已选保护券 否
+mov S$加入增幅石
+mov S$加入保护券
+mov N$转生石二级数量 
+mov N$保护券数量 
+mov N$转生石三级数量
+SETADDNEWABIL 0 + 3#1#200
+;触发伤害减免10%
+CHANGECUSTOMITEMTEXT 0 [强化属性]:
+CHANGECUSTOMITEMTEXTCOLOR 0 253 0
+CHANGECUSTOMITEMABIL  0 0 0 146 0 
+;物理减伤10%
+CHANGECUSTOMITEMABIL  0 0 1 26 0
+
+CHANGECUSTOMITEMABIL  0 0 3 1 0
+CHANGECUSTOMITEMABIL  0 0 4 0 0
+CHANGECUSTOMITEMVALUE 0 0 + 10 0
+;魔法减伤10%
+CHANGECUSTOMITEMABIL  0 0 1 27 0
+
+CHANGECUSTOMITEMABIL  0 0 3 1 0
+CHANGECUSTOMITEMABIL  0 0 4 0 0
+CHANGECUSTOMITEMVALUE 0 0 + 10 0
+
+SetItemFlag 0 19 0
+SetItemFlag 0 20 1
+mov U88 1100
+mov U89 20
+sendmsg 9 强化成功！衣服<$str(S$强化职业)>+1100
+goto @检测衣服强化程度
+#elseact
+CHANGEBINDMONEY 绑定点卡 8000
+CHANGEBINDMONEY 元宝 80000
+take 强化石 <$str(N$转生石四级数量)>
+take 一级增幅券 <$str(N$转生石二级数量)>
+take 二级增幅券 <$str(N$转生石三级数量)>
+take 保护券 <$str(N$保护券数量)>
+mov S$加入增幅石
+mov S$加入保护券
+mov N$转生石二级数量 
+mov N$保护券数量 
+mov N$转生石三级数量
+goto @强化10是否保护
+mov S$是否已选保护券 否
+goto @检测衣服强化程度
+
+[@强化10是否保护]
+#if
+equal <$str(S$是否已选保护券)> 否
+#act
+SETADDNEWABIL 0 - 3#1#180
+SetItemFlag 0 19 0
+SetItemFlag 0 18 1
+;触发伤害减免10%
+CHANGECUSTOMITEMTEXT 0 [强化属性]:
+CHANGECUSTOMITEMTEXTCOLOR 0 253 0
+CHANGECUSTOMITEMABIL  0 0 0 146 0 
+;物理减伤10%
+CHANGECUSTOMITEMABIL  0 0 1 26 0
+
+CHANGECUSTOMITEMABIL  0 0 3 1 0
+CHANGECUSTOMITEMABIL  0 0 4 0 0
+CHANGECUSTOMITEMVALUE 0 0 - 10 0
+;魔法减伤10%
+CHANGECUSTOMITEMABIL  0 0 1 27 0
+
+CHANGECUSTOMITEMABIL  0 0 3 1 0
+CHANGECUSTOMITEMABIL  0 0 4 0 0
+CHANGECUSTOMITEMVALUE 0 0 - 10 0
+mov U88 720
+mov U89 18
+sendmsg 9 强化失败！衣服<$str(S$强化职业)>-180
+#elseact
+sendmsg 9 强化失败！本次强化不降级
+
+[@武器强化]
+#if
+EQUAL N$当前强化 0
+#act
+goto @强化1
+break
+
+#if
+equal N$当前强化 1
+#act
+goto @强化2
+break
+
+#if
+equal N$当前强化 3
+#act
+goto @强化3
+break
+
+#if
+equal N$当前强化 6
+#act
+goto @强化4
+break
+
+#if
+equal N$当前强化 10
+#act
+goto @强化5
+break
+
+#if
+equal N$当前强化 15
+#act
+goto @强化6
+break
+
+#if
+equal N$当前强化 21
+#act
+goto @强化7
+break
+
+#if
+equal N$当前强化 28
+#act
+goto @强化8
+break
+
+#if
+equal N$当前强化 36
+#act
+goto @强化9
+break
+
+#if
+equal N$当前强化 45
+#act
+goto @强化10
+break
+
+#if
+equal N$当前强化 55
+#act
+sendmsg 9 已强化到最高！
+break
+
+
+
+[@强化1]
+#if
+checkitems 强化石#<$str(N$转生石四级数量)>
+checkitems 一级增幅券#<$str(N$转生石二级数量)>
+checkitems 二级增幅券#<$str(N$转生石三级数量)>
+CHECKBINDMONEY 绑定点卡 ? 1000
+CHECKBINDMONEY 元宝 ? 10000
+#act
+#elseact
+sendmsg 9 材料或者点卡元宝不够
+break
+
+#if
+RANDOMEX <$str(N$成功率)> 100
+#act
+CHANGEBINDMONEY 绑定点卡 1000
+CHANGEBINDMONEY 元宝 10000
+take 强化石 <$str(N$转生石四级数量)>
+take 一级增幅券 <$str(N$转生石二级数量)>
+take 二级增幅券 <$str(N$转生石三级数量)>
+mov S$加入增幅石
+mov S$加入保护券
+mov N$保护券数量
+mov S$是否已选保护券 否
+mov N$转生石二级数量 
+mov N$转生石三级数量
+;changeitemaddvalue 1 <$str(N$强化属性位置)> + 1
+SETADDNEWABIL 1 + 3#4#1
+mov U86 1
+SetItemFlag 1 1 1
+;ChangeItemUpgradeCount 1  = 1
+mov U87 1
+sendmsg 9 强化成功！武器<$str(S$强化职业)>+1
+goto @检测武器强化程度
+#elseact
+CHANGEBINDMONEY 绑定点卡 1000
+CHANGEBINDMONEY 元宝 10000
+take 强化石 <$str(N$转生石四级数量)>
+take 一级增幅券 <$str(N$转生石二级数量)>
+take 二级增幅券 <$str(N$转生石三级数量)>
+mov S$加入增幅石
+mov S$加入保护券
+mov S$是否已选保护券 否
+mov N$转生石二级数量 
+mov N$保护券数量 
+mov N$转生石三级数量
+sendmsg 9 强化失败！
+goto @检测武器强化程度
+
+[@强化2]
+#if
+checkitems 强化石#<$str(N$转生石四级数量)>
+checkitems 一级增幅券#<$str(N$转生石二级数量)>
+checkitems 二级增幅券#<$str(N$转生石三级数量)>
+CHECKBINDMONEY 绑定点卡 ? 2000
+CHECKBINDMONEY 元宝 ? 20000
+#act
+#elseact
+sendmsg 9 材料或者点卡元宝不够
+break
+
+#if
+RANDOMEX <$str(N$成功率)> 100
+#act
+CHANGEBINDMONEY 绑定点卡 2000
+CHANGEBINDMONEY 元宝 20000
+take 强化石 <$str(N$转生石四级数量)>
+take 一级增幅券 <$str(N$转生石二级数量)>
+take 二级增幅券 <$str(N$转生石三级数量)>
+mov S$加入增幅石
+mov S$是否已选保护券 否
+mov S$加入保护券
+mov N$保护券数量
+mov N$转生石二级数量 
+mov N$转生石三级数量
+;changeitemaddvalue 1 <$str(N$强化属性位置)> + 2
+SETADDNEWABIL 1 + 3#4#2
+SetItemFlag 1 1 0
+SetItemFlag 1 2 1
+;ChangeItemUpgradeCount 1  = 2
+mov U86 3
+mov U87 2
+sendmsg 9 强化成功！武器<$str(S$强化职业)>+3
+
+goto @检测武器强化程度
+#elseact
+CHANGEBINDMONEY 绑定点卡 2000
+CHANGEBINDMONEY 元宝 20000
+take 强化石 <$str(N$转生石四级数量)>
+take 一级增幅券 <$str(N$转生石二级数量)>
+take 二级增幅券 <$str(N$转生石三级数量)>
+mov S$加入增幅石
+mov S$加入保护券
+mov N$保护券数量
+mov N$转生石二级数量 
+mov N$转生石三级数量
+mov S$是否已选保护券 否
+sendmsg 9 强化失败！
+goto @检测武器强化程度
+
+[@强化3]
+#if
+checkitems 强化石#<$str(N$转生石四级数量)>
+checkitems 一级增幅券#<$str(N$转生石二级数量)>
+checkitems 二级增幅券#<$str(N$转生石三级数量)>
+CHECKBINDMONEY 绑定点卡 ? 3000
+CHECKBINDMONEY 元宝 ? 30000
+#act
+#elseact
+sendmsg 9 材料或者点卡元宝不够
+break
+
+
+#if
+RANDOMEX <$str(N$成功率)> 100
+#act
+CHANGEBINDMONEY 绑定点卡 3000
+CHANGEBINDMONEY 元宝 30000
+take 强化石 <$str(N$转生石四级数量)>
+take 一级增幅券 <$str(N$转生石二级数量)>
+take 二级增幅券 <$str(N$转生石三级数量)>
+mov S$是否已选保护券 否
+mov S$加入增幅石
+mov S$加入保护券
+mov N$保护券数量 
+mov N$转生石二级数量 
+mov N$转生石三级数量
+;changeitemaddvalue 1 <$str(N$强化属性位置)> + 3
+SETADDNEWABIL 1 + 3#4#3
+SetItemFlag 1 2 0
+SetItemFlag 1 3 1
+mov U86 6
+mov U87 3
+;ChangeItemUpgradeCount 1  = 3
+sendmsg 9 强化成功！武器<$str(S$强化职业)>+6
+goto @检测武器强化程度
+#elseact
+CHANGEBINDMONEY 绑定点卡 3000
+CHANGEBINDMONEY 元宝 30000
+take 强化石 <$str(N$转生石四级数量)>
+take 一级增幅券 <$str(N$转生石二级数量)>
+take 二级增幅券 <$str(N$转生石三级数量)>
+mov S$是否已选保护券 否
+mov S$加入增幅石
+mov S$加入保护券
+mov N$保护券数量
+mov N$转生石二级数量 
+mov N$转生石三级数量
+sendmsg 9 强化失败！
+goto @检测武器强化程度
+
+[@强化4]
+#if
+checkitems 强化石#<$str(N$转生石四级数量)>
+checkitems 一级增幅券#<$str(N$转生石二级数量)>
+checkitems 二级增幅券#<$str(N$转生石三级数量)>
+checkitems 保护券#<$str(N$保护券数量)>
+CHECKBINDMONEY 绑定点卡 ? 4000
+CHECKBINDMONEY 元宝 ? 40000
+#act
+#elseact
+sendmsg 9 材料或者点卡元宝不够
+break
+
+#if
+RANDOMEX <$str(N$成功率)> 100
+#act
+CHANGEBINDMONEY 绑定点卡 4000
+CHANGEBINDMONEY 元宝 40000
+take 强化石 <$str(N$转生石四级数量)>
+take 一级增幅券 <$str(N$转生石二级数量)>
+take 二级增幅券 <$str(N$转生石三级数量)>
+take 保护券 <$str(N$保护券数量)>
+mov S$是否已选保护券 否
+mov S$加入增幅石
+mov S$加入保护券
+mov N$保护券数量
+mov N$转生石二级数量 
+mov N$转生石三级数量
+;changeitemaddvalue 1 <$str(N$强化属性位置)> + 4
+SETADDNEWABIL 1 + 3#4#4
+SetItemFlag 1 3 0
+SetItemFlag 1 4 1
+;ChangeItemUpgradeCount 1  = 4
+mov U87 4
+mov U86 10
+sendmsg 9 强化成功！武器<$str(S$强化职业)>+10
+goto @检测武器强化程度
+#elseact
+CHANGEBINDMONEY 绑定点卡 4000
+CHANGEBINDMONEY 元宝 40000
+take 强化石 <$str(N$转生石四级数量)>
+take 一级增幅券 <$str(N$转生石二级数量)>
+take 二级增幅券 <$str(N$转生石三级数量)>
+take 保护券 <$str(N$保护券数量)>
+mov S$是否已选保护券 否
+mov S$加入增幅石
+mov S$加入保护券
+mov N$保护券数量 
+mov N$转生石二级数量 
+mov N$转生石三级数量
+sendmsg 9 强化失败！
+goto @检测武器强化程度
+
+[@强化5]
+#if
+checkitems 强化石#<$str(N$转生石四级数量)>
+checkitems 一级增幅券#<$str(N$转生石二级数量)>
+checkitems 二级增幅券#<$str(N$转生石三级数量)>
+checkitems 保护券#<$str(N$保护券数量)>
+CHECKBINDMONEY 绑定点卡 ? 5000
+CHECKBINDMONEY 元宝 ? 50000
+#act
+#elseact
+sendmsg 9 材料或者点卡元宝不够
+break
+
+
+#if
+RANDOMEX <$str(N$成功率)> 100
+#act
+CHANGEBINDMONEY 绑定点卡 5000
+CHANGEBINDMONEY 元宝 50000
+take 强化石 <$str(N$转生石四级数量)>
+take 一级增幅券 <$str(N$转生石二级数量)>
+take 二级增幅券 <$str(N$转生石三级数量)>
+take 保护券 <$str(N$保护券数量)>
+mov S$是否已选保护券 否
+mov S$加入增幅石
+mov S$加入保护券
+mov N$保护券数量
+mov N$转生石二级数量 
+mov N$转生石三级数量
+;changeitemaddvalue 1 <$str(N$强化属性位置)> + 5
+SETADDNEWABIL 1 + 3#4#5
+SetItemFlag 1 4 0
+SetItemFlag 1 5 1
+mov U86 15
+mov U87 5
+;ChangeItemUpgradeCount 1  = 5
+;触发攻击增伤5% SetNewItemValue
+SETADDNEWABIL 1 + 3#25#5
+
+sendmsg 9 强化成功！武器<$str(S$强化职业)>+15
+goto @检测武器强化程度
+#elseact
+CHANGEBINDMONEY 绑定点卡 5000
+CHANGEBINDMONEY 元宝 50000
+take 强化石 <$str(N$转生石四级数量)>
+take 一级增幅券 <$str(N$转生石二级数量)>
+take 二级增幅券 <$str(N$转生石三级数量)>
+take 保护券 <$str(N$保护券数量)>
+mov S$是否已选保护券 否
+mov S$加入增幅石
+mov S$加入保护券
+mov N$保护券数量 
+mov N$转生石二级数量 
+mov N$转生石三级数量
+;changeitemaddvalue 1 <$str(N$强化属性位置)> - 4
+SETADDNEWABIL 1 - 3#4#4
+
+SetItemFlag 1 4 0
+SetItemFlag 1 3 1
+mov U87 3
+;ChangeItemUpgradeCount 1  = 3
+mov U86 6
+sendmsg 9 强化失败！武器<$str(S$强化职业)>-4
+goto @检测武器强化程度
+
+
+
+[@强化6]
+#if
+equal S$是否已选保护券 否
+#act
+mov N$保护券数量 0
+
+
+#if
+checkitems 强化石#<$str(N$转生石四级数量)>
+checkitems 一级增幅券#<$str(N$转生石二级数量)>
+checkitems 二级增幅券#<$str(N$转生石三级数量)>
+checkitems 保护券#<$str(N$保护券数量)>
+CHECKBINDMONEY 绑定点卡 ? 6000
+CHECKBINDMONEY 元宝 ? 60000
+#act
+#elseact
+sendmsg 9 材料或者点卡元宝不够
+break
+
+
+#if
+RANDOMEX <$str(N$成功率)> 100
+#act
+CHANGEBINDMONEY 绑定点卡 6000
+CHANGEBINDMONEY 元宝 60000
+take 强化石 <$str(N$转生石四级数量)>
+take 一级增幅券 <$str(N$转生石二级数量)>
+take 二级增幅券 <$str(N$转生石三级数量)>
+take 保护券 <$str(N$保护券数量)>
+mov S$是否已选保护券 否
+mov S$加入增幅石
+mov S$加入保护券
+mov N$保护券数量 
+mov N$转生石二级数量 
+mov N$转生石三级数量
+;changeitemaddvalue 1 <$str(N$强化属性位置)> + 6
+SETADDNEWABIL 1 + 3#4#6
+SetItemFlag 1 5 0
+SetItemFlag 1 6 1
+mov U87 6
+;ChangeItemUpgradeCount 1  = 6
+mov U86 21
+sendmsg 9 强化成功！武器<$str(S$强化职业)>+21
+goto @检测武器强化程度
+#elseact
+CHANGEBINDMONEY 绑定点卡 6000
+CHANGEBINDMONEY 元宝 60000
+take 强化石 <$str(N$转生石四级数量)>
+take 一级增幅券 <$str(N$转生石二级数量)>
+take 二级增幅券 <$str(N$转生石三级数量)>
+take 保护券 <$str(N$保护券数量)>
+
+mov S$加入增幅石
+mov S$加入保护券
+mov N$保护券数量
+mov N$转生石二级数量 
+mov N$转生石三级数量
+goto @武器强化6是否保护
+mov S$是否已选保护券 否
+goto @检测武器强化程度
+[@武器强化6是否保护]
+#if
+equal <$str(S$是否已选保护券)> 否
+#act
+;changeitemaddvalue 1 <$str(N$强化属性位置)> - 5
+SETADDNEWABIL 1 - 3#4#5
+SETADDNEWABIL 1 - 3#25#5
+SetItemFlag 1 5 0
+SetItemFlag 1 4 1
+mov U87 4
+;ChangeItemUpgradeCount 1  = 4
+mov U86 10
+sendmsg 9 强化失败！武器<$str(S$强化职业)>-5
+#elseact
+sendmsg 9 强化失败！本次强化不降级
+
+
+[@强化7]
+#if
+equal S$是否已选保护券 否
+#act
+mov N$保护券数量 0
+
+#if
+checkitems 强化石#<$str(N$转生石四级数量)>
+checkitems 一级增幅券#<$str(N$转生石二级数量)>
+checkitems 二级增幅券#<$str(N$转生石三级数量)>
+checkitems 保护券#<$str(N$保护券数量)>
+CHECKBINDMONEY 绑定点卡 ? 7000
+CHECKBINDMONEY 元宝 ? 70000
+#act
+#elseact
+sendmsg 9 材料或者点卡元宝不够
+break
+
+
+#if
+RANDOMEX <$str(N$成功率)> 100
+#act
+CHANGEBINDMONEY 绑定点卡 7000
+CHANGEBINDMONEY 元宝 70000
+take 强化石 <$str(N$转生石四级数量)>
+take 一级增幅券 <$str(N$转生石二级数量)>
+take 二级增幅券 <$str(N$转生石三级数量)>
+take 保护券 <$str(N$保护券数量)>
+mov S$是否已选保护券 否
+mov S$加入增幅石
+mov S$加入保护券
+mov N$保护券数量 
+mov N$转生石二级数量 
+mov N$转生石三级数量
+;changeitemaddvalue 1 <$str(N$强化属性位置)> + 7
+SETADDNEWABIL 1 + 3#4#7
+SetItemFlag 1 6 0
+SetItemFlag 1 7 1
+mov U87 7
+;ChangeItemUpgradeCount 1  = 7
+mov U86 28
+sendmsg 9 强化成功！武器<$str(S$强化职业)>+28
+goto @检测武器强化程度
+#elseact
+CHANGEBINDMONEY 绑定点卡 7000
+CHANGEBINDMONEY 元宝 70000
+take 强化石 <$str(N$转生石四级数量)>
+take 一级增幅券 <$str(N$转生石二级数量)>
+take 二级增幅券 <$str(N$转生石三级数量)>
+take 保护券 <$str(N$保护券数量)>
+mov S$加入增幅石
+mov S$加入保护券
+mov N$保护券数量
+mov N$转生石二级数量 
+mov N$转生石三级数量
+goto @武器强化7是否保护
+mov S$是否已选保护券 否
+goto @检测武器强化程度
+
+[@武器强化7是否保护]
+#if
+equal <$str(S$是否已选保护券)> 否
+#act
+;changeitemaddvalue 1 <$str(N$强化属性位置)> - 6
+SETADDNEWABIL 1 - 3#4#6
+SetItemFlag 1 6 0
+SetItemFlag 1 5 1
+mov U87 5
+;ChangeItemUpgradeCount 1  = 5
+mov U86 15
+sendmsg 9 强化失败！武器<$str(S$强化职业)>-6
+#elseact
+sendmsg 9 强化失败！本次强化不降级
+
+[@强化8]
+#if
+equal S$是否已选保护券 否
+#act
+mov N$保护券数量 0
+
+
+#if
+checkitems 强化石#<$str(N$转生石四级数量)>
+checkitems 一级增幅券#<$str(N$转生石二级数量)>
+checkitems 二级增幅券#<$str(N$转生石三级数量)>
+checkitems 保护券#<$str(N$保护券数量)>
+CHECKBINDMONEY 绑定点卡 ? 8000
+CHECKBINDMONEY 元宝 ? 80000
+#act
+#elseact
+sendmsg 9 材料或者点卡元宝不够
+break
+
+
+
+#if
+RANDOMEX <$str(N$成功率)> 100
+#act
+CHANGEBINDMONEY 绑定点卡 8000
+CHANGEBINDMONEY 元宝 80000
+take 强化石 <$str(N$转生石四级数量)>
+take 一级增幅券 <$str(N$转生石二级数量)>
+take 二级增幅券 <$str(N$转生石三级数量)>
+take 保护券 <$str(N$保护券数量)>
+mov S$是否已选保护券 否
+mov S$加入增幅石
+mov S$加入保护券
+mov N$保护券数量
+mov N$转生石二级数量 
+mov N$转生石三级数量
+;changeitemaddvalue 1 <$str(N$强化属性位置)> + 8
+SETADDNEWABIL 1 + 3#4#8
+SetItemFlag 1 7 0
+SetItemFlag 1 8 1
+mov U86 36
+mov U87 8
+;ChangeItemUpgradeCount 1  = 8
+sendmsg 9 强化成功！武器<$str(S$强化职业)>+36
+goto @检测武器强化程度
+#elseact
+CHANGEBINDMONEY 绑定点卡 8000
+CHANGEBINDMONEY 元宝 80000
+take 强化石 <$str(N$转生石四级数量)>
+take 一级增幅券 <$str(N$转生石二级数量)>
+take 二级增幅券 <$str(N$转生石三级数量)>
+take 保护券 <$str(N$保护券数量)>
+mov S$加入增幅石
+mov S$加入保护券
+mov N$保护券数量
+mov N$转生石二级数量 
+mov N$转生石三级数量
+goto @武器强化8是否保护
+mov S$是否已选保护券 否
+goto @检测武器强化程度
+
+[@武器强化8是否保护]
+#if
+equal <$str(S$是否已选保护券)> 否
+#act
+;changeitemaddvalue 1 <$str(N$强化属性位置)> - 7
+SETADDNEWABIL 1 - 3#4#7
+SetItemFlag 1 7 0
+SetItemFlag 1 6 1
+mov U86 21
+;ChangeItemUpgradeCount 1  = 6
+mov U87 6
+sendmsg 9 强化失败！武器<$str(S$强化职业)>-7
+#elseact
+sendmsg 9 强化失败！本次强化不降级
+
+[@强化9]
+#if
+equal S$是否已选保护券 否
+#act
+mov N$保护券数量 0
+
+#if
+checkitems 强化石#<$str(N$转生石四级数量)>
+checkitems 一级增幅券#<$str(N$转生石二级数量)>
+checkitems 二级增幅券#<$str(N$转生石三级数量)>
+checkitems 保护券#<$str(N$保护券数量)>
+CHECKBINDMONEY 绑定点卡 ? 9000
+CHECKBINDMONEY 元宝 ? 90000
+#act
+#elseact
+sendmsg 9 材料或者点卡元宝不够
+break
+
+#if
+RANDOMEX <$str(N$成功率)> 100
+#act
+CHANGEBINDMONEY 绑定点卡 9000
+CHANGEBINDMONEY 元宝 90000
+take 强化石 <$str(N$转生石四级数量)>
+take 一级增幅券 <$str(N$转生石二级数量)>
+take 二级增幅券 <$str(N$转生石三级数量)>
+take 保护券 <$str(N$保护券数量)>
+mov S$是否已选保护券 否
+mov S$加入增幅石
+mov S$加入保护券
+mov N$保护券数量
+mov N$转生石二级数量 
+mov N$转生石三级数量
+;changeitemaddvalue 1 <$str(N$强化属性位置)> + 9
+SETADDNEWABIL 1 + 3#4#9
+SetItemFlag 1 8 0
+SetItemFlag 1 9 1
+mov U87 9
+;ChangeItemUpgradeCount 1  = 9
+mov U86 45
+sendmsg 9 强化成功！武器<$str(S$强化职业)>+45
+goto @检测武器强化程度
+#elseact
+CHANGEBINDMONEY 绑定点卡 9000
+CHANGEBINDMONEY 元宝 90000
+take 强化石 <$str(N$转生石四级数量)>
+take 一级增幅券 <$str(N$转生石二级数量)>
+take 二级增幅券 <$str(N$转生石三级数量)>
+take 保护券 <$str(N$保护券数量)>
+
+mov S$加入增幅石
+mov S$加入保护券
+mov N$保护券数量
+mov N$转生石二级数量 
+mov N$转生石三级数量
+goto @武器强化9是否保护
+mov S$是否已选保护券 否
+goto @检测武器强化程度
+
+[@武器强化9是否保护]
+#if
+equal <$str(S$是否已选保护券)> 否
+#act
+;changeitemaddvalue 1 <$str(N$强化属性位置)> - 8
+SETADDNEWABIL 1 - 3#4#8
+SetItemFlag 1 8 0
+SetItemFlag 1 7 1
+mov U86 28
+mov U87 7
+;ChangeItemUpgradeCount 1  = 7
+sendmsg 9 强化失败！武器<$str(S$强化职业)>-8
+#elseact
+sendmsg 9 强化失败！本次强化不降级
+
+[@强化10]
+#if
+equal S$是否已选保护券 否
+#act
+mov N$保护券数量 0
+
+#if
+checkitems 强化石#<$str(N$转生石四级数量)>
+checkitems 一级增幅券#<$str(N$转生石二级数量)>
+checkitems 二级增幅券#<$str(N$转生石三级数量)>
+checkitems 保护券#<$str(N$保护券数量)>
+CHECKBINDMONEY 绑定点卡 ? 10000
+CHECKBINDMONEY 元宝 ? 100000
+#act
+#elseact
+sendmsg 9 材料或者点卡元宝不够
+break
+
+#if
+RANDOMEX <$str(N$成功率)> 100
+#act
+CHANGEBINDMONEY 绑定点卡 10000
+CHANGEBINDMONEY 元宝 100000
+take 强化石 <$str(N$转生石四级数量)>
+take 一级增幅券 <$str(N$转生石二级数量)>
+take 二级增幅券 <$str(N$转生石三级数量)>
+take 保护券 <$str(N$保护券数量)>
+mov S$是否已选保护券 否
+mov S$加入增幅石
+mov S$加入保护券
+mov N$保护券数量
+mov N$转生石二级数量 
+mov N$转生石三级数量
+;changeitemaddvalue 1 <$str(N$强化属性位置)> + 10
+SETADDNEWABIL 1 + 3#4#10
+SetItemFlag 1 9 0
+SetItemFlag 1 10 1
+mov U86 55
+mov U87 10
+;ChangeItemUpgradeCount 1  = 10
+;触发暴击伤害10%
+;SetNewItemValue 1 11 + 10
+SETADDNEWABIL 1 + 3#22#10
+sendmsg 9 强化成功！武器<$str(S$强化职业)>+55
+goto @检测武器强化程度
+#elseact
+CHANGEBINDMONEY 绑定点卡 9000
+CHANGEBINDMONEY 元宝 90000
+take 强化石 <$str(N$转生石四级数量)>
+take 一级增幅券 <$str(N$转生石二级数量)>
+take 二级增幅券 <$str(N$转生石三级数量)>
+take 保护券 <$str(N$保护券数量)>
+
+mov S$加入增幅石
+mov S$加入保护券
+mov N$保护券数量
+mov N$转生石二级数量 
+mov N$转生石三级数量
+goto @武器强化10是否保护
+mov S$是否已选保护券 否
+goto @检测武器强化程度
+
+[@武器强化10是否保护]
+#if
+equal <$str(S$是否已选保护券)> 否
+#act
+;changeitemaddvalue 1 <$str(N$强化属性位置)> - 9
+SETADDNEWABIL 1 - 3#4#9
+SetItemFlag 1 9 0
+SetItemFlag 1 8 1
+;ChangeItemUpgradeCount 1  = 8
+mov U86 36
+mov U87 8
+sendmsg 9 强化失败！武器<$str(S$强化职业)>-9
+#elseact
+sendmsg 9 强化失败！本次强化不降级
+
+[@点击武器]
+;战士
+#if
+CHECKJOB  Warrior
+#act
+MOV S$强化职业 物理攻击
+mov N$强化属性位置 2
+;法师
+#if
+CHECKJOB  Wizard
+#act
+MOV S$强化职业 魔法攻击
+mov N$强化属性位置 3
+;道士
+#if
+CHECKJOB  Taoist
+#act
+MOV S$强化职业 道术攻击
+mov N$强化属性位置 4
+
+
+
+#if
+EQUAL N$当前强化 0
+#act
+mov S$强化文字当前显示  <$str(S$强化职业)>+0
+mov S$强化文字下阶显示  <$str(S$强化职业)>+1
+
+#IF
+EQUAL N$当前强化 55
+#ACT
+mov S$强化文字当前显示  <$str(S$强化职业)>+<$str(N$当前强化)>
+mov S$强化文字下阶显示  MAX
+
+#IF
+small N$当前强化 55
+not equal N$当前强化 0
+#ACT
+mov S$强化文字当前显示  <$str(S$强化职业)>+<$str(N$当前强化)>
+mov S$强化文字下阶显示  <$str(S$强化职业)>+<$str(N$下阶强化)>
+
+
+
+#if
+#act
+mov S$加入保护券
+mov S$是否已选保护券 否
+mov S$选中框 <Img|x=56.0|y=145.0|width=204|height=83|rotate=0|loadDelay=0|show=4|move=0|reset=1|img=npc/zbqh/2.png>
+GetDBItemFieldValue <$STR(S$装备名字)> idx N$选中ID
+INC S$选中框 <EquipShow|x=539.0|y=206.0|width=60|height=60|index=1|itemcount=1|bgtype=1|showtips=1|reload=1>
+goto @检测武器强化程度
+[@点击衣服]
+#if
+#act
+MOV S$强化职业 生命值
+;衣服成功率
+mov N$强化衣服属性位置 2
+
+
+
+#if
+EQUAL N$当前衣服强化 0
+#act
+mov S$强化文字当前显示  <$str(S$强化职业)>+0
+mov S$强化文字下阶显示  <$str(S$强化职业)>+30
+
+#IF
+EQUAL N$当前衣服强化 1100
+#ACT
+mov S$强化文字当前显示  <$str(S$强化职业)>+<$str(N$当前衣服强化)>
+mov S$强化文字下阶显示  MAX
+
+#IF
+small N$当前衣服强化 1100
+not equal N$当前衣服强化 0
+#ACT
+mov S$强化文字当前显示  <$str(S$强化职业)>+<$str(N$当前衣服强化)>
+mov S$强化文字下阶显示  <$str(S$强化职业)>+<$str(N$下阶衣服强化)>
+
+#if
+#act
+mov S$加入保护券 
+mov S$是否已选保护券 否
+mov S$选中框 <Img|x=56.0|y=230.0|width=204|height=83|rotate=0|loadDelay=0|show=4|move=0|reset=1|img=npc/zbqh/2.png>
+GetDBItemFieldValue <$STR(S$装备名字)> idx N$选中ID
+INC S$选中框 <EquipShow|x=539.0|y=206.0|width=60|height=60|index=0|itemcount=1|bgtype=1|showtips=1|reload=1>
+;sendmsg 9 <$str(N$当前衣服强化)>
+goto @检测衣服强化程度
+
+

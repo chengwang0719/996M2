@@ -1,0 +1,153 @@
+[@main]
+#if
+check [237] 0
+#act
+set [237] 1
+sendmsg 7 恭喜您！完成隐藏任务...奖励已领取
+GiveStateItem 符石碎片 100 0 0 0 0 0 0 1 0
+MONEY 绑定元宝 + 1000000
+
+
+#if
+#act
+set [342] 0
+set [343] 0
+mov n$合成符石ID
+mov S$合成符石
+mov S$合成材料1
+mov S$合成材料2
+mov S$合成材料3
+
+mov n$合成材料1ID
+mov n$合成材料2ID
+mov n$合成材料3ID
+mov S$合成材料DOM
+mov S$加号DOM  <Button|x=432.0|y=140.0|width=50|height=58|move=0|reset=1|nimg=npc/fshc/1.png|mimg=npc/fshc/1.png|loadDelay=0|esc=1|show=4|link=@添加符石>
+goto @符石合成页面
+
+[@符石合成页面]
+#if
+#say
+<Img|a=4|x=450.0|y=316.0|width=892|height=620|reset=1|move=1|bg=1|esc=1|loadDelay=0|show=4|img=npc/fshc/bg.png>
+<Button|x=796.0|y=50.0|mimg=public/close-2.png|nimg=public/close-2.png|link=@exit>
+<Effect|x=445.0|y=250.0|scale=1|speed=0.9|effectid=70228|effecttype=0|act=0|dir=5>
+
+<Img|x=389.0|y=516.0|width=148|height=51|move=0|reset=1|img=npc/fshc/2.png|loadDelay=0|esc=1|show=4|link=@合成符石>
+
+<$str(s$合成材料DOM)>
+<$str(S$加号DOM)>
+#if
+check [342] 1
+#say
+<Img|x=626.0|y=140.0|width=145|height=319|move=0|reset=1|img=npc/fshc/3.png|loadDelay=0|esc=1|show=4>
+<ListView|children={1,2,3,4,5,6,7,8}|percentx=70.4|percenty=23.1|width=142|height=314|rotate=0|direction=1|cantouch=1|reload=0|bounce=0>
+<Layout|id=1|children={1a,1b}|x=39|y=5|width=142|height=70>
+<ItemShow|id=1a|x=3.0|y=1.0|width=70|height=70|itemid=10625|itemcount=1|showtips=1|bgtype=0|link=@选中符石#合成材料1=极限防御#合成材料2=生命源泉#合成材料3=极限亢奋#合成符石=绝处逢生>
+<ItemShow|id=1b|x=73.0|y=1.0|width=70|height=70|itemid=10638|itemcount=1|showtips=1|bgtype=0|scale=1.2|link=@选中符石#合成材料1=物抗#合成材料2=物抗#合成材料3=物抗#合成符石=ぇ子ぇ>
+
+<Layout|id=2|children={2a,2b}|x=39|y=5|width=142|height=70>
+<ItemShow|id=2a|x=3.0|y=1.0|width=70|height=70|itemid=10639|itemcount=1|showtips=1|bgtype=0|scale=1.2|link=@选中符石#合成材料1=魔抗#合成材料2=魔抗#合成材料3=魔抗#合成符石=ぇ丑ぇ>
+<ItemShow|id=2b|x=73.0|y=1.0|width=80|height=80|itemid=10640|itemcount=1|showtips=1|bgtype=0|scale=1.2|link=@选中符石#合成材料1=生命#合成材料2=生命#合成材料3=生命#合成符石=ぇ寅ぇ>
+
+<Layout|id=3|children={3a,3b}|x=39|y=5|width=142|height=70>
+<ItemShow|id=3a|x=3.0|y=1.0|width=70|height=70|itemid=10626|itemcount=1|showtips=1|bgtype=0|link=@选中符石#合成材料1=战之哀伤#合成材料2=法之哀伤#合成材料3=道之哀伤#合成符石=势如破竹>
+<ItemShow|id=3b|x=73.0|y=1.0|width=70|height=70|itemid=10629|itemcount=1|showtips=1|bgtype=0|scale=1.2|link=@选中符石#合成材料1=暴击伤害#合成材料2=暴击伤害#合成材料3=暴击伤害#合成符石=ぇ卯ぇ>
+
+<Layout|id=4|children={4a,4b}|x=39|y=5|width=142|height=70>
+<ItemShow|id=4a|x=3.0|y=1.0|width=70|height=70|itemid=10630|itemcount=1|showtips=1|bgtype=0|scale=1.2|link=@选中符石#合成材料1=暴击率#合成材料2=暴击率#合成材料3=暴击率#合成符石=ぇ辰ぇ>
+<ItemShow|id=4b|x=73.0|y=1.0|width=70|height=70|itemid=10631|itemcount=1|showtips=1|bgtype=0|scale=1.2|link=@选中符石#合成材料1=攻击伤害#合成材料2=攻击伤害#合成材料3=攻击伤害#合成符石=ぇ巳ぇ>
+
+
+<Layout|id=5|children={5a,5b}|x=39|y=5|width=142|height=70>
+<ItemShow|id=5a|x=3.0|y=1.0|width=70|height=70|itemid=10627|itemcount=1|showtips=1|bgtype=0|link=@选中符石#合成材料1=虎符沉默#合成材料2=顺手牵羊#合成材料3=蛛网束缚#合成符石=游刃有余>
+<ItemShow|id=5b|x=73.0|y=1.0|width=70|height=70|itemid=10632|itemcount=1|showtips=1|bgtype=0|scale=1.2|link=@选中符石#合成材料1=掠夺#合成材料2=掠夺#合成材料3=掠夺#合成符石=ぇ午ぇ>
+
+<Layout|id=6|children={6a,6b}|x=39|y=5|width=142|height=70>
+<ItemShow|id=6a|x=3.0|y=1.0|width=70|height=70|itemid=10633|itemcount=1|showtips=1|bgtype=0|scale=1.2|link=@选中符石#合成材料1=梦魇#合成材料2=梦魇#合成材料3=梦魇#合成符石=ぇ未ぇ>
+<ItemShow|id=6b|x=73.0|y=1.0|width=70|height=70|itemid=10634|itemcount=1|showtips=1|bgtype=0|scale=1.2|link=@选中符石#合成材料1=暗殇#合成材料2=暗殇#合成材料3=暗殇#合成符石=ぇ申ぇ>
+
+<Layout|id=7|children={7a,7b}|x=39|y=5|width=142|height=70>
+<ItemShow|id=7a|x=3.0|y=1.0|width=70|height=70|itemid=10628|itemcount=1|showtips=1|bgtype=0|link=@选中符石#合成材料1=经验源泉#合成材料2=经验源泉#合成材料3=略有所得#合成符石=意外惊喜>
+<ItemShow|id=7b|x=73.0|y=1.0|width=70|height=70|itemid=10635|itemcount=1|showtips=1|bgtype=0|scale=1.2|link=@选中符石#合成材料1=天#合成材料2=天#合成材料3=天#合成符石=ぇ酉ぇ>
+
+<Layout|id=8|children={8a,8b}|x=39|y=5|width=142|height=70>
+<ItemShow|id=8a|x=3.0|y=1.0|width=70|height=70|itemid=10636|itemcount=1|showtips=1|bgtype=0|scale=1.2|link=@选中符石#合成材料1=地#合成材料2=地#合成材料3=地#合成符石=ぇ戌ぇ>
+<ItemShow|id=8b|x=73.0|y=1.0|width=70|height=70|itemid=10637|itemcount=1|showtips=1|bgtype=0|scale=1.2|link=@选中符石#合成材料1=离#合成材料2=离#合成材料3=离#合成符石=ぇ亥ぇ>
+
+
+
+[@添加符石]
+#if
+#act
+set [342] 1
+goto @符石合成页面
+
+
+[@选中符石]
+
+#if
+#act
+set [343] 1
+GetDBItemFieldValue  <$STR(S$合成符石)> idx n$合成符石ID
+GetDBItemFieldValue  <$STR(S$合成材料1)> idx n$合成材料1ID
+GetDBItemFieldValue  <$STR(S$合成材料2)> idx n$合成材料2ID
+GetDBItemFieldValue  <$STR(S$合成材料3)> idx n$合成材料3ID
+mov S$合成材料DOM 
+mov S$合成材料DOM  <ItemShow|x=328.0|y=391.0|width=70|height=70|itemid=<$STR(n$合成材料1ID)>|itemcount=1|showtips=1|bgtype=0>
+inc S$合成材料DOM  <ItemShow|x=430.0|y=391.0|width=70|height=70|itemid=<$STR(n$合成材料2ID)>|itemcount=1|showtips=1|bgtype=0>
+inc S$合成材料DOM  <ItemShow|x=532.0|y=391.0|width=70|height=70|itemid=<$STR(n$合成材料3ID)>|itemcount=1|showtips=1|bgtype=0>
+mov S$加号DOM  <ItemShow|x=425.0|y=136.0|width=70|height=70|itemid=<$STR(n$合成符石ID)>|itemcount=1|showtips=1|bgtype=0>
+goto @符石合成页面
+
+[@合成符石]
+#if
+check [342]  0
+#act
+SENDMSG 9 请点击加号添加符石
+Break
+
+
+#if
+check [343]  0
+#act
+SENDMSG 9 请选择需要合成的符石
+Break
+
+
+
+#or
+not checkitem <$str(S$合成材料1)> 1
+not checkitem <$str(S$合成材料2)> 1
+not checkitem <$str(S$合成材料3)> 1
+#act
+SENDMSG 9 【提示】背包合成材料不足
+Break
+
+#if
+#act
+take <$str(S$合成材料1)> 1
+take <$str(S$合成材料2)> 1
+take <$str(S$合成材料3)> 1
+give <$str(S$合成符石)> 1
+sendmsg 9 符石合成成功！
+set [342] 0
+set [343] 0
+mov n$合成符石ID
+mov S$合成符石
+mov S$合成材料1
+mov S$合成材料2
+mov S$合成材料3
+mov n$合成材料1ID
+mov n$合成材料2ID
+mov n$合成材料3ID
+mov S$合成材料DOM
+mov S$加号DOM  <Button|x=432.0|y=140.0|width=50|height=58|move=0|reset=1|nimg=npc/fshc/1.png|mimg=npc/fshc/1.png|loadDelay=0|esc=1|show=4|link=@添加符石>
+goto @符石合成页面
+break
+
+
+
+
+
+
+
