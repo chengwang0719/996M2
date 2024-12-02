@@ -6,7 +6,7 @@
 <Button|x=-2.0|y=0.0|width=1140|height=640|nimg=custom/hjzm/aaa.png>
 <Button|id=0|x=627.0|y=140.0|mimg=public/close-t.png|nimg=public/close-t.png|link=@exit>
 
-<Frames|id=1|x=260|y=110|width=420|height=420|children={1a,2a,3a,4a,5a,6a,7a,8a,9a,10a,11a,12a}|speed=20|prefix=custom/zbtx/sfx_|count=22|suffix=.png|loop=-1|bg=1>
+<Frames|id=1|x=260|y=110|width=420|height=420|children={1a,2a,3a,4a,5a,6a,7a,8a,9a,10a,11a,12a}|speed=20|prefix=custom/zbtx/sfx_|count=22|suffix=.png|loop=-1|bg=1|move=1>
 
 <EquipShow|id=1a|x=178|y=28|index=105|showtips=1|reload=1|dblink=@ÍÑÏÂ1203>
 

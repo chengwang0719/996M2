@@ -373,7 +373,7 @@ MAPEFFECT 29 d401 79 14 40000 -1 0
 MAPEFFECT 29 ql 19 99 40000 -1 0
 MAPEFFECT 29 07005 30 14 40000 -1 0
 
-MAPEFFECT 29 d613 13 15 40000 -1 0
+;MAPEFFECT 29 d613 13 15 40000 -1 0
 MAPEFFECT 29 d616 86 17 40000 -1 0
 
 MAPEFFECT 29 wgjt 15 79 40000 -1 0
@@ -396,5 +396,35 @@ MAPEFFECT 21 0148 9 15 40000 -1 0
 MAPEFFECT 21 bxzj2 118 238 40000 -1 0
 MAPEFFECT 21 bxzj2 167 204 40000 -1 0
 MAPEFFECT 21 b343 10 21 40000 -1 0
+
+
+;============天泉西游============
+;龙宫
+MAPEFFECT 21 newss 137 156 40000 -1 0
+MAPEFFECT 21 lghdsl 50 45 40000 -1 0
+MAPEFFECT 21 lghdsl 52 74 40000 -1 0
+MAPEFFECT 21 lghd1 86 95 40000 -1 0
+MAPEFFECT 21 lghd1 92 24 40000 -1 0
+MAPEFFECT 21 lgbk 38 50 40000 -1 0
+;太和茶庄
+mapeffect 21 yzsl 215 126 40000 -1 0
+mapeffect 21 xsts 90 176 40000 -1 0
+mapeffect 21 xsts 123 18 40000 -1 0
+mapeffect 21 d613 89 76 40000 -1 0
+mapeffect 21 d613 17 16 40000 -1 0
+mapeffect 21 sglm 175 233 40000 -1 0
+;花果山
+mapeffect 21 wxly 142 41 40000 -1 0
+mapeffect 21 wysg 38 85 40000 -1 0
+;黑风山
+mapeffect cjzd 21 61 92 40000 -1 0
+;高老庄
+mapeffect 21 glzwy 57 84 40000 -1 0
+mapeffect 21 khpy 156 112 40000 -1 0
+mapeffect 21 khpy 94 94  40000 -1 0
+mapeffect 21 zzf 109 105  40000 -1 0
+mapeffect 21 zzf 197 196  40000 -1 0
+mapeffect 21 lyzd 26 24  40000 -1 0
+
 }
 

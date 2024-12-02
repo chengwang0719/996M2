@@ -1,0 +1,100 @@
+[@main]
+
+#if
+#act
+goto @道具特效赋值
+
+[@道具特效赋值]
+;<ItemShow> grey 0-高亮 1-灰色 
+#act
+mov T213 红军果Lv.1=1,红军果Lv.2=1,红军果Lv.3=1,红军果Lv.4=1,红军果Lv.5=1
+mov N$道具数量 0
+
+#if  
+checkitem 红军果Lv.1 1
+#act
+addstrvalue T213 红军果Lv.1 0
+inc N$道具数量 1
+#if  
+checkitem 红军果Lv.2 1
+#act
+addstrvalue T213 红军果Lv.2 0
+inc N$道具数量 1
+#if  
+checkitem 红军果Lv.3 1
+#act
+addstrvalue T213 红军果Lv.3 0
+inc N$道具数量 1
+#if  
+checkitem 红军果Lv.4 1
+#act
+addstrvalue T213 红军果Lv.4 0
+inc N$道具数量 1
+#if  
+checkitem 红军果Lv.5 1
+#act
+addstrvalue T213 红军果Lv.5 0
+inc N$道具数量 1
+
+
+#if
+#act
+goto @道具高亮取值
+
+[@道具高亮取值]
+;获取字符串主键值
+#act
+getstrvalue T213 红军果Lv.1 S$灰度展示_红军果Lv.1
+getstrvalue T213 红军果Lv.2 S$灰度展示_红军果Lv.2
+getstrvalue T213 红军果Lv.3 S$灰度展示_红军果Lv.3
+getstrvalue T213 红军果Lv.4 S$灰度展示_红军果Lv.4 
+getstrvalue T213 红军果Lv.5 S$灰度展示_红军果Lv.5
+goto @神秘人主界面
+[@神秘人主界面]
+#say
+<Img|id=ui_1|children={exit,content,button}|x=-28|y=-14|width=845|height=528|img=public/xiyou/shouji/素材.png|bg=1|move=0|reset=1|show=4|layerid=110>
+<Button|id=exit|x=817|y=129|width=26|height=42|nimg=public/1900000510.png|pimg=public/1900000511.png|color=255|size=18|link=@exit>
+<Layout|id=content|children={a1,a2,a3,a4,a5,equipshow}|x=139|y=61|width=705|height=415>
+<RText|id=a1|x=346|y=81|outline=2|outlinecolor=0|color=255|size=18|text=<攻击：/FCOLOR=255><+50/FCOLOR=215>>
+<RText|id=a2|x=346|y=109|outline=2|outlinecolor=0|color=255|size=18|text=<生命值：/FCOLOR=255><+500/FCOLOR=215>>
+<RText|id=a3|x=346|y=137|outline=2|outlinecolor=0|color=255|size=18|text=<打怪伤害：/FCOLOR=255><+10%/FCOLOR=215>>
+<RText|id=a4|x=346|y=167|outline=2|outlinecolor=0|color=255|size=18|text=<人物爆率：/FCOLOR=255><+10%/FCOLOR=215>>
+<RText|id=a5|x=344|y=195|outline=2|outlinecolor=0|color=255|size=18|text=<获取技能魔法盾/FCOLOR=215>>
+<Layout|id=equipshow|children={b1,b2,b3,b4,b5}|x=5|y=229|width=693|height=90>
+<ItemShow|id=b1|x=224|y=6|width=57|height=57|itemid=20241|itemcount=1|showtips=1||grey=<$str(S$灰度展示_红军果Lv.1)>>
+<ItemShow|id=b2|x=299|y=6|itemid=20242|itemcount=1|showtips=1||grey=<$str(S$灰度展示_红军果Lv.2)>>
+<ItemShow|id=b3|x=379|y=6|width=57|height=57|itemid=20243|itemcount=1|showtips=1||grey=<$str(S$灰度展示_红军果Lv.3)>>
+<ItemShow|id=b4|x=457|y=6|width=57|height=57|itemid=20244|itemcount=1|showtips=1||grey=<$str(S$灰度展示_红军果Lv.4)>>
+<ItemShow|id=b5|x=534|y=6|width=57|height=57|itemid=20245|itemcount=1|showtips=1||grey=<$str(S$灰度展示_红军果Lv.5)>>
+<Button|id=button|x=453|y=395|width=164|height=60|nimg=public\xiyou\shouji\领取.png|color=251|size=18|link=@BUFF检测>
+
+
+[@BUFF检测]
+#if
+hasbuff 10001
+#act
+sendmsg 9 神秘人BUFF你已经激活过了！
+break
+#if
+equal N$道具数量 5
+#act
+goto @增加BUFF
+break
+#elseact
+sendmsg 9 当前条件不满足激活！
+break
+
+[@增加BUFF]
+#if
+#act
+addbuff 10001 
+ADDSKILL 魔法盾 1
+take 红军果Lv.1 1 
+take 红军果Lv.1 2 
+take 红军果Lv.1 3 
+take 红军果Lv.1 4 
+take 红军果Lv.1 5 
+sendmsg 9 神秘人BUFF激活成功！ 
+close
+
+

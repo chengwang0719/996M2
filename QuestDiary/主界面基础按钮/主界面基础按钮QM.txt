@@ -167,27 +167,73 @@ addbutton 302 90 <$STR(S$自动拾取选项)>
 #IF
 #ACT
 
-INC S$货币图标 <Text|outline=2|outlinecolor=0|text=$STM(MONEY_元宝)|x=83|y=336|size=15|color=255>
+INC S$货币图标 <Text|outline=2|outlinecolor=0|text=$STM(MONEY_元宝)|x=92|y=324|size=15|color=255>
 
-INC S$货币图标 <Text|outline=2|outlinecolor=0|text=$STM(MONEY_点卡)|x=83|y=371|size=15|color=255>
+;INC S$货币图标 <Text|outline=2|outlinecolor=0|text=$STM(MONEY_点卡)|x=83|y=371|size=15|color=255>
 
-INC S$货币图标 <Text|outline=2|outlinecolor=0|text=$STM(MONEY_点卷)|x=83|y=406|size=15|color=255>
+INC S$货币图标 <Text|outline=2|outlinecolor=0|text=$STM(MONEY_点卷)|x=92|y=359|size=15|color=255>
 
-INC S$货币图标 <Text|outline=2|outlinecolor=0|text=$STM(MONEY_绑定元宝)|x=243|y=336|size=15|color=255>
+INC S$货币图标 <Text|outline=2|outlinecolor=0|text=$STM(MONEY_绑定元宝)|x=250|y=324|size=15|color=255>
 
-INC S$货币图标 <Text|outline=2|outlinecolor=0|text=$STM(MONEY_绑定点卡)|x=243|y=371|size=15|color=255>
+;INC S$货币图标 <Text|outline=2|outlinecolor=0|text=$STM(MONEY_绑定点卡)|x=243|y=371|size=15|color=255>
 
-INC S$货币图标 <Text|outline=2|outlinecolor=0|text=$STM(MONEY_绑定点卷)|x=243|y=406|size=15|color=255>
+INC S$货币图标 <Text|outline=2|outlinecolor=0|text=$STM(MONEY_绑定点卷)|x=250|y=359|size=15|color=255>
 ADDBUTTON 7 99 <$STR(S$货币图标)>
 
-MOV S$背包图标 <Button|id=113|x=337|y=338|nimg=private/main/1.png|nimg=private/main/1.png|link=@仓库>
-INC S$背包图标 <Button|id=114|x=432|y=338|nimg=private/main/2.png|nimg=private/main/2.png|link=@整理>
-INC S$背包图标 <Button|id=115|x=337|y=385|nimg=private/main/3.png|nimg=private/main/3.png|link=@兑换>
-INC S$背包图标 <Button|id=116|x=432|y=385|nimg=private/main/4.png|nimg=private/main/4.png|link=@回收>
+MOV S$背包图标 <Button|id=113|x=350|y=318|nimg=public/xiyou/背包界面/仓库.png|nimg=public/xiyou/背包界面/仓库.png|link=@仓库>
+INC S$背包图标 <Button|id=114|x=445|y=318|nimg=public/xiyou/背包界面/整理.png|nimg=public/xiyou/背包界面/整理.png|link=@整理>
+INC S$背包图标 <Button|id=115|x=349|y=355|nimg=public/xiyou/背包界面/兑换.png|nimg=public/xiyou/背包界面/兑换.png|link=@兑换>
+INC S$背包图标 <Button|id=116|x=446|y=355|nimg=public/xiyou/背包界面/回收.png|nimg=public/xiyou/背包界面/回收.png|link=@回收>
 
 ADDBUTTON 7 10 <$STR(S$背包图标)>
 
 
+
+;==========================================西游沉默========================================
+;INC S$背包右栏装备 <Img|children={a}|x=552.0|y=-30.0|width=83|height=493|img=public/1900000666.jpg|esc=1>
+INC S$背包右栏装备 <ListView|id=a|children={1,2,3,4,5,6,7,8,9,10}|x=552|y=-19|width=70|height=415|direction=1|margin=1|bounce=1|reload=0>
+
+
+INC S$背包右栏装备 <ITEMBOX|id=1|children={1a}|y=195.0|stdmode=*|tipsx=4|tipsy=100|img=public/xiyou/背包界面/侧边栏.png|=200.0>
+INC S$背包右栏装备 <EquipShow|id=1a|x=1.0|y=0.0|scale=1|showtips=1|index=118|reload=1|dblink=@脱下1215>
+
+
+INC S$背包右栏装备 <ITEMBOX|id=2|children={2a}|y=195.0|stdmode=*|tipsx=4|tipsy=100|img=public/xiyou/背包界面/侧边栏.png|=200.0>
+INC S$背包右栏装备 <EquipShow|id=2a|x=1.0|y=0.0|scale=1|showtips=1|index=118|reload=1|dblink=>
+
+;
+INC S$背包右栏装备 <ITEMBOX|id=3|children={3a}|y=195.0|stdmode=*|tipsx=4|tipsy=100|img=public/xiyou/背包界面/侧边栏.png|=200.0>
+INC S$背包右栏装备 <EquipShow|id=3a|x=1.0|y=0.0|scale=1|showtips=1|index=118|reload=1|dblink=>
+
+INC S$背包右栏装备 <ITEMBOX|id=4|children={4a}|y=195.0|tdmode=*|tipsx=4|tipsy=100|img=public/xiyou/背包界面/侧边栏.png|=200.0>
+INC S$背包右栏装备 <EquipShow|id=4a|x=1.0|y=0.0|scale=1|showtips=1|index=118|reload=1|dblink=>
+
+INC S$背包右栏装备 <ITEMBOX|id=5|children={5a}|y=195.0|stdmode=*|tipsx=4|tipsy=100|img=public/xiyou/背包界面/侧边栏.png|=200.0>
+INC S$背包右栏装备 <EquipShow|id=5a|x=1.0|y=0.0|scale=1|showtips=1|index=118|reload=1|dblink=>
+
+INC S$背包右栏装备 <ITEMBOX|id=6|children={6a}|y=195.0|stdmode=*|tipsx=4|tipsy=100|img=public/xiyou/背包界面/侧边栏.png|=200.0>
+INC S$背包右栏装备 <EquipShow|id=6a|x=1.0|y=0.0|scale=1|showtips=1|index=118|reload=1|dblink=>
+
+INC S$背包右栏装备 <ITEMBOX|id=7|children={7a}|y=195.0|stdmode=*|tipsx=4|tipsy=100|img=public/xiyou/背包界面/侧边栏.png|=200.0>
+INC S$背包右栏装备 <EquipShow|id=7a|x=1.0|y=0.0|scale=1|showtips=1|index=118|reload=1|dblink=>
+
+INC S$背包右栏装备 <ITEMBOX|id=8|children={8a}|y=195.0|stdmode=*|tipsx=4|tipsy=100|img=public/xiyou/背包界面/侧边栏.png|=200.0>
+INC S$背包右栏装备 <EquipShow|id=8a|x=1.0|y=0.0|scale=1|showtips=1|index=118|reload=1|dblink=>
+
+INC S$背包右栏装备 <ITEMBOX|id=9|children={9a}|y=195.0|stdmode=*|tipsx=4|tipsy=100|img=public/xiyou/背包界面/侧边栏.png|=200.0>
+INC S$背包右栏装备 <EquipShow|id=9a|x=1.0|y=0.0|scale=1|showtips=1|index=118|reload=1|dblink=>
+
+INC S$背包右栏装备 <ITEMBOX|id=10|children={10a}|y=195.0|stdmode=*|tipsx=4|tipsy=100|img=public/xiyou/背包界面/侧边栏.png|=200.0>
+INC S$背包右栏装备 <EquipShow|id=10a|x=1.0|y=0.0|scale=1|showtips=1|index=118|reload=1|dblink=>
+;#CALL [\主界面基础按钮\主界面基础按钮QM.txt] @移动端界面
+ADDBUTTON 7 110 <$STR(S$背包右栏装备)>
+;==========================================西游沉默========================================
+
+
+
+
+
+;--------------------西游-----------------------------
 MOV S$主界面按钮UI <Effect|x=113.0|y=-152.0|scale=1|speed=1|effecttype=0|effectid=20322|act=0|dir=5|speed=3> 
 INC S$主界面按钮UI <Effect|x=-412.0|y=-248.0|scale=1|speed=1|effecttype=0|effectid=20321|act=0|dir=5|speed=3> 
 INC S$主界面按钮UI <Button|x=-335.0|y=-78.0|color=255|size=18|mimg=private/main/bang-3.png|nimg=private/main/bang-1.png|pimg=private/main/bang-2.png|link=@排行榜>

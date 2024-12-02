@@ -1,0 +1,445 @@
+[@main]
+
+#if
+small U234 299
+#act
+mov S$当前境界 无
+mov S$下个境界 人仙
+mov N$需要修为 300 
+mov N$需要元宝 100000 
+mov N$攻魔道属性值 10
+mov N$生命属性值 300
+mov N$切割伤害属性值 1000
+mov N$对怪增伤属性值 1
+mov S$升级货币展示 <RText|id=c3|x=504.0|y=260.0|outline=2|size=18|outlinecolor=0|text=<元宝：/FCOLOR=125><<$str(N$需要元宝)>/FCOLOR=215>> 
+
+
+goto @境界主页面
+#if
+large U234 299
+small U234 599
+#act
+mov S$当前境界 人仙
+mov S$下个境界 地仙
+mov N$需要修为 600 
+mov N$需要元宝 300000 
+mov N$攻魔道属性值 20
+mov N$生命属性值 600
+mov N$切割伤害属性值 2000
+mov N$对怪增伤属性值 2
+mov S$升级货币展示 <RText|id=c3|x=504.0|y=260.0|outline=2|size=18|outlinecolor=0|text=<元宝：/FCOLOR=125><<$str(N$需要元宝)>/FCOLOR=215>>
+goto @境界主页面
+#if
+large U234 599 
+small U234 1199
+
+#act
+mov S$当前境界 地仙
+mov S$下个境界 天仙
+mov N$需要修为 1200 
+mov N$需要元宝 600000 
+mov N$攻魔道属性值 30
+mov N$生命属性值 900
+mov N$切割伤害属性值 3000
+mov N$对怪增伤属性值 3
+mov S$升级货币展示 <RText|id=c3|x=504.0|y=260.0|outline=2|size=18|outlinecolor=0|text=<元宝：/FCOLOR=125><<$str(N$需要元宝)>/FCOLOR=215>>
+goto @境界主页面
+#if
+large U234 1199 
+small U234 2399
+#act
+mov S$当前境界 天仙
+mov S$下个境界 金仙
+mov N$需要修为 2400 
+mov N$需要元宝 1200000 
+mov N$攻魔道属性值 40
+mov N$生命属性值 1200
+mov N$切割伤害属性值 4000
+mov N$对怪增伤属性值 4
+mov S$升级货币展示 <RText|id=c3|x=504.0|y=260.0|outline=2|size=18|outlinecolor=0|text=<元宝：/FCOLOR=125><<$str(N$需要元宝)>/FCOLOR=215>>
+goto @境界主页面 
+#if
+large U234 2399
+small U234 4799
+#act
+mov S$当前境界 金仙
+mov S$下个境界 大罗金仙
+mov N$需要修为 4800 
+mov N$需要元宝 2400000 
+mov N$攻魔道属性值 70
+mov N$生命属性值 1700
+mov N$切割伤害属性值 7000
+mov N$对怪增伤属性值 7
+mov N$生命值百分比 1
+mov N$攻击力百分比 1
+mov S$额外属性展示 <RText|id=b7|x=244.0|y=294.0|outline=2|size=18|outlinecolor=0|text=<生命值百分比:/FCOLOR=125> <+<$str(N$生命值百分比)>%/FCOLOR=215>>
+inc S$额外属性展示 <RText|id=b8|x=686.0|y=187.0|outline=2|size=18|outlinecolor=0|text=<攻击力百分比:/FCOLOR=125> <+<$str(N$攻击力百分比)>%/FCOLOR=215>>
+mov S$升级货币展示 <RText|id=c3|x=504.0|y=260.0|outline=2|size=18|outlinecolor=0|text=<元宝：/FCOLOR=125><<$str(N$需要元宝)>/FCOLOR=215>>
+goto @境界主页面 
+#if
+large U234 4799 
+small U234 9999
+#act
+mov S$当前境界 大罗金仙
+mov S$下个境界 玄仙
+mov N$需要修为 10000 
+mov N$需要元宝 4800000 
+mov N$攻魔道属性值 100
+mov N$生命属性值 2200
+mov N$切割伤害属性值 10000
+mov N$对怪增伤属性值 10
+mov N$生命值百分比 2
+mov N$攻击力百分比 2
+mov S$额外属性展示 <RText|id=b7|x=244.0|y=294.0|outline=2|size=18|outlinecolor=0|text=<生命值百分比:/FCOLOR=125> <+<$str(N$生命值百分比)>%/FCOLOR=215>>
+inc S$额外属性展示 <RText|id=b8|x=686.0|y=187.0|outline=2|size=18|outlinecolor=0|text=<攻击力百分比:/FCOLOR=125> <+<$str(N$攻击力百分比)>%/FCOLOR=215>>
+mov S$升级货币展示 <RText|id=c3|x=504.0|y=260.0|outline=2|size=18|outlinecolor=0|text=<元宝：/FCOLOR=125><<$str(N$需要元宝)>/FCOLOR=215>>
+goto @境界主页面 
+#if
+large U234 9999 
+small U234 19999
+#act
+mov S$当前境界 玄仙 
+mov S$下个境界 太乙玄仙
+mov N$需要修为 20000 
+mov N$需要元宝 10000000 
+mov N$攻魔道属性值 130
+mov N$生命属性值 2700
+mov N$切割伤害属性值 13000
+mov N$对怪增伤属性值 13
+mov N$攻击力百分比 3
+mov N$生命值百分比 3
+mov S$额外属性展示 <RText|id=b7|x=244.0|y=294.0|outline=2|size=18|outlinecolor=0|text=<生命值百分比:/FCOLOR=125> <+<$str(N$生命值百分比)>%/FCOLOR=215>>
+inc S$额外属性展示 <RText|id=b8|x=686.0|y=187.0|outline=2|size=18|outlinecolor=0|text=<攻击力百分比:/FCOLOR=125> <+<$str(N$攻击力百分比)>%/FCOLOR=215>>
+mov S$升级货币展示 <RText|id=c3|x=504.0|y=260.0|outline=2|size=18|outlinecolor=0|text=<元宝：/FCOLOR=125><<$str(N$需要元宝)>/FCOLOR=215>>
+goto @境界主页面 
+#if
+large U234 19999 
+small U234 39999
+#act
+mov S$当前境界 太乙玄仙
+mov S$下个境界 仙君
+mov N$需要修为 40000 
+mov N$需要元宝 20000000 
+mov N$攻魔道属性值 160
+mov N$生命属性值 3200
+mov N$切割伤害属性值 16000
+mov N$对怪增伤属性值 16
+mov N$攻击力百分比 4
+mov N$生命值百分比 4
+mov S$额外属性展示 <RText|id=b7|x=244.0|y=294.0|outline=2|size=18|outlinecolor=0|text=<生命值百分比:/FCOLOR=125> <+<$str(N$生命值百分比)>%/FCOLOR=215>>
+inc S$额外属性展示 <RText|id=b8|x=686.0|y=187.0|outline=2|size=18|outlinecolor=0|text=<攻击力百分比:/FCOLOR=125> <+<$str(N$攻击力百分比)>%/FCOLOR=215>>
+mov S$升级货币展示 <RText|id=c3|x=504.0|y=260.0|outline=2|size=18|outlinecolor=0|text=<元宝：/FCOLOR=125><<$str(N$需要元宝)>/FCOLOR=215>>
+goto @境界主页面 
+#if
+large U234 39999 
+small U234 79999
+#act
+mov S$当前境界 仙君
+mov S$下个境界 仙帝
+mov N$需要修为 80000 
+mov N$需要元宝 40000000 
+mov N$攻魔道属性值 220
+mov N$生命属性值 4000
+mov N$切割伤害属性值 22000
+mov N$对怪增伤属性值 22
+mov N$攻击力百分比 7
+mov N$生命值百分比 7
+mov N$人物爆率 10
+mov N$攻击吸血 1
+mov S$额外属性展示 <RText|id=b7|x=244.0|y=294.0|outline=2|size=18|outlinecolor=0|text=<生命值百分比:/FCOLOR=125> <+<$str(N$生命值百分比)>%/FCOLOR=215>>
+inc S$额外属性展示 <RText|id=b8|x=686.0|y=187.0|outline=2|size=18|outlinecolor=0|text=<攻击力百分比:/FCOLOR=125> <+<$str(N$攻击力百分比)>%/FCOLOR=215>>
+inc S$额外属性展示 <RText|id=b9|x=686.0|y=213.0|outline=2|size=18|outlinecolor=0|text=<人物爆率:/FCOLOR=125> <+<$str(N$人物爆率)>%/FCOLOR=215>>
+inc S$额外属性展示 <RText|id=b10|x=686.0|y=239.0|outline=2|size=18|outlinecolor=0|text=<攻击吸血:/FCOLOR=125> <+<$str(N$攻击吸血)>%/FCOLOR=215>>
+mov S$升级货币展示 <RText|id=c3|x=504.0|y=260.0|outline=2|size=18|outlinecolor=0|text=<元宝：/FCOLOR=125><<$str(N$需要元宝)>/FCOLOR=215>>
+goto @境界主页面 
+#if
+large U234 79999 
+small U234 159999
+#act
+mov S$当前境界 仙帝
+mov S$下个境界 准圣
+mov N$需要修为 160000 
+mov N$需要元宝 60000000 
+mov N$攻魔道属性值 280
+mov N$生命属性值 4800
+mov N$切割伤害属性值 28000
+mov N$对怪增伤属性值 28
+mov N$攻击力百分比 10
+mov N$生命值百分比 10
+mov N$人物爆率 20
+mov N$攻击吸血 2
+mov S$额外属性展示 <RText|id=b7|x=244.0|y=294.0|outline=2|size=18|outlinecolor=0|text=<生命值百分比:/FCOLOR=125> <+<$str(N$生命值百分比)>%/FCOLOR=215>>
+inc S$额外属性展示 <RText|id=b8|x=686.0|y=187.0|outline=2|size=18|outlinecolor=0|text=<攻击力百分比:/FCOLOR=125> <+<$str(N$攻击力百分比)>%/FCOLOR=215>>
+inc S$额外属性展示 <RText|id=b9|x=686.0|y=213.0|outline=2|size=18|outlinecolor=0|text=<人物爆率:/FCOLOR=125> <+<$str(N$人物爆率)>%/FCOLOR=215>>
+inc S$额外属性展示 <RText|id=b10|x=686.0|y=239.0|outline=2|size=18|outlinecolor=0|text=<攻击吸血:/FCOLOR=125> <+<$str(N$攻击吸血)>%/FCOLOR=215>>
+mov S$升级货币展示 <RText|id=c3|x=504.0|y=260.0|outline=2|size=18|outlinecolor=0|text=<元宝：/FCOLOR=125><<$str(N$需要元宝)>/FCOLOR=215>>
+goto @境界主页面 
+#if
+large U234 159999 
+small U234 319999
+#act
+mov S$当前境界 准圣
+mov S$下个境界 圣人
+mov N$需要修为 320000 
+mov N$需要元宝 100000000 
+mov N$攻魔道属性值 340
+mov N$生命属性值 5600
+mov N$切割伤害属性值 34000
+mov N$对怪增伤属性值 34
+mov N$攻击力百分比 13
+mov N$生命值百分比 13
+mov N$人物爆率 30
+mov N$攻击吸血 3
+mov S$额外属性展示 <RText|id=b7|x=244.0|y=294.0|outline=2|size=18|outlinecolor=0|text=<生命值百分比:/FCOLOR=125> <+<$str(N$生命值百分比)>%/FCOLOR=215>>
+inc S$额外属性展示 <RText|id=b8|x=686.0|y=187.0|outline=2|size=18|outlinecolor=0|text=<攻击力百分比:/FCOLOR=125> <+<$str(N$攻击力百分比)>%/FCOLOR=215>>
+inc S$额外属性展示 <RText|id=b9|x=686.0|y=213.0|outline=2|size=18|outlinecolor=0|text=<人物爆率:/FCOLOR=125> <+<$str(N$人物爆率)>%/FCOLOR=215>>
+inc S$额外属性展示 <RText|id=b10|x=686.0|y=239.0|outline=2|size=18|outlinecolor=0|text=<攻击吸血:/FCOLOR=125> <+<$str(N$攻击吸血)>%/FCOLOR=215>>
+mov S$升级货币展示 <RText|id=c3|x=504.0|y=260.0|outline=2|size=18|outlinecolor=0|text=<元宝：/FCOLOR=125><<$str(N$需要元宝)>/FCOLOR=215>>>
+goto @境界主页面 
+#if
+large U234 319999 
+small U234 639999
+#act
+mov S$当前境界 圣人
+mov S$下个境界 大圣
+mov N$需要修为 640000 
+mov N$需要元宝 300000000 
+mov N$攻魔道属性值 400
+mov N$生命属性值 6400
+mov N$切割伤害属性值 40000
+mov N$对怪增伤属性值 40
+mov N$攻击力百分比 16
+mov N$生命值百分比 16
+mov N$人物爆率 40
+mov N$攻击吸血 4
+mov S$额外属性展示 <RText|id=b7|x=244.0|y=294.0|outline=2|size=18|outlinecolor=0|text=<生命值百分比:/FCOLOR=125> <+<$str(N$生命值百分比)>%/FCOLOR=215>>
+inc S$额外属性展示 <RText|id=b8|x=686.0|y=187.0|outline=2|size=18|outlinecolor=0|text=<攻击力百分比:/FCOLOR=125> <+<$str(N$攻击力百分比)>%/FCOLOR=215>>
+inc S$额外属性展示 <RText|id=b9|x=686.0|y=213.0|outline=2|size=18|outlinecolor=0|text=<人物爆率:/FCOLOR=125> <+<$str(N$人物爆率)>%/FCOLOR=215>>
+inc S$额外属性展示 <RText|id=b10|x=686.0|y=239.0|outline=2|size=18|outlinecolor=0|text=<攻击吸血:/FCOLOR=125> <+<$str(N$攻击吸血)>%/FCOLOR=215>>
+mov S$升级货币展示 <RText|id=c3|x=504.0|y=260.0|outline=2|size=18|outlinecolor=0|text=<需要元宝/FCOLOR=125><<$str(N$需要元宝)>/FCOLOR=215>>>
+goto @境界主页面
+#if
+large U234 639999 
+small U234 1199999
+#act
+mov S$当前境界 大圣
+mov S$下个境界 准帝
+mov N$需要修为 1200000 
+mov N$需要元宝 600000000 
+mov N$攻魔道属性值 500
+mov N$生命属性值 7500
+mov N$切割伤害属性值 50000
+mov N$对怪增伤属性值 50
+mov N$攻击力百分比 22
+mov N$生命值百分比 22
+mov N$人物爆率 70
+mov N$攻击吸血 7
+mov N$暴击率 1
+mov N$暴击伤害 1
+
+mov S$额外属性展示 <RText|id=b7|x=244.0|y=294.0|outline=2|size=18|outlinecolor=0|text=<生命值百分比：/FCOLOR=125><+<$str(N$生命值百分比)>%/FCOLOR=215>>
+inc S$额外属性展示 <RText|id=b8|x=686.0|y=187.0|outline=2|size=18|outlinecolor=0|text=<攻击力百分比：/FCOLOR=125><+<$str(N$攻击力百分比)>%/FCOLOR=215>>
+inc S$额外属性展示 <RText|id=b9|x=686.0|y=213.0|outline=2|size=18|outlinecolor=0|text=<人物爆率:/FCOLOR=125><+<$str(N$人物爆率)>%/FCOLOR=215>>
+inc S$额外属性展示 <RText|id=b10|x=686.0|y=239.0|outline=2|size=18|outlinecolor=0|text=<攻击吸血:/FCOLOR=125><+<$str(N$攻击吸血)>%/FCOLOR=215>>
+inc S$额外属性展示 <RText|id=b11|x=686.0|y=265.0|outline=2|size=18|outlinecolor=0|text=<暴击率:/FCOLOR=125><+<$str(N$暴击率)>%/FCOLOR=215>>
+inc S$额外属性展示 <RText|id=b12|x=686.0|y=291.0|outline=2|size=18|outlinecolor=0|text=<暴击伤害:/FCOLOR=125><+<$str(N$暴击伤害)>%/FCOLOR=215>>
+mov S$升级货币展示 <RText|id=c3|x=504.0|y=260.0|outline=2|size=18|outlinecolor=0|text=<需要元宝:/FCOLOR=125><<$str(N$需要元宝)>/FCOLOR=215>>
+goto @境界主页面
+#if
+large U234 1199999 
+small U234 2399999
+#act
+mov S$当前境界 准帝
+mov S$下个境界 大帝
+mov N$需要修为 2400000 
+mov N$需要元宝 1200000000 
+mov N$攻魔道属性值 600
+mov N$生命属性值 8600
+mov N$切割伤害属性值 60000
+mov N$对怪增伤属性值 60
+mov N$攻击力百分比 28
+mov N$生命值百分比 28
+mov N$人物爆率 100
+mov N$攻击吸血 10
+mov N$暴击率 3
+mov N$暴击伤害 3
+mov S$额外属性展示 <RText|id=b7|x=244.0|y=294.0|outline=2|size=18|outlinecolor=0|text=<生命值百分比：/FCOLOR=125><+<$str(N$生命值百分比)>%/FCOLOR=215>>
+inc S$额外属性展示 <RText|id=b8|x=686.0|y=187.0|outline=2|size=18|outlinecolor=0|text=<攻击力百分比：/FCOLOR=125><+<$str(N$攻击力百分比)>%/FCOLOR=215>>
+inc S$额外属性展示 <RText|id=b9|x=686.0|y=213.0|outline=2|size=18|outlinecolor=0|text=<人物爆率:/FCOLOR=125><+<$str(N$人物爆率)>%/FCOLOR=215>>
+inc S$额外属性展示 <RText|id=b10|x=686.0|y=239.0|outline=2|size=18|outlinecolor=0|text=<攻击吸血:/FCOLOR=125><+<$str(N$攻击吸血)>%/FCOLOR=215>>
+inc S$额外属性展示 <RText|id=b11|x=686.0|y=265.0|outline=2|size=18|outlinecolor=0|text=<暴击率:/FCOLOR=125><+<$str(N$暴击率)>%/FCOLOR=215>>
+inc S$额外属性展示 <RText|id=b12|x=686.0|y=291.0|outline=2|size=18|outlinecolor=0|text=<暴击伤害:/FCOLOR=125><+<$str(N$暴击伤害)>%/FCOLOR=215>>
+mov S$升级货币展示 <RText|id=c3|x=504.0|y=260.0|outline=2|size=18|outlinecolor=0|text=<需要元宝:/FCOLOR=125><<$str(N$需要元宝)>/FCOLOR=215>>
+goto @境界主页面
+#if
+large U234 2399999
+small U234 4799999
+#act
+mov S$当前境界 大帝
+mov S$下个境界 天帝
+mov N$需要修为 4800000 
+mov N$升级货币 68888 
+mov N$攻魔道属性值 700
+mov N$生命属性值 9700
+mov N$切割伤害属性值 70000
+mov N$对怪增伤属性值 70
+mov N$攻击力百分比 34
+mov N$生命值百分比 34
+mov N$人物爆率 130
+mov N$攻击吸血 13
+mov N$暴击率 5
+mov N$暴击伤害 5
+mov S$额外属性展示 <RText|id=b7|x=244.0|y=294.0|outline=2|size=18|outlinecolor=0|text=<生命值百分比：/FCOLOR=125><+<$str(N$生命值百分比)>%/FCOLOR=215>>
+inc S$额外属性展示 <RText|id=b8|x=686.0|y=187.0|outline=2|size=18|outlinecolor=0|text=<攻击力百分比：/FCOLOR=125><+<$str(N$攻击力百分比)>%/FCOLOR=215>>
+inc S$额外属性展示 <RText|id=b9|x=686.0|y=213.0|outline=2|size=18|outlinecolor=0|text=<人物爆率:/FCOLOR=125><+<$str(N$人物爆率)>%/FCOLOR=215>>
+inc S$额外属性展示 <RText|id=b10|x=686.0|y=239.0|outline=2|size=18|outlinecolor=0|text=<攻击吸血:/FCOLOR=125><+<$str(N$攻击吸血)>%/FCOLOR=215>>
+inc S$额外属性展示 <RText|id=b11|x=686.0|y=265.0|outline=2|size=18|outlinecolor=0|text=<暴击率:/FCOLOR=125><+<$str(N$暴击率)>%/FCOLOR=215>>
+inc S$额外属性展示 <RText|id=b12|x=686.0|y=291.0|outline=2|size=18|outlinecolor=0|text=<暴击伤害:/FCOLOR=125><+<$str(N$暴击伤害)>%/FCOLOR=215>>
+mov S$升级货币展示 <RText|id=c3|x=504.0|y=260.0|outline=2|size=18|outlinecolor=0|text=<需要点券:/FCOLOR=125><<$str(N$升级货币)>/FCOLOR=215>>
+goto @境界主页面
+#if
+large U234 4799999 
+small U234 9999999
+#act
+mov S$当前境界 天帝
+mov S$下个境界 荒天帝
+mov N$需要修为 10000000 
+mov N$升级货币 88888 
+mov N$攻魔道属性值 800
+mov N$生命属性值 10800
+mov N$切割伤害属性值 80000
+mov N$对怪增伤属性值 80
+mov N$攻击力百分比 40
+mov N$生命值百分比 40
+mov N$人物爆率 160
+mov N$攻击吸血 16
+mov N$暴击率 7
+mov N$暴击伤害 7
+mov S$额外属性展示 <RText|id=b7|x=244.0|y=294.0|outline=2|size=18|outlinecolor=0|text=<生命值百分比：/FCOLOR=125><+<$str(N$生命值百分比)>%/FCOLOR=215>>
+inc S$额外属性展示 <RText|id=b8|x=686.0|y=187.0|outline=2|size=18|outlinecolor=0|text=<攻击力百分比：/FCOLOR=125><+<$str(N$攻击力百分比)>%/FCOLOR=215>>
+inc S$额外属性展示 <RText|id=b9|x=686.0|y=213.0|outline=2|size=18|outlinecolor=0|text=<人物爆率:/FCOLOR=125><+<$str(N$人物爆率)>%/FCOLOR=215>>
+inc S$额外属性展示 <RText|id=b10|x=686.0|y=239.0|outline=2|size=18|outlinecolor=0|text=<攻击吸血:/FCOLOR=125><+<$str(N$攻击吸血)>%/FCOLOR=215>>
+inc S$额外属性展示 <RText|id=b11|x=686.0|y=265.0|outline=2|size=18|outlinecolor=0|text=<暴击率:/FCOLOR=125><+<$str(N$暴击率)>%/FCOLOR=215>>
+inc S$额外属性展示 <RText|id=b12|x=686.0|y=291.0|outline=2|size=18|outlinecolor=0|text=<暴击伤害:/FCOLOR=125><+<$str(N$暴击伤害)>%/FCOLOR=215>>
+mov S$升级货币展示 <RText|id=c3|x=504.0|y=260.0|outline=2|size=18|outlinecolor=0|text=<需要点券:/FCOLOR=125><<$str(N$升级货币)>/FCOLOR=215>>
+goto @境界主页面
+#if
+large U234 9999999 
+small U234 19999999 
+#act
+mov S$当前境界 荒天帝
+mov S$下个境界 主宰
+mov N$需要修为 20000000 
+mov N$升级货币 108888 
+mov N$攻魔道属性值 900
+mov N$生命属性值 11900
+mov N$切割伤害属性值 90000
+mov N$对怪增伤属性值 90
+mov N$攻击力百分比 50
+mov N$生命值百分比 50
+mov N$人物爆率 200
+mov N$攻击吸血 22
+mov N$暴击率 10
+mov N$暴击伤害 10
+mov S$额外属性展示 <RText|id=b7|x=244.0|y=294.0|outline=2|size=18|outlinecolor=0|text=<生命值百分比：/FCOLOR=125><+<$str(N$生命值百分比)>%/FCOLOR=215>>
+inc S$额外属性展示 <RText|id=b8|x=686.0|y=187.0|outline=2|size=18|outlinecolor=0|text=<攻击力百分比：/FCOLOR=125><+<$str(N$攻击力百分比)>%/FCOLOR=215>>
+inc S$额外属性展示 <RText|id=b9|x=686.0|y=213.0|outline=2|size=18|outlinecolor=0|text=<人物爆率:/FCOLOR=125><+<$str(N$人物爆率)>%/FCOLOR=215>>
+inc S$额外属性展示 <RText|id=b10|x=686.0|y=239.0|outline=2|size=18|outlinecolor=0|text=<攻击吸血:/FCOLOR=125><+<$str(N$攻击吸血)>%/FCOLOR=215>>
+inc S$额外属性展示 <RText|id=b11|x=686.0|y=265.0|outline=2|size=18|outlinecolor=0|text=<暴击率:/FCOLOR=125><+<$str(N$暴击率)>%/FCOLOR=215>>
+inc S$额外属性展示 <RText|id=b12|x=686.0|y=291.0|outline=2|size=18|outlinecolor=0|text=<暴击伤害:/FCOLOR=125><+<$str(N$暴击伤害)>%/FCOLOR=215>>
+mov S$升级货币展示 <RText|id=c3|x=504.0|y=260.0|outline=2|size=18|outlinecolor=0|text=<需要点券:/FCOLOR=125><<$str(N$升级货币)>/FCOLOR=215>>
+goto @境界主页面
+
+#if
+large U234 19999999 
+small U234 49999999
+#act
+mov S$当前境界 主宰
+mov S$下个境界 天道主宰
+mov N$需要修为 50000000 
+mov N$升级货币 128888 
+mov N$攻魔道属性值 1000
+mov N$生命属性值 13000
+mov N$切割伤害属性值 100000
+mov N$对怪增伤属性值 100
+mov N$攻击力百分比 60
+mov N$生命值百分比 60
+mov N$人物爆率 300
+mov N$攻击吸血 30
+mov N$暴击率 15
+mov N$暴击伤害 15
+mov S$额外属性展示 <RText|id=b7|x=244.0|y=294.0|outline=2|size=18|outlinecolor=0|text=<生命值百分比：/FCOLOR=125><+<$str(N$生命值百分比)>%/FCOLOR=215>>
+inc S$额外属性展示 <RText|id=b8|x=686.0|y=187.0|outline=2|size=18|outlinecolor=0|text=<攻击力百分比：/FCOLOR=125><+<$str(N$攻击力百分比)>%/FCOLOR=215>>
+inc S$额外属性展示 <RText|id=b9|x=686.0|y=213.0|outline=2|size=18|outlinecolor=0|text=<人物爆率:/FCOLOR=125><+<$str(N$人物爆率)>%/FCOLOR=215>>
+inc S$额外属性展示 <RText|id=b10|x=686.0|y=239.0|outline=2|size=18|outlinecolor=0|text=<攻击吸血:/FCOLOR=125><+<$str(N$攻击吸血)>%/FCOLOR=215>>
+inc S$额外属性展示 <RText|id=b11|x=686.0|y=265.0|outline=2|size=18|outlinecolor=0|text=<暴击率:/FCOLOR=125><+<$str(N$暴击率)>%/FCOLOR=215>>
+inc S$额外属性展示 <RText|id=b12|x=686.0|y=291.0|outline=2|size=18|outlinecolor=0|text=<暴击伤害:/FCOLOR=125><+<$str(N$暴击伤害)>%/FCOLOR=215>>
+mov S$升级货币展示 <RText|id=c3|x=504.0|y=260.0|outline=2|size=18|outlinecolor=0|text=<需要点券:/FCOLOR=125><<$str(N$升级货币)>/FCOLOR=215>>
+goto @境界主页面
+
+;#if
+;large U234 49999999
+;#act
+;mov S$当前境界 荒天道主宰
+;goto @境界主页面
+
+
+[@境界主页面]
+#say
+<Img|children={exit,content_1,content_2,content_3}|x=0|y=0|width=845|height=528|show=4|reset=1|layerid=110|img=public/1900000610.png|move=1|bg=1>
+<Button|id=exit|x=772|y=30|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Layout|id=content_1|children={a1,a2,a3,a4}|x=58.0|y=120.0|width=350|height=350>
+<RText|id=a1|x=54.0|y=201.0|outline=2|size=18|outlinecolor=0|text=<当前境界/FCOLOR=215>>
+<RText|id=a2|x=75.0|y=228.0|outline=2|size=18|outlinecolor=0|text=<$str(S$当前境界)>>
+<RText|id=a3|x=519.0|y=196.0|outline=2|size=18|outlinecolor=0|text=<下个境界/FCOLOR=215>>
+<RText|id=a4|x=539.0|y=222.0|outline=2|size=18|outlinecolor=0|text=<$str(S$下个境界)>>
+<Layout|id=content_2|children={b1,b2,b3,b4,b5,b6,b7,b8,b9,b10,b11,b12}|x=-112.0|y=-49.0|width=500|height=500>
+<RText|id=b1|x=484.0|y=118.0|outline=2|size=18|outlinecolor=0|text=<$str(S$当前境界)>>
+<RText|id=b2|x=487.0|y=148.0|outline=2|size=18|outlinecolor=0|text=属性>
+<RText|id=b3|x=244.0|y=190.0|outline=2|size=18|outlinecolor=0|text=<攻魔道:/FCOLOR=125> <+<$str(N$攻魔道属性值)>/FCOLOR=215>>
+<RText|id=b4|x=244.0|y=216.0|outline=2|size=18|outlinecolor=0|text=<生命值:/FCOLOR=125> <+<$str(N$生命属性值)>/FCOLOR=215>>
+<RText|id=b5|x=244.0|y=242.0|outline=2|size=18|outlinecolor=0|text=<切割:/FCOLOR=125> <+<$str(N$切割伤害属性值)>/FCOLOR=215>>
+<RText|id=b6|x=244.0|y=268.0|outline=2|size=18|outlinecolor=0|text=<对怪增伤:/FCOLOR=125> <+<$str(N$对怪增伤属性值)>%/FCOLOR=215>>
+<$str(S$额外属性展示)>
+
+
+
+
+
+
+
+
+<Layout|id=content_3|children={c1,c2,c3}|x=-60.0|y=143.0|width=350|height=500>
+<RText|id=c1|x=458.0|y=212.0|outline=2|size=18|outlinecolor=0|text=需要>
+<RText|id=c2|x=257.0|y=261.0|outline=2|size=18|outlinecolor=0|text=<修为：/FCOLOR=125> <<$str(N$需要修为)>/FCOLOR=215>>
+<$str(S$升级货币展示)>
+<Button|id=button|x=364.0|y=439.0|nimg=public/00000361.png|pimg=public/00000362.png|mimg=public/00000363.png|size=18|link=@执行>
+
+
+
+
+
+
+
+
+
+;<RText|id=a4|x=290.0|y=192.0|size=18|outline=2|outlinecolor=0|text=<人物爆率：/FCOLOR=125> <+10%/FCOLOR=215>>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[@执行]
+#if
+#act
+sendmsg 9 1111

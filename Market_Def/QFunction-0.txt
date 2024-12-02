@@ -1357,6 +1357,13 @@ equal <$CURRTEMNAME> 传送功能
 #ACT
 set [9] 1
 sendmsg 9 使用成功,获得传送功能！
+;===========天泉西游右边装备栏===============
+#if
+equal <$CURRTEMNAME> 炽焰标
+#act
+OPENHYPERLINK 7
+OPENHYPERLINK 7
+;===========天泉西游右边装备栏===============
 ;=================================================================================   
 ;拾取触发
 [@PickUpItemEx]  
@@ -2192,6 +2199,11 @@ money 点卷 + 50
 #CALL [\游戏功能\技能升级.txt] @技能触发
 #CALL [\主界面基础按钮\福利大厅红点检测.txt] @福利大厅按钮
 #CALL [\主界面基础按钮\主界面游戏按钮.txt] @界面游戏按钮
+;================================西游沉默==================================
+#call [\主界面基础按钮\修炼值展示.txt] @指定怪物
+
+
+;================================西游沉默==================================
 
 #if
 small J200 1001
@@ -6097,6 +6109,47 @@ ReleaseMagic 2005 0 0 1
  
  
 [@Triggerchat]
+#if
+;===================================================测试需要
+#act
+deprivetitle 一帆风顺
+deprivetitle 好事成双
+deprivetitle 三生有幸
+deprivetitle 六六大顺
+deprivetitle 五福临门
+deprivetitle 天降鸿运 
+deprivetitle 人仙 
+deprivetitle 地仙 
+deprivetitle 天仙 
+deprivetitle 金仙 
+deprivetitle 大罗金仙 
+deprivetitle 玄仙 
+deprivetitle 太乙玄仙 
+deprivetitle 仙君 
+deprivetitle 仙帝 
+deprivetitle 准圣 
+deprivetitle 圣人 
+deprivetitle 大圣 
+deprivetitle 准帝 
+deprivetitle 大帝 
+deprivetitle 天帝 
+deprivetitle 荒天帝 
+deprivetitle 主宰 
+deprivetitle 天道主宰 
+
+mov U166 0
+mov U167 
+mov U168 0
+mov U230 0
+mov U235 0
+mov T215
+set [513] 0
+set [514] 0
+set [515] 0
+mov U234 100000000
+CLEARMAPMON newss
+sendmsg 6 U234=<$str(U234)>
+;===================================================测试需要
 #if
 CHECKLEVELEX < 45
 #act

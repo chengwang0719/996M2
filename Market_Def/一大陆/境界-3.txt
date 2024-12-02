@@ -1,0 +1,997 @@
+[@main]
+#act
+goto @境界检测
+[@境界检测]
+#if
+checktitle 天道主宰
+#act
+sendmsg 9 你当前的境界已经达到最高！
+break
+#if
+not checktitle 人仙
+not checktitle 地仙
+not checktitle 天仙
+not checktitle 金仙
+not checktitle 大罗金仙
+not checktitle 玄仙
+not checktitle 太乙玄仙
+not checktitle 仙君
+not checktitle 仙帝
+not checktitle 准圣
+not checktitle 圣人
+not checktitle 大圣
+not checktitle 准帝
+not checktitle 大帝
+not checktitle 天帝
+not checktitle 荒天帝
+not checktitle 主宰
+not checktitle 天道主宰
+#act
+mov S$当前境界 无
+mov S$下个境界 人仙
+mov N$需要修为 300 
+mov N$需要元宝 100000 
+mov N$攻魔道属性值 10
+mov N$生命属性值 300
+mov N$切割伤害属性值 1000
+mov N$对怪增伤属性值 1
+goto @额外属性效果初始化
+break
+
+
+#if
+checktitle 人仙
+#act
+mov S$当前境界 人仙
+mov S$下个境界 地仙
+mov N$需要修为 600 
+mov N$需要元宝 300000 
+mov N$攻魔道属性值 20
+mov N$生命属性值 600
+mov N$切割伤害属性值 2000
+mov N$对怪增伤属性值 2
+goto @额外属性效果初始化
+break
+
+#if
+checktitle  地仙
+#act
+mov S$当前境界 地仙
+mov S$下个境界 天仙
+mov N$需要修为 1200 
+mov N$需要元宝 600000 
+mov N$攻魔道属性值 30
+mov N$生命属性值 900
+mov N$切割伤害属性值 3000
+mov N$对怪增伤属性值 3
+goto @额外属性效果初始化
+break
+
+#if
+checktitle  天仙
+#act
+mov S$当前境界 天仙
+mov S$下个境界 金仙
+mov N$需要修为 2400 
+mov N$需要元宝 1200000 
+mov N$攻魔道属性值 40
+mov N$生命属性值 1200
+mov N$切割伤害属性值 4000
+mov N$对怪增伤属性值 4
+goto @额外属性效果初始化
+break
+
+#if
+checktitle 金仙
+#act
+mov S$当前境界 金仙
+mov S$下个境界 大罗金仙
+mov N$需要修为 4800 
+mov N$需要元宝 2400000 
+mov N$攻魔道属性值 70
+mov N$生命属性值 1700
+mov N$切割伤害属性值 7000
+mov N$对怪增伤属性值 7
+mov N$生命值百分比 1
+mov N$攻击力百分比 1
+goto @额外属性效果初始化
+break
+
+#if
+checktitle 大罗金仙
+#act
+mov S$当前境界 大罗金仙
+mov S$下个境界 玄仙
+mov N$需要修为 10000 
+mov N$需要元宝 4800000 
+mov N$攻魔道属性值 100
+mov N$生命属性值 2200
+mov N$切割伤害属性值 10000
+mov N$对怪增伤属性值 10
+mov N$生命值百分比 2
+mov N$攻击力百分比 2
+goto @额外属性效果初始化
+break
+#if
+checktitle 玄仙
+#act
+mov S$当前境界 玄仙 
+mov S$下个境界 太乙玄仙
+mov N$需要修为 20000 
+mov N$需要元宝 10000000 
+mov N$攻魔道属性值 130
+mov N$生命属性值 2700
+mov N$切割伤害属性值 13000
+mov N$对怪增伤属性值 13
+mov N$攻击力百分比 3
+mov N$生命值百分比 3
+goto @额外属性效果初始化
+break
+#if
+checktitle 太乙玄仙
+#act
+mov S$当前境界 太乙玄仙
+mov S$下个境界 仙君
+mov N$需要修为 40000 
+mov N$需要元宝 20000000 
+mov N$攻魔道属性值 160
+mov N$生命属性值 3200
+mov N$切割伤害属性值 16000
+mov N$对怪增伤属性值 16
+mov N$攻击力百分比 4
+mov N$生命值百分比 4
+goto @额外属性效果初始化
+break
+#if
+checktitle 仙君
+#act
+mov S$当前境界 仙君
+mov S$下个境界 仙帝
+mov N$需要修为 80000 
+mov N$需要元宝 40000000 
+mov N$攻魔道属性值 220
+mov N$生命属性值 4000
+mov N$切割伤害属性值 22000
+mov N$对怪增伤属性值 22
+mov N$攻击力百分比 7
+mov N$生命值百分比 7
+mov N$人物爆率 10
+mov N$攻击吸血 1
+goto @额外属性效果初始化
+break
+
+#if
+checktitle 仙帝
+#act
+mov S$当前境界 仙帝
+mov S$下个境界 准圣
+mov N$需要修为 160000 
+mov N$需要元宝 60000000 
+mov N$攻魔道属性值 280
+mov N$生命属性值 4800
+mov N$切割伤害属性值 28000
+mov N$对怪增伤属性值 28
+mov N$攻击力百分比 10
+mov N$生命值百分比 10
+mov N$人物爆率 20
+mov N$攻击吸血 2
+goto @额外属性效果初始化
+break
+
+#if
+checktitle 准圣
+#act
+mov S$当前境界 准圣
+mov S$下个境界 圣人
+mov N$需要修为 320000 
+mov N$需要元宝 100000000 
+mov N$攻魔道属性值 340
+mov N$生命属性值 5600
+mov N$切割伤害属性值 34000
+mov N$对怪增伤属性值 34
+mov N$攻击力百分比 13
+mov N$生命值百分比 13
+mov N$人物爆率 30
+mov N$攻击吸血 3
+goto @额外属性效果初始化
+break
+#if
+checktitle 圣人
+#act
+mov S$当前境界 圣人
+mov S$下个境界 大圣
+mov N$需要修为 640000 
+mov N$需要元宝 300000000 
+mov N$攻魔道属性值 400
+mov N$生命属性值 6400
+mov N$切割伤害属性值 40000
+mov N$对怪增伤属性值 40
+mov N$攻击力百分比 16
+mov N$生命值百分比 16
+mov N$人物爆率 40
+mov N$攻击吸血 4
+goto @额外属性效果初始化
+break
+#if
+checktitle 大圣
+#act
+mov S$当前境界 大圣
+mov S$下个境界 准帝
+mov N$需要修为 1200000 
+mov N$需要元宝 600000000 
+mov N$攻魔道属性值 500
+mov N$生命属性值 7500
+mov N$切割伤害属性值 50000
+mov N$对怪增伤属性值 50
+mov N$攻击力百分比 22
+mov N$生命值百分比 22
+mov N$人物爆率 70
+mov N$攻击吸血 7
+mov N$暴击率 1
+mov N$暴击伤害 1
+goto @额外属性效果初始化
+break
+#if
+checktitle 准帝
+#act
+mov S$当前境界 准帝
+mov S$下个境界 大帝
+mov N$需要修为 2400000 
+mov N$需要元宝 1200000000 
+mov N$攻魔道属性值 600
+mov N$生命属性值 8600
+mov N$切割伤害属性值 60000
+mov N$对怪增伤属性值 60
+mov N$攻击力百分比 28
+mov N$生命值百分比 28
+mov N$人物爆率 100
+mov N$攻击吸血 10
+mov N$暴击率 3
+mov N$暴击伤害 3
+goto @额外属性效果初始化
+break
+#if
+checktitle 大帝
+#act
+mov S$当前境界 大帝
+mov S$下个境界 天帝
+mov N$需要修为 4800000 
+mov N$升级货币 68888 
+;如未下线，大帝开始需要点券升级，重置升级大帝前元宝升级条件，否则展示还是元宝升级
+mov N$需要元宝 0 
+mov N$攻魔道属性值 700
+mov N$生命属性值 9700
+mov N$切割伤害属性值 70000
+mov N$对怪增伤属性值 70
+mov N$攻击力百分比 34
+mov N$生命值百分比 34
+mov N$人物爆率 130
+mov N$攻击吸血 13
+mov N$暴击率 5
+mov N$暴击伤害 5
+goto @额外属性效果初始化
+break
+#if
+checktitle 天帝
+#act
+mov S$当前境界 天帝
+mov S$下个境界 荒天帝
+mov N$需要修为 10000000 
+mov N$升级货币 88888 
+mov N$攻魔道属性值 800
+mov N$生命属性值 10800
+mov N$切割伤害属性值 80000
+mov N$对怪增伤属性值 80
+mov N$攻击力百分比 40
+mov N$生命值百分比 40
+mov N$人物爆率 160
+mov N$攻击吸血 16
+mov N$暴击率 7
+mov N$暴击伤害 7
+goto @额外属性效果初始化
+break
+#if
+checktitle 荒天帝
+#act
+mov S$当前境界 荒天帝
+mov S$下个境界 主宰
+mov N$需要修为 20000000 
+mov N$升级货币 108888 
+mov N$攻魔道属性值 900
+mov N$生命属性值 11900
+mov N$切割伤害属性值 90000
+mov N$对怪增伤属性值 90
+mov N$攻击力百分比 50
+mov N$生命值百分比 50
+mov N$人物爆率 200
+mov N$攻击吸血 22
+mov N$暴击率 10
+mov N$暴击伤害 10
+goto @额外属性效果初始化
+break
+#if
+checktitle 主宰
+#act
+mov S$当前境界 主宰
+mov S$下个境界 天道主宰
+mov N$需要修为 50000000 
+mov N$升级货币 128888 
+mov N$攻魔道属性值 1000
+mov N$生命属性值 13000
+mov N$切割伤害属性值 100000
+mov N$对怪增伤属性值 100
+mov N$攻击力百分比 60
+mov N$生命值百分比 60
+mov N$人物爆率 300
+mov N$攻击吸血 30
+mov N$暴击率 15
+mov N$暴击伤害 15
+goto @额外属性效果初始化
+break
+
+[@额外属性效果初始化]
+#if
+#act
+mov S$大罗金仙_仙君_额外属性展示
+mov S$大圣_仙帝_额外属性展示
+mov S$天道主宰_准帝_额外属性展示
+#if
+;如果称号是大罗金仙至仙君范围 则置[513]为1
+check [513] 1
+#act
+inc S$大罗金仙_仙君_额外属性展示 <RText|id=a6|x=387.0|y=137.0|outline=2|size=18|outlinecolor=0|text=<生命值百分比:/FCOLOR=125><+<$str(N$生命值百分比)>%/FCOLOR=215>>
+inc S$大罗金仙_仙君_额外属性展示 <RText|id=a7|x=562.0|y=137.0|outline=2|size=18|outlinecolor=0|text=<攻击力百分比:/FCOLOR=125><+<$str(N$攻击力百分比)>%/FCOLOR=215>>
+
+#if
+;如果称号是大罗金仙至仙君范围 则置[513]为1
+;如果称号是大圣至仙帝范围 则置[514]为1
+check [513] 1
+check [514] 1
+#act
+inc S$大圣_仙帝_额外属性展示 S$大罗金仙_仙君_额外属性展示
+inc S$大圣_仙帝_额外属性展示 <RText|id=a8|x=387.0|y=187.0|outline=2|size=18|outlinecolor=0|text=<人物爆率:/FCOLOR=125><+<$str(N$人物爆率)>%/FCOLOR=215>>
+inc S$大圣_仙帝_额外属性展示 <RText|id=a9|x=562.0|y=187.0|outline=2|size=18|outlinecolor=0|text=<攻击吸血:/FCOLOR=125><+<$str(N$攻击吸血)>%/FCOLOR=215>>
+#if
+;如果称号是大罗金仙至仙君范围 则置[513]为1
+;如果称号是大圣至仙帝范围 则置[514]为1
+;如果称号是准帝至天道主宰 则置[515]为1
+check [513] 1
+check [514] 1
+check [515] 1
+#act
+inc S$天道主宰_准帝_额外属性展示 S$大圣_仙帝_额外属性展示
+inc S$天道主宰_准帝_额外属性展示 <RText|id=a10|x=387.0|y=237.0|outline=2|size=18|outlinecolor=0|text=<暴击率:/FCOLOR=125><+<$str(N$暴击率)>%/FCOLOR=215>>
+inc S$天道主宰_准帝_额外属性展示 <RText|id=a11|x=562.0|y=237.0|outline=2|size=18|outlinecolor=0|text=<暴击伤害:/FCOLOR=125><+<$str(N$暴击伤害)>%/FCOLOR=215>>
+
+
+;天帝以下元宝升级
+#if
+large <$str(N$需要元宝)>  9999
+not equal <$str(N$需要元宝)> 0 
+#act
+mov S$升级货币展示 <RText|id=c3|x=459.0|y=32.0|outline=2|size=18|outlinecolor=0|text=<元宝:/FCOLOR=125><<$str(N$需要元宝)>/FCOLOR=215>> 
+goto @境界主页面
+break
+;天帝以上点券升级
+#if
+large <$str(N$升级货币)>  68887
+#act
+mov S$升级货币展示 <RText|id=c3|x=459.0|y=32.0|outline=2|size=18|outlinecolor=0|text=<点卷:/FCOLOR=125><<$str(N$升级货币)>/FCOLOR=215>> 
+goto @境界主页面
+
+[@境界主页面]
+#say
+<Img|children={exit,content,button}|x=0|y=0|width=845|height=528|layerid=110|img=public/1900000610.png|move=1|show=4|bg=1|reset=1>
+<Button|id=exit|x=772|y=30|nimg=public/1900000510.png|pimg=public/1900000511.png|link=@exit>
+<Layout|id=content|children={content_1,content_2,content_3}|x=67.0|y=63.0|width=705|height=422>
+<Layout|id=content_1|children={a1,a2,a3,a4,a5,a6,a7,a8,a9,a10,a11}|x=-2.0|y=0.0|width=710|height=246>
+<RText|id=a1|x=480.0|y=11.0|outline=2|size=18|outlinecolor=0|text=<$str(S$下个境界)>属性>
+<RText|id=a2|x=387.0|y=37.0|outline=2|size=18|outlinecolor=0|text=<攻魔道:/FCOLOR=125> <+<$str(N$攻魔道属性值)>/FCOLOR=215>>
+<RText|id=a3|x=562.0|y=37.0|outline=2|size=18|outlinecolor=0|text=<生命值:/FCOLOR=125> <+<$str(N$生命属性值)>/FCOLOR=215>>
+<RText|id=a4|x=387.0|y=87.0|outline=2|size=18|outlinecolor=0|text=<切割:/FCOLOR=125> <+<$str(N$切割伤害属性值)>/FCOLOR=215>>
+<RText|id=a5|x=562.0|y=87.0|outline=2|size=18|outlinecolor=0|text=<对怪增伤:/FCOLOR=125> <+<$str(N$对怪增伤属性值)>%/FCOLOR=215>>
+<$str(S$大罗金仙_仙君_额外属性展示)>
+<$str(S$大圣_仙帝_额外属性展示)>
+<$str(S$天道主宰_准帝_额外属性展示)>
+<Layout|id=content_2|children={b1,b2,b3,b4}|x=1.0|y=4.0|width=300|height=296>
+<RText|id=b1|x=42.0|y=18.0|outline=2|size=18|outlinecolor=0|text=当前境界>
+<RText|id=b2|x=42.0|y=72.0|outline=2|size=18|outlinecolor=0|text=<$str(S$当前境界)>>
+<RText|id=b3|x=42.0|y=145.0|outline=2|size=18|outlinecolor=0|text=下个境界>
+<RText|id=b4|x=42.0|y=184.0|outline=2|size=18|outlinecolor=0|text=<$str(S$下个境界)>>
+<Layout|id=content_3|children={c1,c2,c3}|x=0.0|y=270.0|width=710|height=95>
+<RText|id=c1|x=327.0|y=1.0|outline=2|size=18|outlinecolor=0|text=<突破需要:/FCOLOR=125>>
+<RText|id=c2|x=165.0|y=32.0|outline=2|size=18|outlinecolor=0|text=<修为:/FCOLOR=125> <<$str(N$需要修为)>/FCOLOR=215>>
+<$str(S$升级货币展示)>
+
+<Button|id=button|x=364.0|y=439.0|size=18|nimg=public/00000361.png|pimg=public/00000362.png|mimg=public/00000363.png|link=@执行>
+
+[@执行]
+;============================人仙晋级====================================
+#if
+equal S$当前境界 无
+small U234 299
+#act
+sendmsg 9 你的修为不足!
+break
+#if
+equal S$当前境界 无
+CheckBindMoney 绑定元宝  < <$str(N$需要元宝)>
+#act
+sendmsg 9 你的元宝不足!
+break
+
+#if
+equal S$当前境界 无
+#act
+;扣除元宝
+ChangeBindMoney 绑定元宝 <$str(N$需要元宝)>
+;扣除修为
+dec U234 <$str(N$需要修为)>
+confertitle 人仙
+;更新切割值
+#call [..\QuestDiary\功能脚本\天泉西游切割管理.txt] @境界切割
+;更新修炼值
+#call [..\QuestDiary\主界面基础按钮\修炼值展示.txt] @修炼值展示
+;重置自定义变量避免第二次进入当前称号方法
+mov S$当前境界 
+sendmsg 9 恭喜人仙境界提升成功 
+goto @main
+break
+;============================人仙晋级====================================
+
+;============================地仙晋级====================================
+#if
+checktitle 人仙
+small U234 599
+#act
+sendmsg 9 你的修为不足!
+break
+#if
+checktitle 人仙
+CheckBindMoney 绑定元宝  < <$str(N$需要元宝)>
+#act
+sendmsg 9 你的元宝不足!
+break
+
+#if
+checktitle 人仙
+#act
+;扣除元宝
+ChangeBindMoney 绑定元宝 <$str(N$需要元宝)>
+;扣除修为
+dec U234 <$str(N$需要修为)>
+deprivetitle 人仙
+confertitle 地仙
+;更新切割值
+#call [..\QuestDiary\功能脚本\天泉西游切割管理.txt] @境界切割
+;更新修炼值
+#call [..\QuestDiary\主界面基础按钮\修炼值展示.txt] @修炼值展示
+sendmsg 9 恭喜地仙境界提升成功！
+goto @main
+break
+;============================地仙晋级====================================
+
+
+;============================天仙晋级====================================
+#if
+checktitle 地仙
+small U234 1199
+#act
+sendmsg 9 你的修为不足!
+break
+#if
+checktitle 地仙
+CheckBindMoney 绑定元宝  < <$str(N$需要元宝)>
+#act
+sendmsg 9 你的元宝不足!
+break
+
+#if
+checktitle 地仙
+#act
+;扣除元宝
+ChangeBindMoney 绑定元宝 <$str(N$需要元宝)>
+;扣除修为
+dec U234 <$str(N$需要修为)>
+deprivetitle 地仙
+confertitle 天仙
+;更新切割值
+#call [..\QuestDiary\功能脚本\天泉西游切割管理.txt] @境界切割
+;更新修炼值
+#call [..\QuestDiary\主界面基础按钮\修炼值展示.txt] @修炼值展示
+sendmsg 9 恭喜天仙境界提升成功！
+goto @main
+break
+;============================天仙晋级====================================
+
+;============================金仙晋级====================================
+#if
+checktitle 天仙
+small U234 2399
+#act
+sendmsg 9 你的修为不足!
+break
+#if
+checktitle 天仙
+CheckBindMoney 绑定元宝  < <$str(N$需要元宝)>
+#act
+sendmsg 9 你的元宝不足!
+break
+
+#if
+checktitle 天仙
+#act
+;扣除元宝
+ChangeBindMoney 绑定元宝 <$str(N$需要元宝)>
+;扣除修为
+dec U234 <$str(N$需要修为)>
+deprivetitle 天仙
+confertitle 金仙
+;更新切割值
+#call [..\QuestDiary\功能脚本\天泉西游切割管理.txt] @境界切割
+;更新修炼值
+#call [..\QuestDiary\主界面基础按钮\修炼值展示.txt] @修炼值展示
+sendmsg 9 恭喜金仙境界提升成功！！
+goto @main
+break
+;============================大罗金仙晋级====================================
+#if
+checktitle 金仙
+small U234 4799
+#act
+sendmsg 9 你的修为不足!
+break
+#if
+checktitle 金仙
+CheckBindMoney 绑定元宝  < <$str(N$需要元宝)>
+#act
+sendmsg 9 你的元宝不足!
+break
+
+#if
+checktitle 金仙
+#act
+;扣除元宝
+ChangeBindMoney 绑定元宝 <$str(N$需要元宝)>
+;扣除修为
+dec U234 <$str(N$需要修为)>
+deprivetitle 金仙
+confertitle 大罗金仙
+set [513] 1
+;更新切割值
+#call [..\QuestDiary\功能脚本\天泉西游切割管理.txt] @境界切割
+;更新修炼值
+#call [..\QuestDiary\主界面基础按钮\修炼值展示.txt] @修炼值展示
+sendmsg 9 恭喜大罗金仙境界提升成功！！
+goto @main
+break
+;============================玄仙晋级====================================
+#if
+checktitle 大罗金仙
+small U234 9999
+#act
+sendmsg 9 你的修为不足!
+break
+#if
+checktitle 大罗金仙
+CheckBindMoney 绑定元宝  < <$str(N$需要元宝)>
+#act
+sendmsg 9 你的元宝不足!
+break
+
+#if
+checktitle 大罗金仙
+#act
+;扣除元宝
+ChangeBindMoney 绑定元宝 <$str(N$需要元宝)>
+;扣除修为
+dec U234 <$str(N$需要修为)>
+deprivetitle 大罗金仙
+confertitle 玄仙
+set [513] 1
+;更新切割值
+#call [..\QuestDiary\功能脚本\天泉西游切割管理.txt] @境界切割
+;更新修炼值
+#call [..\QuestDiary\主界面基础按钮\修炼值展示.txt] @修炼值展示
+sendmsg 9 恭喜玄仙境界提升成功！！
+goto @main
+break
+;============================玄仙晋级====================================
+
+;============================太乙玄仙晋级====================================
+#if
+checktitle 玄仙
+small U234 19999
+#act
+sendmsg 9 你的修为不足!
+break
+#if
+checktitle 玄仙
+CheckBindMoney 绑定元宝  < <$str(N$需要元宝)>
+#act
+sendmsg 9 你的元宝不足!
+break
+
+#if
+checktitle 玄仙
+#act
+;扣除元宝
+ChangeBindMoney 绑定元宝 <$str(N$需要元宝)>
+;扣除修为
+dec U234 <$str(N$需要修为)>
+deprivetitle 玄仙
+confertitle 太乙玄仙
+set [513] 1
+;更新切割值
+#call [..\QuestDiary\功能脚本\天泉西游切割管理.txt] @境界切割
+;更新修炼值
+#call [..\QuestDiary\主界面基础按钮\修炼值展示.txt] @修炼值展示
+sendmsg 9 恭喜太乙玄仙境界提升成功！！
+goto @main
+break
+;============================太乙玄仙晋级===================================
+
+;============================仙君晋级===================================
+#if
+checktitle 太乙玄仙
+small U234 39999
+#act
+sendmsg 9 你的修为不足!
+break
+#if
+checktitle 太乙玄仙
+CheckBindMoney 绑定元宝  < <$str(N$需要元宝)>
+#act
+sendmsg 9 你的元宝不足!
+break
+
+#if
+checktitle 太乙玄仙
+#act
+;扣除元宝
+ChangeBindMoney 绑定元宝 <$str(N$需要元宝)>
+;扣除修为
+dec U234 <$str(N$需要修为)>
+deprivetitle 太乙玄仙
+confertitle 仙君
+set [513] 1
+;更新切割值
+#call [..\QuestDiary\功能脚本\天泉西游切割管理.txt] @境界切割
+;更新修炼值
+#call [..\QuestDiary\主界面基础按钮\修炼值展示.txt] @修炼值展示
+sendmsg 9 恭喜仙君境界提升成功！
+goto @main
+break
+;============================仙君晋级===================================
+
+;============================仙帝晋级===================================
+#if
+checktitle 仙君
+small U234 79999
+#act
+sendmsg 9 你的修为不足!
+break
+#if
+checktitle 仙君
+CheckBindMoney 绑定元宝  < <$str(N$需要元宝)>
+#act
+sendmsg 9 你的元宝不足!
+break
+
+#if
+checktitle 仙君
+#act
+;扣除元宝
+ChangeBindMoney 绑定元宝 <$str(N$需要元宝)>
+;扣除修为
+dec U234 <$str(N$需要修为)>
+deprivetitle 仙君
+confertitle 仙帝
+set [514] 1
+;更新切割值
+#call [..\QuestDiary\功能脚本\天泉西游切割管理.txt] @境界切割
+;更新修炼值
+#call [..\QuestDiary\主界面基础按钮\修炼值展示.txt] @修炼值展示
+sendmsg 9 恭喜仙帝境界提升成功！！
+goto @main
+break
+;============================仙帝晋级===================================
+
+;============================准圣晋级===================================
+#if
+checktitle 仙帝
+small U234 159999
+#act
+sendmsg 9 你的修为不足!
+break
+#if
+checktitle 仙帝
+CheckBindMoney 绑定元宝  < <$str(N$需要元宝)>
+#act
+sendmsg 9 你的元宝不足!
+break
+
+#if
+checktitle 仙帝
+#act
+;扣除元宝
+ChangeBindMoney 绑定元宝 <$str(N$需要元宝)>
+;扣除修为
+dec U234 <$str(N$需要修为)>
+deprivetitle 仙帝
+confertitle 准圣
+set [514] 1
+;更新切割值
+#call [..\QuestDiary\功能脚本\天泉西游切割管理.txt] @境界切割
+;更新修炼值
+#call [..\QuestDiary\主界面基础按钮\修炼值展示.txt] @修炼值展示
+sendmsg 9 恭喜准圣境界提升成功！！
+goto @main
+break
+;============================准圣晋级===================================
+;============================圣人晋级===================================
+
+#if
+checktitle 准圣
+small U234 319999
+#act
+sendmsg 9 你的修为不足!
+break
+#if
+checktitle 准圣
+CheckBindMoney 绑定元宝  < <$str(N$需要元宝)>
+#act
+sendmsg 9 你的元宝不足!
+break
+
+#if
+checktitle 准圣
+#act
+;扣除元宝
+ChangeBindMoney 绑定元宝 <$str(N$需要元宝)>
+;扣除修为
+dec U234 <$str(N$需要修为)>
+;更新切割值
+#call [..\QuestDiary\功能脚本\天泉西游切割管理.txt] @境界切割
+;更新修炼值
+#call [..\QuestDiary\主界面基础按钮\修炼值展示.txt] @修炼值展示
+deprivetitle 准圣
+confertitle 圣人
+set [514] 1
+sendmsg 9 恭喜圣人境界提升成功！！
+goto @main
+break
+;============================圣人晋级===================================
+;============================大圣晋级===================================
+
+#if
+checktitle 圣人
+small U234 639999
+#act
+sendmsg 9 你的修为不足!
+break
+#if
+checktitle 圣人
+CheckBindMoney 绑定元宝  < <$str(N$需要元宝)>
+#act
+sendmsg 9 你的元宝不足!
+break
+
+#if
+checktitle 圣人
+#act
+;扣除元宝
+ChangeBindMoney 绑定元宝 <$str(N$需要元宝)>
+;扣除修为
+dec U234 <$str(N$需要修为)>
+deprivetitle 圣人
+confertitle 大圣
+set [514] 1
+;更新切割值
+#call [..\QuestDiary\功能脚本\天泉西游切割管理.txt] @境界切割
+;更新修炼值
+#call [..\QuestDiary\主界面基础按钮\修炼值展示.txt] @修炼值展示
+sendmsg 9 恭喜大圣境界提升成功！！
+goto @main
+break
+;============================大圣晋级===================================
+;============================准帝晋级===================================
+#if
+checktitle 大圣
+small U234 1199999
+#act
+sendmsg 9 你的修为不足!
+break
+#if
+checktitle 大圣
+CheckBindMoney 绑定元宝  < <$str(N$需要元宝)>
+#act
+sendmsg 9 你的元宝不足!
+break
+
+#if
+checktitle 大圣
+#act
+;扣除元宝
+ChangeBindMoney 绑定元宝 <$str(N$需要元宝)>
+;扣除修为
+dec U234 <$str(N$需要修为)>
+deprivetitle 大圣
+confertitle 准帝
+set [515] 1
+;更新切割值
+#call [..\QuestDiary\功能脚本\天泉西游切割管理.txt] @境界切割
+;更新修炼值
+#call [..\QuestDiary\主界面基础按钮\修炼值展示.txt] @修炼值展示
+sendmsg 9 恭喜准帝境界提升成功！！
+goto @main
+break
+;============================准帝晋级===================================
+;============================大帝晋级===================================
+#if
+checktitle 准帝
+small U234 2399999
+#act
+sendmsg 9 你的修为不足!
+break
+#if
+checktitle 准帝
+CheckBindMoney 绑定元宝  < <$str(N$需要元宝)>
+#act
+sendmsg 9 你的元宝不足!
+break
+
+#if
+checktitle 准帝
+#act
+;扣除元宝
+ChangeBindMoney 绑定元宝 <$str(N$需要元宝)>
+;扣除修为
+dec U234 <$str(N$需要修为)>
+deprivetitle 准帝
+confertitle 大帝
+set [515] 1
+;更新切割值
+#call [..\QuestDiary\功能脚本\天泉西游切割管理.txt] @境界切割
+;更新修炼值
+#call [..\QuestDiary\主界面基础按钮\修炼值展示.txt] @修炼值展示
+sendmsg 9 恭喜大帝境界提升成功！！
+goto @main
+break
+;============================大帝晋级===================================
+;============================天帝晋级===================================
+
+
+#if
+checktitle 大帝
+small U234 4799999
+#act
+sendmsg 9 你的修为不足!
+break
+
+#if
+checktitle 大帝
+CheckBindMoney 绑定点卷  < <$str(N$升级货币)>
+#act
+sendmsg 9 你的点卷不足！
+break
+
+#if
+checktitle 大帝
+#act
+;扣除元宝
+ChangeBindMoney 绑定点卷 <$str(N$升级货币)>
+;扣除修为
+dec U234 <$str(N$需要修为)>
+
+deprivetitle 大帝
+confertitle 天帝
+set [515] 1
+;更新切割值
+#call [..\QuestDiary\功能脚本\天泉西游切割管理.txt] @境界切割
+;更新修炼值
+#call [..\QuestDiary\主界面基础按钮\修炼值展示.txt] @修炼值展示
+sendmsg 9 恭喜天帝境界提升成功！！
+goto @main
+break
+;============================天帝晋级===================================
+;============================荒天帝晋级===================================
+#if
+checktitle 天帝
+small U234 9999999
+#act
+sendmsg 9 你的修为不足!
+break
+#if
+checktitle 天帝
+CheckBindMoney 绑定点卷  < <$str(N$升级货币)>
+#act
+sendmsg 9 你的点卷不足!
+break
+
+#if
+checktitle 天帝
+#act
+;扣除元宝
+ChangeBindMoney 绑定点卷 <$str(N$升级货币)>
+;扣除修为
+dec U234 <$str(N$需要修为)>
+
+deprivetitle 天帝
+confertitle 荒天帝
+set [515] 1
+;更新切割值
+#call [..\QuestDiary\功能脚本\天泉西游切割管理.txt] @境界切割
+;更新修炼值
+#call [..\QuestDiary\主界面基础按钮\修炼值展示.txt] @修炼值展示
+sendmsg 9 恭喜荒天帝境界提升成功！！
+goto @main
+break
+;============================荒天帝晋级===================================
+;============================主宰晋级===================================
+#if
+checktitle 荒天帝
+small U234 11999999
+#act
+sendmsg 9 你的修为不足!
+break
+#if
+checktitle 荒天帝
+CheckBindMoney 绑定点卷  < <$str(N$升级货币)>
+#act
+sendmsg 9 你的点卷不足!
+break
+
+#if
+checktitle 荒天帝
+#act
+;扣除元宝
+ChangeBindMoney 绑定点卷 <$str(N$升级货币)>
+;扣除修为
+dec U234 <$str(N$需要修为)>
+deprivetitle 荒天帝
+confertitle 主宰
+set [515] 1
+;更新切割值
+#call [..\QuestDiary\功能脚本\天泉西游切割管理.txt] @境界切割
+;更新修炼值
+#call [..\QuestDiary\主界面基础按钮\修炼值展示.txt] @修炼值展示
+sendmsg 9 恭喜主宰境界提升成功！！
+goto @main
+break
+;============================主宰晋级===================================
+;============================天道主宰晋级===================================
+#if
+checktitle 主宰
+small U234 49999999
+#act
+sendmsg 9 你的修为不足!
+break
+#if
+checktitle 主宰
+CheckBindMoney 绑定点卷  < <$str(N$升级货币)>
+#act
+sendmsg 9 你的点卷不足!
+break
+
+#if
+checktitle 主宰
+#act
+;扣除元宝
+ChangeBindMoney 绑定点卷 <$str(N$升级货币)>
+;扣除修为
+dec U234 <$str(N$需要修为)>
+deprivetitle 主宰
+confertitle 天道主宰
+set [515] 1
+;更新切割值
+#call [..\QuestDiary\功能脚本\天泉西游切割管理.txt] @境界切割
+;更新修炼值
+#call [..\QuestDiary\主界面基础按钮\修炼值展示.txt] @修炼值展示
+SENDMSGNEW 254 0 {『境界提升』：/FCOLOR=249}恭喜【{<$USERNAME>/FCOLOR=224}】的境界已经达到【{天道主宰/FCOLOR=245}】境界！ 1 10
+close
+break
+;============================天道主宰晋级===================================
+
+
+

@@ -1,0 +1,18 @@
+[@main]
+#say
+<Img|id=ui_1|children={exit,content}|x=279|y=134|width=501|height=246|img=public/1900000651_1.png|bg=1|esc=1|move=0|reset=1|show=0|loadDelay=0>
+<Button|id=exit|x=625|y=4|width=26|height=42|nimg=public/1900000510.png|pimg=public/1900000511.png|color=255|size=18|link=@exit>
+<Layout|id=content|children={1,3,2}|x=-205|y=-112|width=879|height=550>
+<Frames|id=1|a=4|percentx=48.4|percenty=49.6|width=837|height=550|prefix=custom/xiyou_ui/longgong/sfx_|suffix=.png|count=20|speed=20|loop=-1>
+<Button|id=3|x=634|y=456|width=107|height=32|nimg=public/queding.png|color=251|size=18|link=@传送>
+<Img|id=2|x=131|y=145|width=309|height=215|img=public\xiyou\chuanson_ui\高老庄外野.png|bg=1|reset=1|show=0|loadDelay=0>
+
+
+
+
+
+
+[@传送]
+#if
+#act
+mapmove glzwy 215 138 150 

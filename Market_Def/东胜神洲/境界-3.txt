@@ -1,0 +1,1199 @@
+[@main]
+#act
+goto @境界检测
+[@境界检测]
+
+#if
+not checktitle 人仙
+not checktitle 地仙
+not checktitle 天仙
+not checktitle 金仙
+not checktitle 大罗金仙
+not checktitle 玄仙
+not checktitle 太乙玄仙
+not checktitle 仙君
+not checktitle 仙帝
+not checktitle 准圣
+not checktitle 圣人
+not checktitle 大圣
+not checktitle 准帝
+not checktitle 大帝
+not checktitle 天帝
+not checktitle 荒天帝
+not checktitle 主宰
+not checktitle 天道主宰
+#act
+mov S$当前境界 无
+mov S$下个境界 人仙
+mov N$需要修为 300 
+mov N$升级货币_元宝 100000 
+
+mov N$下级_攻魔道属性值 10
+mov N$下级_生命属性值 300
+mov N$下级_切割伤害属性值 1000
+mov N$下级_对怪增伤属性值 1
+
+mov N$当前境界特效编号 
+mov S$货币展示 10万元宝
+mov S$境界图片 无 
+
+goto @当前与下个境界页面初始化
+break
+
+
+#if
+checktitle 人仙
+#act
+mov S$当前境界 人仙
+mov S$下个境界 地仙
+mov N$需要修为 600 
+mov N$升级货币_元宝 300000 
+mov N$下级_攻魔道属性值 20
+mov N$下级_生命属性值 600
+mov N$下级_切割伤害属性值 2000
+mov N$下级_对怪增伤属性值 2
+
+mov N$当前_攻魔道属性值 10
+mov N$当前_生命属性值 300
+mov N$当前_切割伤害属性值 1000
+mov N$当前_对怪增伤属性值 1
+
+mov N$当前境界特效编号 70034
+mov S$货币展示 30万元宝
+mov S$境界图片 人仙 
+goto @当前与下个境界页面初始化
+break
+
+#if
+checktitle  地仙
+#act
+mov S$当前境界 地仙
+mov S$下个境界 天仙
+mov N$需要修为 1200 
+mov N$升级货币_元宝 600000 
+
+mov N$下级_攻魔道属性值 30
+mov N$下级_生命属性值 900
+mov N$下级_切割伤害属性值 3000
+mov N$下级_对怪增伤属性值 3
+
+
+mov N$当前_攻魔道属性值 20
+mov N$当前_生命属性值 600
+mov N$当前_切割伤害属性值 2000
+mov N$当前_对怪增伤属性值 2
+
+mov N$当前境界特效编号 70034
+mov S$境界图片 地仙
+mov S$货币展示 60万元宝
+goto @当前与下个境界页面初始化
+break
+
+#if
+checktitle  天仙
+#act
+mov S$当前境界 天仙
+mov S$下个境界 金仙
+mov N$需要修为 2400 
+mov N$升级货币_元宝 1200000
+
+mov N$下级_攻魔道属性值 40
+mov N$下级_生命属性值 1200
+mov N$下级_切割伤害属性值 4000
+mov N$下级_对怪增伤属性值 4
+
+mov N$当前_攻魔道属性值 30
+mov N$当前_生命属性值 900
+mov N$当前_切割伤害属性值 3000
+mov N$当前_对怪增伤属性值 3
+
+mov N$当前境界特效编号 70035
+mov S$境界图片 天仙
+mov S$货币展示 120万元宝
+goto @当前与下个境界页面初始化
+break
+
+#if
+checktitle 金仙
+#act
+mov S$当前境界 金仙
+mov S$下个境界 大罗金仙
+mov N$需要修为 4800 
+mov N$升级货币_元宝 2400000 
+mov N$下级_攻魔道属性值 70
+mov N$下级_生命属性值 1700
+mov N$下级_切割伤害属性值 7000
+mov N$下级_对怪增伤属性值 7
+mov N$下级_生命值百分比 1
+mov N$下级_攻击力百分比 1
+
+mov N$当前_攻魔道属性值 40
+mov N$当前_生命属性值 1200
+mov N$当前_切割伤害属性值 4000
+mov N$当前_对怪增伤属性值 4
+
+mov N$当前境界特效编号 70035
+mov S$境界图片 金仙
+mov S$货币展示 240万元宝
+goto @当前与下个境界页面初始化
+break
+
+#if
+checktitle 大罗金仙
+#act
+mov S$当前境界 大罗金仙
+mov S$下个境界 玄仙
+mov N$需要修为 10000 
+mov N$升级货币_元宝 4800000 
+mov N$下级_攻魔道属性值 100
+mov N$下级_生命属性值 2200
+mov N$下级_切割伤害属性值 10000
+mov N$下级_对怪增伤属性值 10
+mov N$下级_生命值百分比 2
+mov N$下级_攻击力百分比 2
+
+mov N$当前_攻魔道属性值 70
+mov N$当前_生命属性值 1700
+mov N$当前_切割伤害属性值 7000
+mov N$当前_对怪增伤属性值 7
+mov N$当前_生命值百分比 1
+mov N$当前_攻击力百分比 1
+
+mov N$当前境界特效编号 70035
+mov S$境界图片 大罗金仙
+mov S$货币展示 480万元宝
+goto @当前与下个境界页面初始化
+break
+#if
+checktitle 玄仙
+#act
+mov S$当前境界 玄仙 
+mov S$下个境界 太乙玄仙
+mov N$需要修为 20000 
+mov N$升级货币_元宝 10000000 
+mov N$下级_攻魔道属性值 130
+mov N$下级_生命属性值 2700
+mov N$下级_切割伤害属性值 13000
+mov N$下级_对怪增伤属性值 13
+mov N$下级_攻击力百分比 3
+mov N$下级_生命值百分比 3
+
+mov N$当前_攻魔道属性值 100
+mov N$当前_生命属性值 2200
+mov N$当前_切割伤害属性值 10000
+mov N$当前_对怪增伤属性值 10
+mov N$当前_生命值百分比 2
+mov N$当前_攻击力百分比 2
+
+mov N$当前境界特效编号 70036
+mov S$境界图片 玄仙
+mov S$货币展示 1000万元宝
+goto @当前与下个境界页面初始化
+break
+#if
+checktitle 太乙玄仙
+#act
+mov S$当前境界 太乙玄仙
+mov S$下个境界 仙君
+mov N$需要修为 40000 
+mov N$升级货币_元宝 20000000 
+mov N$下级_攻魔道属性值 160
+mov N$下级_生命属性值 3200
+mov N$下级_切割伤害属性值 16000
+mov N$下级_对怪增伤属性值 16
+mov N$下级_攻击力百分比 4
+mov N$下级_生命值百分比 4
+
+mov N$当前_攻魔道属性值 130
+mov N$当前_生命属性值 2700
+mov N$当前_切割伤害属性值 13000
+mov N$当前_对怪增伤属性值 13
+mov N$当前_攻击力百分比 3
+mov N$当前_生命值百分比 3
+
+mov N$当前境界特效编号 70036
+mov S$境界图片 太乙玄仙
+mov S$货币展示 2000万元宝
+goto @当前与下个境界页面初始化
+break
+#if
+checktitle 仙君
+#act
+mov S$当前境界 仙君
+mov S$下个境界 仙帝
+mov N$需要修为 80000 
+mov N$升级货币_元宝 40000000 
+mov N$下级_攻魔道属性值 220
+mov N$下级_生命属性值 4000
+mov N$下级_切割伤害属性值 22000
+mov N$下级_对怪增伤属性值 22
+mov N$下级_攻击力百分比 7
+mov N$下级_生命值百分比 7
+mov N$下级_人物爆率 10
+mov N$下级_攻击吸血 1
+
+mov N$当前_攻魔道属性值 160
+mov N$当前_生命属性值 3200
+mov N$当前_切割伤害属性值 16000
+mov N$当前_对怪增伤属性值 16
+mov N$当前_攻击力百分比 4
+mov N$当前_生命值百分比 4
+
+mov N$当前境界特效编号 70036
+mov S$境界图片 仙君
+mov S$货币展示 4000万元宝
+goto @当前与下个境界页面初始化
+break
+
+#if
+checktitle 仙帝
+#act
+mov S$当前境界 仙帝
+mov S$下个境界 准圣
+mov N$需要修为 160000 
+mov N$升级货币_元宝 60000000 
+mov N$下级_攻魔道属性值 280
+mov N$下级_生命属性值 4800
+mov N$下级_切割伤害属性值 28000
+mov N$下级_对怪增伤属性值 28
+mov N$下级_攻击力百分比 10
+mov N$下级_生命值百分比 10
+mov N$下级_人物爆率 20
+mov N$下级_攻击吸血 2
+
+mov N$当前_攻魔道属性值 220
+mov N$当前_生命属性值 4000
+mov N$当前_切割伤害属性值 22000
+mov N$当前_对怪增伤属性值 22
+mov N$当前_攻击力百分比 7
+mov N$当前_生命值百分比 7
+mov N$当前_人物爆率 10
+mov N$当前_攻击吸血 1
+
+mov N$当前境界特效编号 70037
+mov S$境界图片 仙帝
+mov S$货币展示 6000万元宝
+goto @当前与下个境界页面初始化
+break
+
+#if
+checktitle 准圣
+#act
+mov S$当前境界 准圣
+mov S$下个境界 圣人
+mov N$需要修为 320000 
+mov N$升级货币_元宝 100000000 
+mov N$下级_攻魔道属性值 340
+mov N$下级_生命属性值 5600
+mov N$下级_切割伤害属性值 34000
+mov N$下级_对怪增伤属性值 34
+mov N$下级_攻击力百分比 13
+mov N$下级_生命值百分比 13
+mov N$下级_人物爆率 30
+mov N$下级_攻击吸血 3
+
+mov N$当前_攻魔道属性值 280
+mov N$当前_生命属性值 4800
+mov N$当前_切割伤害属性值 28000
+mov N$当前_对怪增伤属性值 28
+mov N$当前_攻击力百分比 10
+mov N$当前_生命值百分比 10
+mov N$当前_人物爆率 20
+mov N$当前_攻击吸血 2
+
+mov N$当前境界特效编号 70037
+mov S$境界图片 准圣
+mov S$货币展示 1亿元宝
+goto @当前与下个境界页面初始化
+break
+#if
+checktitle 圣人
+#act
+mov S$当前境界 圣人
+mov S$下个境界 大圣
+mov N$需要修为 640000 
+mov N$升级货币_元宝 300000000 
+mov N$下级_攻魔道属性值 400
+mov N$下级_生命属性值 6400
+mov N$下级_切割伤害属性值 40000
+mov N$下级_对怪增伤属性值 40
+mov N$下级_攻击力百分比 16
+mov N$下级_生命值百分比 16
+mov N$下级_人物爆率 40
+mov N$下级_攻击吸血 4
+
+mov N$当前_攻魔道属性值 340
+mov N$当前_生命属性值 5600
+mov N$当前_切割伤害属性值 34000
+mov N$当前_对怪增伤属性值 34
+mov N$当前_攻击力百分比 13
+mov N$当前_生命值百分比 13
+mov N$当前_人物爆率 30
+mov N$当前_攻击吸血 3
+
+mov N$当前境界特效编号 70037
+mov S$境界图片 圣人
+mov S$货币展示 3亿元宝
+goto @当前与下个境界页面初始化
+break
+#if
+checktitle 大圣
+#act
+mov S$当前境界 大圣
+mov S$下个境界 准帝
+mov N$需要修为 1200000 
+mov N$升级货币_元宝 600000000 
+mov N$下级_攻魔道属性值 500
+mov N$下级_生命属性值 7500
+mov N$下级_切割伤害属性值 50000
+mov N$下级_对怪增伤属性值 50
+mov N$下级_攻击力百分比 22
+mov N$下级_生命值百分比 22
+mov N$下级_人物爆率 70
+mov N$下级_攻击吸血 7
+mov N$下级_暴击率 1
+mov N$下级_暴击伤害 1
+
+mov N$当前_攻魔道属性值 400
+mov N$当前_生命属性值 6400
+mov N$当前_切割伤害属性值 40000
+mov N$当前_对怪增伤属性值 40
+mov N$当前_攻击力百分比 16
+mov N$当前_生命值百分比 16
+mov N$当前_人物爆率 40
+mov N$当前_攻击吸血 4
+
+mov N$当前境界特效编号 70038
+mov S$境界图片 大圣
+mov S$货币展示 6亿元宝
+goto @当前与下个境界页面初始化
+break
+#if
+checktitle 准帝
+#act
+mov S$当前境界 准帝
+mov S$下个境界 大帝
+mov N$需要修为 2400000 
+mov N$升级货币_元宝 1200000000 
+mov N$下级_攻魔道属性值 600
+mov N$下级_生命属性值 8600
+mov N$下级_切割伤害属性值 60000
+mov N$下级_对怪增伤属性值 60
+mov N$下级_攻击力百分比 28
+mov N$下级_生命值百分比 28
+mov N$下级_人物爆率 100
+mov N$下级_攻击吸血 10
+mov N$下级_暴击率 3
+mov N$下级_暴击伤害 3
+
+mov N$当前_攻魔道属性值 500
+mov N$当前_生命属性值 7500
+mov N$当前_切割伤害属性值 50000
+mov N$当前_对怪增伤属性值 50
+mov N$当前_攻击力百分比 22
+mov N$当前_生命值百分比 22
+mov N$当前_人物爆率 70
+mov N$当前_攻击吸血 7
+mov N$当前_暴击率 1
+mov N$当前_暴击伤害 1
+
+mov N$当前境界特效编号 70038
+mov S$境界图片 准帝
+mov S$货币展示 12亿元宝
+goto @当前与下个境界页面初始化
+break
+#if
+checktitle 大帝
+#act
+mov S$当前境界 大帝
+mov S$下个境界 天帝
+mov N$需要修为 4800000 
+mov N$升级货币_点券 68888 
+;如未下线，大帝开始需要点券升级，在当前与下个境界页面初始化之前，要重置升级大帝前元宝升级条件，否则展示还是元宝升级
+mov N$升级货币_元宝 0 
+mov N$下级_攻魔道属性值 700
+mov N$下级_生命属性值 9700
+mov N$下级_切割伤害属性值 70000
+mov N$下级_对怪增伤属性值 70
+mov N$下级_攻击力百分比 34
+mov N$下级_生命值百分比 34
+mov N$下级_人物爆率 130
+mov N$下级_攻击吸血 13
+mov N$下级_暴击率 5
+mov N$下级_暴击伤害 5
+
+mov N$当前_攻魔道属性值 600
+mov N$当前_生命属性值 8600
+mov N$当前_切割伤害属性值 60000
+mov N$当前_对怪增伤属性值 60
+mov N$当前_攻击力百分比 28
+mov N$当前_生命值百分比 28
+mov N$当前_人物爆率 100
+mov N$当前_攻击吸血 10
+mov N$当前_暴击率 3
+mov N$当前_暴击伤害 3
+
+mov N$当前境界特效编号 70038
+mov S$境界图片 大帝
+mov S$货币展示 68888点卷
+goto @当前与下个境界页面初始化
+break
+#if
+checktitle 天帝
+#act
+mov S$当前境界 天帝
+mov S$下个境界 荒天帝
+mov N$需要修为 10000000 
+mov N$升级货币_点券 88888 
+mov N$下级_攻魔道属性值 800
+mov N$下级_生命属性值 10800
+mov N$下级_切割伤害属性值 80000
+mov N$下级_对怪增伤属性值 80
+mov N$下级_攻击力百分比 40
+mov N$下级_生命值百分比 40
+mov N$下级_人物爆率 160
+mov N$下级_攻击吸血 16
+mov N$下级_暴击率 7
+mov N$下级_暴击伤害 7
+
+mov N$当前_攻魔道属性值 700
+mov N$当前_生命属性值 9700
+mov N$当前_切割伤害属性值 70000
+mov N$当前_对怪增伤属性值 70
+mov N$当前_攻击力百分比 34
+mov N$当前_生命值百分比 34
+mov N$当前_人物爆率 130
+mov N$当前_攻击吸血 13
+mov N$当前_暴击率 5
+mov N$当前_暴击伤害 5
+
+mov N$当前境界特效编号 70039
+mov S$境界图片 天帝
+mov S$货币展示 88888点卷
+goto @当前与下个境界页面初始化
+break
+#if
+checktitle 荒天帝
+#act
+mov S$当前境界 荒天帝
+mov S$下个境界 主宰
+mov N$需要修为 20000000 
+mov N$升级货币_点券 108888 
+mov N$下级_攻魔道属性值 900
+mov N$下级_生命属性值 11900
+mov N$下级_切割伤害属性值 90000
+mov N$下级_对怪增伤属性值 90
+mov N$下级_攻击力百分比 50
+mov N$下级_生命值百分比 50
+mov N$下级_人物爆率 200
+mov N$下级_攻击吸血 22
+mov N$下级_暴击率 10
+mov N$下级_暴击伤害 10
+
+mov N$当前_攻魔道属性值 800
+mov N$当前_生命属性值 10800
+mov N$当前_切割伤害属性值 80000
+mov N$当前_对怪增伤属性值 80
+mov N$当前_攻击力百分比 40
+mov N$当前_生命值百分比 40
+mov N$当前_人物爆率 160
+mov N$当前_攻击吸血 16
+mov N$当前_暴击率 7
+mov N$当前_暴击伤害 7
+
+mov N$当前境界特效编号 70039
+mov S$境界图片 荒天帝
+mov S$货币展示 108888点卷
+goto @当前与下个境界页面初始化
+break
+#if
+checktitle 主宰
+#act
+mov S$当前境界 主宰
+mov S$下个境界 天道主宰
+mov N$需要修为 50000000 
+mov N$升级货币_点券 128888 
+mov N$下级_攻魔道属性值 1000
+mov N$下级_生命属性值 13000
+mov N$下级_切割伤害属性值 100000
+mov N$下级_对怪增伤属性值 100
+mov N$下级_攻击力百分比 60
+mov N$下级_生命值百分比 60
+mov N$下级_人物爆率 300
+mov N$下级_攻击吸血 30
+mov N$下级_暴击率 15
+mov N$下级_暴击伤害 15
+
+mov N$当前_攻魔道属性值 900
+mov N$当前_生命属性值 11900
+mov N$当前_切割伤害属性值 90000
+mov N$当前_对怪增伤属性值 90
+mov N$当前_攻击力百分比 50
+mov N$当前_生命值百分比 50
+mov N$当前_人物爆率 200
+mov N$当前_攻击吸血 22
+mov N$当前_暴击率 10
+mov N$当前_暴击伤害 10
+
+mov N$当前境界特效编号 70039
+mov S$境界图片 主宰
+mov S$货币展示 128888点卷
+goto @当前与下个境界页面初始化
+break
+
+#if
+checktitle 天道主宰
+#act
+mov S$当前境界 天道主宰
+mov S$下个境界 无
+mov S$境界图片 天道主宰
+mov N$当前境界特效编号 70039
+mov N$当前_攻魔道属性值 1000
+mov N$当前_生命属性值 13000
+mov N$当前_切割伤害属性值 100000
+mov N$当前_对怪增伤属性值 100
+mov N$当前_攻击力百分比 60
+mov N$当前_生命值百分比 60
+mov N$当前_人物爆率 300
+mov N$当前_攻击吸血 30
+mov N$当前_暴击率 15
+mov N$当前_暴击伤害 15
+mov S$货币展示 无
+goto @当前与下个境界页面初始化
+break
+
+[@当前与下个境界页面初始化]
+#if
+#act
+mov S$当前境界页面 
+mov S$下个境界页面
+mov S$天道主宰界面 
+
+;处理首次进入页面展示效果
+#if
+equal S$当前境界 无 
+#act
+inc S$当前境界页面 <RText|id=c11|x=625|y=185|outline=2|outlinecolor=0|size=18|text=<无/FCOLOR=255>>
+goto @下个境界页面
+break
+;处理达到天道主宰后页面展示效果
+#if
+checktitle 天道主宰
+#act
+inc S$天道主宰界面 <RText|id=f1|x=50|y=30|outline=2|outlinecolor=0|size=18|text=<消22耗:/FCOLOR=255><<$str(S$货币展示)>/FCOLOR=215>>
+inc S$下个境界页面 <RText|id=f3|x=170|y=-65|outline=2|outlinecolor=0|size=18|text=<无/FCOLOR=255>>
+goto @当前境界页面
+break
+
+#if
+#act
+goto @当前境界页面
+goto @下个境界页面
+
+[@当前境界页面]
+#act
+inc S$当前境界页面 <Layout|id=layout_4|children={c1,c2,c3,c4,c5,c6,c7,c8,c9,c10,c11}|x=413|y=61|width=348|height=137>
+inc S$当前境界页面 <RText|id=c1|children={c1_1}|x=59|y=7|outline=2|outlinecolor=0|color=255|size=14|text=<攻魔道/FCOLOR=255>>
+inc S$当前境界页面 <RText|id=c1_1|a=0|x=66|y=0|outline=2|outlinecolor=0|color=255|size=14|text=<<$str(N$当前_攻魔道属性值)>/FCOLOR=215>>
+inc S$当前境界页面 <RText|id=c2|children={c2_2}|x=54|y=33|outline=2|outlinecolor=0|color=255|size=14|text=<切割伤害/FCOLOR=2555>>
+inc S$当前境界页面 <RText|id=c2_2|a=0|x=70|y=0|outline=2|outlinecolor=0|color=255|size=14|text=<<$str(N$当前_切割伤害属性值)>/FCOLOR=215>>
+inc S$当前境界页面 <RText|id=c3|children={c3_3}|x=57|y=59|outline=2|outlinecolor=0|color=255|size=14|text=<攻击力/FCOLOR=255>>
+inc S$当前境界页面 <RText|id=c3_3|a=0|x=67|y=0|outline=2|outlinecolor=0|color=255|size=14|text=<<$str(N$当前_攻击力百分比)>%/FCOLOR=215>>
+inc S$当前境界页面 <RText|id=c4|children={c4_4}|x=47|y=82|outline=2|outlinecolor=0|color=255|size=14|text=<人物爆率/FCOLOR=255>>
+inc S$当前境界页面 <RText|id=c4_4|a=0|x=76|y=0|outline=2|outlinecolor=0|color=255|size=14|text=<<$str(N$当前_人物爆率)>%/FCOLOR=215>>
+inc S$当前境界页面 <RText|id=c5|children={c5_5}|x=58|y=105|outline=2|outlinecolor=0|color=255|size=14|text=<暴击率/FCOLOR=255>>
+inc S$当前境界页面 <RText|id=c5_5|a=0|x=66|y=0|outline=2|outlinecolor=0|color=255|size=14|text=<<$str(N$当前_暴击率)>%/FCOLOR=215>>
+inc S$当前境界页面 <RText|id=c6|children={c6_6}|x=204|y=7|outline=2|outlinecolor=0|color=255|size=14|text=<生命值/FCOLOR=255>>
+inc S$当前境界页面 <RText|id=c6_6|a=0|x=74|y=0|outline=2|outlinecolor=0|color=255|size=14|text=<<$str(N$当前_生命属性值)>/FCOLOR=215>>
+inc S$当前境界页面 <RText|id=c7|children={c7_7}|x=193|y=33|outline=2|outlinecolor=0|color=255|size=14|text=<对怪增伤/FCOLOR=255>>
+inc S$当前境界页面 <RText|id=c7_7|a=0|x=85|y=0|outline=2|outlinecolor=0|color=255|size=14|text=<<$str(N$当前_对怪增伤属性值)>%/FCOLOR=215>>
+inc S$当前境界页面 <RText|id=c8|children={c8_8}|x=187|y=57|outline=2|outlinecolor=0|color=255|size=14|text=<生命值百分比/FCOLOR=255>>
+inc S$当前境界页面 <RText|id=c8_8|a=0|x=91|y=0|outline=2|outlinecolor=0|color=255|size=14|text=<<$str(N$当前_生命值百分比)>%/FCOLOR=215>>
+inc S$当前境界页面 <RText|id=c9|children={c9_9}|x=196|y=82|outline=2|outlinecolor=0|color=255|size=14|text=<攻击吸血/FCOLOR=255>>
+inc S$当前境界页面 <RText|id=c9_9|a=0|x=82|y=0|outline=2|outlinecolor=0|color=255|size=14|text=<<$str(N$当前_攻击吸血)>%/FCOLOR=215>>
+inc S$当前境界页面 <RText|id=c10|children={c10_10}|x=193|y=105|outline=2|outlinecolor=0|color=255|size=14|text=<暴击伤害/FCOLOR=255>>
+inc S$当前境界页面 <RText|id=c10_10|a=0|x=85|y=1|outline=2|outlinecolor=0|color=255|size=14|text=<<$str(N$当前_暴击伤害)>%/FCOLOR=215>>
+goto @境界主页面
+
+[@下个境界页面]
+#act
+inc S$下个境界页面 <Layout|id=layout_5|children={d1,d2,d3,d4,d5,d6,d7,d8,d9,d10}|x=413|y=226|width=351|height=121>
+inc S$下个境界页面 <RText|id=d1|children={d1_1}|x=59|y=7|outline=2|outlinecolor=0|color=255|size=14|text=<攻魔道/FCOLOR=255>>
+inc S$下个境界页面 <RText|id=d1_1|a=0|x=67|y=0|outline=2|outlinecolor=0|color=255|size=14|text=<<$str(N$下级_攻魔道属性值)>/FCOLOR=215>>
+inc S$下个境界页面 <RText|id=d2|children={d2_2}|x=54|y=33|outline=2|outlinecolor=0|color=255|size=14|text=<切割伤害/FCOLOR=2555>>
+inc S$下个境界页面 <RText|id=d2_2|a=0|x=71|y=0|outline=2|outlinecolor=0|color=255|size=14|text=<<$str(N$下级_切割伤害属性值)>/FCOLOR=215>>
+inc S$下个境界页面 <RText|id=d3|children={d3_3}|x=57|y=59|outline=2|outlinecolor=0|color=255|size=14|text=<攻击力/FCOLOR=255>>
+inc S$下个境界页面 <RText|id=d3_3|a=0|x=68|y=0|outline=2|outlinecolor=0|color=255|size=14|text=<<$str(N$下级_攻击力百分比)>%/FCOLOR=215>>
+inc S$下个境界页面 <RText|id=d4|children={d4_4}|x=47|y=82|outline=2|outlinecolor=0|color=255|size=14|text=<人物爆率/FCOLOR=255>>
+inc S$下个境界页面 <RText|id=d4_4|a=0|x=77|y=0|outline=2|outlinecolor=0|color=255|size=14|text=<<$str(N$下级_人物爆率)>%/FCOLOR=215>>
+inc S$下个境界页面 <RText|id=d5|children={d5_5}|x=58|y=105|outline=2|outlinecolor=0|color=255|size=14|text=<暴击率/FCOLOR=255>>
+inc S$下个境界页面 <RText|id=d5_5|a=0|x=67|y=-2|outline=2|outlinecolor=0|color=255|size=14|text=<<$str(N$下级_暴击率)>%/FCOLOR=215>>
+inc S$下个境界页面 <RText|id=d6|children={d6_6}|x=204|y=7|outline=2|outlinecolor=0|color=255|size=14|text=<生命值/FCOLOR=255>>
+inc S$下个境界页面 <RText|id=d6_6|a=0|x=74|y=0|outline=2|outlinecolor=0|color=255|size=14|text=<<$str(N$下级_生命属性值)>/FCOLOR=215>>
+inc S$下个境界页面 <RText|id=d7|children={d7_7}|x=193|y=33|outline=2|outlinecolor=0|color=255|size=14|text=<对怪增伤/FCOLOR=255>>
+inc S$下个境界页面 <RText|id=d7_7|a=0|x=85|y=0|outline=2|outlinecolor=0|color=255|size=14|text=<<$str(N$下级_对怪增伤属性值)>%/FCOLOR=215>>
+inc S$下个境界页面 <RText|id=d8|children={d8_8}|x=187|y=57|outline=2|outlinecolor=0|color=255|size=14|text=<生命值百分比/FCOLOR=255>>
+inc S$下个境界页面 <RText|id=d8_8|a=0|x=90|y=0|outline=2|outlinecolor=0|color=255|size=14|text=<<$str(N$下级_生命值百分比)>%/FCOLOR=215>>
+inc S$下个境界页面 <RText|id=d9|children={d9_9}|x=196|y=82|outline=2|outlinecolor=0|color=255|size=14|text=<攻击吸血/FCOLOR=255>>
+inc S$下个境界页面 <RText|id=d9_9|a=0|x=81|y=0|outline=2|outlinecolor=0|color=255|size=14|text=<<$str(N$下级_攻击吸血)>%/FCOLOR=215>>
+inc S$下个境界页面 <RText|id=d10|children={d10_10}|x=193|y=105|outline=2|outlinecolor=0|color=255|size=14|text=<暴击伤害/FCOLOR=255>>
+inc S$下个境界页面 <RText|id=d10_10|a=0|x=84|y=0|outline=2|outlinecolor=0|color=255|size=14|text=<<$str(N$下级_暴击伤害)>%/FCOLOR=215>>
+goto @境界主页面
+
+
+[@境界主页面]
+#say
+<Img|id=ui_1|children={exit,content}|x=0|y=0|width=845|height=528|img=public\xiyou\jingjie\内框.png|bg=1|move=0|reset=1|show=4|layerid=110>
+<Button|id=exit|x=814|y=63|width=26|height=42|nimg=public/1900000510.png|pimg=public/1900000511.png|color=255|size=18|link=@exit>
+<Layout|id=content|children={layout_3,layout_4,layout_5,layout_2}|x=38|y=68|width=762|height=429>
+<Layout|id=layout_3|children={e1,e2}|x=4|y=4|width=404|height=428>
+<RText|id=e1|a=4|x=624|y=43|outline=2|outlinecolor=0|color=255|size=14|text=<<$str(S$当前境界)>/FCOLOR=255>>
+<RText|id=e2|a=4|x=624|y=209|outline=2|outlinecolor=0|color=255|size=14|text=<<$str(S$下个境界)>/FCOLOR=255>>
+<$str(S$当前境界页面)>
+<$str(S$下个境界页面)>
+<Layout|id=layout_2|children={b3,b4,b5,b1,b2}|x=8|y=385|width=400|height=30>
+<Img|id=b3|x=-4|y=-7|width=410|height=44|img=public\xiyou\jingjie\jingdutiao_2.png|bg=1|reset=1|show=0|loadDelay=0>
+<Img|id=b4|x=13|y=-360|width=80|height=165|img=public\xiyou\jingjie\<$str(S$境界图片)>.png|bg=1|reset=1|show=0|loadDelay=0>
+<Effect|id=b5|x=-55|y=-332|effectid=<$str(N$当前境界特效编号)>|effecttype=0|act=0|dir=0|speed=1|scale=1|count=0>
+<PercentImg|id=b1|x=3|y=7|width=395|height=20|direction=0|img=public\xiyou\jingjie\jingdutiao_1.png|minValue=<$str(U234)>|maxValue=<$str(N$需要修为)>>
+<RText|id=b2|a=0|x=150|y=8|color=255|size=16|text=<<$str(U234)>/FCOLOR=255><//FCOLOR=255><<$str(N$需要修为)>/FCOLOR=255>>
+<Layout|id=layout_1|children={f1,f2,f3}|x=453|y=418|width=349|height=83>
+<RText|id=f1|x=50|y=32|outline=2|outlinecolor=0|color=255|size=14|text=<消耗: /FCOLOR=255><<$str(S$货币展示)>/FCOLOR=215>>
+<Button|id=f2|x=195|y=18|width=133|height=48|nimg=public\xiyou\jingjie\确认进阶.png|size=14|link=@开始进阶>
+
+
+[@开始进阶]
+#if
+checktitle 天道主宰
+#act
+sendmsg 9 当前境界已经达到最高！
+break
+;============================人仙晋级====================================
+#if
+equal S$当前境界 无
+small U234 299
+#act
+sendmsg 9 你的修为不足!
+break
+#if
+equal S$当前境界 无
+CheckBindMoney 绑定元宝  < <$str(N$升级货币_元宝)>
+#act
+sendmsg 9 你的元宝不足!
+break
+
+#if
+equal S$当前境界 无
+#act
+;扣除元宝
+ChangeBindMoney 绑定元宝 <$str(N$升级货币_元宝)>
+;扣除修为
+dec U234 <$str(N$需要修为)>
+confertitle 人仙
+goto @更新参数
+;####重置自定义变量避免第二次进入当前称号方法
+mov S$当前境界
+sendmsg 9 恭喜人仙境界提升成功 
+goto @main
+break
+;============================人仙晋级====================================
+
+;============================地仙晋级====================================
+#if
+checktitle 人仙
+small U234 599
+#act
+sendmsg 9 你的修为不足!
+break
+#if
+checktitle 人仙
+CheckBindMoney 绑定元宝  < <$str(N$升级货币_元宝)>
+#act
+sendmsg 9 你的元宝不足!
+break
+
+#if
+checktitle 人仙
+#act
+;扣除元宝
+ChangeBindMoney 绑定元宝 <$str(N$升级货币_元宝)>
+;扣除修为
+dec U234 <$str(N$需要修为)>
+deprivetitle 人仙
+confertitle 地仙
+goto @更新参数
+sendmsg 9 恭喜地仙境界提升成功！
+goto @main
+break
+;============================地仙晋级====================================
+
+
+;============================天仙晋级====================================
+#if
+checktitle 地仙
+small U234 1199
+#act
+sendmsg 9 你的修为不足!
+break
+#if
+checktitle 地仙
+CheckBindMoney 绑定元宝  < <$str(N$升级货币_元宝)>
+#act
+sendmsg 9 你的元宝不足!
+break
+
+#if
+checktitle 地仙
+#act
+;扣除元宝
+ChangeBindMoney 绑定元宝 <$str(N$升级货币_元宝)>
+;扣除修为
+dec U234 <$str(N$需要修为)>
+deprivetitle 地仙
+confertitle 天仙
+goto @更新参数
+sendmsg 9 恭喜天仙境界提升成功！
+goto @main
+break
+;============================天仙晋级====================================
+
+;============================金仙晋级====================================
+#if
+checktitle 天仙
+small U234 2399
+#act
+sendmsg 9 你的修为不足!
+break
+#if
+checktitle 天仙
+CheckBindMoney 绑定元宝  < <$str(N$升级货币_元宝)>
+#act
+sendmsg 9 你的元宝不足!
+break
+
+#if
+checktitle 天仙
+#act
+;扣除元宝
+ChangeBindMoney 绑定元宝 <$str(N$升级货币_元宝)>
+;扣除修为
+dec U234 <$str(N$需要修为)>
+deprivetitle 天仙
+confertitle 金仙
+goto @更新参数
+sendmsg 9 恭喜金仙境界提升成功！！
+goto @main
+break
+;============================大罗金仙晋级====================================
+#if
+checktitle 金仙
+small U234 4799
+#act
+sendmsg 9 你的修为不足!
+break
+#if
+checktitle 金仙
+CheckBindMoney 绑定元宝  < <$str(N$升级货币_元宝)>
+#act
+sendmsg 9 你的元宝不足!
+break
+
+#if
+checktitle 金仙
+#act
+;扣除元宝
+ChangeBindMoney 绑定元宝 <$str(N$升级货币_元宝)>
+;扣除修为
+dec U234 <$str(N$需要修为)>
+deprivetitle 金仙
+confertitle 大罗金仙
+goto @更新参数
+sendmsg 9 恭喜大罗金仙境界提升成功！！
+goto @main
+break
+;============================玄仙晋级====================================
+#if
+checktitle 大罗金仙
+small U234 9999
+#act
+sendmsg 9 你的修为不足!
+break
+#if
+checktitle 大罗金仙
+CheckBindMoney 绑定元宝  < <$str(N$升级货币_元宝)>
+#act
+sendmsg 9 你的元宝不足!
+break
+
+#if
+checktitle 大罗金仙
+#act
+;扣除元宝
+ChangeBindMoney 绑定元宝 <$str(N$升级货币_元宝)>
+;扣除修为
+dec U234 <$str(N$需要修为)>
+deprivetitle 大罗金仙
+confertitle 玄仙
+goto @更新参数
+sendmsg 9 恭喜玄仙境界提升成功！！
+goto @main
+break
+;============================玄仙晋级====================================
+
+;============================太乙玄仙晋级====================================
+#if
+checktitle 玄仙
+small U234 19999
+#act
+sendmsg 9 你的修为不足!
+break
+#if
+checktitle 玄仙
+CheckBindMoney 绑定元宝  < <$str(N$升级货币_元宝)>
+#act
+sendmsg 9 你的元宝不足!
+break
+
+#if
+checktitle 玄仙
+#act
+;扣除元宝
+ChangeBindMoney 绑定元宝 <$str(N$升级货币_元宝)>
+;扣除修为
+dec U234 <$str(N$需要修为)>
+deprivetitle 玄仙
+confertitle 太乙玄仙
+goto @更新参数
+sendmsg 9 恭喜太乙玄仙境界提升成功！！
+goto @main
+break
+;============================太乙玄仙晋级===================================
+
+;============================仙君晋级===================================
+#if
+checktitle 太乙玄仙
+small U234 39999
+#act
+sendmsg 9 你的修为不足!
+break
+#if
+checktitle 太乙玄仙
+CheckBindMoney 绑定元宝  < <$str(N$升级货币_元宝)>
+#act
+sendmsg 9 你的元宝不足!
+break
+
+#if
+checktitle 太乙玄仙
+#act
+;扣除元宝
+ChangeBindMoney 绑定元宝 <$str(N$升级货币_元宝)>
+;扣除修为
+dec U234 <$str(N$需要修为)>
+deprivetitle 太乙玄仙
+confertitle 仙君
+goto @更新参数
+sendmsg 9 恭喜仙君境界提升成功！
+goto @main
+break
+;============================仙君晋级===================================
+
+;============================仙帝晋级===================================
+#if
+checktitle 仙君
+small U234 79999
+#act
+sendmsg 9 你的修为不足!
+break
+#if
+checktitle 仙君
+CheckBindMoney 绑定元宝  < <$str(N$升级货币_元宝)>
+#act
+sendmsg 9 你的元宝不足!
+break
+
+#if
+checktitle 仙君
+#act
+;扣除元宝
+ChangeBindMoney 绑定元宝 <$str(N$升级货币_元宝)>
+;扣除修为
+dec U234 <$str(N$需要修为)>
+deprivetitle 仙君
+confertitle 仙帝
+goto @更新参数
+sendmsg 9 恭喜仙帝境界提升成功！！
+goto @main
+break
+;============================仙帝晋级===================================
+
+;============================准圣晋级===================================
+#if
+checktitle 仙帝
+small U234 159999
+#act
+sendmsg 9 你的修为不足!
+break
+#if
+checktitle 仙帝
+CheckBindMoney 绑定元宝  < <$str(N$升级货币_元宝)>
+#act
+sendmsg 9 你的元宝不足!
+break
+
+#if
+checktitle 仙帝
+#act
+;扣除元宝
+ChangeBindMoney 绑定元宝 <$str(N$升级货币_元宝)>
+;扣除修为
+dec U234 <$str(N$需要修为)>
+deprivetitle 仙帝
+confertitle 准圣
+goto @更新参数
+sendmsg 9 恭喜准圣境界提升成功！！
+goto @main
+break
+;============================准圣晋级===================================
+;============================圣人晋级===================================
+
+#if
+checktitle 准圣
+small U234 319999
+#act
+sendmsg 9 你的修为不足!
+break
+#if
+checktitle 准圣
+CheckBindMoney 绑定元宝  < <$str(N$升级货币_元宝)>
+#act
+sendmsg 9 你的元宝不足!
+break
+
+#if
+checktitle 准圣
+#act
+;扣除元宝
+ChangeBindMoney 绑定元宝 <$str(N$升级货币_元宝)>
+;扣除修为
+dec U234 <$str(N$需要修为)>
+;更新切割值
+deprivetitle 准圣
+confertitle 圣人
+goto @更新参数
+sendmsg 9 恭喜圣人境界提升成功！！
+goto @main
+break
+;============================圣人晋级===================================
+;============================大圣晋级===================================
+
+#if
+checktitle 圣人
+small U234 639999
+#act
+sendmsg 9 你的修为不足!
+break
+#if
+checktitle 圣人
+CheckBindMoney 绑定元宝  < <$str(N$升级货币_元宝)>
+#act
+sendmsg 9 你的元宝不足!
+break
+
+#if
+checktitle 圣人
+#act
+;扣除元宝
+ChangeBindMoney 绑定元宝 <$str(N$升级货币_元宝)>
+;扣除修为
+dec U234 <$str(N$需要修为)>
+deprivetitle 圣人
+confertitle 大圣
+goto @更新参数
+sendmsg 9 恭喜大圣境界提升成功！！
+goto @main
+break
+;============================大圣晋级===================================
+;============================准帝晋级===================================
+#if
+checktitle 大圣
+small U234 1199999
+#act
+sendmsg 9 你的修为不足!
+break
+#if
+checktitle 大圣
+CheckBindMoney 绑定元宝  < <$str(N$升级货币_元宝)>
+#act
+sendmsg 9 你的元宝不足!
+break
+
+#if
+checktitle 大圣
+#act
+;扣除元宝
+ChangeBindMoney 绑定元宝 <$str(N$升级货币_元宝)>
+;扣除修为
+dec U234 <$str(N$需要修为)>
+deprivetitle 大圣
+confertitle 准帝
+goto @更新参数
+sendmsg 9 恭喜准帝境界提升成功！！
+goto @main
+break
+;============================准帝晋级===================================
+;============================大帝晋级===================================
+#if
+checktitle 准帝
+small U234 2399999
+#act
+sendmsg 9 你的修为不足!
+break
+#if
+checktitle 准帝
+CheckBindMoney 绑定元宝  < <$str(N$升级货币_元宝)>
+#act
+sendmsg 9 你的元宝不足!
+break
+
+#if
+checktitle 准帝
+#act
+;扣除元宝
+ChangeBindMoney 绑定元宝 <$str(N$升级货币_元宝)>
+;扣除修为
+dec U234 <$str(N$需要修为)>
+deprivetitle 准帝
+confertitle 大帝
+goto @更新参数
+sendmsg 9 恭喜大帝境界提升成功！！
+goto @main
+break
+;============================大帝晋级===================================
+;============================天帝晋级===================================
+
+
+#if
+checktitle 大帝
+small U234 4799999
+#act
+sendmsg 9 你的修为不足!
+break
+
+#if
+checktitle 大帝
+CheckBindMoney 绑定点卷  < <$str(N$升级货币_点券)>
+#act
+sendmsg 9 你的点卷不足！
+break
+
+#if
+checktitle 大帝
+#act
+;扣除元宝
+ChangeBindMoney 绑定点卷 <$str(N$升级货币_点券)>
+;扣除修为
+dec U234 <$str(N$需要修为)>
+
+deprivetitle 大帝
+confertitle 天帝
+goto @更新参数
+sendmsg 9 恭喜天帝境界提升成功！！
+goto @main
+break
+;============================天帝晋级===================================
+;============================荒天帝晋级===================================
+#if
+checktitle 天帝
+small U234 9999999
+#act
+sendmsg 9 你的修为不足!
+break
+#if
+checktitle 天帝
+CheckBindMoney 绑定点卷  < <$str(N$升级货币_点券)>
+#act
+sendmsg 9 你的点卷不足!
+break
+
+#if
+checktitle 天帝
+#act
+;扣除元宝
+ChangeBindMoney 绑定点卷 <$str(N$升级货币_点券)>
+;扣除修为
+dec U234 <$str(N$需要修为)>
+
+deprivetitle 天帝
+confertitle 荒天帝
+goto @更新参数
+sendmsg 9 恭喜荒天帝境界提升成功！！
+goto @main
+break
+;============================荒天帝晋级===================================
+;============================主宰晋级===================================
+#if
+checktitle 荒天帝
+small U234 11999999
+#act
+sendmsg 9 你的修为不足!
+break
+#if
+checktitle 荒天帝
+CheckBindMoney 绑定点卷  < <$str(N$升级货币_点券)>
+#act
+sendmsg 9 你的点卷不足!
+break
+
+#if
+checktitle 荒天帝
+#act
+;扣除元宝
+ChangeBindMoney 绑定点卷 <$str(N$升级货币_点券)>
+;扣除修为
+dec U234 <$str(N$需要修为)>
+deprivetitle 荒天帝
+confertitle 主宰
+goto @更新参数
+sendmsg 9 恭喜主宰境界提升成功！！
+goto @main
+break
+;============================主宰晋级===================================
+;============================天道主宰晋级===================================
+#if
+checktitle 主宰
+small U234 49999999
+#act
+sendmsg 9 你的修为不足!
+break
+#if
+checktitle 主宰
+CheckBindMoney 绑定点卷  < <$str(N$升级货币_点券)>
+#act
+sendmsg 9 你的点卷不足!
+break
+
+#if
+checktitle 主宰
+
+
+#act
+;扣除元宝
+ChangeBindMoney 绑定点卷 <$str(N$升级货币_点券)>
+;扣除修为
+dec U234 <$str(N$需要修为)>
+deprivetitle 主宰
+confertitle 天道主宰
+goto @更新参数
+SENDMSGNEW 151 0 {『境界提升』：/FCOLOR=249}恭喜【{<$USERNAME>/FCOLOR=224}】的境界已经达到【{天道主宰/FCOLOR=245}】境界！ 1 10
+goto @main
+break
+;============================天道主宰晋级===================================
+
+
+[@更新参数]
+#act
+;更新切割值
+#call [..\QuestDiary\功能脚本\天泉西游切割管理.txt] @境界切割
+;更新修炼值
+#call [..\QuestDiary\主界面基础按钮\修炼值展示.txt] @修炼值展示

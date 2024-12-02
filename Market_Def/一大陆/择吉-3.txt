@@ -1,47 +1,117 @@
-[@main]
+[@main]  
+#act  
+goto @根据已穿戴称号激活特效  
+;mov U168 0
 
-#say
-<Img|x=452.0|y=118.0|loadDelay=1|move=0|img=public/bg_npc_03.png|show=0|bg=1|esc=1|reset=1>
-<Layout|x=545|y=0|width=80|height=80|link=@exit>
-<Button|x=1024.0|y=50.0|pimg=public/1900000511.png|nimg=public/1900000510.png|link=@exit>
-<Img|x=72.0|y=50.0|width=190|height=300|rotate=0|reset=1|loadDelay=0|move=0|show=4|img=topbtn/xsyb/pt.png>
-<Img|x=263.0|y=49.0|width=190|height=300|rotate=0|reset=1|loadDelay=0|move=0|show=4|img=topbtn/xsyb/zj.png>
-<Img|x=455.0|y=50.0|width=190|height=300|rotate=0|reset=1|loadDelay=0|move=0|show=4|img=topbtn/xsyb/gj.png>
-<Img|x=644.0|y=49.0|width=190|height=300|rotate=0|reset=1|loadDelay=0|move=0|show=4|img=topbtn/xsyb/hh.png>
-<Img|x=644.0|y=49.0|width=190|height=300|rotate=0|reset=1|loadDelay=0|move=0|show=4|img=topbtn/xsyb/hh.png>
-<Img|x=835.0|y=50.0|width=190|height=300|rotate=0|reset=1|loadDelay=0|move=0|show=4|img=topbtn/xsyb/hh.png>
-<Text|x=601.0|y=354.0|size=20|color=250|text=第66次择吉必定天降鸿运：当前(<$str(G69)>次)>
-<Button|x=454.0|y=431.0|size=18|pimg=public/00000362.png|mimg=public/00000363.png|nimg=public/00000361.png|link=@择吉检测>
-<Text|x=83.0|y=352.0|size=20|color=255|text=需要点券:1000>
+[@择吉图片展示]
+#if
+#act
+mov S$一帆风顺_默认图片展示 一帆风顺1
+mov S$好事成双_默认图片展示 好事成双1
+mov S$三生有幸_默认图片展示 三生有幸1
+mov S$六六大顺_默认图片展示 六六大顺1
+mov S$五福临门_默认图片展示 五福临门1
+mov S$天降鸿运_默认图片展示 天降鸿运1
+[@根据已穿戴称号激活特效]  
+#if  
+; 如果没有任何称号，不展示特效  
+not checktitle 一帆风顺  
+not checktitle 好事成双  
+not checktitle 三生有幸  
+not checktitle 六六大顺  
+not checktitle 五福临门  
+not checktitle 天降鸿运   
+#act  
+goto @择吉主界面  
+break  
+#elseact  
+; U167特效框Y轴坐标  
+mov U167 0 
+; U166特效框X轴坐标  
+mov S$当前激活序列帧特效框 <Frames|id=3|x=<$str(U166)>|y=<$str(U167)>|width=127|height=370|speed=40|suffix=.png|prefix=custom/jz_ui/sfx_|count=10|loop=-1>  
+goto @择吉主界面  
+break  
+
+[@择吉主界面]  
+#say  
+<Img|children={exit,content,button}|x=-135|y=-48|width=854|height=528|img=public\xiyou\zeji\内框.png|bg=1|move=1|reset=1|show=4|layerid=110>
+<Button|id=exit|x=823|y=66|width=26|height=42|nimg=public/1900000510.png|pimg=public/1900000511.png|size=18|link=@exit>
+<Layout|id=content|children={3,4,5,a1,a2,a3,a4,a5,a6,2}|x=43|y=72|width=765|height=427>
+<Img|id=3|x=4|y=299|width=377|height=50|img=public\xiyou\zeji\长条.png|bg=1|reset=1|show=0|loadDelay=0>
+<Img|id=4|x=383|y=299|width=380|height=50|img=public\xiyou\zeji\长条.png|reset=1|show=0|loadDelay=0>
+<RText|id=5|x=145|y=313|outline=2|outlinecolor=0|size=18|text=<需要点券:/FCOLOR=255><1000/FCOLOR=250>>
+<Img|id=a1|children={a1_rtext_2,a1_rtext_3,a1_rtext_4,a1_rtext_5,a1_rtext_6}|x=-1|y=4|width=127|height=292|img=public\xiyou\zeji\一帆风顺1.png|esc=0>
+<RText|id=a1_rtext_2|x=31|y=191|outline=2|outlinecolor=0|size=14|text=<攻魔道:+5/FCOLOR=215>>
+<RText|id=a1_rtext_3|x=22|y=211|outline=2|outlinecolor=0|size=14|text=<生命值:+188/FCOLOR=215>>
+<RText|id=a1_rtext_4|x=23|y=231|outline=2|outlinecolor=0|size=14|text=<打怪增伤:+1%/FCOLOR=215>>
+<RText|id=a1_rtext_5|x=15|y=251|outline=2|outlinecolor=0|size=14|text=<人物爆率:+10%/FCOLOR=215>>
+<RText|id=a1_rtext_6|x=18|y=271|outline=2|outlinecolor=0|size=14|text=<攻击速度:+3%/FCOLOR=215>>
+<Img|id=a2|children={a2_rtext_2,a2_rtext_3,a2_rtext_4,a2_rtext_5,a2_rtext_6}|x=128|y=5|width=127|height=292|img=public\xiyou\zeji\好事成双1.png|esc=0>
+<RText|id=a2_rtext_2|x=24|y=191|outline=2|outlinecolor=0|size=14|text=<攻魔道:+10/FCOLOR=154>>
+<RText|id=a2_rtext_3|x=18.0|y=211|outline=2|outlinecolor=0|size=14|text=<生命值:+388/FCOLOR=154>>
+<RText|id=a2_rtext_4|x=15.0|y=231|outline=2|outlinecolor=0|size=14|text=<打怪增伤:+3%/FCOLOR=154>>
+<RText|id=a2_rtext_5|x=11.0|y=251|outline=2|outlinecolor=0|size=14|text=<人物爆率:+15%/FCOLOR=154>>
+<RText|id=a2_rtext_6|x=14.0|y=271|outline=2|outlinecolor=0|size=14|text=<攻击速度:+5%/FCOLOR=154>>
+<Img|id=a3|children={a3_rtext_2,a3_rtext_3,a3_rtext_4,a3_rtext_5,a3_rtext_6}|x=255|y=4|width=127|height=292|img=public\xiyou\zeji\三生有幸1.png|esc=0>
+<RText|id=a3_rtext_2|x=27.0|y=191.0|outline=2|outlinecolor=0|size=14|text=<攻魔道:+15/FCOLOR=149>>
+<RText|id=a3_rtext_3|x=18.0|y=211.0|outline=2|outlinecolor=0|size=14|text=<生命值:+588/FCOLOR=149>>
+<RText|id=a3_rtext_4|x=15.0|y=231.0|outline=2|outlinecolor=0|size=14|text=<打怪增伤:+5%/FCOLOR=149>>
+<RText|id=a3_rtext_5|x=11.0|y=251.0|outline=2|outlinecolor=0|size=14|text=<人物爆率:+20%/FCOLOR=149>>
+<RText|id=a3_rtext_6|x=14.0|y=271.0|outline=2|outlinecolor=0|size=14|text=<攻击速度:+10%/FCOLOR=149>>
+<Img|id=a4|children={a4_rtext_2,a4_rtext_3,a4_rtext_4,a4_rtext_5,a4_rtext_6}|x=382|y=4|width=127|height=292|img=public\xiyou\zeji\六六大顺1.png|esc=0>
+<RText|id=a4_rtext_2|x=27.0|y=191|outline=2|outlinecolor=0|size=14|text=<攻魔道:+20/FCOLOR=180>>
+<RText|id=a4_rtext_3|x=18.0|y=211|outline=2|outlinecolor=0|size=14|text=<生命值:+888/FCOLOR=180>>
+<RText|id=a4_rtext_4|x=15.0|y=231|outline=2|outlinecolor=0|size=14|text=<打怪增伤:+8%/FCOLOR=180>>
+<RText|id=a4_rtext_5|x=11.0|y=251|outline=2|outlinecolor=0|size=14|text=<人物爆率:+30%/FCOLOR=180>>
+<RText|id=a4_rtext_6|x=14.0|y=271|outline=2|outlinecolor=0|size=14|text=<攻击速度:+10%/FCOLOR=180>>
+<Img|id=a5|children={a5_rtext_2,a5_rtext_3,a5_rtext_4,a5_rtext_5,a5_rtext_6}|x=509.0|y=4|width=127|height=292|img=public\xiyou\zeji\五福临门1.png|esc=0>
+<RText|id=a5_rtext_2|x=27.0|y=191|outline=2|outlinecolor=0|size=14|text=<攻魔道:+30/FCOLOR=241>>
+<RText|id=a5_rtext_3|x=18.0|y=211|outline=2|outlinecolor=0|size=14|text=<生命值:+1288/FCOLOR=241>>
+<RText|id=a5_rtext_4|x=15.0|y=231|outline=2|outlinecolor=0|size=14|text=<打怪增伤:+12%/FCOLOR=241>>
+<RText|id=a5_rtext_5|x=11.0|y=251|outline=2|outlinecolor=0|size=14|text=<人物爆率:+50%/FCOLOR=241>>
+<RText|id=a5_rtext_6|x=14.0|y=271|outline=2|outlinecolor=0|size=14|text=<攻击速度:+25%/FCOLOR=241>>
+<Img|id=a6|children={a6_rtext_2,a6_rtext_3,a6_rtext_4,a6_rtext_5,a6_rtext_6}|x=636.0|y=4|width=127|height=292|img=public\xiyou\zeji\天降鸿运1.png|esc=0>
+<RText|id=a6_rtext_2|x=27.0|y=191|outline=2|outlinecolor=0|size=14|text=<攻魔道:+60/FCOLOR=58>>
+<RText|id=a6_rtext_3|x=18.0|y=211|outline=2|outlinecolor=0|size=14|text=<生命值:+1888/FCOLOR=58>>
+<RText|id=a6_rtext_4|x=15.0|y=231|outline=2|outlinecolor=0|size=14|text=<打怪增伤:+18%/FCOLOR=58>>
+<RText|id=a6_rtext_5|x=11.0|y=251|outline=2|outlinecolor=0|size=14|text=<人物爆率:+100%/FCOLOR=58>>
+<RText|id=a6_rtext_6|x=14.0|y=271|outline=2|outlinecolor=0|size=14|text=<攻击速度:+50%/FCOLOR=58>>
+<RText|id=2|x=410|y=313|outline=2|outlinecolor=0|color=222|size=18|text=<第66次择吉必定天降鸿运:当前/FCOLOR=255><(222222次)/FCOLOR=250>>
+<Button|id=button|x=313|y=416|width=221|height=106|nimg=public\xiyou\zeji\开始择吉.png|size=18|link=@择吉检测>
+
+
+
+
+
 
 
 [@择吉检测]  
 #if  
 checktitle 天降鸿运  
 #act  
-sendmsg 9 你的赐福已经达到最高鸿运 
-close 
+sendmsg 9 你的赐福已经达到最高  
+close   
 break  
 
-
-#IF  
-CHECKMONEY 点卷 ? 1000  
-#act
-goto @开始择吉
+#if  
+checkmoney 点卷 ? 1000
+#act  
+goto @开始择吉  
 break  
-#ELSEACT  
+#elseact  
 sendmsg 9 你的点券不足1000  
 break  
 
+[@开始择吉]   
+; 第66次择吉必定天降鸿运  
+#if  
+equal <$str(U168)> 65  
 
-[@开始择吉] 
-;第66次择吉必定天降鸿运
-#if
-equal <$str(G69)>  66
-#act
-goto @天降鸿运
-break
-#elseact
+#act  
+goto @天降鸿运  
+
+break  
+#elseact  
 // 一帆风顺称号赐予  
 #if  
 not checktitle 一帆风顺  
@@ -52,9 +122,10 @@ not checktitle 五福临门
 not checktitle 天降鸿运  
 #act  
 money 点卷 - 1000  
-inc G69 1  
+inc U168 1  
+mov U166 -4
 confertitle 一帆风顺  
-sendmsg 6 一帆风顺 称号授予成功  
+sendmsg 9 激活一帆风顺
 goto @main  
 break  
 
@@ -63,12 +134,14 @@ break
 checktitle 一帆风顺  
 #act  
 money 点卷 - 1000  
-inc G69 1   
+inc U168 1    
+mov U166 113
+
 confertitle 好事成双  
 deprivetitle 一帆风顺  
-sendmsg 6 好事成双 称号授予成功  
+sendmsg 9 激活好事成双
 goto @main  
-break  
+break
 
 // 三生有幸称号赐予50%成功  
 #if  
@@ -76,10 +149,11 @@ RANDOMEX 50 100
 checktitle 好事成双  
 #act  
 money 点卷 - 1000  
-inc G69 1   
+inc U168 1   
+mov U166 229 
 confertitle 三生有幸  
 deprivetitle 好事成双  
-sendmsg 6 三生有幸 称号授予成功  
+sendmsg 9 激活三生有幸  
 goto @main  
 break  
 
@@ -89,23 +163,25 @@ not checktitle 三生有幸
 checktitle 好事成双  
 #act  
 money 点卷 - 1000  
-inc G69 1   
+inc U168 1   
+mov U166 -4  
 confertitle 一帆风顺  
-deprivetitle 好事成双  
-sendmsg 6 择吉失败，当前赐福《一帆风顺》  
+deprivetitle 好事成双
+sendmsg 9 激活一帆风顺  
 goto @main  
 break  
 
 // 六六大顺称号赐予40%成功  
 #if  
-randomex 40 60  
+RANDOMEX 40 100 
 checktitle 三生有幸  
 #act  
 money 点卷 - 1000  
-inc G69 1   
+inc U168 1  
+mov U166 347   
 confertitle 六六大顺  
 deprivetitle 三生有幸  
-sendmsg 6 六六大顺 称号授予成功  
+sendmsg 9 激活六六大顺  
 goto @main  
 break   
 
@@ -115,23 +191,25 @@ not checktitle 六六大顺
 checktitle 三生有幸  
 #act  
 money 点卷 - 1000  
-inc G69 1   
+inc U168 1  
+mov U166 113  
 confertitle 好事成双  
 deprivetitle 三生有幸  
-sendmsg 6 择吉失败，当前赐福《好事成双》  
+sendmsg 9 激活好事成双  
 goto @main  
 break   
 
 // 五福临门称号赐予30%成功  
 #if  
-randomex 30 70  
+RANDOMEX 30 100 
 checktitle 六六大顺  
 #act  
 money 点卷 - 1000  
-inc G69 1   
+inc U168 1   
+mov U166 463  
 confertitle 五福临门  
 deprivetitle 六六大顺  
-sendmsg 6 五福临门 称号授予成功   
+sendmsg 9 激活五福临门   
 goto @main  
 break  
 
@@ -141,23 +219,25 @@ not checktitle 五福临门
 checktitle 六六大顺  
 #act  
 money 点卷 - 1000  
-inc G69 1   
+inc U168 1  
+mov U166 229   
 confertitle 三生有幸  
 deprivetitle 六六大顺  
-sendmsg 6 《五福临门》择吉失败，回到赐福《三生有幸》  
+sendmsg 9 激活三生有幸  
 goto @main  
 break   
 
 // 天降鸿运称号赐予10%成功  
 #if  
-randomex 10 90  
+RANDOMEX 10 100 
 checktitle 五福临门  
 #act  
 money 点卷 - 1000  
-inc G69 1   
+inc U168 1   
+mov U166 580   
 confertitle 天降鸿运  
 deprivetitle 五福临门  
-sendmsg 6 天降鸿运 称号授予成功  
+sendmsg 9 激活天降鸿运   
 goto @main  
 break  
 
@@ -167,22 +247,29 @@ not checktitle 天降鸿运
 checktitle 五福临门  
 #act  
 money 点卷 - 1000  
-inc G69 1   
+inc U168 1   
+mov U166 347   
 confertitle 六六大顺  
 deprivetitle 五福临门  
-sendmsg 6 《天降鸿运》择吉失败，回到赐福《六六大顺》  
+sendmsg 9 激活六六大顺  
 goto @main  
-break
+break  
 
-[@天降鸿运]
-#if
-#act
-confertitle 天降鸿运
-deprivetitle 一帆风顺
-deprivetitle 好事成双
-deprivetitle 三生有幸
-deprivetitle 六六大顺
-deprivetitle 五福临门
-sendmsg 6 天降鸿运 称号授予成功
+[@天降鸿运]  
+#if  
+#act  
+money 点卷 - 1000
+confertitle 天降鸿运  
+deprivetitle 一帆风顺  
+deprivetitle 好事成双  
+deprivetitle 三生有幸  
+deprivetitle 六六大顺  
+deprivetitle 五福临门  
+mov U166 580  
+mov U168 66
+sendmsg 9 激活天降鸿运
+goto @main  
+break 
+
 
 

@@ -1,0 +1,6 @@
+[@main]
+#say
+<Img|x=0|y=0|width=3000|height=3000|img=public/1900000651_1.png|bg=1|move=0|reset=1|show=4|layerid=0|link=@exi>
+<Layout|id=ui_2|children={1,2}|a=4|percentx=50|percenty=50|width=876|height=482|color=x>
+<Frames|id=1|a=4|percentx=50|percenty=50|width=<$SCREENWIDTH>|height=<$SCREENHEIGHT>|speed=5|prefix=custom/xiyou_ui/´óÂ½´«ËÍ/sfx_|count=20|suffix=.png|loop=-1>
+<Button|id=2|a=4|percentx=101.7|percenty=-4.8|width=44|height=48|nimg=public/close-t.png|mimg=public/close-t.png|color=255|size=18|link=@exit>

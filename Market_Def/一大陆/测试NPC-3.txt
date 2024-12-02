@@ -1,0 +1,80 @@
+[@MAIN]
+#IF
+#ACT
+
+#IF
+<Img|id=ui_1|children={exit,content}|x=0|y=0|width=845|height=528|img=public/xiyou/内框.png|bg=1|move=1|reset=1|show=4|layerid=110>
+<Button|id=exit|x=814|y=63|width=26|height=42|nimg=public/1900000510.png|pimg=public/1900000511.png|color=255|size=18|link=@exit>
+<Layout|id=content|children={rtext_1,layout_1,layout_3,layout_4,layout_5,layout_2}|x=38|y=68|width=762|height=429>
+<RText|id=rtext_1|x=328|y=-26|color=128|size=18|text=<境界/FCOLOR=255>>
+<Layout|id=layout_1|children={a1,a2}|x=2|y=1|width=757|height=39>
+<RText|id=a1|a=4|x=164|y=21|color=255|size=18|text=<境界？/FCOLOR=254>>
+<RText|id=a2|a=4|x=550|y=21|color=255|size=18|text=<当前境界:？/FCOLOR=254>>
+<Layout|id=layout_3|x=4|y=42|width=404|height=389>
+<Layout|id=layout_4|children={c1,c2,c3,c4,c5}|x=413|y=44|width=348|height=298>
+<RText|id=c1|children={c1_1}|x=3|y=7|color=128|size=18|text=<攻魔道/FCOLOR=215>>
+<RText|id=c1_1|a=4|x=77|y=11|color=255|size=18|text=<10/FCOLOR=215>>
+<RText|id=c2|children={c2_2}|x=3|y=37|color=128|size=18|text=<生命值/FCOLOR=215>>
+<RText|id=c2_2|a=4|x=83|y=11|color=255|size=18|text=<1000/FCOLOR=215>>
+<RText|id=c3|children={c3_3}|x=2|y=67|color=128|size=18|text=<切割伤害/FCOLOR=215>>
+<RText|id=c3_3|a=4|x=104|y=11|color=255|size=18|text=<1000/FCOLOR=215>>
+<RText|id=c4|children={c4_4}|x=4|y=97|color=255|size=18|text=<对怪增伤/FCOLOR=215>>
+<RText|id=c4_4|a=4|x=104|y=10|color=255|size=18|text=<1000/FCOLOR=215>>
+<RText|id=c5|children={c5_5}|x=3|y=129|color=255|size=18|text=<攻击力百分比/FCOLOR=215>>
+<RText|id=c5_5|a=4|x=134|y=11|color=255|size=18|text=<100/FCOLOR=215>>
+<Layout|id=layout_5|x=413|y=346|width=351|height=85>
+<Layout|id=layout_2|children={b3,b1,b2}|x=8|y=385|width=400|height=30>
+<Img|id=b3|x=-4|y=-7|width=410|height=44|img=public\xiyou\jingdutiao_2.png|bg=1|reset=1|show=0|loadDelay=0>
+<PercentImg|id=b1|x=-3|y=8|width=400|height=20|direction=0|img=public\xiyou\jingdutiao_1.png|minValue=125|maxValue=250>
+<RText|id=b2|a=4|x=194|y=20|color=255|size=16|text=<10/FCOLOR=255><//FCOLOR=255><250/FCOLOR=255>>
+<RText|id=c6|children={c6_6}|x=615|y=119|color=255|size=18|text=<生命值百分比/FCOLOR=215>>
+<RText|id=c6_6|a=4|x=137|y=10|color=255|size=18|text=<100/FCOLOR=215>>
+<RText|id=c7|children={c7_7}|x=615|y=149|color=255|size=18|text=<人物爆率/FCOLOR=215>>
+<RText|id=c7_7|a=4|x=137|y=10|color=255|size=18|text=<100/FCOLOR=215>>
+<RText|id=c8|children={c8_8}|x=615|y=179|color=255|size=18|text=<攻击吸血/FCOLOR=215>>
+<RText|id=c8_8|a=4|x=137|y=10|color=255|size=18|text=<100/FCOLOR=215>>
+<RText|id=c9|children={c9_9}|x=615|y=209|color=255|size=18|text=<暴击率/FCOLOR=215>>
+<RText|id=c9_9|a=4|x=137|y=10|color=255|size=18|text=<100/FCOLOR=215>>
+<RText|id=c10|children={c10_10}|x=615|y=239|color=255|size=18|text=<暴击伤害/FCOLOR=215>>
+<RText|id=c10_10|a=4|x=137|y=10|color=255|size=18|text=<100/FCOLOR=215>>
+
+
+
+
+
+
+
+
+
+
+
+
+[@aaa]
+#IF
+CheckBindMoney 绑定点卷 < 10
+#ACT
+sendmsg 9 111
+#elseact
+confertitle 天道主宰
+SENDMSGNEW 254 0 {『境界提升』：/FCOLOR=249}恭喜【{<$USERNAME>/FCOLOR=224}】的境界已经达到【{天道主宰/FCOLOR=245}】境界！ 1 10
+
+
+
+[@脚本命令]
+#IF
+#ACT
+mov U234 100
+sendmsg 9 U234=<$str(U234)>
+
+[@脚本命令1]
+#if
+#act
+mov U234 300000000
+sendmsg 9 U234=<$str(U234)>
+
+
+[@脚本命令2]
+#if
+#act 
+mov T215 
+sendmsg 9 T215=<$str(T215)>

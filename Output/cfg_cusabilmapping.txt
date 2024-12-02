@@ -1,0 +1,1 @@
+{"LableName":"cfg_cusabilmapping","Ver":"8330426f8da46f96e5c5284ec5e6b99c","Value":[{"cusid":205,"mappingid":20,"type":1,"showcustname":0}]}

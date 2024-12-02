@@ -1,17 +1,99 @@
+
+
+;==========================天泉西游==============================
+[3 东胜神洲] onkillmon  allowusemyshop saylevel(42) RUNMON(1)　NORECONNECT(3:333:333) NORUNMON
+;-------------------------------高老庄野外-------------------------------
+
+;-------------------------------龙宫外野-------------------------------
+[newss  龙宫外野] ONKILLMON NORECONNECT(3:333:333) NORUNMON
+[lghdsl 龙宫水牢] ONKILLMON NORECONNECT(3:333:333) NORUNMON
+[lghd1  龙宫大殿] ONKILLMON NORECONNECT(3:333:333) NORUNMON
+[lgbk  龙宫宝库]  ONKILLMON NORECONNECT(3:333:333) NORUNMON
+newss  137 156 -> lghdsl 52 74
+lghdsl 52 74   -> newss  138 155
+lghd1 92 24   -> lgbk  36 39
+lgbk  38 50   -> lghd1 92 24
+lghdsl 50 45 -> lghd1  86 95
+lghd1  86 95 -> lghdsl 50 45
+
+
+;-------------------------------太和茶庄-------------------------------
+[yzsl  太和茶庄] ONKILLMON NORECONNECT(3:333:333) NORUNMON
+yzsl 215 126 -> xsts 90 176
+[xsts  茶庄小径] ONKILLMON NORECONNECT(3:333:333) NORUNMON
+xsts 90 176 -> yzsl 215 126 
+xsts 123 18 -> d613 89 76  
+[d613  茶庄山洞]  ONKILLMON NORECONNECT(3:333:333) NORUNMON
+d613 89 76 -> xsts 123 18  
+d613 17 16 -> sglm 100 122
+[sglm  上古灵脉] onkillmon  saylevel(42) RUNMON(1) NORUNMON
+sglm 175 233 -> d613 17 16
+
+
+
+;------------------------------花果山-------------------------------=
+[wxly  花果山] ONKILLMON NORECONNECT(3:333:333) NORUNM
+wxly 142 41 -> wysg 38 85
+[wysg  水帘洞] ONKILLMON NORECONNECT(3:333:333) NORUNMON
+wysg 38 85 -> wxly 142 41
+
+;-------------------------------黑风山-------------------------------
+[cjzd 黑风山] ONKILLMON NORECONNECT(3:333:333) NORUNMON
+
+;-------------------------------高老庄-------------------------------
+[glzwy 高老庄外野] ONKILLMON NORECONNECT(3:333:333) NORUNMON
+[khpy  高老庄] ONKILLMON NORECONNECT(3:333:333) NORUNMON
+glzwy 57 84  -> khpy 156 112
+khpy 156 112 -> glzwy 57 84
+
+[zzf 庄主府] ONKILLMON NORECONNECT(3:333:333) NORUNMON
+khpy 94 94 -> zzf 197 196
+zzf 57 84 -> khpy 94 94
+
+[lyzd 归域之地] ONKILLMON NORECONNECT(3:333:333) NORUNMON
+zzf 109 105 -> lyzd 50 43
+lyzd 26 24  -> zzf 109 105
+
+
+
+
+;------南瞻部洲------
+[caxs1 长安西市] ONKILLMON NORECONNECT(3:333:333) NORUNMON--
+[xlneg 西凉女儿国] ONKILLMON NORECONNECT(3:333:333) NORUNMON
+[ltq 落胎泉] ONKILLMON NORECONNECT(3:333:333) NORUNMON
+[jtt 祭天台] ONKILLMON NORECONNECT(3:333:333) NORUNMON
+[zmhp 子母河畔] ONKILLMON NORECONNECT(3:333:333) NORUNMON
+[zmhp2 子母河畔] ONKILLMON NORECONNECT(3:333:333) NORUNMON
+[gyzd 灵韵] ONKILLMON NORECONNECT(3:333:333) NORUNMON
+;gyzd替换到二大陆 zzf 109 105 -> gyzd 75 81
+
+;----------------------------------大慈恩寺------------------------------------
+[dces 大慈恩寺] ONKILLMON NORECONNECT(3:333:333) NORUNMON
+[dyt 大雁塔] ONKILLMON NORECONNECT(3:333:333) NORUNMON
+[xhnt 虚幻逆塔] ONKILLMON NORECONNECT(3:333:333) NORUNMON
+
+[nttd1 逆塔一层] ONKILLMON NORECONNECT(3:333:333) NORUNMON
+[nttd9 逆塔中层] ONKILLMON NORECONNECT(3:333:333) NORUNMON
+[nttd10 逆塔塔顶] ONKILLMON NORECONNECT(3:333:333) NORUNMON
+
+
+;1 9 10
+;===========================天泉西游===============================================
+
 ;======================一大陆======================
 [xbqc1 比奇省] onkillmon  allowusemyshop saylevel(42) RUNMON(1)　NORECONNECT(3:333:333)
-[3  盟重城] onkillmon  allowusemyshop saylevel(42) RUNMON(1)　NORECONNECT(3:333:333) NORUNMON
-[khpy|khpy  开荒平原] ONKILLMON NORECONNECT(3:333:333) NORUNMON
-[yzsl  勇者试炼] ONKILLMON NORECONNECT(3:333:333) NORUNMON
+;[3  盟重城] onkillmon  allowusemyshop saylevel(42) RUNMON(1)　NORECONNECT(3:333:333) NORUNMON
+;[khpy|khpy  开荒平原] ONKILLMON NORECONNECT(3:333:333) NORUNMON
+;[yzsl  勇者试炼] ONKILLMON NORECONNECT(3:333:333) NORUNMON
 [jqzd  崛起之地] ONKILLMON NORECONNECT(3:333:333) NORUNMON
-[xsts  新手探索] ONKILLMON NORECONNECT(3:333:333) NORUNMON
+;[xsts  新手探索] ONKILLMON NORECONNECT(3:333:333) NORUNMON
 [dbzl  打宝之路] ONKILLMON NORECONNECT(3:333:333) NORUNMON
-[wxly  危险领域] ONKILLMON NORECONNECT(3:333:333) NORUNMON
+;[wxly  危险领域] ONKILLMON NORECONNECT(3:333:333) NORUNMON
 
 [D5071 怪物送财] ONKILLMON NORECONNECT(3:333:333) NORUNMON
 ;======================二大陆======================
 ;[11  二大陆] onkillmon  allowusemyshop saylevel(42) RUNMON(1)　NORECONNECT(3:333:333)
-[wysg  仙境桃花岛] NORUNMON
+;[wysg  仙境桃花岛] NORUNMON
 [3213  白日门] onkillmon  allowusemyshop saylevel(42) RUNMON(1)　NORECONNECT(3:333:333)
 ;======================蚂蚁洞======================
 [162  万坑蚂蚁洞一层] onkillmon  saylevel(42) RUNMON(1) NORUNMON
@@ -19,7 +101,7 @@
 [164  万坑蚂蚁洞三层] onkillmon  saylevel(42) RUNMON(1) NORUNMON
 
 162  46 100 -> 163  78 72
-163  80 165 -> 164  25 80
+163  80 165 -> 164  25 83 
 
 163  78 72 -> 162  46 100
 164  25 80 -> 163  80 165
@@ -36,7 +118,7 @@ ylc3 52 37  ->  ylc2 95 69
 
 
 ;======================水上世界======================
-[newss|newss  水上世界] onkillmon  saylevel(42) RUNMON(1) NORUNMON
+;[newss|newss  水上世界] onkillmon  saylevel(42) RUNMON(1) NORUNMON
 
 ;======================血色骷髅谷======================
 [tlxy01  血色骷髅谷一层] onkillmon  saylevel(42) RUNMON(1) NORUNMON
@@ -623,7 +705,7 @@ new0150 17 21 -> 3 618 271
 
 
 ===============蜈蚣祭坛==============
-[d613  蜈蚣洞一层]
+;[d613  蜈蚣洞一层]
 [d616 蜈蚣洞二层]
 [wgjt  蜈蚣祭坛]
 
@@ -670,7 +752,7 @@ bfwz 18 62 -> bfgdec  152 26
 
 
 ===============沉寂之地=============
-[cjzd 沉寂之地] 
+;[cjzd 沉寂之地] 
 
 
 ===============熔岩洞穴=============

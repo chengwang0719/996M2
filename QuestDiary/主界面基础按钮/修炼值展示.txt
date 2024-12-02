@@ -1,0 +1,34 @@
+[@修炼值怪物配置]
+{
+  #if
+  #act 
+  ;QM登录脚本触发初始化修炼值图标 
+  goto @修炼值展示
+
+
+  [@指定怪物]
+  #IF
+  ;检测怪物名称才能爆出修炼值
+  checkcontainstextlistex ..\QuestDiary\修炼值\指定怪物.txt <$CURRRTARGETNAME>
+  #act
+  goto @修炼值计算
+  break
+
+  [@修炼值计算]
+  #act
+  ;cfg_monster 自定义字符串对应常量
+  mov N$指定怪物修炼值 <$CURRMONPARAM(<$CURRRTARGETNAME>)>
+
+  formulation <$str(U234)>+<$str(N$指定怪物修炼值)> U234
+
+  goto @修炼值展示
+  break  
+
+  [@修炼值展示]
+    #IF
+    #ACT
+    MOV S$修炼值图标 <RText|x=20|y=265|outline=2|size=18|outlinecolor=0|text=<修炼值:/FCOLOR=125><[<$str(U234)>]/FCOLOR=215>>
+    ADDBUTTON 101 100000 <$STR(S$修炼值图标)>
+  }
+
+

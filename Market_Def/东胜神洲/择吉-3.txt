@@ -1,0 +1,567 @@
+[@main]  
+#act
+
+mov S$一帆风顺_属性展示 
+mov S$好事成双_属性展示 
+mov S$三生有幸_属性展示 
+mov S$六六大顺_属性展示 
+mov S$五福临门_属性展示 
+mov S$天降鸿运_属性展示
+
+mov S$一帆风顺_图片展示
+mov S$好事成双_图片展示
+mov S$三生有幸_图片展示
+mov S$六六大顺_图片展示
+mov S$五福临门_图片展示
+mov S$天降鸿运_图片展示
+goto @根据已穿戴称号激活特效  
+;mov U168 0
+
+
+[@根据已穿戴称号激活特效]  
+#if  
+; 如果没有任何称号，不展示特效  
+not checktitle 一帆风顺  
+not checktitle 好事成双  
+not checktitle 三生有幸  
+not checktitle 六六大顺  
+not checktitle 五福临门  
+not checktitle 天降鸿运   
+#act
+inc S$一帆风顺_图片展示 一帆风顺1
+inc S$好事成双_图片展示 好事成双1
+inc S$三生有幸_图片展示 三生有幸1
+inc S$六六大顺_图片展示 六六大顺1
+inc S$五福临门_图片展示 五福临门1
+inc S$天降鸿运_图片展示 天降鸿运1
+
+inc S$一帆风顺_属性展示 <RText|id=a1_rtext_2|x=31|y=191|outline=2|outlinecolor=0|size=14|text=<攻魔道:+5/FCOLOR=255>>
+inc S$一帆风顺_属性展示 <RText|id=a1_rtext_3|x=22|y=211|outline=2|outlinecolor=0|size=14|text=<生命值:+188/FCOLOR=255>>
+inc S$一帆风顺_属性展示 <RText|id=a1_rtext_4|x=23|y=231|outline=2|outlinecolor=0|size=14|text=<打怪增伤:+1%/FCOLOR=255>>
+inc S$一帆风顺_属性展示 <RText|id=a1_rtext_5|x=15|y=251|outline=2|outlinecolor=0|size=14|text=<人物爆率:+10%/FCOLOR=255>>
+inc S$一帆风顺_属性展示 <RText|id=a1_rtext_6|x=18|y=271|outline=2|outlinecolor=0|size=14|text=<攻击速度:+3%/FCOLOR=255>>
+
+inc S$好事成双_属性展示 <RText|id=a2_rtext_2|x=24|y=191|outline=2|outlinecolor=0|size=14|text=<攻魔道:+10/FCOLOR=255>>
+inc S$好事成双_属性展示 <RText|id=a2_rtext_3|x=18.0|y=211|outline=2|outlinecolor=0|size=14|text=<生命值:+388/FCOLOR=255>>
+inc S$好事成双_属性展示 <RText|id=a2_rtext_4|x=15.0|y=231|outline=2|outlinecolor=0|size=14|text=<打怪增伤:+3%/FCOLOR=255>>
+inc S$好事成双_属性展示 <RText|id=a2_rtext_5|x=11.0|y=251|outline=2|outlinecolor=0|size=14|text=<人物爆率:+15%/FCOLOR=255>>
+inc S$好事成双_属性展示 <RText|id=a2_rtext_6|x=14.0|y=271|outline=2|outlinecolor=0|size=14|text=<攻击速度:+5%/FCOLOR=255>>
+
+inc S$三生有幸_属性展示 <RText|id=a3_rtext_2|x=27.0|y=191.0|outline=2|outlinecolor=0|size=14|text=<攻魔道:+15/FCOLOR=255>>
+inc S$三生有幸_属性展示 <RText|id=a3_rtext_3|x=18.0|y=211.0|outline=2|outlinecolor=0|size=14|text=<生命值:+588/FCOLOR=255>>
+inc S$三生有幸_属性展示 <RText|id=a3_rtext_4|x=15.0|y=231.0|outline=2|outlinecolor=0|size=14|text=<打怪增伤:+5%/FCOLOR=255>>
+inc S$三生有幸_属性展示 <RText|id=a3_rtext_5|x=11.0|y=251.0|outline=2|outlinecolor=0|size=14|text=<人物爆率:+20%/FCOLOR=255>>
+inc S$三生有幸_属性展示 <RText|id=a3_rtext_6|x=14.0|y=271.0|outline=2|outlinecolor=0|size=14|text=<攻击速度:+10%/FCOLOR=255>>
+
+inc S$六六大顺_属性展示 <RText|id=a4_rtext_2|x=27.0|y=191|outline=2|outlinecolor=0|size=14|text=<攻魔道:+20/FCOLOR=255>>
+inc S$六六大顺_属性展示 <RText|id=a4_rtext_3|x=18.0|y=211|outline=2|outlinecolor=0|size=14|text=<生命值:+888/FCOLOR=255>>
+inc S$六六大顺_属性展示 <RText|id=a4_rtext_4|x=15.0|y=231|outline=2|outlinecolor=0|size=14|text=<打怪增伤:+8%/FCOLOR=255>>
+inc S$六六大顺_属性展示 <RText|id=a4_rtext_5|x=11.0|y=251|outline=2|outlinecolor=0|size=14|text=<人物爆率:+30%/FCOLOR=255>>
+inc S$六六大顺_属性展示 <RText|id=a4_rtext_6|x=14.0|y=271|outline=2|outlinecolor=0|size=14|text=<攻击速度:+15%/FCOLOR=255>>
+
+inc S$五福临门_属性展示 <RText|id=a5_rtext_2|x=27.0|y=191|outline=2|outlinecolor=0|size=14|text=<攻魔道:+30/FCOLOR=255>>
+inc S$五福临门_属性展示 <RText|id=a5_rtext_3|x=18.0|y=211|outline=2|outlinecolor=0|size=14|text=<生命值:+1288/FCOLOR=255>>
+inc S$五福临门_属性展示 <RText|id=a5_rtext_4|x=15.0|y=231|outline=2|outlinecolor=0|size=14|text=<打怪增伤:+12%/FCOLOR=255>>
+inc S$五福临门_属性展示 <RText|id=a5_rtext_5|x=11.0|y=251|outline=2|outlinecolor=0|size=14|text=<人物爆率:+50%/FCOLOR=255>>
+inc S$五福临门_属性展示 <RText|id=a5_rtext_6|x=14.0|y=271|outline=2|outlinecolor=0|size=14|text=<攻击速度:+25%/FCOLOR=255>>
+
+inc S$天降鸿运_属性展示 <RText|id=a6_rtext_2|x=27.0|y=191|outline=2|outlinecolor=0|size=14|text=<攻魔道:+60/FCOLOR=255>>
+inc S$天降鸿运_属性展示 <RText|id=a6_rtext_3|x=18.0|y=211|outline=2|outlinecolor=0|size=14|text=<生命值:+1888/FCOLOR=255>>
+inc S$天降鸿运_属性展示 <RText|id=a6_rtext_4|x=15.0|y=231|outline=2|outlinecolor=0|size=14|text=<打怪增伤:+18%/FCOLOR=255>>
+inc S$天降鸿运_属性展示 <RText|id=a6_rtext_5|x=11.0|y=251|outline=2|outlinecolor=0|size=14|text=<人物爆率:+100%/FCOLOR=255>>
+inc S$天降鸿运_属性展示 <RText|id=a6_rtext_6|x=14.0|y=271|outline=2|outlinecolor=0|size=14|text=<攻击速度:+50%/FCOLOR=255>>
+goto @择吉主界面  
+break  
+
+#if
+checktitle 一帆风顺
+#act
+inc S$一帆风顺_图片展示 一帆风顺2
+inc S$好事成双_图片展示 好事成双1
+inc S$三生有幸_图片展示 三生有幸1
+inc S$六六大顺_图片展示 六六大顺1
+inc S$五福临门_图片展示 五福临门1
+inc S$天降鸿运_图片展示 天降鸿运1
+
+
+
+inc S$一帆风顺_属性展示 <RText|id=a1_rtext_2|x=31|y=191|outline=2|outlinecolor=0|size=14|text=<攻魔道:/FCOLOR=255><+5/FCOLOR=215>>
+inc S$一帆风顺_属性展示 <RText|id=a1_rtext_3|x=22|y=211|outline=2|outlinecolor=0|size=14|text=<生命值:/FCOLOR=255><+188/FCOLOR=215>>
+inc S$一帆风顺_属性展示 <RText|id=a1_rtext_4|x=23|y=231|outline=2|outlinecolor=0|size=14|text=<打怪增伤:/FCOLOR=255><+1%/FCOLOR=215>>
+inc S$一帆风顺_属性展示 <RText|id=a1_rtext_5|x=15|y=251|outline=2|outlinecolor=0|size=14|text=<人物爆率:/FCOLOR=2255><+10%/FCOLOR=215>>
+inc S$一帆风顺_属性展示 <RText|id=a1_rtext_6|x=18|y=271|outline=2|outlinecolor=0|size=14|text=<攻击速度:/FCOLOR=255><+3%/FCOLOR=215>>
+
+inc S$好事成双_属性展示 <RText|id=a2_rtext_2|x=24|y=191|outline=2|outlinecolor=0|size=14|text=<攻魔道:+10/FCOLOR=255>>
+inc S$好事成双_属性展示 <RText|id=a2_rtext_3|x=18.0|y=211|outline=2|outlinecolor=0|size=14|text=<生命值:+388/FCOLOR=255>>
+inc S$好事成双_属性展示 <RText|id=a2_rtext_4|x=15.0|y=231|outline=2|outlinecolor=0|size=14|text=<打怪增伤:+3%/FCOLOR=255>>
+inc S$好事成双_属性展示 <RText|id=a2_rtext_5|x=11.0|y=251|outline=2|outlinecolor=0|size=14|text=<人物爆率:+15%/FCOLOR=255>>
+inc S$好事成双_属性展示 <RText|id=a2_rtext_6|x=14.0|y=271|outline=2|outlinecolor=0|size=14|text=<攻击速度:+5%/FCOLOR=255>>
+
+inc S$三生有幸_属性展示 <RText|id=a3_rtext_2|x=27.0|y=191.0|outline=2|outlinecolor=0|size=14|text=<攻魔道:+15/FCOLOR=255>>
+inc S$三生有幸_属性展示 <RText|id=a3_rtext_3|x=18.0|y=211.0|outline=2|outlinecolor=0|size=14|text=<生命值:+588/FCOLOR=255>>
+inc S$三生有幸_属性展示 <RText|id=a3_rtext_4|x=15.0|y=231.0|outline=2|outlinecolor=0|size=14|text=<打怪增伤:+5%/FCOLOR=255>>
+inc S$三生有幸_属性展示 <RText|id=a3_rtext_5|x=11.0|y=251.0|outline=2|outlinecolor=0|size=14|text=<人物爆率:+20%/FCOLOR=255>>
+inc S$三生有幸_属性展示 <RText|id=a3_rtext_6|x=14.0|y=271.0|outline=2|outlinecolor=0|size=14|text=<攻击速度:+10%/FCOLOR=255>>
+
+inc S$六六大顺_属性展示 <RText|id=a4_rtext_2|x=27.0|y=191|outline=2|outlinecolor=0|size=14|text=<攻魔道:+20/FCOLOR=255>>
+inc S$六六大顺_属性展示 <RText|id=a4_rtext_3|x=18.0|y=211|outline=2|outlinecolor=0|size=14|text=<生命值:+888/FCOLOR=255>>
+inc S$六六大顺_属性展示 <RText|id=a4_rtext_4|x=15.0|y=231|outline=2|outlinecolor=0|size=14|text=<打怪增伤:+8%/FCOLOR=255>>
+inc S$六六大顺_属性展示 <RText|id=a4_rtext_5|x=11.0|y=251|outline=2|outlinecolor=0|size=14|text=<人物爆率:+30%/FCOLOR=255>>
+inc S$六六大顺_属性展示 <RText|id=a4_rtext_6|x=14.0|y=271|outline=2|outlinecolor=0|size=14|text=<攻击速度:+15%/FCOLOR=255>>
+
+inc S$五福临门_属性展示 <RText|id=a5_rtext_2|x=27.0|y=191|outline=2|outlinecolor=0|size=14|text=<攻魔道:+30/FCOLOR=255>>
+inc S$五福临门_属性展示 <RText|id=a5_rtext_3|x=18.0|y=211|outline=2|outlinecolor=0|size=14|text=<生命值:+1288/FCOLOR=255>>
+inc S$五福临门_属性展示 <RText|id=a5_rtext_4|x=15.0|y=231|outline=2|outlinecolor=0|size=14|text=<打怪增伤:+12%/FCOLOR=255>>
+inc S$五福临门_属性展示 <RText|id=a5_rtext_5|x=11.0|y=251|outline=2|outlinecolor=0|size=14|text=<人物爆率:+50%/FCOLOR=255>>
+inc S$五福临门_属性展示 <RText|id=a5_rtext_6|x=14.0|y=271|outline=2|outlinecolor=0|size=14|text=<攻击速度:+25%/FCOLOR=255>>
+
+inc S$天降鸿运_属性展示 <RText|id=a6_rtext_2|x=27.0|y=191|outline=2|outlinecolor=0|size=14|text=<攻魔道:+60/FCOLOR=255>>
+inc S$天降鸿运_属性展示 <RText|id=a6_rtext_3|x=18.0|y=211|outline=2|outlinecolor=0|size=14|text=<生命值:+1888/FCOLOR=255>>
+inc S$天降鸿运_属性展示 <RText|id=a6_rtext_4|x=15.0|y=231|outline=2|outlinecolor=0|size=14|text=<打怪增伤:+18%/FCOLOR=255>>
+inc S$天降鸿运_属性展示 <RText|id=a6_rtext_5|x=11.0|y=251|outline=2|outlinecolor=0|size=14|text=<人物爆率:+100%/FCOLOR=255>>
+inc S$天降鸿运_属性展示 <RText|id=a6_rtext_6|x=14.0|y=271|outline=2|outlinecolor=0|size=14|text=<攻击速度:+50%/FCOLOR=255>>
+
+goto @择吉主界面
+break
+#if
+checktitle 好事成双
+#act
+inc S$一帆风顺_图片展示 一帆风顺1
+inc S$好事成双_图片展示 好事成双2
+inc S$三生有幸_图片展示 三生有幸1
+inc S$六六大顺_图片展示 六六大顺1
+inc S$五福临门_图片展示 五福临门1
+inc S$天降鸿运_图片展示 天降鸿运1
+
+inc S$一帆风顺_属性展示 <RText|id=a1_rtext_2|x=31|y=191|outline=2|outlinecolor=0|size=14|text=<攻魔道:+5/FCOLOR=255>>
+inc S$一帆风顺_属性展示 <RText|id=a1_rtext_3|x=22|y=211|outline=2|outlinecolor=0|size=14|text=<生命值:+188/FCOLOR=255>>
+inc S$一帆风顺_属性展示 <RText|id=a1_rtext_4|x=23|y=231|outline=2|outlinecolor=0|size=14|text=<打怪增伤:+1%/FCOLOR=255>>
+inc S$一帆风顺_属性展示 <RText|id=a1_rtext_5|x=15|y=251|outline=2|outlinecolor=0|size=14|text=<人物爆率:+10%/FCOLOR=255>>
+inc S$一帆风顺_属性展示 <RText|id=a1_rtext_6|x=18|y=271|outline=2|outlinecolor=0|size=14|text=<攻击速度:+3%/FCOLOR=255>>
+
+inc S$好事成双_属性展示 <RText|id=a2_rtext_2|x=24|y=191|outline=2|outlinecolor=0|size=14|text=<攻魔道:/FCOLOR=255><+10/FCOLOR=215>>
+inc S$好事成双_属性展示 <RText|id=a2_rtext_3|x=18.0|y=211|outline=2|outlinecolor=0|size=14|text=<生命值:/FCOLOR=255><+388/FCOLOR=215>>
+inc S$好事成双_属性展示 <RText|id=a2_rtext_4|x=15.0|y=231|outline=2|outlinecolor=0|size=14|text=<打怪增伤:/FCOLOR=255><+3%/FCOLOR=215>>
+inc S$好事成双_属性展示 <RText|id=a2_rtext_5|x=11.0|y=251|outline=2|outlinecolor=0|size=14|text=<人物爆率:/FCOLOR=2255><+15%/FCOLOR=215>>
+inc S$好事成双_属性展示 <RText|id=a2_rtext_6|x=14.0|y=271|outline=2|outlinecolor=0|size=14|text=<攻击速度:/FCOLOR=255><+5%/FCOLOR=215>>
+
+inc S$三生有幸_属性展示 <RText|id=a3_rtext_2|x=27.0|y=191.0|outline=2|outlinecolor=0|size=14|text=<攻魔道:+15/FCOLOR=255>>
+inc S$三生有幸_属性展示 <RText|id=a3_rtext_3|x=18.0|y=211.0|outline=2|outlinecolor=0|size=14|text=<生命值:+588/FCOLOR=255>>
+inc S$三生有幸_属性展示 <RText|id=a3_rtext_4|x=15.0|y=231.0|outline=2|outlinecolor=0|size=14|text=<打怪增伤:+5%/FCOLOR=255>>
+inc S$三生有幸_属性展示 <RText|id=a3_rtext_5|x=11.0|y=251.0|outline=2|outlinecolor=0|size=14|text=<人物爆率:+20%/FCOLOR=255>>
+inc S$三生有幸_属性展示 <RText|id=a3_rtext_6|x=14.0|y=271.0|outline=2|outlinecolor=0|size=14|text=<攻击速度:+10%/FCOLOR=255>>
+
+inc S$六六大顺_属性展示 <RText|id=a4_rtext_2|x=27.0|y=191|outline=2|outlinecolor=0|size=14|text=<攻魔道:+20/FCOLOR=255>>
+inc S$六六大顺_属性展示 <RText|id=a4_rtext_3|x=18.0|y=211|outline=2|outlinecolor=0|size=14|text=<生命值:+888/FCOLOR=255>>
+inc S$六六大顺_属性展示 <RText|id=a4_rtext_4|x=15.0|y=231|outline=2|outlinecolor=0|size=14|text=<打怪增伤:+8%/FCOLOR=255>>
+inc S$六六大顺_属性展示 <RText|id=a4_rtext_5|x=11.0|y=251|outline=2|outlinecolor=0|size=14|text=<人物爆率:+30%/FCOLOR=255>>
+inc S$六六大顺_属性展示 <RText|id=a4_rtext_6|x=14.0|y=271|outline=2|outlinecolor=0|size=14|text=<攻击速度:+15%/FCOLOR=255>>
+
+inc S$五福临门_属性展示 <RText|id=a5_rtext_2|x=27.0|y=191|outline=2|outlinecolor=0|size=14|text=<攻魔道:+30/FCOLOR=255>>
+inc S$五福临门_属性展示 <RText|id=a5_rtext_3|x=18.0|y=211|outline=2|outlinecolor=0|size=14|text=<生命值:+1288/FCOLOR=255>>
+inc S$五福临门_属性展示 <RText|id=a5_rtext_4|x=15.0|y=231|outline=2|outlinecolor=0|size=14|text=<打怪增伤:+12%/FCOLOR=255>>
+inc S$五福临门_属性展示 <RText|id=a5_rtext_5|x=11.0|y=251|outline=2|outlinecolor=0|size=14|text=<人物爆率:+50%/FCOLOR=255>>
+inc S$五福临门_属性展示 <RText|id=a5_rtext_6|x=14.0|y=271|outline=2|outlinecolor=0|size=14|text=<攻击速度:+25%/FCOLOR=255>>
+
+inc S$天降鸿运_属性展示 <RText|id=a6_rtext_2|x=27.0|y=191|outline=2|outlinecolor=0|size=14|text=<攻魔道:+60/FCOLOR=255>>
+inc S$天降鸿运_属性展示 <RText|id=a6_rtext_3|x=18.0|y=211|outline=2|outlinecolor=0|size=14|text=<生命值:+1888/FCOLOR=255>>
+inc S$天降鸿运_属性展示 <RText|id=a6_rtext_4|x=15.0|y=231|outline=2|outlinecolor=0|size=14|text=<打怪增伤:+18%/FCOLOR=255>>
+inc S$天降鸿运_属性展示 <RText|id=a6_rtext_5|x=11.0|y=251|outline=2|outlinecolor=0|size=14|text=<人物爆率:+100%/FCOLOR=255>>
+inc S$天降鸿运_属性展示 <RText|id=a6_rtext_6|x=14.0|y=271|outline=2|outlinecolor=0|size=14|text=<攻击速度:+50%/FCOLOR=255>>
+goto @择吉主界面
+break
+#if
+checktitle 三生有幸
+#act
+inc S$一帆风顺_图片展示 一帆风顺1
+inc S$好事成双_图片展示 好事成双1
+inc S$三生有幸_图片展示 三生有幸2
+inc S$六六大顺_图片展示 六六大顺1
+inc S$五福临门_图片展示 五福临门1
+inc S$天降鸿运_图片展示 天降鸿运1
+
+inc S$一帆风顺_属性展示 <RText|id=a1_rtext_2|x=31|y=191|outline=2|outlinecolor=0|size=14|text=<攻魔道:+5/FCOLOR=255>>
+inc S$一帆风顺_属性展示 <RText|id=a1_rtext_3|x=22|y=211|outline=2|outlinecolor=0|size=14|text=<生命值:+188/FCOLOR=255>>
+inc S$一帆风顺_属性展示 <RText|id=a1_rtext_4|x=23|y=231|outline=2|outlinecolor=0|size=14|text=<打怪增伤:+1%/FCOLOR=255>>
+inc S$一帆风顺_属性展示 <RText|id=a1_rtext_5|x=15|y=251|outline=2|outlinecolor=0|size=14|text=<人物爆率:+10%/FCOLOR=255>>
+inc S$一帆风顺_属性展示 <RText|id=a1_rtext_6|x=18|y=271|outline=2|outlinecolor=0|size=14|text=<攻击速度:+3%/FCOLOR=255>>
+
+inc S$好事成双_属性展示 <RText|id=a2_rtext_2|x=24|y=191|outline=2|outlinecolor=0|size=14|text=<攻魔道:+10/FCOLOR=255>>
+inc S$好事成双_属性展示 <RText|id=a2_rtext_3|x=18.0|y=211|outline=2|outlinecolor=0|size=14|text=<生命值:+388/FCOLOR=255>>
+inc S$好事成双_属性展示 <RText|id=a2_rtext_4|x=15.0|y=231|outline=2|outlinecolor=0|size=14|text=<打怪增伤:+3%/FCOLOR=255>>
+inc S$好事成双_属性展示 <RText|id=a2_rtext_5|x=11.0|y=251|outline=2|outlinecolor=0|size=14|text=<人物爆率:+15%/FCOLOR=255>>
+inc S$好事成双_属性展示 <RText|id=a2_rtext_6|x=14.0|y=271|outline=2|outlinecolor=0|size=14|text=<攻击速度:+5%/FCOLOR=255>>
+
+inc S$三生有幸_属性展示 <RText|id=a3_rtext_2|x=27.0|y=191.0|outline=2|outlinecolor=0|size=14|text=<攻魔道:/FCOLOR=255><+15/FCOLOR=215>>
+inc S$三生有幸_属性展示 <RText|id=a3_rtext_3|x=18.0|y=211.0|outline=2|outlinecolor=0|size=14|text=<生命值:/FCOLOR=255><+588/FCOLOR=215>>
+inc S$三生有幸_属性展示 <RText|id=a3_rtext_4|x=15.0|y=231.0|outline=2|outlinecolor=0|size=14|text=<打怪增伤:/FCOLOR=255><+5%/FCOLOR=215>>
+inc S$三生有幸_属性展示 <RText|id=a3_rtext_5|x=11.0|y=251.0|outline=2|outlinecolor=0|size=14|text=<人物爆率:/FCOLOR=2255><+20%/FCOLOR=215>>
+inc S$三生有幸_属性展示 <RText|id=a3_rtext_6|x=14.0|y=271.0|outline=2|outlinecolor=0|size=14|text=<攻击速度:/FCOLOR=255><+10%/FCOLOR=215>>
+
+inc S$六六大顺_属性展示 <RText|id=a4_rtext_2|x=27.0|y=191|outline=2|outlinecolor=0|size=14|text=<攻魔道:+20/FCOLOR=255>>
+inc S$六六大顺_属性展示 <RText|id=a4_rtext_3|x=18.0|y=211|outline=2|outlinecolor=0|size=14|text=<生命值:+888/FCOLOR=255>>
+inc S$六六大顺_属性展示 <RText|id=a4_rtext_4|x=15.0|y=231|outline=2|outlinecolor=0|size=14|text=<打怪增伤:+8%/FCOLOR=255>>
+inc S$六六大顺_属性展示 <RText|id=a4_rtext_5|x=11.0|y=251|outline=2|outlinecolor=0|size=14|text=<人物爆率:+30%/FCOLOR=255>>
+inc S$六六大顺_属性展示 <RText|id=a4_rtext_6|x=14.0|y=271|outline=2|outlinecolor=0|size=14|text=<攻击速度:+15%/FCOLOR=255>>
+
+inc S$五福临门_属性展示 <RText|id=a5_rtext_2|x=27.0|y=191|outline=2|outlinecolor=0|size=14|text=<攻魔道:+30/FCOLOR=255>>
+inc S$五福临门_属性展示 <RText|id=a5_rtext_3|x=18.0|y=211|outline=2|outlinecolor=0|size=14|text=<生命值:+1288/FCOLOR=255>>
+inc S$五福临门_属性展示 <RText|id=a5_rtext_4|x=15.0|y=231|outline=2|outlinecolor=0|size=14|text=<打怪增伤:+12%/FCOLOR=255>>
+inc S$五福临门_属性展示 <RText|id=a5_rtext_5|x=11.0|y=251|outline=2|outlinecolor=0|size=14|text=<人物爆率:+50%/FCOLOR=255>>
+inc S$五福临门_属性展示 <RText|id=a5_rtext_6|x=14.0|y=271|outline=2|outlinecolor=0|size=14|text=<攻击速度:+25%/FCOLOR=255>>
+
+inc S$天降鸿运_属性展示 <RText|id=a6_rtext_2|x=27.0|y=191|outline=2|outlinecolor=0|size=14|text=<攻魔道:+60/FCOLOR=255>>
+inc S$天降鸿运_属性展示 <RText|id=a6_rtext_3|x=18.0|y=211|outline=2|outlinecolor=0|size=14|text=<生命值:+1888/FCOLOR=255>>
+inc S$天降鸿运_属性展示 <RText|id=a6_rtext_4|x=15.0|y=231|outline=2|outlinecolor=0|size=14|text=<打怪增伤:+18%/FCOLOR=255>>
+inc S$天降鸿运_属性展示 <RText|id=a6_rtext_5|x=11.0|y=251|outline=2|outlinecolor=0|size=14|text=<人物爆率:+100%/FCOLOR=255>>
+inc S$天降鸿运_属性展示 <RText|id=a6_rtext_6|x=14.0|y=271|outline=2|outlinecolor=0|size=14|text=<攻击速度:+50%/FCOLOR=255>>
+goto @择吉主界面
+break
+#if
+checktitle 六六大顺
+#act
+inc S$一帆风顺_图片展示 一帆风顺1
+inc S$好事成双_图片展示 好事成双1
+inc S$三生有幸_图片展示 三生有幸1
+inc S$六六大顺_图片展示 六六大顺2
+inc S$五福临门_图片展示 五福临门1
+inc S$天降鸿运_图片展示 天降鸿运1
+
+inc S$一帆风顺_属性展示 <RText|id=a1_rtext_2|x=31|y=191|outline=2|outlinecolor=0|size=14|text=<攻魔道:+5/FCOLOR=255>>
+inc S$一帆风顺_属性展示 <RText|id=a1_rtext_3|x=22|y=211|outline=2|outlinecolor=0|size=14|text=<生命值:+188/FCOLOR=255>>
+inc S$一帆风顺_属性展示 <RText|id=a1_rtext_4|x=23|y=231|outline=2|outlinecolor=0|size=14|text=<打怪增伤:+1%/FCOLOR=255>>
+inc S$一帆风顺_属性展示 <RText|id=a1_rtext_5|x=15|y=251|outline=2|outlinecolor=0|size=14|text=<人物爆率:+10%/FCOLOR=255>>
+inc S$一帆风顺_属性展示 <RText|id=a1_rtext_6|x=18|y=271|outline=2|outlinecolor=0|size=14|text=<攻击速度:+3%/FCOLOR=255>>
+
+inc S$好事成双_属性展示 <RText|id=a2_rtext_2|x=24|y=191|outline=2|outlinecolor=0|size=14|text=<攻魔道:+10/FCOLOR=255>>
+inc S$好事成双_属性展示 <RText|id=a2_rtext_3|x=18.0|y=211|outline=2|outlinecolor=0|size=14|text=<生命值:+388/FCOLOR=255>>
+inc S$好事成双_属性展示 <RText|id=a2_rtext_4|x=15.0|y=231|outline=2|outlinecolor=0|size=14|text=<打怪增伤:+3%/FCOLOR=255>>
+inc S$好事成双_属性展示 <RText|id=a2_rtext_5|x=11.0|y=251|outline=2|outlinecolor=0|size=14|text=<人物爆率:+15%/FCOLOR=255>>
+inc S$好事成双_属性展示 <RText|id=a2_rtext_6|x=14.0|y=271|outline=2|outlinecolor=0|size=14|text=<攻击速度:+5%/FCOLOR=255>>
+
+inc S$三生有幸_属性展示 <RText|id=a3_rtext_2|x=27.0|y=191.0|outline=2|outlinecolor=0|size=14|text=<攻魔道:+15/FCOLOR=255>>
+inc S$三生有幸_属性展示 <RText|id=a3_rtext_3|x=18.0|y=211.0|outline=2|outlinecolor=0|size=14|text=<生命值:+588/FCOLOR=255>>
+inc S$三生有幸_属性展示 <RText|id=a3_rtext_4|x=15.0|y=231.0|outline=2|outlinecolor=0|size=14|text=<打怪增伤:+5%/FCOLOR=255>>
+inc S$三生有幸_属性展示 <RText|id=a3_rtext_5|x=11.0|y=251.0|outline=2|outlinecolor=0|size=14|text=<人物爆率:+20%/FCOLOR=255>>
+inc S$三生有幸_属性展示 <RText|id=a3_rtext_6|x=14.0|y=271.0|outline=2|outlinecolor=0|size=14|text=<攻击速度:+10%/FCOLOR=255>>
+
+inc S$六六大顺_属性展示 <RText|id=a4_rtext_2|x=27.0|y=191|outline=2|outlinecolor=0|size=14|text=<攻魔道:/FCOLOR=255><+20/FCOLOR=215>>
+inc S$六六大顺_属性展示 <RText|id=a4_rtext_3|x=18.0|y=211|outline=2|outlinecolor=0|size=14|text=<生命值:/FCOLOR=255><+888/FCOLOR=215>>
+inc S$六六大顺_属性展示 <RText|id=a4_rtext_4|x=15.0|y=231|outline=2|outlinecolor=0|size=14|text=<打怪增伤:/FCOLOR=255><+8%/FCOLOR=215>>
+inc S$六六大顺_属性展示 <RText|id=a4_rtext_5|x=11.0|y=251|outline=2|outlinecolor=0|size=14|text=<人物爆率:/FCOLOR=2255><+30%/FCOLOR=215>>
+inc S$六六大顺_属性展示 <RText|id=a4_rtext_6|x=14.0|y=271|outline=2|outlinecolor=0|size=14|text=<攻击速度:/FCOLOR=255><+15%/FCOLOR=215>>
+
+inc S$五福临门_属性展示 <RText|id=a5_rtext_2|x=27.0|y=191|outline=2|outlinecolor=0|size=14|text=<攻魔道:+30/FCOLOR=255>>
+inc S$五福临门_属性展示 <RText|id=a5_rtext_3|x=18.0|y=211|outline=2|outlinecolor=0|size=14|text=<生命值:+1288/FCOLOR=255>>
+inc S$五福临门_属性展示 <RText|id=a5_rtext_4|x=15.0|y=231|outline=2|outlinecolor=0|size=14|text=<打怪增伤:+12%/FCOLOR=255>>
+inc S$五福临门_属性展示 <RText|id=a5_rtext_5|x=11.0|y=251|outline=2|outlinecolor=0|size=14|text=<人物爆率:+50%/FCOLOR=255>>
+inc S$五福临门_属性展示 <RText|id=a5_rtext_6|x=14.0|y=271|outline=2|outlinecolor=0|size=14|text=<攻击速度:+25%/FCOLOR=255>>
+
+inc S$天降鸿运_属性展示 <RText|id=a6_rtext_2|x=27.0|y=191|outline=2|outlinecolor=0|size=14|text=<攻魔道:+60/FCOLOR=255>>
+inc S$天降鸿运_属性展示 <RText|id=a6_rtext_3|x=18.0|y=211|outline=2|outlinecolor=0|size=14|text=<生命值:+1888/FCOLOR=255>>
+inc S$天降鸿运_属性展示 <RText|id=a6_rtext_4|x=15.0|y=231|outline=2|outlinecolor=0|size=14|text=<打怪增伤:+18%/FCOLOR=255>>
+inc S$天降鸿运_属性展示 <RText|id=a6_rtext_5|x=11.0|y=251|outline=2|outlinecolor=0|size=14|text=<人物爆率:+100%/FCOLOR=255>>
+inc S$天降鸿运_属性展示 <RText|id=a6_rtext_6|x=14.0|y=271|outline=2|outlinecolor=0|size=14|text=<攻击速度:+50%/FCOLOR=255>>
+goto @择吉主界面
+break
+#if
+checktitle 五福临门
+#act
+inc S$一帆风顺_图片展示 一帆风顺1
+inc S$好事成双_图片展示 好事成双1
+inc S$三生有幸_图片展示 三生有幸1
+inc S$六六大顺_图片展示 六六大顺1
+inc S$五福临门_图片展示 五福临门2
+inc S$天降鸿运_图片展示 天降鸿运1
+
+inc S$一帆风顺_属性展示 <RText|id=a1_rtext_2|x=31|y=191|outline=2|outlinecolor=0|size=14|text=<攻魔道:+5/FCOLOR=255>>
+inc S$一帆风顺_属性展示 <RText|id=a1_rtext_3|x=22|y=211|outline=2|outlinecolor=0|size=14|text=<生命值:+188/FCOLOR=255>>
+inc S$一帆风顺_属性展示 <RText|id=a1_rtext_4|x=23|y=231|outline=2|outlinecolor=0|size=14|text=<打怪增伤:+1%/FCOLOR=255>>
+inc S$一帆风顺_属性展示 <RText|id=a1_rtext_5|x=15|y=251|outline=2|outlinecolor=0|size=14|text=<人物爆率:+10%/FCOLOR=255>>
+inc S$一帆风顺_属性展示 <RText|id=a1_rtext_6|x=18|y=271|outline=2|outlinecolor=0|size=14|text=<攻击速度:+3%/FCOLOR=255>>
+
+inc S$好事成双_属性展示 <RText|id=a2_rtext_2|x=24|y=191|outline=2|outlinecolor=0|size=14|text=<攻魔道:+10/FCOLOR=255>>
+inc S$好事成双_属性展示 <RText|id=a2_rtext_3|x=18.0|y=211|outline=2|outlinecolor=0|size=14|text=<生命值:+388/FCOLOR=255>>
+inc S$好事成双_属性展示 <RText|id=a2_rtext_4|x=15.0|y=231|outline=2|outlinecolor=0|size=14|text=<打怪增伤:+3%/FCOLOR=255>>
+inc S$好事成双_属性展示 <RText|id=a2_rtext_5|x=11.0|y=251|outline=2|outlinecolor=0|size=14|text=<人物爆率:+15%/FCOLOR=255>>
+inc S$好事成双_属性展示 <RText|id=a2_rtext_6|x=14.0|y=271|outline=2|outlinecolor=0|size=14|text=<攻击速度:+5%/FCOLOR=255>>
+
+inc S$三生有幸_属性展示 <RText|id=a3_rtext_2|x=27.0|y=191.0|outline=2|outlinecolor=0|size=14|text=<攻魔道:+15/FCOLOR=255>>
+inc S$三生有幸_属性展示 <RText|id=a3_rtext_3|x=18.0|y=211.0|outline=2|outlinecolor=0|size=14|text=<生命值:+588/FCOLOR=255>>
+inc S$三生有幸_属性展示 <RText|id=a3_rtext_4|x=15.0|y=231.0|outline=2|outlinecolor=0|size=14|text=<打怪增伤:+5%/FCOLOR=255>>
+inc S$三生有幸_属性展示 <RText|id=a3_rtext_5|x=11.0|y=251.0|outline=2|outlinecolor=0|size=14|text=<人物爆率:+20%/FCOLOR=255>>
+inc S$三生有幸_属性展示 <RText|id=a3_rtext_6|x=14.0|y=271.0|outline=2|outlinecolor=0|size=14|text=<攻击速度:+10%/FCOLOR=255>>
+
+inc S$六六大顺_属性展示 <RText|id=a4_rtext_2|x=27.0|y=191|outline=2|outlinecolor=0|size=14|text=<攻魔道:+20/FCOLOR=255>>
+inc S$六六大顺_属性展示 <RText|id=a4_rtext_3|x=18.0|y=211|outline=2|outlinecolor=0|size=14|text=<生命值:+888/FCOLOR=255>>
+inc S$六六大顺_属性展示 <RText|id=a4_rtext_4|x=15.0|y=231|outline=2|outlinecolor=0|size=14|text=<打怪增伤:+8%/FCOLOR=255>>
+inc S$六六大顺_属性展示 <RText|id=a4_rtext_5|x=11.0|y=251|outline=2|outlinecolor=0|size=14|text=<人物爆率:+30%/FCOLOR=255>>
+inc S$六六大顺_属性展示 <RText|id=a4_rtext_6|x=14.0|y=271|outline=2|outlinecolor=0|size=14|text=<攻击速度:+15%/FCOLOR=255>>
+
+inc S$五福临门_属性展示 <RText|id=a5_rtext_2|x=27.0|y=191|outline=2|outlinecolor=0|size=14|text=<攻魔道:/FCOLOR=255><+30/FCOLOR=215>>
+inc S$五福临门_属性展示 <RText|id=a5_rtext_3|x=18.0|y=211|outline=2|outlinecolor=0|size=14|text=<生命值:/FCOLOR=255><+1288/FCOLOR=215>>
+inc S$五福临门_属性展示 <RText|id=a5_rtext_4|x=15.0|y=231|outline=2|outlinecolor=0|size=14|text=<打怪增伤:/FCOLOR=255><+12%/FCOLOR=215>>
+inc S$五福临门_属性展示 <RText|id=a5_rtext_5|x=11.0|y=251|outline=2|outlinecolor=0|size=14|text=<人物爆率:/FCOLOR=2255><+50%/FCOLOR=215>>
+inc S$五福临门_属性展示 <RText|id=a5_rtext_6|x=14.0|y=271|outline=2|outlinecolor=0|size=14|text=<攻击速度:/FCOLOR=255><+25%/FCOLOR=215>>
+
+inc S$天降鸿运_属性展示 <RText|id=a6_rtext_2|x=27.0|y=191|outline=2|outlinecolor=0|size=14|text=<攻魔道:+60/FCOLOR=255>>
+inc S$天降鸿运_属性展示 <RText|id=a6_rtext_3|x=18.0|y=211|outline=2|outlinecolor=0|size=14|text=<生命值:+1888/FCOLOR=255>>
+inc S$天降鸿运_属性展示 <RText|id=a6_rtext_4|x=15.0|y=231|outline=2|outlinecolor=0|size=14|text=<打怪增伤:+18%/FCOLOR=255>>
+inc S$天降鸿运_属性展示 <RText|id=a6_rtext_5|x=11.0|y=251|outline=2|outlinecolor=0|size=14|text=<人物爆率:+100%/FCOLOR=255>>
+inc S$天降鸿运_属性展示 <RText|id=a6_rtext_6|x=14.0|y=271|outline=2|outlinecolor=0|size=14|text=<攻击速度:+50%/FCOLOR=255>>
+goto @择吉主界面
+break
+#if
+checktitle 天降鸿运
+#act
+inc S$一帆风顺_图片展示 一帆风顺1
+inc S$好事成双_图片展示 好事成双1
+inc S$三生有幸_图片展示 三生有幸1
+inc S$六六大顺_图片展示 六六大顺1
+inc S$五福临门_图片展示 五福临门1
+inc S$天降鸿运_图片展示 天降鸿运2
+
+inc S$一帆风顺_属性展示 <RText|id=a1_rtext_2|x=31|y=191|outline=2|outlinecolor=0|size=14|text=<攻魔道:+5/FCOLOR=255>>
+inc S$一帆风顺_属性展示 <RText|id=a1_rtext_3|x=22|y=211|outline=2|outlinecolor=0|size=14|text=<生命值:+188/FCOLOR=255>>
+inc S$一帆风顺_属性展示 <RText|id=a1_rtext_4|x=23|y=231|outline=2|outlinecolor=0|size=14|text=<打怪增伤:+1%/FCOLOR=255>>
+inc S$一帆风顺_属性展示 <RText|id=a1_rtext_5|x=15|y=251|outline=2|outlinecolor=0|size=14|text=<人物爆率:+10%/FCOLOR=255>>
+inc S$一帆风顺_属性展示 <RText|id=a1_rtext_6|x=18|y=271|outline=2|outlinecolor=0|size=14|text=<攻击速度:+3%/FCOLOR=255>>
+
+inc S$好事成双_属性展示 <RText|id=a2_rtext_2|x=24|y=191|outline=2|outlinecolor=0|size=14|text=<攻魔道:+10/FCOLOR=255>>
+inc S$好事成双_属性展示 <RText|id=a2_rtext_3|x=18.0|y=211|outline=2|outlinecolor=0|size=14|text=<生命值:+388/FCOLOR=255>>
+inc S$好事成双_属性展示 <RText|id=a2_rtext_4|x=15.0|y=231|outline=2|outlinecolor=0|size=14|text=<打怪增伤:+3%/FCOLOR=255>>
+inc S$好事成双_属性展示 <RText|id=a2_rtext_5|x=11.0|y=251|outline=2|outlinecolor=0|size=14|text=<人物爆率:+15%/FCOLOR=255>>
+inc S$好事成双_属性展示 <RText|id=a2_rtext_6|x=14.0|y=271|outline=2|outlinecolor=0|size=14|text=<攻击速度:+5%/FCOLOR=255>>
+
+inc S$三生有幸_属性展示 <RText|id=a3_rtext_2|x=27.0|y=191.0|outline=2|outlinecolor=0|size=14|text=<攻魔道:+15/FCOLOR=255>>
+inc S$三生有幸_属性展示 <RText|id=a3_rtext_3|x=18.0|y=211.0|outline=2|outlinecolor=0|size=14|text=<生命值:+588/FCOLOR=255>>
+inc S$三生有幸_属性展示 <RText|id=a3_rtext_4|x=15.0|y=231.0|outline=2|outlinecolor=0|size=14|text=<打怪增伤:+5%/FCOLOR=255>>
+inc S$三生有幸_属性展示 <RText|id=a3_rtext_5|x=11.0|y=251.0|outline=2|outlinecolor=0|size=14|text=<人物爆率:+20%/FCOLOR=255>>
+inc S$三生有幸_属性展示 <RText|id=a3_rtext_6|x=14.0|y=271.0|outline=2|outlinecolor=0|size=14|text=<攻击速度:+10%/FCOLOR=255>>
+
+inc S$六六大顺_属性展示 <RText|id=a4_rtext_2|x=27.0|y=191|outline=2|outlinecolor=0|size=14|text=<攻魔道:+20/FCOLOR=255>>
+inc S$六六大顺_属性展示 <RText|id=a4_rtext_3|x=18.0|y=211|outline=2|outlinecolor=0|size=14|text=<生命值:+888/FCOLOR=255>>
+inc S$六六大顺_属性展示 <RText|id=a4_rtext_4|x=15.0|y=231|outline=2|outlinecolor=0|size=14|text=<打怪增伤:+8%/FCOLOR=255>>
+inc S$六六大顺_属性展示 <RText|id=a4_rtext_5|x=11.0|y=251|outline=2|outlinecolor=0|size=14|text=<人物爆率:+30%/FCOLOR=255>>
+inc S$六六大顺_属性展示 <RText|id=a4_rtext_6|x=14.0|y=271|outline=2|outlinecolor=0|size=14|text=<攻击速度:+15%/FCOLOR=255>>
+
+inc S$五福临门_属性展示 <RText|id=a5_rtext_2|x=27.0|y=191|outline=2|outlinecolor=0|size=14|text=<攻魔道:+30/FCOLOR=255>>
+inc S$五福临门_属性展示 <RText|id=a5_rtext_3|x=18.0|y=211|outline=2|outlinecolor=0|size=14|text=<生命值:+1288/FCOLOR=255>>
+inc S$五福临门_属性展示 <RText|id=a5_rtext_4|x=15.0|y=231|outline=2|outlinecolor=0|size=14|text=<打怪增伤:+12%/FCOLOR=255>>
+inc S$五福临门_属性展示 <RText|id=a5_rtext_5|x=11.0|y=251|outline=2|outlinecolor=0|size=14|text=<人物爆率:+50%/FCOLOR=255>>
+inc S$五福临门_属性展示 <RText|id=a5_rtext_6|x=14.0|y=271|outline=2|outlinecolor=0|size=14|text=<攻击速度:+25%/FCOLOR=255>>
+
+inc S$天降鸿运_属性展示 <RText|id=a6_rtext_2|x=27.0|y=191|outline=2|outlinecolor=0|size=14|text=<攻魔道:/FCOLOR=255><+60/FCOLOR=215>>
+inc S$天降鸿运_属性展示 <RText|id=a6_rtext_3|x=18.0|y=211|outline=2|outlinecolor=0|size=14|text=<生命值:/FCOLOR=255><+1888/FCOLOR=215>>
+inc S$天降鸿运_属性展示 <RText|id=a6_rtext_4|x=15.0|y=231|outline=2|outlinecolor=0|size=14|text=<打怪增伤:/FCOLOR=255><+18%/FCOLOR=215>>
+inc S$天降鸿运_属性展示 <RText|id=a6_rtext_5|x=11.0|y=251|outline=2|outlinecolor=0|size=14|text=<人物爆率:/FCOLOR=2255><+100%/FCOLOR=215>>
+inc S$天降鸿运_属性展示 <RText|id=a6_rtext_6|x=14.0|y=271|outline=2|outlinecolor=0|size=14|text=<攻击速度:/FCOLOR=255><+50%/FCOLOR=215>>
+goto @择吉主界面
+break
+
+[@择吉主界面]  
+#say  
+<Img|id=ui_1|children={exit,content,button}|x=0|y=0|width=854|height=528|img=public\xiyou\zeji\内框.png|bg=1|move=0|reset=1|show=4|layerid=110>
+<Button|id=exit|x=823|y=66|width=26|height=42|nimg=public/1900000510.png|pimg=public/1900000511.png|size=18|link=@exit>
+<Button|id=button|x=313|y=416|width=221|height=106|nimg=public\xiyou\zeji\开始择吉.png|size=18|link=@择吉检测>
+<Layout|id=content|children={3,4,5,a1,a2,a3,a4,a5,a6,2}|x=43|y=72|width=765|height=427>
+<Img|id=3|x=4|y=299|width=377|height=50|img=public\xiyou\zeji\长条.png|bg=1|reset=1|show=0|loadDelay=0>
+<Img|id=4|x=383|y=299|width=380|height=50|img=public\xiyou\zeji\长条.png|reset=1|show=0|loadDelay=0>
+<RText|id=5|x=145|y=313|outline=2|outlinecolor=0|size=18|text=<需要点券:/FCOLOR=255><1000/FCOLOR=250>>
+<Img|id=a1|children={a1_rtext_2,a1_rtext_3,a1_rtext_4,a1_rtext_5,a1_rtext_6}|x=-1|y=4|width=127|height=292|img=public\xiyou\zeji\<$str(S$一帆风顺_图片展示)>.png|esc=0>
+<$str(S$一帆风顺_属性展示)>
+<Img|id=a2|children={a2_rtext_2,a2_rtext_3,a2_rtext_4,a2_rtext_5,a2_rtext_6}|x=128|y=4|width=127|height=292|img=public\xiyou\zeji\<$str(S$好事成双_图片展示)>.png|esc=0>
+<$str(S$好事成双_属性展示)>
+<Img|id=a3|children={a3_rtext_2,a3_rtext_3,a3_rtext_4,a3_rtext_5,a3_rtext_6}|x=255|y=4|width=127|height=292|img=public\xiyou\zeji\<$str(S$三生有幸_图片展示)>.png|esc=0>
+<$str(S$三生有幸_属性展示)>
+<Img|id=a4|children={a4_rtext_2,a4_rtext_3,a4_rtext_4,a4_rtext_5,a4_rtext_6}|x=382|y=4|width=127|height=292|img=public\xiyou\zeji\<$str(S$六六大顺_图片展示)>.png|esc=0>
+<$str(S$六六大顺_属性展示)>
+<Img|id=a5|children={a5_rtext_2,a5_rtext_3,a5_rtext_4,a5_rtext_5,a5_rtext_6}|x=509.0|y=4|width=127|height=292|img=public\xiyou\zeji\<$str(S$五福临门_图片展示)>.png|esc=0>
+<$str(S$五福临门_属性展示)>
+<Img|id=a6|children={a6_rtext_2,a6_rtext_3,a6_rtext_4,a6_rtext_5,a6_rtext_6}|x=636.0|y=4|width=127|height=292|img=public\xiyou\zeji\<$str(S$天降鸿运_图片展示)>.png|esc=0>
+<$str(S$天降鸿运_属性展示)>
+<RText|id=2|x=440|y=313|outline=2|outlinecolor=0|color=222|size=18|text=<第66次择吉必定天降鸿运:当前/FCOLOR=255><(<$str(U168)>次)/FCOLOR=250>>
+
+
+
+
+
+
+
+[@择吉检测]  
+#if  
+checktitle 天降鸿运  
+#act  
+sendmsg 9 你的赐福已经达到最高  
+close   
+break  
+
+#if  
+checkmoney 点卷 ? 1000
+#act  
+goto @开始择吉  
+break  
+#elseact  
+sendmsg 9 你的点券不足1000  
+break  
+
+[@开始择吉]   
+; 第66次择吉必定天降鸿运  
+#if  
+equal <$str(U168)> 65  
+
+#act  
+goto @天降鸿运  
+
+break  
+#elseact  
+// 一帆风顺称号赐予  
+#if  
+not checktitle 一帆风顺  
+not checktitle 好事成双  
+not checktitle 三生有幸  
+not checktitle 六六大顺  
+not checktitle 五福临门  
+not checktitle 天降鸿运  
+#act  
+money 点卷 - 1000  
+inc U168 1  
+confertitle 一帆风顺  
+sendmsg 9 激活一帆风顺
+goto @main  
+break  
+
+// 好事成双称号赐予  
+#if  
+checktitle 一帆风顺  
+#act  
+money 点卷 - 1000  
+inc U168 1    
+
+confertitle 好事成双  
+deprivetitle 一帆风顺  
+sendmsg 9 激活好事成双
+goto @main  
+break
+
+// 三生有幸称号赐予50%成功  
+#if  
+RANDOMEX 50 100  
+checktitle 好事成双  
+#act  
+money 点卷 - 1000  
+inc U168 1   
+confertitle 三生有幸  
+deprivetitle 好事成双  
+sendmsg 9 激活三生有幸  
+goto @main  
+break  
+
+#elseact  
+#if  
+not checktitle 三生有幸  
+checktitle 好事成双  
+#act  
+money 点卷 - 1000  
+inc U168 1   
+confertitle 一帆风顺  
+deprivetitle 好事成双
+sendmsg 9 激活一帆风顺  
+goto @main  
+break  
+
+// 六六大顺称号赐予40%成功  
+#if  
+RANDOMEX 40 100 
+checktitle 三生有幸  
+#act  
+money 点卷 - 1000  
+inc U168 1  
+confertitle 六六大顺  
+deprivetitle 三生有幸  
+sendmsg 9 激活六六大顺  
+goto @main  
+break   
+
+#elseact  
+#if  
+not checktitle 六六大顺  
+checktitle 三生有幸  
+#act  
+money 点卷 - 1000  
+inc U168 1  
+confertitle 好事成双  
+deprivetitle 三生有幸  
+sendmsg 9 激活好事成双  
+goto @main  
+break   
+
+// 五福临门称号赐予30%成功  
+#if  
+RANDOMEX 30 100 
+checktitle 六六大顺  
+#act  
+money 点卷 - 1000  
+inc U168 1   
+confertitle 五福临门  
+deprivetitle 六六大顺  
+sendmsg 9 激活五福临门   
+goto @main  
+break  
+
+#elseact  
+#if  
+not checktitle 五福临门  
+checktitle 六六大顺  
+#act  
+money 点卷 - 1000  
+inc U168 1  
+confertitle 三生有幸  
+deprivetitle 六六大顺  
+sendmsg 9 激活三生有幸  
+goto @main  
+break   
+
+// 天降鸿运称号赐予10%成功  
+#if  
+RANDOMEX 10 100 
+checktitle 五福临门  
+#act  
+money 点卷 - 1000  
+inc U168 1   
+confertitle 天降鸿运  
+deprivetitle 五福临门  
+sendmsg 9 激活天降鸿运   
+goto @main  
+break  
+
+#elseact  
+#if  
+not checktitle 天降鸿运  
+checktitle 五福临门  
+#act  
+money 点卷 - 1000  
+inc U168 1   
+confertitle 六六大顺  
+deprivetitle 五福临门  
+sendmsg 9 激活六六大顺  
+goto @main  
+break  
+
+[@天降鸿运]  
+#if  
+#act  
+money 点卷 - 1000
+confertitle 天降鸿运  
+deprivetitle 一帆风顺  
+deprivetitle 好事成双  
+deprivetitle 三生有幸  
+deprivetitle 六六大顺  
+deprivetitle 五福临门  
+mov U168 66
+sendmsg 9 激活天降鸿运
+goto @main  
+break 
+
+
+
